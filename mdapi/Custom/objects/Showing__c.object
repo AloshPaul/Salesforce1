@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is part of the Leasing/Marketing deployment and will be used to track showings and related feedback from internal and external listing agents.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>true</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Agent_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>Agent Feedback</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Agent_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>If not populated, agent name will prefill with name of submitter</inlineHelpText>
+        <label>Agent Name</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Showings_del</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Call_Record_if_applicable__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead Record (if applicable)</label>
+        <referenceTo>Incoming_Calls__c</referenceTo>
+        <relationshipLabel>Showings</relationshipLabel>
+        <relationshipName>Showings</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>Current City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Call_Record_if_applicable__r.Company__c)</formula>
+        <label>Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Showings</relationshipLabel>
+        <relationshipName>Showings</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_Of_Interest__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please rate on a scale of 1-10, with 10 being the highest.</inlineHelpText>
+        <label>Level Of Interest</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                    <label>7</label>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                    <label>8</label>
+                </value>
+                <value>
+                    <fullName>9</fullName>
+                    <default>false</default>
+                    <label>9</label>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>10</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Listing__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Listing</label>
+        <referenceTo>Listing__c</referenceTo>
+        <relationshipLabel>Showings</relationshipLabel>
+        <relationshipName>Showings</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Maintenance_Alert_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please indicate if there is anything we need to know regarding the condition of the property.</inlineHelpText>
+        <label>Maintenance Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Maintenance_Alert__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Maintenance Alert</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Not_Leased_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Not Leased Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Showing_Result__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Did not like house</fullName>
+                    <default>false</default>
+                    <label>Did not like house</label>
+                </value>
+                <value>
+                    <fullName>Did not like neighborhood</fullName>
+                    <default>false</default>
+                    <label>Did not like neighborhood</label>
+                </value>
+                <value>
+                    <fullName>House too big</fullName>
+                    <default>false</default>
+                    <label>House too big</label>
+                </value>
+                <value>
+                    <fullName>House too small</fullName>
+                    <default>false</default>
+                    <label>House too small</label>
+                </value>
+                <value>
+                    <fullName>Leased other IH property</fullName>
+                    <default>false</default>
+                    <label>Leased other IH property</label>
+                </value>
+                <value>
+                    <fullName>Missing Features/Amenities</fullName>
+                    <default>false</default>
+                    <label>Missing Features/Amenities</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>QC Issue</fullName>
+                    <default>false</default>
+                    <label>QC Issue</label>
+                </value>
+                <value>
+                    <fullName>Too Expensive</fullName>
+                    <default>false</default>
+                    <label>Too Expensive</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Unqualified</fullName>
+                    <default>false</default>
+                    <label>Unqualified</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Did not like house</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Did not like neighborhood</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>House too big</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>House too small</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Leased other IH property</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Too Expensive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Unknown</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Not Leased</controllingFieldValue>
+                <valueName>Unqualified</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Agent Follow-up Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.PM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Manager_Email_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.Portfolio_Manager__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Portfolio Manager Email_Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Manager_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is autopopulated when the Showing record is created</inlineHelpText>
+        <label>Portfolio Manager Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Power_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Power On?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.Residence__r.Address_Street__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.Residence__r.Address_City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_County__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.Residence__r.County__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property County</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>Delete_Property Feedback</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Property_Zip__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.Residence__r.Address_Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Feedback</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Region_Text__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field updates automatically with the Region on the associated Listing record.</inlineHelpText>
+        <label>Market2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Showing_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Showing Result</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Application</fullName>
+                    <default>false</default>
+                    <label>Application</label>
+                </value>
+                <value>
+                    <fullName>Application Pending</fullName>
+                    <default>false</default>
+                    <label>Application Pending</label>
+                </value>
+                <value>
+                    <fullName>Not Leased</fullName>
+                    <default>false</default>
+                    <label>Not Leased</label>
+                </value>
+                <value>
+                    <fullName>No Show</fullName>
+                    <default>false</default>
+                    <label>No Show</label>
+                </value>
+                <value>
+                    <fullName>Post-Application Showing</fullName>
+                    <default>false</default>
+                    <label>Post-Application Showing</label>
+                </value>
+                <value>
+                    <fullName>(Co-Broker)-External Agent Showing</fullName>
+                    <default>false</default>
+                    <label>(Co-Broker)-External Agent Showing</label>
+                </value>
+                <value>
+                    <fullName>Unattended Showing</fullName>
+                    <default>false</default>
+                    <label>Unattended Showing</label>
+                </value>
+                <value>
+                    <fullName>Not Leased - SWAY Transfer</fullName>
+                    <default>false</default>
+                    <label>Not Leased - SWAY Transfer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Showing_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Showing Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agent Viewing</fullName>
+                    <default>false</default>
+                    <label>Agent Viewing</label>
+                </value>
+                <value>
+                    <fullName>Showing to Potential Resident</fullName>
+                    <default>false</default>
+                    <label>Showing to Potential Resident</label>
+                </value>
+                <value>
+                    <fullName>2nd Showing</fullName>
+                    <default>false</default>
+                    <label>2nd Showing</label>
+                </value>
+                <value>
+                    <fullName>Unattended Showing</fullName>
+                    <default>false</default>
+                    <label>Unattended Showing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sign_in_Yard__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign in Yard?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State_Province__c</fullName>
+        <externalId>false</externalId>
+        <label>Current State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Street</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Temp_Key_Dupe__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__c + &apos;-&apos; +  Last_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Temp Key Dupe</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tenant_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Delete_Tenant Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Water_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Water On?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Win_Box__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR( ISPICKVAL(Showing_Result__c, &apos;Application&apos;) , 
+    ISPICKVAL(Showing_Result__c, &apos;Application Pending&apos;),
+    ISPICKVAL(Showing_Result__c, &apos;Post-Application Showing&apos;)
+   )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Win Box</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Listing__r.Portfolio__r.Yardi_Property_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Yardi Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Zip</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Showing</label>
+    <listViews>
+        <fullName>All_Showings</fullName>
+        <columns>NAME</columns>
+        <columns>Last_Name__c</columns>
+        <columns>First_Name__c</columns>
+        <columns>Region_Text__c</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Showings</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_ATL_Williams</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Atlanta</value>
+        </filters>
+        <filters>
+            <field>Agent_Name__c</field>
+            <operation>equals</operation>
+            <value>christina williams</value>
+        </filters>
+        <label>All Showings - ATL Williams</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Atlanta</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Atlanta</value>
+        </filters>
+        <label>All Showings - Atlanta</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Charlotte</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Charlotte</value>
+        </filters>
+        <label>All Showings - Charlotte</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Chicago</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Chicago</value>
+        </filters>
+        <label>All Showings - Chicago</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Inland_Empire</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Inland Empire</value>
+        </filters>
+        <label>All Showings - Inland Empire</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Jacksonville</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Jacksonville</value>
+        </filters>
+        <label>All Showings - Jacksonville</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_LA</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>los angeles</value>
+        </filters>
+        <label>All Showings - LA</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Minneapolis</fullName>
+        <columns>NAME</columns>
+        <columns>Region_Text__c</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Minneapolis</value>
+        </filters>
+        <label>All Showings - Minneapolis</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Orlando</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Orlando</value>
+        </filters>
+        <label>All Showings - Orlando</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Seattle</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Seattle</value>
+        </filters>
+        <label>All Showings - Seattle</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Showings_Tampa</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region_Text__c</field>
+            <operation>equals</operation>
+            <value>Tampa</value>
+        </filters>
+        <label>All Showings - Tampa</label>
+    </listViews>
+    <listViews>
+        <fullName>Showings_This_Week</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Maintenance_Alert_Comments__c</columns>
+        <columns>Power_On__c</columns>
+        <columns>Sign_in_Yard__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date__c</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>Showings This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Showings_Today</fullName>
+        <columns>NAME</columns>
+        <columns>Property_Address__c</columns>
+        <columns>Listing__c</columns>
+        <columns>Agent_Name__c</columns>
+        <columns>Showing_Type__c</columns>
+        <columns>Date__c</columns>
+        <columns>Maintenance_Alert__c</columns>
+        <columns>Power_On__c</columns>
+        <columns>Sign_in_Yard__c</columns>
+        <columns>Level_Of_Interest__c</columns>
+        <columns>Prospect_Feedback__c</columns>
+        <columns>Agent_Feedback__c</columns>
+        <columns>Not_Leased_Reason__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Showings Today</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SHO{00000}</displayFormat>
+        <label>Showing Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Showings</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Listing__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Level_Of_Interest__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Showing_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Call_Record_if_applicable__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Agent_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Listing__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Last_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Level_Of_Interest__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Showing_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Call_Record_if_applicable__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Agent_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Prospect_Feedback__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Date__c</lookupFilterFields>
+        <lookupFilterFields>Level_Of_Interest__c</lookupFilterFields>
+        <lookupFilterFields>Showing_Type__c</lookupFilterFields>
+        <lookupFilterFields>Last_Name__c</lookupFilterFields>
+        <lookupFilterFields>Agent_Name__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Listing__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Last_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Level_Of_Interest__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Showing_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Call_Record_if_applicable__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Agent_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Prospect_Feedback__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Listing__c</searchFilterFields>
+        <searchFilterFields>Date__c</searchFilterFields>
+        <searchFilterFields>Last_Name__c</searchFilterFields>
+        <searchFilterFields>Level_Of_Interest__c</searchFilterFields>
+        <searchFilterFields>Showing_Type__c</searchFilterFields>
+        <searchFilterFields>Call_Record_if_applicable__c</searchFilterFields>
+        <searchFilterFields>Agent_Name__c</searchFilterFields>
+        <searchFilterFields>Prospect_Feedback__c</searchFilterFields>
+        <searchResultsAdditionalFields>Listing__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Level_Of_Interest__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Showing_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Call_Record_if_applicable__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Agent_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Prospect_Feedback__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Not_Leased_Requires_Reason</fullName>
+        <active>true</active>
+        <description>If the showing resulted in Not Leased, Not Leased Reason is required.</description>
+        <errorConditionFormula>ISPICKVAL( Showing_Result__c , &quot;Not Leased&quot;)  &amp;&amp;
+ISBLANK(TEXT(Not_Leased_Reason__c ))</errorConditionFormula>
+        <errorDisplayField>Not_Leased_Reason__c</errorDisplayField>
+        <errorMessage>If showing resulted in Not Leased, Not Leased Reason is required.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>New_Showing</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Showing</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a1i/e?CF00NE0000004b964={!Incoming_Calls__c.Name}
+&amp;CF00NE0000004b964_lkid={!Incoming_Calls__c.Id}
+&amp;CF00NE0000004ZcuD={!Incoming_Calls__c.Listing__c}
+&amp;CF00NE0000004ZcuD_lkid={!Incoming_Calls__c.ListingId__c}
+&amp;00NE0000004Zczp={!TODAY()}
+&amp;00NE0000004Zczy=&quot;Showing to Potential Resident&quot;
+&amp;00NE0000004Zczr={!Incoming_Calls__c.First_Name__c}
+&amp;00NE0000004Zczs={!Incoming_Calls__c.Last_Name__c}
+&amp;00NE0000004Zczq={!Incoming_Calls__c.Email__c}
+&amp;00NE0000004Zczw={!Incoming_Calls__c.Phone__c}
+&amp;00NE0000004Zd01={!Incoming_Calls__c.Current_Address__c}
+&amp;00NE0000004Zczm={!Incoming_Calls__c.City__c}
+&amp;00NE0000004Zd00={!Incoming_Calls__c.State__c}
+&amp;00NE0000004Zd03={!Incoming_Calls__c.Zip__c}
+&amp;retURL=%2F{!Incoming_Calls__c.Id}</url>
+    </webLinks>
+</CustomObject>

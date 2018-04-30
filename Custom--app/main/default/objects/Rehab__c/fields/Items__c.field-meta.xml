@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Items__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This will be auto-calculate the  number of PTL Line items (phase 2 of the Nitro integration.)</inlineHelpText>
+    <label># Items</label>
+    <summaryForeignKey>PTL__c.Rehab__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

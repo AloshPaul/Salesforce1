@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upload_To_SFN__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Whether files of this type should be uploaded to Structured FN</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Whether files of this type should be uploaded to Structured FN.  Note that this only works for Portfolio docs, and care should be taken so that only the docs that our lender cares about are uploaded.</inlineHelpText>
+    <label>Upload To SFN</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

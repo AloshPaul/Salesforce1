@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Residence__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Parent Residence is the multi-unit property that contains several child units, including this one, such as a duplex or triplex</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Parent Residence is the multi-unit property that contains several child units, including this one, such as a duplex or triplex</inlineHelpText>
+    <label>Parent Residence</label>
+    <referenceTo>Residence__c</referenceTo>
+    <relationshipLabel>Child Residences</relationshipLabel>
+    <relationshipName>Child_Residences</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

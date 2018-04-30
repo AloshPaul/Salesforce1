@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TRS_Transfer_Request_Required</fullName>
+    <active>true</active>
+    <description>TRS Transfer Request field will be required  for Fund 02 properties</description>
+    <errorConditionFormula>AND( Portfolio__r.Fund__c =='02' &amp;&amp;  (TEXT(TRS_Transfer_Request__c) == NULL ||TEXT(TRS_Transfer_Request__c) == '') &amp;&amp;   ISPICKVAL(IH_Approval_of_Sale__c, 'Yes')  &amp;&amp; ISPICKVAL(BX_Approval_of_Sale__c, 'Yes'))</errorConditionFormula>
+    <errorDisplayField>TRS_Transfer_Request__c</errorDisplayField>
+    <errorMessage>TRS Transfer Request field is required  for Fund 02 properties</errorMessage>
+</ValidationRule>

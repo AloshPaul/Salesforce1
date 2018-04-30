@@ -1,0 +1,147 @@
+<apex:page standardController="HD_Budget_Walk__c" extensions="S3ThumbnailViewerController"
+                sidebar="false" showHeader="false" id="pgIM">
+
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryUI, 'jquery-ui-1.9.0.custom/css/ui-lightness/jquery-ui-1.9.0.custom.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryUI, 'jquery-ui-1.9.0.custom/js/jquery-1.8.2.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryUI, 'jquery-ui-1.9.0.custom/js/jquery-ui-1.9.0.custom.js')}"/>
+
+    <!-- Block UI -->
+    <c:BlockUI />
+    <style>
+        .wrapper{
+            position: relative;
+            float: left;
+            width: 100%;
+        }
+        .element {
+            position: relative;
+            float: left;
+            width: 25%;
+            padding-bottom : 10px;
+        }
+    </style>
+    <script>
+        //to make s3 tablesorter no conflict with other jquery library
+        $s3ts = jQuery.noConflict();
+
+        function fileStorageTypeChanged(newFileStorageType) {
+           try {
+
+               jsChangeFileType(newFileStorageType);
+           }
+           catch(e) {
+               alert(e);
+           }
+        }
+
+        function navigateTo(url) {
+
+            //Redirect to url
+            top.location.href = url;
+        }
+
+        //Refresh page
+        function refreshPage() {
+            window.parent.reload();
+        }
+
+    </script>
+
+    <apex:form id="pgIMF">
+
+        <!-- Action Status -->
+        <apex:actionStatus onStart="blockMe();" onStop="unBlockMe();" id="waitMsg" />
+        <apex:actionFunction status="waitMsg" action="{!getChangedFileTypePhotos}"
+               immediate="true" reRender="pgMsg,pg" name="jsChangeFileType" id="afChangeFileType">
+           <apex:param id="newFileStorageType" name="newFileStorageType" value="" assignTo="{!selectedFileStorageType}"/>
+        </apex:actionFunction>
+
+        <apex:pageBlock mode="edit" id="pg" title="{!pageTitle}">
+			<script>
+				function openSlideShowWindow() {
+		            try {
+		            		 /* var fileType = encodeURIComponent($s3ts("#pgIM\\:pgIMF\\:pg\\:pgBtn\\:fileStorageType").val()); */
+		            		 var fileType = encodeURIComponent('{!selectedFileType}');
+		            		 var recordIdAssociated = '{!selectedObjectRecordId}';
+
+			                 var url = '{!$Page.PhotoSlideshowViewer}?id=' + recordIdAssociated + '&filetype='+ fileType;
+			                 var win=window.open(url, '_blank');
+			                 win.focus();
+		            }
+		            catch(e) {
+		                alert(e);
+		            }
+		        }
+			</script>
+            <apex:pageMessages id="pgMsg" />
+
+            <!-- Button -->
+            <apex:pageBlockButtons location="top" id="pgBtn">
+                <apex:selectList rendered="{!NOT(inEditPhotoOrder)}" disabled="{!NOT(fileStorageTypes.size > 0)}" style="margin-left:10px;" id="fileStorageType"
+                       onchange="fileStorageTypeChanged(this.value);" value="{!selectedFileStorageType}"
+                       multiselect="false" size="1" styleClass="text" >
+                         <apex:selectOptions value="{!fileStorageTypes}"/>
+                </apex:selectList>
+
+
+
+                <apex:commandButton value="Slide Show" rendered="{!NOT(inEditPhotoOrder)}" disabled="{!NOT(fileStorageTypes.size > 0)}" onclick="openSlideShowWindow();return false;">
+                </apex:commandButton>
+
+
+                <apex:outputLink style="margin-left:20px;"  rendered="{!fileStorageTypes.size > 0}" value="{!$Page.ThumbnailViewerHDBudgetWalk}?id={!sObj.Id}" target="_blank">Open in New Window</apex:outputLink>
+
+            </apex:pageBlockButtons>
+
+            <apex:outputPanel id="notEditPhotoPanel" rendered="{!NOT(inEditPhotoOrder)}">
+                <!-- Get all attachments -->
+                <table width="100%">
+                    <tr>
+                        <apex:repeat value="{!lstOfListImagesCover}" var="item">
+                            <td width="25%">
+                                <center>
+                                    <!-- Image  -->
+                                    <apex:outputLink value="{!item.fileUrl}" target="_blank">
+                                        <apex:image id="theImage" title="{!item.fileStorageRecord.File_Name__c}" value="{!item.thumbNailUrl}" width="200" height="160"/>
+                                    </apex:outputLink>
+                                    <br/><br/>
+                                    <apex:actionStatus startText="saving..." id="savingStatus" />
+                                </center>
+                            </td>
+                        </apex:repeat>
+                    </tr>
+                </table>
+
+                <apex:commandLink action="{!toggleOtherPhotos}" rerender="otherPhotosPanel,linkId" id="linkId"
+                        status="waitMsg" rendered="{!displayOtherPhotosLink}">
+                    <apex:outputText rendered="{!showOtherPhotos}" value="Hide Other Photos" />
+                    <apex:outputText rendered="{!NOT(showOtherPhotos)}" value="Show Other Photos" />
+                </apex:commandLink> &nbsp; &nbsp;
+
+                <apex:outputPanel id="otherPhotosPanel">
+                    <table width="100%">
+                        <apex:repeat value="{!lstOfListImages}" var="lst" rendered="{!showOtherPhotos}">
+                            <tr>
+                                <apex:repeat value="{!lst}" var="item">
+                                    <td width="25%">
+                                        <apex:outputPanel rendered="{!item.thumbNailURL != null}">
+                                            <center>
+                                                <apex:outputLink value="{!item.fileUrl}" target="_blank">
+                                                    <apex:image id="theImage"  title="{!item.fileStorageRecord.File_Name__c}" value="{!item.thumbNailUrl}" width="200" height="160"/>
+                                                </apex:outputLink>
+                                                <br/><br/>
+                                                <apex:actionStatus startText="saving..." id="savingStatusOther" />
+                                            </center>
+                                        </apex:outputPanel>
+                                    </td>
+                                </apex:repeat>
+                            </tr>
+                        </apex:repeat>
+                    </table>
+                </apex:outputPanel>
+
+            </apex:outputPanel>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

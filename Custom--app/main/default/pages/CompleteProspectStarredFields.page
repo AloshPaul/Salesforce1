@@ -1,0 +1,61 @@
+<apex:page standardController="Prospect__c" showHeader="false" sidebar="false" extensions="CompleteProspectStarredFieldsController">
+	
+	<style>
+		.successMsgStyle {
+			color : green;
+			font-size : 14px;
+		}
+	</style>
+	<apex:sectionHeader title="Complete Prospect Starred Fields" />
+	<apex:form id="formId">
+		<apex:pageBlock id="pageBlockId" >
+			<apex:outputPanel style="display:none">{!saveError}</apex:outputPanel>
+			<apex:pageBlockButtons >
+				<apex:commandLink value="Save" action="{!saveProspect}" rerender="formId" status="processStatus" styleClass="btn" style="text-decoration: none;"/>
+				<apex:commandLink value="Show All Required Fields" action="{!toggleFieldsToShow}" rendered="{!NOT(showAllFields)}" 
+									rerender="formId" status="processStatus"  styleClass="btn" style="text-decoration: none;" />
+				<apex:commandLink value="Show Blank Required Fields" action="{!toggleFieldsToShow}" rendered="{!showAllFields}" 
+									rerender="formId" status="processStatus"  styleClass="btn" style="text-decoration: none;" />
+				<apex:commandLink value="Done" onclick="window.close();" styleClass="btn" style="text-decoration: none;"/>
+				
+				&nbsp; &nbsp;
+				<apex:actionStatus id="processStatus">
+	                <apex:facet name="start">
+	                    <apex:outputPanel id="savingId" >
+	                    	&nbsp;
+	                    	<apex:image value="/img/loading.gif" width="16" height="16" alt="saving..." />
+	                    </apex:outputPanel>
+	                </apex:facet>
+	            </apex:actionStatus> 
+			</apex:pageBlockButtons>
+			<apex:pageMessages id="errorPanelId" />
+			
+			<apex:outputPanel rendered="{!prospectSaveStatus == 'SAVE_SUCCESSFUL'}" styleClass="successMsgStyle">
+				Prospect updated successfully. <br/><br/>
+			</apex:outputPanel>
+			<!-- PROSPECT DETAILS -->
+			<apex:pageBlockSection title="Prospect Details">
+				<apex:outputField value="{!prospect.Property_Street__c}" />
+				<apex:outputField value="{!prospect.Property_County__c}" />
+				<apex:outputField value="{!prospect.Property_City__c}" />
+				<apex:outputField value="{!prospect.Bid_Type__c}" />
+				<apex:outputField value="{!prospect.Property_State__c}" />
+				<apex:outputField value="{!prospect.Region__c}" />
+				<apex:outputField value="{!prospect.Property_Zip_Code__c}" />
+			</apex:pageBlockSection>
+			
+			<!-- INCOMPLETE STARRED FIELDS -->
+			<apex:pageBlockSection title="Incomplete Required Fields" rendered="{!NOT(showAllFields)}">
+				<apex:repeat value="{!nullFieldNames}" var="fieldName">
+					<apex:inputField value="{!prospect[fieldName]}" />
+				</apex:repeat>
+			</apex:pageBlockSection>
+			
+			<apex:pageBlockSection title="All Required Fields" rendered="{!showAllFields}">
+				<apex:repeat value="{!allFieldNames}" var="fieldName">
+					<apex:inputField value="{!prospect[fieldName]}" />
+				</apex:repeat>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

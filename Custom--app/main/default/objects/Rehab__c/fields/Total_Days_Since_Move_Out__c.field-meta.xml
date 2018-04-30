@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Days_Since_Move_Out__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT( ISBLANK( Office_Signoff_Date__c ) ) ,  Office_Signoff_Date__c  - Renewal__r.Lease__r.Move_Out_Date__c,  TODAY()  - Renewal__r.Lease__r.Move_Out_Date__c)</formula>
+    <inlineHelpText>If the Office Sign Off Date isn't blank, then Office Sign Off Date - Move Out Date (from Yardi).  Otherwise, TODAY - Move Out Date (from Yardi).</inlineHelpText>
+    <label>Total Days Since Move Out</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,122 @@
+<!--
+ *  Description :   VFP to manage Home Front Thumbnail
+ *
+ *  Created By  :   Shrinath Sharma
+ *
+ *  Created Date:   12/27/2013
+ *
+  -->
+ <apex:page standardController="Property__c"
+        extensions="PortfolioHomeFrontThumbnailController" showHeader="false"
+        sidebar="false" id="pgPHFT" docType="html-5.0" applyHtmlTag="true">
+
+    <head>
+        <apex:stylesheet value="{!URLFOR($Resource.jqueryTableSorter, 'themes/blue/style.css')}" />
+        <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery.js')}"/>
+
+
+         <!-- Block UI -->
+         <c:BlockUI />
+
+		<style>
+
+	        #screenshot{
+	                    position:absolute;
+	                    border:1px solid #ccc;
+	                    background:#333;
+	                    padding:5px;
+	                    display:none;
+	                    color:#fff;
+	        }
+	        #colorId a{
+	            color:black;
+	            text-decoration:none;
+	            }
+	        #colorIdH2 a{
+	            color:black;
+	            text-decoration:none;
+	        }
+
+	    </style>
+
+        <script>
+
+            //to make s3 tablesorter no conflict with other jquery library
+            $s3ts = jQuery.noConflict();
+
+            function saveHomeFrontThumbnailImage(fileStorageRecordId) {
+                saveHomeFrontThumbnailImageAF(fileStorageRecordId);
+                return false;
+            }
+
+        </script>
+    </head>
+
+    <apex:form id="fsm_form" >
+
+          <apex:actionStatus onStart="blockMe();" onStop="unBlockMe();" id="waitMsg" />
+          <apex:actionFunction status="waitMsg" immediate="true" name="saveHomeFrontThumbnailImageAF"
+                rerender="pgMsg,statusmsg,phftImage" action="{!saveHomeFrontThumbnailImage}">
+              <apex:param name="x" value="x" assignTo="{!selectedFileStorageRecordId}" />
+          </apex:actionFunction>
+
+          <apex:pageMessages id="pgMsg"/>
+          <apex:pageBlock tabStyle="Property__c" id="pbFSM">
+            <apex:pageblockButtons >
+                   <apex:commandButton value="Cancel" style="margin-left:26%" onclick="self.close();"/>
+            </apex:pageblockButtons>
+            <div class="bPageTitle">
+                   <div class="ptBody secondaryPalette brandSecondaryBrd">
+                    <div class="content">
+                             <img alt="Home" title="Home" class="pageTitleIcon" src="/s.gif"/>
+                             <h1 class="pageType" id="colorId"><a href="/{!portfolio.Id}">{!$ObjectType.Property__c.Label}</a></h1>
+                             <span class="titleSeparatingColon">:</span>
+                             <h2 class="pageDescription" id="colorIdH2"><a href="/{!portfolio.Id}">{!portfolio.Name}</a></h2>
+                    </div>
+                   </div>
+            </div>
+
+			<apex:pageBlockSection columns="1" collapsible="true" id="phftImage">
+                 <script>
+                     if( {!AND( NOT(hasError), NOT(ISNULL(selectedFileStorageRecordId)) )} ) {
+                         self.close();
+                     }
+               	 </script>
+                 <apex:pageBlockSectionItem >
+  		            <apex:outputLabel value="{!$ObjectType.Property__c.Fields.Home_Front_Thumbnail_Image__c.label}">
+                  </apex:outputLabel>
+                  <apex:outputField value="{!portfolio.Home_Front_Thumbnail_Image__c}" rendered="{!NOT(ISNULL(portfolio.Home_Front_Thumbnail_Url_Suffix__c))}">
+                  </apex:outputField>
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:repeat value="{!mapSObjectIdToMapFileTypeToListofListOfFiles}" var="sObjectRecordId" id="rptpgsec">
+
+                <apex:repeat value="{!mapSObjectIdToListOfFileTypes[sObjectRecordId]}" var="fileType" id="rptpgFileType">
+
+                    <apex:pageBlockSection title="{!mapSObjectKeyPrefixToSObjectLabel[LEFT(sObjectRecordId, 3)]} - {!fileType} - {!mapSObjectIdToSObject[sObjectRecordId].Name}"
+                       columns="1" collapsible="true" id="fsmsection">
+
+                        <apex:dataTable value="{!mapSObjectIdToMapFileTypeToListofListOfFiles[sObjectRecordId][fileType]}"
+                            var="listOfitems" id="FileList" width="100%" cellpadding="5px">
+
+                                   <apex:repeat value="{!listOfitems}" var="item" id="fileItem">
+                                       <apex:column headerValue="" width="25%">
+
+                                            <apex:image style="cursor: hand; cursor: pointer" id="theImage" title="{!item.fileStorageRecord.File_Name__c}"
+                                                    value="{!item.s3getThumbnailUrl}" width="200" height="160" onclick="return saveHomeFrontThumbnailImage('{!item.fileStorageRecord.Id}');"/>
+
+                                       </apex:column>
+                                   </apex:repeat>
+
+                        </apex:dataTable>
+                    </apex:pageBlockSection>
+                </apex:repeat>
+
+            </apex:repeat>
+
+          </apex:pageBlock>
+
+    </apex:form>
+
+ </apex:page>

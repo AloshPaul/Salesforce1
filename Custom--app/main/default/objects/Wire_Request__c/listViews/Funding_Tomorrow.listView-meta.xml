@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funding_Tomorrow</fullName>
+    <columns>NAME</columns>
+    <columns>Region_Sharing__c</columns>
+    <columns>Pipeline__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Tracker_Entity__c</columns>
+    <columns>Wire_Entity__c</columns>
+    <columns>Type__c</columns>
+    <columns>Date_Requested_to_Fund__c</columns>
+    <columns>Amount_Funded__c</columns>
+    <columns>Wire_Transfer_Reference__c</columns>
+    <columns>Wire_Reference_No__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Requested_to_Fund__c</field>
+        <operation>equals</operation>
+        <value>TOMORROW</value>
+    </filters>
+    <label>Funding Tomorrow</label>
+</ListView>

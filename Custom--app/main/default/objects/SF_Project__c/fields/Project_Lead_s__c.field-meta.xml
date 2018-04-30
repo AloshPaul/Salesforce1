@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Lead_s__c</fullName>
+    <externalId>false</externalId>
+    <label>Project Lead(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brad Greiwe</fullName>
+                <default>false</default>
+                <label>Brad Greiwe</label>
+            </value>
+            <value>
+                <fullName>Brant Hanna</fullName>
+                <default>false</default>
+                <label>Brant Hanna</label>
+            </value>
+            <value>
+                <fullName>Brittany Bond</fullName>
+                <default>false</default>
+                <label>Brittany Bond</label>
+            </value>
+            <value>
+                <fullName>Dave Seligson</fullName>
+                <default>false</default>
+                <label>Dave Seligson</label>
+            </value>
+            <value>
+                <fullName>Jodi Hrbek</fullName>
+                <default>false</default>
+                <label>Jodi Hrbek</label>
+            </value>
+            <value>
+                <fullName>Jonathan Major</fullName>
+                <default>false</default>
+                <label>Jonathan Major</label>
+            </value>
+            <value>
+                <fullName>Kevin Tran</fullName>
+                <default>false</default>
+                <label>Kevin Tran</label>
+            </value>
+            <value>
+                <fullName>Mara Pederson</fullName>
+                <default>false</default>
+                <label>Mara Pederson</label>
+            </value>
+            <value>
+                <fullName>Matt Lent</fullName>
+                <default>false</default>
+                <label>Matt Lent</label>
+            </value>
+            <value>
+                <fullName>Melanie Matney</fullName>
+                <default>false</default>
+                <label>Melanie Matney</label>
+            </value>
+            <value>
+                <fullName>Naveen Skaria</fullName>
+                <default>false</default>
+                <label>Naveen Skaria</label>
+            </value>
+            <value>
+                <fullName>Randy Kish</fullName>
+                <default>false</default>
+                <label>Randy Kish</label>
+            </value>
+            <value>
+                <fullName>Terraell Hazlett</fullName>
+                <default>false</default>
+                <label>Terraell Hazlett</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

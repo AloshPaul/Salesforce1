@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Properties</fullName>
+    <columns>NAME</columns>
+    <columns>Property_City__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Acquisition_Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Acquisition_Status__c</field>
+        <operation>equals</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>Cancelled Properties</label>
+</ListView>

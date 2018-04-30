@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Install_Scheduled_Removals3</fullName>
+    <columns>NAME</columns>
+    <columns>County__c</columns>
+    <columns>Sign_Scheduled__c</columns>
+    <columns>Sign_Removal_Scheduled__c</columns>
+    <columns>Sign_Comments__c</columns>
+    <columns>Status__c</columns>
+    <columns>Scheduled_Move_In_Date__c</columns>
+    <columns>Actual_Move_in_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Deposit_Recv_d_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>10/1/2014</value>
+    </filters>
+    <filters>
+        <field>Sign_Removal_Scheduled__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Leased</value>
+    </filters>
+    <filters>
+        <field>Sign_Installed_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>phoenix</value>
+    </filters>
+    <label>Sign Install Scheduled-Removals PHX</label>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completion_Date_Revised_Notes_Required</fullName>
+    <active>false</active>
+    <description>when the completion date - revised field is completed the completion date - revised notes need to have a value</description>
+    <errorConditionFormula>( GC_Completion_Date_Revised__c &lt;>  GC_Completion_Date_Est__c  )  
+&amp;&amp;
+Len(GC_Completion_Date_Revised_Notes__c)=0</errorConditionFormula>
+    <errorDisplayField>GC_Completion_Date_Revised_Notes__c</errorDisplayField>
+    <errorMessage>The Completion Date - Revised Notes field must be complete when the completion date - revised date is changed.</errorMessage>
+</ValidationRule>

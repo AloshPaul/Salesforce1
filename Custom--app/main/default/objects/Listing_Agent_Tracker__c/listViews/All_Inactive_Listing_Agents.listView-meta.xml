@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Inactive_Listing_Agents</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Type__c</columns>
+    <columns>Mobile_Phone__c</columns>
+    <columns>Agent_Carrier__c</columns>
+    <columns>Email__c</columns>
+    <columns>User_Record__c</columns>
+    <columns>Contact_Record__c</columns>
+    <columns>License__c</columns>
+    <columns>License_Exp_Date__c</columns>
+    <columns>Active__c</columns>
+    <columns>Frozen__c</columns>
+    <columns>sf_com_deactivation_date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>User_Record__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All Inactive Listing Agents</label>
+</ListView>

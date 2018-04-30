@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MN_and_Chicago</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Current_Portfolio__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Address_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Chicago,Minneapolis</value>
+    </filters>
+    <filters>
+        <field>Yardi_Property_Code__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>MN and Chicago</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_TIP</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send to TIP</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!requireScript("/soap/ajax/26.0/connection.js")} 
+{!requireScript("/soap/ajax/20.0/apex.js")} 
+var rehabStatus = '{!Rehab__c.Stage__c}'; 
+var rehabRecordType =''+ '{!Rehab__c.RecordType}'; 
+var tipTypeOptions = { 
+"Turn" : "Turn TIP", 
+"Disposition" : "Disposition", 
+"Post Acquisition – Purchased Rented" : "Post Acquisition – Purchased Rented", 
+"Post-Acquisition" : "Post-Acquisition" ,
+"Remediation"  : "Remediation"
+} 
+var url = parent.location.href; 
+var sentToTIPDate = '{!Rehab__c.Sent_to_TIP__c}'; 
+if (rehabStatus != 'HOLD - Occupied/TIP') { 
+   alert("You can click on this button only when Stage is HOLD - Occupied/TIP."); 
+}else{ 
+//calling webservices  method 
+var Tipstatus = sforce.apex.execute("TIPTriggerHelper", "checkSecondAcquisitionTip", {PropertyId: '{!Rehab__c.PortfolioId__c}', RehabId : '{!Rehab__c.Id}' }); 
+
+var JsonTipStatus = JSON.parse(Tipstatus);
+//alert("create" + JsonTipStatus.canCreateNewTip);
+//alert("post"+JsonTipStatus.isPostAcquistionTipPresent);
+if(JsonTipStatus.canCreateNewTip == true) { 
+var tipRec = new sforce.SObject("TIP_Tracking__c"); 
+tipRec.Rehab__c = '{!Rehab__c.Id}'; 
+tipRec.Portfolio__c= '{!Rehab__c.PortfolioId__c}'; 
+tipRec.Residence__c= '{!Rehab__c.HomeId__c}'; 
+
+//selecting tip type based on Rehab Record type 
+          if(rehabRecordType=="Post Acquisition – Purchased Rented"||rehabRecordType=="Post-Acquisition"){
+     
+          tipRec.TIP_Type__c =  (JsonTipStatus.isPostAcquistionTipPresent == true) ? "Remediation" : tipTypeOptions[rehabRecordType];     
+           }
+          else {
+          tipRec.TIP_Type__c = tipTypeOptions[rehabRecordType];
+           } 
+
+var result = sforce.connection.create([tipRec ]); 
+if(result[0].getBoolean("success")) { 
+var rehabRec = new sforce.SObject("Rehab__c"); 
+rehabRec.id= '{!Rehab__c.Id}'; 
+rehabRec.Sent_to_TIP__c = new Date('{!TODAY()}'); 
+
+var updateRehab = sforce.connection.update([rehabRec]); 
+window.location.href = rehabRec.id; 
+} else { 
+alert(result); 
+alert("Failed to create TIP."); 
+} 
+} else { 
+alert("An Active Tip is already present on this rehab"); 
+} 
+}</url>
+</WebLink>

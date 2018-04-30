@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closing_Without_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				doDirectorClosingApproval__c =true,
+   	ISPICKVAL( Pipeline_Status__c ,'Review Complete')
+				)</errorConditionFormula>
+    <errorMessage>Cannot proceed to Closing Approval if due diligence approval is pending or not done</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_Lease__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is populated via a Trigger that finds the Residence and then populates the same Lease that appears in the Most Recent Lease field.  This happens on insert of a Listing.  Previous Lease is not overwritten if later a different Most Recent Lease is entered on Residence.  See D-00012773.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Most Recent Lease that was populated on Residence at the time the Listing was created.  This value is not ever overwritten.</inlineHelpText>
+    <label>Previous Lease</label>
+    <referenceTo>Tenant_Card__c</referenceTo>
+    <relationshipLabel>Listings</relationshipLabel>
+    <relationshipName>Listings</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

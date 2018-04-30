@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>R_Product_M1AllInNet_AllInCost__c</fullName>
+    <externalId>false</externalId>
+    <formula>All_In_Cost_Est_UW__c</formula>
+    <label>Product of M1 All In Net &amp; All In Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

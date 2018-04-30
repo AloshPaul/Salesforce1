@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Daves_Team_Assigned_and_In_Process</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4 and 5 and 6</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Severity__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Rollout__c</columns>
+    <columns>Task_Name__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Short_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>In Process</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Assigned,Complete in Dev,Ready for QA Review,Ready for UAT Review</value>
+    </filters>
+    <filters>
+        <field>Project_Owner__c</field>
+        <operation>notEqual</operation>
+        <value>Brad Bush</value>
+    </filters>
+    <filters>
+        <field>Project_Owner__c</field>
+        <operation>notEqual</operation>
+        <value>Jodi Hrbek</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notEqual</operation>
+        <value>Nathan Pepper</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notEqual</operation>
+        <value>Tina He</value>
+    </filters>
+    <label>Daves - Team Assigned and In Process</label>
+</ListView>

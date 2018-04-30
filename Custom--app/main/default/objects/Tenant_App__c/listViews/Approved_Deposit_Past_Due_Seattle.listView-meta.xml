@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Deposit_Past_Due_Seattle</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 and 7</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Portfolio_Manager__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>Section_8__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>File_Status__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Region__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Approval_Letter_to_Agent_Date__c</columns>
+    <columns>Deposit_Due_Date__c</columns>
+    <columns>Deposit_Recv_d_Date__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>startsWith</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Deposit_Recv_d_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Deposit_Due_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Seattle</value>
+    </filters>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved - Pending HOA,Approved - Pending Housing Authority</value>
+    </filters>
+    <label>Approved - Deposit Past Due Seattle</label>
+</ListView>

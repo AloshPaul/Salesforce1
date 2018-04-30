@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_Out_Actual__c</fullName>
+    <externalId>false</externalId>
+    <formula>Portfolio__r.Residence__r.Most_Recent_Tip__r.Move_Out_Actual__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Most Recent TIP</inlineHelpText>
+    <label>Move-Out Actual</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

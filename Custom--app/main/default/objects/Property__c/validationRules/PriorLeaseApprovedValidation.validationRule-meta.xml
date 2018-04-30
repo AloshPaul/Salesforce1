@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PriorLeaseApprovedValidation</fullName>
+    <active>true</active>
+    <description>IF Prior Lease Approved is filled in then New Lease  Signed Date, Eviction Complete Date and CFK Moved Out Date Cannot be entered.</description>
+    <errorConditionFormula>IF(
+	AND (
+		NOT(ISNULL(TIP_Prior_Lease_Accepted_Date__c)),
+		OR (
+			NOT(ISNULL(TIP_New_Lease_Signed_Date__c)),
+			NOT(ISNULL(Eviction_Complete_Date__c)),
+			NOT(ISNULL(CFK_Actual_Move_Out_Date__c))
+		)
+	 ),
+	 true,
+	 false
+)</errorConditionFormula>
+    <errorMessage>IF Prior Lease Approved is filled in then New Lease  Signed Date, Eviction Complete Date and CFK Moved Out Date Cannot be entered.</errorMessage>
+</ValidationRule>

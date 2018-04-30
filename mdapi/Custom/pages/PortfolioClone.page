@@ -1,0 +1,90 @@
+<apex:page title="Portfolio Clone" standardController="Property__c" id="pageId" extensions="PortfolioCloneController">
+	<apex:sectionHeader title="Portfolio Clone" />
+	
+	<apex:form id="formId">
+		
+		<apex:pageBlock title="Parent and Child Residence Details" rendered="{!AND(NOT(invalidRecord), hasParentResidence)}">
+			<apex:pageBlockSection title="Parent Residence" >
+				<apex:outputField value="{!parentResidence.Name}" />
+<!--				<apex:outputField value="{!parentResidence.Name}" />-->
+				<apex:pageBlockSectionItem />
+				
+				<apex:outputField value="{!parentResidence.Address_Street__c}" />
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Square Feet (Total)" />
+					<apex:outputField value="{!parentResidence.Square_Feet__c}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:outputField value="{!parentResidence.Address_City__c}" />
+				<apex:outputField value="{!parentResidence.Lot_Sq_Ft__c}" />
+							
+				<apex:outputField value="{!parentResidence.Address_State__c}" />
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Bedrooms (Total)" />
+					<apex:outputField value="{!parentResidence.Bedrooms__c}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:outputField value="{!parentResidence.Address_Zip_Code__c}" />
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Baths (Total)" />
+					<apex:outputField value="{!parentResidence.Baths__c}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:outputField value="{!parentResidence.Property_Type__c}" />
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Parking (Total)" />
+					<apex:outputField value="{!parentResidence.Parking__c}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:outputField value="{!ParentResidence.APN__c}" />
+				<apex:outputField value="{!parentResidence.AC_or_Evap__c}" />
+			</apex:pageBlockSection>	
+			
+			<apex:pageBlockSection title="Child Residences" columns="1">
+				<apex:pageBlockTable value="{!childResidences}" var="childRes">
+					<apex:column headerValue="Name">
+						<apex:outputLink value="/{!childRes.Id}" target="_blank" >
+							<apex:outputField value="{!childRes.Name}" />
+						</apex:outputLink>
+					</apex:column>
+					<apex:column value="{!childRes.Address_Unit__c}" />
+					<apex:column value="{!childRes.Bedrooms__c}" />
+					<apex:column value="{!childRes.Baths__c}" />
+					<apex:column value="{!childRes.Square_Feet__c}" />
+					<apex:column value="{!childRes.Parking__c}" />
+					<apex:column value="{!childRes.AC_or_Evap__c}" />
+					<apex:column headerValue="Current Portfolio">
+						<apex:outputLink value="/{!childRes.Current_Portfolio__c}" rendered="{!childRes.Current_Portfolio__c != null}">
+							<apex:outputField value="{!childRes.Current_Portfolio__r.Property_Code__c}" />
+						</apex:outputLink>
+					</apex:column>
+				</apex:pageBlockTable> 
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+		<apex:pageMessages id="pgMsgId"/>
+		<apex:pageBlock mode="edit" rendered="{!NOT(invalidRecord)}">
+			<apex:pageBlockButtons location="bottom" >
+				<apex:commandButton value="Clone" action="{!clonePortfolio}" rerender="formId" status="processStatus"/>
+				
+				&nbsp; &nbsp;
+				<apex:actionStatus id="processStatus">
+	                <apex:facet name="start">
+	                    <apex:outputPanel id="savingId" >
+	                    	&nbsp;
+	                    	<apex:image value="/img/loading.gif" width="16" height="16" alt="saving..." />
+	                    </apex:outputPanel>
+	                </apex:facet>
+	            </apex:actionStatus>
+			</apex:pageBlockButtons>
+				
+			<apex:pageBlockSection title="Residence Details"  columns="1">
+				<apex:inputField value="{!currResidence.Address_Unit__c}" required="true"/>
+				<apex:inputField value="{!currResidence.Bedrooms__c}" required="true"/>
+				<apex:inputField value="{!currResidence.Baths__c}" required="true"/>
+				<apex:inputField value="{!currResidence.Square_Feet__c}" required="true"/>
+				<apex:inputField value="{!currResidence.Parking__c}" />
+				<apex:inputField value="{!currResidence.AC_or_Evap__c}" />
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

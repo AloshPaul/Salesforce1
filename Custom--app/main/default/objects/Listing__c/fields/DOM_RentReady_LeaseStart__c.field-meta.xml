@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOM_RentReady_LeaseStart__c</fullName>
+    <description># Days from Rent Ready Date to Lease Start Date</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Actual_AppTrack__c )), Lease_Start_Date__c - Rent_Ready_Date__c, null)</formula>
+    <label>DOM (Rent Ready to Lease Start)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

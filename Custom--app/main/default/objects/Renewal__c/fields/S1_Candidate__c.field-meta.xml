@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S1_Candidate__c</fullName>
+    <externalId>false</externalId>
+    <formula>Portfolio__r.S1_Candidate__c</formula>
+    <inlineHelpText>This field is editable on the related Portfolio record.</inlineHelpText>
+    <label>S1 Candidate</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

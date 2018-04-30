@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_SIR__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is the mechanism the Salesforce team uses to communicate and prioritize requests involving development of the system.</description>
+    <externalId>false</externalId>
+    <label>Related SIR</label>
+    <referenceTo>Issues_New_Feature_Request__c</referenceTo>
+    <relationshipLabel>Concierge</relationshipLabel>
+    <relationshipName>Concierge</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Securitization_Related_Fields_Lock</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT(ISNULL(Securitization_Date__c )) , NOT(ISNULL( PRIORVALUE(Securitization_Date__c) )), 
+OR(ISCHANGED( Securitization_Pool__c ),ISCHANGED( Securitization_Candidate__c ),ISCHANGED( Securitized_Yardi_Code__c )) )</errorConditionFormula>
+    <errorDisplayField>Price_per_SF_ITV__c</errorDisplayField>
+    <errorMessage>This portfolio has already Securitization date stamped. You cannot update any securitization related fields</errorMessage>
+</ValidationRule>

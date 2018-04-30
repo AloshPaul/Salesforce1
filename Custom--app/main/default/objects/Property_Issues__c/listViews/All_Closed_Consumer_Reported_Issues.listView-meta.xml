@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Closed_Consumer_Reported_Issues</fullName>
+    <columns>NAME</columns>
+    <columns>What_Region_does_issue_Impact__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Assigned__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>State_Web_Submission__c</columns>
+    <columns>Submitter_Name__c</columns>
+    <columns>Current_Resident__c</columns>
+    <columns>Issue_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Closed (Resolved),Closed (Cancelled)</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Issues__c.Resident_or_Prospect_Issue</value>
+    </filters>
+    <filters>
+        <field>Closed_Date__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>All Closed Consumer Reported Issues</label>
+</ListView>

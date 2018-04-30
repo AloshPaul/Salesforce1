@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				doReview_Complete__c = True,
+				ISPICKVAL( HOA_Y_N__c , 'Yes'),
+				ISBLANK( Verified_HOA_Name__c )
+				)</errorConditionFormula>
+    <errorMessage>Since HOA is present, please fill in the Verified HOA Name.</errorMessage>
+</ValidationRule>

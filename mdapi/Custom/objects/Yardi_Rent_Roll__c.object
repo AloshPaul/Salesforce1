@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a once daily feed from Yardi to capture &quot;point in time&quot; of the daily rent roll for each property.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Lease_Amt__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Lease Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Admin_Fee_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Admin Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Asking_Rent_First_Lease__c</fullName>
+        <externalId>false</externalId>
+        <label>Asking Rent @ First Lease</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Tenant_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Tenant Status</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Unit_status__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Unit status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Housing_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Housing Authority Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Period_End_Current_Tenant__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Tenant Lease Period End</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Period_Start_Current_Tenant__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Tenant Lease Period Start</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_TIP_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease TIP Status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Make_Ready_Complete_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Make Ready Complete Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Make_Ready_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Make Ready Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Market_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_to_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Month to Month</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move In Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move Out Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Net_Effective_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Effective Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Over_Under_asking_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Over(Under) asking Rent %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>Portfolio Manager</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Yardi Rent Roll</relationshipLabel>
+        <relationshipName>Yardi_Rent_Roll</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Yardi_Property_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SameStore__c</fullName>
+        <description>This value will be populated via Yardi feed.</description>
+        <externalId>false</externalId>
+        <label>Same Store</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Rental_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Rental Type</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Status</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weeks_in_Proces__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 14, &apos;1-15 Days (1-2 Weeks)&apos;, 
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c&lt;= 28, &apos;16-30 Days (3-4 Weeks)&apos;, 
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 42, &apos;31-45 Days (5-6 Weeks)&apos;, 
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 56, &apos;46-60 Days (7-8 Weeks)&apos;, 
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 70, &apos;61-75 Days (9-10 Weeks)&apos;, 
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &gt;= 71, &apos;76+ Days (11-12+ Weeks)&apos;, 
+NULL))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Weeks in Proces</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weeks_in_Process__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 14, &apos;1-15 Days (1-2 Weeks)&apos;,
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c&lt;= 28, &apos;16-30 Days (3-4 Weeks)&apos;,
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 42, &apos;31-45 Days (5-6 Weeks)&apos;,
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 56, &apos;46-60 Days (7-8 Weeks)&apos;,
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &lt;= 70, &apos;61-75 Days (9-10 Weeks)&apos;,
+IF(TODAY() - Lease_Period_Start_Current_Tenant__c &gt;= 71, &apos;76+ Days (11-12+ Weeks)&apos;,
+NULL))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Weeks in Process</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Make_Ready_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Make Ready Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Yardi Property Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Yardi Rent Roll</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Portfolio_Manager__c</columns>
+        <columns>Current_Tenant_Status__c</columns>
+        <columns>Lease_TIP_Status__c</columns>
+        <columns>Unit_Rental_Type__c</columns>
+        <columns>Unit_Status__c</columns>
+        <columns>Market__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_ATL</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Portfolio_Manager__c</columns>
+        <columns>Current_Tenant_Status__c</columns>
+        <columns>Lease_TIP_Status__c</columns>
+        <columns>Unit_Rental_Type__c</columns>
+        <columns>Unit_Status__c</columns>
+        <columns>Actual_Lease_Amt__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Atlanta</value>
+        </filters>
+        <label>All- ATL</label>
+    </listViews>
+    <listViews>
+        <fullName>All_MTM</fullName>
+        <columns>NAME</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>Unit_Rental_Type__c</columns>
+        <columns>Unit_Status__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Month_to_Month__c</field>
+            <operation>contains</operation>
+            <value>MTM</value>
+        </filters>
+        <label>All MTM</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Phoenix</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Portfolio_Manager__c</columns>
+        <columns>Current_Tenant_Status__c</columns>
+        <columns>Unit_Rental_Type__c</columns>
+        <columns>Unit_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Phoenix</value>
+        </filters>
+        <label>All - Phoenix</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Residential_Vacant</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Portfolio_Manager__c</columns>
+        <columns>Current_Tenant_Status__c</columns>
+        <columns>Lease_TIP_Status__c</columns>
+        <columns>Unit_Rental_Type__c</columns>
+        <columns>Unit_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Current_Tenant_Status__c</field>
+            <operation>equals</operation>
+            <value>Vacant</value>
+        </filters>
+        <label>All Residential - Vacant</label>
+    </listViews>
+    <listViews>
+        <fullName>MN_and_Chicago</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Portfolio_Manager__c</columns>
+        <columns>Current_Tenant_Status__c</columns>
+        <columns>Lease_TIP_Status__c</columns>
+        <columns>Unit_Rental_Type__c</columns>
+        <columns>Unit_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Chicago,Minneapolis</value>
+        </filters>
+        <label>MN and Chicago</label>
+    </listViews>
+    <nameField>
+        <displayFormat>YRR-{00000000}</displayFormat>
+        <label>Yardi Rent Roll Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Yardi Rent Roll</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Region__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Portfolio__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Portfolio_Manager__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Lease_Period_Start_Current_Tenant__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Lease_Period_End_Current_Tenant__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Market_Rent__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Month_to_Month__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit_Rental_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Current_Tenant_Status__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Portfolio__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Yardi_Property_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Region__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Portfolio_Manager__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lease_Period_Start_Current_Tenant__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lease_Period_End_Current_Tenant__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lease_TIP_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Unit_Rental_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Current_Tenant_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

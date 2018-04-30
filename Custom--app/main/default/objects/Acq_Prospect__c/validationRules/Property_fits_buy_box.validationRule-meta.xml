@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_fits_buy_box</fullName>
+    <active>true</active>
+    <description>Property details should be validated.</description>
+    <errorConditionFormula>AND(
+     OR(
+    				ISPICKVAL(Status__c, 'Underwriting Complete'),
+								ISPICKVAL(Status__c, 'Offer Approved')
+				),
+    
+        Property_fits_buy_box__c = false
+				    
+		)</errorConditionFormula>
+    <errorDisplayField>Property_fits_buy_box__c</errorDisplayField>
+    <errorMessage>The property should fit the buy box</errorMessage>
+</ValidationRule>

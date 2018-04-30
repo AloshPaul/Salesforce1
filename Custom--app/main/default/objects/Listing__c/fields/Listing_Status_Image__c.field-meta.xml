@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listing_Status_Image__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(  Status__c  ,"Down (In Rehab)") , IMAGE("https://c.cs14.content.force.com/servlet/servlet.ImageServer?id=015c0000000EF8j&amp;oid=00Dc0000001L5mB&amp;lastMod=1369409181000", "Down"), 
+IF( ISPICKVAL( Status__c , "OTM - Ready to List") , IMAGE("https://c.cs14.content.force.com/servlet/servlet.ImageServer?id=015c0000000EF8y&amp;oid=00Dc0000001L5mB&amp;lastMod=1369409063000", "OTM - Ready"), 
+IF( ISPICKVAL( Status__c , "OTM - Active Listing") , IMAGE("https://c.cs14.content.force.com/servlet/servlet.ImageServer?id=015c0000000EF8e&amp;oid=00Dc0000001L5mB&amp;lastMod=1369409366000", "OTM - Active"), 
+IF( ISPICKVAL( Status__c , "Leased") , IMAGE("https://c.cs14.content.force.com/servlet/servlet.ImageServer?id=015c0000000EF8o&amp;oid=00Dc0000001L5mB&amp;lastMod=1369408715000", "Leased"), 
+IF( ISPICKVAL( Status__c , "HOLD - Currently Not Leasable") , IMAGE("https://c.cs14.content.force.com/servlet/servlet.ImageServer?id=015c0000000EF8t&amp;oid=00Dc0000001L5mB&amp;lastMod=1369408593000", "Hold"), 
+
+
+
+null)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Listing Status Image</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

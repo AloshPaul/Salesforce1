@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Robert_Updated_Lease</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Bad_Data__c</columns>
+    <columns>Yardi_Active_Lease__c</columns>
+    <columns>NAME</columns>
+    <columns>First_Last_Name__c</columns>
+    <columns>tCode_LastName__c</columns>
+    <columns>Lease_From_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Move_Out_Date__c</columns>
+    <columns>Move_Out_Reason_Yardi__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UPDATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Mulesoft Integration API</value>
+    </filters>
+    <filters>
+        <field>Bad_Data__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Robert Updated Lease</label>
+</ListView>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Email_Distribution_List_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(  Portfolio__r.Region__c  , 
+
+"Atlanta","IHatlantaViolations@invitationhomes.com",
+"Charlotte","IHcharlotteViolations@invitationhomes.com",
+"Chicago", CASE ( Portfolio__r.Property_State__c , 'MN', "IHMinneapolisViolations@invitationhomes.com", "IHchicagoViolations@invitationhomes.com"), 
+"Inland Empire","IHinlandempireViolations@invitationhomes.com",
+"Jacksonville","IHjacksonvilleViolations@invitationhomes.com",
+"Las Vegas","IHlasvegasViolations@invitationhomes.com",
+"Los Angeles","IHlosangelesViolations@invitationhomes.com",
+"Miami","IHMiamiViolations@invitationhomes.com",
+"Minneapolis","IHMinneapolisViolations@invitationhomes.com",
+"Orlando","IHOrlandoViolations@invitationhomes.com",
+"Phoenix","IHPhoenixViolations@invitationhomes.com",
+"Sacramento","IHSacramentoViolations@invitationhomes.com",
+"Seattle","IHSeattleViolations@invitationhomes.com",
+"Tampa","IHTampaViolations@invitationhomes.com",
+"madams@invitationhomes.com")</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Region Email Distribution List (Formula)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

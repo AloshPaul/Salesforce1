@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SW_Region_3_Tenants_on_MTM_Status</fullName>
+    <columns>NAME</columns>
+    <columns>PM__c</columns>
+    <columns>Renewal_Close_Date__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Renewal_Status_Comments__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Variance_Current_to_New_Rent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Month-to-Month</value>
+    </filters>
+    <filters>
+        <field>Renewal_Close_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2013</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>equals</operation>
+        <value>Michelle Powers</value>
+    </filters>
+    <label>Central Region - 4  - Tenants MTM Status</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

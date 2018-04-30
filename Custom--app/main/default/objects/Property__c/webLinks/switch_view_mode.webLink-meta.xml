@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>switch_view_mode</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Switch View Mode</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>//Include the required js files
+{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/23.0/apex.js")}
+
+
+	//Call method to check for the current value
+                   var status = sforce.apex.execute("Utility","getListViewMode", {});
+
+	var status;
+	var nextStatus;
+	if(status == true || status == 'true') {
+		confirmationMsg = 'Currently you are viewing records related to you. Would you like to see all records?';
+	} else {
+		confirmationMsg = 'Currently you are viewing all records. Would you like to see only records related to you?';
+	}
+
+	//Switch mode after user confirmation
+	var ans = confirm(confirmationMsg);
+
+	if(ans) {
+		sforce.apex.execute("Utility","switchListViewMode", {});
+		window.location.reload();
+	}</url>
+</WebLink>

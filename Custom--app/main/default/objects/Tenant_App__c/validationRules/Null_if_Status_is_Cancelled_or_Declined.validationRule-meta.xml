@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Null_if_Status_is_Cancelled_or_Declined</fullName>
+    <active>true</active>
+    <description>There cannot be a value in the Actual Move-In Date field if Application Status is Cancelled or Declined.</description>
+    <errorConditionFormula>OR( ISPICKVAL( Application_Status__c , 'Cancelled') , ISPICKVAL( Application_Status__c , 'Declined')) 
+ &amp;&amp; 
+ NOT( ISBLANK( Actual_Move_in_Date__c ) )</errorConditionFormula>
+    <errorDisplayField>Actual_Move_in_Date__c</errorDisplayField>
+    <errorMessage>There cannot be a value in the Actual Move-In Date field if Application Status is Cancelled or Declined.</errorMessage>
+</ValidationRule>

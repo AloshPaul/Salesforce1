@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AppTrack_Created_to_Screening_Recommenda__c</fullName>
+    <externalId>false</externalId>
+    <formula>Credit_Check_Complete__c - App_Received__c</formula>
+    <inlineHelpText>AppTrack Created to Screening Recommendation Received (Hours)</inlineHelpText>
+    <label>App Rec'd Date to Screening Recom. Rec'd</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

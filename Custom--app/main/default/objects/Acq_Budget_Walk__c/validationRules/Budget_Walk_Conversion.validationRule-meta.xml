@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Walk_Conversion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				ISBLANK(PipelineID__c),
+				OR(
+								doBudgetApproved__c = True, 
+				    doBudget_Finalized__c = True, 
+			    	doCompleteWalk__c = True,
+			    	Reduction_Requested__c = True
+				)
+)</errorConditionFormula>
+    <errorMessage>Please convert to Pipeline before proceeding with Budget Walk</errorMessage>
+</ValidationRule>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Revised_Date_This_Week</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Re_Key_Date__c</columns>
+    <columns>Front_End_Budget__c</columns>
+    <columns>Final_Budget_Date__c</columns>
+    <columns>Budget_Revised__c</columns>
+    <columns>Front_End_Supervisor__c</columns>
+    <columns>Back_end_Supervisor__c</columns>
+    <columns>General_Contractor__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Bid_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>GC Awarded</value>
+    </filters>
+    <filters>
+        <field>Final_Budget_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>Budget Revised Date = This Week</label>
+</ListView>

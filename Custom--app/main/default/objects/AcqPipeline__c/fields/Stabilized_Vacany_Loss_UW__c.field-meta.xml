@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stabilized_Vacany_Loss_UW__c</fullName>
+    <externalId>false</externalId>
+    <formula>-1*( Expected_Gross_Annual_Rent_UW__c *(1- Prospect_Record__r.Market__r.Occupancy__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stabilized Vacany Loss @ UW</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

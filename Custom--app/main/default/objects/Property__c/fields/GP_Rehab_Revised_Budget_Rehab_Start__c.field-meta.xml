@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GP_Rehab_Revised_Budget_Rehab_Start__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+Rehab_Revised_Budget_Rehab_Start__c > 0,
+('$' +
+IF(
+ Rehab_Revised_Budget_Rehab_Start__c  >= 1000000,
+TEXT(FLOOR(Rehab_Revised_Budget_Rehab_Start__c / 1000000)) &amp; ",",
+"") &amp;
+IF(Rehab_Revised_Budget_Rehab_Start__c >= 1000,
+RIGHT(TEXT(FLOOR(Rehab_Revised_Budget_Rehab_Start__c / 1000)), 3) &amp; ",",
+"") &amp;
+RIGHT(TEXT(FLOOR(Rehab_Revised_Budget_Rehab_Start__c)), 3)
+),'')</formula>
+    <label>Revised Rehab Budget</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

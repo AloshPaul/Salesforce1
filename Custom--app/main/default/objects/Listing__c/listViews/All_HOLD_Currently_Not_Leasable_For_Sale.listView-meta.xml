@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_HOLD_Currently_Not_Leasable_For_Sale</fullName>
+    <columns>NAME</columns>
+    <columns>Address__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Status__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Acquistion_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>HOLD - Currently Not Leasable</value>
+    </filters>
+    <filters>
+        <field>Acquistion_Status__c</field>
+        <operation>equals</operation>
+        <value>For Sale</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Miami</value>
+    </filters>
+    <label>All HOLD-Currently Not Leasable For Sale</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Atlanta</role>
+        <role>Executive_Charlotte</role>
+        <role>Executive_Chicago</role>
+        <role>Executive_Inland_Empire</role>
+        <role>Executive_Jacksonville</role>
+        <role>Executive_LA_County</role>
+        <role>Executive_Las_Vegas</role>
+        <role>Executive_Miami</role>
+        <role>Executive_Orlando</role>
+        <role>Executive_Phoenix</role>
+        <role>Executive_Sacramento</role>
+        <role>Executive_Seattle</role>
+        <role>Executive_Southern_California</role>
+        <role>Executive_Tampa</role>
+        <role>Team_Member_Atlanta</role>
+        <role>Team_Member_California</role>
+        <role>Team_Member_Charlotte</role>
+        <role>Team_Member_Chicago</role>
+        <role>Team_Member_Inland_Empire</role>
+        <role>Team_Member_Jacksonville</role>
+        <role>Team_Member_LA_County</role>
+        <role>Team_Member_Las_Vegas</role>
+        <role>Team_Member_Miami</role>
+        <role>Team_Member_Orlando</role>
+        <role>Team_Member_Phoenix</role>
+        <role>Team_Member_Sacramento</role>
+        <role>Team_Member_Seattle</role>
+        <role>Team_Member_Tampa</role>
+    </sharedTo>
+</ListView>

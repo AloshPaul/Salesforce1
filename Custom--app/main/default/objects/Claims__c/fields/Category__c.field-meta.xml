@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Claim_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application Disputes / Issues</fullName>
+                <default>false</default>
+                <label>Application Disputes / Issues</label>
+            </value>
+            <value>
+                <fullName>Auto</fullName>
+                <default>false</default>
+                <label>Auto</label>
+            </value>
+            <value>
+                <fullName>Bankruptcy</fullName>
+                <default>false</default>
+                <label>Bankruptcy</label>
+            </value>
+            <value>
+                <fullName>BBB</fullName>
+                <default>false</default>
+                <label>BBB</label>
+            </value>
+            <value>
+                <fullName>Bodily Injury</fullName>
+                <default>false</default>
+                <label>Bodily Injury</label>
+            </value>
+            <value>
+                <fullName>Compliance / Governmental / Regulatory Agency</fullName>
+                <default>false</default>
+                <label>Compliance / Governmental / Regulatory Agency</label>
+            </value>
+            <value>
+                <fullName>Construction Defect</fullName>
+                <default>false</default>
+                <label>Construction Defect</label>
+            </value>
+            <value>
+                <fullName>Dog Attacks</fullName>
+                <default>false</default>
+                <label>Dog Attacks</label>
+            </value>
+            <value>
+                <fullName>EEOC Claims</fullName>
+                <default>false</default>
+                <label>EEOC Claims</label>
+            </value>
+            <value>
+                <fullName>EPA</fullName>
+                <default>false</default>
+                <label>EPA</label>
+            </value>
+            <value>
+                <fullName>Fair Housing</fullName>
+                <default>false</default>
+                <label>Fair Housing</label>
+            </value>
+            <value>
+                <fullName>Fair Labor Standards Act (FLSA)</fullName>
+                <default>false</default>
+                <label>Fair Labor Standards Act (FLSA)</label>
+            </value>
+            <value>
+                <fullName>Family and Medical Leave Act (FMLA)</fullName>
+                <default>false</default>
+                <label>Family and Medical Leave Act (FMLA)</label>
+            </value>
+            <value>
+                <fullName>Harassment</fullName>
+                <default>false</default>
+                <label>Harassment</label>
+            </value>
+            <value>
+                <fullName>HOA (Acquisitions)</fullName>
+                <default>false</default>
+                <label>HOA (Acquisitions)</label>
+            </value>
+            <value>
+                <fullName>HOA (Property Mgmt.)</fullName>
+                <default>false</default>
+                <label>HOA (Property Mgmt.)</label>
+            </value>
+            <value>
+                <fullName>HOA (Rehab)</fullName>
+                <default>false</default>
+                <label>HOA (Rehab)</label>
+            </value>
+            <value>
+                <fullName>Insurance (Alliant)</fullName>
+                <default>false</default>
+                <label>Insurance (Alliant)</label>
+            </value>
+            <value>
+                <fullName>Lease Dispute / Breach of Contract</fullName>
+                <default>false</default>
+                <label>Lease Dispute / Breach of Contract</label>
+            </value>
+            <value>
+                <fullName>Liability / Injury to Third Party's Property or Rights</fullName>
+                <default>false</default>
+                <label>Liability / Injury to Third Party's Property or Rights</label>
+            </value>
+            <value>
+                <fullName>Licensing</fullName>
+                <default>false</default>
+                <label>Licensing</label>
+            </value>
+            <value>
+                <fullName>Losses (Not Claimed to Insurance)</fullName>
+                <default>false</default>
+                <label>Losses (Not Claimed to Insurance)</label>
+            </value>
+            <value>
+                <fullName>Mechanic Liens</fullName>
+                <default>false</default>
+                <label>Mechanic Liens</label>
+            </value>
+            <value>
+                <fullName>Misc.</fullName>
+                <default>false</default>
+                <label>Misc.</label>
+            </value>
+            <value>
+                <fullName>Outside Broker / Agent Disputes</fullName>
+                <default>false</default>
+                <label>Outside Broker / Agent Disputes</label>
+            </value>
+            <value>
+                <fullName>Personal Property Eviction</fullName>
+                <default>false</default>
+                <label>Personal Property Eviction</label>
+            </value>
+            <value>
+                <fullName>Property</fullName>
+                <default>false</default>
+                <label>Property</label>
+            </value>
+            <value>
+                <fullName>Quiet Title Action</fullName>
+                <default>false</default>
+                <label>Quiet Title Action</label>
+            </value>
+            <value>
+                <fullName>Rescission of Sale</fullName>
+                <default>false</default>
+                <label>Rescission of Sale</label>
+            </value>
+            <value>
+                <fullName>SEC</fullName>
+                <default>false</default>
+                <label>SEC</label>
+            </value>
+            <value>
+                <fullName>Security Deposit Disputes</fullName>
+                <default>false</default>
+                <label>Security Deposit Disputes</label>
+            </value>
+            <value>
+                <fullName>Small Claims Suits</fullName>
+                <default>false</default>
+                <label>Small Claims Suits</label>
+            </value>
+            <value>
+                <fullName>State Inquiries</fullName>
+                <default>false</default>
+                <label>State Inquiries</label>
+            </value>
+            <value>
+                <fullName>Subdivided Parcel / Easements / Misc. Issues Affecting Value</fullName>
+                <default>false</default>
+                <label>Subdivided Parcel / Easements / Misc. Issues Affecting Value</label>
+            </value>
+            <value>
+                <fullName>Title Curative</fullName>
+                <default>false</default>
+                <label>Title Curative</label>
+            </value>
+            <value>
+                <fullName>Unlawful Termination</fullName>
+                <default>false</default>
+                <label>Unlawful Termination</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+            <value>
+                <fullName>Vendor Dispute / Breach of Contract</fullName>
+                <default>false</default>
+                <label>Vendor Dispute / Breach of Contract</label>
+            </value>
+            <value>
+                <fullName>Vendor Dispute or Issue</fullName>
+                <default>false</default>
+                <label>Vendor Dispute or Issue</label>
+            </value>
+            <value>
+                <fullName>Workers Comp Claims</fullName>
+                <default>false</default>
+                <label>Workers Comp Claims</label>
+            </value>
+            <value>
+                <fullName>Write-Ups / Warnings</fullName>
+                <default>false</default>
+                <label>Write-Ups / Warnings</label>
+            </value>
+            <value>
+                <fullName>Wrongful Eviction</fullName>
+                <default>false</default>
+                <label>Wrongful Eviction</label>
+            </value>
+            <value>
+                <fullName>Wrongful Foreclosure</fullName>
+                <default>false</default>
+                <label>Wrongful Foreclosure</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Bankruptcy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Compliance / Governmental / Regulatory Agency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>HOA (Acquisitions)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <controllingFieldValue>General Liability</controllingFieldValue>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Property Claims</controllingFieldValue>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>Misc.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Quiet Title Action</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>Rescission of Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Subdivided Parcel / Easements / Misc. Issues Affecting Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Title Curative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>Wrongful Foreclosure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Liability</controllingFieldValue>
+            <valueName>Auto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Liability</controllingFieldValue>
+            <valueName>Bodily Injury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Liability</controllingFieldValue>
+            <valueName>Dog Attacks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Liability</controllingFieldValue>
+            <valueName>Property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>EEOC Claims</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Fair Labor Standards Act (FLSA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Family and Medical Leave Act (FMLA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Harassment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Unlawful Termination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Workers Comp Claims</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Human Resources</controllingFieldValue>
+            <valueName>Write-Ups / Warnings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Application Disputes / Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>BBB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>Fair Housing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Outside Broker / Agent Disputes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Claims</controllingFieldValue>
+            <valueName>Insurance (Alliant)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Claims</controllingFieldValue>
+            <valueName>Losses (Not Claimed to Insurance)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>HOA (Property Mgmt.)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>Lease Dispute / Breach of Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>Security Deposit Disputes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>Small Claims Suits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <valueName>Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Vendor Dispute / Breach of Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Management / Resident Services</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>Wrongful Eviction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <valueName>EPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <valueName>Licensing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <valueName>SEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regulatory</controllingFieldValue>
+            <valueName>State Inquiries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Construction Defect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>HOA (Rehab)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Liability / Injury to Third Party's Property or Rights</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Mechanic Liens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Personal Property Eviction</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

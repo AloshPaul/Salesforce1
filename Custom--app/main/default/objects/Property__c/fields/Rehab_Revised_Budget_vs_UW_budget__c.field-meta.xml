@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Revised_Budget_vs_UW_budget__c</fullName>
+    <externalId>false</externalId>
+    <formula>Rehab_Revised_Budget_Rehab_Start__c - Rehab_Budget_Est_UW__c</formula>
+    <label>Rehab Revised Budget vs UW Budget</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

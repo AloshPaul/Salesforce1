@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chicago_Minneapolis_Commission_Approvals</fullName>
+    <columns>NAME</columns>
+    <columns>File_Status__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Actual_Move_in_Date__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Co_Broker_IH__c</columns>
+    <columns>Co_Broker_External__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Actual_Move_in_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:60</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Chicago,Minneapolis</value>
+    </filters>
+    <label>Chicago/Minneapolis Commission Approvals</label>
+</ListView>

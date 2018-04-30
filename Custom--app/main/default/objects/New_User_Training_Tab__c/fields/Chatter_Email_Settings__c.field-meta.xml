@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chatter_Email_Settings__c</fullName>
+    <defaultValue>"From any Chatter Group page, click on the 'Email Daily Digest' link to select how you would like to be notified about new posts."</defaultValue>
+    <externalId>false</externalId>
+    <label>Chatter Email Settings</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

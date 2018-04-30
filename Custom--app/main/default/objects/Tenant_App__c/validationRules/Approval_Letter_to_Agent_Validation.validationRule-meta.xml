@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Letter_to_Agent_Validation</fullName>
+    <active>true</active>
+    <description>This should be entered as soon as the Approval Letter/Notification is sent to both the Leasing Agent and the Applicant. Approval letter to agent should always be entered once VOI is completed.</description>
+    <errorConditionFormula>Approval_Letter_to_Agent__c == true &amp;&amp;  VOI_Completed_CheckBox__c == false &amp;&amp; (( ISCHANGED(Approval_Letter_to_Agent__c) || ISCHANGED(VOI_Completed_CheckBox__c)))</errorConditionFormula>
+    <errorDisplayField>VOI_Completed_CheckBox__c</errorDisplayField>
+    <errorMessage>Approval letter to agent should always be entered once VOI is completed</errorMessage>
+</ValidationRule>

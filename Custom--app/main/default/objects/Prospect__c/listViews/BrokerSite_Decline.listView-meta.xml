@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BrokerSite_Decline</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>B_Status__c</columns>
+    <columns>IH_Underwriting_Status_to_Agent__c</columns>
+    <columns>Offer_Date__c</columns>
+    <columns>Offer_Price__c</columns>
+    <columns>Acquisitions_Analyst__c</columns>
+    <columns>B_Comments__c</columns>
+    <columns>Gross_Yield_Est_UW__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.BrokerSite</value>
+    </filters>
+    <filters>
+        <field>IH_Underwriting_Status_to_Agent__c</field>
+        <operation>equals</operation>
+        <value>IH Declines</value>
+    </filters>
+    <label>BrokerSite - Declines for Mgmt Review</label>
+    <sharedTo>
+        <group>Region_Atlanta</group>
+    </sharedTo>
+</ListView>

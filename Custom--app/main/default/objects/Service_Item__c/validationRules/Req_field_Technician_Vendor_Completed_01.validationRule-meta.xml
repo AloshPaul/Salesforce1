@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Req_field_Technician_Vendor_Completed_01</fullName>
+    <active>true</active>
+    <description>When the Checkbox ‘Technician/Vendor Completed’ is checked, make Technician / Vendor Notes required</description>
+    <errorConditionFormula>Technician_Vendor_Completed__c == TRUE
+&amp;&amp; 
+ISBLANK( Technician_Vendor_Notes__c )</errorConditionFormula>
+    <errorDisplayField>Technician_Vendor_Notes__c</errorDisplayField>
+    <errorMessage>Please type your notes</errorMessage>
+</ValidationRule>

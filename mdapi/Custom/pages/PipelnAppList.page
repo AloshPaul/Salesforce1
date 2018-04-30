@@ -1,0 +1,78 @@
+<!--
+Resource : SEKAR RAJ
+Date : Feb 7 2018
+Description : 
+-->
+<apex:page extensions="PipelinAppListCtrler" standardController="AcqPipeline__c">
+    <apex:slds />
+    <apex:form >
+        <div class="slds-scope">
+        <apex:pageBlock >
+           <!--<apex:pageBlockButtons >
+                
+            </apex:pageBlockButtons>-->
+            <div class="slds-page-header" style="">
+                <div class="slds-media__body">
+                  <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Onboarding and Post-closing">Onboarding and Post-closing</h1>
+                  <p class="slds-text-body_small slds-line-height_reset"></p>
+                </div>
+            </div>
+            
+           <!-- <h3 class="slds-section-title--divider">Properties Awaiting Reporting Submission</h3>-->
+                <apex:pageBlockSection columns="1" collapsible="false">
+                    <apex:outputPanel layout="block"  style="text-align: right"> 
+                    <apex:commandButton value="Approve" action="{!ProcessApproved}" rerender="inputId" styleClass="slds-button slds-button_neutral"/>
+                    <apex:commandButton value="Reject" action="{!ProcessRejected}" rerender="inputId1" styleClass="slds-button slds-button_neutral"/>
+                 </apex:outputPanel>
+                <!-- Message for no records -->
+                <apex:outputLabel rendered="{!IF(wrapperPipList.Size > 0, false, true)}">No record(s) to display.</apex:outputLabel>
+                
+                    <div class="slds-table_edit_container slds-is-relative">
+                <apex:pageBlockTable value="{!wrapperPipList}" var="wrapVal" styleClass="slds-table slds-table--bordered ">
+                    <apex:column >
+                        <apex:inputCheckbox value="{!wrapVal.selected}" />
+                    </apex:column>
+                    <apex:column headerValue="PipeLine Id">
+                        <apex:outputLink value="/{!wrapVal.PipLin.Id}/e" target="_blank">{!wrapVal.PipLin.Name}</apex:outputLink> 
+                    </apex:column>
+                    <apex:column value="{!wrapVal.PipLin.Closing_Statement_Contract_Price__c}"/>
+                    <!-- <apex:column value="{!wrapVal.PipLin.Broker_Offer_Status__c}"/>-->
+                    <apex:column value="{!wrapVal.PipLin.Closing_Statement_Funds_Due_from_Buyer__c}"/>
+                    <apex:column value="{!wrapVal.PipLin.Complete_Address__c}"/>
+                
+                </apex:pageBlockTable> 
+                    </div>
+                <!--<apex:pageBlockTable value="{!selectedPipList}" var="sewrapVal" id="inputId,inputId1">
+                
+                    <apex:column value="{!sewrapVal.name}"/>
+                     <apex:column value="{!sewrapVal.Broker_Offer_Status__c}"/>
+                    <apex:column value="{!sewrapVal.PipeToPortFolio_Status__c}"/>
+                
+                </apex:pageBlockTable>-->        
+            
+            </apex:pageBlockSection>
+             <div class="slds-page-header" style="">
+                <div class="slds-media__body">
+                  <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Property Reporting Submission Status">Property Reporting Submission Status</h1>
+                  <p class="slds-text-body_small slds-line-height_reset"></p>
+                </div>
+            </div>
+            <apex:pageBlockSection columns="1" collapsible="false">
+                <apex:outputLabel rendered="{!IF(appRejPipeList.Size > 0, false, true)}">No record(s) to display.</apex:outputLabel>
+                <apex:pageBlockTable value="{!appRejPipeList}" var="appRej" styleClass="slds-table slds-table--bordered">
+                    <apex:column headerValue="PipeLine Id">
+                        <apex:outputLink value="/{!appRej.Id}/e" target="_blank">{!appRej.Name}</apex:outputLink> 
+                    </apex:column>
+                    <apex:column value="{!appRej.Closing_Statement_Contract_Price__c}"/>
+                     <apex:column value="{!appRej.Closing_Statement_Funds_Due_from_Buyer__c}"/>
+                    <apex:column value="{!appRej.PipeToPortFolio_Status__c}"/>
+                    <apex:column value="{!appRej.Approved_Rejected_Date__c}"/>
+                    
+                </apex:pageBlockTable>
+                
+            </apex:pageBlockSection>    
+            
+        </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>

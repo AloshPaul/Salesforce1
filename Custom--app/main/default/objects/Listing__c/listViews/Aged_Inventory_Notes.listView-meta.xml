@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aged_Inventory_Notes</fullName>
+    <columns>NAME</columns>
+    <columns>City__c</columns>
+    <columns>BR_BA__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Agent_Inventory_Comments__c</columns>
+    <columns>DOM__c</columns>
+    <columns>Market_Rent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>DOM__c</field>
+        <operation>greaterThan</operation>
+        <value>29</value>
+    </filters>
+    <filters>
+        <field>My_Listing_Listing_Agent__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>Aged Inventory Notes</label>
+    <sharedTo>
+        <group>System_Admins</group>
+        <role>X3rd_Party_Atlanta</role>
+        <role>X3rd_Party_Charlotte</role>
+        <role>X3rd_Party_Chicago</role>
+        <role>X3rd_Party_Corporate</role>
+        <role>X3rd_Party_Inland_Empire</role>
+        <role>X3rd_Party_Jacksonville</role>
+        <role>X3rd_Party_LA_County</role>
+        <role>X3rd_Party_Las_Vegas</role>
+        <role>X3rd_Party_Miami</role>
+        <role>X3rd_Party_Orlando</role>
+        <role>X3rd_Party_Phoenix</role>
+        <role>X3rd_Party_Sacramento</role>
+        <role>X3rd_Party_Seattle</role>
+        <role>X3rd_Party_Southern_California</role>
+        <role>X3rd_Party_Tampa</role>
+    </sharedTo>
+</ListView>

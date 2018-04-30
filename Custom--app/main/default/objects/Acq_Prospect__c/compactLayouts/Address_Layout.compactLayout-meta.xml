@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Layout</fullName>
+    <fields>Complete_Address_del__c</fields>
+    <fields>Offer_Price_Max_Bid__c</fields>
+    <fields>Offer_Type_Bid_Type__c</fields>
+    <label>Address Layout</label>
+</CompactLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Update_to_Yardi_Support__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND( RecordType.Name = 'Yardi Request', NOT( ISPICKVAL(Status__c, 'Closed' )), NOT(ISPICKVAL(Request_Area__c, 'System Enhancement or Change Request')),  CreatedById = OwnerId)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Needs Update to Yardi Support</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

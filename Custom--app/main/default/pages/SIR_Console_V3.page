@@ -1,0 +1,182 @@
+<!--
+    Description     :   "SIR Console v2" page.
+
+    Created By      :   Bhavi Sharma
+
+    Created Date    :   09/05/2103
+
+    Revision Logs   :   V1.0 - Created
+-->
+<apex:page controller="SIRConsoleController_V3" title="SIR Console" sidebar="false" tabStyle="Issues_New_Feature_Request__c" id="pageId">
+
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'css/jquery-ui.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'css/jquery.multiselect.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'assets/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'assets/prettify.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jqueryTableSorter, 'themes/blue/style.css')}" />
+
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery-ui.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery.multiselect.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'assets/prettify.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jqueryTableSorter, 'jquery.tablesorter.js')}" />
+
+    <style>
+
+        #report { border-collapse:collapse;}
+        #report h4 { margin:0px; padding:0px;}
+        #report img { float:right;}
+        #report ul { margin:10px 0 10px 40px; padding:0px;}
+        #report th { background:#7CB8E2 url({!URLFOR($Resource.SIR_CONSOLE_HEADER_BKG)}) repeat-x scroll center left; padding:1px 15px; text-align:left;}
+        #report td { background:#ffffff none repeat-x scroll center left; color:#000; padding:7px 15px; }
+        #report tr.oddLine td { background:#ffffff; cursor:default; }
+        #report div.arrow { background:transparent url({!URLFOR($Resource.Arrows)}) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
+        #report div.up { background-position:0px 0px;}
+
+        .tablesorter {
+            font-size : 9pt !important;
+        }
+    </style>
+
+    <apex:sectionHeader title="SIR Console" />
+
+    <apex:form id="SIRForm">
+        <apex:pageMessages id="msg"/>
+        <apex:pageBlock id="filterBlock" mode="edit">
+            <apex:pageBlockSection columns="1" title="Filters">
+
+                <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Select Users" />
+                        <apex:selectList value="{!selectedUserIds}" multiselect="true">
+                                <apex:selectOptions value="{!userOptions}" />
+                        </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Select SIR Status" />
+                        <apex:selectList value="{!selectedSIRstatus}" multiselect="true">
+                                <apex:selectOptions value="{!sirStatusOptions}" />
+                        </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Select Bug Status" />
+                        <apex:selectList value="{!selectedBugstatus}" multiselect="true">
+                        <apex:selectOptions value="{!bugStatusOptions}" />
+                        </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons location="bottom"  >
+                <apex:commandButton action="{!filterData}" value="Filter" rerender="resultsBlock,msg" status="processStatus" oncomplete="applyTableSorting();"/>
+
+                &nbsp; &nbsp;
+               <apex:actionStatus id="processStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel id="savingId" >
+                            &nbsp;
+                            <apex:image value="/img/loading.gif" width="16" height="16" alt="saving..." />
+                        </apex:outputPanel>
+                    </apex:facet>
+                </apex:actionStatus>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+
+        <apex:pageBlock id="resultsBlock" title="Results">
+
+            <script>
+                //var j$ = jQuery.noConflict();
+                $(function(){
+                    $("select").multiselect({
+                            selectedList: 20,
+                            minWidth : 650,
+                            position: {
+                          my: 'left bottom',
+                          at: 'left top'
+                       }
+                    });
+                });
+
+                $(document).ready(function(){
+                    $("#report tr.oddLine").click(function(){
+                        $(this).next("tr").toggle();
+                        $(this).find(".arrow").toggleClass("up");
+                    });
+                });
+            </script>
+            <apex:pageBlockButtons location="top">
+                <apex:commandLink value="Create New SIR" action="{!createNewSir}" target="_blank" styleClass="btn" style="text-decoration:none;"/>
+            </apex:pageBlockButtons>
+
+           <apex:outputPanel rendered="{!IF(sirList.size > 0, true, false)}">
+               <table id="report" width="100%" class="list tablesorter">
+                    <tr>
+                        <th width="2%"></th>
+                        <th width="8%">
+                            <apex:commandLink value="Name {!IF(sortExpression=='Name', IF(sortDirection=='ASC','▲','▼'), '')}" reRender="resultsBlock, msg" status="processStatus" style="text-decoration:none;">
+                               <apex:param value="Name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </th>
+                        <th width="45%">
+                            <apex:commandLink value="Task Name {!IF(sortExpression=='Task_Name__c', IF(sortDirection=='ASC','▲','▼'), '')}" reRender="resultsBlock, msg" status="processStatus" style="text-decoration:none;">
+                                <apex:param value="Task_Name__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </th>
+                        <th width="10%">
+                            <apex:commandLink value="Development Owner {!IF(sortExpression=='Development_Owner__r.Name', IF(sortDirection=='ASC','▲','▼'), '')}" reRender="resultsBlock, msg" status="processStatus" style="text-decoration:none;">
+                                <apex:param value="Development_Owner__r.Name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </th>
+                        <!-- Modified By - Bhavi Sharma - 03/21/2014 - BUG-5330 - Change SIR Console V3 to display Status_Composite__c instead of Status__c -->
+           				<th width="15%">
+                            <apex:commandLink value="Status Composite {!IF(sortExpression=='Status_Composite__c', IF(sortDirection=='ASC','▲','▼'), '')}" reRender="resultsBlock, msg" status="processStatus" style="text-decoration:none;">
+                                <apex:param value="Status_Composite__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </th>
+                        <th width="10%">
+                            <apex:commandLink value="Severity {!IF(sortExpression=='Severity__c', IF(sortDirection=='ASC','▲','▼'), '')}" reRender="resultsBlock, msg" status="processStatus" style="text-decoration:none;">
+                                <apex:param value="Severity__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </th>
+                        <th width="10%">
+                            <apex:commandLink value="Targeted Rollout {!IF(sortExpression=='Rollout__c', IF(sortDirection=='ASC','▲','▼'), '')}" reRender="resultsBlock, msg" status="processStatus" style="text-decoration:none;">
+                                <apex:param value="Rollout__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                            </apex:commandLink>
+                        </th>
+                    </tr>
+                    <apex:repeat value="{!sirList}" var="item" >
+
+                        <tr class="oddLine" >
+                            <td width="2%"><div class="arrow" style="cursor:pointer;display:{!IF(OR(item.Bugs__r.Size > 0, item.Bugs__r.Size > 0), 'block', 'none')}"></div></td>
+                            <td width="8%"><apex:outputLink value="/{!item.Id}" target="_blank">{!item.Name}</apex:outputLink></td>
+                            <td width="45%">{!item.Task_Name__c}</td>
+                            <td width="10%">{!item.Development_Owner__r.Name}</td>
+                            <td width="15%">{!item.Status_Composite__c}</td>
+                            <td width="10%">{!item.Severity__c}</td>
+                            <td width="10%">{!item.Rollout__r.Name}</td>
+                        </tr>
+
+                        <tr id="{!item.Id}" style="display:none">
+                            <td colspan="6">
+                                <apex:pageBlockTable value="{!item.Bugs__r}" var="bug" rendered="{!IF(item.Bugs__r.Size > 0, true, false)}" style="margin-left:30px;width:110%">
+                                    <apex:column headerValue="" style="width:8%">
+                                        <apex:outputLink value="/{!bug.Id}" target="_blank">{!bug.Name}</apex:outputLink>
+                                    </apex:column>
+                                    <apex:column headerValue="" value="{!bug.Summary__c}" style="width:50%"/>
+                                    <apex:column headerValue="" value="{!bug.Assigned_To__r.Name}" style="width:18%"/>
+                                    <apex:column headerValue="" value="{!bug.Type__c}" style="width:10%"/>
+                                    <apex:column headerValue="" value="{!bug.Status__c}" style="width:10%"/>
+                                </apex:pageBlockTable>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>
+           </apex:outputPanel>
+
+           <apex:outputPanel rendered="{!sirList.size == 0}">
+               No record(s) to display.
+           </apex:outputPanel>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

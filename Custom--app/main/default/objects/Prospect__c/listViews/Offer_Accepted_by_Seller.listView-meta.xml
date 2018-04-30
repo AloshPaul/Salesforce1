@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Accepted_by_Seller</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>B_Status__c</columns>
+    <columns>IH_Underwriting_Status_to_Agent__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Contract_Date__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.BrokerSite</value>
+    </filters>
+    <filters>
+        <field>B_Status__c</field>
+        <operation>equals</operation>
+        <value>Offer Accepted by Seller</value>
+    </filters>
+    <label>Offer Accepted by Seller</label>
+    <sharedTo>
+        <allCustomerPortalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Map_Records</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Map Records</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>// Get data array 
+idArray = {!GETRECORDIDS($ObjectType.Prospect__c)}; 
+
+// Set variables 
+var hostname = window.location.hostname; 
+var server = 'na1'; 
+var usePost = true; 
+var bContinue = true; 
+
+// Make sure they selected some records 
+if (idArray[0] == null){ 
+bContinue = false; 
+alert('Please select at least one row'); 
+} 
+
+if (bContinue){ 
+
+// Do things based upon the domain we are on 
+if (hostname.indexOf(".my.salesforce.com") != -1){ 
+usePost = false; 
+if (idArray.length > 100){ 
+bContinue = false; 
+alert('When using the My Domain feature in Salesforce, you are limited to mapping 100 records'); 
+} 
+} else if (hostname.indexOf(".salesforce.com") != -1){ 
+bContinue = true; 
+usePost = true; 
+server = hostname.substring(0,hostname.indexOf(".salesforce.com") ); 
+} else if (hostname.indexOf(".force.com") != -1){ 
+bContinue = true; 
+usePost = true; 
+server = hostname.substring(0,hostname.indexOf(".force.com") ); 
+} 
+
+if (server == "ssl"){ server = "na0"; } 
+if (server == "emea"){ server = "eu0"; } 
+
+} 
+
+if (bContinue){ 
+
+// Submit URL 
+f=document.createElement("form"); 
+f.target = "_blank"; 
+
+if (usePost){ 
+f.action="https://geopointe." + server + ".visual.force.com/apex/Map"; 
+f.method = "post"; 
+} else { 
+f.action="/apex/geopointe__Map"; 
+f.method = "get"; 
+} 
+
+i= document.createElement("input"); 
+i.id = "idArray"; 
+i.name = "idArray"; 
+i.type = "hidden"; 
+i.value = idArray; 
+f.appendChild(i); 
+
+document.body.appendChild(f); 
+
+f.submit(); 
+
+}</url>
+</WebLink>

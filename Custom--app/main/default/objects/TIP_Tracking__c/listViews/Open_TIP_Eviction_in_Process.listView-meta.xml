@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_TIP_Eviction_in_Process</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>DK_Assigned_Date__c</columns>
+    <columns>DK_Driver_Assigned__c</columns>
+    <columns>Initial_Contact_Date__c</columns>
+    <columns>Initial_Notice_Date__c</columns>
+    <columns>Evict_Statutory_Notice_Required__c</columns>
+    <columns>Evict_Statutory_Notice_End_Date__c</columns>
+    <columns>Recommend_Referral_to_Eviction__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TIP_Status__c</field>
+        <operation>equals</operation>
+        <value>TIP - Eviction</value>
+    </filters>
+    <label>Open TIP: Eviction</label>
+</ListView>

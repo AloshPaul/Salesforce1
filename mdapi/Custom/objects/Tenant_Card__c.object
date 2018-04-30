@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This will be used at a future date to track lease details imported from Yardi.  FOR DATA LOADS, USE EITHER HMYREF OR CASESAFEID.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Address_Street__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Admin_Fee__c</fullName>
+        <description>Administrative fee applied to Arizona Properties only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Administrative fee applied to Arizona Properties only.</inlineHelpText>
+        <label>Admin Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AppTrack_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>AppTrack Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>AppTrackOwner</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Application_Date__c</fullName>
+        <description>Date the Tenant submitted the application to IH.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the Tenant submitted the application to IH.</inlineHelpText>
+        <label>Application Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Bad_Data__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bad Data</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Case_Safe_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <label>Case Safe ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Address_City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Load_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Load: Status</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Validation_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Not visible to regular users.</inlineHelpText>
+        <label>Data Validation Notes</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_to_Expiration__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Month_to_Month__c  = TRUE , Lease_End_Date__c - TODAY(), 
+IF(Lease_End_Date__c &lt; TODAY(),0, Lease_End_Date__c - TODAY()))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days to Expiration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_to_Move_Out__c</fullName>
+        <externalId>false</externalId>
+        <formula>Move_Out_Date__c  -  TODAY()</formula>
+        <inlineHelpText>Move-Out Date minus TODAY.</inlineHelpText>
+        <label>Days to Move Out</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deposit__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Last_Name__c</fullName>
+        <description>Resident&apos;s First and Last Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Resident&apos;s First and Last Name</inlineHelpText>
+        <label>First &amp; Last Name</label>
+        <length>45</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HMYref__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Reference field from the Yardi spreadsheet load</description>
+        <externalId>true</externalId>
+        <label>HMYref</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Housing_Rent__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <description>Amount paid by the Public Housing Authority</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount paid by the Public Housing Authority</inlineHelpText>
+        <label>Housing Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Import_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Import Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_End_Date_Change__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease End Date Change</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_End_Date_Prior_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease End Date Prior Value</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease End Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Execution_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Execution Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_From_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease From Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Rent__c</fullName>
+        <description>Amount Resident is supposed to pay for Rent from Lease document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount Resident is supposed to pay for Rent from Lease document</inlineHelpText>
+        <label>Lease Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Ten/TIP Lease Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IH Initial Lease</fullName>
+                    <default>false</default>
+                    <label>IH Initial Lease</label>
+                </value>
+                <value>
+                    <fullName>IH Initial Lease Renewal</fullName>
+                    <default>false</default>
+                    <label>IH Initial Lease Renewal</label>
+                </value>
+                <value>
+                    <fullName>IH Renewal</fullName>
+                    <default>false</default>
+                    <label>IH Renewal</label>
+                </value>
+                <value>
+                    <fullName>TIP Eviction</fullName>
+                    <default>false</default>
+                    <label>TIP Eviction</label>
+                </value>
+                <value>
+                    <fullName>TIP New Lease</fullName>
+                    <default>false</default>
+                    <label>TIP New Lease</label>
+                </value>
+                <value>
+                    <fullName>TIP Prior Owner Lease Honored</fullName>
+                    <default>false</default>
+                    <label>TIP Prior Owner Lease Honored</label>
+                </value>
+                <value>
+                    <fullName>TIP Renewal</fullName>
+                    <default>false</default>
+                    <label>TIP Renewal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lease_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Term (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Location_Score__c</formula>
+        <inlineHelpText>Score from 1 to 5 describing the geographic location of the asset, with 1 being the lowest and 5 being the highest</inlineHelpText>
+        <label>Location Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MTM_Fee_Amount_Yardi__c</fullName>
+        <description>Fee applied when Resident has gone Month to Month in Yardi</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fee applied when Resident has gone Month to Month in Yardi</inlineHelpText>
+        <label>MTM Fee Amount (in Yardi)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Memos_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Memos/Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Month_to_Month__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Month to Month</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move-In Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Move-Out Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Reason_Yardi__c</fullName>
+        <externalId>false</externalId>
+        <label>Move-Out Reason (Yardi)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_within_14_Days__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field gets checked by a time-based workflow.  There&apos;s a Trigger that fires based off of this field being checked.</description>
+        <externalId>false</externalId>
+        <label>Move-Out within 14 Days</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NSF__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NSF</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Notice Date (from Yardi)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Overall_Asset_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Overall_Asset_Score__c</formula>
+        <inlineHelpText>Score from 1 to 5 averaging the Property and Location Score</inlineHelpText>
+        <label>Overall Asset Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payable_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Payable Method</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>certified funds</fullName>
+                    <default>false</default>
+                    <label>certified funds</label>
+                </value>
+                <value>
+                    <fullName>check</fullName>
+                    <default>false</default>
+                    <label>check</label>
+                </value>
+                <value>
+                    <fullName>cashiers check</fullName>
+                    <default>false</default>
+                    <label>cashiers check</label>
+                </value>
+                <value>
+                    <fullName>money order</fullName>
+                    <default>false</default>
+                    <label>money order</label>
+                </value>
+                <value>
+                    <fullName>online</fullName>
+                    <default>false</default>
+                    <label>online</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Phone_primary__c</fullName>
+        <description>Resident&apos;s primary phone number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Resident&apos;s primary phone number</inlineHelpText>
+        <label>Phone (primary)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Phone_secondary__c</fullName>
+        <description>Resident&apos;s secondary phone number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Resident&apos;s secondary phone number</inlineHelpText>
+        <label>Phone (secondary)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Portfolio_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Portfolio ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio__c</fullName>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Leases</relationshipLabel>
+        <relationshipName>Leases</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Property_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Property_Score__c</formula>
+        <inlineHelpText>Score from 1 to 5 describing the physical structure of the asset, with 1 being the lowest and 5 being the highest</inlineHelpText>
+        <label>Property Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Coordinator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Renewal Coordinator</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RenewalCoordinator</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Residence__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Residence</label>
+        <referenceTo>Residence__c</referenceTo>
+        <relationshipName>Leases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Residence_sf_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Residence sf ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_Provided_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( Email__c )), 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Resident Provided Email</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stabilized__c</fullName>
+        <externalId>false</externalId>
+        <label>Stabilized</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Stabilized Carryover</fullName>
+                    <default>false</default>
+                    <label>Stabilized Carryover</label>
+                </value>
+                <value>
+                    <fullName>Stabilized IH</fullName>
+                    <default>false</default>
+                    <label>Stabilized IH</label>
+                </value>
+                <value>
+                    <fullName>Non-Stabilized</fullName>
+                    <default>false</default>
+                    <label>Non-Stabilized</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Address_State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TIP_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Lease_From_Date__c  &lt;=  Portfolio__r.Acquisition_Date__c , &apos;Acquired Lease&apos;, 
+IF(  Lease_End_Date__c  &gt;  Portfolio__r.Post_Acq_Rekey_Date__c , &apos;IH Lease&apos;, 
+&apos;TIP Lease&apos;))</formula>
+        <label>TIP Formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Temp_Rehab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Temp Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipLabel>Leases</relationshipLabel>
+        <relationshipName>Leases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Tenant_Current_Rent__c</fullName>
+        <description>Most current rent paid by the Resident (as of last month)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Most current rent paid by the Resident (as of last month)</inlineHelpText>
+        <label>Tenant Current Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tenant_Status_As_of_Import_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenant Status (As of Import Date)</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>This_was_the_Yardi_code_associated_with__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This was the Yardi code associated with this asset prior to securitization.</inlineHelpText>
+        <label>Yardi Code - Historical</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Two_Year_Term__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Two Year Term</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>YRR_Current_Tenant_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.YRR_Current_Tenant_Status__c</formula>
+        <label>YRR Current Tenant Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Active_Lease__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Yardi Active Lease</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Yardi_Property_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Yardi Code (formula)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Property Code</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Residence__r.Address_Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>tCode_LastName__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name/T-Code</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Lease</label>
+    <listViews>
+        <fullName>All_Leases</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Residence__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Lease_Term__c</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>Lease_Rent__c</columns>
+        <columns>Lease_Status__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <columns>Tenant_Status_As_of_Import_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Leases</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Month_to_Month</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Lease_Term__c</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>YRR_Current_Tenant_Status__c</columns>
+        <columns>MTM_Fee_Amount_Yardi__c</columns>
+        <columns>Lease_Rent__c</columns>
+        <columns>Lease_Status__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <columns>Tenant_Current_Rent__c</columns>
+        <columns>Tenant_Status_As_of_Import_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Month_to_Month__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Yardi_Active_Lease__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Month to Month (Active)</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Month_to_Month_Active_SEA</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>City__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Lease_Term__c</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>YRR_Current_Tenant_Status__c</columns>
+        <columns>MTM_Fee_Amount_Yardi__c</columns>
+        <columns>Lease_Rent__c</columns>
+        <columns>Lease_Status__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <columns>Tenant_Current_Rent__c</columns>
+        <columns>Tenant_Status_As_of_Import_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Month_to_Month__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Month to Month (Active) SEA</label>
+    </listViews>
+    <listViews>
+        <fullName>Evictions</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Region__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Move_Out_Date__c</columns>
+        <columns>Lease_Rent__c</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>Lease_Status__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <columns>Tenant_Status_As_of_Import_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Tenant_Status_As_of_Import_Date__c</field>
+            <operation>equals</operation>
+            <value>Eviction</value>
+        </filters>
+        <label>Evictions</label>
+    </listViews>
+    <listViews>
+        <fullName>Expired_Leases</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Lease_Rent__c</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>Lease_Status__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Lease_End_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Month_to_Month__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Expired Leases</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Leases</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Residence__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Lease_Term__c</columns>
+        <columns>Month_to_Month__c</columns>
+        <columns>Lease_Rent__c</columns>
+        <columns>Lease_Status__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <columns>Tenant_Status_As_of_Import_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>New Leases</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Robert_Updated_Lease</fullName>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Bad_Data__c</columns>
+        <columns>Yardi_Active_Lease__c</columns>
+        <columns>NAME</columns>
+        <columns>First_Last_Name__c</columns>
+        <columns>tCode_LastName__c</columns>
+        <columns>Lease_From_Date__c</columns>
+        <columns>Lease_End_Date__c</columns>
+        <columns>Move_Out_Date__c</columns>
+        <columns>Move_Out_Reason_Yardi__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>UPDATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>Mulesoft Integration API</value>
+        </filters>
+        <filters>
+            <field>Bad_Data__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Robert Updated Lease</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LEASE{00000}</displayFormat>
+        <label>Lease Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Leases</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Residence__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Portfolio__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Yardi_Property_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Move_In_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Move_Out_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Renewal_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Lease_From_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Lease_End_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Lease_Rent__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Residence__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Move_In_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Lease_End_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Lease_Rent__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Residence__c</lookupFilterFields>
+        <lookupFilterFields>Status__c</lookupFilterFields>
+        <lookupFilterFields>Move_In_Date__c</lookupFilterFields>
+        <lookupFilterFields>Lease_End_Date__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Residence__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Move_In_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Lease_End_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Lease_Rent__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Residence__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Move_In_Date__c</searchFilterFields>
+        <searchFilterFields>Lease_End_Date__c</searchFilterFields>
+        <searchFilterFields>Lease_Rent__c</searchFilterFields>
+        <searchResultsAdditionalFields>First_Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Email__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Portfolio__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lease_From_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lease_End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Lease_Rent__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Yardi_Active_Lease__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

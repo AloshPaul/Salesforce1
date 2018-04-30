@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOM_7_Weeks_MN</fullName>
+    <columns>NAME</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>External_Agent__c</columns>
+    <columns>DOM__c</columns>
+    <columns>DOM_Rehab_Complete_to_Lease_Start__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>CMA_Received_Date__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>AgentCommentRent__c</columns>
+    <columns>Leasing_Mgr_Visit_Date__c</columns>
+    <columns>Leasing_Mgr_Visit_Comments__c</columns>
+    <columns>Agent_Inventory_Comments__c</columns>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>Vadiance_Asking_UW__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DOM__c</field>
+        <operation>greaterThan</operation>
+        <value>49</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Chicago</value>
+    </filters>
+    <filters>
+        <field>State__c</field>
+        <operation>equals</operation>
+        <value>MN</value>
+    </filters>
+    <label>DOM  = >7 Weeks MN (Rent Ready)</label>
+    <sharedTo>
+        <group>Invitation_Executive</group>
+        <group>Leasing_Managers</group>
+        <group>Listing_Chicago</group>
+    </sharedTo>
+</ListView>

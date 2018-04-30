@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Turn_Tool_Tickets</fullName>
+    <columns>NAME</columns>
+    <columns>Summary__c</columns>
+    <columns>Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Concierge__c.SF_Request</value>
+    </filters>
+    <filters>
+        <field>Request_Area__c</field>
+        <operation>equals</operation>
+        <value>Turn Cost Budget Tool</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Closed</value>
+    </filters>
+    <label>TURN TOOL TICKETS</label>
+</ListView>

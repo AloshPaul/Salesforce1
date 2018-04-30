@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Lease_Walk_Completion_Date_Required</fullName>
+    <active>true</active>
+    <description>Pre-Lease Walk Completion Date is required if the Pre-Lease Walk is complete.</description>
+    <errorConditionFormula>Pre_Lease_Walk_Complete__c = TRUE &amp;&amp; 
+ISBLANK( Pre_Lease_Walk_Completion_Date__c )</errorConditionFormula>
+    <errorDisplayField>Pre_Lease_Walk_Completion_Date__c</errorDisplayField>
+    <errorMessage>Pre-Lease Walk Completion Date is required if the Pre-Lease Walk is complete.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LA_Sent_Revised_Lease__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User that entered 'Revised Lease Sent' should automatically populate</description>
+    <externalId>false</externalId>
+    <label>LA Sent Revised Lease</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Application_Tracking9</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

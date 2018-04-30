@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Text_Agent</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Text Agent</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/14.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/14.0/apex.js")} 
+{!REQUIRESCRIPT("/resource/1355393414000/smagicinteract__jquery")}  
+{!REQUIRESCRIPT("/resource/1355395084000/smagicinteract__jqueryUI")}  
+{!REQUIRESCRIPT("/resource/1355395025000/smagicinteract__jqueryuicss")}  
+{!REQUIRESCRIPT("/resource/1361524259000/smagicinteract__sendSMSJS")} 
+
+
+var packagePrefix = "smagicinteract__"; 
+var recordType = 'Listing__c'; 
+var idToUpdate = '{!Listing__c.Id}' 
+var nameField = 'Listing_Agent__c'; 
+var mobileField = 'Listing_Agent_Mobile__c'; 
+var optOutField = 'smagicinteract__SMSOptOut__c'; 
+var smsType = ''; 
+var userId = '{!$User.Id}'; 
+var elementIdVar = ''; 
+var showUserDropDown = false; 
+var dialogTitle = ''; 
+ 
+
+sendSMS(recordType, idToUpdate, userId, nameField, mobileField, optOutField, smsType, elementIdVar, packagePrefix, showUserDropDown, dialogTitle);</url>
+</WebLink>

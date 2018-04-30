@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard</fullName>
+    <active>true</active>
+    <description>For FAQs contributed by users</description>
+    <label>Standard</label>
+    <picklistValues>
+        <picklist>Subtopic__c</picklist>
+        <values>
+            <fullName>AZBidder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AppTrack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atlanta Auction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk Deal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eviction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lease %26 Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nitro%2FiPad%2FHD App%2FHD Budget Walk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PTL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rehab Projected Spend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topic__c</picklist>
+        <values>
+            <fullName>Acquisitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BrokerSite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Companies%2FContacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM%2FCOE Tracker %26 Wire Requests</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Storage %28S3%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IH Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lease %26 Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lease %26 Renewal %26 Rehab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Listing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rehab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rehab %26 Listing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports %26 Dashboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Violations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

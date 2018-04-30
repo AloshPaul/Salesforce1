@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Status_Report__c</fullName>
+    <description>This field will be used for dashboard reporting. It will reflect the same value as Property Status(text 255) field.</description>
+    <externalId>false</externalId>
+    <label>Property Status1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Leased</fullName>
+                <default>false</default>
+                <label>Leased</label>
+            </value>
+            <value>
+                <fullName>Leasing In Process</fullName>
+                <default>false</default>
+                <label>Leasing In Process</label>
+            </value>
+            <value>
+                <fullName>Rent Ready</fullName>
+                <default>false</default>
+                <label>Rent Ready</label>
+            </value>
+            <value>
+                <fullName>Rehab in Process</fullName>
+                <default>false</default>
+                <label>Rehab in Process</label>
+            </value>
+            <value>
+                <fullName>Ready for Rehab</fullName>
+                <default>false</default>
+                <label>Ready for Rehab</label>
+            </value>
+            <value>
+                <fullName>Waiting for Deed</fullName>
+                <default>false</default>
+                <label>Waiting for Deed</label>
+            </value>
+            <value>
+                <fullName>Moved Out</fullName>
+                <default>false</default>
+                <label>Moved Out</label>
+            </value>
+            <value>
+                <fullName>CFK In Process</fullName>
+                <default>false</default>
+                <label>CFK In Process</label>
+            </value>
+            <value>
+                <fullName>Lease under Review</fullName>
+                <default>false</default>
+                <label>Lease under Review</label>
+            </value>
+            <value>
+                <fullName>Eviction in Process</fullName>
+                <default>false</default>
+                <label>Eviction in Process</label>
+            </value>
+            <value>
+                <fullName>BK</fullName>
+                <default>false</default>
+                <label>BK</label>
+            </value>
+            <value>
+                <fullName>Contacted - In Process</fullName>
+                <default>false</default>
+                <label>Contacted - In Process</label>
+            </value>
+            <value>
+                <fullName>Contact Aborted - Referred to Eviction</fullName>
+                <default>false</default>
+                <label>Contact Aborted - Referred to Eviction</label>
+            </value>
+            <value>
+                <fullName>Attempting Contact</fullName>
+                <default>false</default>
+                <label>Attempting Contact</label>
+            </value>
+            <value>
+                <fullName>No Contact - Internal Assignment in Process</fullName>
+                <default>false</default>
+                <label>No Contact - Internal Assignment in Process</label>
+            </value>
+            <value>
+                <fullName>No Action Taken</fullName>
+                <default>false</default>
+                <label>No Action Taken</label>
+            </value>
+            <value>
+                <fullName>Newly Acquired</fullName>
+                <default>false</default>
+                <label>Newly Acquired</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

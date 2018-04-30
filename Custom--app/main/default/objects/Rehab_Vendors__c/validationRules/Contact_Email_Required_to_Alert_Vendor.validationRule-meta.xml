@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Email_Required_to_Alert_Vendor</fullName>
+    <active>true</active>
+    <description>there needs to be a value in “contact email” in order to check “Alert Vendor”  box</description>
+    <errorConditionFormula>AND( Alert_Vendor__c  = true, ISBLANK( Contact_Email__c ))</errorConditionFormula>
+    <errorDisplayField>Alert_Vendor__c</errorDisplayField>
+    <errorMessage>There needs to be a value in Contact Email in order to Alert Vendor</errorMessage>
+</ValidationRule>

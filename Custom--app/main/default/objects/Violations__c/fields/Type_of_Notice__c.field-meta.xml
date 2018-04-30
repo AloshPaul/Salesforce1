@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Notice__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Notice</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+                <label>Collection Notice</label>
+            </value>
+            <value>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+                <label>Delinquency Notice</label>
+            </value>
+            <value>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+                <label>Pre-Lien</label>
+            </value>
+            <value>
+                <fullName>Lien</fullName>
+                <default>false</default>
+                <label>Lien</label>
+            </value>
+            <value>
+                <fullName>Securitized Transfer Fee</fullName>
+                <default>false</default>
+                <label>Securitized Transfer Fee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

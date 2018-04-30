@@ -1,0 +1,14 @@
+<!-- 
+    Description :   Page having Package.xml details according to the modification associated with the SIR.
+    
+    Created By  :   Abhinav Sharma
+    
+    Revision Logs:  V1.0 - Created
+ -->
+<apex:page standardController="Issues_New_Feature_Request__c" extensions="SIRPackageDotXMLBuilder" id="page" contentType="application/xml" showHeader="false" sidebar="false">
+	<Package xmlns:ns0="http://soap.sforce.com/2006/04/metadata">
+   		<fullName>Migration test</fullName>
+   		{!packageDotXmlString}
+       	<version>27.0</version>
+	</Package>
+</apex:page>

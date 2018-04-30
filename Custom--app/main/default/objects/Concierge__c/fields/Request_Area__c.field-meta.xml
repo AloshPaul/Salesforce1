@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brokersite</fullName>
+                <default>false</default>
+                <label>Brokersite</label>
+            </value>
+            <value>
+                <fullName>Computer / iPad / iPhone</fullName>
+                <default>false</default>
+                <label>Computer / iPad / iPhone</label>
+            </value>
+            <value>
+                <fullName>Network / File Server / Network Printer</fullName>
+                <default>false</default>
+                <label>Network / File Server / Network Printer</label>
+            </value>
+            <value>
+                <fullName>Office Phone</fullName>
+                <default>false</default>
+                <label>Office Phone</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Support Issue</fullName>
+                <default>false</default>
+                <label>Support Issue</label>
+            </value>
+            <value>
+                <fullName>System Enhancement or Change Request</fullName>
+                <default>false</default>
+                <label>System Enhancement or Change Request</label>
+            </value>
+            <value>
+                <fullName>Turn Cost Budget Tool</fullName>
+                <default>false</default>
+                <label>Turn Cost Budget Tool</label>
+            </value>
+            <value>
+                <fullName>User Access</fullName>
+                <default>false</default>
+                <label>User Access</label>
+            </value>
+            <value>
+                <fullName>ePM ( Invoice processing )</fullName>
+                <default>false</default>
+                <label>ePM ( Invoice processing )</label>
+            </value>
+            <value>
+                <fullName>ePM -Technical</fullName>
+                <default>false</default>
+                <label>ePM -Technical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

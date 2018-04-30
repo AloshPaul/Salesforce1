@@ -1,0 +1,144 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Abhinav Sharma    
+  *
+  *    Created Date   :    05-01-2013
+  *
+  *    Revision Log   :    V1.0    
+**/
+-->
+<apex:page standardController="Prospect__c" recordSetVar="unused" sidebar="false">
+    
+         <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+        
+        <!--page Form-->
+        <apex:form >
+            
+            <!--page block-->
+            <apex:pageBlock >
+                
+                <!--page Message-->
+                <apex:pagemessages ></apex:pagemessages>
+                
+                    <!--page buttons--> 
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!save}"/>
+                        <apex:commandButton value="Cancel" action="{!cancel}" onclick="return confirmCancel();"/>
+                    </apex:pageBlockButtons>
+                    
+                    <!--Fields for Mass Edit Operation-->
+                    <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                    
+                        <!--Residence -->
+                        <apex:column headerValue="Residence">
+                            <apex:outputField value="{!a.Residence__c}"/>
+                        </apex:column>
+                        
+                        <!--APN -->
+                        <apex:column headerValue="APN">
+                            <apex:outputField value="{!a.APN__c}"/>
+                        </apex:column>
+                        
+                        <!--Property Street -->
+                        <apex:column headerValue="Property Street">
+                            <apex:outputField value="{!a.Property_Street__c}"/>
+                        </apex:column>
+                        
+                        <!--Region -->
+                        <apex:column headerValue="Region">
+                            <apex:outputField value="{!a.Region__c }"/>
+                        </apex:column>
+                        
+                        <!--*Back Taxes Est. @ UW --> 
+                        <apex:column headerValue="*Back Taxes Est. @ UW">
+                            <apex:inputField value="{!a.Back_Taxes_Est_UW__c }"/>
+                        </apex:column>
+                        
+                        <!-- *Bid Service (Expense) -->
+                        <apex:column headerValue="*Bid Service (Expense)">
+                            <apex:inputField value="{!a.Bid_Service_Expense__c }"/>
+                        </apex:column>
+                        
+                        <!--*CFK Est. @ UW-->
+                        <apex:column headerValue="*CFK Est. @ UW">
+                            <apex:inputField value="{!a.CFK_Est_UW__c}"/>
+                        </apex:column>
+                        
+                        <!--*Contract Price -->
+                        <apex:column headerValue="*Contract Price">
+                            <apex:inputField value="{!a.Contract_Price__c }"/>
+                        </apex:column>
+                        
+                        <!--*Escrow Expected Close Date -->
+                        <apex:column headerValue="*Escrow Expected Close Date">
+                            <apex:inputField value="{!a.Escrow_Expected_Close_Date__c}"/>
+                        </apex:column>
+                        
+                        <!-- *Escrow Opened Date -->
+                        <apex:column headerValue="*Escrow Opened Date">
+                            <apex:inputField value="{!a.Escrow_Opened_Date__c}"/>
+                        </apex:column>
+                        
+                        <!--*Inspection Period End Date -->
+                        <apex:column headerValue="*Inspection Period End Date">
+                            <apex:inputField value="{!a.Inspection_Period_End_Date__c}"/>
+                        </apex:column>
+                        
+                        <!-- *Liens/Fines Est. @ UW -->
+                        <apex:column headerValue="*Liens/Fines Est. @ UW">
+                            <apex:inputField value="{!a.Liens_Fines_Est_UW__c}"/>
+                        </apex:column>
+                        
+                        <!--*Market Value @ UW -->
+                        <apex:column headerValue="*Market Value @ UW">
+                            <apex:inputField value="{!a.Market_Value_UW__c}"/>
+                        </apex:column>
+                        
+                        <!--*Max Bid Price-->
+                        <apex:column headerValue="*Max Bid Price">
+                            <apex:inputField value="{!a.Max_Bid_Price__c}"/>
+                        </apex:column>
+                        
+                        <!--*Other Closing Costs Est. @ UW -->
+                        <apex:column headerValue="*Other Closing Costs Est. @ UW">
+                            <apex:inputField value="{!a.Other_Closing_Costs_Est_UW__c}"/>
+                        </apex:column>
+                        
+                        <!--*Previous High Date -->
+                        <apex:column headerValue="*Previous High Date">
+                            <apex:inputField value="{!a.Previous_High_Date__c}"/>
+                        </apex:column>
+                        
+                        <!--*Previous High Value -->
+                        <apex:column headerValue="*Previous High Value">
+                            <apex:inputField value="{!a.Previous_High_Value__c}"/>
+                        </apex:column>
+                        
+                        <!--*Rehab Budget Est. @ UW -->
+                        <apex:column headerValue="*Rehab Budget Est. @ UW">
+                            <apex:inputField value="{!a.Rehab_Budget_Est_UW__c}"/>
+                        </apex:column>
+                        
+                        <!--*Replacement Cost PSF UW OLD-->
+                        <apex:column headerValue="*Replacement Cost PSF UW OLD">
+                            <apex:inputField value="{!a.Replacement_Cost_PSF_UW_OLD__c}"/>
+                        </apex:column>
+                        
+                        <!--*Title Policy Cost Est. @ UW-->
+                        <apex:column headerValue="*Title Policy Cost Est. @ UW">
+                            <apex:inputField value="{!a.Title_Policy_Cost_Est_UW__c}"/>
+                        </apex:column>
+                        
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Working_Notes_Internal_Support_Team__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Only the Internal Support Team can view this field</inlineHelpText>
+    <label>Working Notes (Internal Support Team)</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

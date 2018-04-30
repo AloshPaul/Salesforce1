@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trustee_Form_of_Payment__c</fullName>
+    <externalId>false</externalId>
+    <label>*Trustee Form of Payment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Wire</fullName>
+                <default>false</default>
+                <label>Wire</label>
+            </value>
+            <value>
+                <fullName>Cashier's Check</fullName>
+                <default>false</default>
+                <label>Cashier's Check</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

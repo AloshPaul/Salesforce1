@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Add_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Proxy_Pipeline_Add_Date__c)),Proxy_Pipeline_Add_Date__c,
+IF( NOT(ISBLANK(Prospect__c)), CreatedDate, null))</formula>
+    <label>Pipeline Add Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

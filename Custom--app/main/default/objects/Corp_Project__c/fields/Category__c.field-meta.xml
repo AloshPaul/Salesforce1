@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Special Project - Nick</fullName>
+                <default>false</default>
+                <label>Special Project - Nick</label>
+            </value>
+            <value>
+                <fullName>Special Project - Peter</fullName>
+                <default>false</default>
+                <label>Special Project - Peter</label>
+            </value>
+            <value>
+                <fullName>Special Project - Eric</fullName>
+                <default>false</default>
+                <label>Special Project - Eric</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

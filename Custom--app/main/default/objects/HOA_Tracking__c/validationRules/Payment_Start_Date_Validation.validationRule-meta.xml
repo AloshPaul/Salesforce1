@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Start_Date_Validation</fullName>
+    <active>false</active>
+    <description>If the payment frequency changes, then a new payment start date will need to be entered</description>
+    <errorConditionFormula>ISCHANGED( Payment_Frequency__c ) &amp;&amp; ! ISCHANGED( Payment_Start_Date__c )</errorConditionFormula>
+    <errorMessage>New Payment Start Date needs to be entered.</errorMessage>
+</ValidationRule>

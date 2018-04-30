@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Most_Recent_Claim_Update__c</fullName>
+    <externalId>false</externalId>
+    <label>Date of Most Recent Claim Update</label>
+    <summarizedField>Claim_Update__c.LastModifiedDate</summarizedField>
+    <summaryForeignKey>Claim_Update__c.Claim__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

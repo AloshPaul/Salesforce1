@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Florida</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>AZB_Update__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Jacksonville,Miami,Orlando,Tampa</value>
+    </filters>
+    <label>All Florida</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

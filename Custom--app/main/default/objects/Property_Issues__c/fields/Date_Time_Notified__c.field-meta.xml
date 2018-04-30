@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Time_Notified__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is automatically populated when a name is entered in the Assigned To field.  In addition, that person will receive an email letting them know they've been assigned to the Issue.</inlineHelpText>
+    <label>Date/Time Notified</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

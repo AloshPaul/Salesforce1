@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remarks__c</fullName>
+    <description>This is a formula field has been requested by corporate accounting.
+
+HOA_Tracker__r.HOA_Account_Number__c &amp; "-" &amp; "Assessment"</description>
+    <externalId>false</externalId>
+    <formula>HOA_Tracker__r.HOA_Account_Number__c &amp; " " &amp; 
+
+CASE(MONTH( DATEVALUE(CreatedDate)), 
+1, "2", 
+2, "3", 
+3, "4", 
+4, "5", 
+5, "6", 
+6, "7", 
+7, "8", 
+8, "9", 
+9, "10", 
+10, "11", 
+11, "12", 
+12, "01", 
+"xxx999xxx") 
+
+&amp; "/" &amp; TEXT(YEAR(Due_Date__c )) 
+
+&amp; " " &amp; Payment_Frequency_new__c 
+
+&amp; " " &amp; "Assessment"</formula>
+    <inlineHelpText>This is a formula field has been requested by corporate accounting.</inlineHelpText>
+    <label>Remarks</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

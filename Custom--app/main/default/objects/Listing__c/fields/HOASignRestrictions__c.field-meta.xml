@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOASignRestrictions__c</fullName>
+    <externalId>false</externalId>
+    <formula>Residence__r.HOA_Primary__r.Sign_Policy__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field will display the value from the primary HOA related to this home.  (If you hover over the "Residence" field the display will include a link to the HOA record.)</inlineHelpText>
+    <label>HOA Sign Restrictions</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

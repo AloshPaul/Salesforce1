@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treasury_Request_Queue_Member__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to identify those who can work Treasury Requests in the Concierge queue (currently Dolores Leal and Robert Eagle).  This field is used in a Validation Rule to restrict the editing of Treasury Requests after submission except for those who have this field checked.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used in a Validation Rule to restrict the editing of Treasury Requests after submission except for those who have this field checked.</inlineHelpText>
+    <label>Treasury Request Queue Member</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

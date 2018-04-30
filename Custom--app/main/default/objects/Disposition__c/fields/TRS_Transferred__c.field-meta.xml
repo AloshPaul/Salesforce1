@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TRS_Transferred__c</fullName>
+    <description>TRS Transferred should be  yes if creating  Disposition Rehab record on Fund 02 Property</description>
+    <externalId>false</externalId>
+    <label>TRS Transferred</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Fund__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>02</controllingFieldValue>
+            <valueName>Yes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02</controllingFieldValue>
+            <valueName>No</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

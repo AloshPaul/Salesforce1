@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Acq_EMD_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>EMD_Address_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>EMD_Address_Layout</fullName>
+        <fields>Complete_Address__c</fields>
+        <fields>Bid_Type__c</fields>
+        <fields>EMD_Amount__c</fields>
+        <label>EMD Address Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Address__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Acq EMDs</relationshipLabel>
+        <relationshipName>Acq_EMDs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficiary Account Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_Bank__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficiary Bank</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bid_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Pipeline__r.Bid_Type__c</formula>
+        <label>Bid Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancelled_EMD_Received_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancelled EMD Received Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Complete_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Street__c &amp;&apos;, &apos;&amp; Address__r.City__c &amp;&apos;, &apos;&amp; IF(Address__r.State__r.Name = &apos;&apos;, &apos;&apos;, Address__r.State__r.Name &amp;&apos;, &apos;) &amp; Address__r.Zip__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Complete Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dir_IMG_EMD_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Dir IMG EMD Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Director_IMG__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Director IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acq_EMDs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Approval_Requested_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Approval Requested Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Balance_Due__c</fullName>
+        <externalId>false</externalId>
+        <formula>EMD_Amount__c  -  Cancelled_EMD_Received_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EMD Balance Due</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Receipt_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>EMD Receipt Received</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Requested_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Requested Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EM_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>EM Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Receipt Details</fullName>
+                    <default>false</default>
+                    <label>Receipt Details</label>
+                </value>
+                <value>
+                    <fullName>EMD Cancelled Pending</fullName>
+                    <default>false</default>
+                    <label>EMD Cancelled Pending</label>
+                </value>
+                <value>
+                    <fullName>EMD Cancelled Received</fullName>
+                    <default>false</default>
+                    <label>EMD Cancelled Received</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Escrow_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Pipeline__r.Escrow_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Escrow Amount (From Broker)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Cancelled_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Cancelled Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Cancelled_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Cancelled Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High Rehab Budget</fullName>
+                    <default>false</default>
+                    <label>High Rehab Budget</label>
+                </value>
+                <value>
+                    <fullName>HOA Issues</fullName>
+                    <default>false</default>
+                    <label>HOA Issues</label>
+                </value>
+                <value>
+                    <fullName>Title Issues</fullName>
+                    <default>false</default>
+                    <label>Title Issues</label>
+                </value>
+                <value>
+                    <fullName>Seller Cancels</fullName>
+                    <default>false</default>
+                    <label>Seller Cancels</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Escrow_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Escrow Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Acq EMDs (Escrow Company)</relationshipLabel>
+        <relationshipName>Acq_EMDs1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Escrow_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Pipeline__r.Expected_Escrow_Close_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected Escrow Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fed_Ref_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Fed Ref ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <referenceTo>Region__c</referenceTo>
+        <relationshipLabel>Acq EMDs</relationshipLabel>
+        <relationshipName>Acq_EMDs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pipeline_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Pipeline__r.Pipeline_Status__c)</formula>
+        <label>Pipeline Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pipeline__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Pipeline ID</label>
+        <referenceTo>AcqPipeline__c</referenceTo>
+        <relationshipLabel>Acq EMDs</relationshipLabel>
+        <relationshipName>Acq_EMDs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.City__c</formula>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.State__r.Name</formula>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Street__c</formula>
+        <label>Property Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Zip__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Zip__c</formula>
+        <label>Property Zip</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchasing_Entity__c</fullName>
+        <externalId>false</externalId>
+        <formula>Market__r.Purchasing_Entity__c</formula>
+        <label>Purchasing Entity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVP_IMG__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SVP IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acq_EMDs1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SentMails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SentMails</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Closer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Closer IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acq_EMDs2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Wire_Reference_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Wire Reference No.</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>doEMDApproved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doEMDApproved</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doSubmit_for_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doSubmit for Approval</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Acq EMD</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Complete_Address__c</columns>
+        <columns>EM_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>EMD-{0000}</displayFormat>
+        <label>EMD ID</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Acq EMDs</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchResultsAdditionalFields>Complete_Address__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EM_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Bid_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EMD_Amount__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Escrow_Approval</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+								NOT(ISBLANK(Dir_IMG_EMD_Approval_Date__c)),
+        ISCHANGED(EMD_Amount__c)
+								)</errorConditionFormula>
+        <errorMessage>Cannot  change EMD Amount after approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Receipt_Details</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+     ISBLANK(Dir_IMG_EMD_Approval_Date__c),			
+	    EMD_Receipt_Received__c = True
+					)</errorConditionFormula>
+        <errorMessage>Cannot order Receipt details unless the approval is complete</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

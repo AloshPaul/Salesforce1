@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unable_to_Create_Record_without_Auditor</fullName>
+    <active>true</active>
+    <description>A QC Audit can not be created if the QC Auditor field isn't populated</description>
+    <errorConditionFormula>ISBLANK( QC_Auditor__c )</errorConditionFormula>
+    <errorMessage>You can not save this record until a QC Auditer is selected</errorMessage>
+</ValidationRule>

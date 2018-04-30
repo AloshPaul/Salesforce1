@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIPS_Acq_Yesterday</fullName>
+    <booleanFilter>1</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Occupancy_Status_Acquisition__c</columns>
+    <columns>TIP_Status__c</columns>
+    <columns>DK_Assigned_Date__c</columns>
+    <columns>DK_Driver_Assigned__c</columns>
+    <columns>Initial_Contact_Date__c</columns>
+    <columns>Region__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Acq_Reporting_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Acq_Reporting_Date__c</field>
+        <operation>equals</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <label>TIPs Acq Yesterday</label>
+</ListView>

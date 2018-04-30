@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reparent_TIP</fullName>
+    <active>true</active>
+    <description>Only allows System Administrators and Invitation Asset Management profiles to edit the Portfolio field on the TIP after the initial creation.</description>
+    <errorConditionFormula>AND(
+ISCHANGED( Portfolio__c ),
+NOT ($Profile.Name = "System Administrator" || $Profile.Name = "Invitation Asset Management")
+)</errorConditionFormula>
+    <errorDisplayField>Portfolio__c</errorDisplayField>
+    <errorMessage>The relationship to the Portfolio cannot be edited.</errorMessage>
+</ValidationRule>

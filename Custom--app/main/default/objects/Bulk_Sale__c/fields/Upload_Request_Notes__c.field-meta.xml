@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upload_Request_Notes__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field to indicate specific instructions, including critical timelines. The SF.com team will make best efforts to be responsive and upload the data within 4 business hours (CST) of receiving it, assuming it's in the correct format.</inlineHelpText>
+    <label>Upload Request Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

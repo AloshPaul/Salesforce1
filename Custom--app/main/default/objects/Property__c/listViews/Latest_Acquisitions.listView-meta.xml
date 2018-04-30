@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Acquisitions</fullName>
+    <columns>NAME</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Region__c</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Acquisition_Status__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Property_Street1__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Exp_Gross_Monthly_Rent_UW__c</columns>
+    <columns>Bedrooms__c</columns>
+    <columns>Baths__c</columns>
+    <columns>Days_since_Acquisition__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Days_since_Acquisition__c</field>
+        <operation>lessOrEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>Latest Acquisitions</label>
+</ListView>

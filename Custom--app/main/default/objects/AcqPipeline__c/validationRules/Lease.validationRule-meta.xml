@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+doReview_Complete__c =True, 
+Occupied_Status_Acquisition__c ='Purchase Rented', 
+Assumed_Lease_End_Date__c &lt;= Assumed_Lease_Start_Date__c)</errorConditionFormula>
+    <errorMessage>The Lease End Date cannot be a date before the Lease Start Date</errorMessage>
+</ValidationRule>

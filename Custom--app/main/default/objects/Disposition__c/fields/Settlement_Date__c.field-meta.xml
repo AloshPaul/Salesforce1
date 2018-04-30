@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Date__c</fullName>
+    <description>Disposition Date must match Settlement Date on HUD , field Label has been modified  as part of Data Integrity Project</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Disposition Date must match Settlement Date on HUD</inlineHelpText>
+    <label>Disposition Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

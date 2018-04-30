@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_LSM_Assigned</fullName>
+    <columns>NAME</columns>
+    <columns>County__c</columns>
+    <columns>Leasing_Mgr_Assigned__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Leasing_Mgr_Assigned__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Leased</value>
+    </filters>
+    <label>No LSM Assigned</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Executive_Atlanta</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Team_Member_Atlanta</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

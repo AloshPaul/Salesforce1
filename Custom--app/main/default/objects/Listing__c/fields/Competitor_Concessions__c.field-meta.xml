@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Concessions__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitor Concessions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Concessions</fullName>
+                <default>false</default>
+                <label>No Concessions</label>
+            </value>
+            <value>
+                <fullName>&lt;$500</fullName>
+                <default>false</default>
+                <label>&lt;$500</label>
+            </value>
+            <value>
+                <fullName>$500-$1000</fullName>
+                <default>false</default>
+                <label>$500-$1000</label>
+            </value>
+            <value>
+                <fullName>First Months Rent</fullName>
+                <default>false</default>
+                <label>First Months Rent</label>
+            </value>
+            <value>
+                <fullName>Other Concessions</fullName>
+                <default>false</default>
+                <label>Other Concessions</label>
+            </value>
+            <value>
+                <fullName>Not Able to Determine</fullName>
+                <default>false</default>
+                <label>Not Able to Determine</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

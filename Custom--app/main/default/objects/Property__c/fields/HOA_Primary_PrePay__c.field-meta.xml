@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Primary_PrePay__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the amount that will be pre-paid to the primary HOA via escrow.  This amount should be the amount that will be due for the remainder of the current fiscal year.  Please ensure that the HOA is entered on the Residence record.</inlineHelpText>
+    <label>HOA (Primary) PrePay</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

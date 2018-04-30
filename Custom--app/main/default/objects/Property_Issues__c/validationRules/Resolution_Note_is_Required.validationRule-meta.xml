@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Note_is_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Status__c, 'Closed (Resolved)') &amp;&amp; ISBLANK( Closed_Reason_Notes__c )</errorConditionFormula>
+    <errorMessage>Resolution Notes is required when Property Issue Status is 'Closed (Resolved)'</errorMessage>
+</ValidationRule>

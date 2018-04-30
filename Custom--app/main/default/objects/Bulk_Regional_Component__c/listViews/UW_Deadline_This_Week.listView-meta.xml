@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UW_Deadline_This_Week</fullName>
+    <columns>Bulk_Deal__c</columns>
+    <columns>Properties__c</columns>
+    <columns>Region__c</columns>
+    <columns>Region_Value__c</columns>
+    <columns>UW_Deadline__c</columns>
+    <columns>Submit_to_Region__c</columns>
+    <columns>Date_Time_to_Region__c</columns>
+    <columns>Underwriting_Complete__c</columns>
+    <columns>Date_Time_Underwriting_Complete__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UW_Deadline__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>UW Deadline This Week</label>
+</ListView>

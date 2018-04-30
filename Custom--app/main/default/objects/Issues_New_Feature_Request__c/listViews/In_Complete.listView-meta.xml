@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Complete</fullName>
+    <columns>Task_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Date_Assigned__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete</value>
+    </filters>
+    <label>04-In Complete</label>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evict_Statutory_Notice_Required</fullName>
+    <active>true</active>
+    <description>If Initial_Notice_Date__cis Entered, require a value in Evict_Statutory_Notice_Required__c</description>
+    <errorConditionFormula>!(ISBLANK(Initial_Notice_Date__c ))
+&amp;&amp;
+ISBLANK(Evict_Statutory_Notice_Required__c)</errorConditionFormula>
+    <errorDisplayField>Evict_Statutory_Notice_Required__c</errorDisplayField>
+    <errorMessage>Evict Notice Required(Days) is required if Initial Notice Date is filled in.</errorMessage>
+</ValidationRule>

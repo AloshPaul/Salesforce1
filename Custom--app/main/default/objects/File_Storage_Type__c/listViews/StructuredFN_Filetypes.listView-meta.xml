@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StructuredFN_Filetypes</fullName>
+    <columns>NAME</columns>
+    <columns>Allowed_For_Objects__c</columns>
+    <columns>Url_Expiration_Minutes__c</columns>
+    <columns>Upload_To_SFN__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Allowed_For_Objects__c</field>
+        <operation>includes</operation>
+        <value>Property__c</value>
+    </filters>
+    <filters>
+        <field>Upload_To_SFN__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>StructuredFN Filetypes</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

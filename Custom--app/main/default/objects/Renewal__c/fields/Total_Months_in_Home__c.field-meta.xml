@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Months_in_Home__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Lease__r.Lease_End_Date__c )) &amp;&amp; NOT(ISBLANK(Lease__r.Move_In_Date__c))
+     ,(((YEAR(TODAY()) - YEAR(Lease__r.Move_In_Date__c) - 1) *12) + (12 - MONTH(Lease__r.Move_In_Date__c) +1) + MONTH(TODAY()))
+     , null
+)</formula>
+    <inlineHelpText>Today minus Move-in Date.  Note: This field is based on Move-in Date in Yardi and doesn't reflect time in home prior to IH Acquisition, if applicable.</inlineHelpText>
+    <label>Total Months Since Move-In</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

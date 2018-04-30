@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted_to_Pipeline_Today</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Pipeline_Add_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Pipeline_Add_Date__c</field>
+        <operation>equals</operation>
+        <value>9/4/2013 12:00 AM</value>
+    </filters>
+    <label>**Converted to Pipeline XXX</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

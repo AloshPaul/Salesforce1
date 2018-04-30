@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Portfolio Manager</fullName>
+                <default>false</default>
+                <label>Portfolio Manager</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+                <label>Rehab</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

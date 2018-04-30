@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bid_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>*Bid Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Trustee</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Trustee</label>
+            </value>
+            <value>
+                <fullName>REO</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>REO</label>
+            </value>
+            <value>
+                <fullName>Bulk Sale</fullName>
+                <color>#993399</color>
+                <default>false</default>
+                <label>Bulk Sale</label>
+            </value>
+            <value>
+                <fullName>Short Sale</fullName>
+                <color>#E27001</color>
+                <default>false</default>
+                <label>Short Sale</label>
+            </value>
+            <value>
+                <fullName>Off Market</fullName>
+                <default>false</default>
+                <label>Off Market</label>
+            </value>
+            <value>
+                <fullName>Retail Auction</fullName>
+                <default>false</default>
+                <label>Retail Auction</label>
+            </value>
+            <value>
+                <fullName>Standard Sale - Investor</fullName>
+                <default>false</default>
+                <label>Standard Sale - Investor</label>
+            </value>
+            <value>
+                <fullName>Standard Sale - Homeowner</fullName>
+                <default>false</default>
+                <label>Standard Sale - Homeowner</label>
+            </value>
+            <value>
+                <fullName>Standard Sale</fullName>
+                <color>#CC0000</color>
+                <default>false</default>
+                <label>Standard Sale</label>
+            </value>
+            <value>
+                <fullName>New Build</fullName>
+                <default>false</default>
+                <label>New Build</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

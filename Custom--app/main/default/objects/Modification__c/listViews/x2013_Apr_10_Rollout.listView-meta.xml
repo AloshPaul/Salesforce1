@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x2013_Apr_10_Rollout</fullName>
+    <columns>System_Issue_Report__c</columns>
+    <columns>Type_Of_Modification__c</columns>
+    <columns>Component_Type__c</columns>
+    <columns>Object_Name__c</columns>
+    <columns>Component_Name__c</columns>
+    <columns>Manual_Step__c</columns>
+    <columns>SIR_Rollout__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SIR_Targeted_Rollout__c</field>
+        <operation>equals</operation>
+        <value>2013 Apr 10</value>
+    </filters>
+    <filters>
+        <field>SIR_Status__c</field>
+        <operation>equals</operation>
+        <value>Ready to Deploy in PROD</value>
+    </filters>
+    <label>2013 Apr 10 Rollout</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Service_Item</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Service Item</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a2k/e?CF00NE0000004c5as={!Work_Order__c.Name}&amp;CF00NE0000004c5as_lkid={!Work_Order__c.Id}&amp;retURL=%2F{!Work_Order__c.Id}&amp;CF00NE0000004c5bP={!Work_Order__c.PortfolioProperty__c}&amp;CF00NE0000004c5bP_lkid={!Work_Order__c.PortfolioPropertyId__c}&amp;RecordType=012E00000005n3U&amp;ent=01IE00000011ZBz</url>
+</WebLink>

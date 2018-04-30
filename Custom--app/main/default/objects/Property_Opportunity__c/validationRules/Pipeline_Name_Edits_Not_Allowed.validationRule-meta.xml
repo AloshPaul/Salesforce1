@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Name_Edits_Not_Allowed</fullName>
+    <active>true</active>
+    <description>Pipeline Name cannot be edited by those with the Broker Customer Portal profile.</description>
+    <errorConditionFormula>NOT( ISNEW() ) 
+ &amp;&amp; 
+ISCHANGED( Name )
+ &amp;&amp; 
+ $Profile.Name   = 'Broker Customer Portal'</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Only a System Administrator can edit this field.  If it needs to be changed, please open a SF Support/Change Request.  Please click the Cancel button.</errorMessage>
+</ValidationRule>

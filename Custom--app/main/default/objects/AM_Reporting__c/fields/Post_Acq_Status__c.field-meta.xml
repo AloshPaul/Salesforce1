@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Acq_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, "For Sale"),"For Sale", 
+IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, "Cancelled"),"Cancelled", 
+IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, "Sold"),"Sold", 
+
+IF(AND(Portfolio__r.Open_TIP__c  =  1, Portfolio__r.Open_Rehab__c  >= 1), "Instatus Transition",
+
+IF( Portfolio__r.Open_TIP__c  =  1, "TIP",
+IF( Portfolio__r.Open_Rehab__c  = 1, "Rehab",
+
+IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= "Residential",Yardi_Rent_Roll__r.Current_Tenant_Status__c= "Applicant" ), "Leased",  
+IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= "Residential",Yardi_Rent_Roll__r.Current_Tenant_Status__c= "Future" ), "Leased",
+
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = "Current", "Leased", 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = "Eviction", "Leased", 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = "Notice", "Leased",
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = "VACANT", "OTM", 
+IF( Yardi_Rent_Roll__r.Unit_Rental_Type__c  = "Admin", "TIP",  
+IF( Yardi_Rent_Roll__r.Unit_Rental_Type__c  = "Down", "Rehab", 
+
+IF( BEGINS( TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c) , "Closed"),"Leased", 
+
+"Not Segmented")))))))))))))))</formula>
+    <inlineHelpText>Formula based on several stages from Most Recent TIP, Most Recent Rehab, Yardi Rent Roll and Acquisition Status</inlineHelpText>
+    <label>Post Acq Stat</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

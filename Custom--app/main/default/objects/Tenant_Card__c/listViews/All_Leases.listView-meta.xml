@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Leases</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Residence__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Lease_From_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Lease_Term__c</columns>
+    <columns>Month_to_Month__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>Lease_Status__c</columns>
+    <columns>tCode_LastName__c</columns>
+    <columns>Tenant_Status_As_of_Import_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Leases</label>
+</ListView>

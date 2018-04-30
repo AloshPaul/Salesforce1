@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Front_End_Super_Requires_Rekey_Date</fullName>
+    <active>true</active>
+    <description>Front End Supervisor assignment requires re-key date or re-key ready date</description>
+    <errorConditionFormula>AND(ISBLANK(Re_Key_Date__c),ISBLANK( Re_Key_Ready_Date__c )) 
+&amp;&amp; 
+Obsolete_Front_End_Supervisor__c &lt;> null</errorConditionFormula>
+    <errorMessage>You have assigned a Front End Supervisor - you must also populate the re-key date.</errorMessage>
+</ValidationRule>

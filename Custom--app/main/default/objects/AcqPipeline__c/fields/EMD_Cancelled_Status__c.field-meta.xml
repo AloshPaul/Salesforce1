@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EMD_Cancelled_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>EMD Cancelled Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EMD Requested</fullName>
+                <default>false</default>
+                <label>EMD Requested</label>
+            </value>
+            <value>
+                <fullName>EMD Received</fullName>
+                <default>false</default>
+                <label>EMD Received</label>
+            </value>
+            <value>
+                <fullName>EMD Forfeited</fullName>
+                <default>false</default>
+                <label>EMD Forfeited</label>
+            </value>
+            <value>
+                <fullName>No EMD</fullName>
+                <default>false</default>
+                <label>No EMD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

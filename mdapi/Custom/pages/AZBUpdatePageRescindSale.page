@@ -1,0 +1,10 @@
+<apex:page standardController="AZB_Update__c" extensions="AZBUpdateRescindSaleExtension"  action="{!rescindSale}" title="Rescind Sale">
+	<apex:form >
+		<apex:pageBlock title="Rescind Sale">
+			<apex:pageBlockButtons location="Bottom">
+				<apex:commandButton value="Cancel" action="{!cancel}" />
+	 		</apex:pageBlockButtons>
+			<apex:pageMessages />
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

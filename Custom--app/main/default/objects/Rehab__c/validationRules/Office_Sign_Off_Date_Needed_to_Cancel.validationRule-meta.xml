@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Sign_Off_Date_Needed_to_Cancel</fullName>
+    <active>false</active>
+    <description>In order to change the Rehab Stage to "Closed - Cancelled", an Office Sign-Off Date must be entered.</description>
+    <errorConditionFormula>RecordType.Name  = 'Post-Acquisition'
+ &amp;&amp; 
+ ISPICKVAL( Stage__c , 'Closed - Cancelled') 
+ &amp;&amp; 
+ ISBLANK( Office_Signoff_Date__c )
+ &amp;&amp; 
+ $Profile.Name  &lt;> 'System Administrator'
+ &amp;&amp; 
+ $Profile.Name  &lt;> 'SFDC Business Partner'</errorConditionFormula>
+    <errorDisplayField>Office_Signoff_Date__c</errorDisplayField>
+    <errorMessage>In order to change the Rehab Stage to "Closed - Cancelled", an Office Sign-Off Date must be entered.</errorMessage>
+</ValidationRule>

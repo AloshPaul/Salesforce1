@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dead_Escrow_Open_Needs_Cancelled_Date</fullName>
+    <active>true</active>
+    <description>Records that have an Escrow Amount with a Pipeline Status of "Dead - Cancelled" must also have an Escrow Cancelled Date.</description>
+    <errorConditionFormula>AND(
+ NOT($Profile.Name = 'System Administrator'),
+(NOT( ISBLANK( Escrow_Amount__c ) )
+ &amp;&amp;
+ ISPICKVAL( Stage__c , 'Dead - Cancelled')
+ &amp;&amp;
+ ISBLANK( Escrow_Cancelled_Date__c ) )
+)</errorConditionFormula>
+    <errorDisplayField>Escrow_Cancelled_Date__c</errorDisplayField>
+    <errorMessage>Records that have an Escrow Amount with a Pipeline Status of "Dead - Cancelled" must also have an Escrow Cancelled Date.</errorMessage>
+</ValidationRule>

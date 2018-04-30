@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eviction_Attorney_Law_Firm1__c</fullName>
+    <description>This is one of the historic fields.  I am temporarily using it to map some Yardi values to support the listing data load.  (JH 6/29)</description>
+    <externalId>false</externalId>
+    <label>Y1_Eviction Attorney Law Firm</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

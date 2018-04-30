@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_Diligence</fullName>
+    <columns>Bulk_Deal__c</columns>
+    <columns>NAME</columns>
+    <columns>Submit_to_Seller_Deadline__c</columns>
+    <columns>Total_Properties__c</columns>
+    <columns>Bulk_Deal_Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>Upload_Request__c</columns>
+    <columns>Upload_Complete__c</columns>
+    <columns>List_Price__c</columns>
+    <columns>IH_Bulk_Value__c</columns>
+    <columns>Initial_Offer_Amount__c</columns>
+    <columns>Offered__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal_Status__c</field>
+        <operation>equals</operation>
+        <value>Due Diligence</value>
+    </filters>
+    <label>Due Diligence</label>
+</ListView>

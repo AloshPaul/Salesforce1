@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atlanta_No_Pipeline</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>AZB_User_ID__c</columns>
+    <columns>AZB_IH_Original_Bid_Max__c</columns>
+    <columns>AZB_IH_Win_Date__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>IH_Prospect__c</columns>
+    <columns>IH_Pipeline__c</columns>
+    <columns>IH_Last_Result_Message__c</columns>
+    <columns>IH_Force_Run_Trigger__c</columns>
+    <columns>IH_Needs_Processing__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>atlanta</value>
+    </filters>
+    <filters>
+        <field>AZB_IH_Original_Bid_Max__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>IH_Pipeline__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>AZB_Bid_Status__c</field>
+        <operation>equals</operation>
+        <value>Bid Executed</value>
+    </filters>
+    <label>*Atlanta No Pipeline</label>
+    <sharedTo>
+        <group>Region_Atlanta</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

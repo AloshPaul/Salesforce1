@@ -1,0 +1,34 @@
+<!--
+ *  Description 	:	This page is being used on the list view of Property Invoices
+ 						This page is to send the email to user with all All Invoices CSV where
+ 							Include_in_Yardi_Batch__c == true
+ 							Date_Submitted_to_Yardi__c == null
+ 							Status__c == 'Submitted'
+  						Once the email is sent, Update the following fields of the queried records
+  							Date_Submitted_to_Yardi__c = Today
+  							Status__c = Paid
+ *
+ *	Created By  	:   Bhavi Sharma
+ *
+ *  Created Date	:   11/21/2013
+ *
+ *  Revision Logs	:  	V1.0 - Created
+ *
+-->
+<apex:page standardController="Property_Invoice__c" recordSetVar="unused" extensions="EmailPropertyInvoicesCSVController" action="{!emailCSVToUserAndUpdateInvoices}">
+
+	<!-- Section Header -->
+	<apex:sectionHeader title="Property Invoices" />
+
+	<!-- form -->
+	<apex:form >
+
+		<!-- Back Button -->
+		<div style="text-align:center">
+			<apex:commandButton value="Back to Previous Page" action="{!URLFOR($Action.Property_Invoice__c.List, $ObjectType.Property_Invoice__c)}" />
+		</div>
+
+		<!-- Messages -->
+		<apex:pageMessages />
+	</apex:form>
+</apex:page>

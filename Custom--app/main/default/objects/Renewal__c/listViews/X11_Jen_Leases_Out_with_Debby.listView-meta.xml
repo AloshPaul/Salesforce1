@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X11_Jen_Leases_Out_with_Debby</fullName>
+    <booleanFilter>(1 and 2 AND 3 AND 4 and 5 and 6 and 7) or (1 and 2 AND 3 and 5 and 6 and 7)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Variance_Current_to_New_Rent__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Renewal_Coordinator__c</columns>
+    <columns>Date_Time_Coordinator_Alert__c</columns>
+    <columns>Lease_Renewal_Sent__c</columns>
+    <columns>Resident_Intent__c</columns>
+    <columns>Renewal_Status_Comments__c</columns>
+    <columns>Comments_for_Coordinator__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Open,Month-to-Month</value>
+    </filters>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2013</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>equals</operation>
+        <value>Liz Fossati</value>
+    </filters>
+    <filters>
+        <field>Lease_Documents_Completed__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Renewal_Close_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Date_Time_Coordinator_Alert__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2013 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Alert_Coordinator__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>North Region - 4 - Renewal Leases Out</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

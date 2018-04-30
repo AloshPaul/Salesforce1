@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Method_of_Notification__c</fullName>
+    <externalId>false</externalId>
+    <label>Method of Notification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Phone - Voicemail</fullName>
+                <default>false</default>
+                <label>Phone - Voicemail</label>
+            </value>
+            <value>
+                <fullName>Phone - Live Conversation</fullName>
+                <default>false</default>
+                <label>Phone - Live Conversation</label>
+            </value>
+            <value>
+                <fullName>Snail Mail</fullName>
+                <default>false</default>
+                <label>Snail Mail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

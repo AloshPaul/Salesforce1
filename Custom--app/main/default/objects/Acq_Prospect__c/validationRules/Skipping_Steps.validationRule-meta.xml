@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skipping_Steps</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ Offer_Accepted__c = false, 
+Budget_Walk_Ordered__c = True 
+)</errorConditionFormula>
+    <errorDisplayField>Address__c</errorDisplayField>
+    <errorMessage>A Budget Walk cannot be ordered until the Offered Amount has been accepted</errorMessage>
+</ValidationRule>

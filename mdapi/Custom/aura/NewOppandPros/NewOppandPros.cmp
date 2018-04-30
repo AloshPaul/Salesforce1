@@ -1,0 +1,413 @@
+<aura:component implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="createOppController">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="bidoptions" type="List" />
+    <aura:attribute name="parkOptions" type="List" />
+    <aura:attribute name="roofOptions" type="List" />
+    <aura:attribute name="hvacOptions" type="List" />
+    <aura:attribute name="hoaOptions" type="List" />
+    <aura:attribute name="rpcQualOptions" type="List" />
+    <aura:attribute name="selectedLookUpRecord" type="List" />
+    <aura:attribute name="selectedValue" type="String" />
+    <aura:attribute name="selectedCounty" type="String" />
+	<aura:attribute name="disabledPick" type="Boolean" default="true"/>
+	<aura:attribute name="candidateCounty" type="List" />
+    
+   
+    
+    <!--Attributes-->
+    <aura:attribute name="oppAPN" type="String" default=""/>
+    <aura:attribute name="oppBidType" type="String" default=""/>
+    <aura:attribute name="oppBidTypeSel" type="String" default=""/>
+    <aura:attribute name="oppBulk" type="String" default=""/>
+    <aura:attribute name="PropOptions" type="List" />
+    <aura:attribute name="oppPropTypeSel" type="String" default=""/>
+    <aura:attribute name="oppYrBuilt" type="String" default=""/>
+    <aura:attribute name="oppBed" type="String" default=""/>
+    <aura:attribute name="oppBath" type="String" default=""/>
+    <aura:attribute name="oppSqFt" type="String" default=""/>
+    
+    <aura:attribute name="oppParking" type="String" default=""/>
+    <aura:attribute name="oppParkSel" type="String" default=""/>
+    <aura:attribute name="oppRoof" type="String" default=""/>
+    <aura:attribute name="oppRoofSel" type="String" default=""/>
+    <aura:attribute name="oppHVAC" type="String" default=""/>
+    <aura:attribute name="oppHvAcSel" type="String" default=""/>
+    <aura:attribute name="oppLsqft" type="String" default=""/>
+    <aura:attribute name="oppHOA" type="Boolean" default=""/>
+    <aura:attribute name="oppHOASel" type="String" default=""/>
+    <aura:attribute name="oppPool" type="Boolean" default=""/>
+    <aura:attribute name="oppHoaName" type="String" default=""/>
+    <aura:attribute name="offMaxBid" type="String" default=""/>
+    <aura:attribute name="oppMarketVal" type="String" default=""/>  
+    <aura:attribute name="oppGrMonRent" type="String" default=""/>
+    <aura:attribute name="initRehab" type="String" default=""/>
+    <aura:attribute name="propTax" type="String" default=""/>
+    <aura:attribute name="clsTitEst" type="String" default=""/>
+    <aura:attribute name="prosRPCQual" type="String" default=""/>
+    <aura:attribute name="prosrpcPsfUW" type="String" default=""/>
+    <aura:attribute name="prosrpcLand" type="String" default=""/>
+    <aura:attribute name="prosPreHighVal" type="String" default=""/>
+    <aura:attribute name="prosMonHOA" type="String" default=""/>
+    <aura:attribute name="oppStreet" type="String" default=""/>
+    <aura:attribute name="oppCity" type="String" default=""/>
+    <aura:attribute name="oppZip" type="String" default=""/>
+    <aura:attribute name="prosPreDate" type="String" default=""/>
+    <aura:attribute name="prosPropFit" type="Boolean" default=""/>
+    <aura:attribute name="prosPrpVal" type="Boolean" default=""/>
+    
+    
+    <!--Detail panel-->
+ <div aura:id="editDialog" role="dialog"  aria-labelledby="header99" class="slds-modal slds-fade-in-open">
+      <br></br>
+      
+     
+      <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium"><br></br><br></br> New Acq Prospect</h2>
+            </div>
+    
+	<div class="slds-modal__content slds-p-around--medium  slds-grid slds-wrap">
+            <h3 class="slds-section__title">
+                    <button class="slds-button slds-section__title-action">Opportunity Information</button>
+                </h3>
+            <div class="slds-grid slds-grid slds-wrap slds-grid--pull-padded">
+ 
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="capn" label="APN" value="{!v.oppAPN}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="street" label="Street" value="{!v.oppStreet}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="City" label="City" value="{!v.oppCity}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="Zip" label="Zipcode" value="{!v.oppZip}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                        <lightning:select name="parentPicklist"  label="State" required="true" value="{!v.selectedValue}" aura:id="apn" onchange="{!c.getCounty1}">
+                        <option value="">Select State</option>
+                        <aura:iteration items="{!v.selectedLookUpRecord}" var="st">
+                            <option value="{!st.Name}" selected="{!st.selected}">{!st.Name}</option>
+                        </aura:iteration>
+                        </lightning:select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                        <lightning:select aura:id="apn" name="capn" required="true" value="{!v.selectedCounty}" label="County">
+                            <option value="">Select County</option>
+                            <aura:iteration items="{!v.candidateCounty}" var="c">
+                                <option value="{!c.Name}" selected="{!c.selected}">{!c.Name}</option>
+                            </aura:iteration>
+                    	</lightning:select>
+                  		 </div>
+                  	</div>
+                </div> 
+                
+                 <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="mySelect" required="true" label="Bid Type" aura:id="apn" value="{!v.oppBidTypeSel}">
+                                <option value="">Select Bid Type</option>
+                                 <aura:iteration items="{!v.bidoptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+               		 </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                   		 <div class="slds-form-element__control" style="min-height: 18px;">
+                              <lightning:input aura:id="apn" name="bulkdeal" label="Bulk Deal" value="{!v.oppBulk}" 
+                         class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+               		 </div>
+                </div>
+                
+                 <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:input aura:id="apn" name="beds" label="Bedrooms" type="number" value="{!v.oppBed}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                   		 <div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:input aura:id="apn" name="baths" label="Baths"  value="{!v.oppBath}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                	</div>
+              </div>
+                
+               <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                   		 <div class="slds-form-element__control" style="min-height: 18px;">
+                              <lightning:input aura:id="apn" name="yrBuilt" label="Year Built" value="{!v.oppYrBuilt}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                	</div>
+                </div>
+                
+                 <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:input aura:id="apn" name="SqFt" label="Square Feet" type="number" value="{!v.oppSqFt}" 
+                         required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <lightning:input aura:id="apn" name="LtSq" label="Lot Sq/Ft" type="number" value="{!v.oppLsqft}" 
+                         required="true"  class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <ui:inputCheckbox aura:id="checkbox" label="Pool " value="{!v.oppPool}"  change="{!c.onCheck}"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="mySelect" label="HVAC Type" aura:id="mySelect" value="{!v.oppHvAcSel}">
+                                <option value="">Select Type</option>
+                                 <aura:iteration items="{!v.hvacOptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+               		</div>
+                </div>
+                
+               
+                 <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                   		 <div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="mySelect" label="Property Type" aura:id="apn" value="{!v.oppPropTypeSel}" required="true">
+                                <option value="">Select Property Type</option>
+                                 <aura:iteration items="{!v.PropOptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+                	</div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                   		 <div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="mySelect" label="Parking" aura:id="apn" value="{!v.oppParkSel}" required="true" >
+                                <option value="">Select Parking</option>
+                                 <aura:iteration items="{!v.parkOptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+               		 </div>
+                </div>
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="mySelect" label="Roof Type" aura:id="apn" value="{!v.oppRoofSel}" required="true" >
+                                <option value="">Select Roof Type</option>
+                                 <aura:iteration items="{!v.roofOptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+                	</div>
+                </div>
+               
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                   		 <div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="mySelect" label="HOA" aura:id="apn" required="true" value="{!v.oppHOASel}">
+                                <option value="">Select</option>
+                                 <aura:iteration items="{!v.hoaOptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+               		</div>
+                </div>
+                
+                
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <lightning:input aura:id="apn" name="hoaName" label="HOA Name" value="{!v.oppHoaName}" 
+                          class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                          <lightning:input aura:id="apn" name="offMax" type="number" formatter="currency" step="0" label="Offer price Max Bid" value="{!v.offMaxBid}" 
+                          class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <lightning:input aura:id="apn" name="MarVal" type="number" formatter="currency" step="0" label="Broker Market Value" value="{!v.oppMarketVal}" 
+                         class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+               </div>
+            </div> 
+            <div class="slds-section slds-modal--large">
+            	<h3 class="slds-section__title">
+                    <button class="slds-button slds-section__title-action">Prospect Information</button>
+                </h3>
+            <div class="slds-grid slds-grid slds-wrap slds-grid--pull-padded">
+ 				<div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <lightning:input aura:id="expMonRent" name="MonRent" label="Expected Gross Monthly Rent @ UW" type="number" formatter="currency" step="0" value="{!v.oppGrMonRent}" 
+                          class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="initRehab" label="Initial Rehab Budget Estimate" type="number" formatter="currency" step="0" value="{!v.initRehab}" 
+                         class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+				<div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <ui:inputCheckbox aura:id="prpFit" label="Property fits buy box? " value="{!v.prosPropFit}"  change="{!c.onCheck}"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                        <div class="slds-form-element__control" style="min-height: 18px;">
+                            <ui:inputCheckbox aura:id="PrpVal" label="Property Details Validated? " value="{!v.prosPrpVal}"  change="{!c.onCheck}"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="PropTax" label="Property Tax" type="number" formatter="currency" value="{!v.propTax}" 
+                         step="0" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="rpcUW" label="RPC Structure PSF @ UW" type="number" formatter="currency" value="{!v.prosrpcPsfUW}" 
+                         step="0" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="rpcLand" label="RPC Land Value @ UW" type="number" formatter="currency" value="{!v.prosrpcLand}" 
+                         step="0" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    <lightning:input aura:id="apn" name="preHighVal" label="Previous High Value" type="number" formatter="currency" value="{!v.prosPreHighVal}" 
+                         step="0" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<div class="slds-form-element__control" style="min-height: 18px;">
+                             <lightning:select name="rpcQual" label="RPC Structure Quality" aura:id="mySelect" value="{!v.prosRPCQual}">
+                                <option value="">Select</option>
+                                 <aura:iteration items="{!v.rpcQualOptions}" var="item">
+                                     <option  value="{!item.value}" selected="{!item.selected}">{!item.value}</option>
+                                 </aura:iteration>
+                            </lightning:select>
+                        </div>
+               		</div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<div class="slds-form-element__control" style="min-width: 18px;">
+                              <ui:inputDate aura:id="mySelectedDate" 
+                                  label="Previous High Value Date" displayDatePicker="true" 
+                                  value="{!v.prosPreDate}"/>
+                       </div>
+                	</div>
+                </div>
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<lightning:input aura:id="apn" name="monHOA" label="Monthly HOA @ UW" type="number" formatter="currency" value="{!v.prosMonHOA}" 
+                         	step="0" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                <div class="slds-p-horizontal--small slds-size--1-of-2">
+                    <div class="slds-form-element slds-hint-parent  slds-p-around--x-small hasDiv">
+                    	<lightning:input aura:id="apn" name="closEst" label="Closing/Title/Acq Cost Est" type="number" formatter="currency" value="{!v.clsTitEst}" 
+                         step="0" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                    </div>
+                </div>
+                
+                
+  			</div>
+          </div>  
+        </div> 
+           <div class="slds-modal__footer"> 
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.clickCancel}"/>
+                <lightning:button variant="brand" label="Submit" onclick="{!c.CreateOppPros}"/>
+            </div>
+      </div>
+               
+    </div>
+    <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>
+</aura:component>

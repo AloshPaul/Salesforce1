@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Move_Out_Inspection_Requested__c</fullName>
+    <externalId>false</externalId>
+    <formula>Renewal__r.Pre_Move_Out_Inspection_Requested__c</formula>
+    <inlineHelpText>This field is editable on Renewal.</inlineHelpText>
+    <label>Pre Move Out Inspection Requested</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

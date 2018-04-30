@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proxy_Pipeline_Add_Date__c</fullName>
+    <description>This field holds a value from the Historic_Pipeline_Addhistoric pipeline (Excel tracker) that was updated as part of the deployment.  Since these records weren't actually converted to Pipe through sf.com, the Pipeline Add formula will populate with this field if it has a value.</description>
+    <externalId>false</externalId>
+    <label>Proxy Pipeline Add Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

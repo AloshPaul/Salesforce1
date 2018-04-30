@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the request type that most closely describes the issue you are having related to your selection above of Invoice Processing or a Technical issue</inlineHelpText>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Request_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Request</fullName>
+                <default>false</default>
+                <label>Access Request</label>
+            </value>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>Acquisitions / Asset Mgmt.</fullName>
+                <default>false</default>
+                <label>Acquisitions / Asset Mgmt.</label>
+            </value>
+            <value>
+                <fullName>Airwatch Install</fullName>
+                <default>false</default>
+                <label>Airwatch Install</label>
+            </value>
+            <value>
+                <fullName>Application Access</fullName>
+                <default>false</default>
+                <label>Application Access</label>
+            </value>
+            <value>
+                <fullName>Architecture</fullName>
+                <default>false</default>
+                <label>Architecture</label>
+            </value>
+            <value>
+                <fullName>BI Enhancements</fullName>
+                <default>false</default>
+                <label>BI Enhancements</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Cash Management Related</fullName>
+                <default>false</default>
+                <label>Cash Management Related</label>
+            </value>
+            <value>
+                <fullName>Cash Mgmt. &amp; Pmt. Process</fullName>
+                <default>false</default>
+                <label>Cash Mgmt. &amp; Pmt. Process</label>
+            </value>
+            <value>
+                <fullName>Database Changes</fullName>
+                <default>false</default>
+                <label>Database Changes</label>
+            </value>
+            <value>
+                <fullName>Data Changes</fullName>
+                <default>false</default>
+                <label>Data Changes</label>
+            </value>
+            <value>
+                <fullName>File Server</fullName>
+                <default>false</default>
+                <label>File Server</label>
+            </value>
+            <value>
+                <fullName>Fix / Replace</fullName>
+                <default>false</default>
+                <label>Fix / Replace</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>IH.com</fullName>
+                <default>false</default>
+                <label>IH.com</label>
+            </value>
+            <value>
+                <fullName>Install / Remove / Repair</fullName>
+                <default>false</default>
+                <label>Install / Remove / Repair</label>
+            </value>
+            <value>
+                <fullName>Intranet</fullName>
+                <default>false</default>
+                <label>Intranet</label>
+            </value>
+            <value>
+                <fullName>Intranet New Content</fullName>
+                <default>false</default>
+                <label>Intranet New Content</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Leasing Process</fullName>
+                <default>false</default>
+                <label>Leasing Process</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Multiple Phones</fullName>
+                <default>false</default>
+                <label>Multiple Phones</label>
+            </value>
+            <value>
+                <fullName>National Lease</fullName>
+                <default>false</default>
+                <label>National Lease</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>New Hire/Contractor</fullName>
+                <default>false</default>
+                <label>New Hire/Contractor</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>Payables Related</fullName>
+                <default>false</default>
+                <label>Payables Related</label>
+            </value>
+            <value>
+                <fullName>Peripheral</fullName>
+                <default>false</default>
+                <label>Peripheral</label>
+            </value>
+            <value>
+                <fullName>Printer / Copier / Scanner</fullName>
+                <default>false</default>
+                <label>Printer / Copier / Scanner</label>
+            </value>
+            <value>
+                <fullName>Property Attribute Change</fullName>
+                <default>false</default>
+                <label>Property Attribute Change</label>
+            </value>
+            <value>
+                <fullName>Property Issue</fullName>
+                <default>false</default>
+                <label>Property Issue</label>
+            </value>
+            <value>
+                <fullName>Receivables Related</fullName>
+                <default>false</default>
+                <label>Receivables Related</label>
+            </value>
+            <value>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+                <label>Rehab</label>
+            </value>
+            <value>
+                <fullName>RENTCafe</fullName>
+                <default>false</default>
+                <label>RENTCafe</label>
+            </value>
+            <value>
+                <fullName>RENTCafe Enhancements</fullName>
+                <default>false</default>
+                <label>RENTCafe Enhancements</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Reporting Enhancements</fullName>
+                <default>false</default>
+                <label>Reporting Enhancements</label>
+            </value>
+            <value>
+                <fullName>Resident</fullName>
+                <default>false</default>
+                <label>Resident</label>
+            </value>
+            <value>
+                <fullName>Resident Services</fullName>
+                <default>false</default>
+                <label>Resident Services</label>
+            </value>
+            <value>
+                <fullName>Servers</fullName>
+                <default>false</default>
+                <label>Servers</label>
+            </value>
+            <value>
+                <fullName>Set Up for New User</fullName>
+                <default>false</default>
+                <label>Set Up for New User</label>
+            </value>
+            <value>
+                <fullName>Shared Drive Access</fullName>
+                <default>false</default>
+                <label>Shared Drive Access</label>
+            </value>
+            <value>
+                <fullName>Single Phone</fullName>
+                <default>false</default>
+                <label>Single Phone</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>System Enhancements</fullName>
+                <default>false</default>
+                <label>System Enhancements</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+            <value>
+                <fullName>Training Requests</fullName>
+                <default>false</default>
+                <label>Training Requests</label>
+            </value>
+            <value>
+                <fullName>Turn Cost Budget Tool</fullName>
+                <default>false</default>
+                <label>Turn Cost Budget Tool</label>
+            </value>
+            <value>
+                <fullName>User Administration</fullName>
+                <default>false</default>
+                <label>User Administration</label>
+            </value>
+            <value>
+                <fullName>User Migration</fullName>
+                <default>false</default>
+                <label>User Migration</label>
+            </value>
+            <value>
+                <fullName>User Security</fullName>
+                <default>false</default>
+                <label>User Security</label>
+            </value>
+            <value>
+                <fullName>Virus / Malware Removal</fullName>
+                <default>false</default>
+                <label>Virus / Malware Removal</label>
+            </value>
+            <value>
+                <fullName>Wifi</fullName>
+                <default>false</default>
+                <label>Wifi</label>
+            </value>
+            <value>
+                <fullName>Workflow Enhancements</fullName>
+                <default>false</default>
+                <label>Workflow Enhancements</label>
+            </value>
+            <value>
+                <fullName>Misc.</fullName>
+                <default>false</default>
+                <label>Misc.</label>
+            </value>
+            <value>
+                <fullName>Coding</fullName>
+                <default>false</default>
+                <label>Coding</label>
+            </value>
+            <value>
+                <fullName>Priority invoices</fullName>
+                <default>false</default>
+                <label>Priority invoices</label>
+            </value>
+            <value>
+                <fullName>Payment Status</fullName>
+                <default>false</default>
+                <label>Payment Status</label>
+            </value>
+            <value>
+                <fullName>Invoice routing</fullName>
+                <default>false</default>
+                <label>Invoice routing</label>
+            </value>
+            <value>
+                <fullName>User Disabled</fullName>
+                <default>false</default>
+                <label>User Disabled</label>
+            </value>
+            <value>
+                <fullName>Unable to Submit Invoices</fullName>
+                <default>false</default>
+                <label>Unable to Submit Invoices</label>
+            </value>
+            <value>
+                <fullName>Unable to View Invoice image</fullName>
+                <default>false</default>
+                <label>Unable to View Invoice image</label>
+            </value>
+            <value>
+                <fullName>Unable to Access website</fullName>
+                <default>false</default>
+                <label>Unable to Access website</label>
+            </value>
+            <value>
+                <fullName>Unable to approve invoices</fullName>
+                <default>false</default>
+                <label>Unable to approve invoices</label>
+            </value>
+            <value>
+                <fullName>Error message</fullName>
+                <default>false</default>
+                <label>Error message</label>
+            </value>
+            <value>
+                <fullName>System performance</fullName>
+                <default>false</default>
+                <label>System performance</label>
+            </value>
+            <value>
+                <fullName>Other Technical issue</fullName>
+                <default>false</default>
+                <label>Other Technical issue</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Computer / iPad / iPhone</controllingFieldValue>
+            <valueName>Airwatch Install</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Computer / iPad / iPhone</controllingFieldValue>
+            <valueName>Fix / Replace</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Computer / iPad / iPhone</controllingFieldValue>
+            <valueName>Peripheral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Computer / iPad / iPhone</controllingFieldValue>
+            <valueName>Set Up for New User</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Computer / iPad / iPhone</controllingFieldValue>
+            <valueName>User Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network / File Server / Network Printer</controllingFieldValue>
+            <valueName>File Server</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network / File Server / Network Printer</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network / File Server / Network Printer</controllingFieldValue>
+            <valueName>Printer / Copier / Scanner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network / File Server / Network Printer</controllingFieldValue>
+            <valueName>Wifi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office Phone</controllingFieldValue>
+            <valueName>Multiple Phones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office Phone</controllingFieldValue>
+            <valueName>Single Phone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM ( Invoice processing )</controllingFieldValue>
+            <valueName>Coding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM ( Invoice processing )</controllingFieldValue>
+            <valueName>Priority invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM ( Invoice processing )</controllingFieldValue>
+            <valueName>Payment Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM ( Invoice processing )</controllingFieldValue>
+            <valueName>Invoice routing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM ( Invoice processing )</controllingFieldValue>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>User Disabled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>Unable to Submit Invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>Unable to View Invoice image</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>Unable to Access website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>Unable to approve invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>Error message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>System performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ePM -Technical</controllingFieldValue>
+            <valueName>Other Technical issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Acquisitions / Asset Mgmt.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Capital Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Cash Mgmt. &amp; Pmt. Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Data Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>HOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Intranet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Leasing Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>National Lease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Property Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Rehab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>RENTCafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Reporting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>Resident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>System Enhancements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support Issue</controllingFieldValue>
+            <valueName>TIP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software</controllingFieldValue>
+            <valueName>Install / Remove / Repair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Software</controllingFieldValue>
+            <valueName>Virus / Malware Removal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Access</controllingFieldValue>
+            <valueName>Application Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Access</controllingFieldValue>
+            <valueName>New Hire/Contractor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Access</controllingFieldValue>
+            <valueName>Password Reset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Access</controllingFieldValue>
+            <valueName>Shared Drive Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Access</controllingFieldValue>
+            <valueName>Termination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Access</controllingFieldValue>
+            <valueName>User Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Architecture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>BI Enhancements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Cash Management Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Database Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>IH.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Intranet New Content</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>RENTCafe Enhancements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Reporting Enhancements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Resident Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Servers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Turn Cost Budget Tool</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Workflow Enhancements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancement or Change Request</controllingFieldValue>
+            <valueName>Misc.</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

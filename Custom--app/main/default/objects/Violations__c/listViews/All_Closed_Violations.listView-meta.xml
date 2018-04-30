@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Closed_Violations</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Source__c</columns>
+    <columns>Type__c</columns>
+    <columns>Date_of_Required_Compliance__c</columns>
+    <columns>of_Days_Open__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>contains</operation>
+        <value>Closed</value>
+    </filters>
+    <label>All Closed Violations</label>
+</ListView>

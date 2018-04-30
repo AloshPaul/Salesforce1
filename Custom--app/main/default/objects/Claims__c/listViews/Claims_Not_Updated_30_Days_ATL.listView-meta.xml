@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claims_Not_Updated_30_Days_ATL</fullName>
+    <booleanFilter>(1 and 2 and 4) or (2 and 3 and 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Region_New__c</columns>
+    <columns>Claim_Updates__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Claim_Type__c</columns>
+    <columns>Category__c</columns>
+    <columns>Sub_Category__c</columns>
+    <columns>Reason_of_Objection__c</columns>
+    <columns>Most_Recent_Claim_Update_Note__c</columns>
+    <columns>Date_of_Most_Recent_Claim_Update__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_of_Most_Recent_Claim_Update__c</field>
+        <operation>lessThan</operation>
+        <value>N_DAYS_AGO:30</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Claim_Updates__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Region_New__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <label>Claims Not Updated >30 Days ATL</label>
+    <sharedTo>
+        <group>Legal_Atlanta</group>
+    </sharedTo>
+</ListView>

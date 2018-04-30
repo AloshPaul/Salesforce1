@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Inspection_Scheduled_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This should represent the date that the inspection will occur.  If a second inspection is needed, adjust the final inspection status and then update this field with the date the second inspection is scheduled to occur.</inlineHelpText>
+    <label>Final Inspection Scheduled Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Complete</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+				OR(
+         doDirectorClosingApproval__c =true, 
+								 doOrderEscrow__c = false,
+				     doDirectorDueDiligenceApproval__c =true),
+				OR(
+								
+								ISPICKVAL( Pipeline_Status__c ,'Escrow Ordered'), 
+								ISPICKVAL( Pipeline_Status__c ,'Order Budget Walk'))
+								
+)</errorConditionFormula>
+    <errorMessage>Please Order an EMD and enter "Review Complete"</errorMessage>
+</ValidationRule>

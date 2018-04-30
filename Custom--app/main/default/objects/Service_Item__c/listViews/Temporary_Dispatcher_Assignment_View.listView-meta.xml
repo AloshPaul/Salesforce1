@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temporary_Dispatcher_Assignment_View</fullName>
+    <columns>Property_City__c</columns>
+    <columns>Assignment__c</columns>
+    <columns>NAME</columns>
+    <columns>Brief_Description__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Priority_Formula__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Category__c</columns>
+    <columns>Service_Item_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Property_State__c</field>
+        <operation>startsWith</operation>
+        <value>A</value>
+    </filters>
+    <filters>
+        <field>My_Region__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <label>Temporary Dispatcher Assignment View</label>
+</ListView>

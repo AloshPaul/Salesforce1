@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupancy_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+					
+				doReview_Complete__c = True,
+				Occupied_Status_Acquisition__c ='Purchase Rented',
+				OR(
+								ISNULL(Assumed_Lease_HAP_Rent__c), 
+        ISNULL(Assumed_Lease_Tenant_Rent__c),
+							 Assumed_Lease_Review_Required__c = False,
+								ISBLANK(Assumed_Lease_End_Date__c), 
+        ISBLANK(Assumed_Lease_Start_Date__c) 
+						)
+			)</errorConditionFormula>
+    <errorMessage>Since Occupancy Status at Acquisition is Purchase Rented, please fill in all the required Lease details and also check the Lease Review Required.</errorMessage>
+</ValidationRule>

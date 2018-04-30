@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Needs_Vendors_w_utilities</fullName>
+    <columns>NAME</columns>
+    <columns>Re_Key_Date__c</columns>
+    <columns>Home__c</columns>
+    <columns>Type__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Electricity_Provider__c</columns>
+    <columns>Electric_Status__c</columns>
+    <columns>Electric_Notes__c</columns>
+    <columns>Gas_Status__c</columns>
+    <columns>Gas_Notes__c</columns>
+    <columns>Water_Status__c</columns>
+    <columns>Water_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Needs Vendors</value>
+    </filters>
+    <label>Utilities:4-Needs Vendor</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

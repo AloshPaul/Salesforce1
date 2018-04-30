@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tampa_Users_cannot_Close_Property_Issue</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+OR(
+$User.Username == 'john.uiterwyk@invitationhomes.com',
+$User.Username == 'dbeisner@invitationhomes.com',
+$User.Username == 'james.staples@invitationhomes.com',
+$User.Username == 'melinda.letempt-soto@invitationhomes.com'
+), 
+OR(
+ISPICKVAL(Status__c, 'Closed'),
+ISPICKVAL(Status__c, 'Closed (Never Connected)'),
+ISPICKVAL(Status__c, 'Closed (Resolved)'),
+ISPICKVAL(Status__c, 'Closed (Cancelled)'),
+ISPICKVAL(Status__c, 'Closed (Not Identifiable)')
+) 
+)</errorConditionFormula>
+    <errorMessage>You do not have permission to Close the Property Issue.</errorMessage>
+</ValidationRule>

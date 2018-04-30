@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Charged_to_Ledger_Required</fullName>
+    <active>true</active>
+    <description>Date Fine Amount Charged to Ledger is required on Violations with a fine amount before it is closed.</description>
+    <errorConditionFormula>AND( 
+$RecordType.Name = "Occupant Violation",
+OR(
+NOT(ISBLANK( Fine_Amount__c )),
+NOT(ISBLANK(  Second_Fine_Amount__c  ))),
+ISPICKVAL( Status__c , 'Closed - Paid'), 
+ISBLANK( Date_Fine_Amount_Charged_to_Ledger__c ))</errorConditionFormula>
+    <errorDisplayField>Date_Fine_Amount_Charged_to_Ledger__c</errorDisplayField>
+    <errorMessage>Date Fine Amount Charged to Ledger is required on Violations with a fine amount before it is closed.</errorMessage>
+</ValidationRule>

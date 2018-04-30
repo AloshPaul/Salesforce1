@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datamatics_Technical_Issues</fullName>
+    <columns>NAME</columns>
+    <columns>Priority__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Summary__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Requestor_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Concierge__c.Datamatics_Request</value>
+    </filters>
+    <filters>
+        <field>Request_Area__c</field>
+        <operation>equals</operation>
+        <value>ePM -Technical</value>
+    </filters>
+    <label>Datamatics Technical Issues</label>
+    <sharedTo>
+        <group>Datamatics_Support</group>
+        <group>Datamatics_Team</group>
+    </sharedTo>
+</ListView>

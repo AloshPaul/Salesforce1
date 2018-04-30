@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Portfolio__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>This points to the Portfolio record that was most recently linked to this residence.</inlineHelpText>
+    <label>Current Portfolio</label>
+    <referenceTo>Property__c</referenceTo>
+    <relationshipLabel>Residences Where Current</relationshipLabel>
+    <relationshipName>ResidencesWhereCurrent</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

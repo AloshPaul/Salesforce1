@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a temporary tab that is going to be used to train new users on  basic salesforce.com navigation training.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Bookmark_a_Post__c</fullName>
+        <defaultValue>&quot;Click the bookmark next to any post to quickly retrieve later. (You can see all your bookmarked post from your main Chatter tab.)&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Bookmark a Post</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Chatter_Email_Settings__c</fullName>
+        <defaultValue>&quot;From any Chatter Group page, click on the &apos;Email Daily Digest&apos; link to select how you would like to be notified about new posts.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Chatter Email Settings</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Chatter_Exercises_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Chatter Exercises Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Chatter_Mobile__c</fullName>
+        <defaultValue>&quot;For team members who spend time out of the office, download the Chatter Mobile: https://www.chatter.com/mobile/&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Chatter Mobile</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Chatter_Post__c</fullName>
+        <defaultValue>&quot;Add a Chatter post to this record.  Send an @ message to another user by typing the @ sign and the first few letters of their name and then select the user from the dropdown. Use hashtag (pound sign) to tag the topic training as follows.  #training.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Chatter Post</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Chatter_Profile__c</fullName>
+        <defaultValue>&quot;Update your Chatter profile by uploading a picture and adding your contact information.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Chatter Profile</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Create_New_View__c</fullName>
+        <defaultValue>&quot;From the New User Training tab, click&apos;Create New View&apos; and add a filter where Date Equals TODAY. (You type in the specific date or you can use terms like TODAY, THIS MONTH, LAST 30 days for a dynamic view.)&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Create New View</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Double_Click_to_Edit__c</fullName>
+        <defaultValue>&quot;Double click on any editable field to edit the record.  Make sure you save the record.  (Hint: it will be orange or have a blue arrow next to it until it is saved.)&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Double Click to Edit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Edit_Mode__c</fullName>
+        <defaultValue>&quot;Edit a record by clicking on the Edit button. Be sure to save your changes. (Note: formula fields will not be visible until you save the records.)&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>The &quot;Edit&quot; Button</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Editing_Exercises_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Editing Exercises Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Help_Exercises_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Help Exercises Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hide_Display_a_Section__c</fullName>
+        <defaultValue>&quot;Use the arrow next to any section to hide/display the fields in that section.  (Salesforce will remember your preference the next time you look at the same type of record.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Hide/Display a Section</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Homework_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Homework Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>true</default>
+                    <label>In Process</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Join_Chatter_Group__c</fullName>
+        <defaultValue>&quot;From the Chatter tab, click on Groups and find the &apos;Salesforce.com New Users&apos; group and add yourself as a member.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Join Chatter Group</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Log_a_Support_Change_Request__c</fullName>
+        <defaultValue>&quot;Log a support/change request directly from the record by clicking the &apos;New SF Support/Change Request record&apos; on the related list below.  Select the record type &apos;Support Request&apos; and then the type &apos;Training Exercise&apos;.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Log a Support/Change Request</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <referenceTo>Region__c</referenceTo>
+        <relationshipLabel>User Training Records (Market)</relationshipLabel>
+        <relationshipName>User_Training_Records</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Navigation_Exercises_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Navigation Exercises Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Open_New_Window__c</fullName>
+        <defaultValue>&quot;Right click on any hyperlink in salesforce.com to open the link in a new window.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Open New Window</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Printable_View__c</fullName>
+        <defaultValue>&quot;Click the Printable View link in the right hand corner of this Training Record to see how you can print the page.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Printable View</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Questions_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Questions/Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <referenceTo>Region__c</referenceTo>
+        <relationshipName>New_User_Training_Record</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sort_a_View__c</fullName>
+        <defaultValue>&quot;From the New User Training tab, select the All Training Records view from the dropdown. Click on Date on the heading bar to sort all records by date. Click again to sort in reverse order.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Sort a &quot;View&quot;</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Use_Help_Hovers__c</fullName>
+        <defaultValue>&quot;Remember the phrase &apos;hover to discover.&apos;  Use the hovers next to the field names to get additional information or instructions.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Help icons can display additional information or instructions.</inlineHelpText>
+        <label>Use Help Hovers</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Using_the_FAQs__c</fullName>
+        <defaultValue>&quot;Click on the FAQ tab and select the Chatter view from the dropdown. Browse through the questions to see if you have any questions that have already been addressed.  If you have a new question, feel free to log it by clicking the Create New button.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Using the FAQs</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Views_Exercises_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>&quot;Views&quot; Exercises Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>User Training Record</label>
+    <listViews>
+        <fullName>All_Training_Records</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Date__c</columns>
+        <columns>Homework_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Training Records</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Training-{0000}</displayFormat>
+        <label>Training Record</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>User Training Records</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Region__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Homework_Status__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>completed_records</fullName>
+        <active>true</active>
+        <description>IF</description>
+        <errorConditionFormula>(Chatter_Exercises_Completed__c = FALSE || Views_Exercises_Completed__c = FALSE || Editing_Exercises_Completed__c = FALSE ||  Help_Exercises_Completed__c = FALSE|| Navigation_Exercises_Completed__c = FALSE)  &amp;&amp; ISPICKVAL( Homework_Status__c , &quot;Complete&quot;)</errorConditionFormula>
+        <errorMessage>You must indicate that you have completed all the exercises before you can mark the homework complete.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

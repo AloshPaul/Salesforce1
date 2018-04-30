@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fields_Required_to_Send_Alert</fullName>
+    <active>true</active>
+    <description>Please populate Renewal Coordinator, Proposed New Rent, New Lease Start Date, New Lease End Date, and Deposit before attempting to alert the Coordinator.</description>
+    <errorConditionFormula>Alert_Coordinator__c = TRUE &amp;&amp; 
+ISBLANK( Renewal_Coordinator__c )&amp;&amp;
+ISBLANK(  New_Rent__c )&amp;&amp;
+ISBLANK(  New_Lease_Start_Date__c  )&amp;&amp;
+ISBLANK(  New_Lease_End_Date__c  )&amp;&amp;
+ISBLANK( Deposit__c  )</errorConditionFormula>
+    <errorMessage>Please populate Renewal Coordinator, Proposed New Rent, New Lease Start Date, New Lease End Date, and Deposit before attempting to alert the Coordinator.</errorMessage>
+</ValidationRule>

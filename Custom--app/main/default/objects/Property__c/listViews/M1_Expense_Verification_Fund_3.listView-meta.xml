@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M1_Expense_Verification_Fund_3</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Fund__c</columns>
+    <columns>M1_Expense_Margin_Est_UW__c</columns>
+    <columns>Acquisition_Overhead_Formula__c</columns>
+    <columns>Rehab_Overhead_Formula__c</columns>
+    <columns>Platform_Buildup_Allocation_Formula__c</columns>
+    <columns>Initial_Lease_up_Cost_Est_UW_Formula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Acquisition_Status__c</field>
+        <operation>equals</operation>
+        <value>Acquired</value>
+    </filters>
+    <filters>
+        <field>Fund__c</field>
+        <operation>equals</operation>
+        <value>03</value>
+    </filters>
+    <label>M1 Expense Verification Fund 3</label>
+    <sharedTo>
+        <group>Asset_Mgmt_Reporting</group>
+    </sharedTo>
+</ListView>

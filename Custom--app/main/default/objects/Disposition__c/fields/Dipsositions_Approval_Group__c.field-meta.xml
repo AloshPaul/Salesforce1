@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dipsositions_Approval_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Dispositions Approval Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Phase I</fullName>
+                <default>false</default>
+                <label>Phase I</label>
+            </value>
+            <value>
+                <fullName>Phase II</fullName>
+                <default>false</default>
+                <label>Phase II</label>
+            </value>
+            <value>
+                <fullName>Phase III (BLT)</fullName>
+                <default>false</default>
+                <label>Phase III (BLT)</label>
+            </value>
+            <value>
+                <fullName>Phase IV</fullName>
+                <default>false</default>
+                <label>Phase IV</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

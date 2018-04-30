@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listing_Additional_Applicant</fullName>
+    <active>true</active>
+    <description>Use for additional adults who will be on the lease for active listings.</description>
+    <label>Listing - Additional Applicant</label>
+    <picklistValues>
+        <picklist>Application_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Pending HOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved - Pending Housing Authority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved with Conditions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Application_Type__c</picklist>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cancelled_Reason__c</picklist>
+        <values>
+            <fullName>Applied Sight Unseen - Unhappy w%2F Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Agent Verification Incomplete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Agent%2FMarket Unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Applicant Unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Applicant Unresponsive%2FCancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Application Docs Not Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Application Docs Not Sufficient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Declined by Housing Authority %28Doesn%E2%80%99t Qualify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Deposit Not Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Hold Fee Not Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Hold Form Not Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Incomplete Application %28Unable to process%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Insufficient Docs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Lease Not Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By IH - Section 8 %28Doesn%E2%80%99t Qualify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%E2%80%99t Accommodate Move-in Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined - Awaiting Client Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined HOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit Too High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Different IH Home %28Transferred%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Hardship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fraudulent Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher Deposit Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job Relocation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lease Terms%2FConditions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leased Elsewhere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Length of Application Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Length of Screening Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal%2FFamilial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Issues %28Rehab Extended%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Accommodate Move-In Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unhappy With Agent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_working_with_External_Co_Broker__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deposit_Collection_Method__c</picklist>
+        <values>
+            <fullName>Certified Funds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>File_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move-In Complete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HOA_App_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent%2FPending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HOA_Tenant_App__c</picklist>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lease_Generation_Type__c</picklist>
+        <values>
+            <fullName>Blank Lease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Filled Lease</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lease_Sent_Method__c</picklist>
+        <values>
+            <fullName>DocuSign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email to Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FedEx to Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provided to Listing Agent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Method_of_Notification__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone - Live Conversation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone - Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Snail Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Section_8__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TIP_Lease_Type__c</picklist>
+        <values>
+            <fullName>Assumed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VOI_Type__c</picklist>
+        <values>
+            <fullName>8 Weeks Income Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verification of Employment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amenities__c</fullName>
+    <externalId>false</externalId>
+    <label>Amenities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Basketball Court</fullName>
+                <default>false</default>
+                <label>Basketball Court</label>
+            </value>
+            <value>
+                <fullName>Beach Access</fullName>
+                <default>false</default>
+                <label>Beach Access</label>
+            </value>
+            <value>
+                <fullName>Boat Ramp</fullName>
+                <default>false</default>
+                <label>Boat Ramp</label>
+            </value>
+            <value>
+                <fullName>Boat Slip</fullName>
+                <default>false</default>
+                <label>Boat Slip</label>
+            </value>
+            <value>
+                <fullName>Cable</fullName>
+                <default>false</default>
+                <label>Cable</label>
+            </value>
+            <value>
+                <fullName>Clubhouse</fullName>
+                <default>false</default>
+                <label>Clubhouse</label>
+            </value>
+            <value>
+                <fullName>Dog Park</fullName>
+                <default>false</default>
+                <label>Dog Park</label>
+            </value>
+            <value>
+                <fullName>Dry Storage</fullName>
+                <default>false</default>
+                <label>Dry Storage</label>
+            </value>
+            <value>
+                <fullName>Golf Course</fullName>
+                <default>false</default>
+                <label>Golf Course</label>
+            </value>
+            <value>
+                <fullName>Gym</fullName>
+                <default>false</default>
+                <label>Gym</label>
+            </value>
+            <value>
+                <fullName>Jacuzzi</fullName>
+                <default>false</default>
+                <label>Jacuzzi</label>
+            </value>
+            <value>
+                <fullName>Lake</fullName>
+                <default>false</default>
+                <label>Lake</label>
+            </value>
+            <value>
+                <fullName>Park</fullName>
+                <default>false</default>
+                <label>Park</label>
+            </value>
+            <value>
+                <fullName>Pool</fullName>
+                <default>false</default>
+                <label>Pool</label>
+            </value>
+            <value>
+                <fullName>Racquetball Court</fullName>
+                <default>false</default>
+                <label>Racquetball Court</label>
+            </value>
+            <value>
+                <fullName>Tennis Court</fullName>
+                <default>false</default>
+                <label>Tennis Court</label>
+            </value>
+            <value>
+                <fullName>Tot Lot</fullName>
+                <default>false</default>
+                <label>Tot Lot</label>
+            </value>
+            <value>
+                <fullName>Volleyball Court</fullName>
+                <default>false</default>
+                <label>Volleyball Court</label>
+            </value>
+            <value>
+                <fullName>Walking Trails</fullName>
+                <default>false</default>
+                <label>Walking Trails</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

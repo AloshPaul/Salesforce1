@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_ReHab_s</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>HD_Budget_Walk__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Back_end_Supervisor__c</columns>
+    <columns>Office_Signoff_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Closed - Completed</value>
+    </filters>
+    <filters>
+        <field>Office_Signoff_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>10/28/2013</value>
+    </filters>
+    <label>Completed ReHab's</label>
+    <sharedTo>
+        <role>Executive_Tampa</role>
+        <role>Team_Member_Tampa</role>
+    </sharedTo>
+</ListView>

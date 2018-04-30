@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CFK_Offered_and_Agreed_Move_Out_Date_Req</fullName>
+    <active>true</active>
+    <description>CFK Offered Amount and CFK Agreed Move Out Date are required when TIP Status equals TIP - CFK Negotiations.</description>
+    <errorConditionFormula>AND(
+TEXT( TIP_Status__c ) = 'TIP - CFK Negotiations',
+DATEVALUE(CreatedDate) >= DATE(2014,3,13),
+OR(
+ISBLANK( CFK_Offered_Amount__c ),
+ISBLANK( CFK_Agreed_Move_Out_Date__c )
+)
+)</errorConditionFormula>
+    <errorDisplayField>CFK_Offered_Amount__c</errorDisplayField>
+    <errorMessage>CFK Offered Amount and CFK Agreed Move Out Date are required.</errorMessage>
+</ValidationRule>

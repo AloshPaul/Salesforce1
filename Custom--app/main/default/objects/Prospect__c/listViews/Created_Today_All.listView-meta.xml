@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_Today_All</fullName>
+    <columns>NAME</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>AZB_Bid_Status__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>B_Status__c</columns>
+    <columns>IH_Underwriting_Status_to_Agent__c</columns>
+    <columns>Acquisitions_Analyst__c</columns>
+    <columns>Transaction_Coordinator__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Created Today - All</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

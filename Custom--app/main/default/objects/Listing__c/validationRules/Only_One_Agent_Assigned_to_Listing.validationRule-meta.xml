@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_One_Agent_Assigned_to_Listing</fullName>
+    <active>true</active>
+    <description>A Listing may only be assigned to either a Listing Agent or 3rd Party Agent; not both.</description>
+    <errorConditionFormula>AND($Profile.Name != 'Pranav Verma',
+IF(NOT(ISBLANK(Listing_Agent__c)), NOT(ISBLANK( External_Agent__c )), 
+null))</errorConditionFormula>
+    <errorDisplayField>Listing_Agent__c</errorDisplayField>
+    <errorMessage>A Listing may only be assigned to either a Listing Agent or 3rd Party Agent; not both.</errorMessage>
+</ValidationRule>

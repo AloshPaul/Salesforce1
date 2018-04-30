@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Move_Out_Inspection_Completed_By_Old__c</fullName>
+    <description>This text field was retired effective 8/20/14 in favor of the new Lookup field called, "Pre Move Out Assigned To".</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This text field was retired effective 8/20/14 in favor of the new Lookup field called, "Pre Move Out Assigned To".</inlineHelpText>
+    <label>Pre Move Out Inspection Completed By Old</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

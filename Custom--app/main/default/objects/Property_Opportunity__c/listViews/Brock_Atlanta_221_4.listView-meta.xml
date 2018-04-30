@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brock_Atlanta_221_4</fullName>
+    <columns>NAME</columns>
+    <columns>Residence__c</columns>
+    <columns>Region__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Back_Taxes_Est_UW__c</columns>
+    <columns>Liens_Fines_Est_UW__c</columns>
+    <columns>Other_Closing_Costs_Est_UW__c</columns>
+    <columns>Broker_Expense_Est_UW__c</columns>
+    <columns>Occupied_Status_Acquisition__c</columns>
+    <columns>Inspection_Period_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>Brock Atlanta 221 #4</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.Bulk</value>
+    </filters>
+    <label>Brock Atlanta 221 #4</label>
+    <sharedTo>
+        <group>Region_Atlanta</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIP_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>TIP Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TIP - New (Needs Driver)</fullName>
+                <default>true</default>
+                <label>TIP - New (Needs Driver)</label>
+            </value>
+            <value>
+                <fullName>TIP - Driver Assigned</fullName>
+                <default>false</default>
+                <label>TIP - Driver Assigned</label>
+            </value>
+            <value>
+                <fullName>TIP - DK Initial Contact</fullName>
+                <default>false</default>
+                <label>TIP - DK Initial Contact</label>
+            </value>
+            <value>
+                <fullName>TIP - Voluntary Move-Out</fullName>
+                <default>false</default>
+                <label>TIP - Voluntary Move-Out</label>
+            </value>
+            <value>
+                <fullName>TIP - CFK Negotiations</fullName>
+                <default>false</default>
+                <label>TIP - CFK Negotiations</label>
+            </value>
+            <value>
+                <fullName>TIP - Lease Negotiations</fullName>
+                <default>false</default>
+                <label>TIP - Lease Negotiations</label>
+            </value>
+            <value>
+                <fullName>TIP - Eviction</fullName>
+                <default>false</default>
+                <label>TIP - Eviction</label>
+            </value>
+            <value>
+                <fullName>Closed - Leased (Assumed)</fullName>
+                <default>false</default>
+                <label>Closed - Leased (Assumed)</label>
+            </value>
+            <value>
+                <fullName>Closed - Leased (New)</fullName>
+                <default>false</default>
+                <label>Closed - Leased (New)</label>
+            </value>
+            <value>
+                <fullName>Closed - Vacant</fullName>
+                <default>false</default>
+                <label>Closed - Vacant</label>
+            </value>
+            <value>
+                <fullName>Closed  - Purchased Rented</fullName>
+                <default>false</default>
+                <label>Closed  - Purchased Rented</label>
+            </value>
+            <value>
+                <fullName>Closed - Acq Cancelled</fullName>
+                <default>false</default>
+                <label>Closed - Acq Cancelled</label>
+            </value>
+            <value>
+                <fullName>Closed - For Sale/Disposition</fullName>
+                <default>false</default>
+                <label>Closed - For Sale/Disposition</label>
+            </value>
+            <value>
+                <fullName>HOLD - Abd. Property Notice</fullName>
+                <default>false</default>
+                <label>HOLD - Abd. Property Notice</label>
+            </value>
+            <value>
+                <fullName>HOLD - BK</fullName>
+                <default>false</default>
+                <label>HOLD - BK</label>
+            </value>
+            <value>
+                <fullName>HOLD - Deed</fullName>
+                <default>false</default>
+                <label>HOLD - Deed</label>
+            </value>
+            <value>
+                <fullName>HOLD - Limbo</fullName>
+                <default>false</default>
+                <label>HOLD - Limbo</label>
+            </value>
+            <value>
+                <fullName>HOLD - Do Not Contact</fullName>
+                <default>false</default>
+                <label>HOLD - Do Not Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

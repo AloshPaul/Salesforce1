@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Down</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>YRR_Unit_Rental_Type__c</columns>
+    <columns>Rent_Cafe_Listed__c</columns>
+    <columns>Rent_Ready_Date__c</columns>
+    <columns>Promotion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>startsWith</operation>
+        <value>Down</value>
+    </filters>
+    <filters>
+        <field>YRR_Current_Tenant_Status__c</field>
+        <operation>equals</operation>
+        <value>VACANT</value>
+    </filters>
+    <filters>
+        <field>Rehab_Complete_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All Down-PREMKT- Move Outs- Exceptions</label>
+    <sharedTo>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

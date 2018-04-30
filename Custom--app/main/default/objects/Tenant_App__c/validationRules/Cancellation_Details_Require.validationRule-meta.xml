@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Details_Require</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Cancelled_Reason__c , 'Other'), 
+ISBLANK(Cancellation_Details__c),
+$Profile.Name != 'System Administrator'  
+)</errorConditionFormula>
+    <errorMessage>Put the notes in the Cancellation Details field.</errorMessage>
+</ValidationRule>

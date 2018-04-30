@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gross_Yield_Est_UW__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(All_In_Cost_Est_UW__c > 0,
+Expected_Gross_Annual_Rent_UW__c / All_In_Cost_Est_UW__c,
+null
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Gross Yield = Expected Gross Annual Rent / All-In Cost Est.   Note:  The Gross Annual Rent should not include any offsets such as HOA fees.</inlineHelpText>
+    <label>Gross Yield Est. @ UW</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

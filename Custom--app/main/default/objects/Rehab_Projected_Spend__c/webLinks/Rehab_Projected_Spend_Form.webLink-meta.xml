@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Projected_Spend_Form</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Rehab Projected Spend Form</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/RehabProjectedSpend?id={!Rehab_Projected_Spend__c.RehabId__c}</url>
+</WebLink>

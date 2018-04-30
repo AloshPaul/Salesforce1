@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BK Intake Contact</fullName>
+                <default>false</default>
+                <label>BK Intake Contact</label>
+            </value>
+            <value>
+                <fullName>Eviction Contact</fullName>
+                <default>false</default>
+                <label>Eviction Contact</label>
+            </value>
+            <value>
+                <fullName>Rehab Crew Intake Contact</fullName>
+                <default>false</default>
+                <label>Rehab Crew Intake Contact</label>
+            </value>
+            <value>
+                <fullName>Lawn Maintenance Intake Contact</fullName>
+                <default>false</default>
+                <label>Lawn Maintenance Intake Contact</label>
+            </value>
+            <value>
+                <fullName>Pool Maintenance Intake Contact</fullName>
+                <default>false</default>
+                <label>Pool Maintenance Intake Contact</label>
+            </value>
+            <value>
+                <fullName>Lawn Maintenance End Service Contact</fullName>
+                <default>false</default>
+                <label>Lawn Maintenance End Service Contact</label>
+            </value>
+            <value>
+                <fullName>Pool Maintenance End Service Contact</fullName>
+                <default>false</default>
+                <label>Pool Maintenance End Service Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

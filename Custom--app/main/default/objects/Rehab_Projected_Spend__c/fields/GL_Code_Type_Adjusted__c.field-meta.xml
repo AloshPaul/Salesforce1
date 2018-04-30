@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GL_Code_Type_Adjusted__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISNULL(Rehab__c)) , 
+      IF( ISPICKVAL( Rehab__r.Type__c, 'Post-Acquisition' ), 
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Acquisition__c ) 
+                      , GL_Code_Original__r.Name, 
+                      GL_Code_Original__r.GL_Code_Acquisition__r.Name 
+          ),
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Turn__c ) , 
+                      GL_Code_Original__r.Name,  
+                      GL_Code_Original__r.GL_Code_Turn__r.Name ) 
+        ),
+      IF( OR( ISPICKVAL( HD_Budget_Walk__r.Type__c, 'Pre-Acquisitions' ),
+              ISPICKVAL( HD_Budget_Walk__r.Type__c, 'Post-Acquisitions' ) ),   
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Acquisition__c ) 
+                      , GL_Code_Original__r.Name, 
+                      GL_Code_Original__r.GL_Code_Acquisition__r.Name 
+          ),
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Turn__c ) , 
+                      GL_Code_Original__r.Name,  
+                      GL_Code_Original__r.GL_Code_Turn__r.Name )
+        )
+    )</formula>
+    <label>GL Code Type Adjusted</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Clean_UP_GC_look_up_needed</fullName>
+    <columns>NAME</columns>
+    <columns>dataText_Contractor__c</columns>
+    <columns>General_Contractor__c</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>dataText_Contractor__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>General_Contractor__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Rehab__c.Post_Acquisition</value>
+    </filters>
+    <label>Data Clean-UP: GC look-up needed</label>
+</ListView>

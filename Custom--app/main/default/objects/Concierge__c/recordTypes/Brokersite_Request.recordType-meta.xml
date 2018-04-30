@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brokersite_Request</fullName>
+    <active>true</active>
+    <description>Specifically for Brokersite users</description>
+    <label>Brokersite Request</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalation Request Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impact__c</picklist>
+        <values>
+            <fullName>Entire Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Users</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single User</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Need_to_Escalate__c</picklist>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charlotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dallas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inland Empire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacksonville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Los Angeles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orlando</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sacramento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tampa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Area__c</picklist>
+        <values>
+            <fullName>Brokersite</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Specifics__c</picklist>
+        <values>
+            <fullName>AP Batch Locked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AR Related Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AcctTree Edit%2FAdd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adding New User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional Access%2FPermissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Address Related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application%2FMove-In Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancel Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changes In Role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charges and Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check Payment Batch Reset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card Related Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Check Button Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivate Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delete Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deleting%2FInactivate User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicated Check Voids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest Card Edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lease Related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ledger Corrections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legacy Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modify Existing Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move-Ins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move-Outs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Entity Set Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New GL Acct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Time Data Extract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Attribute Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other WO Related Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM Attributes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password Reset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Info Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rent Cafe Related</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report Schedule Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schema Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Access WO Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Locate Work Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Print Work Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Run Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Submit Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Submit Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Upload Batch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit Type Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Unlock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WebEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yardi Performance Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Cash Mgmt%2E %26 Pmt%2E Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RENTCafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Enhancements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Administration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

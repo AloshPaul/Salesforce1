@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_of_Technical_Complexity__c</fullName>
+    <externalId>false</externalId>
+    <label>Level of Technical Complexity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None - All Config / Operations</fullName>
+                <default>false</default>
+                <label>None - All Config / Operations</label>
+            </value>
+            <value>
+                <fullName>Minimal - Light Dev Required</fullName>
+                <default>false</default>
+                <label>Minimal - Light Dev Required</label>
+            </value>
+            <value>
+                <fullName>Some -  Some Dev Required</fullName>
+                <default>false</default>
+                <label>Some -  Some Dev Required</label>
+            </value>
+            <value>
+                <fullName>Significant Dev Required</fullName>
+                <default>false</default>
+                <label>Significant Dev Required</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

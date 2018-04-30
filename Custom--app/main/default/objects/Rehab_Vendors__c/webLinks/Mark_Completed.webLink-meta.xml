@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mark_Completed</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Mark Completed</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT("/soap/ajax/16.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/30.0/apex.js")}
+
+//Variable to hold rehab vendors record ids 
+var records = {!GETRECORDIDS($ObjectType.Rehab_Vendors__c)}; 
+
+//Initialize the variable 
+var recordId = ''; 
+
+//Check for null value 
+if(records.length&lt;1) { 
+
+alert("Please select one or more records."); 
+} 
+else { 
+
+//Loop through rehab vendors records 
+for (var i=0;i&lt;records.length;i++) 
+{ 
+
+//Populate the string 
+recordId += records[i] + ","; 
+} 
+
+if (recordId !== null) { 
+
+//Method Call 
+sforce.apex.execute("UpdateRehabVendorsList","updateVendorList",{sId:recordId}); 
+
+//load the browser window 
+location.href = '/' + '{!Rehab__c.Id}'; 
+} 
+}</url>
+</WebLink>

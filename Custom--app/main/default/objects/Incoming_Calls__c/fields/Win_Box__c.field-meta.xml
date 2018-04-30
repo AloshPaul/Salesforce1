@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Win_Box__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR( ISPICKVAL(Agent_Lead_Status__c, 'Set Appointment for Showing') , 
+    ISPICKVAL(Agent_Lead_Status__c, 'Had Showing'), 
+    ISPICKVAL(Agent_Lead_Status__c, 'Application Sight Unseen')
+   )</formula>
+    <label>Win Box</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

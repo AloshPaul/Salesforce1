@@ -1,0 +1,143 @@
+<!-- 
+    Description  :   Component for Multi-Column Dynamic jQuery Ajax Searching.
+    
+    Created By   :   Abhinav Sharma
+    
+    Created Date :   07-29-2013
+    
+    Revision Logs:  V1.0 - Created
+ -->
+<apex:component controller="NewRehabAddressFinder">
+
+   <!-- Scripts -->
+    <apex:stylesheet value="{!URLFOR($Resource.MCJQueryPack, '/mcstyle.css' )}"/>
+    <apex:includeScript value="{!URLFOR($Resource.MCJQueryPack, '/mcauto.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.MCJQueryPack, '/mcauto-ui.js')}"/>
+    
+    <!-- Attributes -->
+    <apex:attribute name="Search_box" description="The ID for the Dynamic Multi-column autocolplete List Textbox." type="String" required="false"/>  
+    <apex:attribute name="headerFields" default="Address_Street__c" description=" for Show the header of the multi-column autocomplete" type="String" required="false"/>
+    <apex:attribute name="Url" type="String" required="false" default="/apex/NewRehabAddressAutoCompletePage" description="Url of Viualforce Page"/>
+    <apex:attribute name="resId" type="String" required="false" description="Selected Residence Id" assignTo="{!residenceId}"/>
+    <apex:attribute name="resStreet" description="Selected Street Field value" type="String" required="false" assignTo="{!residenceAddressStreet}"/>
+    <apex:attribute name="propertyCodeValue" description="Selected Property Code value" type="String" required="false" />
+    <apex:attribute name="yardipropertyCodeValue" description="Selected Yardi Property Code value" type="String" required="false" />
+    <apex:attribute name="propertyNameValue" description="Selected Property name value" type="String" required="false" />
+    <apex:attribute name="residenceAddressValue" description="Selected Residence Address value" type="String" required="false" />
+     
+    <!-- script for multicolumn autocomplete -->    
+    <script type='text/javascript'>
+          
+        <!-- Logic for multi-column Autocomplete with the help of the jQuery UI Widget --> 
+        $.widget('custom.mcautocomplete', $.ui.autocomplete, {  
+            _renderMenu: function(ul, items) {
+                var self = this,
+                thead;
+                
+                <!-- loop for the multi-column autocomplete functionality by using class & tags -->
+                if (this.options.showHeader) {
+                    
+                    table = $('<div class="ui-widget-header" style="width:100%"></div>');
+                    $.each(this.options.columns, function(index, item) {
+                        table.append('<span style="padding:0 4px;float:left;width:' + item.width + ';">' + item.name + '</span>');
+                    });
+                    
+                    table.append('<div style="clear: both;"></div>');
+                    ul.append(table);
+                }
+                
+                <!-- function to iterate array  -->
+                $.each(items, function(index, item) {
+                    self._renderItem(ul, item);
+                });
+            },
+            
+            _renderItem: function(ul, item) {
+            
+                <!-- Variable declaration & memory allocation --> 
+                var t = '',
+                result = '';
+
+                <!-- function to iterate array in the columns --> 
+                $.each(this.options.columns, function(index, column) {
+                    
+                    <!-- span tag for styling of the selected item & set selected item according to index -->
+                    t += '<span style="padding:0 4px;float:left;width:' + column.width + ';">' + item[column.valueField ? column.valueField : index+1] + '</span>'
+                });
+                
+                <!--  append item in the set of matched items -->
+                result = $('<li></li>').data('item.autocomplete', item).append('<a class="mcacAnchor">' + t + '<div style="clear: both;"></div></a>').appendTo(ul);
+
+                return result;
+            }
+        });         
+           
+        
+        var selectedText = '';
+        <!-- use ready function for search after completely load the page -->
+        $().ready(function() { 
+            
+            var resIdValue = "{!resId}";
+            var resStreetValue = "{!resStreet}";
+            var propertyCodeValue = "{!propertyCodeValue}";
+            var yardipropertyCodeValue = "{!yardipropertyCodeValue}";
+            var propertyNameValue = "{!propertyNameValue}";
+            var residenceAddressValue = "{!residenceAddressValue}";
+                    
+            <!-- providing id of attribute for search box -->
+            $("#lookup").mcautocomplete( {
+                showHeader: true,
+          
+                <!-- passing controller variable for column header title -->
+                columns: {!columnTitle},   
+                
+                <!-- passing Url of the page that is store result of search box -->
+                source: "{!Url}",
+                minLength: 3,
+                <!-- bind the selected item to the event handler select acccording to javascript event --> 
+                select: function(event, ui) {
+                    
+                    <!-- Set item in search box -->
+                    //this.value = (ui.item ? ui.item[1] : '');
+                    selectedText = this.value;
+                    document.getElementById(resIdValue).value = ui.item[0];
+                    document.getElementById(resStreetValue).value = ui.item[1];
+                    document.getElementById(propertyCodeValue).innerHTML = ui.item[3];
+                    document.getElementById(yardipropertyCodeValue).innerHTML = ui.item[2];
+                    document.getElementById(propertyNameValue).innerHTML = ui.item[4];
+                    document.getElementById(residenceAddressValue).innerHTML = ui.item[1];
+                    
+                    document.getElementById('page:form:pb:pbsType:pbsTypeitem:radioId:2').focus()
+                    
+                    return false;
+                },   
+           	}).focus(function() {
+           		$(this).data("mcautocomplete").search($(this).val());    
+           		      
+	        }).change(function() {
+	        	if(selectedText != this.value) {
+	        		document.getElementById(resIdValue).value = null;
+                    document.getElementById(resStreetValue).value = null;
+                    document.getElementById(propertyCodeValue).innerHTML = null;
+                    document.getElementById(yardipropertyCodeValue).innerHTML = null;
+                    document.getElementById(propertyNameValue).innerHTML = null;
+                    document.getElementById(residenceAddressValue).innerHTML = null;
+               	}
+	        });
+           
+        });
+        
+        function onRadioFocus() {
+        	
+        	var t = setTimeout(function()
+   									{
+   										$( "#lookup" ).mcautocomplete( "close" );
+        							},1000)
+        }
+        
+        function onChangeRadio() {
+        	$( "#lookup" ).mcautocomplete( "search" );
+        }
+           
+    </script>
+</apex:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lockbox_Placed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>A "Lockbox Placed" checkbox is required to be able to track which homes have a lockbox placed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A "Lockbox Placed" checkbox is required to be able to track which homes have a lockbox placed</inlineHelpText>
+    <label>Lockbox Placed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

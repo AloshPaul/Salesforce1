@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SqFt_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( SqFt_St_Dev__c&lt;=-2,1,IF(AND(SqFt_St_Dev__c>-2,SqFt_St_Dev__c&lt;=-1),3,IF(AND(SqFt_St_Dev__c>-1,SqFt_St_Dev__c&lt;=1),5,IF(AND(SqFt_St_Dev__c>1,SqFt_St_Dev__c&lt;=2),4,2))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SqFt Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

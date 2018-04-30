@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ES_Awaiting_Constable_Lock__c</fullName>
+    <defaultValue>"Awaiting Constable Lock"</defaultValue>
+    <externalId>false</externalId>
+    <label>ES Awaiting Constable Lock</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

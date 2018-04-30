@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unallocated</fullName>
+    <columns>NAME</columns>
+    <columns>Task_Name__c</columns>
+    <columns>Project__c</columns>
+    <columns>Development_Environment__c</columns>
+    <columns>Status__c</columns>
+    <columns>Severity__c</columns>
+    <columns>Required_Completion_Date__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Task_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Rollout__c</field>
+        <operation>equals</operation>
+        <value>Unallocated</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>In Process,Ready to Deploy in UAT,Needs Smoketest in UAT,Ready for UAT Review</value>
+    </filters>
+    <label>00-Unallocated</label>
+    <sharedTo>
+        <group>SFDC_DEV_Support</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

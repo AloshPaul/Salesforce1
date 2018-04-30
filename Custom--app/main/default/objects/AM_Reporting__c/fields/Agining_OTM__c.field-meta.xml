@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agining_OTM__c</fullName>
+    <description>OTM Aged taken from Rehab</description>
+    <externalId>false</externalId>
+    <formula>IF( Post_Acq_Status__c = "OTM", 
+
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 14, '1-2 Weeks', 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 28, '3-4 Weeks', 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 42, '5-6 Weeks', 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 56, '7-8 Weeks', 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 70, '9-10 Weeks', 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c >= 71, '11-12+ Weeks', 
+"Instatus Transition")))))) ,
+
+
+IF( Post_Acq_Status__c = " ", "Instatus Transition", "Instatus Transition"))</formula>
+    <inlineHelpText>Most Recent Rehab</inlineHelpText>
+    <label>Aging - OTM</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

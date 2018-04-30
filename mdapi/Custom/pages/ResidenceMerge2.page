@@ -1,0 +1,62 @@
+<apex:page standardController="Residence__c" extensions="ResidenceMerge2Controller" title="Residence Merge" recordSetVar="residences" id="pageId">
+
+	<style>
+		.greenColor {
+			color : green !important;
+		}
+
+		.redColor {
+			color : red !important;
+		}
+	</style>
+
+	<script>
+		function mergeConfirmation() {
+			return confirm('Merge will delete the second record and only retain the first one. This action cannot be undone. Are you sure?');
+		}
+	</script>
+	<c:BlockUI />
+	<apex:sectionHeader title="Merge Residences" />	
+	<apex:form id="formId">
+
+		<apex:pageBlock id="mergeBlockId" >
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton action="{!mergeRecords}" value="Merge" rerender="formId"  status="processStatus" onclick="if(!mergeConfirmation()) return false;" rendered="{!NOT(invalidRecords)}"/>
+				<apex:commandButton action="{!switchRecords}" value="Switch" rerender="formId" status="processStatus" 
+									alt="Click to switch the 2 records below." rendered="{!AND(NOT(noSwitch),NOT(invalidRecords))}"/>
+				<apex:commandButton action="{!cancel}" value="Cancel" />
+
+				&nbsp; &nbsp;
+				<apex:actionStatus id="processStatus">
+	                <apex:facet name="start">
+	                    <apex:outputPanel id="savingId" >
+	                    	&nbsp;
+	                    	<apex:image value="/img/loading.gif" width="16" height="16" alt="saving..." />
+	                    </apex:outputPanel>
+	                </apex:facet>
+	            </apex:actionStatus>
+			</apex:pageBlockButtons>
+			<apex:pageMessages id="errorPanelId" />
+
+			<apex:pageBlockTable value="{!fieldValues}" var="field" rendered="{!NOT(invalidRecords)}">
+				<apex:column headerValue="Field Name" value="{!field.fieldLabel}" style="font-weight:bold;width:35%;" />
+				<apex:column styleClass="{!if(firstResidenceRec[field.fieldName] != secResidenceRec[field.fieldName], 'redColor', 'greenColor')}">
+					<apex:facet name="header">
+						Surviving Record - 
+						<a target="_blank" href="/{!firstResidenceRec.Id}" style="text-decoration: underline;">{!firstResidenceRec.Name}</a>
+					</apex:facet>
+					<apex:outputField value="{!firstResidenceRec[field.fieldName]}" />
+				</apex:column>
+
+				<apex:column styleClass="{!if(firstResidenceRec[field.fieldName] != secResidenceRec[field.fieldName], 'redColor', 'greenColor')}">
+					<apex:facet name="header">
+						Record to merge and delete - 
+						<a target="_blank" href="/{!secResidenceRec.Id}" style="text-decoration: underline;">{!secResidenceRec.Name}</a>
+					</apex:facet>
+					<apex:inputCheckBox value="{!field.secSelected}" rendered="{!AND(NOT(noSwitch),firstResidenceRec[field.fieldName] != secResidenceRec[field.fieldName])}"/>
+					<apex:outputField value="{!secResidenceRec[field.fieldName]}" />				
+				</apex:column>
+			</apex:pageBlockTable>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

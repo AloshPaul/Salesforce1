@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Sonya_Apps</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>File_Status__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Co_Broker_IH__c</columns>
+    <columns>Co_Broker_External__c</columns>
+    <columns>Additional_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Listing_Agent__c</field>
+        <operation>contains</operation>
+        <value>Sonya</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.AppTrack_2_0</value>
+    </filters>
+    <label>ATL- Sonya Apps</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Team_Member_Atlanta</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

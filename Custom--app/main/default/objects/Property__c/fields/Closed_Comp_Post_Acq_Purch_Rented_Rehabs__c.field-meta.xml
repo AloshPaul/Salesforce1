@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Comp_Post_Acq_Purch_Rented_Rehabs__c</fullName>
+    <externalId>false</externalId>
+    <label># Closed Comp Post Acq Pur Rented Rehabs</label>
+    <summaryFilterItems>
+        <field>Rehab__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Post Acquisition – Purchased Rented</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Rehab__c.Stage__c</field>
+        <operation>equals</operation>
+        <value>Closed - Completed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Rehab__c.Portfolio__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

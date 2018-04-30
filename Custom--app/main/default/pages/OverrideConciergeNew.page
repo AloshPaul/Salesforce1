@@ -1,0 +1,12 @@
+<!--
+    Description    :    Apex page to manage the user navigation on Concierge.
+   
+    Created By     :    Poonam Bhargava
+   
+    Created Date   :    02/15/2017
+   
+    Version        :    V1.0
+   
+    Revision Logs  :    V1.0 - Created
+-->
+<apex:page standardController="Concierge__c" extensions="OverrideConciergeNewController" action="{!redirect}" />

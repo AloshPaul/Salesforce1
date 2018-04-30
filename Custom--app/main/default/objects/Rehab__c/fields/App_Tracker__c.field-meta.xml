@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>App_Tracker__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Application Tracker Record Fetched from Related Listing Of Rehab</description>
+    <externalId>false</externalId>
+    <label>App Tracker</label>
+    <referenceTo>Tenant_App__c</referenceTo>
+    <relationshipLabel>Rehabs</relationshipLabel>
+    <relationshipName>Rehabs</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

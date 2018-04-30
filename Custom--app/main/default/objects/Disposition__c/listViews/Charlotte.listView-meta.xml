@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charlotte</fullName>
+    <columns>NAME</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Region__c</columns>
+    <columns>Disposition_Strategy__c</columns>
+    <columns>Sale_Rationale__c</columns>
+    <columns>Status_of_Listing__c</columns>
+    <columns>Aging_of_Days_Since_Acq__c</columns>
+    <columns>Disposition_Notes_Issues__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Charlotte</value>
+    </filters>
+    <label>Charlotte</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

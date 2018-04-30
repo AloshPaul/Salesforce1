@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closing_Contract_Price</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				NOT(ISBLANK(Dir_IMG_Closing_Approval_Date__c )),
+				ISCHANGED( Closing_Statement_Contract_Price__c )
+				)</errorConditionFormula>
+    <errorMessage>Closing Contract Price cannot be changed after closing approval</errorMessage>
+</ValidationRule>

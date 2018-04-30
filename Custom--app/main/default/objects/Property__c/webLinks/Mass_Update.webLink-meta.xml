@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mass_Update</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Mass Update</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT("/soap/ajax/20.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/20.0/apex.js")}
+
+var records = {!GETRECORDIDS($ObjectType.Property__c)};
+var strIDs='';
+if (records[0] == null)
+{
+alert('Please select a record');
+}
+else
+{
+for (var n=0; n&lt;records.length; n++)
+{
+if(strIDs == '')
+strIDs = records[n];
+else
+strIDs = strIDs + "," + records[n] ;
+}
+window.location.href = '/apex/MassManager__MassUpdate?selectedRecords='+strIDs + '&amp;selectedObject=property__c&amp;retURL='+ window.location.href;
+}</url>
+</WebLink>

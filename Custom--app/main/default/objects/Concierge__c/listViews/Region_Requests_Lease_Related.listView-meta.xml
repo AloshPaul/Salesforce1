@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Requests_Lease_Related</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Requestor_Name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Request_Area__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Request_Specifics__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed,Completed</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Concierge__c.SF_Request</value>
+    </filters>
+    <filters>
+        <field>Request_Area__c</field>
+        <operation>equals</operation>
+        <value>Support Issue</value>
+    </filters>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Data Changes</value>
+    </filters>
+    <filters>
+        <field>Request_Specifics__c</field>
+        <operation>equals</operation>
+        <value>Lease Related</value>
+    </filters>
+    <label>Region Requests - Lease Related</label>
+    <sharedTo>
+        <group>IT_Support_Concierge_Internal</group>
+        <group>RF_Support</group>
+        <group>Regional_Controllers</group>
+    </sharedTo>
+</ListView>

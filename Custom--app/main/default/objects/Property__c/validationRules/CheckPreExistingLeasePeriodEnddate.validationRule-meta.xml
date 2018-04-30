@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckPreExistingLeasePeriodEnddate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( OR(ISNULL(Pre_Existing_Lease_Period_End__c ),ISNULL(Pre_Existing_Lease_Period_Start__c)) ,  Section_8_Housing__c )</errorConditionFormula>
+    <errorMessage>Please enter Pre-Existing Lease Period End date and Pre-Existing Lease Period Start date</errorMessage>
+</ValidationRule>

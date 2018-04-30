@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Turn_Rehab_Create</fullName>
+    <active>true</active>
+    <description>Validation rule to validate creation of Turn Rehab if there is no Closed Completed Post Acquisition Rehab</description>
+    <errorConditionFormula>AND( ISNEW(), RecordType.DeveloperName = 'Turn', Portfolio__r.Closed_Completed_Post_Acq_Rehabs__c == 0,
+Portfolio__r.Closed_Comp_Post_Acq_Purch_Rented_Rehabs__c == 0 )</errorConditionFormula>
+    <errorMessage>You cannot create a Rehab Turn until the Post-Acquisition Rehab is Closed - Completed.</errorMessage>
+</ValidationRule>

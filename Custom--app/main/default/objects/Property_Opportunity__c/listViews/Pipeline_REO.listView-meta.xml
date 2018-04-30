@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_REO</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Submitted_By__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.REO</value>
+    </filters>
+    <label>Pipeline Records - REO</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

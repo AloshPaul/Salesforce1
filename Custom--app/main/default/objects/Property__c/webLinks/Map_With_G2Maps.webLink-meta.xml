@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Map_With_G2Maps</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Map With G2Maps</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")}
+
+var idArray = {!GETRECORDIDS($ObjectType.Property__c)};
+
+var idList = "";
+
+
+if(idArray.length == 1){
+idList = "\'" + idArray[0] + "\'";
+}else
+idList = "\'" + idArray[0] + "\',";
+
+i=1;
+while(i&lt;=(idArray.length-1)){
+if(i==(idArray.length-1)){
+idList += "\'" + idArray[i] + "\'";
+break;
+}
+idList += "\'" + idArray[i] + "\',";
+i++;
+}
+var URL = "/apex/g2maps__G2Maps?Layer1=All Properties&amp;Filter1=(Id in (" +idList+"))&amp;Visible=All Properties";
+
+
+if(idArray.length > 75){
+alert('Please Deselect Some Records from List (Maximum 75 records allowed for Selection)');
+}else if(idArray.length == 0){
+alert('No Records Selected..');
+}else{
+window.parent.location.href=URL;
+}</url>
+</WebLink>

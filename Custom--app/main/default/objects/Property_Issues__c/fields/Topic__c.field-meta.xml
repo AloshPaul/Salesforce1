@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topic__c</fullName>
+    <externalId>false</externalId>
+    <label>Topic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Current Residents</fullName>
+                <default>false</default>
+                <label>Current Residents</label>
+            </value>
+            <value>
+                <fullName>Other Inquiries</fullName>
+                <default>false</default>
+                <label>Other Inquiries</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

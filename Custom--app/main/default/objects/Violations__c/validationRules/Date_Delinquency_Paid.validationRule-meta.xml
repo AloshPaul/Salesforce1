@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Delinquency_Paid</fullName>
+    <active>true</active>
+    <description>Date Delinquency Paid required before violation is resolved.</description>
+    <errorConditionFormula>RecordType.Name = "IH Delinquency" &amp;&amp; 
+ISPICKVAL(Status__c , "Closed - Paid") &amp;&amp; 
+ISBLANK(Date_Deliquency_Paid__c) &amp;&amp; 
+$Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Date_Deliquency_Paid__c</errorDisplayField>
+    <errorMessage>Required before violation is closed.</errorMessage>
+</ValidationRule>

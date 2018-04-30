@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Active_Files</fullName>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>NAME</columns>
+    <columns>Listing__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>App_Received__c</columns>
+    <columns>File_Status__c</columns>
+    <columns>Approval_Letter_to_Agent_Date__c</columns>
+    <columns>Deposit_Due_Date__c</columns>
+    <columns>Scheduled_Move_In__c</columns>
+    <columns>Market__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant</value>
+    </filters>
+    <label>ATL- Active Files</label>
+</ListView>

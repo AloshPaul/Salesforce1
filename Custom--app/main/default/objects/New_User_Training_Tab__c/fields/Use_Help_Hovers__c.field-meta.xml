@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Help_Hovers__c</fullName>
+    <defaultValue>"Remember the phrase 'hover to discover.'  Use the hovers next to the field names to get additional information or instructions."</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Help icons can display additional information or instructions.</inlineHelpText>
+    <label>Use Help Hovers</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

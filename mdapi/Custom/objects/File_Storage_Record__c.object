@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This holds metadata about files that are uploaded into
+		external systems (Box/S3/StructuredFN)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>FileStorageManager</fullName>
+        <description>Used in FileStorageManager Visualforce Page</description>
+        <displayedFields>
+            <field>File_Type__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>File_Name__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>File_Size_Bytes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Uploaded_To_S3_Date__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Uploaded_To_S3_By__c</field>
+            <isFieldManaged>true</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Uploaded_To_Box_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Uploaded_To_Box_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>File Storage Manager</label>
+    </fieldSets>
+    <fields>
+        <fullName>Box_File_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Box File Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Disposition__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Disposition</label>
+        <referenceTo>Disposition__c</referenceTo>
+        <relationshipLabel>File Storage Records</relationshipLabel>
+        <relationshipName>File_Storage_Records</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FSR_Fund__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+NOT(ISBLANK(Property__c)), 
+Property__r.Fund__c, 
+IF( 
+AND( 
+NOT(ISBLANK(Rehab__c)), 
+NOT(ISBLANK(Rehab__r.Portfolio__c )) 
+), 
+Rehab__r.Portfolio__r.Fund__c, 
+IF( 
+AND( 
+NOT(ISBLANK(HD_Budget_Walk__c)), 
+NOT(ISBLANK(HD_Budget_Walk__r.Rehab__c )), 
+NOT(ISBLANK(HD_Budget_Walk__r.Rehab__r.Portfolio__c )) 
+), 
+HD_Budget_Walk__r.Rehab__r.Portfolio__r.Fund__c, 
+&apos;&apos; 
+) 
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FSR Fund</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSR_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+NOT(ISBLANK(Property__c)), 
+Property__r.Property_Code__c, 
+IF( 
+AND( 
+NOT(ISBLANK(Rehab__c)), 
+NOT(ISBLANK(Rehab__r.Portfolio__c )) 
+), 
+Rehab__r.Portfolio__r.Property_Code__c, 
+IF( 
+AND( 
+NOT(ISBLANK(HD_Budget_Walk__c)), 
+NOT(ISBLANK(HD_Budget_Walk__r.Rehab__c )), 
+NOT(ISBLANK(HD_Budget_Walk__r.Rehab__r.Portfolio__c )) 
+), 
+HD_Budget_Walk__r.Rehab__r.Portfolio__r.Property_Code__c, 
+&apos;&apos; 
+) 
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FSR Property Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Size_Bytes__c</fullName>
+        <externalId>false</externalId>
+        <label>File Size (bytes)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Size_kb__c</fullName>
+        <externalId>false</externalId>
+        <formula>(File_Size_Bytes__c /1024)</formula>
+        <label>File Size (kb)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Type__c</fullName>
+        <description>Corresponds to which folder the document belongs,not  &quot;Content Type&quot; as in PDF or Text or Doc</description>
+        <externalId>false</externalId>
+        <label>File Type</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HD_Budget_Walk__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HD Budget Walk</label>
+        <referenceTo>HD_Budget_Walk__c</referenceTo>
+        <relationshipLabel>File Storage Records</relationshipLabel>
+        <relationshipName>File_Storage_Records</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Export_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Export Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Linked_Record_Id__c</fullName>
+        <description>Modify this formula every time a new relationship with an object is created.</description>
+        <externalId>false</externalId>
+        <formula>HD_Budget_Walk__c +  Property__c + Rehab__c + Residence__c + Disposition__c</formula>
+        <label>Linked Record Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+	NOT(ISBLANK(Property__c )),
+	TEXT(Property__r.Market__c),
+	IF(
+		NOT(ISBLANK( Rehab__c )),
+		Rehab__r.Market__c,
+		IF(
+			NOT(ISBLANK(HD_Budget_Walk__c)),
+			HD_Budget_Walk__r.Market__c,
+			&quot;&quot;
+		)	
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Naming_convention_met__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Property__r.Property_Code__c =  LEFT(File_Name__c, 8) , True, False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Naming convention met?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>File Storage Records</relationshipLabel>
+        <relationshipName>File_Storage_Records</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Record_ID_18_Digit__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record ID ( 18 Digit )</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+	NOT(ISBLANK(Property__c )),
+	TEXT(Property__r.Region__c),
+	IF(
+		NOT(ISBLANK( Rehab__c )),
+		Rehab__r.Region__c,
+		IF(
+			NOT(ISBLANK(HD_Budget_Walk__c)),
+			HD_Budget_Walk__r.Region__c,
+			&quot;&quot;
+		)	
+	)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipLabel>File Storage Records</relationshipLabel>
+        <relationshipName>File_Storage_Records</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Residence__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Residence</label>
+        <referenceTo>Residence__c</referenceTo>
+        <relationshipLabel>File Storage Records</relationshipLabel>
+        <relationshipName>File_Storage_Records</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>S3_Path_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Full Path of the S3 file--Includes file name</description>
+        <externalId>true</externalId>
+        <label>S3 Path Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SFN_Upload_Error_Message__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Clear this field to re-push a record to SFN.</inlineHelpText>
+        <label>SFN Upload Error Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFN_Upload_Last_Attempt__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Clear this field to re-push a record to SFN.</inlineHelpText>
+        <label>SFN Upload Last Attempt</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SFN_Upload_Queued__c</fullName>
+        <externalId>false</externalId>
+        <label>SFN Upload Queued</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Uploaded_To_Box_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Uploaded To Box By</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Uploaded_To_Box_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Uploaded To Box Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Uploaded_To_S3_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Uploaded To S3 By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>File_Storage_Records</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Uploaded_To_S3_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Uploaded To S3 Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Uploaded_To_SFN_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Uploaded To SFN Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>File Storage Record</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Budget_Walk_Files</fullName>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>HD_Budget_Walk__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HD_Budget_Walk__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All - Budget Walk Files</label>
+    </listViews>
+    <listViews>
+        <fullName>Structured_FN_Errors</fullName>
+        <columns>NAME</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>SFN_Upload_Last_Attempt__c</columns>
+        <columns>SFN_Upload_Error_Message__c</columns>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>File_Size_kb__c</columns>
+        <columns>Property__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Error_Message__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Structured FN Errors</label>
+    </listViews>
+    <listViews>
+        <fullName>Structured_FN_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>File_Size_kb__c</columns>
+        <columns>Property__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>SFN_Upload_Last_Attempt__c</columns>
+        <columns>SFN_Upload_Error_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Error_Message__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Last_Attempt__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Structured FN Queue</label>
+    </listViews>
+    <listViews>
+        <fullName>Structured_FN_Queue_Before_Today</fullName>
+        <columns>NAME</columns>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>File_Size_kb__c</columns>
+        <columns>Property__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>SFN_Upload_Last_Attempt__c</columns>
+        <columns>SFN_Upload_Error_Message__c</columns>
+        <columns>Uploaded_To_SFN_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Error_Message__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Uploaded_To_SFN_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Structured FN Queue Before Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Structured_FN_Upload_History</fullName>
+        <columns>Property__c</columns>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>File_Size_kb__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>SFN_Upload_Last_Attempt__c</columns>
+        <columns>SFN_Upload_Error_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Last_Attempt__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Structured FN Upload History - Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Structured_FN_Uploads_All_Successful</fullName>
+        <columns>Property__c</columns>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>File_Size_kb__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>SFN_Upload_Last_Attempt__c</columns>
+        <columns>SFN_Upload_Error_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Error_Message__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Last_Attempt__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Structured FN Uploads - All Successful</label>
+    </listViews>
+    <listViews>
+        <fullName>Structured_FN_Uploads_Today</fullName>
+        <columns>Property__c</columns>
+        <columns>File_Type__c</columns>
+        <columns>File_Name__c</columns>
+        <columns>File_Size_kb__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>SFN_Upload_Last_Attempt__c</columns>
+        <columns>SFN_Upload_Error_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Error_Message__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Last_Attempt__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Structured FN Uploads - Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Uploaded_Today_All</fullName>
+        <columns>File_Name__c</columns>
+        <columns>Property__c</columns>
+        <columns>NAME</columns>
+        <columns>File_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Uploaded_To_S3_By__c</columns>
+        <columns>Uploaded_To_S3_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Uploaded Today All</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Uploaded_Today_Portfolio</fullName>
+        <columns>File_Name__c</columns>
+        <columns>Property__c</columns>
+        <columns>NAME</columns>
+        <columns>File_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Uploaded_To_S3_By__c</columns>
+        <columns>Uploaded_To_S3_Date__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>Uploaded_To_SFN_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Uploaded Today Portfolio</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Uploaded_Today_Portfolio_Not_SFN</fullName>
+        <columns>File_Name__c</columns>
+        <columns>Property__c</columns>
+        <columns>NAME</columns>
+        <columns>File_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Uploaded_To_S3_By__c</columns>
+        <columns>Uploaded_To_S3_Date__c</columns>
+        <columns>SFN_Upload_Queued__c</columns>
+        <columns>Uploaded_To_SFN_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Uploaded_To_SFN_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>SFN_Upload_Queued__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Uploaded Today Portfolio Not SFN</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Uploaded_Today_Rehab</fullName>
+        <columns>File_Name__c</columns>
+        <columns>Property__c</columns>
+        <columns>NAME</columns>
+        <columns>File_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Uploaded_To_S3_By__c</columns>
+        <columns>Uploaded_To_S3_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Property__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Uploaded Today Rehab</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>FSR-{00000}</displayFormat>
+        <label>File Storage Record Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>File Storage Records</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>File_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>File_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Uploaded_To_S3_By__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Uploaded_To_S3_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>File_Storage_Manager</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>File Storage Manager</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>//Include the required js files
+{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&apos;/resource/&apos; &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),&apos;:&apos;,&apos;&apos;),&apos;-&apos;,&apos;&apos;),&apos; &apos;,&apos;&apos;),10) &amp; &apos;000/BlockUI/jquery.min.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/&apos; &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),&apos;:&apos;,&apos;&apos;),&apos;-&apos;,&apos;&apos;),&apos; &apos;,&apos;&apos;),10) &amp; &apos;000/BlockUI/jquery-ui.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/&apos; &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),&apos;:&apos;,&apos;&apos;),&apos;-&apos;,&apos;&apos;),&apos; &apos;,&apos;&apos;),10) &amp; &apos;000/BlockUI/jquery.blockUI.js&apos;)}
+
+
+var sObjectRecordId = &apos;&apos;;
+var page_url = parent.document.URL.split(&apos;/&apos;); 
+
+var sObjectId = page_url[page_url.length-1]; 
+sObjectId = sObjectId.split(&apos;#&apos;)[0]; 
+sObjectId = sObjectId.split(&apos;?&apos;)[0]; 
+sObjectRecordId = sObjectId.substring(0, 15); 
+
+try {
+
+j$ = jQuery.noConflict();
+
+j$.blockUI({
+css: {
+border: &apos;none&apos;,
+padding: &apos;15px&apos;,
+backgroundColor: &apos;#000&apos;,
+&apos;-webkit-border-radius&apos;: &apos;10px&apos;,
+&apos;-moz-border-radius&apos;: &apos;10px&apos;,
+opacity: .5,
+color: &apos;#fff&apos;
+},
+message : &apos;... navigating&apos;,
+onBlock: function() {
+
+parent.location.href = &apos;/apex/FileStorageManagerEnh?id=&apos; + sObjectRecordId;
+
+}
+});
+
+j$.unblockUI();
+}
+catch(e) {
+
+parent.location.href = &apos;/apex/FileStorageManagerEnh?id=&apos; + sObjectRecordId;
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Upload_To_S3</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Upload To S3</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>var page_url = parent.document.URL.split(&apos;/&apos;);
+
+var sObjectId = page_url[page_url.length-1];
+sObjectId = sObjectId.split(&apos;#&apos;)[0];
+sObjectId = sObjectId.split(&apos;?&apos;)[0];
+sObjectId = sObjectId.substring(0, 15);
+
+popupWindow = window.open(&apos;/apex/FileUploadWidget?id=&apos;+sObjectId,&apos;FileUpload&apos;,&apos;width=900,height=560,status=yes,scrollbars=yes,resizable=yes&apos;);</url>
+    </webLinks>
+</CustomObject>

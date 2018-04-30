@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trustee_Due_from__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((Trustee_Payment_to__c = null), null, 
+(IF((Trustee_Payment_to__c =0),0 ,Trustee_Payment_to__c-  Actual_Acquisition_Price__c  )) 
+)</formula>
+    <label>Trustee (Due from)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

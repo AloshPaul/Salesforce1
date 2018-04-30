@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Information_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Listing_Status__c, 'IH approved'),
+       OR(ISBLANK(BPO_As_Is__c) ,
+           ISBLANK(Accounting_Basis_Actual__c),
+           ISBLANK(Est_Current_Market_Value__c),         
+           ISBLANK(IH_BPO_ARV__c),
+           ISBLANK(Net_Proceeds_BPO__c),
+           ISBLANK(Profit_Loss_BPO__c),
+           ISBLANK(Profit_Loss_BPO_Percent__c),
+           ISBLANK(Current_Market_Value__c),
+           ISBLANK(Net_Proceeds_Market_Value__c),
+           ISBLANK(Profit_Loss_Market_Value__c),
+           ISBLANK(Profit_Loss_Market_Value_Percent__c),
+           ISBLANK(Profit_Loss_Offer_Price__c),
+           ISBLANK(X3rd_Party_BPO__c)          
+       )
+ )</errorConditionFormula>
+    <errorMessage>Financial Information is mandatory. Please populate all Financial Information fields.</errorMessage>
+</ValidationRule>

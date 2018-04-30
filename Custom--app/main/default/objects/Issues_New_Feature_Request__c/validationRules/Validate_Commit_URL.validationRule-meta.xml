@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Commit_URL</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISPICKVAL(Pushed_to_Github__c, 'Yes'),
+	ISBLANK(Commit_URL__c)
+)</errorConditionFormula>
+    <errorDisplayField>Commit_URL__c</errorDisplayField>
+    <errorMessage>You must enter Github commit  URL.</errorMessage>
+</ValidationRule>

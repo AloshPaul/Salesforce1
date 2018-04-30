@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_App_Requires_Details</fullName>
+    <active>true</active>
+    <description>Cancelled applications with reason of 'Other' require more detail.</description>
+    <errorConditionFormula>DATEVALUE(App_Received__c) > DATE(2013,11,08) &amp;&amp; 
+(ISPICKVAL( Application_Status__c , "Cancelled") || ISPICKVAL( Application_Status__c ,"Pending Cancellation"))&amp;&amp; 
+ISPICKVAL( Cancelled_Reason__c , "Other")  &amp;&amp; 
+ISBLANK(  Cancellation_Details__c  ) &amp;&amp; 
+$Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Cancellation_Details__c</errorDisplayField>
+    <errorMessage>Cancelled Or Pending Cancellation applications with reason of 'Other' require more detail.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market_Asking_Rent_is_Changed</fullName>
+    <active>false</active>
+    <description>Last Rent Adjustment Date is required when changing the Market (Asking) Rent.</description>
+    <errorConditionFormula>$Profile.Name != 'Pranav Verma' &amp;&amp;
+ISCHANGED(Market_Rent__c) &amp;&amp;
+ISBLANK(Last_Rent_Adjustment_Date__c)</errorConditionFormula>
+    <errorMessage>Last Rent Adjustment Date is required when changing the Market (Asking) Rent.</errorMessage>
+</ValidationRule>

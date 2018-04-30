@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BrokerSite_Records_All_Open</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>IH_Agent_Contact__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>B_Status__c</columns>
+    <columns>IH_Underwriting_Status_to_Agent__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Contract_Date__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.BrokerSite</value>
+    </filters>
+    <filters>
+        <field>Prospect_Status__c</field>
+        <operation>equals</operation>
+        <value>Open - Under Review,Open - In Contract</value>
+    </filters>
+    <label>BrokerSite - All Open</label>
+</ListView>

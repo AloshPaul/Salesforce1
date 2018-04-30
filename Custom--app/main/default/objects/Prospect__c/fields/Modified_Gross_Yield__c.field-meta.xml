@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modified_Gross_Yield__c</fullName>
+    <description>Expected Gross Annual Rent @ UW / (Contract Price +Rehab Budget Est. @ UW + Broker Expense @ UW)</description>
+    <externalId>false</externalId>
+    <formula>Expected_Gross_Annual_Rent_UW__c / (Contract_Price__c + Rehab_Budget_Est_UW__c + Broker_Expense_Est_UW__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Expected Gross Annual Rent @ UW / (Contract Price +Rehab Budget Est. @ UW + Broker Expense @ UW)</inlineHelpText>
+    <label>Modified Gross Yield</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

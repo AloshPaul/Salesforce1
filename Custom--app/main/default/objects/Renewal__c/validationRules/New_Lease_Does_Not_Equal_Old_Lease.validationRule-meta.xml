@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Lease_Does_Not_Equal_Old_Lease</fullName>
+    <active>true</active>
+    <description>New Renewed Lease may not be the same as the original Lease.</description>
+    <errorConditionFormula>New_Renewed_Lease__r.Id = Lease__r.Id</errorConditionFormula>
+    <errorDisplayField>New_Renewed_Lease__c</errorDisplayField>
+    <errorMessage>New Renewed Lease may not be the same as the original Lease.</errorMessage>
+</ValidationRule>

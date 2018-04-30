@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Bugs_Daves</fullName>
+    <columns>NAME</columns>
+    <columns>System_Issue_Report__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Status__c</columns>
+    <columns>Summary__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assigned_To__c</field>
+        <operation>equals</operation>
+        <value>Dave Seligson</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open,Re-Opened</value>
+    </filters>
+    <label>Open Bugs - DaveS</label>
+</ListView>

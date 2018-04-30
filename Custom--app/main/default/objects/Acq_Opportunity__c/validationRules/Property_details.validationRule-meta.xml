@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_details</fullName>
+    <active>true</active>
+    <errorConditionFormula>And(
+				OR( 
+        ISPICKVAL(Bid_Type__c, ''),
+    				ISBLANK(  Year_Built__c  ), 
+        ISBLANK( Bedrooms__c ), 
+        ISBLANK( Baths__c  ), 
+        ISBLANK( Square_Feet__c )			
+    ),
+    OR(
+        ISPICKVAL(status__c, 'Underwriting Complete'), 
+					   doSubmitForUnderwriting__c = true
+				)
+)</errorConditionFormula>
+    <errorMessage>The property details need to be completed.</errorMessage>
+</ValidationRule>

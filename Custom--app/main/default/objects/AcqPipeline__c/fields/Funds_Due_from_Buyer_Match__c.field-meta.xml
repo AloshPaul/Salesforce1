@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funds_Due_from_Buyer_Match__c</fullName>
+    <externalId>false</externalId>
+    <formula>Funds_Due_From_Buyer__c = Closing_Statement_Funds_Due_from_Buyer__c</formula>
+    <label>Funds Due from Buyer Match</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

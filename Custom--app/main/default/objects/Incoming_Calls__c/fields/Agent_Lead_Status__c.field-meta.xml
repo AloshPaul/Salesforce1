@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Lead_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Agent Lead Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>true</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>LVM #1</fullName>
+                <default>false</default>
+                <label>LVM #1</label>
+            </value>
+            <value>
+                <fullName>LVM #2</fullName>
+                <default>false</default>
+                <label>LVM #2</label>
+            </value>
+            <value>
+                <fullName>LVM #3</fullName>
+                <default>false</default>
+                <label>LVM #3</label>
+            </value>
+            <value>
+                <fullName>Sent E-mail</fullName>
+                <default>false</default>
+                <label>Sent E-mail</label>
+            </value>
+            <value>
+                <fullName>Set Appointment for Showing</fullName>
+                <default>false</default>
+                <label>Set Appointment for Showing</label>
+            </value>
+            <value>
+                <fullName>Had Showing</fullName>
+                <default>false</default>
+                <label>Had Showing</label>
+            </value>
+            <value>
+                <fullName>Already Working with an Agent</fullName>
+                <default>false</default>
+                <label>Already Working with an Agent</label>
+            </value>
+            <value>
+                <fullName>Active - Reviewing other IH Homes</fullName>
+                <default>false</default>
+                <label>Active - Reviewing other IH Homes</label>
+            </value>
+            <value>
+                <fullName>Active - Working with Client</fullName>
+                <default>false</default>
+                <label>Active - Working with Client</label>
+            </value>
+            <value>
+                <fullName>MI Date Outside of IH Requirements</fullName>
+                <default>false</default>
+                <label>MI Date Outside of IH Requirements</label>
+            </value>
+            <value>
+                <fullName>Closed - Prospect Unqualified</fullName>
+                <default>false</default>
+                <label>Closed - Prospect Unqualified</label>
+            </value>
+            <value>
+                <fullName>Closed - Off the Market</fullName>
+                <default>false</default>
+                <label>Closed - Off the Market</label>
+            </value>
+            <value>
+                <fullName>Closed - No Contact</fullName>
+                <default>false</default>
+                <label>Closed - No Contact</label>
+            </value>
+            <value>
+                <fullName>Closed Duplicate</fullName>
+                <default>false</default>
+                <label>Closed Duplicate</label>
+            </value>
+            <value>
+                <fullName>Application Sight Unseen</fullName>
+                <default>false</default>
+                <label>Application Sight Unseen</label>
+            </value>
+            <value>
+                <fullName>Closed - No Follow-up Needed</fullName>
+                <default>false</default>
+                <label>Closed - No Follow-up Needed</label>
+            </value>
+            <value>
+                <fullName>Closed - SWAY Transfer</fullName>
+                <default>false</default>
+                <label>Closed - SWAY Transfer</label>
+            </value>
+            <value>
+                <fullName>Active- Reviewing Sway Homes</fullName>
+                <default>false</default>
+                <label>Active- Reviewing Sway Homes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

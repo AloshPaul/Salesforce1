@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Sending_Revised_Lease_is_Required</fullName>
+    <active>true</active>
+    <description>'Reason for Sending Revised Lease' field in the AppTrack 2.0 record a required field that must be entered when the 'Revised Lease Prepared/Sent' box is checked.</description>
+    <errorConditionFormula>AND(
+Revised_Lease_Prepared_Sent__c = true,   ISPICKVAL(Reason_for_Sending_Revised_Lease__c , ''),
+$Profile.Name != 'System Administrator' 
+)</errorConditionFormula>
+    <errorMessage>'Reason for Sending Revised Lease' is a Required Field if 'Revised Lease Prepared/Sent' box is checked.</errorMessage>
+</ValidationRule>

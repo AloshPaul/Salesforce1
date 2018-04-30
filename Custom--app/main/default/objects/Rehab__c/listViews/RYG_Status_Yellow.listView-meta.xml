@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RYG_Status_Yellow</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>General_Contractor__c</columns>
+    <columns>Front_End_Supervisor__c</columns>
+    <columns>Back_end_Supervisor__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>GC_Completion_Date_Est__c</columns>
+    <columns>GC_Completion_Date_Revised__c</columns>
+    <columns>Days_GC_Hands__c</columns>
+    <columns>Status_Flag__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Red_Yellow_Green__c</field>
+        <operation>equals</operation>
+        <value>Yellow</value>
+    </filters>
+    <label>RYG Status | Yellow</label>
+</ListView>

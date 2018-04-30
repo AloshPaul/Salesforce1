@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3rd_Party_Lease_Agent_Rent_Required__c</fullName>
+    <externalId>false</externalId>
+    <formula>Null</formula>
+    <label>3rd Party Lease Agent Rent Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

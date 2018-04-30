@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads_Active_Status_Followup</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Date_Time_Agent_Notified__c</columns>
+    <columns>Agent_Assigned_to_Lead__c</columns>
+    <columns>Preferred_Method_of_Communication__c</columns>
+    <columns>First_Name__c</columns>
+    <columns>Last_Name__c</columns>
+    <columns>Phone__c</columns>
+    <columns>Email__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Listing_Status_at_Inquiry__c</columns>
+    <columns>Listing_Status__c</columns>
+    <columns>Target_City__c</columns>
+    <columns>Agent_Comments__c</columns>
+    <columns>Agent_Lead_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>My_Lead__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>Agent_Lead_Status__c</field>
+        <operation>equals</operation>
+        <value>Set Appointment for Showing,Already Working with an Agent</value>
+    </filters>
+    <filters>
+        <field>Agent_Lead_Status__c</field>
+        <operation>equals</operation>
+        <value>Active - Reviewing other IH Homes,Active - Working with Client</value>
+    </filters>
+    <label>^^Leads- Active Status-Followup</label>
+    <sharedTo>
+        <group>Region_Jacksonville_Orlando_Tampa</group>
+        <group>Region_Orlando</group>
+        <role>Executive_Atlanta</role>
+        <role>Executive_Jacksonville</role>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Atlanta</role>
+        <role>Team_Member_Jacksonville</role>
+        <role>Team_Member_Orlando</role>
+        <role>X3rd_Party_Atlanta</role>
+        <role>X3rd_Party_Jacksonville</role>
+        <role>X3rd_Party_Orlando</role>
+    </sharedTo>
+</ListView>

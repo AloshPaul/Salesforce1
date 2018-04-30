@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Miami_Bid_Stats</fullName>
+    <columns>NAME</columns>
+    <columns>Date__c</columns>
+    <columns>Active_Homes__c</columns>
+    <columns>Underwritten_Homes__c</columns>
+    <columns>Bid_Homes__c</columns>
+    <columns>Sold_to_3rd_Parties_Homes__c</columns>
+    <columns>Total_of_Homes_Won__c</columns>
+    <columns>Per_Active_Homes__c</columns>
+    <columns>Per_Underwritten_Homes__c</columns>
+    <columns>Per_Bid_Homes__c</columns>
+    <columns>Per_Sold_to_3rd_Parties_Homes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Miami</value>
+    </filters>
+    <label>Miami Bid Stats</label>
+    <sharedTo>
+        <group>Invitation_Corporate_Wide_Executive</group>
+        <role>Executive</role>
+        <role>Executive_Miami</role>
+        <role>Team_Member_Miami</role>
+    </sharedTo>
+</ListView>

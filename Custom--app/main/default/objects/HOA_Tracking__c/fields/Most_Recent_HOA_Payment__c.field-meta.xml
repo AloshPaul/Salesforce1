@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Recent_HOA_Payment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Most Recent HOA Payments</description>
+    <externalId>false</externalId>
+    <label>Most Recent HOA Payment</label>
+    <referenceTo>HOA_Payments__c</referenceTo>
+    <relationshipLabel>HOA Tracking</relationshipLabel>
+    <relationshipName>HOA_Tracking</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

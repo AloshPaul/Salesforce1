@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_Diligence_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Pipeline_Status__c , 'Due Diligence Approved'), 
+
+OR( 
+ISCHANGED( Final_Rehab_Budget_Est_UW__c), 
+
+ISCHANGED( Prelim_Title_Reviewed_Approved__c), 
+
+
+ISCHANGED( HOA_Estoppel_Approval_Date__c), 
+ISCHANGED( Prelim_Title_Approval_Date__c), 
+ISCHANGED( HOA_CC_R_Reviewed_and_Approved__c) 
+) 
+)</errorConditionFormula>
+    <errorMessage>Due Diligence Approval is already done, cannot edit the existing values.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,109 @@
+<!--
+    Description   :   Page for overriding standard New button for Rehab and having jQuery Ajax Search functionality with it for address fields..
+
+    Created By    :   Abhinav Sharma
+
+    Created Date  :   07-29-2013
+
+    Revision Logs :  V1.0 - Created
+ -->
+<apex:page standardController="Rehab__c" extensions="NewRehabAddressFinder" showHeader="true" sidebar="true" standardStylesheets="true" id="page">
+
+    <style>
+
+    	#overlay {
+		    z-index:1000;
+		    position:absolute;
+		    top:0;
+		    bottom:0;
+		    left:0;
+		    width:100%;
+		    background:#000;
+		    border:1px solid;
+		    opacity:0.45;
+		    -moz-opacity:0.45;
+		    filter:alpha(opacity=45);
+		    visibility:hidden;
+		}
+
+    </style>
+    <script type="text/javascript">
+
+		function showOverlay() {
+			var o = document.getElementById('overlay');
+			o.style.visibility = 'visible';
+		}
+
+		function hideOverlay() {
+			var o = document.getElementById('overlay');
+			o.style.visibility = 'hidden';
+		}
+	</script>
+    <div id="overlay"></div>
+    <apex:form id="form">
+
+        <apex:sectionHeader title="Create new rehab with matching address or yardi property code" subtitle="Create New Rehab"/>
+
+        <!--Component responsible for Multi-column Auto Completion -->
+        <c:DynamicMulticolumnAutocomplete Search_box="lookup"  headerFields="Address_Street__c" resId="page:form:pb:ABC" resStreet="page:form:pb:cde"
+        									propertyCodeValue="page:form:pb:selectedRecordSection:propertyCodeSectionItem:propertyCode"
+        									yardipropertyCodeValue="page:form:pb:selectedRecordSection:yardiPropertyCodeSectionItem:yardiPropertyCode"
+        									propertyNameValue="page:form:pb:selectedRecordSection:propertyNameSectionItem:propertyName"
+        									residenceAddressValue="page:form:pb:selectedRecordSection:residenceAddressSectionItem:residenceAddress"/>
+
+        <apex:pageblock id="pb" mode="Edit">
+
+            <apex:pageMessages id="validationMsg"/>
+
+            <!-- Hidden Inputs for getting the selected values -->
+            <apex:inputHidden value="{!residenceId}" id="ABC"/>
+            <apex:inputHidden value="{!residenceAddressStreet}" id="cde"/>
+
+            <apex:pageBlockSection columns="1" id="pbsType">
+
+                <apex:pageBlockSectionItem id="pbsTypeitem" rendered="{!IF(isCreateNewRehab == false, true, false)}">
+                    <apex:outputlabel value="Rehab Type"/>
+                    <apex:SelectRadio value="{!selectedTypeOptionValue}" layout="pageDirection" onfocus="onRadioFocus();" onchange="onChangeRadio();" id="radioId">
+                        <apex:selectOptions value="{!RehabTypeOptions}"/>
+                    </apex:SelectRadio>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem id="streetitem" rendered="{!IF(isCreateNewRehab == false, true, false)}">
+                    <apex:outputlabel value="Address or Yardi Property Code"/>
+                   	<!-- input tag for search box -->
+                    <input type="text" Title="search..." id="lookup" placeholder="search..." />
+                </apex:pageBlockSectionItem>
+
+         	</apex:pageBlockSection>
+         	<apex:pageBlockSection title="Selected Record Details" id="selectedRecordSection">
+                <apex:pageBlockSectionItem id="propertyCodeSectionItem" rendered="{!NOT(isCreateNewRehab)}">
+                	<apex:outputLabel value="Property Code" />
+                	<apex:outputText id="propertyCode" />
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem id="propertyNameSectionItem" rendered="{!NOT(isCreateNewRehab)}">
+                	<apex:outputLabel value="Property Name" />
+                	<apex:outputText id="propertyName" />
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem id="yardiPropertyCodeSectionItem" rendered="{!NOT(isCreateNewRehab)}">
+                	<apex:outputLabel value="Yardi Property Code" />
+                	<apex:outputText id="yardiPropertyCode" />
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem id="residenceAddressSectionItem" rendered="{!NOT(isCreateNewRehab)}">
+                	<apex:outputLabel value="Residence Address" />
+                	<apex:outputText id="residenceAddress" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <!-- Buttons -->
+
+            <apex:pageBlockButtons location="bottom">
+                 <apex:commandButton value="Create Rehab" action="{!submit}" rendered="{!IF(isCreateNewRehab == false, true, false)}" onclick="showOverlay();" />
+                 <apex:commandButton value="Cancel" action="{!cancel}" rendered="{!IF(isCreateNewRehab == false, true, false)}"/>
+                 <apex:commandButton value="Go to Rehab" action="{!redirectToRehabDetailPage}" rendered="{!isCreateNewRehab}"/>
+          	</apex:pageBlockButtons>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

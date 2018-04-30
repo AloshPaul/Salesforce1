@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Acquisition_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Acquisition_Status__c)</formula>
+        <label>Acquisition Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Asset_Number_Text__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow for Global Search purposes.</inlineHelpText>
+        <label>Asset Number Text</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Asset_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Code__c</formula>
+        <label>Asset Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bid_Receipt__c</fullName>
+        <externalId>false</externalId>
+        <label>Bid Receipt</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Clean_Title_Policy__c</fullName>
+        <externalId>false</externalId>
+        <label>Clean Title Policy</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Statement</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Count_Proof_of_ACQ_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Have_Required_Proof_of_Acquisition__c = &quot;No&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Missing Proof of Acquisition</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Proof_of_ACQ_Yes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Have_Required_Proof_of_Acquisition__c = &quot;Yes&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Proof of Acquisition is Yes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Proof_of_Deed_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Have_Required_Deed__c  = &quot;No&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Missing Required Deed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Proof_of_Deed_Yes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Have_Required_Deed__c  = &quot;Yes&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Deed is Yes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Required_Lease_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(   Have_Required_Lease__c   = &quot;No&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Missing Required Lease</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Required_Lease_Yes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(   Have_Required_Lease__c   = &quot;Yes&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Lease is Yes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Required_Rehab_Budget_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(    Have_Required_Rehab_Budget__c = &quot;No&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Missing Required Rehab Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Required_Rehab_Budget_Yes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(    Have_Required_Rehab_Budget__c = &quot;Yes&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Rehab Budget is Yes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Required_Title_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(   Have_Required_Title__c   = &quot;No&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Missing Required Title</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Required_Title_Yes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(   Have_Required_Title__c   = &quot;Yes&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Title is Yes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Have_Required_Docs_to_Qualify__c = &quot;No&quot;, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count of No</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_of_Yes__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Have_Required_Docs_to_Qualify__c = &quot;Yes&quot;, 1,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Count of Yes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Doc_Mgmt_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Doc Mgmt. Notes</label>
+        <length>1000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Docs_Cleared_by_Due_Diligence_Agent__c</fullName>
+        <externalId>false</externalId>
+        <label>Docs Cleared by Due Diligence Agent?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Docs_Provided_to_Due_Diligence_Agent__c</fullName>
+        <externalId>false</externalId>
+        <label>Docs Provided to Due Diligence Agent?</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Final_Title_Policy_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Acquisition_Date__c  + 90</formula>
+        <label>Final Title Policy Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fund__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Fund__c</formula>
+        <label>Fund</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Deed_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow.</inlineHelpText>
+        <label>Have Required Deed Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Deed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND
+    ( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;), 
+      Portfolio__r.Acquisition_Date__c + 90 &gt; TODAY()), 
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),  
+      Portfolio__r.Acquisition_Date__c + 90 &gt; TODAY(),
+      OR( ISPICKVAL( Recorded_Deed__c , &quot;Yes&quot;),
+          ISPICKVAL( Unrecorded_Deed__c , &quot;Yes&quot;))), 
+         &quot;Yes&quot;, 
+
+IF(AND
+
+    ( Portfolio__r.Acquisition_Date__c + 90  &lt;=  TODAY(),
+      ISPICKVAL( Recorded_Deed__c , &quot;Yes&quot;)),
+         &quot;Yes&quot;, 
+
+
+&quot;No&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Deed?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Docs_to_Qualify__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND( 
+
+         NOT(Have_Required_Deed__c = &quot;No&quot;),
+         NOT(Have_Required_Title__c =&quot;No&quot;),
+         NOT(Have_Required_Rehab_Budget__c = &quot;No&quot;),
+         NOT(Have_Required_Proof_of_Acquisition__c = &quot;No&quot;),
+         NOT(Have_Required_Lease__c =&quot;No&quot;)), 
+
+&quot;Yes&quot;, 
+
+&quot;No&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Docs to Qualify?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Lease_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow.</inlineHelpText>
+        <label>Have Required Lease Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Lease__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Leased_Unit__c = &quot;No&quot;, &quot;N/A&quot;,
+IF( ISPICKVAL(Lease_Agreement__c, &quot;Yes&quot;), &quot;Yes&quot;,
+
+&quot;No&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Lease?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Proof_of_Acquisition_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow.</inlineHelpText>
+        <label>Have Required Proof of Acquisition Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Proof_of_Acquisition__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND
+    ( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;), 
+      ISPICKVAL( Bid_Receipt__c , &quot;Yes&quot;)),
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),
+      Portfolio__r.Fund__c = &quot;01&quot; , 
+      ISPICKVAL( Purchase_Agreement__c  , &quot;Yes&quot;)),
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),
+      Portfolio__r.Fund__c = &quot;02&quot; , 
+  OR(ISPICKVAL( Purchase_Agreement__c  , &quot;Yes&quot;),
+     ISPICKVAL( Closing_Statement__c   , &quot;Yes&quot;))),
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),
+      Portfolio__r.Fund__c = &quot;03&quot; , 
+  OR(ISPICKVAL( Purchase_Agreement__c  , &quot;Yes&quot;),
+     ISPICKVAL( Closing_Statement__c   , &quot;Yes&quot;))),
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),
+      Portfolio__r.Fund__c = &quot;04&quot; , 
+  OR(ISPICKVAL( Purchase_Agreement__c  , &quot;Yes&quot;),
+     ISPICKVAL( Closing_Statement__c   , &quot;Yes&quot;))),
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),
+      Portfolio__r.Fund__c = &quot;05&quot; , 
+  OR(ISPICKVAL( Purchase_Agreement__c  , &quot;Yes&quot;),
+     ISPICKVAL( Closing_Statement__c   , &quot;Yes&quot;))),
+         &quot;Yes&quot;, 
+
+IF(AND
+    ( NOT( ISPICKVAL( Portfolio__r.Bid_Type__c, &quot;Trustee&quot;)),
+      Portfolio__r.Fund__c = &quot;06&quot; , 
+  OR(ISPICKVAL( Purchase_Agreement__c  , &quot;Yes&quot;),
+     ISPICKVAL( Closing_Statement__c   , &quot;Yes&quot;))),
+         &quot;Yes&quot;,
+
+
+&quot;No&quot;)))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Proof of Acquisition?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Rehab_Budget_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow.</inlineHelpText>
+        <label>Have Required Rehab Budget Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Rehab_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(In_Rehab__c = &quot;No&quot;, &quot;N/A&quot;,
+IF( ISPICKVAL(Rehab_Budget__c, &quot;Yes&quot;), &quot;Yes&quot;,
+
+&quot;No&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Rehab Budget?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Title_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow.</inlineHelpText>
+        <label>Have Required Title Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_Required_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL( Clean_Title_Policy__c , &quot;Yes&quot;), &quot;Yes&quot;,
+
+IF(AND (Portfolio__r.Acquisition_Date__c + 90 &gt; TODAY(),
+
+      OR( ISPICKVAL( Preliminary_Title_Report__c  , &quot;Yes&quot;),
+          ISPICKVAL( MU_Preliminary_Title_Report__c  , &quot;Yes&quot;))),
+
+         &quot;Yes&quot;, 
+
+
+&quot;No&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Have Required Title?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>In_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL( Rehab_Budget__c , &quot;Yes&quot;), &quot;Yes&quot;,
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;Closed - Cancelled&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL(  Portfolio__r.Acquisition_Status__c  , &apos;Cancelled&apos;)) , &apos;No&apos;,
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;Closed - No Rehab Needed&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;Re-key Ready&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;Sent to Locksmith&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;Re-key Complete&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;Front-End Assigned&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;HOLD - BK&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;HOLD - Deed&apos;)) , &apos;No&apos;, 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, &quot;Post-Acquisition&quot;),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , &apos;HOLD - Occupied/TIP&apos;)) , &apos;No&apos;, 
+
+IF( ISBLANK( Portfolio__r.Residence__r.Most_Recent_Rehab__c ),&quot;No&quot;, 
+
+ &apos;Yes&apos;))))))))))))</formula>
+        <label>In Rehab</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Agreement</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Leased_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( OR( 
+Portfolio__r.Residence__r.Most_Recent_Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &apos;Current&apos;, 
+Portfolio__r.Residence__r.Most_Recent_Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &apos;Eviction&apos;, 
+Portfolio__r.Residence__r.Most_Recent_Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &apos;Notice&apos;), 
+ 
+&quot;Yes&quot;,
+
+
+
+ &quot;No&quot;)</formula>
+        <label>Leased Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Low_Hanging_Fruit_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Have_Required_Deed_Value__c  +  Have_Required_Lease_Value__c  +  Have_Required_Proof_of_Acquisition_Value__c  +  Have_Required_Rehab_Budget_Value__c  +  Have_Required_Title_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yes = 1, No = 2, N/A = 3.  &quot;N/A&quot; only appears in the &quot;Have Required Lease&quot; and &quot;Have Required Rehab Budget&quot; fields and should be disregarded.</inlineHelpText>
+        <label>Low Hanging Fruit Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Low_Hanging_Fruit__c</fullName>
+        <description>Yes = 1, No = 2, N/A = 3.  N/A only appears in the &quot;Have Required Lease&quot; and &quot;Have Required Rehab Budget&quot; fields and should be disregarded.</description>
+        <externalId>false</externalId>
+        <formula>IF ((Count_Proof_of_Deed_No__c + Count_Required_Lease_No__c + Count_Proof_of_ACQ_No__c + Count_Required_Rehab_Budget_No__c + Count_Required_Title_No__c) == 1, True, False)</formula>
+        <inlineHelpText>What constitutes &quot;Low Hanging Fruit&quot; is when there is a single &quot;No&quot; value in the &quot;Document Compliance&quot; section.  &quot;N/A&quot; values are disregarded. They only appear in the &quot;Have Required Lease&quot; or &quot;Have Required Rehab Budget&quot; field. Yes = 1, No = 2, N/A = 3.</inlineHelpText>
+        <label>Low Hanging Fruit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MU_Preliminary_Title_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>MU Preliminary Title Report</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Portfolio__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Portfolio Doc Compliances</relationshipLabel>
+        <relationshipName>Portfolio_Doc_Compliances</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Preliminary_Title_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Preliminary Title Report</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Purchase_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Agreement</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Qualification_Treatment__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Portfolio__r.Bid_Type__c , &apos;Trustee&apos;) , &apos;Auction&apos;, &apos;Non-Auction&apos;)</formula>
+        <label>Qualification Treatment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recorded_Deed_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Acquisition_Date__c  + 90</formula>
+        <label>Recorded Deed Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Recorded_Deed__c</fullName>
+        <externalId>false</externalId>
+        <label>Recorded Deed</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rehab_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Rehab Budget</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unrecorded_Deed__c</fullName>
+        <externalId>false</externalId>
+        <label>Unrecorded Deed</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code_Historical__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This was the Yardi code prior to securitization</inlineHelpText>
+        <label>Yardi Code - Historical</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code_Text__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is populated via workflow for Global Search purposes.</inlineHelpText>
+        <label>Yardi Property Code Text</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Yardi_Property_Code__c</formula>
+        <label>Yardi Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Portfolio Doc Compliance</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PDC-{00000000}</displayFormat>
+        <label>Portfolio Doc Compliance  Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Portfolio Doc Compliances</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Portfolio__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Asset_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Low_Hanging_Fruit__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

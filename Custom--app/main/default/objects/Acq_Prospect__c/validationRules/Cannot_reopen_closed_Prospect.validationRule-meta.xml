@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_reopen_closed_Prospect</fullName>
+    <active>false</active>
+    <description>Once a prospect is closed, then analyst cannot reopen it</description>
+    <errorConditionFormula>IF( AND(
+				 ISPICKVAL(PRIORVALUE(Status__c),"Cancelled / Dead"),
+				 TODAY() -	DATEVALUE(LastModifiedDate) &lt; 30
+				) ,  
+			true, 
+			false)</errorConditionFormula>
+    <errorMessage>Cannot be reopened</errorMessage>
+</ValidationRule>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Property Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BK</fullName>
+                <default>false</default>
+                <label>BK</label>
+            </value>
+            <value>
+                <fullName>Leased</fullName>
+                <default>false</default>
+                <label>Leased</label>
+            </value>
+            <value>
+                <fullName>Leasing in Process</fullName>
+                <default>false</default>
+                <label>Leasing in Process</label>
+            </value>
+            <value>
+                <fullName>Newly Acquired</fullName>
+                <default>true</default>
+                <label>Newly Acquired</label>
+            </value>
+            <value>
+                <fullName>Moved Out</fullName>
+                <default>false</default>
+                <label>Moved Out</label>
+            </value>
+            <value>
+                <fullName>No Action Taken</fullName>
+                <default>false</default>
+                <label>No Action Taken</label>
+            </value>
+            <value>
+                <fullName>Rent Ready</fullName>
+                <default>false</default>
+                <label>Rent Ready</label>
+            </value>
+            <value>
+                <fullName>Waiting for Deed</fullName>
+                <default>false</default>
+                <label>Waiting for Deed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

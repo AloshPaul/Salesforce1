@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Twenty_Property_Bulk_Ken_Keithly</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Bulk_Deal__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>Baths__c</columns>
+    <columns>Bedrooms__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>contains</operation>
+        <value>20 Property Bulk</value>
+    </filters>
+    <label>20 Property Bulk (Ken Keithly)</label>
+    <sharedTo>
+        <group>Inland_Empire_Bulk_Deals</group>
+        <group>Region_Inland_Empire</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Internal_1099_Listing_Agents_Active</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Type__c</columns>
+    <columns>Mobile_Phone__c</columns>
+    <columns>Agent_Carrier__c</columns>
+    <columns>Email__c</columns>
+    <columns>User_Record__c</columns>
+    <columns>Contact_Record__c</columns>
+    <columns>License__c</columns>
+    <columns>License_Exp_Date__c</columns>
+    <columns>Active__c</columns>
+    <columns>Frozen__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>User_Record__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>PM_2_0__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Internal-1099 Listing Agents Active</label>
+</ListView>

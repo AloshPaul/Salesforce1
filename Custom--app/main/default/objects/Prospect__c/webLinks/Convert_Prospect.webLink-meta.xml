@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Convert_Prospect</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Convert to Pipeline</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Check if the record is not converted yet
+if({!Prospect__c.IsConverted__c} == true) {
+	alert('Prospect has already been converted.');
+} else {
+	
+	//Confrimation message
+	var userConfirmation = confirm('This action can not be reverted. Do you want to proceed?');
+
+	if(userConfirmation) {
+		
+		//Redirect to next page
+		location.href = '/apex/Mass_ProspectConversion?selectedRecords={!Prospect__c.Id}&amp;retURL={!Prospect__c.Id}';
+	}	
+}</url>
+</WebLink>

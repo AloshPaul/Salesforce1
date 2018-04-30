@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Status_and_Request_Specifics_Clo</fullName>
+    <active>false</active>
+    <description>Request Specifics and Resolution Details are required upon closing the ticket.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name = "IT Request",
+ISPICKVAL( Status__c , "Closed"),
+ISPICKVAL( Request_Specifics__c , ""))</errorConditionFormula>
+    <errorMessage>Request Specifics and Resolution Details are required upon closing the ticket.</errorMessage>
+</ValidationRule>

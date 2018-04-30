@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Securitization_Candidate__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>DO NOT DELETE OR RENAME THIS FIELD - IT IS REFERENCED IN THE FOLLOWING FORMULA  "Yardi Property Code" https://na9.salesforce.com/00NE0000004Z7Ru
+Changed Label to Securiized Asset</description>
+    <externalId>false</externalId>
+    <label>Securitized Asset</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sf_com_activation_date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This date is the date that log-in credentials were provided to the agent.</inlineHelpText>
+    <label>SF.com Activation Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

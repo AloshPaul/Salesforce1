@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BX_Purchase_Price_Disc_to_Market_UW__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Market_Value_UW__c > 0, 
+1 -   Actual_Acquisition_Price__c  / Market_Value_UW__c, 
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BX Purchase Price Disc. to Market @ UW</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Underwriting_Estimate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				OR( 
+        ISBLANK( Broker_Market_Value__c ),
+    				ISBLANK( Broker_Monthly_Rent__c ),
+    				ISBLANK( Broker_Rehab__c ),
+    				ISBLANK( Broker_Property_Taxes__c ), 
+      		ISBLANK( Broker_Closing_Title_Fees_Est__c )
+    ),
+				OR( 
+        ISPICKVAL(status__c, 'Submit For Underwriting'), 
+        doSubmitForUnderwriting__c = true 
+    ) 
+)</errorConditionFormula>
+    <errorMessage>The underwriting estimates need to be completed.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Rehab__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Rehab_Budget__c , "Yes"), "Yes",
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'Closed - Cancelled')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL(  Portfolio__r.Acquisition_Status__c  , 'Cancelled')) , 'No',
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'Closed - No Rehab Needed')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'Re-key Ready')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'Sent to Locksmith')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'Re-key Complete')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'Front-End Assigned')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'HOLD - BK')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'HOLD - Deed')) , 'No', 
+
+IF(AND( 
+       ISPICKVAL(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c, "Post-Acquisition"),
+       ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c , 'HOLD - Occupied/TIP')) , 'No', 
+
+IF( ISBLANK( Portfolio__r.Residence__r.Most_Recent_Rehab__c ),"No", 
+
+ 'Yes'))))))))))))</formula>
+    <label>In Rehab</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

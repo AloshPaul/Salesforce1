@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Development Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>In Process</fullName>
+                <default>false</default>
+                <label>In Process</label>
+            </value>
+            <value>
+                <fullName>Completed in Dev</fullName>
+                <default>false</default>
+                <label>Completed in Dev</label>
+            </value>
+            <value>
+                <fullName>Ready for Code Review</fullName>
+                <default>false</default>
+                <label>Ready for Code Review</label>
+            </value>
+            <value>
+                <fullName>Ready for QA Review</fullName>
+                <default>false</default>
+                <label>Ready for QA Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

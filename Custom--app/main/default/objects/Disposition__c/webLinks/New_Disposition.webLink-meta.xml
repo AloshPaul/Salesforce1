@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Disposition</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Disposition</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a3m/e?CF00NE0000005Bu7j={!Property__c.Name}&amp;00NE0000005tGfE={!Property__c.Fund__c}&amp;CF00NE0000005Bu7j_lkid={!Property__c.Id}&amp;retURL=%2Fa0Oc0000004xJqH</url>
+</WebLink>

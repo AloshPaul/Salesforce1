@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Violation_HOA_Tracking</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Violation</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a31/e?CF00NE0000005BAN0={!HOA_Tracking__c.Name}
+&amp;CF00NE0000005BAN0_lkid={!HOA_Tracking__c.Id}
+&amp;CF00NE0000005BAND={!HOA_Tracking__c.HOA__c}
+&amp;CF00NE0000005BAND_lkid={!HOA_Tracking__c.HOA_ID__c}
+&amp;CF00NE0000005BAN4={!HOA_Tracking__c.Property__c}
+&amp;CF00NE0000005BAN4_lkid={!HOA_Tracking__c.PropertyId__c}
+&amp;CF00NE0000005BAN8={!Property__c.Residence__c}
+&amp;CF00NE0000005BAN8_lkid={!Property__c.ResidenceId__c}
+&amp;CF00NE0000005BAMf={!User.Full_Name__c} 
+&amp;00NE0000005BANE="Open"
+&amp;RecordType=012E00000005p15&amp;ent=01IE00000011mew
+&amp;retURL=%2F{!HOA_Tracking__c.Id}</url>
+</WebLink>

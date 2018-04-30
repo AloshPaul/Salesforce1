@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_OTM_Listings_Craigslist</fullName>
+    <columns>NAME</columns>
+    <columns>City__c</columns>
+    <columns>Zip_Code__c</columns>
+    <columns>BR_BA__c</columns>
+    <columns>Sq_Ft__c</columns>
+    <columns>Pool__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Craig_List_Post__c</columns>
+    <columns>Rent_Ready_Date__c</columns>
+    <columns>Total_Incoming_Calls__c</columns>
+    <columns>Status__c</columns>
+    <columns>Romance_Paragraph_Complete_Date__c</columns>
+    <columns>Craig_s_List_Comments__c</columns>
+    <columns>Craig_s_List_Listing_1__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing,OTM - Ready to List</value>
+    </filters>
+    <label>All OTM Listings-Craigslist</label>
+    <sharedTo>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Orlando</role>
+    </sharedTo>
+</ListView>

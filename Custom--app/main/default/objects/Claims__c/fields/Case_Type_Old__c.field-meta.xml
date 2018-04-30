@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type_Old__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use the value in this field to populate these new fields:  Claim Type, Category, Sub-Category.  Once this is done for all Claims, this field will be removed.</inlineHelpText>
+    <label>Case Type Old</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bankruptcy</fullName>
+                <default>false</default>
+                <label>Bankruptcy</label>
+            </value>
+            <value>
+                <fullName>Breach of Contract</fullName>
+                <default>false</default>
+                <label>Breach of Contract</label>
+            </value>
+            <value>
+                <fullName>Contract Dispute</fullName>
+                <default>false</default>
+                <label>Contract Dispute</label>
+            </value>
+            <value>
+                <fullName>Contract for Sale</fullName>
+                <default>false</default>
+                <label>Contract for Sale</label>
+            </value>
+            <value>
+                <fullName>Fair Housing</fullName>
+                <default>false</default>
+                <label>Fair Housing</label>
+            </value>
+            <value>
+                <fullName>Foreclosure</fullName>
+                <default>false</default>
+                <label>Foreclosure</label>
+            </value>
+            <value>
+                <fullName>Foreclosure/BK</fullName>
+                <default>false</default>
+                <label>Foreclosure/BK</label>
+            </value>
+            <value>
+                <fullName>Government Inquiry</fullName>
+                <default>false</default>
+                <label>Government Inquiry</label>
+            </value>
+            <value>
+                <fullName>HOA Foreclosure Sale</fullName>
+                <default>false</default>
+                <label>HOA Foreclosure Sale</label>
+            </value>
+            <value>
+                <fullName>HOA Lien</fullName>
+                <default>false</default>
+                <label>HOA Lien</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Leasing Prohibition</fullName>
+                <default>false</default>
+                <label>Leasing Prohibition</label>
+            </value>
+            <value>
+                <fullName>Liens &amp; Special Property Taxes</fullName>
+                <default>false</default>
+                <label>Liens &amp; Special Property Taxes</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Owners Policy</fullName>
+                <default>false</default>
+                <label>Owners Policy</label>
+            </value>
+            <value>
+                <fullName>Personal Injury</fullName>
+                <default>false</default>
+                <label>Personal Injury</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Title Curative</fullName>
+                <default>false</default>
+                <label>Title Curative</label>
+            </value>
+            <value>
+                <fullName>Trademark / IP</fullName>
+                <default>false</default>
+                <label>Trademark / IP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Amount_of_Change_Orders__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field calculates the total amount for all affiliated Change Orders.</inlineHelpText>
+    <label>Total Amount of Change Orders</label>
+    <summarizedField>Change_Orders__c.Amount__c</summarizedField>
+    <summaryForeignKey>Change_Orders__c.Rehab__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

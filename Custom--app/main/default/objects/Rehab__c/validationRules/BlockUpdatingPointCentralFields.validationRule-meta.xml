@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BlockUpdatingPointCentralFields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR( 
+ AND( ISCHANGED(PointCentral_Lock_Installed__c), NOT(ISBLANK( PRIORVALUE(PointCentral_Lock_Installed__c)))),
+ AND( ISCHANGED(PointCentral_Thermostat_Installed__c ), NOT(ISBLANK( PRIORVALUE(PointCentral_Thermostat_Installed__c)))),
+ AND( ISCHANGED(PointCentral_Installation_Notes__c), NOT(ISBLANK( PRIORVALUE(PointCentral_Installation_Notes__c)))),
+ AND( ISCHANGED(PointCentral_Install_Date__c), NOT(ISBLANK( PRIORVALUE(PointCentral_Install_Date__c)))),
+ AND( ISCHANGED(PointCentral_Installed_By__c),  NOT(ISBLANK( PRIORVALUE(PointCentral_Installed_By__c))))
+),
+(NOT($Profile.Name = "System Administrator")))</errorConditionFormula>
+    <errorMessage>Once PointCentral fields is populated,You can not update it.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Min_Monthly_Income_Required__c</fullName>
+    <description>a) If (1) the Guarantor is False and (2) the Created Date is between  8/13/2014  and    9/15/15 and (3) the Region  Charlotte, Inland Empire, Los Angeles, Orlando, or Phoenix  it's Market (Asking) Rent times 3 . for other region Market(Asking) Rent times 2.5
+
+b)If (1) the Guarantor is False and (2) the Created Date is 9/15/15 or later and (3) and  for all region , it's Market (Asking) Rent   times 3.
+
+c)If (1) the Guarantor is False and (2) the Created Date is prior to 8/13/2014, it's Market (Asking) Rent times 2.5 for all regions.
+d)If the Guarantor is True, it's Market (Asking) Rent times 4 for all regions</description>
+    <externalId>false</externalId>
+    <formula>IF(Guarantor__c  = False  &amp;&amp;    DATEVALUE(CreatedDate  ) >=  DATE(2014,8,13) &amp;&amp; DATEVALUE(CreatedDate ) &lt; DATE(2015,9,15),
+CASE(Region__c ,
+'Atlanta', Listing__r.Market_Rent__c  * 2.5,
+'Charlotte', Listing__r.Market_Rent__c  * 3,
+'Chicago', Listing__r.Market_Rent__c  * 2.5,
+'Inland Empire', Listing__r.Market_Rent__c  * 3,
+'Jacksonville', Listing__r.Market_Rent__c  * 2.5,
+'Las Vegas', Listing__r.Market_Rent__c  * 2.5,
+'Los Angeles', Listing__r.Market_Rent__c  * 3,
+'Miami', Listing__r.Market_Rent__c  * 2.5,
+'Minneapolis', Listing__r.Market_Rent__c  * 2.5,
+'Orlando', Listing__r.Market_Rent__c  * 3,
+'Phoenix', Listing__r.Market_Rent__c  * 3,
+'Sacramento', Listing__r.Market_Rent__c  * 2.5,
+'Seattle', Listing__r.Market_Rent__c  * 2.5,
+'Tampa', Listing__r.Market_Rent__c  * 2.5,
+null),
+
+IF(Guarantor__c  = False   &amp;&amp; DATEVALUE(CreatedDate ) >= DATE(2015,9,15), Listing__r.Market_Rent__c  * 3 ,
+
+IF(Guarantor__c  = False  &amp;&amp;   DATEVALUE(CreatedDate  )  &lt;   DATE(2014,8,13), Listing__r.Market_Rent__c  * 2.5,
+ 
+Listing__r.Market_Rent__c  * 4) ))</formula>
+    <inlineHelpText>This amount depends on (1) whether Guarantor is True or False, (2) when the AppTrack record was created, and (3) the region.</inlineHelpText>
+    <label>Min. Monthly Income Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

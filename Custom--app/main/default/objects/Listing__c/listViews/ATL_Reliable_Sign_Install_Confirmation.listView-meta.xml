@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Reliable_Sign_Install_Confirmation</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>Sign_Scheduled__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Sign_Vendor__c</field>
+        <operation>contains</operation>
+        <value>Reliable</value>
+    </filters>
+    <filters>
+        <field>Sign_Scheduled__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Sign_Installed_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>ATL- Reliable Sign Install Confirmation</label>
+    <sharedTo>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

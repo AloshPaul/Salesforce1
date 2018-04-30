@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Net_Contract_Escrow__c</fullName>
+    <description>This field will not be on the page layout. It is on the prospect and pipeline page to be used in reports to assist with cash forecasting. (Added by JH on 1.26)</description>
+    <externalId>false</externalId>
+    <label>Net Contract - Escrow</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

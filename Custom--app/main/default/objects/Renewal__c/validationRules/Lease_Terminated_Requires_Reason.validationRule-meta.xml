@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Terminated_Requires_Reason</fullName>
+    <active>true</active>
+    <description>Lease Terminated (Eviction, Skip, Etc.) requires Early Termination Reason.</description>
+    <errorConditionFormula>Lease_End_Date__c >= DATE(2013,10,31) &amp;&amp; 
+ISPICKVAL( Renewal_Status__c ,"Lease Terminated (Eviction/Skip/Etc.)")&amp;&amp; 
+ISBLANK(TEXT(Pre_Term_Lease_Expiration_Reason__c ))&amp;&amp; 
+$Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Pre_Term_Lease_Expiration_Reason__c</errorDisplayField>
+    <errorMessage>Lease Terminated (Eviction, Skip, Etc.) requires Early Termination Reason.</errorMessage>
+</ValidationRule>

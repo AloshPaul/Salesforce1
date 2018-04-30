@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckEvictionCancellationRelatedData</fullName>
+    <active>true</active>
+    <description>If “Cancel Eviction” is checked then “Eviction Cancellation Contact”, “Ref Id”, “Eviction Attorney Law Firm” will be a required field</description>
+    <errorConditionFormula>AND(Cancel_Eviction__c,OR(ISBLANK( Eviction_Attorney_Ref_ID__c ),ISBLANK( Eviction_Attorney_Law_Firm__c ) ) )</errorConditionFormula>
+    <errorMessage>To cancel an Eviction, you must first enter Eviction Attorney Law Firm and Eviction Attorney Ref ID on the Property Tab and Eviction Cancellation Contact on the Attorney Account page.</errorMessage>
+</ValidationRule>

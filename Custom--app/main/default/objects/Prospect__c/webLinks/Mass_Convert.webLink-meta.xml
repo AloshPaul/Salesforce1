@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mass_Convert</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Mass Convert</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT("/soap/ajax/25.0/connection.js")}
+
+var records = {!GETRECORDIDS($ObjectType.Prospect__c)}; //grabs the Prospect records that the user is requesting to convert
+var updateRecords = []; //array for holding records that this code will ultimately update
+
+if (records[0] == null) { //if the button was clicked but there was no record convert
+	alert("Please select at least one record to convert."); //alert the user that they didn't make a selection 
+} else { //otherwise, there was a record selection
+	
+	//Alert message to notify user
+	alert("Only Prospect(s) not previously converted will have Pipeline records created.");
+	
+	//selected records
+	var selectedRecords = '';
+
+	for (var a=0; a&lt;records.length; a++) { //for all records
+		
+		//Check if this is first record
+		if(selectedRecords != '')
+			selectedRecords += ',' + records[a]; //set the Id of the selected record
+		else
+			selectedRecords = records[a]; //set the Id of the selected record
+	}
+	
+	//Redirect to next page 
+	location.href = '/apex/Mass_ProspectConversion?selectedRecords=' + selectedRecords + '&amp;retURL=' + location.href; 
+}</url>
+</WebLink>

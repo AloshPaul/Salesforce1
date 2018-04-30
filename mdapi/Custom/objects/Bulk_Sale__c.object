@@ -1,0 +1,2132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is used by our Acquisitions team to tie together all of the prospects/pipeline/portfolio records associated with a bulk sale and provide some macro details about the deal process.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Acquisitions_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Acquisitions Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Bulk_Deals1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>All_In_Basis_Gross_Yield__c</fullName>
+        <externalId>false</externalId>
+        <label>All-In Basis Gross Yield</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>All_In_Basis_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>All_In_Basis__c  /  Total_Square_Feet__c</formula>
+        <label>All-In Basis PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>All_In_Basis__c</fullName>
+        <externalId>false</externalId>
+        <label>All-In Basis</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>All_In_Basis_per_Asset__c</fullName>
+        <externalId>false</externalId>
+        <formula>All_In_Basis__c  /  Total_Properties__c</formula>
+        <label>All-In Basis per Asset</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BPO_V__c</fullName>
+        <externalId>false</externalId>
+        <label>BPO Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bulk_Deal_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Bulk Deal Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Bulk_Deal_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Bulk Deal Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Negotiation</fullName>
+                    <default>false</default>
+                    <label>Negotiation</label>
+                </value>
+                <value>
+                    <fullName>LOI</fullName>
+                    <default>false</default>
+                    <label>LOI</label>
+                </value>
+                <value>
+                    <fullName>PSA</fullName>
+                    <default>false</default>
+                    <label>PSA</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Dead</fullName>
+                    <default>false</default>
+                    <label>Dead</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bulk_Deal_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Bulk Deal Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Negotiating / Underwriting</fullName>
+                    <default>false</default>
+                    <label>Negotiating / Underwriting</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>LOI Pending</fullName>
+                    <default>false</default>
+                    <label>LOI Pending</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Signed LOI</fullName>
+                    <default>false</default>
+                    <label>Awaiting Signed LOI</label>
+                </value>
+                <value>
+                    <fullName>LOI Signed</fullName>
+                    <default>false</default>
+                    <label>LOI Signed</label>
+                </value>
+                <value>
+                    <fullName>LOI Approvals Pending</fullName>
+                    <default>false</default>
+                    <label>LOI Approvals Pending</label>
+                </value>
+                <value>
+                    <fullName>LOI Approved</fullName>
+                    <default>false</default>
+                    <label>LOI Approved</label>
+                </value>
+                <value>
+                    <fullName>Earnest Money Sent</fullName>
+                    <default>false</default>
+                    <label>Earnest Money Sent</label>
+                </value>
+                <value>
+                    <fullName>Reviewing PSA</fullName>
+                    <default>false</default>
+                    <label>Reviewing PSA</label>
+                </value>
+                <value>
+                    <fullName>PSA Approvals Pending</fullName>
+                    <default>false</default>
+                    <label>PSA Approvals Pending</label>
+                </value>
+                <value>
+                    <fullName>PSA Approved</fullName>
+                    <default>false</default>
+                    <label>PSA Approved</label>
+                </value>
+                <value>
+                    <fullName>Under Contract</fullName>
+                    <default>false</default>
+                    <label>Under Contract</label>
+                </value>
+                <value>
+                    <fullName>Due Diligence</fullName>
+                    <default>false</default>
+                    <label>Due Diligence</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>IH Deal Not Accepted</fullName>
+                    <default>false</default>
+                    <label>IH Deal Not Accepted</label>
+                </value>
+                <value>
+                    <fullName>IH Declined</fullName>
+                    <default>false</default>
+                    <label>IH Declined</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Dead</fullName>
+                    <default>false</default>
+                    <label>Dead</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bulk_Deal__c</fullName>
+        <displayFormat>Bulk Deal - {0000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Bulk Deal #</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Client_File_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Client File #</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closing_Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Date_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Date Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Wire_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Wire Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Confidentiality_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Confidentiality Agreement</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Date_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Received</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Deposit Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Diligence_Expiration_Date_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Diligence Expiration Date Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Due_Diligence_Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Diligence Expiration Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Earnest_Money_Escrow_Agent_or_Seller__c</fullName>
+        <externalId>false</externalId>
+        <label>Earnest Money w/ Escrow Agent or Seller?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Escrow Agent</fullName>
+                    <default>false</default>
+                    <label>Escrow Agent</label>
+                </value>
+                <value>
+                    <fullName>Seller</fullName>
+                    <default>false</default>
+                    <label>Seller</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Final_Bid_Due__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Bid Due</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Financing_Docs_Ready_Missing__c</fullName>
+        <externalId>false</externalId>
+        <label>Financing Docs Ready/Missing</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>IH2_Entity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>IH Entity</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Bulk Deals</relationshipLabel>
+        <relationshipName>Bulk_Deals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IH_Bulk_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>IH Bulk Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Initated_by__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is this a deal sourced directly by the region or did it originate through a corporate channel such as the website or the corporate bulk acquisition team?</inlineHelpText>
+        <label>Regional or Corporate?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Regional</fullName>
+                    <default>false</default>
+                    <label>Regional</label>
+                </value>
+                <value>
+                    <fullName>Corporate</fullName>
+                    <default>false</default>
+                    <label>Corporate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Initial_Offer_Amount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Amounts can be entered as 25K or 25M as shortcuts for thousands or millions.</inlineHelpText>
+        <label>Initial Offer Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Approved_by_Acquisitions__c</fullName>
+        <description>This field is used in the approval process and is populated via Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>LOI Approved by Acquisitions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Approved_by_Legal__c</fullName>
+        <description>This field is part of the approval process and is populated via Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>LOI Approved by Legal</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>LOI Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Execution_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>LOI Execution Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Rejected_by_Acquisitions__c</fullName>
+        <description>This field is used in the approval process.  It&apos;s updated via a Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>LOI Rejected by Acquisitions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Rejected_by_Legal__c</fullName>
+        <description>This field is used in the approval process.  It&apos;s updated via a Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>LOI Rejected by Legal</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LOI_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>LOI Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>false</default>
+                    <label>In Process</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Seller Response</fullName>
+                    <default>false</default>
+                    <label>Awaiting Seller Response</label>
+                </value>
+                <value>
+                    <fullName>Awaiting Seller Signature</fullName>
+                    <default>false</default>
+                    <label>Awaiting Seller Signature</label>
+                </value>
+                <value>
+                    <fullName>Executed</fullName>
+                    <default>false</default>
+                    <label>Executed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>List_Price__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Amounts can be entered as 25K or 25M as shortcuts for thousands or millions.</inlineHelpText>
+        <label>List  Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+                <value>
+                    <fullName>Charlotte</fullName>
+                    <default>false</default>
+                    <label>Charlotte</label>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                    <label>Chicago</label>
+                </value>
+                <value>
+                    <fullName>Dallas</fullName>
+                    <default>false</default>
+                    <label>Dallas</label>
+                </value>
+                <value>
+                    <fullName>Denver</fullName>
+                    <default>false</default>
+                    <label>Denver</label>
+                </value>
+                <value>
+                    <fullName>Houston</fullName>
+                    <default>false</default>
+                    <label>Houston</label>
+                </value>
+                <value>
+                    <fullName>Inland Empire</fullName>
+                    <default>false</default>
+                    <label>Inland Empire</label>
+                </value>
+                <value>
+                    <fullName>Jacksonville</fullName>
+                    <default>false</default>
+                    <label>Jacksonville</label>
+                </value>
+                <value>
+                    <fullName>Las Vegas</fullName>
+                    <default>false</default>
+                    <label>Las Vegas</label>
+                </value>
+                <value>
+                    <fullName>Los Angeles</fullName>
+                    <default>false</default>
+                    <label>Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>Miami</fullName>
+                    <default>false</default>
+                    <label>Miami</label>
+                </value>
+                <value>
+                    <fullName>Minneapolis</fullName>
+                    <default>false</default>
+                    <label>Minneapolis</label>
+                </value>
+                <value>
+                    <fullName>Nashville</fullName>
+                    <default>false</default>
+                    <label>Nashville</label>
+                </value>
+                <value>
+                    <fullName>Orlando</fullName>
+                    <default>false</default>
+                    <label>Orlando</label>
+                </value>
+                <value>
+                    <fullName>Phoenix</fullName>
+                    <default>false</default>
+                    <label>Phoenix</label>
+                </value>
+                <value>
+                    <fullName>Sacramento</fullName>
+                    <default>false</default>
+                    <label>Sacramento</label>
+                </value>
+                <value>
+                    <fullName>Seattle</fullName>
+                    <default>false</default>
+                    <label>Seattle</label>
+                </value>
+                <value>
+                    <fullName>Tampa</fullName>
+                    <default>false</default>
+                    <label>Tampa</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_Acquired__c</fullName>
+        <externalId>false</externalId>
+        <label># Acquired</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offered__c</fullName>
+        <externalId>false</externalId>
+        <label># Offered</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PSA_Approved_by_Acquisitions__c</fullName>
+        <description>This field is used in the approval process and is populated via Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>PSA Approved by Acquisitions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PSA_Approved_by_Legal__c</fullName>
+        <description>This field is used in the approval process and is populated via Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>PSA Approved by Legal</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PSA_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>PSA Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PSA_Execution_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>PSA Execution Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PSA_Rejected_by_Acquisitions__c</fullName>
+        <description>This field is used in the approval process.  It&apos;s updated via a Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>PSA Rejected by Acquisitions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PSA_Rejected_by_Legal__c</fullName>
+        <description>This field is used in the approval process.  It&apos;s updated via a Workflow Field Update.</description>
+        <externalId>false</externalId>
+        <label>PSA Rejected by Legal</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PSA_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>PSA Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sent to Buyer</fullName>
+                    <default>false</default>
+                    <label>Sent to Buyer</label>
+                </value>
+                <value>
+                    <fullName>Awaiting from Seller</fullName>
+                    <default>false</default>
+                    <label>Awaiting from Seller</label>
+                </value>
+                <value>
+                    <fullName>Executed</fullName>
+                    <default>false</default>
+                    <label>Executed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Percent_Occupied__c</fullName>
+        <externalId>false</externalId>
+        <label>% Occupied</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Pipeline_ListView_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Pipeline ListView Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pipeline_Listview__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Property_ListView_Id__c), &apos;&apos;, HYPERLINK(&apos;/a0m?div_filter=&amp;fcf=&apos; + LEFT(Pipeline_ListView_Id__c, 15), &apos;Click here&apos;, &apos;_blank&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pipeline Listview</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pipeline_View_URL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Click this link to mass report Pipeline properties.</inlineHelpText>
+        <label>Pipeline View URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Portfolio_View_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Portfolio View URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Preliminary_Bid_Due__c</fullName>
+        <externalId>false</externalId>
+        <label>Preliminary Bid Due</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Property_ListView_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Property ListView Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_ListView__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Property_ListView_Id__c), &apos;&apos;, HYPERLINK(&apos;/a0O?div_filter=&amp;fcf=&apos; + LEFT(Property_ListView_Id__c, 15), &apos;Click here&apos;, &apos;_blank&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property ListView</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_ListView_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect ListView Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_ListView__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Prospect_ListView_Id__c), &apos;&apos;, HYPERLINK(&apos;/a0n?div_filter=&amp;fcf=&apos; + LEFT(Prospect_ListView_Id__c, 15), &apos;Click here&apos;, &apos;_blank&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prospect ListView</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_View__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If you request upload assistance from the sf.com team, we will create a view that the region(s) can use to quickly filter on the related properties to accelerate the review/underwriting process.</inlineHelpText>
+        <label>Prospect View URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Price_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Purchase_Price__c  /  Total_Square_Feet__c</formula>
+        <label>Purchase Price PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Price_per_Asset__c</fullName>
+        <externalId>false</externalId>
+        <formula>Purchase_Price__c  /  Total_Properties__c</formula>
+        <label>Purchase Price per Asset</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+                <value>
+                    <fullName>Charlotte</fullName>
+                    <default>false</default>
+                    <label>Charlotte</label>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                    <label>Chicago</label>
+                </value>
+                <value>
+                    <fullName>Dallas</fullName>
+                    <default>false</default>
+                    <label>Dallas</label>
+                </value>
+                <value>
+                    <fullName>Denver</fullName>
+                    <default>false</default>
+                    <label>Denver</label>
+                </value>
+                <value>
+                    <fullName>Houston</fullName>
+                    <default>false</default>
+                    <label>Houston</label>
+                </value>
+                <value>
+                    <fullName>Inland Empire</fullName>
+                    <default>false</default>
+                    <label>Inland Empire</label>
+                </value>
+                <value>
+                    <fullName>Jacksonville</fullName>
+                    <default>false</default>
+                    <label>Jacksonville</label>
+                </value>
+                <value>
+                    <fullName>Las Vegas</fullName>
+                    <default>false</default>
+                    <label>Las Vegas</label>
+                </value>
+                <value>
+                    <fullName>Los Angeles</fullName>
+                    <default>false</default>
+                    <label>Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>Miami</fullName>
+                    <default>false</default>
+                    <label>Miami</label>
+                </value>
+                <value>
+                    <fullName>Minneapolis</fullName>
+                    <default>false</default>
+                    <label>Minneapolis</label>
+                </value>
+                <value>
+                    <fullName>Nashville</fullName>
+                    <default>false</default>
+                    <label>Nashville</label>
+                </value>
+                <value>
+                    <fullName>Orlando</fullName>
+                    <default>false</default>
+                    <label>Orlando</label>
+                </value>
+                <value>
+                    <fullName>Phoenix</fullName>
+                    <default>false</default>
+                    <label>Phoenix</label>
+                </value>
+                <value>
+                    <fullName>Sacramento</fullName>
+                    <default>false</default>
+                    <label>Sacramento</label>
+                </value>
+                <value>
+                    <fullName>Seattle</fullName>
+                    <default>false</default>
+                    <label>Seattle</label>
+                </value>
+                <value>
+                    <fullName>Tampa</fullName>
+                    <default>false</default>
+                    <label>Tampa</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Responsible_Party__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Responsible Party</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Bulk_Deals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Salesforce_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesforce Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending Upload</fullName>
+                    <default>false</default>
+                    <label>Pending Upload</label>
+                </value>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>Pipeline</fullName>
+                    <default>false</default>
+                    <label>Pipeline</label>
+                </value>
+                <value>
+                    <fullName>Portfolio</fullName>
+                    <default>false</default>
+                    <label>Portfolio</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Deal Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bank</fullName>
+                    <default>false</default>
+                    <label>Bank</label>
+                </value>
+                <value>
+                    <fullName>Broker</fullName>
+                    <default>false</default>
+                    <label>Broker</label>
+                </value>
+                <value>
+                    <fullName>Freddie Mac</fullName>
+                    <default>false</default>
+                    <label>Freddie Mac</label>
+                </value>
+                <value>
+                    <fullName>IH Website</fullName>
+                    <default>false</default>
+                    <label>IH Website</label>
+                </value>
+                <value>
+                    <fullName>Investor</fullName>
+                    <default>false</default>
+                    <label>Investor</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                    <label>Referral</label>
+                </value>
+                <value>
+                    <fullName>Servicer</fullName>
+                    <default>false</default>
+                    <label>Servicer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Special_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>States_Involved_in_Deal__c</fullName>
+        <externalId>false</externalId>
+        <label>State(s) Involved in Deal</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Submit_to_Seller_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date by which IH needs to respond if we want to buy.</inlineHelpText>
+        <label>Submit to Seller Deadline</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Title_Summaries_Ordered__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Summaries Ordered</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Seller Provides</fullName>
+                    <default>false</default>
+                    <label>Seller Provides</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Properties_All_Regions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total properties across all Bulk Regional Component records.</inlineHelpText>
+        <label>Total Properties all Regions</label>
+        <summarizedField>Bulk_Regional_Component__c.Properties__c</summarizedField>
+        <summaryForeignKey>Bulk_Regional_Component__c.Bulk_Deal__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Properties__c</fullName>
+        <externalId>false</externalId>
+        <label># Properties</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Square_Feet__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Square Feet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UW_Model_Distributed__c</fullName>
+        <externalId>false</externalId>
+        <label>UW Model Distributed</label>
+        <length>75</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UW_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>UW Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>false</default>
+                    <label>In Process</label>
+                </value>
+                <value>
+                    <fullName>Past Due</fullName>
+                    <default>false</default>
+                    <label>Past Due</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Upload_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will be checked by a member of the SF Team once the properties have been uploaded.  An email alert will be sent to the Bulk Deal Owner, Responsible Party, and Acquisitions Analyst.</inlineHelpText>
+        <label>Upload Complete</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Upload_Request_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Upload Request Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Upload_Request_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to indicate specific instructions, including critical timelines. The SF.com team will make best efforts to be responsive and upload the data within 4 business hours (CST) of receiving it, assuming it&apos;s in the correct format.</inlineHelpText>
+        <label>Upload Request Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Upload_Request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If you need help uploading properties, attach the template in Notes &amp; Attachments, save the record, and THEN check this box.  If you check this box and save it before attaching a file, then Chatter Salesforce Administrator after you attach the file.</inlineHelpText>
+        <label>Upload Request</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Value_of_Accepted_Offer__c</fullName>
+        <externalId>false</externalId>
+        <label>Value of Accepted Offer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Bulk Deal</label>
+    <listViews>
+        <fullName>A1_Deal_Overview</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Bulk_Deal_Stage__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Percent_Occupied__c</columns>
+        <columns>Purchase_Price__c</columns>
+        <columns>Purchase_Price_per_Asset__c</columns>
+        <columns>Purchase_Price_PSF__c</columns>
+        <columns>All_In_Basis__c</columns>
+        <columns>All_In_Basis_per_Asset__c</columns>
+        <columns>All_In_Basis_PSF__c</columns>
+        <columns>All_In_Basis_Gross_Yield__c</columns>
+        <columns>Responsible_Party__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initated_by__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </filters>
+        <label>A1 Deal Overview</label>
+    </listViews>
+    <listViews>
+        <fullName>A2_Accounting_View</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Source__c</columns>
+        <columns>Bulk_Deal_Stage__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Value_of_Accepted_Offer__c</columns>
+        <columns>Deposit_Amount__c</columns>
+        <columns>Deposit_Date__c</columns>
+        <columns>Closing_Balance__c</columns>
+        <columns>Closing_Wire_Date__c</columns>
+        <columns>Responsible_Party__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initated_by__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </filters>
+        <label>A2 Accounting View</label>
+    </listViews>
+    <listViews>
+        <fullName>A3_Legal_View</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Source__c</columns>
+        <columns>Bulk_Deal_Stage__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Confidentiality_Agreement__c</columns>
+        <columns>LOI_Status__c</columns>
+        <columns>LOI_Execution_Date__c</columns>
+        <columns>PSA_Status__c</columns>
+        <columns>PSA_Execution_Date__c</columns>
+        <columns>IH2_Entity__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initated_by__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </filters>
+        <label>A3 Legal View</label>
+    </listViews>
+    <listViews>
+        <fullName>A4_Due_Diligence_View</fullName>
+        <columns>NAME</columns>
+        <columns>Bulk_Deal_Stage__c</columns>
+        <columns>Responsible_Party__c</columns>
+        <columns>UW_Model_Distributed__c</columns>
+        <columns>UW_Status__c</columns>
+        <columns>Salesforce_Status__c</columns>
+        <columns>Preliminary_Bid_Due__c</columns>
+        <columns>Final_Bid_Due__c</columns>
+        <columns>Due_Diligence_Expiration_Date__c</columns>
+        <columns>Due_Diligence_Expiration_Date_Notes__c</columns>
+        <columns>Closing_Date__c</columns>
+        <columns>Closing_Date_Notes__c</columns>
+        <columns>Title_Summaries_Ordered__c</columns>
+        <columns>Financing_Docs_Ready_Missing__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initated_by__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </filters>
+        <label>A4 Due Diligence View</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Bulk_Deal__c</columns>
+        <columns>Region__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Purchase_Price__c</columns>
+        <columns>PSA_Approved_by_Acquisitions__c</columns>
+        <columns>PSA_Approved_by_Legal__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Corporate_Deals</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Source__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <columns>Purchase_Price__c</columns>
+        <columns>Number_Acquired__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initated_by__c</field>
+            <operation>equals</operation>
+            <value>Corporate</value>
+        </filters>
+        <label>Corporate Deals</label>
+    </listViews>
+    <listViews>
+        <fullName>Due_Diligence</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bulk_Deal_Status__c</field>
+            <operation>equals</operation>
+            <value>Due Diligence</value>
+        </filters>
+        <label>Due Diligence</label>
+    </listViews>
+    <listViews>
+        <fullName>IH_Deal_Not_Accepted</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bulk_Deal_Status__c</field>
+            <operation>equals</operation>
+            <value>IH Deal Not Accepted</value>
+        </filters>
+        <label>IH Deal Not Accepted</label>
+    </listViews>
+    <listViews>
+        <fullName>IH_Declined</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bulk_Deal_Status__c</field>
+            <operation>equals</operation>
+            <value>IH Declined</value>
+        </filters>
+        <label>IH Declined</label>
+    </listViews>
+    <listViews>
+        <fullName>In_Process</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bulk_Deal_Status__c</field>
+            <operation>equals</operation>
+            <value>In Process</value>
+        </filters>
+        <label>In Process</label>
+    </listViews>
+    <listViews>
+        <fullName>Investor_Deals</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Source__c</columns>
+        <columns>Region__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Source__c</field>
+            <operation>equals</operation>
+            <value>Investor</value>
+        </filters>
+        <label>Investor Deals</label>
+    </listViews>
+    <listViews>
+        <fullName>Joe_to_Approve</fullName>
+        <booleanFilter>(1 and 2) or (3 and 4)</booleanFilter>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Bulk_Deal__c</columns>
+        <columns>Region__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Stage__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>LOI_Approved_by_Acquisitions__c</columns>
+        <columns>LOI_Approved_by_Legal__c</columns>
+        <columns>PSA_Approved_by_Acquisitions__c</columns>
+        <columns>PSA_Approved_by_Legal__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LOI_Approved_by_Acquisitions__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>LOI_Approved_by_Legal__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>PSA_Approved_by_Acquisitions__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>PSA_Approved_by_Legal__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Joe to Approve</label>
+        <sharedTo>
+            <group>Legal_Executive</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Received_this_Week</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date_Received__c</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>Received this Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Regional_Deals</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Source__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <columns>Purchase_Price__c</columns>
+        <columns>Number_Acquired__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initated_by__c</field>
+            <operation>equals</operation>
+            <value>Regional</value>
+        </filters>
+        <label>Regional Deals</label>
+    </listViews>
+    <listViews>
+        <fullName>Submit_to_Seller_Deadline_This_Week</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Submit_to_Seller_Deadline__c</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>Submit to Seller Deadline This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Submit_to_Seller_Deadline_Today</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Submit_to_Seller_Deadline__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Submit to Seller Deadline Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Transaction_Completed</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bulk_Deal_Status__c</field>
+            <operation>equals</operation>
+            <value>Transaction Completed</value>
+        </filters>
+        <label>Transaction Completed</label>
+    </listViews>
+    <listViews>
+        <fullName>Underwriting</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bulk_Deal_Status__c</field>
+            <operation>equals</operation>
+            <value>Underwriting</value>
+        </filters>
+        <label>Underwriting</label>
+    </listViews>
+    <listViews>
+        <fullName>Upload_Request</fullName>
+        <columns>Bulk_Deal__c</columns>
+        <columns>NAME</columns>
+        <columns>Submit_to_Seller_Deadline__c</columns>
+        <columns>Total_Properties__c</columns>
+        <columns>Bulk_Deal_Status__c</columns>
+        <columns>Region__c</columns>
+        <columns>Upload_Request__c</columns>
+        <columns>Upload_Complete__c</columns>
+        <columns>List_Price__c</columns>
+        <columns>IH_Bulk_Value__c</columns>
+        <columns>Initial_Offer_Amount__c</columns>
+        <columns>Offered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Upload_Request__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Upload Request</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Bulk Deal Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Bulk Deals</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Bulk_Deal__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Properties__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Initial_Offer_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Bulk_Deal_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Initated_by__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Region__c</customTabListAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Total_Properties__c</searchFilterFields>
+        <searchFilterFields>Initated_by__c</searchFilterFields>
+        <searchFilterFields>Region__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchResultsAdditionalFields>Bulk_Deal__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Bulk_Deal_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Properties__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>List_Price__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Region__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Deposit_Amount_Requires_LOI_PSA_Approve</fullName>
+        <active>false</active>
+        <description>In order for a Deposit Amount to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</description>
+        <errorConditionFormula>AND
+( NOT( ISBLANK( Deposit_Amount__c )),
+OR(ISBLANK( LOI_Approved_by_Acquisitions__c ),
+ISBLANK(  LOI_Approved_by_Legal__c  ),
+ISBLANK(  PSA_Approved_by_Acquisitions__c  ),
+ISBLANK(  PSA_Approved_by_Legal__c )))</errorConditionFormula>
+        <errorDisplayField>Deposit_Amount__c</errorDisplayField>
+        <errorMessage>In order for a Deposit Amount to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Wire_Date_Requires_LOI_PSA_Approve</fullName>
+        <active>false</active>
+        <description>In order for a Closing Wire Date to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</description>
+        <errorConditionFormula>AND
+( NOT( ISBLANK( Closing_Wire_Date__c )),
+OR(ISBLANK( LOI_Approved_by_Acquisitions__c ),
+ISBLANK(  LOI_Approved_by_Legal__c  ),
+ISBLANK(  PSA_Approved_by_Acquisitions__c  ),
+ISBLANK(  PSA_Approved_by_Legal__c )))</errorConditionFormula>
+        <errorDisplayField>Closing_Wire_Date__c</errorDisplayField>
+        <errorMessage>In order for a Closing Wire Date to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Bid_List</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Bid List</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000001e6oB?pv0={!Bulk_Sale__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Bulk_Deal_Report</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Bulk Deal Report</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000001e6oA</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Bulk_Upload_Template</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Bulk Upload Template</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/069E0000000OFDG</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_List_View</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create List View</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/ListViewCreator?bulkDealId={!Bulk_Sale__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Dead_Bulk_Deals_with_Active_Pipelines</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Dead Bulk Deals with Active Pipelines</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000002LPGM</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Dead_Bulk_Deals_with_Open_Prospects</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Dead Bulk Deals with Open Prospects</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000002LPGR</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Pipelines_for_this_Bulk_Deal</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Pipelines for this Bulk Deal</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000001dlRH?pv0={!Bulk_Sale__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Portfolios_for_this_Bulk_Deal</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Portfolios for this Bulk Deal</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000001dlRC?pv0={!Bulk_Sale__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Prospects_for_this_Bulk_Deal</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Prospects for this Bulk Deal</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000001dlRR?pv0={!Bulk_Sale__c.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRN_Number_is_required</fullName>
+    <active>true</active>
+    <description>IRN Number is required for certain values</description>
+    <errorConditionFormula>if(
+	AND(
+		 AND(ISBLANK( IRN_number__c ), OR(ISBLANK( Invoice_Number__c ), ISBLANK( Vendor_ID__c ))),
+                  
+		OR(
+			AND(
+				TEXT(Request_Area__c) = 'ePM ( Invoice processing )',
+				OR(
+					TEXT(Request_Type__c) = 'Coding', TEXT(Request_Type__c) = 'Payment Status', 
+					TEXT(Request_Type__c) = 'Invoice routing'
+				)
+			),
+			AND(
+				TEXT(Request_Area__c) = 'ePM -Technical',
+				OR(
+					TEXT(Request_Type__c) = 'Unable to View Invoice image',
+					TEXT(Request_Type__c) = 'Unable to approve invoices'
+				)
+			)
+		)
+	), true, false
+)</errorConditionFormula>
+    <errorDisplayField>IRN_number__c</errorDisplayField>
+    <errorMessage>IRN Number Or Invoice Number  AND Vendor ID is required</errorMessage>
+</ValidationRule>

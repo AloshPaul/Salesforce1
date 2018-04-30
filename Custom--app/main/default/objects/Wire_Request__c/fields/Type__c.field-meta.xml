@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EM</fullName>
+                <default>false</default>
+                <label>EM</label>
+            </value>
+            <value>
+                <fullName>EM - Cashier's Check</fullName>
+                <default>false</default>
+                <label>EM - Cashier's Check</label>
+            </value>
+            <value>
+                <fullName>COE</fullName>
+                <default>false</default>
+                <label>COE</label>
+            </value>
+            <value>
+                <fullName>Wire Transfer Fee</fullName>
+                <default>false</default>
+                <label>Wire Transfer Fee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

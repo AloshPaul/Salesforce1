@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIP_Leasing_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>TIP Leasing Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Lease Negotiations Ended Unsuccessfully</fullName>
+                <default>false</default>
+                <label>New Lease Negotiations Ended Unsuccessfully</label>
+            </value>
+            <value>
+                <fullName>New Lease Negotiations Underway</fullName>
+                <default>false</default>
+                <label>New Lease Negotiations Underway</label>
+            </value>
+            <value>
+                <fullName>New Lease Submitted for Underwriting</fullName>
+                <default>false</default>
+                <label>New Lease Submitted for Underwriting</label>
+            </value>
+            <value>
+                <fullName>New Lease - Underwriting Approved</fullName>
+                <default>false</default>
+                <label>New Lease - Underwriting Approved</label>
+            </value>
+            <value>
+                <fullName>New Lease - Underwriting Rejected</fullName>
+                <default>false</default>
+                <label>New Lease - Underwriting Rejected</label>
+            </value>
+            <value>
+                <fullName>Prior Lease Rejected</fullName>
+                <default>false</default>
+                <label>Prior Lease Rejected</label>
+            </value>
+            <value>
+                <fullName>Prior Lease Submitted for Underwriting</fullName>
+                <default>false</default>
+                <label>Prior Lease Submitted for Underwriting</label>
+            </value>
+            <value>
+                <fullName>TIP Lease Negotiations Aborted</fullName>
+                <default>false</default>
+                <label>TIP Lease Negotiations Aborted</label>
+            </value>
+            <value>
+                <fullName>TIP Lease Signed</fullName>
+                <default>false</default>
+                <label>TIP Lease Signed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

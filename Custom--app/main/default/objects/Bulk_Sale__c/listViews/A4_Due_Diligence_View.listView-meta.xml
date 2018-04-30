@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A4_Due_Diligence_View</fullName>
+    <columns>NAME</columns>
+    <columns>Bulk_Deal_Stage__c</columns>
+    <columns>Responsible_Party__c</columns>
+    <columns>UW_Model_Distributed__c</columns>
+    <columns>UW_Status__c</columns>
+    <columns>Salesforce_Status__c</columns>
+    <columns>Preliminary_Bid_Due__c</columns>
+    <columns>Final_Bid_Due__c</columns>
+    <columns>Due_Diligence_Expiration_Date__c</columns>
+    <columns>Due_Diligence_Expiration_Date_Notes__c</columns>
+    <columns>Closing_Date__c</columns>
+    <columns>Closing_Date_Notes__c</columns>
+    <columns>Title_Summaries_Ordered__c</columns>
+    <columns>Financing_Docs_Ready_Missing__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Initated_by__c</field>
+        <operation>equals</operation>
+        <value>Corporate</value>
+    </filters>
+    <label>A4 Due Diligence View</label>
+</ListView>

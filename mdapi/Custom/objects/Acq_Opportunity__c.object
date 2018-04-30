@@ -1,0 +1,2437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Opportunity_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Opportunity_Layout</fullName>
+        <fields>Complete_address__c</fields>
+        <fields>APN__c</fields>
+        <fields>Broker__c</fields>
+        <label>Opportunity Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Opportunities for acquisition teams which are created by broker.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>true</enableDivisions>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>APN__c</fullName>
+        <description>Assessor&apos;s Parcel Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assessor&apos;s Parcel Number</inlineHelpText>
+        <label>APN</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accepted_Contract_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted Contract Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Accepted_Contract_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted Contract Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Address__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Baths__c</fullName>
+        <externalId>false</externalId>
+        <label>Baths</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bedrooms__c</fullName>
+        <externalId>false</externalId>
+        <label>Bedrooms</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bid_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer Type (Bid Type)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard Sale</fullName>
+                    <default>true</default>
+                    <label>Standard Sale</label>
+                </value>
+                <value>
+                    <fullName>REO</fullName>
+                    <default>false</default>
+                    <label>REO</label>
+                </value>
+                <value>
+                    <fullName>Short Sale</fullName>
+                    <default>false</default>
+                    <label>Short Sale</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Broker_Annual_Rent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Monthly_Rent__c *12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Annual Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Cap_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_PF_NOI__c /  Broker_Cost_Basis__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Cap Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Closing_Title_Fees_Est__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Closing/Title Fees Est.</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Comps__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Market Value Comps</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Cont_Exp_SSA__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*(( Broker_Total_Revenue__c *  Market__r.Control_Pool_Exp__c) +  Market__r.Direct_SSA_Per_Home__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Cont Exp &amp; SSA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Contract_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Contract Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Cost_Basis__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Offer_Price__c +  Broker_Rehab__c + Broker_Closing_Title_Fees_Est__c + Market__r.Capitalized_Acq_Costs__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Cost Basis</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Cost_Basis_as_of_Market_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Cost_Basis__c /  Broker_Market_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Cost Basis as % of Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Effective_Gross_Income__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Total_Revenue__c +  Broker_Fixed_Expenses__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Effective Gross Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Effective_Gross_Yield__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Effective_Gross_Income__c /  Broker_Cost_Basis__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Effective Gross Yield</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Fixed_Expenses__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*( Broker_Property_Taxes__c + ( Broker_Monthly_HOA_Dues__c *12) +  Market__r.Insurance_Per_Home__c  +  Pool_Expense__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Fixed Expenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Gross_Yield__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Annual_Rent__c /  Broker_Cost_Basis__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Gross Yield</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Market_Value_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Market Value Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Market_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Monthly_HOA_Dues__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Monthly HOA Dues</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Monthly_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Monthly Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_OI_Conc_BD__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Rental_Income__c *  Market__r.OI_Conc_BD_as_of_RI__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker OI/Conc/BD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Offer_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker to IH Offer Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Offer_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Offer Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Offer_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Requested Offer Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Offer_Status__c</fullName>
+        <description>Offer status</description>
+        <externalId>false</externalId>
+        <label>Broker Offer Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IH Director Approved</fullName>
+                    <default>false</default>
+                    <label>IH Director Approved</label>
+                </value>
+                <value>
+                    <fullName>Submitted to Seller</fullName>
+                    <default>false</default>
+                    <label>Submitted to Seller</label>
+                </value>
+                <value>
+                    <fullName>Counteroffer</fullName>
+                    <default>false</default>
+                    <label>Counteroffer</label>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>No Response</fullName>
+                    <default>false</default>
+                    <label>No Response</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Broker_PF_NOI__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Effective_Gross_Income__c +  Broker_Cont_Exp_SSA__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker PF NOI</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Property_Taxes__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Annual Property Taxes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Rehab_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Rehab Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Rehab</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Rent_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Rent Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Rent_Comps__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Rent Comps</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Rental_Income__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Annual_Rent__c +  Broker_Vacancy_Loss__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Rental Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Total_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>Broker_Rental_Income__c +  Broker_OI_Conc_BD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Total Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Vacancy_Loss__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*(  Broker_Annual_Rent__c * (1-  Market__r.Occupancy__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Vacancy Loss</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Broker__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Broker</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bulk_Deal__c</fullName>
+        <externalId>false</externalId>
+        <label>Bulk Deal</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSV_Upload__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CSV Upload</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cancel_Alert__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;&lt;html&gt;&lt;body&gt;&lt;div style=&quot;color: red;&quot;&gt;&lt;font size=&quot;4&quot;&gt;&lt;b&gt;Canceling this record will cancel all associated records and it cannot be re-opened&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&apos;</formula>
+        <label>Cancel Alert</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Claim_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Claim Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Complete_address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Street__c &amp;&apos;, &apos;&amp;  Address__r.City__c &amp;&apos;, &apos;&amp;  IF(Address__r.State__r.Name = &apos;&apos;, &apos;&apos;, Address__r.State__r.Name &amp;&apos;, &apos;)  &amp; Address__r.Zip__c</formula>
+        <label>Complete address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>County__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.County__c</formula>
+        <label>County</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_List_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Current List Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Occupancy_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Occupancy Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Occupied</fullName>
+                    <default>false</default>
+                    <label>Occupied</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Vacant</fullName>
+                    <default>false</default>
+                    <label>Vacant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Director_IMG_Offer_Approval_Date__c</fullName>
+        <description>To be populated automatically when offer is made</description>
+        <externalId>false</externalId>
+        <label>Director IMG Offer Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Company</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Escrow_Expected_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Expected Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HOA_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HOA__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HVAC_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>HVAC Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AC</fullName>
+                    <default>false</default>
+                    <label>AC</label>
+                </value>
+                <value>
+                    <fullName>Evap</fullName>
+                    <default>false</default>
+                    <label>Evap</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                    <label>Others</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IMG_Analyst__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>IMG Analyst</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acq_Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IMG_Director__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>IMG Director</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acq_Opportunities1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Inspection_Period_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Inspection Period End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Listing_Agent_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Listing Agent Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Listing_Agent__c</fullName>
+        <externalId>false</externalId>
+        <label>Listing Agent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Listing_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Listing Activity Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Listing_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Listing Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Listing_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Listing Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MLS</fullName>
+                    <default>false</default>
+                    <label>MLS</label>
+                </value>
+                <value>
+                    <fullName>Off-Market</fullName>
+                    <default>false</default>
+                    <label>Off-Market</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Listing_scenario__c</fullName>
+        <externalId>false</externalId>
+        <label>Listing Activity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Listing</fullName>
+                    <default>true</default>
+                    <label>New Listing</label>
+                </value>
+                <value>
+                    <fullName>Price Change</fullName>
+                    <default>false</default>
+                    <label>Price Change</label>
+                </value>
+                <value>
+                    <fullName>Back to Market</fullName>
+                    <default>false</default>
+                    <label>Back to Market</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lot_Sq_Ft__c</fullName>
+        <externalId>false</externalId>
+        <label>Lot Sq/Ft</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MLS__c</fullName>
+        <description>Multiple Listing Service #</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Multiple Listing Service #</inlineHelpText>
+        <label>MLS</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market2__c</fullName>
+        <description>This is entered to accommodate the downstream requirements</description>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <referenceTo>Region__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Occupancy_Status_Acquisition__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupancy Status @ Acquisition</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Vacant</fullName>
+                    <default>true</default>
+                    <label>Vacant</label>
+                </value>
+                <value>
+                    <fullName>Occupied</fullName>
+                    <default>false</default>
+                    <label>Occupied</label>
+                </value>
+                <value>
+                    <fullName>Purchased Rented</fullName>
+                    <default>false</default>
+                    <label>Purchased Rented</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Occupancy_Status_Diligence__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupancy Status @ Diligence</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Seller Occupied</fullName>
+                    <default>true</default>
+                    <label>Seller Occupied</label>
+                </value>
+                <value>
+                    <fullName>Tenant Occupied</fullName>
+                    <default>false</default>
+                    <label>Tenant Occupied</label>
+                </value>
+                <value>
+                    <fullName>Vacant</fullName>
+                    <default>false</default>
+                    <label>Vacant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Offer_Accepted_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Broker Offer Accepted Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Offer_Price__c</fullName>
+        <description>To be populated automatically when offer is made</description>
+        <externalId>false</externalId>
+        <label>Approved Offer Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Original_Listing_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Listing Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Parking__c</fullName>
+        <externalId>false</externalId>
+        <label>Parking</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>2 Car Garage</fullName>
+                    <default>true</default>
+                    <label>2 Car Garage</label>
+                </value>
+                <value>
+                    <fullName>1 Car Garage</fullName>
+                    <default>false</default>
+                    <label>1 Car Garage</label>
+                </value>
+                <value>
+                    <fullName>3 Car Garage</fullName>
+                    <default>false</default>
+                    <label>3 Car Garage</label>
+                </value>
+                <value>
+                    <fullName>4+ Car Garage</fullName>
+                    <default>false</default>
+                    <label>4+ Car Garage</label>
+                </value>
+                <value>
+                    <fullName>1 Car Carport</fullName>
+                    <default>false</default>
+                    <label>1 Car Carport</label>
+                </value>
+                <value>
+                    <fullName>2 Car Carport</fullName>
+                    <default>false</default>
+                    <label>2 Car Carport</label>
+                </value>
+                <value>
+                    <fullName>3 Car Carport</fullName>
+                    <default>false</default>
+                    <label>3 Car Carport</label>
+                </value>
+                <value>
+                    <fullName>1 Car Driveway</fullName>
+                    <default>false</default>
+                    <label>1 Car Driveway</label>
+                </value>
+                <value>
+                    <fullName>2 Car Driveway</fullName>
+                    <default>false</default>
+                    <label>2 Car Driveway</label>
+                </value>
+                <value>
+                    <fullName>Slab</fullName>
+                    <default>false</default>
+                    <label>Slab</label>
+                </value>
+                <value>
+                    <fullName>No Parking</fullName>
+                    <default>false</default>
+                    <label>No Parking</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Pool_Expense__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Pool__c == true, Market__r.Pool_Exp_Per_Home__c ,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pool Expense</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pool__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pool</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Property_Access_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Access Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Property_Access_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Access Contact Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Access_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Access Contact Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Property_Access_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Access Contact Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.City__c</formula>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Claimed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Whether the property is claimed or not ?</description>
+        <externalId>false</externalId>
+        <label>Property Claimed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Property_Created__c</fullName>
+        <description>Creation time of the property</description>
+        <externalId>false</externalId>
+        <label>Property Created</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.State__r.Name</formula>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street_Address_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Street Address Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Street__c</formula>
+        <label>Property Street Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Single Family Home</fullName>
+                    <default>true</default>
+                    <label>Single Family Home</label>
+                </value>
+                <value>
+                    <fullName>Townhome</fullName>
+                    <default>false</default>
+                    <label>Townhome</label>
+                </value>
+                <value>
+                    <fullName>Condo</fullName>
+                    <default>false</default>
+                    <label>Condo</label>
+                </value>
+                <value>
+                    <fullName>Duplex</fullName>
+                    <default>false</default>
+                    <label>Duplex</label>
+                </value>
+                <value>
+                    <fullName>Triplex</fullName>
+                    <default>false</default>
+                    <label>Triplex</label>
+                </value>
+                <value>
+                    <fullName>Quad</fullName>
+                    <default>false</default>
+                    <label>Quad</label>
+                </value>
+                <value>
+                    <fullName>Vacant Land</fullName>
+                    <default>false</default>
+                    <label>Vacant Land</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Zip__c</formula>
+        <label>Property Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchasing_Entity__c</fullName>
+        <externalId>false</externalId>
+        <formula>Market__r.Purchasing_Entity__c</formula>
+        <label>Purchasing Entity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Lock__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Record Lock</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Roof_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Roof Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Shingle</fullName>
+                    <default>true</default>
+                    <label>Shingle</label>
+                </value>
+                <value>
+                    <fullName>Tile</fullName>
+                    <default>false</default>
+                    <label>Tile</label>
+                </value>
+                <value>
+                    <fullName>Concrete</fullName>
+                    <default>false</default>
+                    <label>Concrete</label>
+                </value>
+                <value>
+                    <fullName>Metal</fullName>
+                    <default>false</default>
+                    <label>Metal</label>
+                </value>
+                <value>
+                    <fullName>Slate</fullName>
+                    <default>false</default>
+                    <label>Slate</label>
+                </value>
+                <value>
+                    <fullName>Wood</fullName>
+                    <default>false</default>
+                    <label>Wood</label>
+                </value>
+                <value>
+                    <fullName>Asphalt</fullName>
+                    <default>false</default>
+                    <label>Asphalt</label>
+                </value>
+                <value>
+                    <fullName>Built-up</fullName>
+                    <default>false</default>
+                    <label>Built-up</label>
+                </value>
+                <value>
+                    <fullName>Hot Mopped</fullName>
+                    <default>false</default>
+                    <label>Hot Mopped</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Seller_Counteroffer_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Seller Counter Offer Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Square_Feet__c</fullName>
+        <externalId>false</externalId>
+        <label>Square Feet</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>Auto calculated based on what stage the opportunity moves to.</description>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                    <label>Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>Pipeline</fullName>
+                    <default>false</default>
+                    <label>Pipeline</label>
+                </value>
+                <value>
+                    <fullName>Portfolio</fullName>
+                    <default>false</default>
+                    <label>Portfolio</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subdivision__c</fullName>
+        <externalId>false</externalId>
+        <label>Subdivision</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submarket__c</fullName>
+        <description>Auto filled based on Zip code entered</description>
+        <externalId>false</externalId>
+        <label>Submarket</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_to_IH_Underwriting_Date__c</fullName>
+        <description>Date when it is submitted to IH underwriting</description>
+        <externalId>false</externalId>
+        <label>Submitted to IH Underwriting Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Unique_APN__c</fullName>
+        <description>Unique APN</description>
+        <externalId>false</externalId>
+        <formula>APN__c &amp; &apos;-&apos; &amp; Address__r.County__c &amp; &apos;-&apos; &amp; Address__r.State__r.Name</formula>
+        <label>Unique APN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Unit__c</formula>
+        <label>Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year_Built__c</fullName>
+        <externalId>false</externalId>
+        <label>Year Built</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>doSubmitForUnderwriting__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doSubmitForUnderwriting</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>status__c</fullName>
+        <description>Status for opportunities</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Claimed</fullName>
+                    <default>false</default>
+                    <label>Claimed</label>
+                </value>
+                <value>
+                    <fullName>Working</fullName>
+                    <default>false</default>
+                    <label>Working</label>
+                </value>
+                <value>
+                    <fullName>Underwriting Complete</fullName>
+                    <default>false</default>
+                    <label>Underwriting Complete</label>
+                </value>
+                <value>
+                    <fullName>Submit for Underwriting</fullName>
+                    <default>false</default>
+                    <label>Submit for Underwriting</label>
+                </value>
+                <value>
+                    <fullName>Dead</fullName>
+                    <default>false</default>
+                    <label>Dead</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Acq Opportunity</label>
+    <listViews>
+        <fullName>My_Opportunities</fullName>
+        <columns>NAME</columns>
+        <columns>APN__c</columns>
+        <columns>Complete_address__c</columns>
+        <columns>status__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Opportunities</label>
+    </listViews>
+    <nameField>
+        <displayFormat>OPTY-{00000}</displayFormat>
+        <label>Opportunity ID</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Acq Opportunities</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>After_Submit_for_Underwriting</fullName>
+        <active>true</active>
+        <label>After Submit for Underwriting</label>
+        <picklistValues>
+            <picklist>Bid_Type__c</picklist>
+            <values>
+                <fullName>REO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Sale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Sale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Broker_Offer_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counteroffer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IH Director Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted to Seller</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Occupancy_Status__c</picklist>
+            <values>
+                <fullName>Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HOA__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HVAC_Type__c</picklist>
+            <values>
+                <fullName>AC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evap</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Listing_Source__c</picklist>
+            <values>
+                <fullName>MLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off-Market</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Listing_scenario__c</picklist>
+            <values>
+                <fullName>Back to Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Listing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupancy_Status_Acquisition__c</picklist>
+            <values>
+                <fullName>Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupancy_Status_Diligence__c</picklist>
+            <values>
+                <fullName>Seller Occupied</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Tenant Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Parking__c</picklist>
+            <values>
+                <fullName>1 Car Carport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Car Carport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Car Carport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2B Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Type__c</picklist>
+            <values>
+                <fullName>Condo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Family Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant Land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Roof_Type__c</picklist>
+            <values>
+                <fullName>Asphalt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Built-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Concrete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot Mopped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shingle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wood</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portfolio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>status__c</picklist>
+            <values>
+                <fullName>Claimed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submit for Underwriting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Before_Submit_To_Underwriting</fullName>
+        <active>true</active>
+        <label>Before Submit To Underwriting</label>
+        <picklistValues>
+            <picklist>Bid_Type__c</picklist>
+            <values>
+                <fullName>REO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Short Sale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard Sale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Broker_Offer_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counteroffer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted to Seller</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Occupancy_Status__c</picklist>
+            <values>
+                <fullName>Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HOA__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HVAC_Type__c</picklist>
+            <values>
+                <fullName>AC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evap</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Listing_Source__c</picklist>
+            <values>
+                <fullName>MLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Off-Market</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Listing_scenario__c</picklist>
+            <values>
+                <fullName>Back to Market</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Listing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupancy_Status_Acquisition__c</picklist>
+            <values>
+                <fullName>Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupancy_Status_Diligence__c</picklist>
+            <values>
+                <fullName>Seller Occupied</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Tenant Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Parking__c</picklist>
+            <values>
+                <fullName>1 Car Carport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Car Carport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Car Carport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2B Car Garage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slab</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Type__c</picklist>
+            <values>
+                <fullName>Condo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single Family Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townhome</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant Land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Roof_Type__c</picklist>
+            <values>
+                <fullName>Asphalt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Built-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Concrete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot Mopped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shingle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wood</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>status__c</picklist>
+            <values>
+                <fullName>Claimed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submit for Underwriting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Underwriting Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Working</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchResultsAdditionalFields>APN__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Address__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Broker_Offer_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Accepted_Contract_Price</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+					NOT(ISNULL(Offer_Accepted_Date__c)),
+			 	NOT(ISNULL(PRIORVALUE( Accepted_Contract_Price__c))), 
+					ISCHANGED( Accepted_Contract_Price__c )
+					)</errorConditionFormula>
+        <errorMessage>Cannot change the accepted contract price after its approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Complete_Underwriting_Estimate</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+				OR( 
+        ISBLANK( Broker_Market_Value__c ),
+    				ISBLANK( Broker_Monthly_Rent__c ),
+    				ISBLANK( Broker_Rehab__c ),
+    				ISBLANK( Broker_Property_Taxes__c ), 
+      		ISBLANK( Broker_Closing_Title_Fees_Est__c )
+    ),
+				OR( 
+        ISPICKVAL(status__c, &apos;Submit For Underwriting&apos;), 
+        doSubmitForUnderwriting__c = true 
+    ) 
+)</errorConditionFormula>
+        <errorMessage>The underwriting estimates need to be completed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HOA_name_cannot_be_empty</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+				ISPICKVAL(HOA__c,&apos;Yes&apos;),
+				ISBLANK(HOA_Name__c) 
+)</errorConditionFormula>
+        <errorMessage>HOA name cannot be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Property_details</fullName>
+        <active>true</active>
+        <errorConditionFormula>And(
+				OR( 
+        ISPICKVAL(Bid_Type__c, &apos;&apos;),
+    				ISBLANK(  Year_Built__c  ), 
+        ISBLANK( Bedrooms__c ), 
+        ISBLANK( Baths__c  ), 
+        ISBLANK( Square_Feet__c )			
+    ),
+    OR(
+        ISPICKVAL(status__c, &apos;Underwriting Complete&apos;), 
+					   doSubmitForUnderwriting__c = true
+				)
+)</errorConditionFormula>
+        <errorMessage>The property details need to be completed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Lock</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+				 NOT(ISCHANGED(Record_Lock__c)),
+		    	Record_Lock__c	= true
+				
+			)</errorConditionFormula>
+        <errorMessage>Cannot edit a rejected Opportunity</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SellerCounterOffer</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+  ISPICKVAL(Broker_Offer_Status__c, &apos;Counteroffer&apos;), 
+  OR( 
+  ISNULL(Seller_Counteroffer_Price__c) 
+  ) 
+)</errorConditionFormula>
+        <errorMessage>Please fill the Seller Counteroffer Price</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Should_be_IH_Approved</fullName>
+        <active>true</active>
+        <description>Status should be submit for underwriting.
+Broker offer status cannot be changed.</description>
+        <errorConditionFormula>AND(
+    ISPICKVAL(status__c, &apos;Submit for Underwriting&apos;),
+    ISNULL(Offer_Price__c),
+     OR(
+					    ISPICKVAL(Broker_Offer_Status__c, &apos;Submitted to Seller&apos;),
+									ISPICKVAL(Broker_Offer_Status__c, &apos;Counteroffer&apos;),
+									ISPICKVAL(Broker_Offer_Status__c, &apos;Accepted&apos;)
+					) 				
+)</errorConditionFormula>
+        <errorMessage>Cannot change the status unless the offer is approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Submit_for_Underwriting</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+        ISBLANK(  Broker_Offer_Price__c  ),
+        ISPICKVAL(status__c, &apos;Submit For Underwriting&apos;)
+)</errorConditionFormula>
+        <errorDisplayField>Broker_Offer_Price__c</errorDisplayField>
+        <errorMessage>Broker requested offer amount should be entered.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_rule_for_square_feet</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(Square_Feet__c &gt;9999 || Square_Feet__c &lt; 100)</errorConditionFormula>
+        <errorMessage>Square feet should range between 100 and 9999</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_rule_for_year</fullName>
+        <active>true</active>
+        <description>The Year should be in between 1800 and 2100</description>
+        <errorConditionFormula>OR(VALUE(Year_Built__c ) &lt; 1800 ||VALUE(Year_Built__c ) &gt; 2100)</errorConditionFormula>
+        <errorMessage>The year built should range between 1800 and 2100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>requiredField_Picklist</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(Broker_Offer_Status__c, &apos;Accepted&apos;), 
+OR( 
+    ISNULL(Accepted_Contract_Price__c), 
+    ISNULL(Accepted_Contract_Date__c), 
+    ISBLANK(Broker_Contract_Comments__c),
+    ISNULL(Escrow_Amount__c)
+
+) 
+)</errorConditionFormula>
+        <errorMessage>Please fill in the IH Offer approval details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>tocheckBrokerOfferPrice</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+   
+     Accepted_Contract_Price__c &gt; Offer_Price__c,
+    OR(ISPICKVAL(Broker_Offer_Status__c, &apos;Accepted&apos;))
+
+)</errorConditionFormula>
+        <errorMessage>The accepted contract price should not be greater than the approved offer price</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

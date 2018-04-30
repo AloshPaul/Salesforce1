@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percent_Common_Element__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Represents the percent ownership in the common elements for a condo property.</inlineHelpText>
+    <label>% Common Element</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>6</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

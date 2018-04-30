@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Proactive = called in by Resident, neighbor, etc.
+Reactive = Assigned by IH (ie. Preventative, etc.)</inlineHelpText>
+    <label>Service Request Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Proactive</fullName>
+                <default>false</default>
+                <label>Proactive</label>
+            </value>
+            <value>
+                <fullName>Reactive</fullName>
+                <default>true</default>
+                <label>Reactive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

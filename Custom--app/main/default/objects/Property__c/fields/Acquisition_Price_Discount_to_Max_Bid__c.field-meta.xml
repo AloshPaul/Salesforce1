@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acquisition_Price_Discount_to_Max_Bid__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Max_Bid_Price__c > 0, 1-(Actual_Acquisition_Price__c/Max_Bid_Price__c), null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Acquisition Price Discount to Max Bid</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

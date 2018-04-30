@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Finalized_requires_GeneralContractor</fullName>
+    <active>true</active>
+    <description>PTL Finalized requires General Contractor</description>
+    <errorConditionFormula>Send_PTL_to_GC__c  = TRUE
+&amp;&amp;
+General_Contractor__c =null</errorConditionFormula>
+    <errorMessage>PTL Finalized requires General Contractor.</errorMessage>
+</ValidationRule>

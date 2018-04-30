@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_2_Days</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>Description__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Last_Modified_Date_SF_Admin__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Resolution_Details__c</columns>
+    <columns>Rent_Issue__c</columns>
+    <columns>Related_SIR__c</columns>
+    <columns>Related_SIR_Status__c</columns>
+    <columns>Working_Notes_Internal_Support_Team__c</columns>
+    <columns>Is_VIP__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Closed_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:2</value>
+    </filters>
+    <filters>
+        <field>Closed_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:2</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Concierge__c.SF_Request</value>
+    </filters>
+    <label>SF Tickets Last 2 Days</label>
+    <sharedTo>
+        <group>SF_Support</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

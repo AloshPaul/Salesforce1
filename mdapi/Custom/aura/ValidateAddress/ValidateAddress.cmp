@@ -1,0 +1,57 @@
+<aura:component implements="flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:lightningQuickActionWithoutHeader" 
+                access="global" controller="ValidateAddressApexController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="validated" type="Address__c" />
+    <aura:attribute name="broker" type="Acq_Prospect__c" />
+    
+    <div class="slds-page-header" role="banner">
+        <h2 class="slds-page-header__title slds-m-right--small slds-truncate slds-align_absolute-center">Validate Address</h2>
+        <p class="slds-m-right--small slds-truncate slds-align_absolute-center">Choose an address</p>
+    </div>
+    
+    <div class="changeRecordTypeRow">
+        <div class="slds-form-element__control">
+            <div class="changeRecordTypeLeftColumn">
+            <span class="slds-radio">
+                <input type="radio" aura:id="tokenRadioAuraId" value="validated" id="radio_PrimaryContact" name="options" checked="true"/>
+                <label class="slds-radio__label" for="radio_PrimaryContact">
+                    <span class="slds-radio--faux"></span>
+                    <b><span class="slds-form-element__label">USPS Validated address.</span></b>
+                    <br />
+                    <span class="slds-form-element__label">
+                        &nbsp;&nbsp;{!v.validated.Street__c} <br/>
+                        &nbsp;&nbsp;{!v.validated.City__c} <br/>
+                        &nbsp;&nbsp;{!v.validated.Zip__c} <br/>
+                        &nbsp;&nbsp;{!v.validated.County__c} <br/>
+                        &nbsp;&nbsp;{!v.validated.StateAbbreviation__c} <br/><br/>
+                        
+                    </span>
+                       
+                </label>
+            </span>
+            </div>
+            <div class="changeRecordTypeRightColumn">
+            <span class="slds-radio">
+                <input type="radio" aura:id="tokenRadioAuraId" value="broker" id="radio_SecondaryContact" name="options" checked="false"/>
+                <label class="slds-radio__label" for="radio_SecondaryContact">
+                    <span class="slds-radio--faux"></span>
+                    <b><span class="slds-form-element__label">Original Address.</span></b>
+                    <br/>
+                    <span class="slds-form-element__label">
+                        &nbsp;&nbsp;{!v.broker.Address__r.Street__c} <br/>
+                        &nbsp;&nbsp;{!v.broker.Address__r.City__c} <br/>
+                        &nbsp;&nbsp;{!v.broker.Address__r.Zip__c} <br/>
+                        &nbsp;&nbsp;{!v.broker.Address__r.County__c} <br/>
+                        &nbsp;&nbsp;{!v.broker.Address__r.State__r.Name} <br/>
+                        
+                    </span>
+                </label>
+            </span>
+            </div>
+        </div>
+    </div>
+    <footer class="slds-modal__footer">
+    	<button class="slds-button slds-button--neutral .slds-modal__close" onclick="{!c.closeMe}">Cancel</button>
+		<button class="slds-button slds-button--brand" onclick="{!c.saveAddress}">Save</button>
+    </footer>
+</aura:component>

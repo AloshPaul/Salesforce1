@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bed_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				VALUE(Bedrooms__c) &lt; 1,3,
+				IF(
+								AND(
+												VALUE(Bedrooms__c)>=1,
+												VALUE(Bedrooms__c)&lt;2),
+												1,
+								
+								IF(
+												AND(
+																VALUE(Bedrooms__c)>=2,
+																VALUE(Bedrooms__c)&lt;3),
+												2,
+												IF(
+																AND(
+																				VALUE(Bedrooms__c)>=3,
+																				VALUE(Bedrooms__c)&lt;4),
+																4,
+																IF(
+																				AND(
+																								VALUE(Bedrooms__c)>=4,
+																								VALUE(Bedrooms__c)&lt;5),
+																				5,
+																				IF(
+																								AND(
+																												VALUE(Bedrooms__c)>=5,
+																												VALUE(Bedrooms__c)&lt;6),
+																								4,
+																								IF(
+																												AND(
+																																VALUE(Bedrooms__c)>=6,
+																																VALUE(Bedrooms__c)&lt;8),
+																												3,3)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bed Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

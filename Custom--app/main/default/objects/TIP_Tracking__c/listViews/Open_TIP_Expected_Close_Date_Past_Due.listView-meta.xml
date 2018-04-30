@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_TIP_Expected_Close_Date_Past_Due</fullName>
+    <booleanFilter>(1 or 2 )AND 3 AND 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>DK_Driver_Assigned__c</columns>
+    <columns>DK_Assigned_Date__c</columns>
+    <columns>Expected_Close_Date__c</columns>
+    <columns>TIP_Status__c</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TIP_Status__c</field>
+        <operation>equals</operation>
+        <value>TIP - Voluntary Move-Out,TIP - CFK Negotiations,TIP - Lease Negotiations</value>
+    </filters>
+    <filters>
+        <field>TIP_Status__c</field>
+        <operation>equals</operation>
+        <value>TIP - Eviction</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>TIP_Tracking__c.Standard_TIP</value>
+    </filters>
+    <filters>
+        <field>Expected_Close_Date__c</field>
+        <operation>lessThan</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Open TIP: Expected Close Date Past Due</label>
+</ListView>

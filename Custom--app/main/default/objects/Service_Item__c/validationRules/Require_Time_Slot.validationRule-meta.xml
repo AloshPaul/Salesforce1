@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Time_Slot</fullName>
+    <active>true</active>
+    <description>When Assignment = Technician, make Time Slot required</description>
+    <errorConditionFormula>ISPICKVAL(Assignment__c , "Technician") 
+&amp;&amp; 
+ISPICKVAL(Time_Slot__c , "")</errorConditionFormula>
+    <errorDisplayField>Time_Slot__c</errorDisplayField>
+    <errorMessage>Please select a Time Slot</errorMessage>
+</ValidationRule>

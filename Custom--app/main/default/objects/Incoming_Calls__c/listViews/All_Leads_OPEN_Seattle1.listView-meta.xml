@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Leads_OPEN_Seattle1</fullName>
+    <columns>NAME</columns>
+    <columns>Agent_Assigned_to_Lead__c</columns>
+    <columns>Agent_Lead_Status__c</columns>
+    <columns>Date_Time_Agent_Notified__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Lead_Status__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Message__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Time_Agent_Notified__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2012 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Agent_Lead_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Date_Time_Agent_Notified__c</field>
+        <operation>lessOrEqual</operation>
+        <value>12/31/2014 12:00 AM</value>
+    </filters>
+    <label>Seattle - Open - All Leads</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

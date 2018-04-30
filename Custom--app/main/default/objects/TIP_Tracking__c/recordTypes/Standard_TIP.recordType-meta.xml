@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_TIP</fullName>
+    <active>true</active>
+    <label>Standard TIP</label>
+    <picklistValues>
+        <picklist>Abandoned_Property__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>App_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Backyard__c</picklist>
+        <values>
+            <fullName>Furniture Visibile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Locked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nothing Visible</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CFK_Status__c</picklist>
+        <values>
+            <fullName>Need Values</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_2_Result__c</picklist>
+        <values>
+            <fullName>Confirmed Vacant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacted Occupant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posted Notice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_3_Result__c</picklist>
+        <values>
+            <fullName>Confirmed Vacant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacted Occupant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posted Notice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Lease__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Electrical__c</picklist>
+        <values>
+            <fullName>Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initial_Contact_Result__c</picklist>
+        <values>
+            <fullName>Confirmed Vacant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacted Occupant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Posted Notice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lease_Strategy__c</picklist>
+        <values>
+            <fullName>Purchased Rented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rent to Current Tenant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rent to New Tenant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lease_Type__c</picklist>
+        <values>
+            <fullName>Assumed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Military_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veteran</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Neighbors__c</picklist>
+        <values>
+            <fullName>No Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Said Occupied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Said Vacant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupant_Intentions__c</picklist>
+        <values>
+            <fullName>Cash for Keys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evict</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupant_Type__c</picklist>
+        <values>
+            <fullName>Previous Home Owner %28PHO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Squatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tenant %28TNT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Property_Condition__c</picklist>
+        <values>
+            <fullName>Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TIP_Status__c</picklist>
+        <values>
+            <fullName>Closed - Acq Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - For Sale%2FDisposition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Leased %28Assumed%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Leased %28New%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Vacant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Abd%2E Property Notice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - BK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Deed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Do Not Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Limbo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP - CFK Negotiations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP - DK Initial Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP - Driver Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP - Eviction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP - Lease Negotiations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TIP - New %28Needs Driver%29</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>TIP - Voluntary Move-Out</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TIP_Type__c</picklist>
+        <values>
+            <fullName>Disposition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Acquisition %E2%80%93 Purchased Rented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Acquisition</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Remediation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turn TIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trash_Cans__c</picklist>
+        <values>
+            <fullName>Empty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Vacancy_Reason__c</picklist>
+        <values>
+            <fullName>CFK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eviction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move-Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vacant on Arrival</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Water__c</picklist>
+        <values>
+            <fullName>Off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Welcome_Pack_Delivery_Method__c</picklist>
+        <values>
+            <fullName>Hand Delivered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left on Door</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Windows__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Furniture Visibile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nothing Visible</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

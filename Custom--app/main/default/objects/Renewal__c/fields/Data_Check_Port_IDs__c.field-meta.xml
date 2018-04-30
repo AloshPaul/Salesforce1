@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Check_Port_IDs__c</fullName>
+    <description>This field is used for data validation purposes to compare if the Portfolio ID of the Renewal is the same as the Portfolio ID on the Lease.</description>
+    <externalId>false</externalId>
+    <formula>IF (Portfolio__r.Id =  Lease__r.Portfolio_ID__c, "True", "False")</formula>
+    <label>Data Check - Port IDs</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

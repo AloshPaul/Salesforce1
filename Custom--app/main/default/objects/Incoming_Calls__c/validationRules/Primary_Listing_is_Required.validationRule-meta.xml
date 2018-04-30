@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Listing_is_Required</fullName>
+    <active>true</active>
+    <description>Primary Listing is required for IH Regional Call Center if Property Not Specified isn't checked.</description>
+    <errorConditionFormula>DATEVALUE( Date_Time__c ) >= DATE(2013,11,1) &amp;&amp;
+ISPICKVAL(Lead_Channel__c, "IH Regional Call Center") &amp;&amp;
+Property_Not_Specified__c  = FALSE &amp;&amp;
+ISBLANK( Listing__c)
+&amp;&amp; $Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Listing__c</errorDisplayField>
+    <errorMessage>Primary Listing is required unless property is not specified.</errorMessage>
+</ValidationRule>

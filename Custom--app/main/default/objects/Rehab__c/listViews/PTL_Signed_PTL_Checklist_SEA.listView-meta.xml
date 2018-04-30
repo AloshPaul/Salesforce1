@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Signed_PTL_Checklist_SEA</fullName>
+    <columns>NAME</columns>
+    <columns>Stage__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>HD_Budget_Walk__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Back_end_Supervisor__c</columns>
+    <columns>Re_Key_Date__c</columns>
+    <columns>Access_Date__c</columns>
+    <columns>GC_Completion_Date_Revised__c</columns>
+    <columns>Office_Signoff_Date__c</columns>
+    <columns>Signed_PTL_Uploaded__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Signed_PTL_Uploaded__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Access_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>11/1/2016</value>
+    </filters>
+    <label>PTL - Signed PTL Checklist (SEA)</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

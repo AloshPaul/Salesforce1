@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Regional_Queue_Member__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used in the My Region's Regional Queue Member field on Concierge.  This is used to enable the logged-in Regional Controller to see tickets only for his or her region.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used in the My Region's Regional Queue Member field on Concierge.  This is used to enable the logged-in Regional Controller to see tickets only for his or her region.</inlineHelpText>
+    <label>Is Regional Queue Member</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

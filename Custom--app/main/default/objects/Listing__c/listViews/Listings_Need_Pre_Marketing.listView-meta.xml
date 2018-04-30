@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listings_Need_Pre_Marketing</fullName>
+    <columns>Region__c</columns>
+    <columns>Status__c</columns>
+    <columns>NAME</columns>
+    <columns>Coming_Soon_Listing_Prepared__c</columns>
+    <columns>Address__c</columns>
+    <columns>Rent_Cafe_Listing__c</columns>
+    <columns>HOA_Primary__c</columns>
+    <columns>HOA_Application_Fee__c</columns>
+    <columns>Tenant_Application_Notes__c</columns>
+    <columns>Other_Restrictions__c</columns>
+    <columns>Pool__c</columns>
+    <columns>Rent_Cafe_Comments__c</columns>
+    <columns>Rehab_Type__c</columns>
+    <columns>Make_Ready_Date__c</columns>
+    <columns>Est_Rehab_Complete_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Coming_Soon_Listing_Prepared__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Rehab_Type__c</field>
+        <operation>equals</operation>
+        <value>Turn</value>
+    </filters>
+    <filters>
+        <field>YRR_Move_Out_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:60</value>
+    </filters>
+    <filters>
+        <field>Acquistion_Status__c</field>
+        <operation>equals</operation>
+        <value>Acquired,For Sale</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Down - Pre-Marketing</value>
+    </filters>
+    <label>Pre-Marketing Listing Updates</label>
+    <sharedTo>
+        <group>Lease_Administrator</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

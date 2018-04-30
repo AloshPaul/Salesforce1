@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outstanding_Deficiencies__c</fullName>
+    <externalId>false</externalId>
+    <label>Outstanding Deficiencies</label>
+    <summarizedField>QC_Audit__c.Deficiencies_Open__c</summarizedField>
+    <summaryFilterItems>
+        <field>QC_Audit__c.Status__c</field>
+        <operation>equals</operation>
+        <value>QC Assigned, QC Open</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QC_Audit__c.Rehab__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

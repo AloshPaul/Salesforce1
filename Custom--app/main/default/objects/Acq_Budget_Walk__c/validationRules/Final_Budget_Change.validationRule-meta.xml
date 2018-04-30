@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Budget_Change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				NOT(ISBLANK( Director_Approval_Date__c )),
+				ISCHANGED( Final_Rehab_Budget_Est_UW__c )
+				)</errorConditionFormula>
+    <errorMessage>Final Budget cannot be changed if the approval is done</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_Approved_Awaiting_Hold_Fee</fullName>
+    <active>true</active>
+    <description>D-00016923</description>
+    <errorConditionFormula>AND(OR(ISNEW(), ISCHANGED( Application_Status__c)) , 
+     ISPICKVAL(Application_Status__c, 'Approved - Awaiting Hold Fee'), Hold_Fee_Rec_d__c 
+      )</errorConditionFormula>
+    <errorDisplayField>Hold_Fee_Rec_d__c</errorDisplayField>
+    <errorMessage>Application Status Should Not Be Approved - Awaiting Hold Fee When Hold Fee Rec'd is Checked</errorMessage>
+</ValidationRule>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Corporate Projects was built early on as a quick-hit project mgmt tool for a select group of corporate users. We have since explored more robust products and will likely at a future point time.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Budget_Estimated__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Budget</label>
+        <summarizedField>Budget_Line_Item__c.Expense_Amount__c</summarizedField>
+        <summaryForeignKey>Budget_Line_Item__c.Corp_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Operations</fullName>
+                    <default>false</default>
+                    <label>Operations</label>
+                </value>
+                <value>
+                    <fullName>Technology</fullName>
+                    <default>false</default>
+                    <label>Technology</label>
+                </value>
+                <value>
+                    <fullName>Special Project - Nick</fullName>
+                    <default>false</default>
+                    <label>Special Project - Nick</label>
+                </value>
+                <value>
+                    <fullName>Special Project - Peter</fullName>
+                    <default>false</default>
+                    <label>Special Project - Peter</label>
+                </value>
+                <value>
+                    <fullName>Special Project - Eric</fullName>
+                    <default>false</default>
+                    <label>Special Project - Eric</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Concierge_Ticket__c</fullName>
+        <externalId>false</externalId>
+        <label>Concierge Ticket</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Eric_Elder__c</fullName>
+        <externalId>false</externalId>
+        <label>Eric Elder</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approval needed</fullName>
+                    <default>false</default>
+                    <label>Approval needed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Not Approved</fullName>
+                    <default>false</default>
+                    <label>Not Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Estimated_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Budget</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Expenses_Paid_to_Date__c</fullName>
+        <description>These are the expenses paid to date</description>
+        <externalId>false</externalId>
+        <label>Expenses Paid to Date</label>
+        <summarizedField>Budget_Line_Item__c.Paid_to_Date__c</summarizedField>
+        <summaryForeignKey>Budget_Line_Item__c.Corp_Project__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Issues__c</fullName>
+        <externalId>false</externalId>
+        <label>Issues</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Mark__c</fullName>
+        <externalId>false</externalId>
+        <label>Mark</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approval needed</fullName>
+                    <default>false</default>
+                    <label>Approval needed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Not Approved</fullName>
+                    <default>false</default>
+                    <label>Not Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Nick__c</fullName>
+        <externalId>false</externalId>
+        <label>Nick</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approval needed</fullName>
+                    <default>false</default>
+                    <label>Approval needed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Not Approved</fullName>
+                    <default>false</default>
+                    <label>Not Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                    <label>Planning</label>
+                </value>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>false</default>
+                    <label>In Process</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  TEXT(Project_Status__c) = &quot;On Hold&quot;,  IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000001lnMs&quot;, &quot;Yellow flag&quot;) , 
+IF(  TEXT(Project_Status__c)  &lt;&gt; &quot;Complete&quot;  &amp;&amp;  Due_Date__c  &lt;  TODAY() ,
+ IMAGE (&quot;/servlet/servlet.FileDownload?file=015E0000001lnMr&quot; , &quot;Red Flag&quot;) , 
+ IF(TEXT(Project_Status__c) = &quot;Complete&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000001lnMm&quot;, &quot;Checkered Flag&quot;),
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015E0000001lnMn&quot;, &quot;Green Flag&quot;) ) ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status Flag</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Website</fullName>
+                    <default>false</default>
+                    <label>Website</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Updates__c</fullName>
+        <externalId>false</externalId>
+        <label>Updates</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Corporate Project</label>
+    <listViews>
+        <fullName>All_Completed_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </filters>
+        <label>All Completed Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Complete</value>
+        </filters>
+        <label>All Open Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Marketing_Projects_All</fullName>
+        <columns>NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Marketing</value>
+        </filters>
+        <label>Marketing Projects - All</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Operations_Projects_All</fullName>
+        <columns>NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Operations</value>
+        </filters>
+        <label>Operations Projects - All</label>
+    </listViews>
+    <listViews>
+        <fullName>Technology_Projects_All</fullName>
+        <columns>NAME</columns>
+        <columns>Category__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Estimated_Budget__c</columns>
+        <columns>Actual_Budget__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Status_Flag__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Technology</value>
+        </filters>
+        <label>Technology Projects - All</label>
+    </listViews>
+    <nameField>
+        <label>Project Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Corporate Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Due_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Priority__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status_Flag__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Estimated_Budget__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

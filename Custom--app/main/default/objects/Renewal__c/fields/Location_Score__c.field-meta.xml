@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>Portfolio__r.Location_Score__c</formula>
+    <inlineHelpText>Score from 1 to 5 describing the geographic location of the asset, with 1 being the lowest and 5 being the highest</inlineHelpText>
+    <label>Location Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

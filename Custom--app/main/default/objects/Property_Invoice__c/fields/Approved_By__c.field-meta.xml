@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_By__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case (Rehab__r.Region__c ,
+
+"Atlanta","James Turner", 
+"Charlotte","Doug Mann", 
+"Chicago",IF( Rehab__r.Property_State__c = "MN", "Greg Halleland", "Bryan Henson"), 
+"Inland Empire","Jay Skjevren", 
+"Jacksonville","Ken Mitchell", 
+"Las Vegas","Michael Murphy", 
+"Los Angeles","George Bishop", 
+"Miami","Doug Wilson", 
+"Orlando","William Redding", 
+"Phoenix","Steve Letcher", 
+"Sacramento","Scotte Henderson", 
+"Seattle","Jeff Taylor", 
+"Tampa","Alexis Antoni",Null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approved By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

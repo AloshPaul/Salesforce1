@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Field_is_Mandatory</fullName>
+    <active>true</active>
+    <description>When the source is "Referral" , then "Company" field is mandatory</description>
+    <errorConditionFormula>AND( ISPICKVAL(Source_New__c,'Referral'),
+ISBLANK(TEXT(Company__c)))</errorConditionFormula>
+    <errorMessage>Company field cannot be Blank when Source is Referral.</errorMessage>
+</ValidationRule>

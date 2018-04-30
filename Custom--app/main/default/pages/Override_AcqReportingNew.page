@@ -1,0 +1,11 @@
+<!-- 
+    Description     :   Page to override the Standard Acq. Reporting new page
+    
+    Created By      :   Bhavi Sharma
+    
+    Created Date    :   12/18/2012
+    
+    Revision Logs   :   v1.0 - Created
+
+ -->
+<apex:page standardController="Bidding_Statistics__c" extensions="Override_AcqReportingNewController" action="{!validateRedirect}"/>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EvictionCompleteDateValidation</fullName>
+    <active>true</active>
+    <description>IF Eviction Complete date is filled in CFK Actual Move Out date, New Lease Signed Date, and Prior Lease Approved Date cannot be entered.</description>
+    <errorConditionFormula>IF(
+	AND (
+		NOT(ISNULL(Eviction_Complete_Date__c)),
+		OR (
+			NOT(ISNULL(CFK_Actual_Move_Out_Date__c)),
+			NOT(ISNULL(TIP_New_Lease_Signed_Date__c)),
+			NOT(ISNULL(TIP_Prior_Lease_Accepted_Date__c))
+		)
+	 ),
+	 true,
+	 false
+)</errorConditionFormula>
+    <errorMessage>IF Eviction Complete date is filled in CFK Moved Out date, New Lease Signed Date, Prior Lease Approved Date cannot be entered.</errorMessage>
+</ValidationRule>

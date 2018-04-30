@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VP_of_Operations_Queue_Member__c</fullName>
+    <description>This field is used in Concierge list views used for VP of Operations tickets.</description>
+    <externalId>false</externalId>
+    <formula>IF( $Profile.Name   = 'System Administrator', True,
+IF( $Profile.Name   = 'SFDC Business Partner', True,
+IF( $UserRole.Name  = 'Executive-Corporate', True, 
+IF( (   $User.Full_Name__c = 'David Sampson' )  &amp;&amp;
+ (OR( ISPICKVAL( Region__c , 'Phoenix') , ISPICKVAL(Region__c , 'Las Vegas')))  , True, 
+IF( TEXT( $User.Region__c ) =  TEXT( Region__c )   &amp;&amp;     $User.VP_of_Operations__c  = True , True, False))) ))</formula>
+    <inlineHelpText>This field is used in Concierge list views used for VP of Operations tickets.</inlineHelpText>
+    <label>VP of Operations Queue Member</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

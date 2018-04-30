@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Funds_Wired__c</fullName>
+    <description>The total of Amount Funded on each related Wire Request record.</description>
+    <externalId>false</externalId>
+    <label>Total Funds Requested</label>
+    <summarizedField>Wire_Request__c.Amount_Funded__c</summarizedField>
+    <summaryForeignKey>Wire_Request__c.EM_COE_Tracker__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

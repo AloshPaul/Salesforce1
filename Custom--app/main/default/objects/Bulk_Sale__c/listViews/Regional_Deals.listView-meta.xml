@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_Deals</fullName>
+    <columns>Bulk_Deal__c</columns>
+    <columns>NAME</columns>
+    <columns>Source__c</columns>
+    <columns>Bulk_Deal_Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>Submit_to_Seller_Deadline__c</columns>
+    <columns>Total_Properties__c</columns>
+    <columns>List_Price__c</columns>
+    <columns>IH_Bulk_Value__c</columns>
+    <columns>Initial_Offer_Amount__c</columns>
+    <columns>Offered__c</columns>
+    <columns>Purchase_Price__c</columns>
+    <columns>Number_Acquired__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Initated_by__c</field>
+        <operation>equals</operation>
+        <value>Regional</value>
+    </filters>
+    <label>Regional Deals</label>
+</ListView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JEN_Leasing_Listing_Items1</fullName>
+    <booleanFilter>1 AND 2 and 3 and 4 and 5 and 6 and 7 and 8 and 9</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Status__c</columns>
+    <columns>Rent_Ready_Date__c</columns>
+    <columns>DOM__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>YRR_Market_Rent__c</columns>
+    <columns>Sign_Installed_Date__c</columns>
+    <columns>Rent_Cafe_Listing__c</columns>
+    <columns>Craig_s_List_Listing_1__c</columns>
+    <columns>Issue_Details__c</columns>
+    <columns>Resolution_Action_Items__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down - Application Pending</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>equals</operation>
+        <value>Floryn Edwards</value>
+    </filters>
+    <filters>
+        <field>Remediation_Request_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Leased,HOLD - Currently Not Leasable,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down (In Rehab)</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down - Pre-Marketing</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down - Application Approved</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down - Pending Deposit</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down - Preleased</value>
+    </filters>
+    <label>#Floryn Leasing Listing Items</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

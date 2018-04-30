@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_create_Concierge_for_National_Reg</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED( RecordTypeId ), 
+  RecordType.DeveloperName != 'Treasury_Request',
+  RecordType.DeveloperName != 'Datamatics_Request')</errorConditionFormula>
+    <errorDisplayField>Business_Days_Open__c</errorDisplayField>
+    <errorMessage>Users cannot create Concierge Ticket for 'SF Request', 'Yardi Request', 'IT Request'. Please log in to Service-NOW to create ticket.</errorMessage>
+</ValidationRule>

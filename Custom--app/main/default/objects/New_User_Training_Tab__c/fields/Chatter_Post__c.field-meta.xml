@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chatter_Post__c</fullName>
+    <defaultValue>"Add a Chatter post to this record.  Send an @ message to another user by typing the @ sign and the first few letters of their name and then select the user from the dropdown. Use hashtag (pound sign) to tag the topic training as follows.  #training."</defaultValue>
+    <externalId>false</externalId>
+    <label>Chatter Post</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

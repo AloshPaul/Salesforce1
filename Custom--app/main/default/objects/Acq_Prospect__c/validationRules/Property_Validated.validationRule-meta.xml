@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Validated</fullName>
+    <active>true</active>
+    <description>Property details should be validated.</description>
+    <errorConditionFormula>AND(
+     OR(
+    				ISPICKVAL(Status__c, 'Underwriting Complete'),
+								ISPICKVAL(Status__c, 'Offer Approved')
+				),
+    
+  
+        Property_Validated__c = false
+	    
+				     
+)</errorConditionFormula>
+    <errorDisplayField>Property_Validated__c</errorDisplayField>
+    <errorMessage>The property details should be validated.</errorMessage>
+</ValidationRule>

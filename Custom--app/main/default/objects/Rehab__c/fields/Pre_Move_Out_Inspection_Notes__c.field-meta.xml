@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Move_Out_Inspection_Notes__c</fullName>
+    <description>This field can be lengthened if need be, per Adam Love.</description>
+    <externalId>false</externalId>
+    <label>Pre Move Out Inspection Notes</label>
+    <length>3000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

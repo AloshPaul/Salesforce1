@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Month_JAX</fullName>
+    <columns>NAME</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Lease__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Notes__c</columns>
+    <columns>Resident_Intent__c</columns>
+    <columns>First_Contact_Notice_Due_Date__c</columns>
+    <columns>First_Contact_Notice_Sent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_MONTH</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Jacksonville</value>
+    </filters>
+    <label>Next Month - JAX</label>
+    <sharedTo>
+        <role>Executive_Jacksonville</role>
+        <role>Team_Member_Jacksonville</role>
+        <role>X3rd_Party_Jacksonville</role>
+    </sharedTo>
+</ListView>

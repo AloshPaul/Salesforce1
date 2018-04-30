@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Resolution_and_Hours_Worked</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND( 
+$RecordType.Name = "IT Request", 
+ISPICKVAL( Status__c , "Completed"),
+ISBLANK( Hours_Worked__c ),
+LEN(Resolution_Details__c) = 0), True, False)</errorConditionFormula>
+    <errorMessage>Hours Worked is required when completing a ticket.</errorMessage>
+</ValidationRule>

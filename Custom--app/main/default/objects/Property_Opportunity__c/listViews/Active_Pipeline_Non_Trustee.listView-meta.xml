@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Pipeline_Non_Trustee</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>AZB_IH_Original_Bid_Max__c</columns>
+    <columns>AZB_IH_Final_Max_Bid__c</columns>
+    <columns>AZB_Winning_Bid_Amount__c</columns>
+    <columns>AZB_IH_Win_Date__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>startsWith</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Bid_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Trustee</value>
+    </filters>
+    <label>Active Pipeline Records - Non-Trustee</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

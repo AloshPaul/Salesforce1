@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Issue_Report__c</fullName>
+    <externalId>false</externalId>
+    <label>System Issue Report</label>
+    <referenceTo>Issues_New_Feature_Request__c</referenceTo>
+    <relationshipLabel>Bugs/Revisions</relationshipLabel>
+    <relationshipName>Bugs</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

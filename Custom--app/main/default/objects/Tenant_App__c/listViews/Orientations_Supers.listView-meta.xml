@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orientations_Supers</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 and 6</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Scheduled_Move_In__c</columns>
+    <columns>Appliance_Vendor__c</columns>
+    <columns>Appliance_Schedule_Date__c</columns>
+    <columns>Orientation_Specialist__c</columns>
+    <columns>Orientation_Date_Time__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Resident_Phone__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Orientation_Complete__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Declined,Cancelled,Pending</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant</value>
+    </filters>
+    <filters>
+        <field>Scheduled_Move_In__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Orientation_Specialist__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Z - Megan's Orientation View</label>
+    <sharedTo>
+        <role>Executive_Inland_Empire</role>
+        <role>Team_Member_Inland_Empire</role>
+    </sharedTo>
+</ListView>

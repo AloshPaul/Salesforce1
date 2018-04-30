@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Notes_Specific_to_Property__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This should be used to note specific details that are needed for the life of the property (ie - no granite can be used on 2nd floor units)</inlineHelpText>
+    <label>Property Notes (Specific to Property)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

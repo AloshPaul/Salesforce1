@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>PortfolioProperty__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Overall_Priority__c</columns>
+    <columns>Service_Request_Status__c</columns>
+    <columns>Total_No_of_Service_Items__c</columns>
+    <columns>Total_of_Open_Service_Items__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

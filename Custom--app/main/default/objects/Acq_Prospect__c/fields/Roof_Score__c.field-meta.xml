@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Roof_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				OR(Roof_Type__c ='',Roof_Type__c ='Asphalt',Roof_Type__c ='Shingle'),
+				3,
+				IF(
+								OR(Roof_Type__c ='Metal'),
+				    4,
+				    IF(
+								    OR(Roof_Type__c ='Built-up',Roof_Type__c = 'Hot Mopped',Roof_Type__c ='Other'),
+							    	1,
+								        IF(
+											        	OR(Roof_Type__c ='Concrete',Roof_Type__c ='Slate',Roof_Type__c ='Tile'),
+												        5,
+												            2))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Roof Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

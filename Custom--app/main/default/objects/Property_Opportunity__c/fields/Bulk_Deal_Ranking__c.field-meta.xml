@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Deal_Ranking__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>"1" means the property fits current Bulk Deal acquisition criteria; "2" means it does not meet current criteria but it is manageable; "3" means the property will be sold after purchase.</inlineHelpText>
+    <label>Bulk Deal Ranking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>3</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

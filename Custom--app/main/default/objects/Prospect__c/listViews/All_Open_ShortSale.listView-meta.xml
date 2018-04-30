@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Open_ShortSale</fullName>
+    <columns>NAME</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>AZB_Bid_Status__c</columns>
+    <columns>AZB_Trustee_Sale_Date__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Prospect_Status__c</field>
+        <operation>startsWith</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Bid_Type__c</field>
+        <operation>equals</operation>
+        <value>Short Sale</value>
+    </filters>
+    <label>All Open - Short Sale</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

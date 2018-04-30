@@ -1,0 +1,270 @@
+/* css for tablet */
+
+.wrapper {
+	width: 750px;
+	overflow: hidden;
+}
+	/* header */
+	.header .searchSite {
+		width: 170px;
+	}
+	.header .searchSite input.text {
+        width: 150px;
+    }
+
+    /* end of header */
+
+    /* content */
+    .content {
+    	width: 750px;
+    }
+    	.content .menuWrapper {
+    		width: 748px;
+    	}
+
+    	.quickLinks li {
+    		width: 124px;
+    	}
+
+    	/* card */
+    	.card {
+    		width: 240px;
+    	}
+    		.card .chat {
+    			margin-right: 8px;
+    		}
+	    		.card .chat .input input.text {
+	    			width: 140px;
+	    		}
+	    	.card .feedWrapper .sortBy {
+	    		margin-right: 8px;
+	    	}
+	    	.card .feedWrapper .feed {
+	    		margin-right: 8px;
+	    	}
+		    	.card .feedWrapper .feed .msg {
+		    		width: 168px;
+		    	}
+
+		    .card .carousel {
+		    	width: 238px;
+		    	height: 155px;
+		    }
+		    	.card .carousel img {
+		    		width: 240px;
+		    		height: 155px;
+		    	}
+		    .card .dateTabs a span span {
+		    	width: 65px;
+		    }
+		    	.card .dateTabs .arrow {
+		    		left: 40px;
+		    	}
+		    .card .performanceList {
+		    	padding-top: 8px;
+		    }
+		    	.card .performanceList .list {
+		    		margin-top: 0;
+		    		padding-left: 0;
+		    	}
+			    .card .performanceList .list h3 {
+			    	position: absolute;
+			    	top: -30px;
+			    	left: 55px;
+			    }
+			    	.card .performanceList img {
+			    		width: 42px;
+			    		height: 36px;
+			    	}
+    	/* end of card */
+			.flex-direction-nav a {
+	   		margin : -25px 0 0 !important;
+	   	}
+    	/* side */
+    	.sideWrapper {
+    		width: 213px;
+    	}
+            .side .dropdownMenu.expanded > a span {
+                background-position: 185px 19px;
+            }
+            .side .dropdownMenu.collapsed > a span {
+                background-position: 185px 15px;
+            }
+            .sideWrapper .side .withImage img {
+            	width: 203px;
+            	height: 123px;
+            }
+            .sideWrapper .side{
+            	width:225px;
+            }
+            .side .dropdownMenu > a{
+            	padding-left:9px;
+            }
+    	/* end of side */
+
+
+	    /* main */
+	    .main {
+	        width: 520px;
+	    }
+	    	.mainContent {
+	    	width: 520px;
+	    }
+	    	.mainContent .multimedia {
+	    		width: 480px;
+	    	}
+		    	.mainContent .multimedia img {
+		    		float: left;
+		    	}
+		    		.mainContent .multimedia img.small {
+		    			margin: 0 0 22px 20px;
+		    		}
+		    		.mainContent .multimedia img.rightmost {
+		    			margin-bottom: 0;
+		    		}
+			.mainContent div.text {
+				width: 480px;
+			}
+	        .main .carousel, .main .carousel img {
+	            width: 520px;
+	            height: 190px;
+	        }
+	        .main .quickLinks {
+	        	height: 100px;
+	        	background-position: 0 -87px;
+	        }
+		        .main .quickLinks li {
+		        	width: 172px;
+		        }
+		     .quickLinks{
+		     		margin-top: 15px;
+		     }   
+				.liveChatter{
+					width: 518px;
+				}	
+		    .liveChatter .input input.text {
+		    	width: 430px;
+		    }
+		    .liveChatter .feed .msg {
+		    	width: 380px;
+		    }
+		    .contentCard .shortContent img {
+		    	width: 260px;
+		    	height: 170px;
+		    }
+		    .contentCard .shortContent .text {
+		    	width: 243px;
+		    }
+		    .contentCard .shortContent .text .buttons {
+		    	margin-top: -10px;
+		    	padding: 0 15px 0 0;
+		    }
+	    /* end of main */
+    /* end of content */
+		
+		/* result block */
+		.resultBlock .form label {
+			width: 280px;
+		}
+
+			.resultBlock .form .buttons {
+				padding: 5px 190px 0 0;
+			}
+    /* end of content */
+		
+    /* footer */
+    .footer .inner {
+    	width: 750px;
+    }
+    /* end of footer */
+    /* Banner Classes*/
+    
+   #bannerHeader {
+		color: white;
+		text-align: left;
+		padding-left: 40px;
+		padding-top: 40px;
+		font-size: 37px;
+		font-weight: bold;
+	}
+	
+	#bannerSummary{
+		color: white;
+		text-align: left;
+		padding-left: 40px;
+		padding-top: 15px;
+		font-size: 20px;
+	}
+	
+	#bannerLabel{
+		-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+		box-shadow:inset 0px 1px 0px 0px #ffffff;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+		background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+		background-color:#ededed;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #dcdcdc;
+		display:inline-block;
+		color:#261b03;
+		font-family:arial;
+		font-size:10px;
+		font-weight:bold;
+		padding:0px 5px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #ffffff;
+		margin-left: 10px;
+		margin-top: 0px;
+	}
+ .menu li.lv1 > a{
+  	padding: 0 32px;
+  } 
+  .carousel{
+  	width:750px;
+  	height:210px;	
+  }  
+  #newsSlider{
+  	height:167px !important;
+  }
+  .flexslider .slides img{
+  	height:100%;
+  }
+  .card .summary p{
+  	font-size:11px;
+  }
+  #newsTitle{
+  	font-size:14px;
+  }
+  .defaultBannerImage{
+  	height:220px !important;
+    Width:748px !important;
+  }
+  .contentCard .shortContent .text {
+  	padding: 0px 0 0 9px;
+  }
+  .contentCard .shortContent .text p {
+  	font-size:11px;
+  }
+  .contentCard .shortContent .text h3{
+  	font-size:13px;
+  }
+  .contentCard .shortContent .text .buttons{
+  	margin-top:0px;
+  }
+  .sideWrapper .side p{
+  	padding: 12px 0 4px 7px;
+  }
+  .sideWrapper .side{
+  	width:215px;
+  }
+  .contentCard .shortContent .text{
+  	width: 218px;
+  }
+  .contentTitle{
+   	font-size: 25px;
+   }
+  
+  

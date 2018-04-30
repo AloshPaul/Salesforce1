@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charlotte_Availability</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>DOM__c</columns>
+    <columns>Promotion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Charlotte</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Charlotte Availability</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Executive_Charlotte</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Team_Member_Charlotte</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

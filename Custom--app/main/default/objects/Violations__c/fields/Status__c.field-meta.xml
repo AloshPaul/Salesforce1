@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>true</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Completed - Pending Payment</fullName>
+                <default>false</default>
+                <label>Completed - Pending Payment</label>
+            </value>
+            <value>
+                <fullName>Closed - No Fine Assessed</fullName>
+                <default>false</default>
+                <label>Closed - No Fine Assessed</label>
+            </value>
+            <value>
+                <fullName>Closed - Fine Waived</fullName>
+                <default>false</default>
+                <label>Closed - Fine Waived</label>
+            </value>
+            <value>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+                <label>Closed - Paid</label>
+            </value>
+            <value>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+                <label>Dismissed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

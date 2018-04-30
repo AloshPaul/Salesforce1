@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Detail</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>HOA Detail</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/24.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/24.0/apex.js")}
+
+
+var result = sforce.connection.query("SELECT Listing__r.Residence__c  FROM Tenant_App__c WHERE Id ='{!Tenant_App__c.Id}' and Listing__c != null");
+
+if(result.size > 0){ 
+var records = result.getArray("records");
+
+var resId = records[0].Listing__r.Residence__c;
+
+window.open('/apex/PopulateHOAInfo?ResidenceId='+resId,'_blank');
+}</url>
+</WebLink>

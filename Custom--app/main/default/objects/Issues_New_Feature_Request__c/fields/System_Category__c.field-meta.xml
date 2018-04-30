@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>System Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+                <label>Accounts</label>
+            </value>
+            <value>
+                <fullName>Apex Trigger</fullName>
+                <default>false</default>
+                <label>Apex Trigger</label>
+            </value>
+            <value>
+                <fullName>Box</fullName>
+                <default>false</default>
+                <label>Box</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+                <label>Contacts</label>
+            </value>
+            <value>
+                <fullName>Data change tracker</fullName>
+                <default>false</default>
+                <label>Data change tracker</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Field configuration</fullName>
+                <default>false</default>
+                <label>Field configuration</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>Issue/Feature Tracker</fullName>
+                <default>false</default>
+                <label>Issue/Feature Tracker</label>
+            </value>
+            <value>
+                <fullName>Layouts</fullName>
+                <default>false</default>
+                <label>Layouts</label>
+            </value>
+            <value>
+                <fullName>List Views/Queries</fullName>
+                <default>false</default>
+                <label>List Views/Queries</label>
+            </value>
+            <value>
+                <fullName>Maps</fullName>
+                <default>false</default>
+                <label>Maps</label>
+            </value>
+            <value>
+                <fullName>Object formula building</fullName>
+                <default>false</default>
+                <label>Object formula building</label>
+            </value>
+            <value>
+                <fullName>Reports/Dashboards</fullName>
+                <default>false</default>
+                <label>Reports/Dashboards</label>
+            </value>
+            <value>
+                <fullName>Roles/Profiles</fullName>
+                <default>false</default>
+                <label>Roles/Profiles</label>
+            </value>
+            <value>
+                <fullName>State Assumptions</fullName>
+                <default>false</default>
+                <label>State Assumptions</label>
+            </value>
+            <value>
+                <fullName>Status Tags</fullName>
+                <default>false</default>
+                <label>Status Tags</label>
+            </value>
+            <value>
+                <fullName>Test Methods</fullName>
+                <default>false</default>
+                <label>Test Methods</label>
+            </value>
+            <value>
+                <fullName>Validation Rules</fullName>
+                <default>false</default>
+                <label>Validation Rules</label>
+            </value>
+            <value>
+                <fullName>Visual Force</fullName>
+                <default>false</default>
+                <label>Visual Force</label>
+            </value>
+            <value>
+                <fullName>Web site/HTML 5</fullName>
+                <default>false</default>
+                <label>Web site/HTML 5</label>
+            </value>
+            <value>
+                <fullName>Workflows</fullName>
+                <default>false</default>
+                <label>Workflows</label>
+            </value>
+            <value>
+                <fullName>Yardi Integration</fullName>
+                <default>false</default>
+                <label>Yardi Integration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

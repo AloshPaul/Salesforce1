@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_Out_Actual__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This should be used for occupants that move out on their own accord without CFK or eviction process.</inlineHelpText>
+    <label>Move-Out Actual</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

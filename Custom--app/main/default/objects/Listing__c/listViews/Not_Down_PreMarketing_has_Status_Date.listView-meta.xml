@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Down_PreMarketing_has_Status_Date</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Total_Apps__c</columns>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>Rehab_Stage__c</columns>
+    <columns>Agent_Assigned__c</columns>
+    <columns>Down_Pre_Marketing_Status_Date__c</columns>
+    <columns>Rent_Ready_Comments__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>CMA_Received_Date__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>YRR_Market_Rent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Down (In Rehab),HOLD - Currently Not Leasable</value>
+    </filters>
+    <filters>
+        <field>Down_Pre_Marketing_Status_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Not Down - PreMarketing, has Status Date</label>
+</ListView>

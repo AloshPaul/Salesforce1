@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Old__c</fullName>
+    <description>When editing the values in this field, make corresponding edits to the "Active or Closed?" field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The value in this field should be changed to match whichever Key Date field is populated with a date.</inlineHelpText>
+    <label>Status Old</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Claim Received</fullName>
+                <default>false</default>
+                <label>Claim Received</label>
+            </value>
+            <value>
+                <fullName>Settlement Negotiations</fullName>
+                <default>false</default>
+                <label>Settlement Negotiations</label>
+            </value>
+            <value>
+                <fullName>Served Process for Lawsuit</fullName>
+                <default>false</default>
+                <label>Served Process for Lawsuit</label>
+            </value>
+            <value>
+                <fullName>Counsel Engaged</fullName>
+                <default>false</default>
+                <label>Counsel Engaged</label>
+            </value>
+            <value>
+                <fullName>Dispositive Motion Pending</fullName>
+                <default>false</default>
+                <label>Dispositive Motion Pending</label>
+            </value>
+            <value>
+                <fullName>Answer Filed</fullName>
+                <default>false</default>
+                <label>Answer Filed</label>
+            </value>
+            <value>
+                <fullName>Case Dismissed</fullName>
+                <default>false</default>
+                <label>Case Dismissed</label>
+            </value>
+            <value>
+                <fullName>Hearing Scheduled</fullName>
+                <default>false</default>
+                <label>Hearing Scheduled</label>
+            </value>
+            <value>
+                <fullName>In Discovery Period</fullName>
+                <default>false</default>
+                <label>In Discovery Period</label>
+            </value>
+            <value>
+                <fullName>Awaiting Trial</fullName>
+                <default>false</default>
+                <label>Awaiting Trial</label>
+            </value>
+            <value>
+                <fullName>Trial Concluded</fullName>
+                <default>false</default>
+                <label>Trial Concluded</label>
+            </value>
+            <value>
+                <fullName>In Appeal</fullName>
+                <default>false</default>
+                <label>In Appeal</label>
+            </value>
+            <value>
+                <fullName>Case Closed</fullName>
+                <default>false</default>
+                <label>Case Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

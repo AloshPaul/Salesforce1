@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Search_Text_APN__c</fullName>
+    <description>This field is auto-populated by a workflow rule from the Residence object to ensure that the APN reflected on the Pipeline record can be accessible via global search.</description>
+    <externalId>false</externalId>
+    <label>Search Text: APN</label>
+    <length>155</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

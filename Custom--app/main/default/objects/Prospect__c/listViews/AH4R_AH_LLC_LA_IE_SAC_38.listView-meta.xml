@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AH4R_AH_LLC_LA_IE_SAC_38</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>Bulk_Deal__c</columns>
+    <columns>APN__c</columns>
+    <columns>Title_Company__c</columns>
+    <columns>Other_Closing_Costs_Est_UW__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Inspection_Period_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>AH4R-AH LLC/LA/IE/SAC 38</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.Bulk</value>
+    </filters>
+    <label>AH4R-AH LLC/LA/IE/SAC 38</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Inland_Empire</role>
+        <role>Executive_LA_County</role>
+        <role>Executive_Sacramento</role>
+        <role>Team_Member_Inland_Empire</role>
+        <role>Team_Member_LA_County</role>
+        <role>Team_Member_Sacramento</role>
+    </sharedTo>
+</ListView>

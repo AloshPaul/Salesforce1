@@ -1,0 +1,11 @@
+{
+  "packageDirectories": [
+    {
+      "path": "Custom--app",
+      "default": true
+    }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "42.0"
+}

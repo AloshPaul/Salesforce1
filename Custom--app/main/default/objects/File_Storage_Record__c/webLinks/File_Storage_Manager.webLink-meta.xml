@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Storage_Manager</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>File Storage Manager</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>//Include the required js files
+{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/23.0/apex.js")}
+{!REQUIRESCRIPT('/resource/' &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),':',''),'-',''),' ',''),10) &amp; '000/BlockUI/jquery.min.js')}
+{!REQUIRESCRIPT('/resource/' &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),':',''),'-',''),' ',''),10) &amp; '000/BlockUI/jquery-ui.js')}
+{!REQUIRESCRIPT('/resource/' &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),':',''),'-',''),' ',''),10) &amp; '000/BlockUI/jquery.blockUI.js')}
+
+
+var sObjectRecordId = '';
+var page_url = parent.document.URL.split('/'); 
+
+var sObjectId = page_url[page_url.length-1]; 
+sObjectId = sObjectId.split('#')[0]; 
+sObjectId = sObjectId.split('?')[0]; 
+sObjectRecordId = sObjectId.substring(0, 15); 
+
+try {
+
+j$ = jQuery.noConflict();
+
+j$.blockUI({
+css: {
+border: 'none',
+padding: '15px',
+backgroundColor: '#000',
+'-webkit-border-radius': '10px',
+'-moz-border-radius': '10px',
+opacity: .5,
+color: '#fff'
+},
+message : '... navigating',
+onBlock: function() {
+
+parent.location.href = '/apex/FileStorageManagerEnh?id=' + sObjectRecordId;
+
+}
+});
+
+j$.unblockUI();
+}
+catch(e) {
+
+parent.location.href = '/apex/FileStorageManagerEnh?id=' + sObjectRecordId;
+
+}</url>
+</WebLink>

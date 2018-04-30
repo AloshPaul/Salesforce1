@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listing_Agent_Temporary_Field__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a temporary text field that we will use to bring in data from the current leasing trackers.  Once we have added all the listing agents as users, this field will go away in favor of the listing agent look-up field below.</inlineHelpText>
+    <label>Listing Agent (Temporary Text Field)</label>
+    <length>155</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

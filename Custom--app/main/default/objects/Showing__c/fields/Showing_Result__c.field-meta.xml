@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Showing_Result__c</fullName>
+    <externalId>false</externalId>
+    <label>Showing Result</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application</fullName>
+                <default>false</default>
+                <label>Application</label>
+            </value>
+            <value>
+                <fullName>Application Pending</fullName>
+                <default>false</default>
+                <label>Application Pending</label>
+            </value>
+            <value>
+                <fullName>Not Leased</fullName>
+                <default>false</default>
+                <label>Not Leased</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>Post-Application Showing</fullName>
+                <default>false</default>
+                <label>Post-Application Showing</label>
+            </value>
+            <value>
+                <fullName>(Co-Broker)-External Agent Showing</fullName>
+                <default>false</default>
+                <label>(Co-Broker)-External Agent Showing</label>
+            </value>
+            <value>
+                <fullName>Unattended Showing</fullName>
+                <default>false</default>
+                <label>Unattended Showing</label>
+            </value>
+            <value>
+                <fullName>Not Leased - SWAY Transfer</fullName>
+                <default>false</default>
+                <label>Not Leased - SWAY Transfer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

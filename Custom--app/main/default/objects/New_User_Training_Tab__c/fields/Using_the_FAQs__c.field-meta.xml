@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Using_the_FAQs__c</fullName>
+    <defaultValue>"Click on the FAQ tab and select the Chatter view from the dropdown. Browse through the questions to see if you have any questions that have already been addressed.  If you have a new question, feel free to log it by clicking the Create New button."</defaultValue>
+    <externalId>false</externalId>
+    <label>Using the FAQs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Appliances</fullName>
+                <default>false</default>
+                <label>Appliances</label>
+            </value>
+            <value>
+                <fullName>Blinds</fullName>
+                <default>false</default>
+                <label>Blinds</label>
+            </value>
+            <value>
+                <fullName>Cabinets</fullName>
+                <default>false</default>
+                <label>Cabinets</label>
+            </value>
+            <value>
+                <fullName>Countertops</fullName>
+                <default>false</default>
+                <label>Countertops</label>
+            </value>
+            <value>
+                <fullName>Final Clean</fullName>
+                <default>false</default>
+                <label>Final Clean</label>
+            </value>
+            <value>
+                <fullName>Fireplace Inspection</fullName>
+                <default>false</default>
+                <label>Fireplace Inspection</label>
+            </value>
+            <value>
+                <fullName>Flooring</fullName>
+                <default>false</default>
+                <label>Flooring</label>
+            </value>
+            <value>
+                <fullName>Garage Doors</fullName>
+                <default>false</default>
+                <label>Garage Doors</label>
+            </value>
+            <value>
+                <fullName>Gas Inspection</fullName>
+                <default>false</default>
+                <label>Gas Inspection</label>
+            </value>
+            <value>
+                <fullName>Glass</fullName>
+                <default>false</default>
+                <label>Glass</label>
+            </value>
+            <value>
+                <fullName>HVAC</fullName>
+                <default>false</default>
+                <label>HVAC</label>
+            </value>
+            <value>
+                <fullName>Irrigation</fullName>
+                <default>false</default>
+                <label>Irrigation</label>
+            </value>
+            <value>
+                <fullName>Landscaping</fullName>
+                <default>false</default>
+                <label>Landscaping</label>
+            </value>
+            <value>
+                <fullName>Lawn Service</fullName>
+                <default>false</default>
+                <label>Lawn Service</label>
+            </value>
+            <value>
+                <fullName>Pest Control</fullName>
+                <default>false</default>
+                <label>Pest Control</label>
+            </value>
+            <value>
+                <fullName>Pool</fullName>
+                <default>false</default>
+                <label>Pool</label>
+            </value>
+            <value>
+                <fullName>Refinish Sink/Shower/Tub</fullName>
+                <default>false</default>
+                <label>Refinish Sink/Shower/Tub</label>
+            </value>
+            <value>
+                <fullName>Rolloff Dumpsters</fullName>
+                <default>false</default>
+                <label>Rolloff Dumpsters</label>
+            </value>
+            <value>
+                <fullName>Roofing</fullName>
+                <default>false</default>
+                <label>Roofing</label>
+            </value>
+            <value>
+                <fullName>Steam Clean</fullName>
+                <default>false</default>
+                <label>Steam Clean</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

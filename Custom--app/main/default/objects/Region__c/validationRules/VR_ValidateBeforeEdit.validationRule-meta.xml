@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_ValidateBeforeEdit</fullName>
+    <active>true</active>
+    <description>This rule prevents users from editing the Region record associated with a region other than the region the user is associated with.</description>
+    <errorConditionFormula>AND ( 
+NOT(ISNEW()), 
+TEXT($User.Region__c) != Name, 
+$Profile.Name != 'Invitation Corporate Wide Executive', 
+$Profile.Name != 'System Administrator' 
+)</errorConditionFormula>
+    <errorMessage>You may only edit Region info from your own Region.</errorMessage>
+</ValidationRule>

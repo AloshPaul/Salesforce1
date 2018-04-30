@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Successful_Pushes</fullName>
+    <columns>NAME</columns>
+    <columns>Type__c</columns>
+    <columns>SnapShot__c</columns>
+    <columns>Source__c</columns>
+    <columns>Success__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Success__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Successful Pushes</label>
+</ListView>

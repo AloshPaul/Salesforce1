@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Pricing_All_Homes_OTM</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>City__c</columns>
+    <columns>DOM__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>X13_24_Month_Rent__c</columns>
+    <columns>Previous_Total_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Leads_Sent_to_Agent_Last_10_Days__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>Down_Pre_Marketing_Status_Date__c</columns>
+    <columns>Promotion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Down - Pre-Marketing</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>ATL Pricing- All Homes OTM</label>
+</ListView>

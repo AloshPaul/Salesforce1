@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Date_required_when_Sold</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(Settlement_Date__c) ,
+    ISBLANK(Settlement_Date__c),
+   !ISPICKVAL(Listing_Status__c,'Cancelled'),
+   ISPICKVAL(Portfolio__r.Acquisition_Status__c, 'Sold')
+   )</errorConditionFormula>
+    <errorDisplayField>Settlement_Date__c</errorDisplayField>
+    <errorMessage>Disposition date  must be populated When Portfolio Acquisition Status is Sold</errorMessage>
+</ValidationRule>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AH4R_AH_LLC_LA_IE_SAC_38</fullName>
+    <columns>NAME</columns>
+    <columns>Residence__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>Market_Value_UW__c</columns>
+    <columns>Title_Policy_Cost_Est_UW__c</columns>
+    <columns>Other_Closing_Costs_Est_UW__c</columns>
+    <columns>Replacement_Cost_PSF_UW_OLD__c</columns>
+    <columns>Exp_Gross_Monthly_Rent_UW__c</columns>
+    <columns>Monthly_HOA_UW__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>AH4R-AH LLC/LA/IE/SAC 38</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.Bulk</value>
+    </filters>
+    <label>AH4R-AH LLC/LA/IE/SAC 38</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Inland_Empire</role>
+        <role>Executive_LA_County</role>
+        <role>Executive_Sacramento</role>
+        <role>Team_Member_Inland_Empire</role>
+        <role>Team_Member_LA_County</role>
+        <role>Team_Member_Sacramento</role>
+    </sharedTo>
+</ListView>

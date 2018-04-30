@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL__c</fullName>
+    <externalId>false</externalId>
+    <label>PTL</label>
+    <referenceTo>PTL__c</referenceTo>
+    <relationshipLabel>PTL Line Items</relationshipLabel>
+    <relationshipName>PTL_Line_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

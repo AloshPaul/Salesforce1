@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_In_Cost_Est_UW__c</fullName>
+    <externalId>false</externalId>
+    <formula>Acquisition_Basis_Est_UW__c + Acquisition_Overhead__c + Rehab_Overhead__c + Title_Policy_Cost_Est_UW__c + Other_Closing_Costs_Est_UW__c + Platform_Buildup_Allocation__c + Initial_Lease_up_Cost_Est_UW__c + Bridge_Cost_during_Rehab_and_Lease_up__c + CFK_Est_UW__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Acquisition Basis Est @ UW (a formula) + Acquisition Overhead + Rehab Overhead + Title Policy Cost Est. UW + Other Closing Costs Est UW + Platform Buildup Allocation + Initial Lease-up Cost Est UW + Bridge Cost during Rehab and Lease-up + CFK Est. @ UW</inlineHelpText>
+    <label>All-In Cost Est. @ Underwriting</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

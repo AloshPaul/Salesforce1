@@ -1,0 +1,1740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stands for Asset Mgmt Reporting Object.  This was created as a summary reporting tool that looks up to portfolio, tip, rehab, yardi rent roll, residence.  This is primarily for Geopointe and the other mapping applications.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Acquisition_Date__c</fullName>
+        <description>Look up Portfolio</description>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Acquisition_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Acquisition Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Overhead__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Acquisition_Overhead__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Acquisition Overhead</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Price_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Acquisition_Price_PSF__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Acquisition Price PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Acquisition_Status__c )</formula>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Acquisition Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Acquisition_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Actual_Acquisition_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Actual Acquisition Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Lease_Amt__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Actual_Lease_Amt__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Actual Lease Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Aging_Leased__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Post_Acq_Status__c = &quot;Leased&quot;, 
+
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))) ,
+
+IF( Post_Acq_Status__c = &quot; &quot;, &quot;Instatus Transition&quot;, &quot;Instatus Transition&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aging - Leased</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_Leased_of_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Post_Acq_Status__c = &quot;Leased&quot;,Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aging - Leased # of Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_OTM_of_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Post_Acq_Status__c = &quot;OTM&quot;, TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aging - OTM # of Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_Rehab_from_GC_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR( 
+BEGINS(TEXT( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c ), &apos;Closed&apos;) , 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c ), &apos;HOLD&apos;) , 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c ), &apos;Complete&apos;) 
+), 
+
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))) 
+, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aging - Rehab from GC Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_Rehab_of_Days_from_GC_Start__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(BEGINS(TEXT( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c ), &apos;Closed&apos;) , Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c ), &apos;HOLD&apos;) , Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c ), &apos;Complete&apos;),Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c,
+
+TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Start_Date__c)))</formula>
+        <label>Aging - Rehab # of Days from GC Start</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_Rehab_of_Days_from_Re_key__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), &apos;Closed&apos;) , Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), &apos;HOLD&apos;) , Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), &apos;Complete&apos;), Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c,
+ 
+ 
+TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c)))</formula>
+        <label>Aging - Rehab # of Days from Re-key</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_TIP__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR( 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c), &apos;TIP&apos;),
+BEGINS( Yardi_Rent_Roll__r.Unit_Rental_Type__c , &apos;Admin&apos;), 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c), &apos;HOLD&apos;) 
+), 
+IF(TODAY() - Acquisition_Date__c &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(TODAY() - Acquisition_Date__c &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(TODAY() - Acquisition_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(TODAY() - Acquisition_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(TODAY() - Acquisition_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(TODAY() - Acquisition_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))), 
+
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c), &apos;Closed&apos;), 
+IF(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate) &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))), &quot;Instatus Transition&quot;
+) 
+
+)</formula>
+        <label>Aging - TIP</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aging_TIP_of_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c), &apos;TIP&apos;),TODAY() - Acquisition_Date__c,
+IF( BEGINS( Yardi_Rent_Roll__r.Unit_Rental_Type__c , &apos;Admin&apos;), TODAY() - Acquisition_Date__c,
+IF( BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c), &apos;HOLD&apos;), TODAY() - Acquisition_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c), &apos;Closed&apos;),Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate),
+NULL))))</formula>
+        <label>Aging - TIP # of Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agining_OTM__c</fullName>
+        <description>OTM Aged taken from Rehab</description>
+        <externalId>false</externalId>
+        <formula>IF( Post_Acq_Status__c = &quot;OTM&quot;, 
+
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(TODAY()  - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))) ,
+
+
+IF( Post_Acq_Status__c = &quot; &quot;, &quot;Instatus Transition&quot;, &quot;Instatus Transition&quot;))</formula>
+        <inlineHelpText>Most Recent Rehab</inlineHelpText>
+        <label>Aging - OTM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agining_Rehab_from_Rekey__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR( 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), &apos;Closed&apos;) , 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), &apos;HOLD&apos;) , 
+BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), &apos;Complete&apos;) 
+), 
+
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 14,&apos;1-2 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 28,&apos;3-4 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))) 
+, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 14, &apos;1-2 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 28, &apos;3-4 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 42, &apos;5-6 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 56, &apos;7-8 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &lt;= 70, &apos;9-10 Weeks&apos;, 
+IF(TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c &gt;= 71, &apos;11-12+ Weeks&apos;, 
+&quot;Instatus Transition&quot;)))))) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Rehab__r.</inlineHelpText>
+        <label>Aging - Rehab from Re-Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>All_In_Cost_Est_Underwriting__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.All_In_Cost_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>All-In Cost Est. @ Underwriting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Asking_Rent_First_Lease__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Asking_Rent_First_Lease__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Asking Rent @ First Lease</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BK_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.BK_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>BK Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Back_Taxes_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Back_Taxes_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Back Taxes Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bathrooms__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Baths__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Bathrooms</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bedrooms__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Bedrooms__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Bedrooms</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bid_Service_Expense_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Bid_Service_Expense_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Bid Service Expense Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bid_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Bid_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Bid Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Box_Folder_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Box_Folder_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Box Folder ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Broker_Expense_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Broker_Expense_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Broker Expense Est @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Revised__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Budget_Revised__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Most Recent Rehab</inlineHelpText>
+        <label>Budget - Revised</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.CFK_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>CFK Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Price_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Contract_Price_PSF__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Contract Price PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Tenant_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Current_Tenant_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Current Tenant Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Gross_Monthly_Rent_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Exp_Gross_Monthly_Rent_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Expected Gross Monthly Rent @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Fund__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Fund__c</formula>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Fund</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Future_Custom_Field_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Acquisition_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Future Field 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Future_Field_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, &quot;For Sale&quot;),&quot;For Sale&quot;, 
+IF(AND(ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c,&quot;Closed - Leased (Assumed&quot;),ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Closed - Cancelled&quot;)), &quot;Rehab&quot;,
+ IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= &quot;Residential&quot;,Yardi_Rent_Roll__r.Current_Tenant_Status__c= &quot;Applicant&quot; ), &quot;Leased&quot;,
+ IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= &quot;Residential&quot;,Yardi_Rent_Roll__r.Current_Tenant_Status__c= &quot;Future&quot; ), &quot;Leased&quot;,
+ IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c) , &quot;TIP&quot;),&quot;TIP&quot;, 
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Abd. Property Notice&quot;),&quot;TIP&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - BK&quot;),&quot;TIP&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Deed&quot;),&quot;TIP&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Limbo&quot;),&quot;TIP&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Do Not Contact&quot;),&quot;TIP&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Re-key Ready&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Sent to Locksmith&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Re-key Complete&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Front-End Assigned&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Needs Final Budget&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Needs Vendors&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Needs GC&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;GC Awarded&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Five Day Complete&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Final Inspection Pass&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - BK&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Other&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Utilities&quot;), &quot;Rehab&quot;,
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Occupied/TIP&quot;), &quot;TIP&quot;,
+ IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = &quot;Current&quot;, &quot;Leased&quot;, 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = &quot;Eviction&quot;, &quot;Leased&quot;, 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = &quot;Notice&quot;, &quot;Leased&quot;, 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = &quot;VACANT&quot;, &quot;OTM&quot;, 
+
+&quot;Not Segmented&quot;))))))))))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Future Field 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Future_Field_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, &quot;For Sale&quot;),&quot;For Sale&quot;, 
+IF(AND(ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c,&quot;Closed - Leased (Assumed&quot;),ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Closed - Cancelled&quot;)), &quot;Rehab&quot;, 
+IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= &quot;Residential&quot;,Yardi_Rent_Roll__r.Current_Tenant_Status__c= &quot;Applicant&quot; ), &quot;Leased&quot;, 
+IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= &quot;Residential&quot;,Yardi_Rent_Roll__r.Current_Tenant_Status__c= &quot;Future&quot; ), &quot;Leased&quot;, 
+IF( BEGINS( TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c) , &quot;TIP&quot;),&quot;TIPPY&quot;, 
+
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Abd. Property Notice&quot;),&quot;TIP&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - BK&quot;),&quot;TIP&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Deed&quot;),&quot;TIP&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Limbo&quot;),&quot;TIP&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,&quot;HOLD - Do Not Contact&quot;),&quot;TIP&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Re-key Ready&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Sent to Locksmith&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Re-key Complete&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Front-End Assigned&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Needs Final Budget&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Needs Vendors&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Needs GC&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;GC Awarded&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Five Day Complete&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;Final Inspection Pass&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - BK&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Deed&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Other&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Utilities&quot;), &quot;Rehab&quot;, 
+IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,&quot;HOLD - Occupied/TIP&quot;), &quot;TIP&quot;, 
+
+&quot;Not Segmented&quot;)))))))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Future Field 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GC_Award_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GC Award/Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GC_Completion_Date_Est__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.GC_Completion_Date_Est__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Most Recent Rehab</inlineHelpText>
+        <label>GC Completion Date - Estimated</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GC_Completion_Date_Revised__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.GC_Completion_Date_Revised__c</formula>
+        <inlineHelpText>Most Recent Rehab</inlineHelpText>
+        <label>GC Completion Date - Revised</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GP_Bed_Bath__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.GP_Bed_Bath__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>GP Bed Bath</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GP_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.GP_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>GP Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GP_Yield_Bucket__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.GP_Yield_Bucket__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>GP Yield Bucket</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gross_Yield_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Gross_Yield_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Gross Yield Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>HOA_Options__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.HOA_Options__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>HOA Options</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Home_Front_Thumbnail_Url__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;https://&apos; + IF( CONTAINS($Organization.Id, &apos;E0000000YNkj&apos;), &apos;ih-prod&apos;, &apos;ih-sandbox&apos; ) + &apos;.s3.amazonaws.com/&apos; + CASESAFEID( $Organization.Id ) + &apos;/&apos; + Portfolio__r.Home_Front_Thumbnail_Url_Suffix__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Home Front Thumbnail Url</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Housing_Rent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Housing_Rent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Housing Authority Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Lease_up_Cost_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Initial_Lease_up_Cost_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Initial Lease-up Cost Est @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Period_End_Current_Tenant__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Lease_Period_End_Current_Tenant__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Current Tenant Lease Period End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Period_Start_Current_Tenant__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Current Tenant Lease Period Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_TIP_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Lease_TIP_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Lease TIP Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.Lease_Type__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Most Recent TIP</inlineHelpText>
+        <label>Lease Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Liens_Fines_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Liens_Fines_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Liens/Fines Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>M1_Expense_Margin__c</fullName>
+        <externalId>false</externalId>
+        <formula>0</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>M1 Expense Margin %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Make_Ready_Complete_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Make_Ready_Complete_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Make Ready Complete Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Make_Ready_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Make_Ready_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Make Ready Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Market_Rent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Market_Rent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Market Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market_Value_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Market_Value_PSF_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Market Value PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market_Value_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Market_Value_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Market Value @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Market__c)</formula>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Market</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_to_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Month_to_Month__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Month to Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Move_In_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Move_In_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Move In Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Actual__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Tip__r.Move_Out_Actual__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Most Recent TIP</inlineHelpText>
+        <label>Move-Out Actual</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Move_Out_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Move Out Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Net_Effective_Rent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Net_Effective_Rent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Net Effective Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Occupant_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Residence__r.Most_Recent_Tip__r.Occupant_Type__c )</formula>
+        <inlineHelpText>Most Recent TIP</inlineHelpText>
+        <label>Occupant Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupied_Status_Application__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Occupied_Status_Acquisition__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Occupied Status Application</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Office_Sign_Off_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c</formula>
+        <inlineHelpText>Most Recent Rehab</inlineHelpText>
+        <label>Office Sign-Off Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Other_Closing_Costs_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Other_Closing_Costs_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Other Closing Costs Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Platform_Buildup_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Platform_Buildup_Allocation__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Platform Buildup Allocation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pool__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Pool__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Pool</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Portfolio_Manager__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi Rent Roll</inlineHelpText>
+        <label>Portfolio Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>AM Reportings</relationshipLabel>
+        <relationshipName>AM_Reportings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Post_Acq_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, &quot;For Sale&quot;),&quot;For Sale&quot;, 
+IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, &quot;Cancelled&quot;),&quot;Cancelled&quot;, 
+IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, &quot;Sold&quot;),&quot;Sold&quot;, 
+
+IF(AND(Portfolio__r.Open_TIP__c  =  1, Portfolio__r.Open_Rehab__c  &gt;= 1), &quot;Instatus Transition&quot;,
+
+IF( Portfolio__r.Open_TIP__c  =  1, &quot;TIP&quot;,
+IF( Portfolio__r.Open_Rehab__c  = 1, &quot;Rehab&quot;,
+
+IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= &quot;Residential&quot;,Yardi_Rent_Roll__r.Current_Tenant_Status__c= &quot;Applicant&quot; ), &quot;Leased&quot;,  
+IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= &quot;Residential&quot;,Yardi_Rent_Roll__r.Current_Tenant_Status__c= &quot;Future&quot; ), &quot;Leased&quot;,
+
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &quot;Current&quot;, &quot;Leased&quot;, 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &quot;Eviction&quot;, &quot;Leased&quot;, 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &quot;Notice&quot;, &quot;Leased&quot;,
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c  = &quot;VACANT&quot;, &quot;OTM&quot;, 
+IF( Yardi_Rent_Roll__r.Unit_Rental_Type__c  = &quot;Admin&quot;, &quot;TIP&quot;,  
+IF( Yardi_Rent_Roll__r.Unit_Rental_Type__c  = &quot;Down&quot;, &quot;Rehab&quot;, 
+
+IF( BEGINS( TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c) , &quot;Closed&quot;),&quot;Leased&quot;, 
+
+&quot;Not Segmented&quot;)))))))))))))))</formula>
+        <inlineHelpText>Formula based on several stages from Most Recent TIP, Most Recent Rehab, Yardi Rent Roll and Acquisition Status</inlineHelpText>
+        <label>Post Acq Stat</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_High_Value_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Previous_High_Value_PSF__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Previous High Value PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Previous_High_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Previous_High_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Previous High Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Code__c</formula>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Street__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Property Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_ZipCode__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Property ZipCode</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proxy_BK_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Proxy_BK_Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Proxy - BK Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Re_Key_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Re_Key_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Re-Key Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Region__c)</formula>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Market2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab_Aging_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c</formula>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Rehab__r.</inlineHelpText>
+        <label>Rehab Aging Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rehab_Budget_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Rehab_Budget_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Rehab Budget Est. @UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rehab_Overhead__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Rehab_Overhead__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Rehab Overhead</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rehab_Stage__c</fullName>
+        <description>For most recent rehab lookup - use Portfolio__r.Residence__r.Most_Recent_Rehab__r</description>
+        <externalId>false</externalId>
+        <formula>TEXT(  Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c  )</formula>
+        <inlineHelpText>Portfolio - Residence - Most Recent Rehab</inlineHelpText>
+        <label>Rehab Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Status__c</formula>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Rehab__r.</inlineHelpText>
+        <label>Rehab Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rent_Admin_Fee__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Admin_Fee_Rent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi_Rent_Roll__r</inlineHelpText>
+        <label>Rent Admin Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Replacement_Cost_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Replacement_Cost_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Replacement Cost Est @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Replacement_Cost_PSF_UW_old__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Replacement_Cost_PSF_UW_old__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Replacement Cost PSF @ UW (old)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Reporting_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Reporting Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Residence_Latitude__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Location__Latitude__s</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Residence Latitude</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Residence_Longitude__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Location__Longitude__s</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Residence Longitude</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Rehab_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Tip__r.Sent_to_Rehab__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Tip__r</inlineHelpText>
+        <label>Sent to Rehab Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_TIP_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Rehab__r.Sent_to_TIP__c</formula>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Rehab__r</inlineHelpText>
+        <label>Sent to TIP Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Square_Feet__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Square_Feet__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Square Feet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP_Closed_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Tip__r</inlineHelpText>
+        <label>TIP Closed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Status__c</fullName>
+        <description>Portfolio__r.Residence__r.Most_Recent_Tip__r This is for everything that references &quot;Most Recent TIp&quot;</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Tip__r</inlineHelpText>
+        <label>TIP Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title_Policy_Cost_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Title_Policy_Cost_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r</inlineHelpText>
+        <label>Title Policy Cost Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(  Portfolio__r.Residence__r.Most_Recent_Rehab__r.Type__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Rehab</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Rental_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Unit_Rental_Type__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi_Rent_Roll</inlineHelpText>
+        <label>Unit Rental Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Yardi_Rent_Roll__r.Unit_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Yardi_Rent_Roll</inlineHelpText>
+        <label>Unit Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Reason__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(  Portfolio__r.Residence__r.Most_Recent_Tip__r.Vacancy_Reason__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio__r.Residence__r.Most_Recent_Tip</inlineHelpText>
+        <label>Vacancy Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Yardi_Property_Code__c</formula>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Yardi Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Rent_Roll__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Yardi Rent Roll</label>
+        <referenceTo>Yardi_Rent_Roll__c</referenceTo>
+        <relationshipLabel>AM Reportings</relationshipLabel>
+        <relationshipName>AM_Reportings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Year_Built__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Year_Built__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>Year Built</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>all_in_cost_psf_est_uw__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.All_In_Cost_PSF_Est_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Portfolio</inlineHelpText>
+        <label>All-In Cost PSF Est. @ Underwriting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>AM Reporting</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Reporting_Date__c</columns>
+        <columns>Acquisition_Status__c</columns>
+        <columns>Yardi_Rent_Roll__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>LAT_LONG</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Property_City__c</columns>
+        <columns>Residence_Latitude__c</columns>
+        <columns>Residence_Longitude__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Property_Code__c</field>
+            <operation>equals</operation>
+            <value>AZPH2468</value>
+        </filters>
+        <filters>
+            <field>Property_Code__c</field>
+            <operation>equals</operation>
+            <value>AZPH2206</value>
+        </filters>
+        <label>LAT/LONG</label>
+        <sharedTo>
+            <group>SF_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>LAT_LONG_Mesa</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Property_City__c</columns>
+        <columns>Residence_Latitude__c</columns>
+        <columns>Residence_Longitude__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Property_City__c</field>
+            <operation>equals</operation>
+            <value>Mesa</value>
+        </filters>
+        <label>LAT/LONG Mesa</label>
+        <sharedTo>
+            <group>SF_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>LAT_LONG_QC</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Property_City__c</columns>
+        <columns>Residence_Latitude__c</columns>
+        <columns>Residence_Longitude__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Property_City__c</field>
+            <operation>equals</operation>
+            <value>Queen Creek</value>
+        </filters>
+        <label>LAT/LONG QC</label>
+        <sharedTo>
+            <group>SF_Team</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>One_Reporting_Date</fullName>
+        <columns>NAME</columns>
+        <columns>Reporting_Date__c</columns>
+        <columns>Acquisition_Status__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Rent_Roll__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Code__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Reporting_Date__c</field>
+            <operation>equals</operation>
+            <value>8/19/2013</value>
+        </filters>
+        <label>One_Reporting_Date</label>
+    </listViews>
+    <nameField>
+        <displayFormat>AM-{00000}</displayFormat>
+        <label>AM Reporting Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>AM Reportings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

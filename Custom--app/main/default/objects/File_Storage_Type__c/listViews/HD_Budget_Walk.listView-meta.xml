@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HD_Budget_Walk</fullName>
+    <columns>NAME</columns>
+    <columns>Allowed_For_Objects__c</columns>
+    <columns>Url_Expiration_Minutes__c</columns>
+    <columns>Upload_To_SFN__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Allowed_For_Objects__c</field>
+        <operation>includes</operation>
+        <value>HD_Budget_Walk__c</value>
+    </filters>
+    <label>HD Budget Walk</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

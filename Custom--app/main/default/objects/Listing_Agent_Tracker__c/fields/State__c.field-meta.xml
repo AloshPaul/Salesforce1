@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <externalId>false</externalId>
+    <label>State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arizona</fullName>
+                <default>false</default>
+                <label>Arizona</label>
+            </value>
+            <value>
+                <fullName>California</fullName>
+                <default>false</default>
+                <label>California</label>
+            </value>
+            <value>
+                <fullName>Florida</fullName>
+                <default>false</default>
+                <label>Florida</label>
+            </value>
+            <value>
+                <fullName>Georgia</fullName>
+                <default>false</default>
+                <label>Georgia</label>
+            </value>
+            <value>
+                <fullName>Illinois</fullName>
+                <default>false</default>
+                <label>Illinois</label>
+            </value>
+            <value>
+                <fullName>Minnesota</fullName>
+                <default>false</default>
+                <label>Minnesota</label>
+            </value>
+            <value>
+                <fullName>Washington</fullName>
+                <default>false</default>
+                <label>Washington</label>
+            </value>
+            <value>
+                <fullName>North Carolina</fullName>
+                <default>false</default>
+                <label>North Carolina</label>
+            </value>
+            <value>
+                <fullName>South Carolina</fullName>
+                <default>false</default>
+                <label>South Carolina</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_Web_Submission__c</fullName>
+    <externalId>false</externalId>
+    <label>Category (Web Submission)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Topic__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application Follow-Up</fullName>
+                <default>false</default>
+                <label>Application Follow-Up</label>
+            </value>
+            <value>
+                <fullName>Deposit Funds</fullName>
+                <default>false</default>
+                <label>Deposit Funds</label>
+            </value>
+            <value>
+                <fullName>Employment Verification</fullName>
+                <default>false</default>
+                <label>Employment Verification</label>
+            </value>
+            <value>
+                <fullName>Fees</fullName>
+                <default>false</default>
+                <label>Fees</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Move-Out Instructions</fullName>
+                <default>false</default>
+                <label>Move-Out Instructions</label>
+            </value>
+            <value>
+                <fullName>Neighbor Inquiry</fullName>
+                <default>false</default>
+                <label>Neighbor Inquiry</label>
+            </value>
+            <value>
+                <fullName>Notice to Vacate</fullName>
+                <default>false</default>
+                <label>Notice to Vacate</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pet Policy</fullName>
+                <default>false</default>
+                <label>Pet Policy</label>
+            </value>
+            <value>
+                <fullName>Qualification Requirements</fullName>
+                <default>false</default>
+                <label>Qualification Requirements</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Rent</fullName>
+                <default>false</default>
+                <label>Rent</label>
+            </value>
+            <value>
+                <fullName>Rental Verification</fullName>
+                <default>false</default>
+                <label>Rental Verification</label>
+            </value>
+            <value>
+                <fullName>Section 8</fullName>
+                <default>false</default>
+                <label>Section 8</label>
+            </value>
+            <value>
+                <fullName>Showing Scheduling</fullName>
+                <default>false</default>
+                <label>Showing Scheduling</label>
+            </value>
+            <value>
+                <fullName>Technical Issues (Portal Support)</fullName>
+                <default>false</default>
+                <label>Technical Issues (Portal Support)</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+            <value>
+                <fullName>Vendor Inquiry</fullName>
+                <default>false</default>
+                <label>Vendor Inquiry</label>
+            </value>
+            <value>
+                <fullName>Violation</fullName>
+                <default>false</default>
+                <label>Violation</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Application Follow-Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <controllingFieldValue>Other Inquiries</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Pet Policy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Qualification Requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Section 8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Showing Scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Deposit Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Move-Out Instructions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Notice to Vacate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Rent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Technical Issues (Portal Support)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Residents</controllingFieldValue>
+            <valueName>Violation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Inquiries</controllingFieldValue>
+            <valueName>Employment Verification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Inquiries</controllingFieldValue>
+            <valueName>Neighbor Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Inquiries</controllingFieldValue>
+            <valueName>Rental Verification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Inquiries</controllingFieldValue>
+            <valueName>Vendor Inquiry</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

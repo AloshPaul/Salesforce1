@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red_Yellow_Green__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (GC_Completion_Date_Est__c &lt; today() &amp;&amp; ISBLANK(Office_Signoff_Date__c) = true, "Red",
+ IF (GC_Completion_Date_Est__c >= today() &amp;&amp;GC_Completion_Date_Est__c &lt;= today() + 5 &amp;&amp; ISBLANK(Office_Signoff_Date__c), "Yellow",
+IF (GC_Completion_Date_Est__c > today() +5 &amp;&amp;GC_Completion_Date_Est__c&lt;= today() + 14 &amp;&amp; ISBLANK(Office_Signoff_Date__c), "Green", NULL)))</formula>
+    <label>Red/Yellow/Green</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

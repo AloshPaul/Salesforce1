@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Folders</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Folders</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Include the required js files 
+{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/23.0/apex.js")} 
+
+try { 
+
+var portfolioId = '{!Property__c.Id}';
+var portfolioCode = '{!Property__c.Property_Code__c}';
+var boxFolderId = '{!Property__c.Box_Folder_Id__c}';
+var propertyID2 = '{!Property__c.Property_ID_2__c}';
+var region = '{!Property__c.Region__c}';
+var city = '{!Property__c.Property_City__c}';
+ 
+
+var runSearchStatus = 'runsearch'; 
+var i = 0;
+while (runSearchStatus == 'runsearch' &amp;&amp; i &lt; 5) { 
+i = i + 1;
+var runSearchStatus = sforce.apex.execute("BoxSearchAndCreateMissingFolders","createFolderHierarchy1", 
+{portfolioId:portfolioId, portfolioCode:portfolioCode,  boxFolderId: boxFolderId, propertyID2: propertyID2, region: region, city: city }); 
+
+}
+alert('Folder Hierarchy Created'); 
+} 
+catch(e) { 
+alert(e); 
+}</url>
+</WebLink>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AZB_User_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>This field links an Invitation Homes salesforce user with their AZ Bidder account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please insert your AZ Bidder Id exactly as you log in with it to the AZ Bidder site.</inlineHelpText>
+        <label>AZ Bidder User Id</label>
+        <length>128</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Brokerage__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.Account.Name</formula>
+        <label>Brokerage</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cell_Carrier__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select the user&apos;s mobile phone carrier</inlineHelpText>
+        <label>Cell Carrier</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alltel</fullName>
+                    <default>false</default>
+                    <label>Alltel</label>
+                </value>
+                <value>
+                    <fullName>AT&amp;T</fullName>
+                    <default>false</default>
+                    <label>AT&amp;T</label>
+                </value>
+                <value>
+                    <fullName>Boost</fullName>
+                    <default>false</default>
+                    <label>Boost</label>
+                </value>
+                <value>
+                    <fullName>Metro PCS</fullName>
+                    <default>false</default>
+                    <label>Metro PCS</label>
+                </value>
+                <value>
+                    <fullName>Nextel</fullName>
+                    <default>false</default>
+                    <label>Nextel</label>
+                </value>
+                <value>
+                    <fullName>Sprint PCS</fullName>
+                    <default>false</default>
+                    <label>Sprint PCS</label>
+                </value>
+                <value>
+                    <fullName>T-Mobile</fullName>
+                    <default>false</default>
+                    <label>T-Mobile</label>
+                </value>
+                <value>
+                    <fullName>US Cellular</fullName>
+                    <default>false</default>
+                    <label>US Cellular</label>
+                </value>
+                <value>
+                    <fullName>Verizon</fullName>
+                    <default>false</default>
+                    <label>Verizon</label>
+                </value>
+                <value>
+                    <fullName>Virgin Mobile</fullName>
+                    <default>false</default>
+                    <label>Virgin Mobile</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Formula_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Region__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formula Region</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Frozen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>When you freeze someone, please check this box.  There&apos;s no other way to identify frozen users.</inlineHelpText>
+        <label>Frozen</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>FirstName + &apos; &apos; + LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Regional_Queue_Member__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used in the My Region&apos;s Regional Queue Member field on Concierge.  This is used to enable the logged-in Regional Controller to see tickets only for his or her region.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is used in the My Region&apos;s Regional Queue Member field on Concierge.  This is used to enable the logged-in Regional Controller to see tickets only for his or her region.</inlineHelpText>
+        <label>Is Regional Queue Member</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_VIP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox is being used to identify the VIP users</description>
+        <externalId>false</externalId>
+        <label>Is VIP</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>License_Certification_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>License/Certification ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notification_Preference__c</fullName>
+        <externalId>false</externalId>
+        <label>Notification Preference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>false</default>
+                    <label>Text</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                    <label>Both</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Other_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Change_Not_Allowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is used in a Validation Rule on Concierge for IT Support employees who are not allowed to change the Owner on records.</inlineHelpText>
+        <label>Owner Change Not Allowed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+                <value>
+                    <fullName>Charlotte</fullName>
+                    <default>false</default>
+                    <label>Charlotte</label>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                    <label>Chicago</label>
+                </value>
+                <value>
+                    <fullName>Dallas</fullName>
+                    <default>false</default>
+                    <label>Dallas</label>
+                </value>
+                <value>
+                    <fullName>Denver</fullName>
+                    <default>false</default>
+                    <label>Denver</label>
+                </value>
+                <value>
+                    <fullName>Houston</fullName>
+                    <default>false</default>
+                    <label>Houston</label>
+                </value>
+                <value>
+                    <fullName>Inland Empire</fullName>
+                    <default>false</default>
+                    <label>Inland Empire</label>
+                </value>
+                <value>
+                    <fullName>Jacksonville</fullName>
+                    <default>false</default>
+                    <label>Jacksonville</label>
+                </value>
+                <value>
+                    <fullName>Las Vegas</fullName>
+                    <default>false</default>
+                    <label>Las Vegas</label>
+                </value>
+                <value>
+                    <fullName>Los Angeles</fullName>
+                    <default>false</default>
+                    <label>Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>Miami</fullName>
+                    <default>false</default>
+                    <label>Miami</label>
+                </value>
+                <value>
+                    <fullName>Minneapolis</fullName>
+                    <default>false</default>
+                    <label>Minneapolis</label>
+                </value>
+                <value>
+                    <fullName>Nashville</fullName>
+                    <default>false</default>
+                    <label>Nashville</label>
+                </value>
+                <value>
+                    <fullName>National</fullName>
+                    <default>false</default>
+                    <label>National</label>
+                </value>
+                <value>
+                    <fullName>Orlando</fullName>
+                    <default>false</default>
+                    <label>Orlando</label>
+                </value>
+                <value>
+                    <fullName>Phoenix</fullName>
+                    <default>false</default>
+                    <label>Phoenix</label>
+                </value>
+                <value>
+                    <fullName>Sacramento</fullName>
+                    <default>false</default>
+                    <label>Sacramento</label>
+                </value>
+                <value>
+                    <fullName>Seattle</fullName>
+                    <default>false</default>
+                    <label>Seattle</label>
+                </value>
+                <value>
+                    <fullName>Tampa</fullName>
+                    <default>false</default>
+                    <label>Tampa</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Treasury_Request_Queue_Member__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to identify those who can work Treasury Requests in the Concierge queue (currently Dolores Leal and Robert Eagle).  This field is used in a Validation Rule to restrict the editing of Treasury Requests after submission except for those who have this field checked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is used in a Validation Rule to restrict the editing of Treasury Requests after submission except for those who have this field checked.</inlineHelpText>
+        <label>Treasury Request Queue Member</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>VP_of_Operations__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is referenced in the Concierge field &quot;VP of Operations&quot;, which is used in Concierge list views to enable people to see tickets only for their own region.</inlineHelpText>
+        <label>VP of Operations</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>VendorID__c</fullName>
+        <externalId>false</externalId>
+        <label>VendorID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ZWS_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>ZWS Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

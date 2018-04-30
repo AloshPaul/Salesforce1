@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Move_In_Date_Required_to_Close</fullName>
+    <active>true</active>
+    <description>The File Status for a Primary Listing Applicant or Primary TIP Applicant cannot be closed to Move-in Complete unless there is a value in the Actual Move-In Date field.</description>
+    <errorConditionFormula>And( 
+
+OR( 
+RecordTypeId = "012E00000005lzD", 
+RecordTypeId = "012E00000005mGF" 
+), 
+
+ISNULL(Actual_Move_in_Date__c), 
+ISPICKVAL( File_Status__c , "Move-In Complete") 
+
+)</errorConditionFormula>
+    <errorDisplayField>Actual_Move_in_Date__c</errorDisplayField>
+    <errorMessage>Move-In Complete cannot be selected unless there is an Actual Move-In Date.</errorMessage>
+</ValidationRule>

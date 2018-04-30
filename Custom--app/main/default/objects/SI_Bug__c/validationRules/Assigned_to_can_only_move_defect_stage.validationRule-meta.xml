@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_to_can_only_move_defect_stage</fullName>
+    <active>true</active>
+    <errorConditionFormula>Assigned_To__r.Id = $User.Id &amp;&amp;
+ISBLANK( Resolution__c ) &amp;&amp;
+OR ( NOT(ISPICKVAL( Status__c , "4. Ready for QA")), NOT(ISPICKVAL( Status__c , "6. Rejected")),
+NOT(ISPICKVAL( Status__c , "7. Deferred")))</errorConditionFormula>
+    <errorMessage>You are only able to move the Status to Ready for QA, Rejected or Deferred and you must populate the Resolution section.</errorMessage>
+</ValidationRule>

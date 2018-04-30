@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOM_Bucket__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (DOM__c&lt; 30, "Under 30 Days",
+IF  ( (DOM__c>=30 &amp;&amp; DOM__c &lt;=60), "30-60 Days",
+IF ( (DOM__c>=61 &amp;&amp; DOM__c &lt;=90), "61-90 Days",
+IF ( (DOM__c>=91 &amp;&amp; DOM__c &lt;=120), "90-120 Days",
+IF ( DOM__c>120, "120+ Days", NULL)))))</formula>
+    <label>DOM Bucket</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

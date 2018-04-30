@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leasing_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Leasing Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lease Negotiations in Process</fullName>
+                <default>false</default>
+                <label>Lease Negotiations in Process</label>
+            </value>
+            <value>
+                <fullName>Lease Marketing in Process</fullName>
+                <default>false</default>
+                <label>Lease Marketing in Process</label>
+            </value>
+            <value>
+                <fullName>Lease Submitted for Underwriting</fullName>
+                <default>false</default>
+                <label>Lease Submitted for Underwriting</label>
+            </value>
+            <value>
+                <fullName>Lease Underwriting Rejected</fullName>
+                <default>false</default>
+                <label>Lease Underwriting Rejected</label>
+            </value>
+            <value>
+                <fullName>Leased</fullName>
+                <default>false</default>
+                <label>Leased</label>
+            </value>
+            <value>
+                <fullName>Rent Ready</fullName>
+                <default>false</default>
+                <label>Rent Ready</label>
+            </value>
+            <value>
+                <fullName>Underwriting Approved</fullName>
+                <default>false</default>
+                <label>Underwriting Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

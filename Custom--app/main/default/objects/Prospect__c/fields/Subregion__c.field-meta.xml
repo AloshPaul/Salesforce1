@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subregion__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+TEXT(Region__c) != 'Inland Empire',
+TEXT(Region__c) != 'Chicago',
+TEXT(Region__c) != ''
+),
+'',
+IF(
+AND(
+TEXT(Region__c) == 'Inland Empire',
+LOWER(Property_County__c) == LOWER('Orange County') || LOWER(Property_County__c) == LOWER('Orange')
+),
+'Orange County',
+IF(
+TEXT(Region__c) == 'Inland Empire',
+'Inland Empire',
+IF(
+TEXT(Region__c) == 'Chicago',
+IF(
+LOWER( Property_State__r.Name) == LOWER('IL') ,
+'IL' ,
+IF(
+LOWER(Property_State__r.Name) == LOWER('MN'),
+'MN' ,
+IF(
+LOWER(Property_State__r.Name) == LOWER('WI'),
+'WI',
+'Other'
+)
+)
+),
+''
+)
+)
+)
+)</formula>
+    <label>Subregion</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

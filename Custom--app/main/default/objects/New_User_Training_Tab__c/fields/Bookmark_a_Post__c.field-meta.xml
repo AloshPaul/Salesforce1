@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookmark_a_Post__c</fullName>
+    <defaultValue>"Click the bookmark next to any post to quickly retrieve later. (You can see all your bookmarked post from your main Chatter tab.)"</defaultValue>
+    <externalId>false</externalId>
+    <label>Bookmark a Post</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

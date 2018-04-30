@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Needed__c</fullName>
+    <externalId>false</externalId>
+    <label>Application Needed?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Full App Required</fullName>
+                <default>false</default>
+                <label>Full App Required</label>
+            </value>
+            <value>
+                <fullName>Background Only</fullName>
+                <default>false</default>
+                <label>Background Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

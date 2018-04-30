@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Fine_Assessed_w_Fines_Populated</fullName>
+    <active>true</active>
+    <description>Fine Amounts should be blank if status is Closed - No Fine Assessed.</description>
+    <errorConditionFormula>AND( 
+$RecordType.Name &lt;> "IH Delinquency", 
+
+OR( 
+NOT(ISBLANK( Fine_Amount__c )), 
+NOT(ISBLANK( Second_Fine_Amount__c ))), 
+ISPICKVAL( Status__c , 'Closed - No Fine Assessed'))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Fine Amounts should be blank if status is Closed - No Fine Assessed.</errorMessage>
+</ValidationRule>

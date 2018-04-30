@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Second_Contact_Due__c</fullName>
+    <description>This field is populated via workflow.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>90 days from Lease End Date.</inlineHelpText>
+    <label>90-Day Letter Due Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

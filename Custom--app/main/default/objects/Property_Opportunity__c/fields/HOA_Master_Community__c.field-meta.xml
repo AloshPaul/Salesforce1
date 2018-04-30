@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Master_Community__c</fullName>
+    <externalId>false</externalId>
+    <formula>Residence__r.HOA_Parent__r.Name</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If the property has both a primary HOA and a master community and those records have been linked to this property's Residence record, this field will reflect the name of the Master Community. If you know that detail, please update on Residence record.</inlineHelpText>
+    <label>HOA (Master Community)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GP_Yield_Bucket__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( 
+	(FLOOR(Expected_Gross_Annual_Rent_UW__c / All_In_Cost_Est_UW__c*100)/1),
+	0, "0-6.99%",
+	1, "0-6.99%",
+	2, "0-6.99%",
+	3, "0-6.99%",
+	4, "0-6.99%",
+	5, "0-6.99%",
+	6, "0-6.99%",
+	7, "7-8.99%",
+	8, "7-8.99%",
+	9, "9-10.99%",
+	10, "9-10.99%",
+	11, "11-12.99%",
+	12, "11-12.99%",
+	"13% +"
+)</formula>
+    <label>Yield Bucket</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aging_of_Days_since_Record_Created__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( (Settlement_Date__c > TODAY()), NOW()-CreatedDate, Settlement_Date__c - DATEVALUE(CreatedDate ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Aging # of Days since Record Created</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UW_Pending</fullName>
+    <columns>Bulk_Deal__c</columns>
+    <columns>Properties__c</columns>
+    <columns>Region__c</columns>
+    <columns>Region_Value__c</columns>
+    <columns>UW_Deadline__c</columns>
+    <columns>Submit_to_Region__c</columns>
+    <columns>Date_Time_to_Region__c</columns>
+    <columns>Underwriting_Complete__c</columns>
+    <columns>Date_Time_Underwriting_Complete__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Submit_to_Region__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Underwriting_Complete__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>UW Pending</label>
+</ListView>

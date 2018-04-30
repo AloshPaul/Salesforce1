@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>DO NOT MAKE ANY CHANGES TO THIS FIELD WITHOUT MAKING CORRESPONDING CHANGES TO REHAB STATUS FIELD.</description>
+    <externalId>false</externalId>
+    <label>Rehab Stage</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Notification Received</fullName>
+                <default>false</default>
+                <label>Notification Received</label>
+            </value>
+            <value>
+                <fullName>Ready to Schedule MOI/Utility Transfer</fullName>
+                <default>false</default>
+                <label>Ready to Schedule MOI/Utility Transfer</label>
+            </value>
+            <value>
+                <fullName>Move Out Scheduled</fullName>
+                <default>false</default>
+                <label>Move Out Scheduled</label>
+            </value>
+            <value>
+                <fullName>Move Out Assigned</fullName>
+                <default>false</default>
+                <label>Move Out Assigned</label>
+            </value>
+            <value>
+                <fullName>Re-key Ready</fullName>
+                <default>true</default>
+                <label>Re-key Ready</label>
+            </value>
+            <value>
+                <fullName>Move Out Complete/Needs Final Budget</fullName>
+                <default>false</default>
+                <label>Move Out Complete/Needs Final Budget</label>
+            </value>
+            <value>
+                <fullName>Sent to Locksmith</fullName>
+                <default>false</default>
+                <label>Sent to Locksmith</label>
+            </value>
+            <value>
+                <fullName>Re-key Complete</fullName>
+                <default>false</default>
+                <label>Re-key Complete</label>
+            </value>
+            <value>
+                <fullName>Budget/Depo Finalized/Needs Vendors</fullName>
+                <default>false</default>
+                <label>Budget/Depo Finalized/Needs Vendors</label>
+            </value>
+            <value>
+                <fullName>Front-End Assigned</fullName>
+                <default>false</default>
+                <label>Front-End Assigned</label>
+            </value>
+            <value>
+                <fullName>Needs Final Budget</fullName>
+                <default>false</default>
+                <label>Needs Final Budget</label>
+            </value>
+            <value>
+                <fullName>Needs Vendors</fullName>
+                <default>false</default>
+                <label>Needs Vendors</label>
+            </value>
+            <value>
+                <fullName>Needs GC</fullName>
+                <default>false</default>
+                <label>Needs GC</label>
+            </value>
+            <value>
+                <fullName>GC Awarded</fullName>
+                <default>false</default>
+                <label>GC Awarded</label>
+            </value>
+            <value>
+                <fullName>2 Day Walk Complete</fullName>
+                <default>false</default>
+                <label>2 Day Walk Complete</label>
+            </value>
+            <value>
+                <fullName>Five Day Complete</fullName>
+                <default>false</default>
+                <label>Five Day Complete</label>
+            </value>
+            <value>
+                <fullName>QC Assigned</fullName>
+                <default>false</default>
+                <label>QC Assigned</label>
+            </value>
+            <value>
+                <fullName>QC Open</fullName>
+                <default>false</default>
+                <label>QC Open</label>
+            </value>
+            <value>
+                <fullName>QC Closed</fullName>
+                <default>false</default>
+                <label>QC Closed</label>
+            </value>
+            <value>
+                <fullName>Closed - Cancelled</fullName>
+                <default>false</default>
+                <label>Closed - Cancelled</label>
+            </value>
+            <value>
+                <fullName>Closed - Completed</fullName>
+                <default>false</default>
+                <label>Closed - Completed</label>
+            </value>
+            <value>
+                <fullName>Closed - No Rehab Needed</fullName>
+                <default>false</default>
+                <label>Closed - No Rehab Needed</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>HOLD - Personal Property</fullName>
+                <default>false</default>
+                <label>HOLD - Personal Property</label>
+            </value>
+            <value>
+                <fullName>HOLD - Utilities</fullName>
+                <default>false</default>
+                <label>HOLD - Utilities</label>
+            </value>
+            <value>
+                <fullName>HOLD - BK</fullName>
+                <default>false</default>
+                <label>HOLD - BK</label>
+            </value>
+            <value>
+                <fullName>HOLD - Deed</fullName>
+                <default>false</default>
+                <label>HOLD - Deed</label>
+            </value>
+            <value>
+                <fullName>HOLD - Occupied/TIP</fullName>
+                <default>false</default>
+                <label>HOLD - Occupied/TIP</label>
+            </value>
+            <value>
+                <fullName>HOLD - Other</fullName>
+                <default>false</default>
+                <label>HOLD - Other</label>
+            </value>
+            <value>
+                <fullName>HOLD - Permits</fullName>
+                <default>false</default>
+                <label>HOLD - Permits</label>
+            </value>
+            <value>
+                <fullName>HOLD - Pending Budget Approval</fullName>
+                <default>false</default>
+                <label>HOLD - Pending Budget Approval</label>
+            </value>
+            <value>
+                <fullName>HOLD - Notification Revoked/Cancel Utility Transfer</fullName>
+                <default>false</default>
+                <label>HOLD - Notification Revoked/Cancel Utility Transfer</label>
+            </value>
+            <value>
+                <fullName>HOLD - Sell</fullName>
+                <default>false</default>
+                <label>HOLD - Sell</label>
+            </value>
+            <value>
+                <fullName>Final Inspection Pass</fullName>
+                <default>false</default>
+                <label>Final Inspection Pass</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Features__c</fullName>
+    <externalId>false</externalId>
+    <label>Features</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bay Windows</fullName>
+                <default>false</default>
+                <label>Bay Windows</label>
+            </value>
+            <value>
+                <fullName>Boat Dock</fullName>
+                <default>false</default>
+                <label>Boat Dock</label>
+            </value>
+            <value>
+                <fullName>Built-In Shelves</fullName>
+                <default>false</default>
+                <label>Built-In Shelves</label>
+            </value>
+            <value>
+                <fullName>Clubhouse</fullName>
+                <default>false</default>
+                <label>Clubhouse</label>
+            </value>
+            <value>
+                <fullName>Covered Patio</fullName>
+                <default>false</default>
+                <label>Covered Patio</label>
+            </value>
+            <value>
+                <fullName>Crown Molding</fullName>
+                <default>false</default>
+                <label>Crown Molding</label>
+            </value>
+            <value>
+                <fullName>Fenced Backyard</fullName>
+                <default>false</default>
+                <label>Fenced Backyard</label>
+            </value>
+            <value>
+                <fullName>Finished Basement</fullName>
+                <default>false</default>
+                <label>Finished Basement</label>
+            </value>
+            <value>
+                <fullName>Fireplace</fullName>
+                <default>false</default>
+                <label>Fireplace</label>
+            </value>
+            <value>
+                <fullName>Gated Community</fullName>
+                <default>false</default>
+                <label>Gated Community</label>
+            </value>
+            <value>
+                <fullName>Granite Countertops</fullName>
+                <default>false</default>
+                <label>Granite Countertops</label>
+            </value>
+            <value>
+                <fullName>Hardwood Floors</fullName>
+                <default>false</default>
+                <label>Hardwood Floors</label>
+            </value>
+            <value>
+                <fullName>High Ceilings</fullName>
+                <default>false</default>
+                <label>High Ceilings</label>
+            </value>
+            <value>
+                <fullName>Lake</fullName>
+                <default>false</default>
+                <label>Lake</label>
+            </value>
+            <value>
+                <fullName>Parks</fullName>
+                <default>false</default>
+                <label>Parks</label>
+            </value>
+            <value>
+                <fullName>Playgrounds</fullName>
+                <default>false</default>
+                <label>Playgrounds</label>
+            </value>
+            <value>
+                <fullName>Pond</fullName>
+                <default>false</default>
+                <label>Pond</label>
+            </value>
+            <value>
+                <fullName>Recessed Lighting</fullName>
+                <default>false</default>
+                <label>Recessed Lighting</label>
+            </value>
+            <value>
+                <fullName>Screened Porch</fullName>
+                <default>false</default>
+                <label>Screened Porch</label>
+            </value>
+            <value>
+                <fullName>Stainless Steel Appliances</fullName>
+                <default>false</default>
+                <label>Stainless Steel Appliances</label>
+            </value>
+            <value>
+                <fullName>Tennis Courts</fullName>
+                <default>false</default>
+                <label>Tennis Courts</label>
+            </value>
+            <value>
+                <fullName>Tile Floors</fullName>
+                <default>false</default>
+                <label>Tile Floors</label>
+            </value>
+            <value>
+                <fullName>Walking/Biking Trails</fullName>
+                <default>false</default>
+                <label>Walking/Biking Trails</label>
+            </value>
+            <value>
+                <fullName>Wall of Windows</fullName>
+                <default>false</default>
+                <label>Wall of Windows</label>
+            </value>
+            <value>
+                <fullName>Wrap Around Balcony</fullName>
+                <default>false</default>
+                <label>Wrap Around Balcony</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

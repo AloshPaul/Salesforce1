@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alert_Vendor_Date_Time__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This will auto-populate with the date/time that the vendor alert was triggered.</inlineHelpText>
+    <label>Alert Vendor Date/Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QC_Audits_this_Week</fullName>
+    <columns>NAME</columns>
+    <columns>Rehab__c</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Date__c</columns>
+    <columns>QC_Auditor__c</columns>
+    <columns>Num_Deficiencies_PTL__c</columns>
+    <columns>Num_Deficiencies_Punchlist__c</columns>
+    <columns>Num_Deficiencies_Judgement__c</columns>
+    <columns>of_Deficiencies_Total__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>QC Audits this Week</label>
+</ListView>

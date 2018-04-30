@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Status_Bucket__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Renewal_Status__c ,
+"Open" , "Open",
+"Lease Renewed", "Lease Renewed",
+"Not Renewed - Notice", "Not Renewed",
+"Not Renewed - Moved Out", "Not Renewed",
+"Not Renewed - Transfer to IH Property", "Transfer",
+"Lease Terminated (Eviction/Skip/Etc.)", "Not Eligible",
+"Month-to-Month", "Month-to-Month",
+"Eviction in Process", "Not Eligible",
+NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Renewal Status Bucket</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

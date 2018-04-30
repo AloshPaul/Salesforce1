@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Item_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Item Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Technician Service Item</fullName>
+                <default>false</default>
+                <label>Technician Service Item</label>
+            </value>
+            <value>
+                <fullName>Vendor Service Item</fullName>
+                <default>false</default>
+                <label>Vendor Service Item</label>
+            </value>
+            <value>
+                <fullName>Rescheduled Technician Service Item</fullName>
+                <default>false</default>
+                <label>Rescheduled Technician Service Item</label>
+            </value>
+            <value>
+                <fullName>Vendor Service Item via Technician</fullName>
+                <default>false</default>
+                <label>Vendor Service Item via Technician</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

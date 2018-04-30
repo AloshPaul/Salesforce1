@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide as much detail about the issue or new feature requested as possible.  For faster resolution, it is critical you describe, where possible, the tab, layout section header and field name pertinent to your request.</inlineHelpText>
+    <label>Description</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>20</visibleLines>
+</CustomField>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field was retired effective 11/21/2014.  Its historical values will be be retained, and the field will remain visible on the layout for the time being.  Please use the "Source" field going forward.</inlineHelpText>
+    <label>Source (Historical)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application</fullName>
+                <default>false</default>
+                <label>Application</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>DriveBy-Curb Appeal</fullName>
+                <default>false</default>
+                <label>DriveBy-Curb Appeal</label>
+            </value>
+            <value>
+                <fullName>DriveBy-Family Lives in Area</fullName>
+                <default>false</default>
+                <label>DriveBy-Family Lives in Area</label>
+            </value>
+            <value>
+                <fullName>DriveBy-Lives/Works in Area</fullName>
+                <default>false</default>
+                <label>DriveBy-Lives/Works in Area</label>
+            </value>
+            <value>
+                <fullName>IH Website</fullName>
+                <default>false</default>
+                <label>IH Website</label>
+            </value>
+            <value>
+                <fullName>INT - Community Custom Site</fullName>
+                <default>false</default>
+                <label>INT - Community Custom Site</label>
+            </value>
+            <value>
+                <fullName>INT - Craigslist.org</fullName>
+                <default>false</default>
+                <label>INT - Craigslist.org</label>
+            </value>
+            <value>
+                <fullName>INT - Facebook.com</fullName>
+                <default>false</default>
+                <label>INT - Facebook.com</label>
+            </value>
+            <value>
+                <fullName>INT - Google</fullName>
+                <default>false</default>
+                <label>INT - Google</label>
+            </value>
+            <value>
+                <fullName>INT - Homes.com</fullName>
+                <default>false</default>
+                <label>INT - Homes.com</label>
+            </value>
+            <value>
+                <fullName>INT - Hotpads.com</fullName>
+                <default>false</default>
+                <label>INT - Hotpads.com</label>
+            </value>
+            <value>
+                <fullName>INT - IH Property Website</fullName>
+                <default>false</default>
+                <label>INT - IH Property Website</label>
+            </value>
+            <value>
+                <fullName>INT - IH Website</fullName>
+                <default>false</default>
+                <label>INT - IH Website</label>
+            </value>
+            <value>
+                <fullName>INT - MLS.com</fullName>
+                <default>false</default>
+                <label>INT - MLS.com</label>
+            </value>
+            <value>
+                <fullName>INT - Other</fullName>
+                <default>false</default>
+                <label>INT - Other</label>
+            </value>
+            <value>
+                <fullName>INT - Realtor.com</fullName>
+                <default>false</default>
+                <label>INT - Realtor.com</label>
+            </value>
+            <value>
+                <fullName>INT - Rent.com</fullName>
+                <default>false</default>
+                <label>INT - Rent.com</label>
+            </value>
+            <value>
+                <fullName>INT - Trulia.com</fullName>
+                <default>false</default>
+                <label>INT - Trulia.com</label>
+            </value>
+            <value>
+                <fullName>INT - YellowPages.com</fullName>
+                <default>false</default>
+                <label>INT - YellowPages.com</label>
+            </value>
+            <value>
+                <fullName>INT - Zillow.com</fullName>
+                <default>false</default>
+                <label>INT - Zillow.com</label>
+            </value>
+            <value>
+                <fullName>MobileApp</fullName>
+                <default>false</default>
+                <label>MobileApp</label>
+            </value>
+            <value>
+                <fullName>Online</fullName>
+                <default>false</default>
+                <label>Online</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>OUT - Flyer</fullName>
+                <default>false</default>
+                <label>OUT - Flyer</label>
+            </value>
+            <value>
+                <fullName>OUT - Flyers</fullName>
+                <default>false</default>
+                <label>OUT - Flyers</label>
+            </value>
+            <value>
+                <fullName>Portal</fullName>
+                <default>false</default>
+                <label>Portal</label>
+            </value>
+            <value>
+                <fullName>Quick Resident</fullName>
+                <default>false</default>
+                <label>Quick Resident</label>
+            </value>
+            <value>
+                <fullName>REF - Former Resident</fullName>
+                <default>false</default>
+                <label>REF - Former Resident</label>
+            </value>
+            <value>
+                <fullName>REF - In-house Transfer</fullName>
+                <default>false</default>
+                <label>REF - In-house Transfer</label>
+            </value>
+            <value>
+                <fullName>REF - Local Business</fullName>
+                <default>false</default>
+                <label>REF - Local Business</label>
+            </value>
+            <value>
+                <fullName>REF - Prospective Employee</fullName>
+                <default>false</default>
+                <label>REF - Prospective Employee</label>
+            </value>
+            <value>
+                <fullName>REF - Prospective Resident</fullName>
+                <default>false</default>
+                <label>REF - Prospective Resident</label>
+            </value>
+            <value>
+                <fullName>REF - Realtor</fullName>
+                <default>false</default>
+                <label>REF - Realtor</label>
+            </value>
+            <value>
+                <fullName>REF - Resident</fullName>
+                <default>false</default>
+                <label>REF - Resident</label>
+            </value>
+            <value>
+                <fullName>REF - Riverstone Associate</fullName>
+                <default>false</default>
+                <label>REF - Riverstone Associate</label>
+            </value>
+            <value>
+                <fullName>RENTCafe</fullName>
+                <default>false</default>
+                <label>RENTCafe</label>
+            </value>
+            <value>
+                <fullName>Rently</fullName>
+                <default>false</default>
+                <label>Rently</label>
+            </value>
+            <value>
+                <fullName>Sign</fullName>
+                <default>false</default>
+                <label>Sign</label>
+            </value>
+            <value>
+                <fullName>Signs - Banner</fullName>
+                <default>false</default>
+                <label>Signs - Banner</label>
+            </value>
+            <value>
+                <fullName>Signs - Billboard</fullName>
+                <default>false</default>
+                <label>Signs - Billboard</label>
+            </value>
+            <value>
+                <fullName>Signs - Construction</fullName>
+                <default>false</default>
+                <label>Signs - Construction</label>
+            </value>
+            <value>
+                <fullName>Signs - Monument Sign</fullName>
+                <default>false</default>
+                <label>Signs - Monument Sign</label>
+            </value>
+            <value>
+                <fullName>Tenant Referral</fullName>
+                <default>false</default>
+                <label>Tenant Referral</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+            <value>
+                <fullName>TIP from Purchase</fullName>
+                <default>false</default>
+                <label>TIP from Purchase</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

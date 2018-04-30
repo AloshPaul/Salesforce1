@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Must_be_Closed</fullName>
+    <active>false</active>
+    <description>If Closed Date field is populated, Status must be set to Closed.</description>
+    <errorConditionFormula>AND( 
+RecordType.Name  &lt;> 'SF Request',
+NOT(ISPICKVAL(Status__c, "closed")), 
+NOT(ISBLANK(Closed_Date__c))
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Must be set to Closed if Closed Date is populated.</errorMessage>
+</ValidationRule>

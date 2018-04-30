@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Call_Service_Items1</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>NAME</columns>
+    <columns>Service_Request__c</columns>
+    <columns>After_Hours_Service_Item__c</columns>
+    <columns>Brief_Description__c</columns>
+    <columns>Assignment__c</columns>
+    <columns>Service_Item_Status__c</columns>
+    <columns>Vendor__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>SItem_Actual_Closed_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>After_Hours_Service_Item__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>My_Region__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/10/2014 12:00 AM</value>
+    </filters>
+    <label>On Call Service Items</label>
+</ListView>

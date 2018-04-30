@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Deposit_Required__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If this application was approved with conditions, what is the additional deposit amount required?</inlineHelpText>
+    <label>Additional Security Deposit Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( TEXT ( Worst_PA_Survey__c ) = "5", IMAGE("/img/samples/rating1.gif", "Yes", 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = "4", IMAGE("/img/samples/rating2.gif", "Yes", 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = "3", IMAGE("/img/samples/rating3.gif", "Yes", 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = "2", IMAGE("/img/samples/rating4.gif", "Yes", 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = "1", IMAGE("/img/samples/rating5.gif", "Yes", 12, 12), 
+"" ) ) ) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Survey</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

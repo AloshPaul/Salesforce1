@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_PTL_To_GC</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send PTL To GC</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Include the required js files 
+{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/23.0/apex.js")} 
+{!REQUIRESCRIPT('/resource/' &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),':',''),'-',''),' ',''),10) &amp; '000/BlockUI/jquery.min.js')} 
+{!REQUIRESCRIPT('/resource/' &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),':',''),'-',''),' ',''),10) &amp; '000/BlockUI/jquery-ui.js')} 
+{!REQUIRESCRIPT('/resource/' &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),':',''),'-',''),' ',''),10) &amp; '000/BlockUI/jquery.blockUI.js')} 
+
+j$ = jQuery.noConflict(); 
+j$.blockUI({ 
+css: { 
+border: 'none', 
+padding: '15px', 
+backgroundColor: '#000', 
+'-webkit-border-radius': '10px', 
+'-moz-border-radius': '10px', 
+opacity: .5, 
+color: '#fff' 
+}, 
+message : 'Sending Email... this may take a moment.', 
+onBlock: function() { 
+try { 
+var runSearchStatus = sforce.apex.execute("RehabService","emailGCServiceForHDBudgetWalk", 
+{Id:'{!Rehab__c.Id}'}); 
+
+alert(runSearchStatus); 
+} 
+catch(e) { 
+alert(e); 
+} 
+} 
+}); 
+j$.unblockUI();</url>
+</WebLink>

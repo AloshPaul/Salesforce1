@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Leased_Requires_Reason</fullName>
+    <active>true</active>
+    <description>If the showing resulted in Not Leased, Not Leased Reason is required.</description>
+    <errorConditionFormula>ISPICKVAL( Showing_Result__c , "Not Leased")  &amp;&amp;
+ISBLANK(TEXT(Not_Leased_Reason__c ))</errorConditionFormula>
+    <errorDisplayField>Not_Leased_Reason__c</errorDisplayField>
+    <errorMessage>If showing resulted in Not Leased, Not Leased Reason is required.</errorMessage>
+</ValidationRule>

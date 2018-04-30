@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Assigned_Phone__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Listing_Agent__c)),  Listing_Agent__r.MobilePhone ,
+IF(NOT(ISBLANK( X3rd_Party_Broker__c )),  X3rd_Party_Broker__r.MobilePhone ,
+null))</formula>
+    <label>Agent Assigned Phone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

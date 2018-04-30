@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nick__c</fullName>
+    <externalId>false</externalId>
+    <label>Nick</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approval needed</fullName>
+                <default>false</default>
+                <label>Approval needed</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Not Approved</fullName>
+                <default>false</default>
+                <label>Not Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

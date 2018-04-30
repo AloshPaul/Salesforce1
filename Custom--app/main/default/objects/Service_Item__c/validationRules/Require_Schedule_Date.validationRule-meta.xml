@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Schedule_Date</fullName>
+    <active>true</active>
+    <description>When Assignment = Technician, make Schedule Date required</description>
+    <errorConditionFormula>ISPICKVAL(Assignment__c , "Technician") 
+&amp;&amp; 
+ISBLANK( Schedule_Date__c )</errorConditionFormula>
+    <errorDisplayField>Schedule_Date__c</errorDisplayField>
+    <errorMessage>Please select a Schedule Date</errorMessage>
+</ValidationRule>

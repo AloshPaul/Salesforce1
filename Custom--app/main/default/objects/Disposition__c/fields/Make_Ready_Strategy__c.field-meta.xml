@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Make_Ready_Strategy__c</fullName>
+    <externalId>false</externalId>
+    <label>Make Ready Strategy</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Flip Level Rehab</fullName>
+                <default>false</default>
+                <label>Flip Level Rehab</label>
+            </value>
+            <value>
+                <fullName>Meet FHA lending requirements</fullName>
+                <default>false</default>
+                <label>Meet FHA lending requirements</label>
+            </value>
+            <value>
+                <fullName>As-Is</fullName>
+                <default>false</default>
+                <label>As-Is</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

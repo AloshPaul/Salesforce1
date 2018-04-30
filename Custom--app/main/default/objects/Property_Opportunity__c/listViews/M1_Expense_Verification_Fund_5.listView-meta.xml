@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M1_Expense_Verification_Fund_5</fullName>
+    <columns>NAME</columns>
+    <columns>Stage__c</columns>
+    <columns>Region__c</columns>
+    <columns>Fund__c</columns>
+    <columns>Acquisition_Overhead__c</columns>
+    <columns>Rehab_Overhead__c</columns>
+    <columns>Platform_Buildup_Allocation__c</columns>
+    <columns>Initial_Lease_up_Cost_Est_UW__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Fund__c</field>
+        <operation>equals</operation>
+        <value>05</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Acquired,Active - Bid Placed,Active - In Escrow</value>
+    </filters>
+    <label>M1 Expense Verification Fund 5</label>
+    <sharedTo>
+        <group>Asset_Mgmt_Reporting</group>
+    </sharedTo>
+</ListView>

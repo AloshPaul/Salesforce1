@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Parent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>For properties that are associated with both a primary HOA and a master community, use this field to associate the property directly to the record for the HOA master.  If it is not already in the system you can click the "Companies" tab.</inlineHelpText>
+    <label>HOA (Master Community)</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Residences (HOA Master Community)</relationshipLabel>
+    <relationshipName>Residences_HOA_Parent</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jax_ORL_NO_LEADS_last_10_days</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>RevEx_Status__c</columns>
+    <columns>NAME</columns>
+    <columns>Leasing_Mgr_Visit_Comments__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>DOM__c</columns>
+    <columns>Previous_Lease_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Agent_Rent_Opinion__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>X13_24_Month_Rent__c</columns>
+    <columns>Leads_Sent_to_Agent_Last_10_Days__c</columns>
+    <columns>Showings_Last_10_Days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Jacksonville,Orlando</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>Leads_Sent_to_Agent_Last_10_Days__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RevEx_Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>^^Jax/ORL- NO LEADS last 10 days</label>
+</ListView>

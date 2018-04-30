@@ -1,0 +1,153 @@
+<apex:page controller="IntranetFormListAdminController">
+<script type="text/javascript" src="{!$Resource.IntranetDesign}/js/jquery-1.8.2.min.js"></script>
+	<style>
+		.pagination {
+    	font-size: 80%;
+    }
+        
+    .pagination a {
+    	text-decoration: none;
+      border: solid 1px black;
+      color: black;
+     }
+       
+     .pagination a, .pagination span {
+       display: block;
+       float: left;
+       padding: 0.3em 0.5em;
+       margin-right: 5px;
+       margin-bottom: 5px;
+     }
+     
+     .pagination .current {
+       background: black;
+       color: #fff;
+       border: solid 1px #AAE;
+       text-decoration:none;
+     }
+     
+    .pagination .notPrevious, .pagination .notNext{
+      color:#999;
+      border-color:#999;
+      background:#fff;
+      text-decoration:none;
+    }
+    .next {
+    	text-decoration:none;
+    }     
+    .next:hover{
+    	text-decoration:none;
+    }      
+    .prev {
+      text-decoration:none;
+    }
+    .prev:hover {
+      text-decoration:none;
+    }
+    a:hover{
+    	text-decoration: none;
+    }
+	</style>
+	<script>
+		var currentIndex = 1;
+    var numberOfLinks = 1;
+    function setCurrentPage(index) {
+        if(currentIndex != index) {
+            currentIndex = parseInt(index);
+            getpage(currentIndex);
+        }
+    }
+    function next() {
+        if(currentIndex < numberOfLinks) {
+        currentIndex = currentIndex + 1;
+        getpage(currentIndex);
+        } 
+    }
+    function previous() {
+        if(currentIndex > 1) {
+         currentIndex = currentIndex - 1;
+         getpage(currentIndex);
+        } 
+    }
+    function setFormPaginationStyle(cIndex, noLinks) {
+        currentIndex = cIndex;
+        numberOfLinks = noLinks;
+       if(currentIndex == numberOfLinks) {
+           $("#nextDown").removeClass("next").addClass("notNext");
+       } else {
+           $("#nextDown").removeClass("notNext").addClass("next");
+       }
+       if(currentIndex == 1) {
+           $("#previousDown").removeClass("prev").addClass("notPrevious");
+       } else {
+           $("#previousDown").removeClass("notPrevious").addClass("prev");
+       }
+    }
+    function deleteRecord(indx){
+     if(confirm("Are you sure you want to delete this Form?")){
+        deleteFormRecord(indx);
+     }
+    } 
+	</script>
+	<apex:form >
+		<apex:actionFunction name="getpage" action="{!getList}" rerender="formTable" status="status"> 
+    	<apex:param value="" assignTo="{!selectedPageNumber}" name="cPageNumber" />
+    </apex:actionFunction>
+		<apex:actionfunction name="deleteFormRecord" action="{!deleteForm}" rerender="formTable,error" status="status">
+    	<apex:param name="deleteIndex" assignTo="{!deleteFormIndex}" value="" />
+		</apex:actionfunction>
+		<apex:pageBlock Title="Form List">
+	   <apex:PageBlockButtons location="top">
+	     <apex:commandButton value="New" action="{!createNewForm}"/>
+	   </apex:PageBlockButtons>
+	   <apex:pageMessages id="error"/>
+	   <apex:outputPanel id="formTable" >
+       <apex:outputPanel rendered="{!formList.size > 0}" style="top:25px;"> 
+       		 <apex:variable var="index" value="{!0}"/>
+           <apex:pageBlockTable value="{!formList}" var="form" style="margin-top: 20px;">
+           		<apex:column headerValue="Action">
+                  <a href="/apex/IntranetCreateFormList?Id={!form.Id}" style="color:#1797C0" Target="_self">Edit</a>&nbsp; 
+                  |&nbsp; <a href="javascript:void(0);" style="color:#1797C0" onclick="deleteRecord({!index});return false;">Del</a>    
+              </apex:column>
+              <apex:column headerValue="Form Name">
+                  <a href="/apex/IntranetFormListDetail?formId={!form.Id}&isEdit=false" target="_self" style="word-break: break-all;">{!form.Name}</a>
+                  <apex:variable var="index" value="{!index + 1}"/>
+              </apex:column>
+              <apex:column headerValue="Active" value="{!form.Active__c}"/>
+           </apex:pageBlockTable>
+           <table width="100%" style="margin-top: 8px;">
+              <tr>
+                <td>&nbsp;</td>
+              <td style="float: right;vertical-align: middle;font-size: 15px;">
+                  <div id="PaginationDown" class="pagination">
+                      <a href="#" class="notPrevious" id="previousDown" onClick="previous();return false;">Previous</a>
+                      <span style="{!IF(formPagination.isMorePrevious,'display:block;font-size: 14px;color: #5E82A3;','display:none;')}"><b>....</b></span>
+                      <apex:repeat value="{!formPagination.listOfLinks}" var="number" > 
+                          <a href="#" style="{!IF(number == selectedPageNumber,'text-decoration: none;','')}" 
+                              class="{!IF(number == selectedPageNumber,'current','')}" onClick="setCurrentPage('{!number}');return false;">{!number}</a>
+                      </apex:repeat>
+                      <span style="{!IF(formPagination.isMoreNext,'display:block;font-size: 14px;color: #5E82A3;','display:none;')}"><b>....</b></span>
+                      <a id="nextDown" href="#" class="next" onClick="next();return false;">Next</a>
+                  </div>
+              </td>
+              </tr>
+          </table>
+          <script>setFormPaginationStyle({!selectedPageNumber},{!formPagination.totalPage});</script>   
+          </apex:outputPanel>
+       </apex:outputPanel>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:outputpanel >
+    <apex:actionstatus id="status">
+  		<apex:facet name="start">
+      <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;
+           height: 100%;opacity:0.65;width:100%;"> 
+	      <div class="waitingHolder" style="top: 50%; width: 100px;">
+	      	<img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+	        <span class="waitingDescription">Please Wait...</span>
+	      </div>
+    	</div>
+  		</apex:facet>
+   	</apex:actionstatus>
+  </apex:outputpanel>
+</apex:page>

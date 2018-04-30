@@ -1,0 +1,217 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Rajesh Shah    
+  *
+  *    Created Date   :    08-01-2013
+  *
+  *    Revision Log   :    V1.0   
+  *                         
+**/
+-->
+<apex:page standardController="Listing__c" recordSetVar="unused" sidebar="false">
+    
+        <!--page Form-->
+        <apex:form >
+        
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+
+       <!--page block-->
+       <apex:pageBlock >
+           
+           <!--page Message-->
+           <apex:pagemessages ></apex:pagemessages>
+           
+               <!--page buttons--> 
+               <apex:pageBlockButtons >
+                   <apex:commandButton value="Save" action="{!save}"/>
+                   <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+               </apex:pageBlockButtons>
+               
+               <!--Fields for Mass Edit Operation-->
+               <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                
+                <apex:column headerValue="Listing Name">
+                    <apex:outputField value="{!a.Name}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Yardi Property Code">
+                    <apex:outputField value="{!a.Yardi_Property_Code__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Street Address">
+                    <apex:outputField value="{!a.Address__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="City">
+                    <apex:outputField value="{!a.City__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent Ready Date">
+                    <apex:inputField value="{!a.Rent_Ready_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent Ready Comments">
+                    <apex:inputField value="{!a.Rent_Ready_Comments__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Listing Agent">
+                    <apex:inputField value="{!a.Listing_Agent__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Status">
+                    <apex:inputField value="{!a.Status__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent@UW">
+                    <apex:inputField value="{!a.Rent_UW__c}"/>
+                </apex:column>
+                                
+                <apex:column headerValue="Market (Asking) Rent">
+                    <apex:inputField value="{!a.Market_Rent__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="CMA Rent">
+                    <apex:inputField value="{!a.CMA_Rent__c}"/>
+                </apex:column>
+                 
+                <apex:column headerValue="CMA Comments">
+                    <apex:inputField value="{!a.CMA_Comments__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Agent Rent Opinion">
+                    <apex:inputField value="{!a.Agent_Rent_Opinion__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="Agent Comments - Rent">
+                    <apex:inputField value="{!a.AgentCommentRent__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="Agent's Aged Inventory Assessment">
+                    <apex:inputField value="{!a.Agent_Inventory_Comments__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="Last Rent Adjustment Date">
+                    <apex:inputField value="{!a.Last_Rent_Adjustment_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Sign Scheduled">
+                    <apex:inputField value="{!a.Sign_Scheduled__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Sign Vendor">
+                    <apex:inputField value="{!a.Sign_Vendor__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Sign Installed Date">
+                    <apex:inputField value="{!a.Sign_Installed_Date__c}"/>
+                </apex:column>                 
+                
+                <apex:column headerValue="Sign Removal Scheduled">
+                    <apex:inputField value="{!a.Sign_Removal_Scheduled__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Sign Removal Confirmed">
+                    <apex:inputField value="{!a.Sign_Removal_Confimed__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Sign Comments">
+                    <apex:inputField value="{!a.Sign_Comments__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Romance Paragraph Complete Date">
+                    <apex:inputField value="{!a.Romance_Paragraph_Complete_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Romance Paragraph">
+                    <apex:inputField value="{!a.Romance_Paragraph__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent Cafe Photos Date">
+                    <apex:inputField value="{!a.Rent_Cafe_Photos_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent Cafe Amenities Date">
+                    <apex:inputField value="{!a.Rent_Cafe_Amenities__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent Cafe Listed Date">
+                    <apex:inputField value="{!a.Rent_Cafe_Listed__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Rent Cafe Listing">
+                    <apex:inputField value="{!a.Rent_Cafe_Listing__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="MLS Listed">
+                    <apex:inputField value="{!a.MLS_Listed__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="MLS Listing #">
+                    <apex:inputField value="{!a.MLS_Listing__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="MLS Status">
+                    <apex:inputField value="{!a.MLS_Status__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Craig's List Post">
+                    <apex:inputField value="{!a.Craig_List_Post__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Craig's List Listing #1">
+                    <apex:inputField value="{!a.Craig_s_List_Listing_1__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="Craig's List Listing #2">
+                    <apex:inputField value="{!a.Craig_s_List_Listing_2__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="Craig's List Description">
+                    <apex:inputField value="{!a.Craig_s_List_Description__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="Craig's List Comments">
+                    <apex:inputField value="{!a.Craig_s_List_Comments__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="Social Media Sent Date">
+                    <apex:inputField value="{!a.Social_Media_Sent_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Social Media Paragraph">
+                    <apex:inputField value="{!a.Social_Media_Paragraph__c}"/>
+                </apex:column>    
+                
+                <apex:column headerValue="Promotion Incentive ">
+                    <apex:inputField value="{!a.Promotion__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Promotion Start">
+                    <apex:inputField value="{!a.Promotion_Start_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Promotion End">
+                    <apex:inputField value="{!a.Promotion_End_Date__c}"/>
+                </apex:column>                                
+                        
+                <apex:column headerValue="Marketing Notes">
+                    <apex:inputField value="{!a.Marketing_Notes__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="Send to Listing Agent">
+                    <apex:inputField value="{!a.Send_to_Listing_Agent__c}"/>
+                </apex:column>               
+              
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZBIDDER_Asset_Mgmt_Scrub</fullName>
+    <columns>NAME</columns>
+    <columns>Residence__c</columns>
+    <columns>APN__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Reporting_Date__c</columns>
+    <columns>Approved_from_Acquisition_Team_Manager__c</columns>
+    <columns>Approved_from_Asset_Management_Team__c</columns>
+    <columns>Pipeline_Add_Date__c</columns>
+    <columns>IsConverted__c</columns>
+    <columns>Acquisition_Reporting__c</columns>
+    <columns>Acquisition_Reporting_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>AZB_IH_Win_Date__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.AZ_Bidder</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Acquired,Active - Bid Placed</value>
+    </filters>
+    <label>AZBIDDER Asset Mgmt. Scrub</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

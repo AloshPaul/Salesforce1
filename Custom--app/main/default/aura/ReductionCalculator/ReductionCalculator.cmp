@@ -1,0 +1,71 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global" controller="reductionCalculatorCtrler">
+	<aura:attribute name="recordId" type="String" />
+    <aura:attribute name="marketValue" type="Integer" default=""/>
+    <aura:attribute name="ExGrsMonRent" type="Integer" default=""/>
+    <aura:attribute name="propTax" type="Integer" default=""/>
+    <aura:attribute name="monHOA" type="Integer" default=""/>
+    <aura:attribute name="clsTitCost" type="Integer" default="0"/>
+    <aura:attribute name="CostBasis" type="Integer" default="0"/>
+    <aura:attribute name="capRate" type="Integer" default="0"/>
+    <aura:attribute name="proForma" type="String" default="0"/>
+    <aura:attribute name="costBasMv" type="String" default="0"/>
+    <aura:attribute name="costBasDis" type="String" default="0"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+   
+    
+	<aura:attribute name="toggleSpinner" type="boolean" default="false"/>
+    
+   <div class="demo-only slds-is-animated" style="max-width: 1700px; background: rgb(176, 193, 218); padding: 1rem;"> 
+    <article class="slds-card">
+        <div class="slds-grid slds-einstein-header slds-card__header">
+       	 <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+            	<div class="slds-media__body">
+               		 <h2 class="slds-truncate" title=" Reduction Calculator">
+                  	 	 <span class="slds-text-heading_medium">&nbsp;&nbsp;<b>Reduction Calculator</b> </span>
+               		 </h2>
+           		 </div>
+            	</div>
+            <div class="slds-size_1-of-4 slds-medium-size_1-of-3"></div>
+            </header>
+        </div>
+        <aura:if isTrue="{!v.toggleSpinner}">
+         <div class="slds-spinner_container">
+          <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_delayed">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+          </div>
+        </div>
+         </aura:if> 	
+        
+        
+            <div class="slds-box slds-theme_alert-texture">
+                <lightning:input type="number" name="mv_uw" label="Market Value @ UW" value="{!v.marketValue}" formatter="currency" step="0"/>
+                <lightning:input type="number" name="rent" label="Expected Gross Monthly Rent @ UW" value="{!v.ExGrsMonRent}" formatter="currency" step="0"/>
+                <lightning:input type="number" name="Property_tax" label="Property Tax Est @ UW" value="{!v.propTax}" formatter="currency" step="0"/>
+                <lightning:input type="number" name="month_Hoa" label="Montly HOA @ UW" value="{!v.monHOA}" formatter="currency" step="0"/>
+                
+                
+                <!--<lightning:input type="number" name="close_title" label="Closing/Title/Acq Costs" value="{!v.clsTitCost}" formatter="currency" step="0" disabled="True"/>-->
+            	<lightning:input type="number" name="cost_basis" label="Cost Basis @ UW" value="{!v.CostBasis}" formatter="currency" step="0" disabled="True"/>
+                <lightning:input type="number" name="pro_Forma" label="Pro-forma NOI" value="{!v.proForma}" formatter="currency" step="0" disabled="True"/>
+                <lightning:input type="number" name="cost_bas_mV" label="Cost Basis as % of MV" value="{!v.costBasMv}" formatter="percent-fixed" step="0.1" disabled="True"/>
+                <lightning:input type="number" name="cost_bas_dis" label="Cost Basis Discount to MV" value="{!v.costBasDis}" formatter="percent-fixed" step="0.1" disabled="True"/>
+                <lightning:input type="number" name="cap_rate" label="Cap Rate @ UW" value="{!v.capRate}" formatter="percent-fixed" step="0.1" disabled="True"/>
+                <br/>
+                <lightning:button label="Calculate" variant="success"
+                        onclick="{!c.calculateReduction}"/>
+                <lightning:button label="Update" variant="brand"
+                        onclick="{!c.updateReduction}"/>
+    
+        </div>
+
+	</article>
+   
+  </div> 
+
+
+        
+</aura:component>

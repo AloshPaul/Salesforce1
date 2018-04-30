@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_Contractor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is read only field &amp; it will be populated from Rehab.</description>
+    <externalId>false</externalId>
+    <label>General Contractor</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Application Tracking (General Contractor)</relationshipLabel>
+    <relationshipName>Application_Tracking2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

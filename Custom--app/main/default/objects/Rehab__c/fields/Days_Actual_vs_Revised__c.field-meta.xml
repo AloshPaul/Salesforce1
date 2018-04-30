@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Actual_vs_Revised__c</fullName>
+    <externalId>false</externalId>
+    <formula>Office_Signoff_Date__c  -  GC_Completion_Date_Revised__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This calculation represents the # days between the Actual Completion date (Office Sign-Off Date) and the GC Revised Completion Date.</inlineHelpText>
+    <label># Days Actual vs. Revised</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

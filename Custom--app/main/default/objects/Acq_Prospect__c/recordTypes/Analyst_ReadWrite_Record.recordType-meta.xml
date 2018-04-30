@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Analyst_ReadWrite_Record</fullName>
+    <active>true</active>
+    <label>Analyst ReadWrite Record</label>
+    <picklistValues>
+        <picklist>Bid_Type__c</picklist>
+        <values>
+            <fullName>REO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Sale</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HOA_Y_N__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IH_Stage__c</picklist>
+        <values>
+            <fullName>Cancelled%2FDead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupied_Status_Acquisition__c</picklist>
+        <values>
+            <fullName>Occupied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchase Rented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vacant</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupied_Status_Diligence__c</picklist>
+        <values>
+            <fullName>Seller Occupied</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Tenant Occupied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vacant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RPC_Structure_Quality__c</picklist>
+        <values>
+            <fullName>Above Average</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Average</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Below Average</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excellent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Budget Walk Ordered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled %2F Dead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moved to Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underwriting Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

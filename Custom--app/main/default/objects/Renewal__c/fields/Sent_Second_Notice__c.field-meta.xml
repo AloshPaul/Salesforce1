@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_Second_Notice__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Second_Contact_Notice_Sent__c )), TRUE, FALSE)</formula>
+    <label>Sent 90-Day Letter</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

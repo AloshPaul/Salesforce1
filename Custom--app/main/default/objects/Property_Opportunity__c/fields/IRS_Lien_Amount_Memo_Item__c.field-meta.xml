@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRS_Lien_Amount_Memo_Item__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the IRS lien on the individual as opposed to the property.  This amount is not factored into underwriting.</inlineHelpText>
+    <label>IRS Lien Amount (Memo Item)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

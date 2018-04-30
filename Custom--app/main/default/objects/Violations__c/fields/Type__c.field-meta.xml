@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Animals</fullName>
+                <default>false</default>
+                <label>Animals</label>
+            </value>
+            <value>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+                <label>Architectural</label>
+            </value>
+            <value>
+                <fullName>Basketball Hoops</fullName>
+                <default>false</default>
+                <label>Basketball Hoops</label>
+            </value>
+            <value>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+                <label>Exterior Maintenance</label>
+            </value>
+            <value>
+                <fullName>Lawn &amp; Weeds</fullName>
+                <default>false</default>
+                <label>Lawn &amp; Weeds</label>
+            </value>
+            <value>
+                <fullName>Nuisance</fullName>
+                <default>false</default>
+                <label>Nuisance</label>
+            </value>
+            <value>
+                <fullName>Permits</fullName>
+                <default>false</default>
+                <label>Permits</label>
+            </value>
+            <value>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+                <label>Rental Inspections</label>
+            </value>
+            <value>
+                <fullName>Signs</fullName>
+                <default>false</default>
+                <label>Signs</label>
+            </value>
+            <value>
+                <fullName>Snow/Ice</fullName>
+                <default>false</default>
+                <label>Snow/Ice</label>
+            </value>
+            <value>
+                <fullName>Tenant Registration</fullName>
+                <default>false</default>
+                <label>Tenant Registration</label>
+            </value>
+            <value>
+                <fullName>Trash</fullName>
+                <default>false</default>
+                <label>Trash</label>
+            </value>
+            <value>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+                <label>Trash Cans</label>
+            </value>
+            <value>
+                <fullName>Trees</fullName>
+                <default>false</default>
+                <label>Trees</label>
+            </value>
+            <value>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+                <label>Vehicles</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

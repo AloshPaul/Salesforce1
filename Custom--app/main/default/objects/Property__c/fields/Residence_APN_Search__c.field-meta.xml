@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residence_APN_Search__c</fullName>
+    <description>I added this lookup formula to Residence since we are close to running out of Lookup references from Property__c object.  This field may be deleted any time after another lookup to Residence is added.</description>
+    <externalId>false</externalId>
+    <formula>Residence__r.APN_Search__c</formula>
+    <label>Residence APN Search</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

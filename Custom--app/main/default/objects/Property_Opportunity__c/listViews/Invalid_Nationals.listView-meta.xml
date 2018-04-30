@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invalid_Nationals</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Region_Lookup__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>AZB_User__c</columns>
+    <columns>Property_Zip_Code__c</columns>
+    <columns>Prospect__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>National</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.AZ_Bidder</value>
+    </filters>
+    <label>Invalid Nationals</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

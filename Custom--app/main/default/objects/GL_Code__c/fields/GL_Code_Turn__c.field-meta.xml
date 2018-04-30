@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GL_Code_Turn__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>GL Code Turn</label>
+    <referenceTo>GL_Code__c</referenceTo>
+    <relationshipLabel>GL Codes (GL Code Turn)</relationshipLabel>
+    <relationshipName>GL_Codes_Turn</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

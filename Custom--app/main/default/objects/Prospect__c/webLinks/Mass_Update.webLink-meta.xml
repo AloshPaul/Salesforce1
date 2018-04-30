@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mass_Update</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Mass Update</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT("/soap/ajax/20.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/20.0/apex.js")}
+
+var records = {!GETRECORDIDS($ObjectType.Prospect__c)};
+var strIDs='';
+if (records[0] == null)
+{
+alert('Please select a record');
+}
+else
+{
+for (var n=0; n&lt;records.length; n++)
+{
+if(strIDs == '')
+strIDs = records[n];
+else
+strIDs = strIDs + "," + records[n] ;
+}
+window.location.href = '/apex/MassManager__MassUpdate?selectedRecords='+strIDs + '&amp;selectedObject=Prospect__c&amp;selectedFields=Residence__c, APN__c, Property_Street__c, Region__c, Back_Taxes_Est_UW__c, Bid_Service_Expense__c, CFK_Est_UW__c, Contract_Price__c, Escrow_Expected_Close_Date__c, Escrow_Opened_Date__c, Inspection_Period_End_Date__c, Liens_Fines_Est_UW__c, Market_Value_UW__c, Max_Bid_Price__c, Other_Closing_Costs_Est_UW__c, Previous_High_Date__c, Previous_High_Value__c, Rehab_Budget_Est_UW__c, Replacement_Cost_PSF_UW_OLD__c, Title_Policy_Cost_Est_UW__c &amp;retURL='+ window.location.href;
+}</url>
+</WebLink>

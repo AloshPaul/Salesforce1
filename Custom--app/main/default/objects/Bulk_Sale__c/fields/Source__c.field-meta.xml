@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Deal Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank</fullName>
+                <default>false</default>
+                <label>Bank</label>
+            </value>
+            <value>
+                <fullName>Broker</fullName>
+                <default>false</default>
+                <label>Broker</label>
+            </value>
+            <value>
+                <fullName>Freddie Mac</fullName>
+                <default>false</default>
+                <label>Freddie Mac</label>
+            </value>
+            <value>
+                <fullName>IH Website</fullName>
+                <default>false</default>
+                <label>IH Website</label>
+            </value>
+            <value>
+                <fullName>Investor</fullName>
+                <default>false</default>
+                <label>Investor</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Servicer</fullName>
+                <default>false</default>
+                <label>Servicer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ongoing_Impact_to_sf_com_Team__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field to indicate what, if any, ongoing impact the completion of this project will have on the sf.com team in terms of resources or effort to support.</inlineHelpText>
+    <label>Ongoing Impact to sf.com Team</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

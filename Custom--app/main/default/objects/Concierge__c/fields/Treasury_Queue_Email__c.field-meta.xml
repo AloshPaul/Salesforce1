@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treasury_Queue_Email__c</fullName>
+    <defaultValue>"Treasury@invitationhomes.com"</defaultValue>
+    <description>This field is referenced in the Workflow Rule, "Treasury Request - Email Treasury Queue When Ticket is Created".</description>
+    <externalId>false</externalId>
+    <label>Treasury Queue Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

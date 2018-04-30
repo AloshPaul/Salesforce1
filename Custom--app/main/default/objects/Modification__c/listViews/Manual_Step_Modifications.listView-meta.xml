@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Step_Modifications</fullName>
+    <columns>NAME</columns>
+    <columns>Manual_Step__c</columns>
+    <columns>Type_Of_Modification__c</columns>
+    <columns>Component_Type__c</columns>
+    <columns>Apex_Script__c</columns>
+    <columns>System_Issue_Report__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Manual_Step__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Manual Step Modifications</label>
+</ListView>

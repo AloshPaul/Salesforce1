@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>Housing_Tax__c +  Housing_Rent__c +  Tenant_Rent__c  +  Tenant_Tax__c +  Admin_Fee__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Sum of Tenant Rent, Tenant Tax, Housing Rent, Housing Tax and Admin Fee</inlineHelpText>
+    <label>Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

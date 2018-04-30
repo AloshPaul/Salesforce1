@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precise_Associates_Pfeffer_Atlanta</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>Market_Value_UW__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Proxy_Fund_01__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>contains</operation>
+        <value>Precise Associates Pfeffer Atlanta</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.Bulk</value>
+    </filters>
+    <label>Precise Associates Pfeffer Atlanta</label>
+    <sharedTo>
+        <group>Region_Atlanta</group>
+        <role>Executive</role>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

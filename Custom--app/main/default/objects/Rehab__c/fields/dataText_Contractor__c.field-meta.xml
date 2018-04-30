@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dataText_Contractor__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a temporary field to house the text string that came from the data load representing the GC assigned to this project.  We will be coordinating a project to associate this record to the appropriate record using the look-up field below.</inlineHelpText>
+    <label>GC (text from data load)</label>
+    <length>155</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

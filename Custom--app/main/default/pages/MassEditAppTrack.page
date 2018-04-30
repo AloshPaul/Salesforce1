@@ -1,0 +1,51 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Saurabh kumar  
+  *
+  *    Created Date   :    11-11-2016 (D-00016445)
+  *
+  *    Revision Log   :    V1.0   
+  *                         
+**/
+-->
+<apex:page standardController="Tenant_App__c" recordSetVar="unused" sidebar="false">
+    
+        <!--page Form-->
+        <apex:form >
+        
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+
+       <!--page block-->
+            <apex:pageBlock >
+                
+                <!--page Message-->
+                <apex:pagemessages ></apex:pagemessages>
+                
+                <!--page buttons--> 
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!save}"/>
+                    <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+                </apex:pageBlockButtons>
+                
+                <!--Fields for Mass Edit Operation using field Set -->
+                <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                    
+                    <apex:repeat value="{!$ObjectType.Tenant_App__c.FieldSets.MassEditFieldSet}" var="f">
+                        <apex:column headerValue="{!f.Label}">
+                           <apex:inputField value="{!a[f]}"/>
+                       </apex:column> 
+                    </apex:repeat>
+               
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

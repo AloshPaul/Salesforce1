@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hide_Display_a_Section__c</fullName>
+    <defaultValue>"Use the arrow next to any section to hide/display the fields in that section.  (Salesforce will remember your preference the next time you look at the same type of record."</defaultValue>
+    <externalId>false</externalId>
+    <label>Hide/Display a Section</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

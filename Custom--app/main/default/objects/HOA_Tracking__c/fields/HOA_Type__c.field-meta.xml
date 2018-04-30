@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>HOA Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary HOA</fullName>
+                <default>false</default>
+                <label>Primary HOA</label>
+            </value>
+            <value>
+                <fullName>Master HOA</fullName>
+                <default>false</default>
+                <label>Master HOA</label>
+            </value>
+            <value>
+                <fullName>Voluntary HOA</fullName>
+                <default>false</default>
+                <label>Voluntary HOA</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>CDD</fullName>
+                <default>false</default>
+                <label>CDD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

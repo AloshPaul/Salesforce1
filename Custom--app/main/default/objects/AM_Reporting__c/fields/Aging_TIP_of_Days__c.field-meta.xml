@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aging_TIP_of_Days__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c), 'TIP'),TODAY() - Acquisition_Date__c,
+IF( BEGINS( Yardi_Rent_Roll__r.Unit_Rental_Type__c , 'Admin'), TODAY() - Acquisition_Date__c,
+IF( BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c), 'HOLD'), TODAY() - Acquisition_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c), 'Closed'),Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Closed_Date__c - DATEVALUE(CreatedDate),
+NULL))))</formula>
+    <label>Aging - TIP # of Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

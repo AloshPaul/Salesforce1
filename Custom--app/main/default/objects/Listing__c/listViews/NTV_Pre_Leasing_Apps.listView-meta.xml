@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NTV_Pre_Leasing_Apps</fullName>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>NAME</columns>
+    <columns>City__c</columns>
+    <columns>BR_BA__c</columns>
+    <columns>Rehab_Stage__c</columns>
+    <columns>YRR_Rent_Match__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Est_Rehab_Complete_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Down_Pre_Marketing_Status_Date__c</columns>
+    <columns>Rent_Cafe_Comments__c</columns>
+    <columns>Rent_Cafe_Amenities__c</columns>
+    <columns>Romance_Paragraph_Complete_Date__c</columns>
+    <columns>Rent_Cafe_Listing__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Down - Application Pending,Down - Application Approved,Down - Pending Deposit</value>
+    </filters>
+    <filters>
+        <field>Rehab_Type__c</field>
+        <operation>equals</operation>
+        <value>Turn</value>
+    </filters>
+    <filters>
+        <field>Rehab_Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed - Cancelled</value>
+    </filters>
+    <label>NTV Pre-Leasing-Apps</label>
+    <sharedTo>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Orlando</role>
+    </sharedTo>
+</ListView>

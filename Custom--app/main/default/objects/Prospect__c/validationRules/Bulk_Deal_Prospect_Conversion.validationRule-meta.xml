@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Deal_Prospect_Conversion</fullName>
+    <active>false</active>
+    <description>If Bid Type is Bulk Sale or if the Record Type is Bulk Acquisition, Bulk Deal must be populated to convert to Pipeline.</description>
+    <errorConditionFormula>OR( ISPICKVAL( Bid_Type__c , 'Bulk Sale') , RecordTypeId  = '012E00000005Z2c') 
+&amp;&amp;
+ ISBLANK( Bulk_Deal__c ) 
+&amp;&amp;
+ IsConverted__c  = True</errorConditionFormula>
+    <errorMessage>Prospects that are part of a Bulk Deal must have a value in the Bulk Deal field before being converted to Pipeline.  In addition, the Bulk Deal must be fully approved by Acquisitions and Legal before the associated Prospect can be converted to Pipeline.</errorMessage>
+</ValidationRule>

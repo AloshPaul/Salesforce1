@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_How_to_Reproduce_Mandatory</fullName>
+    <active>true</active>
+    <description>THe how to reproduce field and description fields need to be mandatory</description>
+    <errorConditionFormula>ISBLANK( Description__c ) || ISBLANK( How_To_Reproduce__c )</errorConditionFormula>
+    <errorMessage>The How to Reproduce Field &amp; Description fields must be populated</errorMessage>
+</ValidationRule>

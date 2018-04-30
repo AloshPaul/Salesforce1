@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DK_Complete_Date_Required</fullName>
+    <active>true</active>
+    <description>DK Complete Date is required when DK Driver Assigned is populated, DK Assigned Date is populated, and the TIP status is Closed.</description>
+    <errorConditionFormula>AND(
+OR(TEXT(TIP_Status__c) = 'Closed - Leased (Assumed)', TEXT(TIP_Status__c) = 'Closed - Leased (New)', TEXT(TIP_Status__c) = 'Closed - Vacant'),
+DATEVALUE(CreatedDate)  >= DATE(2014,3,13),
+NOT(ISBLANK( DK_Driver_Assigned__c )), 
+NOT(ISBLANK(  DK_Assigned_Date__c )),
+ISBLANK(  DK_Complete_Date__c  ),
+RecordType.DeveloperName != 'Purchased_Rented' 
+)</errorConditionFormula>
+    <errorDisplayField>DK_Complete_Date__c</errorDisplayField>
+    <errorMessage>DK Complete Date is required.</errorMessage>
+</ValidationRule>

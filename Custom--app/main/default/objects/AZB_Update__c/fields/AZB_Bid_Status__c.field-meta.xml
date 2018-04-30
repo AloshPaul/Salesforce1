@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZB_Bid_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>AZB Bid Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bid Placed</fullName>
+                <default>false</default>
+                <label>Bid Placed</label>
+            </value>
+            <value>
+                <fullName>Bid Executed</fullName>
+                <default>false</default>
+                <label>Bid Executed</label>
+            </value>
+            <value>
+                <fullName>Bid Lost</fullName>
+                <default>false</default>
+                <label>Bid Lost</label>
+            </value>
+            <value>
+                <fullName>Postponed</fullName>
+                <default>false</default>
+                <label>Postponed</label>
+            </value>
+            <value>
+                <fullName>Cancelled by Bidder</fullName>
+                <default>false</default>
+                <label>Cancelled by Bidder</label>
+            </value>
+            <value>
+                <fullName>Cancelled by Trustee</fullName>
+                <default>false</default>
+                <label>Cancelled by Trustee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

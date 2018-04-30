@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_PTL</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New PTL</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT("/soap/ajax/14.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/14.0/apex.js")} 
+
+var rehabFrontEndSupervisor ='{!Rehab__c.Obsolete_Front_End_Supervisor__c}';
+if(rehabFrontEndSupervisor == ''){
+alert('PTL cannot be created unless there is a  value for Front-End Supervisor');
+}
+else { 
+try{
+var rId='{!Rehab__c.Id}'; 
+var result = sforce.apex.execute("WebServiceForPTL", "createPTLRecord", {rehabId : rId}); 
+if(result!='Create PTL'){
+alert(result); 
+}
+else{
+window.location.href = '/a1Z/e?{!$Setup.PTL_Setting__c.RehabName__c}='+'{!Rehab__c.Name}'+'&amp;{!$Setup.PTL_Setting__c.RehabId__c}='+'{!Rehab__c.Id}'+'&amp;retURL=%2F'+'{!Rehab__c.Id}';
+}
+} 
+catch(err) { 
+} 
+}</url>
+</WebLink>

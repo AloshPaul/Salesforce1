@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topic__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the Topic that best represents your question.  If your question applies to multiple tabs or functional areas of the company, select General.</inlineHelpText>
+    <label>Topic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquisitions</fullName>
+                <default>false</default>
+                <label>Acquisitions</label>
+            </value>
+            <value>
+                <fullName>BrokerSite</fullName>
+                <default>false</default>
+                <label>BrokerSite</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Companies/Contacts</fullName>
+                <default>false</default>
+                <label>Companies/Contacts</label>
+            </value>
+            <value>
+                <fullName>Concierge</fullName>
+                <default>false</default>
+                <label>Concierge</label>
+            </value>
+            <value>
+                <fullName>EM/COE Tracker &amp; Wire Requests</fullName>
+                <default>false</default>
+                <label>EM/COE Tracker &amp; Wire Requests</label>
+            </value>
+            <value>
+                <fullName>File Storage (S3)</fullName>
+                <default>false</default>
+                <label>File Storage (S3)</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>IH Lead</fullName>
+                <default>false</default>
+                <label>IH Lead</label>
+            </value>
+            <value>
+                <fullName>Intranet</fullName>
+                <default>false</default>
+                <label>Intranet</label>
+            </value>
+            <value>
+                <fullName>Lease &amp; Renewal</fullName>
+                <default>false</default>
+                <label>Lease &amp; Renewal</label>
+            </value>
+            <value>
+                <fullName>Lease &amp; Renewal &amp; Rehab</fullName>
+                <default>false</default>
+                <label>Lease &amp; Renewal &amp; Rehab</label>
+            </value>
+            <value>
+                <fullName>Listing</fullName>
+                <default>false</default>
+                <label>Listing</label>
+            </value>
+            <value>
+                <fullName>Property Issues</fullName>
+                <default>false</default>
+                <label>Property Issues</label>
+            </value>
+            <value>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+                <label>Rehab</label>
+            </value>
+            <value>
+                <fullName>Rehab &amp; Listing</fullName>
+                <default>false</default>
+                <label>Rehab &amp; Listing</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>SQL Files</fullName>
+                <default>false</default>
+                <label>SQL Files</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+            <value>
+                <fullName>Violations</fullName>
+                <default>false</default>
+                <label>Violations</label>
+            </value>
+            <value>
+                <fullName>Yardi Integration</fullName>
+                <default>false</default>
+                <label>Yardi Integration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

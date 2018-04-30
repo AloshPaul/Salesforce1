@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_App_Received_Resident_Name_Email</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW()  &amp;&amp;
+RecordType.DeveloperName  = 'AppTrack_2_0'  &amp;&amp;  
+(ISBLANK( App_Received__c )   ||   
+ ISBLANK( Resident_Name__c )   ||  
+ ISBLANK( Resident_Email__c ) 
+) &amp;&amp; NOT( $User.Username = 'sfadmin@invitationhomes.com' )</errorConditionFormula>
+    <errorDisplayField>Days_Pro_Rated__c</errorDisplayField>
+    <errorMessage>App Received, Resident Name and Resident Email are mandatory fields.</errorMessage>
+</ValidationRule>

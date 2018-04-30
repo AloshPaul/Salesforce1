@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project__c</fullName>
+    <externalId>false</externalId>
+    <label>Project</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd Party DK Enhancements</fullName>
+                <default>false</default>
+                <label>3rd Party DK Enhancements</label>
+            </value>
+            <value>
+                <fullName>3rd Party SF User Integration</fullName>
+                <default>false</default>
+                <label>3rd Party SF User Integration</label>
+            </value>
+            <value>
+                <fullName>Accounts/Contacts</fullName>
+                <default>false</default>
+                <label>Accounts/Contacts</label>
+            </value>
+            <value>
+                <fullName>ACQ - Acquisition Approval-Reporting</fullName>
+                <default>false</default>
+                <label>ACQ - Acquisition Approval-Reporting</label>
+            </value>
+            <value>
+                <fullName>ACQ - Acquisition Assumptions</fullName>
+                <default>false</default>
+                <label>ACQ - Acquisition Assumptions</label>
+            </value>
+            <value>
+                <fullName>ACQ - AZ Bidder Integration</fullName>
+                <default>false</default>
+                <label>ACQ - AZ Bidder Integration</label>
+            </value>
+            <value>
+                <fullName>ACQ - Bidding Statistics and Acq Reporting Obj</fullName>
+                <default>false</default>
+                <label>ACQ - Bidding Statistics and Acq Reporting Obj</label>
+            </value>
+            <value>
+                <fullName>ACQ - Broker Site Integration</fullName>
+                <default>false</default>
+                <label>ACQ - Broker Site Integration</label>
+            </value>
+            <value>
+                <fullName>ACQ - General</fullName>
+                <default>false</default>
+                <label>ACQ - General</label>
+            </value>
+            <value>
+                <fullName>ACQ - Pipeline</fullName>
+                <default>false</default>
+                <label>ACQ - Pipeline</label>
+            </value>
+            <value>
+                <fullName>ACQ - Prospect</fullName>
+                <default>false</default>
+                <label>ACQ - Prospect</label>
+            </value>
+            <value>
+                <fullName>ACQ - Prospect - Pipeline - Portfolio object field conversion</fullName>
+                <default>false</default>
+                <label>ACQ - Prospect - Pipeline - Portfolio object field conversion</label>
+            </value>
+            <value>
+                <fullName>Acquisition Analysis</fullName>
+                <default>false</default>
+                <label>Acquisition Analysis</label>
+            </value>
+            <value>
+                <fullName>Acquisition Assumptions</fullName>
+                <default>false</default>
+                <label>Acquisition Assumptions</label>
+            </value>
+            <value>
+                <fullName>Address Validation</fullName>
+                <default>false</default>
+                <label>Address Validation</label>
+            </value>
+            <value>
+                <fullName>BI Integration</fullName>
+                <default>false</default>
+                <label>BI Integration</label>
+            </value>
+            <value>
+                <fullName>Box Integration</fullName>
+                <default>false</default>
+                <label>Box Integration</label>
+            </value>
+            <value>
+                <fullName>Cash Flow Statement Build</fullName>
+                <default>false</default>
+                <label>Cash Flow Statement Build</label>
+            </value>
+            <value>
+                <fullName>Customer Portal</fullName>
+                <default>false</default>
+                <label>Customer Portal</label>
+            </value>
+            <value>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+                <label>Dashboards</label>
+            </value>
+            <value>
+                <fullName>Data Change Request Utility</fullName>
+                <default>false</default>
+                <label>Data Change Request Utility</label>
+            </value>
+            <value>
+                <fullName>Documentation of Processes</fullName>
+                <default>false</default>
+                <label>Documentation of Processes</label>
+            </value>
+            <value>
+                <fullName>G2 Maps Configuration</fullName>
+                <default>false</default>
+                <label>G2 Maps Configuration</label>
+            </value>
+            <value>
+                <fullName>Geopointe</fullName>
+                <default>false</default>
+                <label>Geopointe</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Legal / Claims Tracking</fullName>
+                <default>false</default>
+                <label>Legal / Claims Tracking</label>
+            </value>
+            <value>
+                <fullName>Nitro Integration - Phase I (Rehab)</fullName>
+                <default>false</default>
+                <label>Nitro Integration - Phase I (Rehab)</label>
+            </value>
+            <value>
+                <fullName>Nitro Integration - Phase II</fullName>
+                <default>false</default>
+                <label>Nitro Integration - Phase II</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>P0001-Transcation Coordinator Enhancements</fullName>
+                <default>false</default>
+                <label>P0001-Transcation Coordinator Enhancements</label>
+            </value>
+            <value>
+                <fullName>P0002-3rd Party Sites Development</fullName>
+                <default>false</default>
+                <label>P0002-3rd Party Sites Development</label>
+            </value>
+            <value>
+                <fullName>P0003-3rd Party DK Enhancement</fullName>
+                <default>false</default>
+                <label>P0003-3rd Party DK Enhancement</label>
+            </value>
+            <value>
+                <fullName>P0004-Report Development 1</fullName>
+                <default>false</default>
+                <label>P0004-Report Development 1</label>
+            </value>
+            <value>
+                <fullName>P0005-Rehab Improvements</fullName>
+                <default>false</default>
+                <label>P0005-Rehab Improvements</label>
+            </value>
+            <value>
+                <fullName>P0006-TIP Enhancements</fullName>
+                <default>false</default>
+                <label>P0006-TIP Enhancements</label>
+            </value>
+            <value>
+                <fullName>P0007-Broker Sites Development</fullName>
+                <default>false</default>
+                <label>P0007-Broker Sites Development</label>
+            </value>
+            <value>
+                <fullName>Phase 1: Sandbox to Production</fullName>
+                <default>false</default>
+                <label>Phase 1: Sandbox to Production</label>
+            </value>
+            <value>
+                <fullName>Photo Display</fullName>
+                <default>false</default>
+                <label>Photo Display</label>
+            </value>
+            <value>
+                <fullName>Profiles</fullName>
+                <default>false</default>
+                <label>Profiles</label>
+            </value>
+            <value>
+                <fullName>Project Management Tool</fullName>
+                <default>false</default>
+                <label>Project Management Tool</label>
+            </value>
+            <value>
+                <fullName>Property Object</fullName>
+                <default>false</default>
+                <label>Property Object</label>
+            </value>
+            <value>
+                <fullName>Property Object Filtering</fullName>
+                <default>false</default>
+                <label>Property Object Filtering</label>
+            </value>
+            <value>
+                <fullName>Property Object Validation Rules</fullName>
+                <default>false</default>
+                <label>Property Object Validation Rules</label>
+            </value>
+            <value>
+                <fullName>Prospect Object</fullName>
+                <default>false</default>
+                <label>Prospect Object</label>
+            </value>
+            <value>
+                <fullName>Regions Setup</fullName>
+                <default>false</default>
+                <label>Regions Setup</label>
+            </value>
+            <value>
+                <fullName>Rehab Dashboards</fullName>
+                <default>false</default>
+                <label>Rehab Dashboards</label>
+            </value>
+            <value>
+                <fullName>Rehab - Projected Spend</fullName>
+                <default>false</default>
+                <label>Rehab - Projected Spend</label>
+            </value>
+            <value>
+                <fullName>Residence Conversion</fullName>
+                <default>false</default>
+                <label>Residence Conversion</label>
+            </value>
+            <value>
+                <fullName>Resident Services / TOA</fullName>
+                <default>false</default>
+                <label>Resident Services / TOA</label>
+            </value>
+            <value>
+                <fullName>S3 Integration</fullName>
+                <default>false</default>
+                <label>S3 Integration</label>
+            </value>
+            <value>
+                <fullName>SFDC Test Coverage</fullName>
+                <default>false</default>
+                <label>SFDC Test Coverage</label>
+            </value>
+            <value>
+                <fullName>SFDC Utilities</fullName>
+                <default>false</default>
+                <label>SFDC Utilities</label>
+            </value>
+            <value>
+                <fullName>Sharing Rules/Settings</fullName>
+                <default>false</default>
+                <label>Sharing Rules/Settings</label>
+            </value>
+            <value>
+                <fullName>Status Apex Triggers</fullName>
+                <default>false</default>
+                <label>Status Apex Triggers</label>
+            </value>
+            <value>
+                <fullName>Status Tags</fullName>
+                <default>false</default>
+                <label>Status Tags</label>
+            </value>
+            <value>
+                <fullName>StructuredFN Integration</fullName>
+                <default>false</default>
+                <label>StructuredFN Integration</label>
+            </value>
+            <value>
+                <fullName>System Issue Report (SIR) Process Improvement</fullName>
+                <default>false</default>
+                <label>System Issue Report (SIR) Process Improvement</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>Website Migration</fullName>
+                <default>false</default>
+                <label>Website Migration</label>
+            </value>
+            <value>
+                <fullName>Workflow Process Automation</fullName>
+                <default>false</default>
+                <label>Workflow Process Automation</label>
+            </value>
+            <value>
+                <fullName>Yardi Integration</fullName>
+                <default>false</default>
+                <label>Yardi Integration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

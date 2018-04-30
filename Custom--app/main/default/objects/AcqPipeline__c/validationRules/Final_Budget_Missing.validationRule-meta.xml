@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Budget_Missing</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+					doDirectorDueDiligenceApproval__c = True,
+					ISNULL(Final_Rehab_Budget_Est_UW__c )
+					)</errorConditionFormula>
+    <errorMessage>Final Rehab Budget Estimate cannot be empty. Please complete the budget approval and reduction process first.</errorMessage>
+</ValidationRule>

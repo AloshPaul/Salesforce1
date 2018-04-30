@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA_Window_Start__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT ( Start_Date__c ) &amp; " " &amp; TEXT ( Opening_Time__c ) &amp; ":00"</formula>
+    <label>SLA Window Start</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

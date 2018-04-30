@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Sign_Off_Date_But_Not_Closed2</fullName>
+    <columns>NAME</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Office_Signoff_Date__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Budget_Revised__c</columns>
+    <columns>Projected_Spend_Base_Budget__c</columns>
+    <columns>Projected_Spend_Changes_To_Budget__c</columns>
+    <columns>Projected_Spend_Running_Total__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Office_Signoff_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed - Completed</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Rehab__c.Post_Acquisition</value>
+    </filters>
+    <label>Office Sign Off Date But Not Closed</label>
+    <sharedTo>
+        <role>Executive_Chicago</role>
+        <role>Team_Member_Chicago</role>
+    </sharedTo>
+</ListView>

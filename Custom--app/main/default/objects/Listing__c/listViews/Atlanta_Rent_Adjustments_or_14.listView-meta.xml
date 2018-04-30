@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atlanta_Rent_Adjustments_or_14</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>DOM__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>Previous_Lease_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Agent_Rent_Opinion__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>YRR_Market_Rent__c</columns>
+    <columns>X13_24_Month_Rent__c</columns>
+    <columns>X13_Month_Rent_Escalation__c</columns>
+    <columns>Leads_Sent_to_Agent_Last_10_Days__c</columns>
+    <columns>Apps_Primary_Last_10_Days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Promotion__c</field>
+        <operation>contains</operation>
+        <value>OCTOBER</value>
+    </filters>
+    <filters>
+        <field>Last_Rent_Adjustment_Date__c</field>
+        <operation>equals</operation>
+        <value>10/3/2017</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Atlanta- AGED PROMOTION</label>
+</ListView>

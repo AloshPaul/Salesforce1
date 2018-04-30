@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Number__c</fullName>
+    <description>HOA_Tracker__r.Yardi_Property_Code__c &amp;   "." &amp; TEXT(MONTH(DATEVALUE(CreatedDate))) &amp; "." &amp; TEXT(DAY(DATEVALUE(CreatedDate)))&amp;  "." &amp; TEXT(YEAR(DATEVALUE(CreatedDate)))</description>
+    <externalId>false</externalId>
+    <formula>HOA_Tracker__r.Yardi_Property_Code__c &amp; "." &amp; 
+
+CASE(MONTH( DATEVALUE(CreatedDate)), 
+1, "02.01.", 
+2, "03.01.", 
+3, "04.01.", 
+4, "05.01.", 
+5, "06.01.", 
+6, "07.01.", 
+7, "08.01.", 
+8, "09.01.", 
+9, "10.01.", 
+10, "11.01.", 
+11, "12.01.", 
+12, "01.01.", 
+"xxx999xxx") 
+
+&amp; TEXT(YEAR( Due_Date__c ))</formula>
+    <label>Invoice #</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

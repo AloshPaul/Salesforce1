@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vacancy_Status__c</fullName>
+    <description>If YRR Current Tenant Status is "Admin", Vacancy Status will be "Vacant". For all other cases, Vacancy Status will display the same value as YRR Current Tenant Status</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(UPPER(Portfolio__r.Residence__r.YRR_Current_Tenant_Status__c) = 'ADMIN' ,UPPER(Portfolio__r.Residence__r.YRR_Current_Tenant_Status__c) = 'DOWN') , 'Vacant' ,Portfolio__r.Residence__r.YRR_Current_Tenant_Status__c  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>It depends on Residence's Most Recent Yardi Rent Roll  Field 'Current Tenant Status'. it is 'Vacant' If Current Tenant Status = 'Admin/Down'</inlineHelpText>
+    <label>Vacancy Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

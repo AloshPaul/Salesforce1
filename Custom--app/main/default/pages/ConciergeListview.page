@@ -1,0 +1,1 @@
+<apex:page standardController="Concierge__c" recordSetVar="a" action="{!URLFOR($Action.Concierge__c.List,$ObjectType.Concierge__c)}" />

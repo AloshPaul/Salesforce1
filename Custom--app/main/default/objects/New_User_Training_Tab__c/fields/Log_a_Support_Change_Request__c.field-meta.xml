@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_a_Support_Change_Request__c</fullName>
+    <defaultValue>"Log a support/change request directly from the record by clicking the 'New SF Support/Change Request record' on the related list below.  Select the record type 'Support Request' and then the type 'Training Exercise'."</defaultValue>
+    <externalId>false</externalId>
+    <label>Log a Support/Change Request</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

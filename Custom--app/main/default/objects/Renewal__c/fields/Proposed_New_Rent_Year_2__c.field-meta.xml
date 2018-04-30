@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposed_New_Rent_Year_2__c</fullName>
+    <description>As some markets are going to offer 2-year leases as renewal, and thus we can track what is being proposed with resident with this field.</description>
+    <externalId>false</externalId>
+    <label>Proposed New Rent Year 2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

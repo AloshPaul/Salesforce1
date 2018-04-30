@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Showing</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Showing</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/15.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/15.0/apex.js")}
+var sid = sforce.apex.execute("CreateShowingController", "InsertShowing", {callId : '{!Incoming_Calls__c.Id}'});
+window.top.location.href = "/" + sid + "/e?retURL=/{!Incoming_Calls__c.Id}";</url>
+</WebLink>

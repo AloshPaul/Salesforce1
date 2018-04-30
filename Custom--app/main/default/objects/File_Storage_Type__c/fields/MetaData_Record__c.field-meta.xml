@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MetaData_Record__c</fullName>
+    <externalId>false</externalId>
+    <label>MetaData Record</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>File_Storage_Record__c</fullName>
+                <default>false</default>
+                <label>File_Storage_Record__c</label>
+            </value>
+            <value>
+                <fullName>Photo_Storage_Record__c</fullName>
+                <default>false</default>
+                <label>Photo_Storage_Record__c</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

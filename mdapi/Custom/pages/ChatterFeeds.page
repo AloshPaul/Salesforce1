@@ -1,0 +1,19 @@
+<apex:page standardController="Property_Opportunity__c">
+    <style>
+        .publishercontainer {
+            display:none;
+        }
+        .checkedMenu {
+            display:none;
+        }
+        .cxnewcomment {
+            display:none;
+        }
+        .cxcommentplaceholder {
+            display:none;
+        }
+        
+    </style>
+    <!-- Chatter Feeds -->
+    <chatter:feed entityId="{!Property_Opportunity__c.Prospect__c}" />
+</apex:page>

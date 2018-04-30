@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object__c</fullName>
+    <externalId>false</externalId>
+    <label>Object</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard Object</fullName>
+                <default>false</default>
+                <label>Standard Object</label>
+            </value>
+            <value>
+                <fullName>AppExchange Package</fullName>
+                <default>false</default>
+                <label>AppExchange Package</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Custom Object</fullName>
+                <default>false</default>
+                <label>Custom Object</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Users</fullName>
+                <default>false</default>
+                <label>Users</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,25 @@
+.THIS .changeRecordTypeRow 
+{
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+        
+.THIS .changeRecordTypeLeftColumn {
+    float: left;
+    text-align: left;
+    margin-left:0.5em;
+    padding-right: 1.5rem;
+    width: 40%;
+    font-size: .8125rem;
+    color: rgb(84, 105, 141);
+}
+
+.THIS .changeRecordTypeRightColumn {
+    float: right;
+    text-align: left;
+    width: 50%;
+    font-size: .8125rem;
+    color: rgb(84, 105, 141);
+}

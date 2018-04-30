@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apps_PM_View_Debby_s_Apps</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 and 6</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Listing_Status__c</columns>
+    <columns>Section_8__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Agent_Assigned_to_Listing__c</columns>
+    <columns>Co_Broker_IH__c</columns>
+    <columns>App_Received__c</columns>
+    <columns>Approval_Letter_to_Agent_Date__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_Prepared_Sent_Date__c</columns>
+    <columns>Signed_Lease_Rec_vd_Date__c</columns>
+    <columns>Deposit_Recv_d_Date__c</columns>
+    <columns>Orientation_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Declined</value>
+    </filters>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Move-In Complete</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Inactive</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant,Tenant_App__c.AppTrack_2_0</value>
+    </filters>
+    <filters>
+        <field>Portfolio_Manager__c</field>
+        <operation>equals</operation>
+        <value>Liz Fossati</value>
+    </filters>
+    <label>^3 Apps - Active - CENTRAL Apps</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

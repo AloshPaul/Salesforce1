@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Closed_Date_Required</fullName>
+    <active>true</active>
+    <description>The Expected Close Date Field is required at this stage.</description>
+    <errorConditionFormula>ISBLANK(Expected_Close_Date__c)&amp;&amp; RecordTypeId = '012E00000005gTA'&amp;&amp; (ISPICKVAL(TIP_Status__c , "TIP - Eviction") || ISPICKVAL(TIP_Status__c ,"TIP - Lease Negotiations") || ISPICKVAL(TIP_Status__c ,"TIP - CFK Negotiations")  ||  ISPICKVAL(TIP_Status__c ,"TIP - Voluntary Move-Out"))</errorConditionFormula>
+    <errorDisplayField>Expected_Close_Date__c</errorDisplayField>
+    <errorMessage>Please provide an expected close date.</errorMessage>
+</ValidationRule>

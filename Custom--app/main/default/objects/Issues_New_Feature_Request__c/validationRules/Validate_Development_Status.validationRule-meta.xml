@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Development_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF ( 
+AND ( 
+ISNEW(), 
+ISPICKVAL(Development_Status__c, 'Ready for QA Review'), 
+$User.Id &lt;> Dev_Reviewer__c 
+), 
+true, 
+IF ( 
+AND ( 
+ISCHANGED(Development_Status__c), 
+ISPICKVAL(Development_Status__c, 'Ready for QA Review'), 
+$User.Id &lt;> Dev_Reviewer__c 
+), 
+true, 
+false 
+) 
+)</errorConditionFormula>
+    <errorMessage>Only Reviewer can change the Development Status to "Ready for QA Review".</errorMessage>
+</ValidationRule>

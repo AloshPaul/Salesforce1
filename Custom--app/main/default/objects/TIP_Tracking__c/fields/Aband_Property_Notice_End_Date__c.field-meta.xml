@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aband_Property_Notice_End_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>Abandoned_Prop_Notice_Date__c  +  Aband_Property_Statutory_Notice_Days__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field will be auto-calculated based on the notice date and the days entered into the statutory notice box.</inlineHelpText>
+    <label>Aband. Prop Notice End Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

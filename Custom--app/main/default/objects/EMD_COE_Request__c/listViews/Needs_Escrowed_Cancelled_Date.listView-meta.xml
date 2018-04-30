@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Escrowed_Cancelled_Date</fullName>
+    <columns>NAME</columns>
+    <columns>Region_Sharing__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Pipeline__c</columns>
+    <columns>Fund__c</columns>
+    <columns>Tracker_Entity__c</columns>
+    <columns>Pipeline_Status__c</columns>
+    <columns>Escrow_Cancelled_Date__c</columns>
+    <columns>Total_Funds_Wired__c</columns>
+    <columns>Final_HUD__c</columns>
+    <columns>Refund_Received__c</columns>
+    <columns>Pending_HUD__c</columns>
+    <columns>Other_Cost_Credits__c</columns>
+    <columns>Refund_Due__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Pipeline_Status__c</field>
+        <operation>equals</operation>
+        <value>Dead - Cancelled</value>
+    </filters>
+    <filters>
+        <field>Escrow_Cancelled_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>*Needs Escrow Cancelled Date</label>
+</ListView>

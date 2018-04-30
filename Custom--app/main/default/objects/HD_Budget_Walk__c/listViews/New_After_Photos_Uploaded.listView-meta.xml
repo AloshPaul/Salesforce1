@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_After_Photos_Uploaded</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Budget_Status__c</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Address_City__c</columns>
+    <columns>Address_County__c</columns>
+    <columns>Walk_Supervisor__c</columns>
+    <columns>Approval_Supervisor__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Photos_Uploaded_After_Rehab__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>New Photos - After Rehab</label>
+</ListView>

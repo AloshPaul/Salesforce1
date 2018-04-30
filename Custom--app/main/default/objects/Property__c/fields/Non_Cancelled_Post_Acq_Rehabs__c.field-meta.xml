@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Cancelled_Post_Acq_Rehabs__c</fullName>
+    <externalId>false</externalId>
+    <label># Non-Cancelled Post-Acq Rehabs</label>
+    <summaryFilterItems>
+        <field>Rehab__c.Type__c</field>
+        <operation>equals</operation>
+        <value>Post-Acquisition</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Rehab__c.Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed - Cancelled, Closed - No Rehab Needed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Rehab__c.Portfolio__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Open__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Status__c , 'New') , (TODAY()-DATEVALUE(CreatedDate)), 
+IF( ISPICKVAL( Status__c , 'Open') , (TODAY()-DATEVALUE(CreatedDate)), 
+IF( ISPICKVAL( Status__c , 'In Process') , (TODAY()-DATEVALUE(CreatedDate)), 
+IF( ISPICKVAL( Status__c , 'Contacted') , (TODAY()-DATEVALUE(CreatedDate)), 
+IF( ISPICKVAL( Status__c , 'LVM 1') , (TODAY()-DATEVALUE(CreatedDate)), 
+IF( ISPICKVAL( Status__c , 'LVM 2') , (TODAY()-DATEVALUE(CreatedDate)), 
+(Closed_Date__c - DATEVALUE(CreatedDate)))))) )  )</formula>
+    <label># of Days Open</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

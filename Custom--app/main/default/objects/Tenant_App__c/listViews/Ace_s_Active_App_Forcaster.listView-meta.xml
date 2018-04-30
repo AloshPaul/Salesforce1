@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ace_s_Active_App_Forcaster</fullName>
+    <booleanFilter>1 AND 2  AND 3 and 4 and 5 and 6</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Portfolio_Manager__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Resident_Phone__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>Listing_Status__c</columns>
+    <columns>Lease_Prepared_Sent_Date__c</columns>
+    <columns>Signed_Lease_Rec_vd_Date__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Scheduled_Move_In__c</columns>
+    <columns>Deposit_Recv_d_Date__c</columns>
+    <columns>Orientation_Date_Time__c</columns>
+    <columns>Orientation_Specialist__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Declined,Cancelled,Pending</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Inactive</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant,Tenant_App__c.TIP_Primary_Applicant</value>
+    </filters>
+    <filters>
+        <field>App_Processed__c</field>
+        <operation>greaterThan</operation>
+        <value>2/1/2016</value>
+    </filters>
+    <filters>
+        <field>Actual_Move_in_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Listing_Status__c</field>
+        <operation>notContain</operation>
+        <value>Down</value>
+    </filters>
+    <label>DISPATCH Active App Forcaster</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

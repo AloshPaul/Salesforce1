@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Finalized_requires_Back_End_Super</fullName>
+    <active>true</active>
+    <description>PTL Finalized requires Back-End Supervisor</description>
+    <errorConditionFormula>Send_PTL_to_GC__c  = TRUE
+&amp;&amp;
+ Back_end_Supervisor__c  =null</errorConditionFormula>
+    <errorMessage>PTL Finalized requires Back-End Supervisor</errorMessage>
+</ValidationRule>

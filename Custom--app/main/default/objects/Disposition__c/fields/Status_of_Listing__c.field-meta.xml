@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_of_Listing__c</fullName>
+    <externalId>false</externalId>
+    <label>Status of Listing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Yet Active</fullName>
+                <default>false</default>
+                <label>Not Yet Active</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>TRS Hold</fullName>
+                <default>false</default>
+                <label>TRS Hold</label>
+            </value>
+            <value>
+                <fullName>Under Contract</fullName>
+                <default>false</default>
+                <label>Under Contract</label>
+            </value>
+            <value>
+                <fullName>Closed - Funded</fullName>
+                <default>false</default>
+                <label>Closed - Funded</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

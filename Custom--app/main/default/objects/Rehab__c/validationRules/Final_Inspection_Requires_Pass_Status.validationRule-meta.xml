@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Inspection_Requires_Pass_Status</fullName>
+    <active>true</active>
+    <description>Final Inspection Pass stage requires a Final Inspection Status of Pass.</description>
+    <errorConditionFormula>AND(
+TEXT(Stage__c) = 'Final Inspection Pass',
+TEXT(Final_Inspection_Status__c)  &lt;> 'Pass')</errorConditionFormula>
+    <errorDisplayField>Final_Inspection_Status__c</errorDisplayField>
+    <errorMessage>Final Inspection Status must be 'Pass'.</errorMessage>
+</ValidationRule>

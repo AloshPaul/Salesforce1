@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resident_Phone_Secondary__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT (ISBLANK(Renewal__r.Lease__r.Phone_secondary__c)), Left( Renewal__r.Lease__r.Phone_secondary__c ,3) &amp;'-'&amp; MID(Renewal__r.Lease__r.Phone_secondary__c,4,3)&amp;'-' &amp; Right(Renewal__r.Lease__r.Phone_secondary__c,4), Renewal__r.Lease__r.Phone_secondary__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Resident Phone Secondary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

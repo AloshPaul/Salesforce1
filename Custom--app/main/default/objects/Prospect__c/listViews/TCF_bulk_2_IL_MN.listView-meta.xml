@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TCF_bulk_2_IL_MN</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>Bulk_Deal__c</columns>
+    <columns>APN__c</columns>
+    <columns>Title_Company__c</columns>
+    <columns>Other_Closing_Costs_Est_UW__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Inspection_Period_End_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>TCF bulk #2 IL/MN</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.Bulk</value>
+    </filters>
+    <label>TCF bulk #2 IL/MN</label>
+    <sharedTo>
+        <group>Chicago_Bulk_Deals</group>
+        <role>Executive</role>
+        <role>Executive_Chicago</role>
+        <role>Team_Member_Chicago</role>
+    </sharedTo>
+</ListView>

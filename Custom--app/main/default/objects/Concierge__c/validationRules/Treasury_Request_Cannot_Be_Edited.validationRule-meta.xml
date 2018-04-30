@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treasury_Request_Cannot_Be_Edited</fullName>
+    <active>true</active>
+    <description>After users create a Treasury Request, they cannot edit it unless the "Treasury Request Queue Member" field is checked on the User record.</description>
+    <errorConditionFormula>$User.Treasury_Request_Queue_Member__c = false
+ &amp;&amp; 
+ NOT(ISNEW())
+ &amp;&amp; 
+ RecordType.Name = 'Treasury Request'
+ &amp;&amp; 
+ $Profile.Name  &lt;> 'System Administrator'
+ &amp;&amp; NOT(ISCHANGED(Due_Date__c))</errorConditionFormula>
+    <errorMessage>You cannot change your ticket after you create it.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is part of the Rehab deployment.  It is used by the Rehab team to track change orders.  (This may go away or be amended based on the phase two integration plans for the HD application.)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Utility_Fieldset</fullName>
+        <description>This will be used on Mass Edit Page on Chnage Orders list view.</description>
+        <displayedFields>
+            <field>Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>GL_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Change_Order_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Reason_Code__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Amount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Selected_Approved_Bid__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Change_Order_Details__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Rehab_Projected_Spend__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Utility Fieldset</label>
+    </fieldSets>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Change_Order_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Order Details</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Change_Order_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Order Type</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Increase</fullName>
+                    <default>false</default>
+                    <label>Increase</label>
+                </value>
+                <value>
+                    <fullName>Reduction</fullName>
+                    <default>false</default>
+                    <label>Reduction</label>
+                </value>
+                <value>
+                    <fullName>Bid</fullName>
+                    <default>false</default>
+                    <label>Bid</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contractor__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Change Orders</relationshipLabel>
+        <relationshipName>Change_Orders</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Original__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>GL Code</label>
+        <referenceTo>GL_Code__c</referenceTo>
+        <relationshipLabel>Change Orders</relationshipLabel>
+        <relationshipName>Change_Orders</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Type_Adjusted__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Rehab__r.Type__c, &apos;Post-Acquisition&apos; ), 
+    IF( ISBLANK( GL_Code_Original__r.GL_Code_Acquisition__c ) 
+        , GL_Code_Original__r.Name, 
+        GL_Code_Original__r.GL_Code_Acquisition__r.Name 
+      ), 
+    IF( ISBLANK( GL_Code_Original__r.GL_Code_Turn__c ) , 
+        GL_Code_Original__r.Name, 
+        GL_Code_Original__r.GL_Code_Turn__r.Name 
+      ) 
+  )</formula>
+        <label>GL Code Type Adjusted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>GL Code</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1260100 - Rehab Other</fullName>
+                    <default>false</default>
+                    <label>1260100 - Rehab Other</label>
+                </value>
+                <value>
+                    <fullName>1260125 - Rehab Demo/Waste</fullName>
+                    <default>false</default>
+                    <label>1260125 - Rehab Demo/Waste</label>
+                </value>
+                <value>
+                    <fullName>1260140 - Rehab Pests/Termites</fullName>
+                    <default>false</default>
+                    <label>1260140 - Rehab Pests/Termites</label>
+                </value>
+                <value>
+                    <fullName>1260150 - Rehab Cleaning</fullName>
+                    <default>false</default>
+                    <label>1260150 - Rehab Cleaning</label>
+                </value>
+                <value>
+                    <fullName>1260175 - Rehab Initial Re-Key</fullName>
+                    <default>false</default>
+                    <label>1260175 - Rehab Initial Re-Key</label>
+                </value>
+                <value>
+                    <fullName>1260200 - Rehab General Contractor</fullName>
+                    <default>false</default>
+                    <label>1260200 - Rehab General Contractor</label>
+                </value>
+                <value>
+                    <fullName>1260210 - Rehab GC Change Order</fullName>
+                    <default>false</default>
+                    <label>1260210 - Rehab GC Change Order</label>
+                </value>
+                <value>
+                    <fullName>1260300 - Rehab Roofs</fullName>
+                    <default>false</default>
+                    <label>1260300 - Rehab Roofs</label>
+                </value>
+                <value>
+                    <fullName>1260325 - Rehab Garage and Garage Doors</fullName>
+                    <default>false</default>
+                    <label>1260325 - Rehab Garage and Garage Doors</label>
+                </value>
+                <value>
+                    <fullName>1260350 - Rehab Exterior Surfaces</fullName>
+                    <default>false</default>
+                    <label>1260350 - Rehab Exterior Surfaces</label>
+                </value>
+                <value>
+                    <fullName>1260375 - Rehab Sidewalks/Driveways</fullName>
+                    <default>false</default>
+                    <label>1260375 - Rehab Sidewalks/Driveways</label>
+                </value>
+                <value>
+                    <fullName>1260400 - Rehab Cabinets</fullName>
+                    <default>false</default>
+                    <label>1260400 - Rehab Cabinets</label>
+                </value>
+                <value>
+                    <fullName>1260425 - Rehab Interior Painting</fullName>
+                    <default>false</default>
+                    <label>1260425 - Rehab Interior Painting</label>
+                </value>
+                <value>
+                    <fullName>1260450 - Rehab Flooring</fullName>
+                    <default>false</default>
+                    <label>1260450 - Rehab Flooring</label>
+                </value>
+                <value>
+                    <fullName>1260475 - Rehab Door/Window Costs</fullName>
+                    <default>false</default>
+                    <label>1260475 - Rehab Door/Window Costs</label>
+                </value>
+                <value>
+                    <fullName>1260480 - Rehab Blinds</fullName>
+                    <default>false</default>
+                    <label>1260480 - Rehab Blinds</label>
+                </value>
+                <value>
+                    <fullName>1260500 - Rehab Countertops</fullName>
+                    <default>false</default>
+                    <label>1260500 - Rehab Countertops</label>
+                </value>
+                <value>
+                    <fullName>1260600 - Rehab Landscape</fullName>
+                    <default>false</default>
+                    <label>1260600 - Rehab Landscape</label>
+                </value>
+                <value>
+                    <fullName>1260700 - Rehab Pool Service Fees</fullName>
+                    <default>false</default>
+                    <label>1260700 - Rehab Pool Service Fees</label>
+                </value>
+                <value>
+                    <fullName>1260710 - Rehab Pool Maintenance Costs</fullName>
+                    <default>false</default>
+                    <label>1260710 - Rehab Pool Maintenance Costs</label>
+                </value>
+                <value>
+                    <fullName>1260800 - Rehab Appliances</fullName>
+                    <default>false</default>
+                    <label>1260800 - Rehab Appliances</label>
+                </value>
+                <value>
+                    <fullName>1260825 - Rehab Specialty Electric</fullName>
+                    <default>false</default>
+                    <label>1260825 - Rehab Specialty Electric</label>
+                </value>
+                <value>
+                    <fullName>1260850 - Rehab Specialty Plumbing</fullName>
+                    <default>false</default>
+                    <label>1260850 - Rehab Specialty Plumbing</label>
+                </value>
+                <value>
+                    <fullName>1260900 - Rehab HVAC</fullName>
+                    <default>false</default>
+                    <label>1260900 - Rehab HVAC</label>
+                </value>
+                <value>
+                    <fullName>1260910 - Rehab Utilities</fullName>
+                    <default>false</default>
+                    <label>1260910 - Rehab Utilities</label>
+                </value>
+                <value>
+                    <fullName>1260915 - Rehab Utilities Prior Ownership</fullName>
+                    <default>false</default>
+                    <label>1260915 - Rehab Utilities Prior Ownership</label>
+                </value>
+                <value>
+                    <fullName>1261000 - Rehab Capitalized Insurance</fullName>
+                    <default>false</default>
+                    <label>1261000 - Rehab Capitalized Insurance</label>
+                </value>
+                <value>
+                    <fullName>1261100 - Rehab Capitalized Tax</fullName>
+                    <default>false</default>
+                    <label>1261100 - Rehab Capitalized Tax</label>
+                </value>
+                <value>
+                    <fullName>1261200 - Rehab Capitalized Interest</fullName>
+                    <default>false</default>
+                    <label>1261200 - Rehab Capitalized Interest</label>
+                </value>
+                <value>
+                    <fullName>1261300 - Rehab Capitalized HOA</fullName>
+                    <default>false</default>
+                    <label>1261300 - Rehab Capitalized HOA</label>
+                </value>
+                <value>
+                    <fullName>1261400 - Rehab Capitalized Accrued Costs</fullName>
+                    <default>false</default>
+                    <label>1261400 - Rehab Capitalized Accrued Costs</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rehab__r.Property_Address__c &amp; BR() &amp; 
+Rehab__r.Property_City__c &amp; &quot;, &quot; &amp; 
+Rehab__r.Property_State__c &amp; &quot; &quot; &amp; 
+Rehab__r.Property_Zip__c</formula>
+        <label>Property Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason Code</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Change_Order_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Theft/Vandalism</fullName>
+                    <default>false</default>
+                    <label>Theft/Vandalism</label>
+                </value>
+                <value>
+                    <fullName>Replacing vs. Repairing</fullName>
+                    <default>false</default>
+                    <label>Replacing vs. Repairing</label>
+                </value>
+                <value>
+                    <fullName>Environmental Remediation</fullName>
+                    <default>false</default>
+                    <label>Environmental Remediation</label>
+                </value>
+                <value>
+                    <fullName>Removal</fullName>
+                    <default>false</default>
+                    <label>Removal</label>
+                </value>
+                <value>
+                    <fullName>Vendor Default</fullName>
+                    <default>false</default>
+                    <label>Vendor Default</label>
+                </value>
+                <value>
+                    <fullName>Natural Disaster</fullName>
+                    <default>false</default>
+                    <label>Natural Disaster</label>
+                </value>
+                <value>
+                    <fullName>Repairing vs. Replacing</fullName>
+                    <default>false</default>
+                    <label>Repairing vs. Replacing</label>
+                </value>
+                <value>
+                    <fullName>Received lower bid</fullName>
+                    <default>false</default>
+                    <label>Received lower bid</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Bid</fullName>
+                    <default>false</default>
+                    <label>Bid</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <valueName>Theft/Vandalism</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <valueName>Replacing vs. Repairing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <valueName>Environmental Remediation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <valueName>Removal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <valueName>Vendor Default</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <valueName>Natural Disaster</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Increase</controllingFieldValue>
+                <controllingFieldValue>Reduction</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reduction</controllingFieldValue>
+                <valueName>Repairing vs. Replacing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reduction</controllingFieldValue>
+                <valueName>Received lower bid</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bid</controllingFieldValue>
+                <valueName>Bid</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rehab_Projected_Spend__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rehab Projected Spend</label>
+        <referenceTo>Rehab_Projected_Spend__c</referenceTo>
+        <relationshipLabel>Change Orders</relationshipLabel>
+        <relationshipName>Change_Orders</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipLabel>Change Orders</relationshipLabel>
+        <relationshipName>Change_Orders</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Selected_Approved_Bid__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check the box if this was the selected Bid</inlineHelpText>
+        <label>Selected &amp; Approved Bid</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Property Code Text</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rehab__r.Yardi_Code__c</formula>
+        <label>Yardi Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Change Orders</label>
+    <listViews>
+        <fullName>All_Change_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>Date__c</columns>
+        <columns>GL_Code_Original__c</columns>
+        <columns>Change_Order_Type__c</columns>
+        <columns>Reason_Code__c</columns>
+        <columns>Contractor__c</columns>
+        <columns>Amount__c</columns>
+        <columns>Selected_Approved_Bid__c</columns>
+        <columns>Change_Order_Details__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Rehab_Projected_Spend__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Change Requests</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Change_Requests_w_GL_Code</fullName>
+        <columns>NAME</columns>
+        <columns>Date__c</columns>
+        <columns>GL_Code_Original__c</columns>
+        <columns>Change_Order_Type__c</columns>
+        <columns>Reason_Code__c</columns>
+        <columns>Contractor__c</columns>
+        <columns>Amount__c</columns>
+        <columns>Selected_Approved_Bid__c</columns>
+        <columns>Change_Order_Details__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Rehab_Projected_Spend__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GL_Code_Original__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All Change Requests w/ GL Code</label>
+    </listViews>
+    <listViews>
+        <fullName>Change_orders_this_week</fullName>
+        <columns>NAME</columns>
+        <columns>Date__c</columns>
+        <columns>Amount__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Contractor__c</columns>
+        <columns>Change_Order_Details__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Date__c</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>Change orders this week</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Change#{0000}</displayFormat>
+        <label>Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Change Orders</pluralLabel>
+    <searchLayouts>
+        <listViewButtons>Mass_Edit</listViewButtons>
+        <listViewButtons>Mass_Update</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>If_Selected_Bid_true_Type_Reason_Bid</fullName>
+        <active>false</active>
+        <description>If Selected and Approved bid is true - then Change Order Type and Reason Code must also be Bid
+00eE0000000o2J8</description>
+        <errorConditionFormula>Selected_Approved_Bid__c = True &amp;&amp;
+ NOT( ISPICKVAL(Change_Order_Type__c, &quot;Bid&quot;)   ) &amp;&amp;
+ NOT( ISPICKVAL(Reason_Code__c, &quot;Bid&quot;) )</errorConditionFormula>
+        <errorMessage>If Selected and Approved bid is true - then Change Order Type and Reason Code must also be Bid</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Create_Multiple_Change_Orders</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Multiple Change Orders/Bids</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/ChangeOrderEntry?id={!Rehab__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassEditChangeOrders</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>sidebar</openType>
+        <page>MassUpdateChangeOrders</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Rehab_Projected_Spend</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Rehab Projected Spend</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>//Include the required js files
+{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&apos;/resource/&apos; &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),&apos;:&apos;,&apos;&apos;),&apos;-&apos;,&apos;&apos;),&apos; &apos;,&apos;&apos;),10) &amp; &apos;000/BlockUI/jquery.min.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/&apos; &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),&apos;:&apos;,&apos;&apos;),&apos;-&apos;,&apos;&apos;),&apos; &apos;,&apos;&apos;),10) &amp; &apos;000/BlockUI/jquery-ui.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/&apos; &amp; LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TEXT(NOW()),&apos;:&apos;,&apos;&apos;),&apos;-&apos;,&apos;&apos;),&apos; &apos;,&apos;&apos;),10) &amp; &apos;000/BlockUI/jquery.blockUI.js&apos;)}
+
+var sObjectIdArr = new Array();
+sObjectIdArr.push(&apos;{!Rehab__c.Id}&apos;);
+for (var i=0;i&lt;sObjectIdArr.length;i++) {
+var sObjectRecordId = sObjectIdArr[i];
+if(sObjectRecordId != &apos;&apos;) {
+break;
+}
+}
+try {
+j$ = jQuery.noConflict();
+j$.blockUI({
+css: {
+border: &apos;none&apos;,
+padding: &apos;15px&apos;,
+backgroundColor: &apos;#000&apos;,
+&apos;-webkit-border-radius&apos;: &apos;10px&apos;,
+&apos;-moz-border-radius&apos;: &apos;10px&apos;,
+opacity: .5,
+color: &apos;#fff&apos;
+},
+message : &apos;... navigating&apos;,
+onBlock: function() {
+
+parent.location.href = &apos;/apex/RehabProjectedSpend?id=&apos; + sObjectRecordId;
+}
+});
+j$.unblockUI();
+}
+catch(e) {
+  parent.location.href = &apos;/apex/RehabProjectedSpend?id=&apos; + sObjectRecordId;
+}</url>
+    </webLinks>
+</CustomObject>

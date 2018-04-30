@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Firm_or_Company__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>These firms have been approved by Corporate Legal.</inlineHelpText>
+    <label>Firm or Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anastasi Jellum, P.A.</fullName>
+                <default>false</default>
+                <label>Anastasi Jellum, P.A.</label>
+            </value>
+            <value>
+                <fullName>Briggs &amp; Morgan, PA</fullName>
+                <default>false</default>
+                <label>Briggs &amp; Morgan, PA</label>
+            </value>
+            <value>
+                <fullName>David J. Heekin, Esq.</fullName>
+                <default>false</default>
+                <label>David J. Heekin, Esq.</label>
+            </value>
+            <value>
+                <fullName>Demco Law Group</fullName>
+                <default>false</default>
+                <label>Demco Law Group</label>
+            </value>
+            <value>
+                <fullName>Ginsberg Jacobs</fullName>
+                <default>false</default>
+                <label>Ginsberg Jacobs</label>
+            </value>
+            <value>
+                <fullName>Graham &amp; Dunn, PC</fullName>
+                <default>false</default>
+                <label>Graham &amp; Dunn, PC</label>
+            </value>
+            <value>
+                <fullName>Hutchens, Senter, Kellam &amp; Pettit, PA</fullName>
+                <default>false</default>
+                <label>Hutchens, Senter, Kellam &amp; Pettit, PA</label>
+            </value>
+            <value>
+                <fullName>Hutchison &amp; Steffen</fullName>
+                <default>false</default>
+                <label>Hutchison &amp; Steffen</label>
+            </value>
+            <value>
+                <fullName>Johnson Blumberg &amp; Associates, LLC</fullName>
+                <default>false</default>
+                <label>Johnson Blumberg &amp; Associates, LLC</label>
+            </value>
+            <value>
+                <fullName>Kimball, Tirey &amp; St. John, LLP</fullName>
+                <default>false</default>
+                <label>Kimball, Tirey &amp; St. John, LLP</label>
+            </value>
+            <value>
+                <fullName>Leasing Law</fullName>
+                <default>false</default>
+                <label>Leasing Law</label>
+            </value>
+            <value>
+                <fullName>Lewis Roca Rothgerber</fullName>
+                <default>false</default>
+                <label>Lewis Roca Rothgerber</label>
+            </value>
+            <value>
+                <fullName>Littler Mendelson</fullName>
+                <default>false</default>
+                <label>Littler Mendelson</label>
+            </value>
+            <value>
+                <fullName>Lydecker Diaz</fullName>
+                <default>false</default>
+                <label>Lydecker Diaz</label>
+            </value>
+            <value>
+                <fullName>McKenna Long &amp; Aldridge LLP</fullName>
+                <default>false</default>
+                <label>McKenna Long &amp; Aldridge LLP</label>
+            </value>
+            <value>
+                <fullName>Michael Geo. F. Davis</fullName>
+                <default>false</default>
+                <label>Michael Geo. F. Davis</label>
+            </value>
+            <value>
+                <fullName>Mullavey, Prout, Grenley &amp; Foe, LLP</fullName>
+                <default>false</default>
+                <label>Mullavey, Prout, Grenley &amp; Foe, LLP</label>
+            </value>
+            <value>
+                <fullName>Neal Gerber &amp; Eisenberg</fullName>
+                <default>false</default>
+                <label>Neal Gerber &amp; Eisenberg</label>
+            </value>
+            <value>
+                <fullName>O'Kelley &amp; Sorohan, Attorneys at Law, LLC</fullName>
+                <default>false</default>
+                <label>O'Kelley &amp; Sorohan, Attorneys at Law, LLC</label>
+            </value>
+            <value>
+                <fullName>Robert L. Tankel, PA</fullName>
+                <default>false</default>
+                <label>Robert L. Tankel, PA</label>
+            </value>
+            <value>
+                <fullName>Shutts &amp; Bowen</fullName>
+                <default>false</default>
+                <label>Shutts &amp; Bowen</label>
+            </value>
+            <value>
+                <fullName>Silver Law Office</fullName>
+                <default>false</default>
+                <label>Silver Law Office</label>
+            </value>
+            <value>
+                <fullName>Simpson Thacher &amp; Bartlett LLP</fullName>
+                <default>false</default>
+                <label>Simpson Thacher &amp; Bartlett LLP</label>
+            </value>
+            <value>
+                <fullName>Surane Law Firm</fullName>
+                <default>false</default>
+                <label>Surane Law Firm</label>
+            </value>
+            <value>
+                <fullName>Venable</fullName>
+                <default>false</default>
+                <label>Venable</label>
+            </value>
+            <value>
+                <fullName>Williams, Zinman &amp; Parham PC</fullName>
+                <default>false</default>
+                <label>Williams, Zinman &amp; Parham PC</label>
+            </value>
+            <value>
+                <fullName>Womble Carlyle Sandridge &amp; Rice LLP</fullName>
+                <default>false</default>
+                <label>Womble Carlyle Sandridge &amp; Rice LLP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

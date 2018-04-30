@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Phoenix_Mine</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Region__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Request_Area__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Request_Specifics__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Status__c</columns>
+    <columns>Requestor_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Phoenix</value>
+    </filters>
+    <filters>
+        <field>Requestor_Name__c</field>
+        <operation>equals</operation>
+        <value>Walter Reidy</value>
+    </filters>
+    <label>All - Phoenix - Mine</label>
+    <sharedTo>
+        <group>IT_External_Support_Real_Page</group>
+        <group>IT_Support_Concierge_Internal</group>
+        <group>RF_Support</group>
+        <group>SFDC_DEV_Support</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

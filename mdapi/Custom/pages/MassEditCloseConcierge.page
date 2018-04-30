@@ -1,0 +1,77 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Randy Kish    
+  *
+  *    Created Date   :    09-12-2013
+  *
+  *    Revision Log   :    V1.0   
+  *                         
+**/
+-->
+<apex:page standardController="Concierge__c" recordSetVar="unused" sidebar="false">
+    
+        <!--page Form-->
+        <apex:form >
+        
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+
+       <!--page block-->
+       <apex:pageBlock >
+           
+           <!--page Message-->
+           <apex:pagemessages ></apex:pagemessages>
+           
+               <!--page buttons--> 
+               <apex:pageBlockButtons >
+                   <apex:commandButton value="Save" action="{!save}"/>
+                   <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+               </apex:pageBlockButtons>
+               
+               <!--Fields for Mass Edit Operation-->
+               <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                
+                <apex:column headerValue="Requester Name">
+                    <apex:outputField value="{!a.Requester_Name__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Request Area">
+                    <apex:outputField value="{!a.Request_Area__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Request Specifics">
+                    <apex:outputField value="{!a.Request_Specifics__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Request Type">
+                    <apex:outputField value="{!a.Request_Type__c}"/>
+                </apex:column>                
+                
+                <apex:column headerValue="Need to Escalate">
+                    <apex:inputField value="{!a.Need_to_Escalate__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="Status">
+                    <apex:inputField value="{!a.Status__c}"/>
+                </apex:column>
+                
+                 <apex:column headerValue="Closed Date">
+                    <apex:inputField value="{!a.Closed_Date__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Resolution Details">
+                    <apex:inputField value="{!a.Resolution_Details__c}"/>
+                </apex:column>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

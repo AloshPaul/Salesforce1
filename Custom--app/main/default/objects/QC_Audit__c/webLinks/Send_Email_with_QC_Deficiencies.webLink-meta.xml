@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Email_with_QC_Deficiencies</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Send Email with QC Deficiencies</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/_ui/core/email/author/EmailAuthor?p3_lkid={!QC_Audit__c.Id}&amp;p24={!QC_Audit__c.Back_End_Supervisor_Email__c},{!QC_Audit__c.General_Contractor_email__c}, {!QC_Audit__c.GC_Company_Email__c} &amp;template_id=00XE0000000Ms47&amp;p26={!$User.Email}&amp;retURL=%2F{!QC_Audit__c.Id}</url>
+</WebLink>

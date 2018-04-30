@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Initial_Knock_to_CFK_Paid__c</fullName>
+    <externalId>false</externalId>
+    <formula>CFK_Paid_Date__c - Initial_Contact_Date__c</formula>
+    <label># Days Initial Knock to CFK Paid</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

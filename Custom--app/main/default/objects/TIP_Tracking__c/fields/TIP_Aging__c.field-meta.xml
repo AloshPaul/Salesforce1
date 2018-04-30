@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIP_Aging__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR( 
+BEGINS(TEXT(TIP_Status__c), 'TIP'), 
+BEGINS(TEXT(TIP_Status__c), 'HOLD') 
+),
+IF(TODAY() - TIP_Aging_Start_Date__c  &lt;= 14, '1-14 Days (1-2 Weeks)',
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 28, '15-28 Days (3-4 Weeks)',
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 42, '29-42 Days (5-6 Weeks)',
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 56, '43-56 Days (7-8 Weeks)',
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 70, '57-70 Days (9-10 Weeks)',
+IF(TODAY() - TIP_Aging_Start_Date__c >= 71, '71+ Days (11-12+ Weeks)',
+NULL)))))),
+
+IF(BEGINS(TEXT(TIP_Status__c), 'Closed'), 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 14, '1-14 Days (1-2 Weeks)', 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 28, '15-28 Days (3-4 Weeks)', 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 42, '29-42 Days (5-6 Weeks)', 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 56, '43-56 Days (7-8 Weeks)', 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 70, '57-70 Days (9-10 Weeks)', 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c >= 71, '71+ Days (11-12+ Weeks)', 
+NULL)))))), Null
+)
+
+)</formula>
+    <label>TIP Aging</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

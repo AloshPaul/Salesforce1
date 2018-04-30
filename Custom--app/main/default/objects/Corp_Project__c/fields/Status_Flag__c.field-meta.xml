@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  TEXT(Project_Status__c) = "On Hold",  IMAGE("/servlet/servlet.FileDownload?file=015E0000001lnMs", "Yellow flag") , 
+IF(  TEXT(Project_Status__c)  &lt;> "Complete"  &amp;&amp;  Due_Date__c  &lt;  TODAY() ,
+ IMAGE ("/servlet/servlet.FileDownload?file=015E0000001lnMr" , "Red Flag") , 
+ IF(TEXT(Project_Status__c) = "Complete", IMAGE("/servlet/servlet.FileDownload?file=015E0000001lnMm", "Checkered Flag"),
+IMAGE("/servlet/servlet.FileDownload?file=015E0000001lnMn", "Green Flag") ) ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Flag</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

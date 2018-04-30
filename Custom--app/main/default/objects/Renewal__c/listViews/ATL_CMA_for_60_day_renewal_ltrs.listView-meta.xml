@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_CMA_for_60_day_renewal_ltrs</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 and 6</booleanFilter>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>Housing_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>CMA_Rent_Comments__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Initial_Proposed_New_Rent__c</columns>
+    <columns>Rent_Strategy_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH,NEXT_N_MONTHS:3</value>
+    </filters>
+    <filters>
+        <field>CMA_Rent__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Lease_Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Lease Terminated (Eviction/Skip/Etc.),Eviction in Process</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>equals</operation>
+        <value>Tiffany Cox</value>
+    </filters>
+    <label>ATL- CMAs needed for 60 day Renewal Ltrs</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Team_Member_Atlanta</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

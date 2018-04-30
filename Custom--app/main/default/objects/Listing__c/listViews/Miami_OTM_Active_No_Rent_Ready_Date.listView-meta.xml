@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Miami_OTM_Active_No_Rent_Ready_Date</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>YRR_Unit_Rental_Type__c</columns>
+    <columns>Rent_Cafe_Listed__c</columns>
+    <columns>Rent_Ready_Date__c</columns>
+    <columns>Promotion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>miami</value>
+    </filters>
+    <filters>
+        <field>Rent_Ready_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Miami OTM - Active No Rent Ready Date</label>
+    <sharedTo>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Lease_Renewed</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Region__c</columns>
+    <columns>Lease__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>Housing_Rent__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Variance_Current_Rent_dollar_to_New_Rent__c</columns>
+    <columns>Variance_Current_to_New_Rent__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Renewal_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Lease Renewed</value>
+    </filters>
+    <label>Status = Lease Renewed</label>
+</ListView>

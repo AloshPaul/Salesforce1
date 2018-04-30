@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZB_Failures_Atlanta</fullName>
+    <columns>NAME</columns>
+    <columns>Address_Validated_Successfully__c</columns>
+    <columns>Region__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>IH_Prospect__c</columns>
+    <columns>IH_Pipeline__c</columns>
+    <columns>AZB_User_ID__c</columns>
+    <columns>AZB_User_Email__c</columns>
+    <columns>IH_Needs_Processing__c</columns>
+    <columns>IH_Force_Run_Trigger__c</columns>
+    <columns>IH_Last_Result_Message__c</columns>
+    <columns>IH_Last_Result_Success__c</columns>
+    <columns>APN__c</columns>
+    <columns>Address_Validation_Message__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IH_Last_Result_Success__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <label>AZB Failures Atlanta</label>
+    <sharedTo>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

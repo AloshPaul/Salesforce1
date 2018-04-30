@@ -1,0 +1,83 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Abhinav Sharma    
+  *
+  *    Created Date   :    04-29-2013
+  *
+  *    Revision Log   :    V1.0   
+  *                        v1.1  Modified by Abhinav Sharma on 6/17/2013 according to SIR - D-00005493 
+**/
+-->
+<apex:page standardController="Rehab__c" recordSetVar="unused" sidebar="false">
+    
+        <!--page Form-->
+        <apex:form >
+        
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+
+            <!--page block-->
+            <apex:pageBlock >
+                
+                <!--page Message-->
+                <apex:pagemessages ></apex:pagemessages>
+                
+                    <!--page buttons--> 
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!save}"/>
+                        <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+                    </apex:pageBlockButtons>
+                    
+                    <!--Fields for Mass Edit Operation-->
+                    <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                    
+                        <apex:column headerValue="Property Address">
+                            <apex:outputField value="{!a.Property_Address__c }"/>
+                        </apex:column>
+                        
+                        <!--  Added by Abhinav Sharma on 6/25/2013 according to SIR - D-00005781 -->
+                        <apex:column headerValue="Property City">
+                            <apex:outputField value="{!a.Property_City__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Yardi Code">
+                            <apex:outputField value="{!a.Yardi_Code__c }"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Locksmith">
+                            <apex:inputField value="{!a.Locksmith__c}"/>
+                        </apex:column>
+                        
+                        <!-- Added by Abhinav Sharma on 6/17/2013 according to SIR - D-00005493 -->
+                        <apex:column headerValue="Locksmith Contact">
+                            <apex:inputField value="{!a.Locksmith_Contact__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Alert Locksmith">
+                            <apex:inputField value="{!a.Alert_Locksmith__c }"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="General Contractor">
+                            <apex:inputField value="{!a.General_Contractor__c }"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Back end Supervisor">
+                            <apex:inputField value="{!a.Back_end_Supervisor__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Construction Manager">
+                            <apex:inputField value="{!a.CM__c}"/>
+                        </apex:column>
+                                                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brokers_Cannot_Edit_Status_When_Dead</fullName>
+    <active>true</active>
+    <description>When Prospect Status is any Dead value, brokers cannot edit the Agent to IH Transaction Status field.</description>
+    <errorConditionFormula>NOT( $Profile.Name  = 'System Administrator') 
+ &amp;&amp; 
+ OR( ISPICKVAL( Prospect_Status__c , 'Dead - Declined') , ISPICKVAL(Prospect_Status__c , 'Dead - Cancelled') , ISPICKVAL(Prospect_Status__c , 'Dead - Duplicate'), ISPICKVAL(Prospect_Status__c , 'Dead - No Activity')  ) 
+ &amp;&amp; 
+ ISCHANGED( B_Status__c )</errorConditionFormula>
+    <errorDisplayField>B_Status__c</errorDisplayField>
+    <errorMessage>When Prospect Status is any "Dead" value, brokers cannot make any edits to this field.  Please contact your regional acquisition contact if you need to re-open this record.</errorMessage>
+</ValidationRule>

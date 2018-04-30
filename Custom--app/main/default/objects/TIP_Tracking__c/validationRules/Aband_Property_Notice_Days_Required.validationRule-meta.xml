@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aband_Property_Notice_Days_Required</fullName>
+    <active>true</active>
+    <description>If Abandoned Property notice date is entered, require a value in “Aband. Property Statutory Notice Days”</description>
+    <errorConditionFormula>ISBLANK( Abandoned_Prop_Notice_Date__c) = FALSE 
+&amp;&amp;
+ISBLANK( Aband_Property_Statutory_Notice_Days__c )</errorConditionFormula>
+    <errorDisplayField>Aband_Property_Statutory_Notice_Days__c</errorDisplayField>
+    <errorMessage>Aband. Property Notice Required (Days) is required when Abandoned Property is “Yes”</errorMessage>
+</ValidationRule>

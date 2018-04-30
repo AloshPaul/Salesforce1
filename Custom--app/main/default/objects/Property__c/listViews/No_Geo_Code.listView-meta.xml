@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Geo_Code</fullName>
+    <columns>NAME</columns>
+    <columns>G2GeoStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Property_Status__c</field>
+        <operation>equals</operation>
+        <value>Leased</value>
+    </filters>
+    <label>No Geo Code</label>
+</ListView>

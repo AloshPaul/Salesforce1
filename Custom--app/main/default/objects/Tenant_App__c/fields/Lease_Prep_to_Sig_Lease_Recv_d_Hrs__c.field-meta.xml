@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Prep_to_Sig_Lease_Recv_d_Hrs__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Signed_Lease_Rec_vd_Date__c - Lease_Prepared_Sent_Date__c )</formula>
+    <label>Lease Prep. to Sig. Lease Recv'd (Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

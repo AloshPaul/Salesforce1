@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_an_Email</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Send an Email</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/_ui/core/email/author/EmailAuthor?&amp;p3_lkid={!Concierge__c.Id}&amp;template_id=00XE0000000N0xh&amp;retURL=%2F{!Concierge__c.Id}&amp;p24={! Concierge__c.Requestor_Email__c};{!Concierge__c.Requester_Email__c}</url>
+</WebLink>

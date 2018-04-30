@@ -1,0 +1,3036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Additional_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Affects_Securitized_Asset__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Affects Securitized Asset</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_IH_Associate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned IH Associate</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Violations2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <label>Assigned Vendor</label>
+        <length>150</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Coordinator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Coordinator</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Violations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Daily_Fine_Accrual_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Daily Fine Accrual Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will auto-populate when either an IH Associate or Vendor is assigned.</inlineHelpText>
+        <label>Date Assigned</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Deliquency_Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Deliquency Paid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Document_of_Compliance_Recv_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Document of Compliance Recv&apos;d</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Fine_Amount_Charged_to_Ledger__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Fine Amount Charged to Ledger</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Fine_Amount_Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Fine Amount Paid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Submitted_to_Accounting__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Submitted to Accounting</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Time_of_Hearing__c</fullName>
+        <externalId>false</externalId>
+        <label>Date/Time of Hearing</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Confirmed_Compliance__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Confirmed Compliance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_First_Notice_Recv_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of First Notice Recv&apos;d</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_First_Notice_Sent_to_Occupant__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of First Notice Sent to Occupant</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_First_Notice_Sent_to_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of First Notice Sent to Rehab</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_First_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of First Notice</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Notice_Recv_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Notice Recv&apos;d</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Notice</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Required_Compliance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Target date for completion/resolution of the violation.</inlineHelpText>
+        <label>Date of Required Compliance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Second_Notice_Recv_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Second Notice Recv&apos;d</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Second_Notice_Sent_to_Occupant__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Second Notice Sent to Occupant</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Second_Notice_Sent_to_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Second Notice Sent to Rehab</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Second_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Second Notice</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Third_Notice_Recv_d__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Third Notice Recv&apos;d</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Third_Notice_Sent_to_Occupant__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Third Notice Sent to Occupant</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Third_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Third Notice</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delinquency_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Delinquency Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Fine_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Fine Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>First_Notice_Sent_to_Occupant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>First Notice Sent to Occupant</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>First_Notice_Sent_to_Rehab__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>First Notice Sent to Rehab</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>First_Notice_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>First Notice Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Certified Mail</fullName>
+                    <default>false</default>
+                    <label>Certified Mail</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Phone Call</fullName>
+                    <default>false</default>
+                    <label>Phone Call</label>
+                </value>
+                <value>
+                    <fullName>Regular Mail</fullName>
+                    <default>false</default>
+                    <label>Regular Mail</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>HOA_Tracking__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HOA Tracking</label>
+        <referenceTo>HOA_Tracking__c</referenceTo>
+        <relationshipLabel>Violations</relationshipLabel>
+        <relationshipName>Violations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>HOA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>HOA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hearing_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Hearing Location</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hearing_Scheduled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Hearing Scheduled</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lease__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lease</label>
+        <referenceTo>Tenant_Card__c</referenceTo>
+        <relationshipName>HOA_Violations_Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Maintenance_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Maintenance Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Municipal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Municipal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Occupant_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Lease__c)),   Lease__r.Email__c   ,  TIP__r.TIP_Occupant_Email__c )</formula>
+        <inlineHelpText>This field comes from either the associated Lease or TIP record.</inlineHelpText>
+        <label>Occupant Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupant_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Lease__c)),  Lease__r.First_Last_Name__c ,  TIP__r.TIP_Occupant_Name__c )</formula>
+        <inlineHelpText>This field comes from either the associated Lease or TIP record.</inlineHelpText>
+        <label>Occupant Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupant_Phone_primary__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Lease__c)),   Lease__r.Phone_primary__c ,   TIP__r.TIP_Occupant_Phone__c  )</formula>
+        <inlineHelpText>This field comes from either the associated Lease or TIP record.</inlineHelpText>
+        <label>Occupant Phone (primary)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupant_Phone_secondary__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Lease__c)),  Lease__r.Phone_secondary__c  , null )</formula>
+        <inlineHelpText>This value comes from the associated Lease record.</inlineHelpText>
+        <label>Occupant Phone (secondary)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupied__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupied?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PM_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>PM Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>PM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Violations1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PM_from_Portfolio__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  NOT( CONTAINS( Portfolio__r.Owner:User.Full_Name__c , &apos;Queue&apos;) )  &amp;&amp;  Portfolio__r.Owner:User.IsActive  = True   ,  Portfolio__r.Owner:User.Full_Name__c , &apos;Unassigned&apos;)</formula>
+        <label>PM (from Portfolio)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PerDiemFineStartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Per Diem Fine Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Per_Day_Fine_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Per Day Fine Amount (if applicable)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Portfolio__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipName>HOA_Violations_Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Property_Address_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(LEN( Residence__r.Address_Street__c )&gt;0, Residence__r.Address_Street__c&amp; &quot; &quot; , &quot;&quot; )&amp;
+IF(LEN( Residence__r.Address_City__c )&gt;0, Residence__r.Address_City__c&amp; &quot;, &quot; , &quot;&quot; )&amp; 
+IF(LEN( Residence__r.Address_State__c )&gt;0, Residence__r.Address_State__c&amp; &quot; &quot; , &quot;&quot; )&amp; 
+IF(LEN( Residence__r.Address_Zip_Code__c )&gt;0, Residence__r.Address_Zip_Code__c,&quot;&quot;)</formula>
+        <label>Property Address Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(LEN( Residence__r.Address_Street__c  )&gt;0, Residence__r.Address_Street__c&amp; &quot; &quot; , &quot;&quot; ) &amp; BR() &amp; 
+IF(LEN( Residence__r.Address_City__c  )&gt;0, Residence__r.Address_City__c&amp; &quot;, &quot; , &quot;&quot; )&amp; 
+IF(LEN( Residence__r.Address_State__c  )&gt;0, Residence__r.Address_State__c&amp; &quot; &quot; , &quot;&quot; )&amp; 
+IF(LEN( Residence__r.Address_Zip_Code__c  )&gt;0, Residence__r.Address_Zip_Code__c,&quot;&quot;)</formula>
+        <label>Property Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Delinquency__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Delinquency</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Region_Email_Distribution_List_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(  Portfolio__r.Region__c  , 
+
+&quot;Atlanta&quot;,&quot;IHatlantaViolations@invitationhomes.com&quot;,
+&quot;Charlotte&quot;,&quot;IHcharlotteViolations@invitationhomes.com&quot;,
+&quot;Chicago&quot;, CASE ( Portfolio__r.Property_State__c , &apos;MN&apos;, &quot;IHMinneapolisViolations@invitationhomes.com&quot;, &quot;IHchicagoViolations@invitationhomes.com&quot;), 
+&quot;Inland Empire&quot;,&quot;IHinlandempireViolations@invitationhomes.com&quot;,
+&quot;Jacksonville&quot;,&quot;IHjacksonvilleViolations@invitationhomes.com&quot;,
+&quot;Las Vegas&quot;,&quot;IHlasvegasViolations@invitationhomes.com&quot;,
+&quot;Los Angeles&quot;,&quot;IHlosangelesViolations@invitationhomes.com&quot;,
+&quot;Miami&quot;,&quot;IHMiamiViolations@invitationhomes.com&quot;,
+&quot;Minneapolis&quot;,&quot;IHMinneapolisViolations@invitationhomes.com&quot;,
+&quot;Orlando&quot;,&quot;IHOrlandoViolations@invitationhomes.com&quot;,
+&quot;Phoenix&quot;,&quot;IHPhoenixViolations@invitationhomes.com&quot;,
+&quot;Sacramento&quot;,&quot;IHSacramentoViolations@invitationhomes.com&quot;,
+&quot;Seattle&quot;,&quot;IHSeattleViolations@invitationhomes.com&quot;,
+&quot;Tampa&quot;,&quot;IHTampaViolations@invitationhomes.com&quot;,
+&quot;madams@invitationhomes.com&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Region Email Distribution List (Formula)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_Email_Distribution_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Region Email Distribution List</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Market2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab_Office_Sign_Off_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rehab__r.Office_Signoff_Date__c</formula>
+        <label>Rehab Office Sign-Off Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Required on HOA Violations/Requests with a Vacant record type.</description>
+        <externalId>false</externalId>
+        <label>Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipName>HOA_Violations_Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Residence__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Residence</label>
+        <referenceTo>Residence__c</referenceTo>
+        <relationshipLabel>Violations</relationshipLabel>
+        <relationshipName>Violations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Second_Fine_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Second Fine Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Second_Notice_Sent_to_Occupant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Second Notice Sent to Occupant</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Second_Notice_Sent_to_Rehab__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Second Notice Sent to Rehab</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Second_Notice_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Second Notice Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Certified Mail</fullName>
+                    <default>false</default>
+                    <label>Certified Mail</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Phone Call</fullName>
+                    <default>false</default>
+                    <label>Phone Call</label>
+                </value>
+                <value>
+                    <fullName>Regular Mail</fullName>
+                    <default>false</default>
+                    <label>Regular Mail</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Securitization_Pool__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Securitization_Pool__c)</formula>
+        <label>Securitization Pool</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Home Owners&apos;s Association (HOA), Municipality</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Violations</relationshipLabel>
+        <relationshipName>HOA_Violations_Requests</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Completed - Pending Payment</fullName>
+                    <default>false</default>
+                    <label>Completed - Pending Payment</label>
+                </value>
+                <value>
+                    <fullName>Closed - No Fine Assessed</fullName>
+                    <default>false</default>
+                    <label>Closed - No Fine Assessed</label>
+                </value>
+                <value>
+                    <fullName>Closed - Fine Waived</fullName>
+                    <default>false</default>
+                    <label>Closed - Fine Waived</label>
+                </value>
+                <value>
+                    <fullName>Closed - Paid</fullName>
+                    <default>false</default>
+                    <label>Closed - Paid</label>
+                </value>
+                <value>
+                    <fullName>Dismissed</fullName>
+                    <default>false</default>
+                    <label>Dismissed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subregion__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Region__c, 
+&apos;Inland Empire&apos;, &apos;Inland Empire&apos;, 
+&apos;Los Angeles&apos;, &apos;Los Angeles&apos;, 
+&apos;Sacramento&apos;, &apos;Sacramento&apos;, 
+&apos;Seattle&apos;, &apos;Seattle&apos;, 
+&apos;Las Vegas&apos;, &apos;Las Vegas&apos;, 
+&apos;Charlotte&apos;, &apos;Charlotte&apos;, 
+&apos;Chicago&apos;, CASE ( Portfolio__r.Property_State__c , &apos;MN&apos;, &apos;Minneapolis&apos;, &apos;Chicago&apos;), 
+&apos;Atlanta&apos;,&apos;Atlanta&apos;, 
+&apos;Tampa&apos;,&apos;Tampa&apos;, 
+&apos;Miami&apos;,&apos;Miami&apos;, 
+&apos;Jacksonville&apos;,&apos;Jacksonville&apos;, 
+&apos;Orlando&apos;,&apos;Orlando&apos;, 
+&apos;Phoenix&apos;,&apos;Phoenix&apos;, 
+null)</formula>
+        <label>Subregion</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TIP</label>
+        <referenceTo>TIP_Tracking__c</referenceTo>
+        <relationshipName>HOA_Violations</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Third_Fine_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Third Fine Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Third_Notice_Sent_to_Occupant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Third Notice Sent to Occupant</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Third_Notice_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Third Notice Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Certified Mail</fullName>
+                    <default>false</default>
+                    <label>Certified Mail</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Phone Call</fullName>
+                    <default>false</default>
+                    <label>Phone Call</label>
+                </value>
+                <value>
+                    <fullName>Regular Mail</fullName>
+                    <default>false</default>
+                    <label>Regular Mail</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Animals</fullName>
+                    <default>false</default>
+                    <label>Animals</label>
+                </value>
+                <value>
+                    <fullName>Architectural</fullName>
+                    <default>false</default>
+                    <label>Architectural</label>
+                </value>
+                <value>
+                    <fullName>Basketball Hoops</fullName>
+                    <default>false</default>
+                    <label>Basketball Hoops</label>
+                </value>
+                <value>
+                    <fullName>Exterior Maintenance</fullName>
+                    <default>false</default>
+                    <label>Exterior Maintenance</label>
+                </value>
+                <value>
+                    <fullName>Lawn &amp; Weeds</fullName>
+                    <default>false</default>
+                    <label>Lawn &amp; Weeds</label>
+                </value>
+                <value>
+                    <fullName>Nuisance</fullName>
+                    <default>false</default>
+                    <label>Nuisance</label>
+                </value>
+                <value>
+                    <fullName>Permits</fullName>
+                    <default>false</default>
+                    <label>Permits</label>
+                </value>
+                <value>
+                    <fullName>Rental Inspections</fullName>
+                    <default>false</default>
+                    <label>Rental Inspections</label>
+                </value>
+                <value>
+                    <fullName>Signs</fullName>
+                    <default>false</default>
+                    <label>Signs</label>
+                </value>
+                <value>
+                    <fullName>Snow/Ice</fullName>
+                    <default>false</default>
+                    <label>Snow/Ice</label>
+                </value>
+                <value>
+                    <fullName>Tenant Registration</fullName>
+                    <default>false</default>
+                    <label>Tenant Registration</label>
+                </value>
+                <value>
+                    <fullName>Trash</fullName>
+                    <default>false</default>
+                    <label>Trash</label>
+                </value>
+                <value>
+                    <fullName>Trash Cans</fullName>
+                    <default>false</default>
+                    <label>Trash Cans</label>
+                </value>
+                <value>
+                    <fullName>Trees</fullName>
+                    <default>false</default>
+                    <label>Trees</label>
+                </value>
+                <value>
+                    <fullName>Vehicles</fullName>
+                    <default>false</default>
+                    <label>Vehicles</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type_of_Notice__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Notice</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Collection Notice</fullName>
+                    <default>false</default>
+                    <label>Collection Notice</label>
+                </value>
+                <value>
+                    <fullName>Delinquency Notice</fullName>
+                    <default>false</default>
+                    <label>Delinquency Notice</label>
+                </value>
+                <value>
+                    <fullName>Pre-Lien</fullName>
+                    <default>false</default>
+                    <label>Pre-Lien</label>
+                </value>
+                <value>
+                    <fullName>Lien</fullName>
+                    <default>false</default>
+                    <label>Lien</label>
+                </value>
+                <value>
+                    <fullName>Securitized Transfer Fee</fullName>
+                    <default>false</default>
+                    <label>Securitized Transfer Fee</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Violation_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Violation Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code_Historical__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This was the Yardi code associated with this asset prior to securitization.</inlineHelpText>
+        <label>Yardi Code - Historical</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Yardi_Property_Code__c</formula>
+        <label>Yardi Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Property Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Vendor_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Source__r.Yardi_vendor_code__c</formula>
+        <label>Yardi Vendor Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Days_Open__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Status__c, &quot;Open&quot;), TODAY() -  Date_of_First_Notice_Recv_d__c , 
+Closed_Date__c  -  Date_of_First_Notice_Recv_d__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Days Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Violation</label>
+    <listViews>
+        <fullName>Acker_Open_Violations</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Date_of_First_Notice__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_Assigned__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Occupied__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_IH_Associate__c</field>
+            <operation>equals</operation>
+            <value>Andrew Acker</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>SEA Acker - Open Violations</label>
+        <sharedTo>
+            <role>Executive_Seattle</role>
+            <role>Team_Member_Seattle</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Closed_Violations</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Source__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Closed</value>
+        </filters>
+        <label>All Closed Violations</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Closed_Violations_Securitization</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Source__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Closed - No Fine Assessed,Closed - Paid,Dismissed</value>
+        </filters>
+        <filters>
+            <field>Securitization_Pool__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All Closed Violations - Securitization</label>
+    </listViews>
+    <listViews>
+        <fullName>All_IH_Delinquencies</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Source__c</columns>
+        <columns>HOA_Tracking__c</columns>
+        <columns>Type_of_Notice__c</columns>
+        <columns>Coordinator__c</columns>
+        <columns>Date_of_Notice_Recv_d__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>Date_Deliquency_Paid__c</columns>
+        <columns>Delinquency_Amount__c</columns>
+        <columns>Status__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.IH_Delinquency</value>
+        </filters>
+        <label>All IH Delinquencies</label>
+    </listViews>
+    <listViews>
+        <fullName>All_IH_Violations</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Source__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Type__c</columns>
+        <columns>Coordinator__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>Date_of_Confirmed_Compliance__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Status__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.IH_Violation</value>
+        </filters>
+        <label>All IH Violations</label>
+    </listViews>
+    <listViews>
+        <fullName>All_IH_Violations1</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Source__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>All Open Violations</label>
+    </listViews>
+    <listViews>
+        <fullName>All_IH_Violations_with_Rehab</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Source__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Type__c</columns>
+        <columns>Coordinator__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>Date_of_Confirmed_Compliance__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Status__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.IH_Violation</value>
+        </filters>
+        <filters>
+            <field>Rehab__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All IH Violations with Rehab</label>
+    </listViews>
+    <listViews>
+        <fullName>All_IH_Violations_without_Rehab</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Source__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Type__c</columns>
+        <columns>Coordinator__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>Date_of_Confirmed_Compliance__c</columns>
+        <columns>Occupied__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Status__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.IH_Violation</value>
+        </filters>
+        <filters>
+            <field>Rehab__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>All IH Violations without Rehab</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Occupant_Violations</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Source__c</columns>
+        <columns>Lease__c</columns>
+        <columns>TIP__c</columns>
+        <columns>Type__c</columns>
+        <columns>Coordinator__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_of_First_Notice_Sent_to_Occupant__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>Date_of_Confirmed_Compliance__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Date_Fine_Amount_Charged_to_Ledger__c</columns>
+        <columns>Status__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.Occupant_Violation</value>
+        </filters>
+        <label>All Occupant Violations</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Violations_Securitization</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Source__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Securitization_Pool__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All Open Violations - Securitization</label>
+    </listViews>
+    <listViews>
+        <fullName>Brandon_s_Violations</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Source__c</columns>
+        <columns>Type__c</columns>
+        <columns>Violation_Description__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Assigned_IH_Associate__c</field>
+            <operation>equals</operation>
+            <value>Brandon Wooliver</value>
+        </filters>
+        <label>* Brandon&apos;s Violations</label>
+        <sharedTo>
+            <role>Team_Member_Inland_Empire</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Flynn_Open_Violations</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Date_of_First_Notice__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_Assigned__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Occupied__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_IH_Associate__c</field>
+            <operation>equals</operation>
+            <value>Mike Flynn</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>SEA Flynn - Open Violations</label>
+        <sharedTo>
+            <role>Executive_Seattle</role>
+            <role>Team_Member_Seattle</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MN_and_Chicago</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Chicago,Minneapolis</value>
+        </filters>
+        <label>MN and Chicago</label>
+        <sharedTo>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>McMenamy_Open_Violations</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Date_of_First_Notice__c</columns>
+        <columns>Date_of_First_Notice_Recv_d__c</columns>
+        <columns>Date_Assigned__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <columns>Fine_Amount__c</columns>
+        <columns>Occupied__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Rehab__c</columns>
+        <columns>Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_IH_Associate__c</field>
+            <operation>equals</operation>
+            <value>Justine McMenamy</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>SEA McMenamy - Open Violations</label>
+        <sharedTo>
+            <role>Executive_Seattle</role>
+            <role>Team_Member_Seattle</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Open_IH_Violations</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <columns>Status__c</columns>
+        <columns>Occupied__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.IH_Violation</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Open IH Violations</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Occupant_Violations</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <columns>Status__c</columns>
+        <columns>Occupied__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Violations__c.Occupant_Violation</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Open Occupant Violations</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Violations_w_Past_Due_Compliance</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Source__c</columns>
+        <columns>Type__c</columns>
+        <columns>Date_of_Required_Compliance__c</columns>
+        <columns>of_Days_Open__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Date_of_Required_Compliance__c</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Open Violations w/ Past Due Compliance</label>
+    </listViews>
+    <nameField>
+        <displayFormat>V-{000}</displayFormat>
+        <label>Violation Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Violations</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>IH_Delinquency</fullName>
+        <active>true</active>
+        <description>Will require HOA Tracking record.</description>
+        <label>IH Delinquency</label>
+        <picklistValues>
+            <picklist>First_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupied__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Second_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Third_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lawn %26 Weeds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Notice__c</picklist>
+            <values>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securitized Transfer Fee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>IH_Violation</fullName>
+        <active>true</active>
+        <description>Will require an HOA or Municipality and a Rehab record.</description>
+        <label>IH Violation</label>
+        <picklistValues>
+            <picklist>First_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupied__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Second_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Fine Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - No Fine Assessed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Pending Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Third_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball Hoops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lawn %26 Weeds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuisance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snow%2FIce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Notice__c</picklist>
+            <values>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Occupant_Violation</fullName>
+        <active>true</active>
+        <description>Will require an HOA or Municipality and a Lease or TIP record.</description>
+        <label>Occupant Violation</label>
+        <picklistValues>
+            <picklist>First_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupied__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Second_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Fine Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - No Fine Assessed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Pending Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Third_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball Hoops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lawn %26 Weeds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuisance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snow%2FIce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Notice__c</picklist>
+            <values>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Read_Only_IH_Delinquency</fullName>
+        <active>true</active>
+        <label>Read Only IH Delinquency</label>
+        <picklistValues>
+            <picklist>First_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupied__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Second_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Fine Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - No Fine Assessed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Pending Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Third_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball Hoops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lawn %26 Weeds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuisance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snow%2FIce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Notice__c</picklist>
+            <values>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securitized Transfer Fee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Read_Only_IH_Violation</fullName>
+        <active>true</active>
+        <label>Read Only IH Violation</label>
+        <picklistValues>
+            <picklist>First_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupied__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Second_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Fine Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - No Fine Assessed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Pending Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Third_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball Hoops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lawn %26 Weeds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuisance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snow%2FIce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Notice__c</picklist>
+            <values>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securitized Transfer Fee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Read_Only_Occupant_Violation</fullName>
+        <active>true</active>
+        <description>To lock the record when status is closed</description>
+        <label>Read Only Occupant Violation</label>
+        <picklistValues>
+            <picklist>First_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupied__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Second_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed - Fine Waived</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - No Fine Assessed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Pending Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dismissed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Third_Notice_Type__c</picklist>
+            <values>
+                <fullName>Certified Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular Mail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Animals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Architectural</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basketball Hoops</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exterior Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lawn %26 Weeds</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuisance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rental Inspections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Snow%2FIce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trash Cans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_Notice__c</picklist>
+            <values>
+                <fullName>Collection Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delinquency Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pre-Lien</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Securitized Transfer Fee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Source__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Coordinator__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date_of_Required_Compliance__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>of_Days_Open__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Source__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Coordinator__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date_of_Required_Compliance__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>of_Days_Open__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Source__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Coordinator__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date_of_Required_Compliance__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>of_Days_Open__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Source__c</searchFilterFields>
+        <searchFilterFields>Coordinator__c</searchFilterFields>
+        <searchFilterFields>Property_Address__c</searchFilterFields>
+        <searchFilterFields>Date_of_Required_Compliance__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>of_Days_Open__c</searchFilterFields>
+        <searchResultsAdditionalFields>Portfolio__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Source__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Coordinator__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date_of_Required_Compliance__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>of_Days_Open__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Date_Amount_Paid_Required</fullName>
+        <active>true</active>
+        <description>Date Fine Amount Paid is required on Violations with a fine amount before it is closed.</description>
+        <errorConditionFormula>AND( 
+$RecordType.Name  &lt;&gt;  &quot;IH Delinquency&quot;, 
+OR( 
+NOT(ISBLANK( Fine_Amount__c )), 
+NOT(ISBLANK( Second_Fine_Amount__c ))), 
+ISPICKVAL( Status__c , &apos;Closed - Paid&apos;), 
+ISBLANK( Date_Fine_Amount_Paid__c )
+)</errorConditionFormula>
+        <errorDisplayField>Date_Fine_Amount_Paid__c</errorDisplayField>
+        <errorMessage>Date Fine Amount Paid is required on Violations with a fine amount before it is closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_Charged_to_Ledger_Required</fullName>
+        <active>true</active>
+        <description>Date Fine Amount Charged to Ledger is required on Violations with a fine amount before it is closed.</description>
+        <errorConditionFormula>AND( 
+$RecordType.Name = &quot;Occupant Violation&quot;,
+OR(
+NOT(ISBLANK( Fine_Amount__c )),
+NOT(ISBLANK(  Second_Fine_Amount__c  ))),
+ISPICKVAL( Status__c , &apos;Closed - Paid&apos;), 
+ISBLANK( Date_Fine_Amount_Charged_to_Ledger__c ))</errorConditionFormula>
+        <errorDisplayField>Date_Fine_Amount_Charged_to_Ledger__c</errorDisplayField>
+        <errorMessage>Date Fine Amount Charged to Ledger is required on Violations with a fine amount before it is closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_Delinquency_Paid</fullName>
+        <active>true</active>
+        <description>Date Delinquency Paid required before violation is resolved.</description>
+        <errorConditionFormula>RecordType.Name = &quot;IH Delinquency&quot; &amp;&amp; 
+ISPICKVAL(Status__c , &quot;Closed - Paid&quot;) &amp;&amp; 
+ISBLANK(Date_Deliquency_Paid__c) &amp;&amp; 
+$Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorDisplayField>Date_Deliquency_Paid__c</errorDisplayField>
+        <errorMessage>Required before violation is closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_Submitted_to_Accounting_Required</fullName>
+        <active>true</active>
+        <description>Date Submitted to Accounting is required on Violations with a fine amount before it is closed.</description>
+        <errorConditionFormula>AND( 
+$RecordType.Name  &lt;&gt;  &quot;IH Delinquency&quot;, 
+OR( 
+NOT(ISBLANK( Fine_Amount__c )), 
+NOT(ISBLANK( Second_Fine_Amount__c ))), 
+ISPICKVAL( Status__c , &apos;Closed - Paid&apos;), 
+ISBLANK(  Date_Submitted_to_Accounting__c  ))</errorConditionFormula>
+        <errorDisplayField>Date_Submitted_to_Accounting__c</errorDisplayField>
+        <errorMessage>Date Submitted to Accounting is required on Violations with a fine amount before it is closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_of_Confirmed_Compliance_Required</fullName>
+        <active>true</active>
+        <description>Date of confirmed compliance required before status is resolved.</description>
+        <errorConditionFormula>AND(
+$RecordType.Name  &lt;&gt;  &quot;IH Delinquency&quot;,
+OR(
+ISPICKVAL( Status__c , &apos;Closed - No Fine Assessed&apos;),
+ISPICKVAL( Status__c , &apos;Closed - Paid&apos;),
+ISPICKVAL( Status__c , &apos;Closed - Fine Waived&apos;)),
+ISBLANK(Date_of_Confirmed_Compliance__c),
+$Profile.Name != &apos;System Administrator&apos;)</errorConditionFormula>
+        <errorDisplayField>Date_of_Confirmed_Compliance__c</errorDisplayField>
+        <errorMessage>Required before violation is closed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lease_or_TIP_Required</fullName>
+        <active>true</active>
+        <description>Must be related to a Lease or TIP record</description>
+        <errorConditionFormula>RecordType.Name = &quot;Occupant Violation&quot; &amp;&amp; 
+AND(ISBLANK( Lease__c ), ISBLANK( TIP__c ))&amp;&amp; 
+$Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorMessage>Must be related to a Lease or TIP record</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lease_or_TIP_Required_if_Occupied</fullName>
+        <active>true</active>
+        <description>If Occupied value is Yes, a Lease or TIP is required.</description>
+        <errorConditionFormula>RecordType.Name = &quot;IH Violation&quot; &amp;&amp; 
+ISPICKVAL(Occupied__c, &quot;Yes&quot;)&amp;&amp; 
+AND(ISBLANK( Lease__c ), ISBLANK( TIP__c ))&amp;&amp; 
+$Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorDisplayField>Occupied__c</errorDisplayField>
+        <errorMessage>If property is occupied, a Lease or TIP is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Fine_Assessed_w_Fines_Populated</fullName>
+        <active>true</active>
+        <description>Fine Amounts should be blank if status is Closed - No Fine Assessed.</description>
+        <errorConditionFormula>AND( 
+$RecordType.Name &lt;&gt; &quot;IH Delinquency&quot;, 
+
+OR( 
+NOT(ISBLANK( Fine_Amount__c )), 
+NOT(ISBLANK( Second_Fine_Amount__c ))), 
+ISPICKVAL( Status__c , &apos;Closed - No Fine Assessed&apos;))</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Fine Amounts should be blank if status is Closed - No Fine Assessed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Read_Only_Record_Type</fullName>
+        <active>true</active>
+        <description>Validation execute when status is closed and record is Read-Only.</description>
+        <errorConditionFormula>AND(
+     OR(
+       RecordType.DeveloperName = &quot;Read_Only_IH_Delinquency&quot;,
+       RecordType.DeveloperName = &quot;Read_Only_IH_Violation&quot;,
+       RecordType.DeveloperName = &quot;Read_Only_Occupant_Violation&quot;
+     ),
+     ISCHANGED(Source__c),
+     $Profile.Name &lt;&gt; &apos;System Administrator&apos; 
+)</errorConditionFormula>
+        <errorMessage>A violation that is in closed should not be reopened. Please create a new Violation. If this is closed by mistake, please open an concierge ticket with relevant reasoning to reopen this record.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>New_IH_Violation_Lease</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New IH Violation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a31/e?CF00NE0000005BAN3={!Tenant_Card__c.Name} 
+&amp;CF00NE0000005BAN3_lkid={!Tenant_Card__c.Id} 
+&amp;CF00NE0000005BAN4={!Tenant_Card__c.Portfolio__c}
+&amp;CF00NE0000005BAN4_lkid={!Tenant_Card__c.Portfolio_ID__c}
+&amp;CF00NE0000005BAN8={!Tenant_Card__c.Residence__c} 
+&amp;CF00NE0000005BAN8_lkid={!Tenant_Card__c.ResidenceId__c} 
+&amp;CF00NE0000005BAMf={!User.Full_Name__c} 
+&amp;00NE0000005BANE=&quot;Open&quot; 
+&amp;00NE0000005BfqT=&quot;Yes&quot;
+&amp;RecordType=012E00000005p1A&amp;ent=01IE00000011mew
+&amp;retURL=%2F{!Tenant_Card__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_IH_Violation_TIP</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New IH Violation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a31/e?CF00NE0000005BANF={!TIP_Tracking__c.Name} 
+&amp;CF00NE0000005BANF_lkid={!TIP_Tracking__c.Id} 
+&amp;CF00NE0000005BAN4={!TIP_Tracking__c.Portfolio__c} 
+&amp;CF00NE0000005BAN4_lkid={!TIP_Tracking__c.PortfolioId__c} 
+&amp;CF00NE0000005BAN8={!TIP_Tracking__c.Residence__c} 
+&amp;CF00NE0000005BAN8_lkid={!TIP_Tracking__c.ResidenceId__c} 
+&amp;CF00NE0000005BAMf={!User.Full_Name__c} 
+&amp;00NE0000005BANE=&quot;Open&quot; 
+&amp;00NE0000005BfqT=&quot;Yes&quot;
+&amp;RecordType=012E00000005p1A&amp;ent=01IE00000011mew 
+&amp;retURL=%2F{!TIP_Tracking__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Violation_HOA_Tracking</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Violation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a31/e?CF00NE0000005BAN0={!HOA_Tracking__c.Name}
+&amp;CF00NE0000005BAN0_lkid={!HOA_Tracking__c.Id}
+&amp;CF00NE0000005BAND={!HOA_Tracking__c.HOA__c}
+&amp;CF00NE0000005BAND_lkid={!HOA_Tracking__c.HOA_ID__c}
+&amp;CF00NE0000005BAN4={!HOA_Tracking__c.Property__c}
+&amp;CF00NE0000005BAN4_lkid={!HOA_Tracking__c.PropertyId__c}
+&amp;CF00NE0000005BAN8={!Property__c.Residence__c}
+&amp;CF00NE0000005BAN8_lkid={!Property__c.ResidenceId__c}
+&amp;CF00NE0000005BAMf={!User.Full_Name__c} 
+&amp;00NE0000005BANE=&quot;Open&quot;
+&amp;RecordType=012E00000005p15&amp;ent=01IE00000011mew
+&amp;retURL=%2F{!HOA_Tracking__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Violation_Lease</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Occupant Violation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a31/e?CF00NE0000005BAN3={!Tenant_Card__c.Name}
+&amp;CF00NE0000005BAN3_lkid={!Tenant_Card__c.Id}
+&amp;CF00NE0000005BAN4={!Tenant_Card__c.Portfolio__c}
+&amp;CF00NE0000005BAN4_lkid={!Violations__c.PortfolioId__c}
+&amp;CF00NE0000005BAN8={!Tenant_Card__c.Residence__c}
+&amp;CF00NE0000005BAN8_lkid={!Violations__c.ResidenceId__c}
+&amp;CF00NE0000005BAMf={!User.Full_Name__c}
+&amp;CF00NE0000005BLAa={!Property__c.OwnerFullName}
+&amp;00NE0000005BANE=&quot;Open&quot;
+&amp;RecordType=012E00000005p1F&amp;ent=01IE00000011mew
+&amp;retURL=%2F{!Tenant_Card__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Violation_Rehab</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Violation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a31/e?CF00NE0000005BAN7={!Rehab__c.Name} 
+&amp;CF00NE0000005BAN7_lkid={!Rehab__c.Id} 
+&amp;CF00NE0000005BAN4={!Rehab__c.Portfolio__c} 
+&amp;CF00NE0000005BAN4_lkid={!Rehab__c.PortfolioId__c} 
+&amp;CF00NE0000005BAN8={!Rehab__c.Home__c} 
+&amp;CF00NE0000005BAN8_lkid={!Rehab__c.HomeId__c} 
+&amp;CF00NE0000005BAMf={!User.Full_Name__c}
+&amp;00NE0000005BANE=&quot;Open&quot; 
+&amp;RecordType=012E00000005p1A&amp;ent=01IE00000011mew
+&amp;retURL=%2F{!Rehab__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Violation_TIP</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Occupant Violation</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a31/e?CF00NE0000005BANF={!TIP_Tracking__c.Name}
+&amp;CF00NE0000005BANF_lkid={!TIP_Tracking__c.Id}  
+&amp;CF00NE0000005BAN4={!TIP_Tracking__c.Portfolio__c} 
+&amp;CF00NE0000005BAN4_lkid={!Violations__c.PortfolioId__c}
+&amp;CF00NE0000005BAN8={!TIP_Tracking__c.Residence__c}
+&amp;CF00NE0000005BAN8_lkid={!Violations__c.ResidenceId__c}
+&amp;CF00NE0000005BAMf={!User.Full_Name__c} 
+&amp;CF00NE0000005BLAa={!Property__c.OwnerFullName} 
+&amp;00NE0000005BANE=&quot;Open&quot; 
+&amp;RecordType=012E00000005p1F&amp;ent=01IE00000011mew
+&amp;retURL=%2F{!TIP_Tracking__c.Id}</url>
+    </webLinks>
+</CustomObject>

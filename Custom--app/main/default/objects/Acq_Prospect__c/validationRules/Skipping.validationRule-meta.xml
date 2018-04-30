@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skipping</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ Offer_Accepted__c=False,
+Converted_to_Pipeline__c= True 
+)</errorConditionFormula>
+    <errorDisplayField>Address__c</errorDisplayField>
+    <errorMessage>Please complete the required steps before converting to Pipeline.</errorMessage>
+</ValidationRule>

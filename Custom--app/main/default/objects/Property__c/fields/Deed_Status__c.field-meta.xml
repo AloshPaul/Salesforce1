@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deed_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	NOT(ISBlank( Recorded_Deed_Date__c )),
+	 $Setup.Status_Tags__c.DS_Deed_Recorded__c ,
+	IF(
+		NOT(ISBLANK(Deed_Received_Date__c )),
+		$Setup.Status_Tags__c.DS_Deed_Received__c ,
+
+             IF(
+                   OR(
+                             AND(NOT(ISBLANK( BK_Filing_Date__c )),  BK_Filing_Date__c&lt;Acquisition_Date__c),
+                             ISPICKVAL( Proxy_BK_Status__c , "PreAcq BK"),
+                             AND(NOT(ISBLANK( BK_Filing_Date__c )),  BK_Filing_Date__c>Acquisition_Date__c, ISBLANK( BK_Resolved_Date__c )),
+                             ISPICKVAL(Proxy_BK_Status__c, "PostAcq BK Unresolved")),
+                     "",
+
+                       IF(
+				AND(
+					OR(
+						NOT(ISBLANK(TIP_New_Lease_Signed_Date__c)),
+						NOT(ISBLANK(TIP_Prior_Lease_Accepted_Date__c)),
+                                                ISPICKVAL( Proxy_TIP_Lease_Signed__c, "1"),
+						NOT(ISBLANK( LeaseSign_Date_First_Tenant__c )),
+						NOT(ISBLANK(Rehab_Start_Date__c)),
+                                                NOT(ISBLANK( Rehab_Completed_Date__c)),
+                                                TEXT( Occupied_Status_Acquisition__c )=  $Setup.Status_Tags__c.OSAQ_Purchased_Rented__c,
+                                                 Leased_Unit__c =1
+					),
+					ISBLANK(Deed_Received_Date__c),
+					ISBLANK(Recorded_Deed_Date__c)
+				),
+				 $Setup.Status_Tags__c.DS_TBD__c ,
+                      IF(
+			AND(
+				OR(
+					TEXT(Post_Acquisition_Next_Step__c) = $Setup.Status_Tags__c.PANS_Refer_to_Rehab__c,
+					TEXT(Post_Acq_Occupancy_Assessment__c) = $Setup.Status_Tags__c.OSAQ_Vacant__c,
+					NOT(ISBLANK(CFK_Actual_Move_Out_Date__c)),  ISPICKVAL(Proxy_CFK_Complete__c,"1"),
+                                        ISPICKVAL(Proxy_Eviction_Complete__c,"1"),
+					NOT(ISBLANK( Eviction_Complete_Date__c )),
+                                        ISPICKVAL(Proxy_Waiting_for_Deed__c, "1")
+				),
+				ISBLANK(Deed_Received_Date__c),ISBLANK(Recorded_Deed_Date__c),
+				ISBLANK( Rehab_Start_Date__c ), ISBLANK( Rehab_Completed_Date__c )
+			),
+			 $Setup.Status_Tags__c.DS_Waiting_for_Deed__c ,
+						IF(
+					AND(
+						ISBLANK(Deed_Received_Date__c),
+						ISBLANK(Deed_Received_Date__c)
+					),
+					 $Setup.Status_Tags__c.DS_Deed_Not_Yet_Received__c ,
+					""
+				)
+			)
+		)
+	)
+))</formula>
+    <inlineHelpText>The following Status fields are dependent on this field:
+Rehab Status</inlineHelpText>
+    <label>Deed Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Confirmed_Compliance_Required</fullName>
+    <active>true</active>
+    <description>Date of confirmed compliance required before status is resolved.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name  &lt;>  "IH Delinquency",
+OR(
+ISPICKVAL( Status__c , 'Closed - No Fine Assessed'),
+ISPICKVAL( Status__c , 'Closed - Paid'),
+ISPICKVAL( Status__c , 'Closed - Fine Waived')),
+ISBLANK(Date_of_Confirmed_Compliance__c),
+$Profile.Name != 'System Administrator')</errorConditionFormula>
+    <errorDisplayField>Date_of_Confirmed_Compliance__c</errorDisplayField>
+    <errorMessage>Required before violation is closed.</errorMessage>
+</ValidationRule>

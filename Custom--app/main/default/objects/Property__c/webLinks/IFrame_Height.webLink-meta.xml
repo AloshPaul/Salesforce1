@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFrame_Height</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>IFrame Height</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>document.getElementById('066E0000000wlHh').style.height = 1000;</url>
+</WebLink>

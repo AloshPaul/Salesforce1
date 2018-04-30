@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yardi_Rental_Unit_Status_Acquisition__c</fullName>
+    <description>This field ties to the "Rental_Type" field in the CommUnits SQL file.</description>
+    <externalId>false</externalId>
+    <formula>CASE(Occupied_Status_Acquisition__c, "Purchased Rented", "Residential",  "Occupied",  "Admin", "Unknown", "Admin", "Vacant", "Admin", "None")</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Yardi Rental Unit Status @ Acquisition</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

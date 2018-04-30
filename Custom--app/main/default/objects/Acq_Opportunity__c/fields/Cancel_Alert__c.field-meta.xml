@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Alert__c</fullName>
+    <externalId>false</externalId>
+    <formula>'&lt;html>&lt;body>&lt;div style="color: red;">&lt;font size="4">&lt;b>Canceling this record will cancel all associated records and it cannot be re-opened&lt;/b>&lt;/font>&lt;/div>&lt;/body>&lt;/html>'</formula>
+    <label>Cancel Alert</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
