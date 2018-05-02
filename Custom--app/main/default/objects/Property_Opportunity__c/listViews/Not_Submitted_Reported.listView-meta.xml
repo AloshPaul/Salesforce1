@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Submitted_Reported</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Submitted_By__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Visible__c</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </filters>
+    <label>Not Submitted Reporting</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

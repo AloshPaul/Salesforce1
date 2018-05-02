@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aged_Inventory_14_30_DOM</fullName>
+    <columns>NAME</columns>
+    <columns>Leasing_Mgr_Assigned__c</columns>
+    <columns>Rent_UW__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Vadiance_Asking_UW__c</columns>
+    <columns>YRR_Market_Rent__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>DOM__c</field>
+        <operation>greaterThan</operation>
+        <value>13</value>
+    </filters>
+    <filters>
+        <field>DOM__c</field>
+        <operation>lessThan</operation>
+        <value>31</value>
+    </filters>
+    <label>Aged Inventory 14-30 DOM</label>
+    <sharedTo>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

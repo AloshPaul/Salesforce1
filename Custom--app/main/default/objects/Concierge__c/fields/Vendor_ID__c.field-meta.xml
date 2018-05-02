@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_ID__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>IRN number OR Invoice number and Vendor ID is required for issues related to invoice processing. If multiple IRNs were affected, please list all IRN numbers in the Detailed Description field below</inlineHelpText>
+    <label>Vendor ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

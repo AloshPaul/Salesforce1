@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Open_Resident_Evictions_Chicago</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Lease__c</columns>
+    <columns>Eviction_Type__c</columns>
+    <columns>Eviction_Status__c</columns>
+    <columns>Eviction_Attorney_Law_Firm__c</columns>
+    <columns>Refer_to_Attorney_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Eviction_Type__c</field>
+        <operation>equals</operation>
+        <value>Resident</value>
+    </filters>
+    <filters>
+        <field>Eviction_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>chicago</value>
+    </filters>
+    <label>All Open Resident Evictions - Chicago</label>
+</ListView>

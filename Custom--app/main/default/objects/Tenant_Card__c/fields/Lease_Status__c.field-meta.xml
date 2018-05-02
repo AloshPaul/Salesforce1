@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Ten/TIP Lease Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IH Initial Lease</fullName>
+                <default>false</default>
+                <label>IH Initial Lease</label>
+            </value>
+            <value>
+                <fullName>IH Initial Lease Renewal</fullName>
+                <default>false</default>
+                <label>IH Initial Lease Renewal</label>
+            </value>
+            <value>
+                <fullName>IH Renewal</fullName>
+                <default>false</default>
+                <label>IH Renewal</label>
+            </value>
+            <value>
+                <fullName>TIP Eviction</fullName>
+                <default>false</default>
+                <label>TIP Eviction</label>
+            </value>
+            <value>
+                <fullName>TIP New Lease</fullName>
+                <default>false</default>
+                <label>TIP New Lease</label>
+            </value>
+            <value>
+                <fullName>TIP Prior Owner Lease Honored</fullName>
+                <default>false</default>
+                <label>TIP Prior Owner Lease Honored</label>
+            </value>
+            <value>
+                <fullName>TIP Renewal</fullName>
+                <default>false</default>
+                <label>TIP Renewal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

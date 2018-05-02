@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>R_Product_YearBuilt_AllInBasis__c</fullName>
+    <externalId>false</externalId>
+    <formula>Year_Built__c  *  All_In_Cost_Est_UW__c</formula>
+    <label>Product Of Year Built &amp; All In Basis</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

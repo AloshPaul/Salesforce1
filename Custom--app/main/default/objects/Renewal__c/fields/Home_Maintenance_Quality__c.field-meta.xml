@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Home_Maintenance_Quality__c</fullName>
+    <externalId>false</externalId>
+    <label>Home Maintenance Quality</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acceptable</fullName>
+                <default>false</default>
+                <label>Acceptable</label>
+            </value>
+            <value>
+                <fullName>Needs Improvement</fullName>
+                <default>false</default>
+                <label>Needs Improvement</label>
+            </value>
+            <value>
+                <fullName>Unacceptable</fullName>
+                <default>false</default>
+                <label>Unacceptable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

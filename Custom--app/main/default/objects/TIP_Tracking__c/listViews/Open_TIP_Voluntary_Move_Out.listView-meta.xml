@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_TIP_Voluntary_Move_Out</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>DK_Assigned_Date__c</columns>
+    <columns>DK_Driver_Assigned__c</columns>
+    <columns>Initial_Contact_Date__c</columns>
+    <columns>Move_Out_Verbal_Date__c</columns>
+    <columns>Move_Out_Actual__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TIP_Status__c</field>
+        <operation>equals</operation>
+        <value>TIP - Voluntary Move-Out</value>
+    </filters>
+    <label>Open TIP: Voluntary Move-Out</label>
+</ListView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Agent to IH Transaction Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Under Initial Review</fullName>
+                <default>true</default>
+                <label>Under Initial Review</label>
+            </value>
+            <value>
+                <fullName>Ready for Underwriting Review</fullName>
+                <default>false</default>
+                <label>Ready for Underwriting Review</label>
+            </value>
+            <value>
+                <fullName>Offer Submitted to Homeowner</fullName>
+                <default>false</default>
+                <label>Offer Submitted to Homeowner</label>
+            </value>
+            <value>
+                <fullName>Requires IH Action - Review Correspondence</fullName>
+                <default>false</default>
+                <label>Requires IH Action - Review Correspondence</label>
+            </value>
+            <value>
+                <fullName>Review Counter Offer</fullName>
+                <default>false</default>
+                <label>Review Counter Offer</label>
+            </value>
+            <value>
+                <fullName>Review Updated Offer Amount</fullName>
+                <default>false</default>
+                <label>Review Updated Offer Amount</label>
+            </value>
+            <value>
+                <fullName>Additional Signatures Needed</fullName>
+                <default>false</default>
+                <label>Additional Signatures Needed</label>
+            </value>
+            <value>
+                <fullName>Review Home Inspection</fullName>
+                <default>false</default>
+                <label>Review Home Inspection</label>
+            </value>
+            <value>
+                <fullName>Offer Accepted by Seller</fullName>
+                <default>false</default>
+                <label>Offer Accepted by Seller</label>
+            </value>
+            <value>
+                <fullName>Transaction Cancelled</fullName>
+                <default>false</default>
+                <label>Transaction Cancelled</label>
+            </value>
+            <value>
+                <fullName>In Escrow</fullName>
+                <default>false</default>
+                <label>In Escrow</label>
+            </value>
+            <value>
+                <fullName>Converted to Pipeline</fullName>
+                <default>false</default>
+                <label>Converted to Pipeline</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

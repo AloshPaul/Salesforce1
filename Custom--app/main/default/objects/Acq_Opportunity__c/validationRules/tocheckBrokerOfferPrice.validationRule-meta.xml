@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tocheckBrokerOfferPrice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   
+     Accepted_Contract_Price__c > Offer_Price__c,
+    OR(ISPICKVAL(Broker_Offer_Status__c, 'Accepted'))
+
+)</errorConditionFormula>
+    <errorMessage>The accepted contract price should not be greater than the approved offer price</errorMessage>
+</ValidationRule>

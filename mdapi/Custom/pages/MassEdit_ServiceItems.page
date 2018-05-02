@@ -1,0 +1,65 @@
+<apex:page standardController="Service_Item__c" recordSetVar="unused"
+    sidebar="false">
+
+    <!--page Form-->
+    <apex:form >
+
+        <script>
+            function confirmCancel() {
+                var isCancel = confirm("Are you sure you wish to cancel?");
+                if (isCancel)
+                    return true;
+                return false;
+            }
+        </script>
+
+        <!--page block-->
+        <apex:pageBlock >
+
+            <!--page Message-->
+            <apex:pageMessages />
+
+            <!--page buttons-->
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}" />
+                <apex:commandButton value="Cancel"
+                    onclick="return confirmCancel();" action="{!cancel}" />
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection columns="1" rendered="{!ISNULL(selected)}">
+                <apex:outputLabel >No record(s) to display</apex:outputLabel>
+            </apex:pageBlockSection>
+
+            <!--Fields for Mass Edit Operation-->
+            <apex:pageBlockTable value="{!selected}" var="item"
+                id="table" rendered="{!NOT(ISNULL(selected))}">
+                <apex:column value="{!item.Yardi_Property_Code__c}" />
+                <apex:column value="{!item.Property_City__c}" />
+                <apex:column value="{!item.Service_Request__r.Name}" />
+                <apex:column value="{!item.Name}" />
+                <apex:column value="{!item.Service_Item_Status__c}"/>
+                <apex:column value="{!item.Brief_Description__c}"/>
+
+                <apex:column headerValue="{!$ObjectType.Service_Item__c.fields.Priority__c.label}">
+                    <apex:inputField value="{!item.Priority__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="{!$ObjectType.Service_Item__c.fields.Assignment__c.label}">
+                    <apex:inputField value="{!item.Assignment__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="{!$ObjectType.Service_Item__c.fields.Technician__c.label}">
+                    <apex:inputField value="{!item.Technician__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="{!$ObjectType.Service_Item__c.fields.Schedule_Date__c.label}">
+                    <apex:inputField value="{!item.Schedule_Date__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="{!$ObjectType.Service_Item__c.fields.Time_Slot__c.label}">
+                    <apex:inputField value="{!item.Time_Slot__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

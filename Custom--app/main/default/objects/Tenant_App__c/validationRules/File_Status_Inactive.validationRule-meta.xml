@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Status_Inactive</fullName>
+    <active>true</active>
+    <description>All Cancelled or Declined applications must have a file status of Inactive.</description>
+    <errorConditionFormula>( ISPICKVAL(File_Status__c ,"Active") || ISPICKVAL(File_Status__c ,"Closed Complete")) &amp;&amp; ( ISPICKVAL( Application_Status__c , "Cancelled") || ISPICKVAL( Application_Status__c , "Declined"))</errorConditionFormula>
+    <errorDisplayField>File_Status__c</errorDisplayField>
+    <errorMessage>Files must be marked Inactive when Application Status is "Cancelled" or "Declined."</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_One_Agent_Assigned_to_Lead</fullName>
+    <active>true</active>
+    <description>A lead may only be assigned to either an Agent or 3rd Party Broker; not both.</description>
+    <errorConditionFormula>IF(NOT(ISBLANK(Listing_Agent__c)), NOT(ISBLANK(X3rd_Party_Broker__c)),
+NULL)
+&amp;&amp; $Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Listing_Agent__c</errorDisplayField>
+    <errorMessage>A lead may only be assigned to either an Agent or 3rd Party Broker; not both.</errorMessage>
+</ValidationRule>

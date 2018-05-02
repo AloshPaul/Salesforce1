@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Critical_Dependencies__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please note if this project has specific technical dependencies (such as another project that needs to get completed before it can get started) or other dependencies such as business process definition, etc. that could impact the start or finish date.</inlineHelpText>
+    <label>Critical Dependencies</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

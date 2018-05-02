@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>completed_records</fullName>
+    <active>true</active>
+    <description>IF</description>
+    <errorConditionFormula>(Chatter_Exercises_Completed__c = FALSE || Views_Exercises_Completed__c = FALSE || Editing_Exercises_Completed__c = FALSE ||  Help_Exercises_Completed__c = FALSE|| Navigation_Exercises_Completed__c = FALSE)  &amp;&amp; ISPICKVAL( Homework_Status__c , "Complete")</errorConditionFormula>
+    <errorMessage>You must indicate that you have completed all the exercises before you can mark the homework complete.</errorMessage>
+</ValidationRule>

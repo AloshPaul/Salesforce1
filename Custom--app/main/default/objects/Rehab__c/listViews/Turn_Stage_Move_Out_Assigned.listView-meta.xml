@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Turn_Stage_Move_Out_Assigned</fullName>
+    <columns>NAME</columns>
+    <columns>Type__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Notice_Date__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Utility_Transfer_Request_Date__c</columns>
+    <columns>Scheduled_Move_Out_Date__c</columns>
+    <columns>MOI_Date_Scheduled__c</columns>
+    <columns>Front_End_Supervisor__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Move Out Assigned</value>
+    </filters>
+    <label>Turn Stage: Move Out Assigned</label>
+</ListView>

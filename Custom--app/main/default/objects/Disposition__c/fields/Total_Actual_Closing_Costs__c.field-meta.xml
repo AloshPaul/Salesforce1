@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Actual_Closing_Costs__c</fullName>
+    <externalId>false</externalId>
+    <formula>Listing_Agent_Commission_Final_HUD__c +  Buyer_s_Agent_Commission_Final_HUD__c +  Auction_Service_Fees_Final_HUD__c + HOA_Past_Due_Prorates_Final_HUD__c +  Prop_Tax_Past_Due_Prorates_Final_HUD__c +  Transfer_Taxes_Doc_Stamps_Final_HUD__c +  Title_Closing_Fees_Final_HUD__c +  Lien_Payoffs_Misc_Other_Fees_Final_HUD__c + Closing_Cost_Assist__c - Buyer_Credits_Pre_pays_Final_HUD__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Actual Closing Costs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

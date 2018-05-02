@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Remove_Follower_s</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add/Remove Follower(s)</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var w = 750; 
+var h = 550; 
+var urlValue = "/apex/UpdateFollower?id={!Property__c.Id}"; 
+var titleValue = "Add/Remove Follower(s)"; 
+var left = (screen.width/2)-(w/2); 
+var top = (screen.height/2)-(h/2); 
+var popupWin = window.open(urlValue, titleValue, 'toolbar=no, menubar=no, scrollbars=yes, width='+w+', height='+h+', top='+top+', left='+left); 
+popupWin.focus();</url>
+</WebLink>

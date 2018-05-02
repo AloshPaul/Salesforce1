@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BulkDeal_0527</fullName>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_Zip_Code__c</columns>
+    <columns>APN__c</columns>
+    <columns>Bulk_Deal__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>Property_Type__c</columns>
+    <columns>Bedrooms__c</columns>
+    <columns>Baths__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>GP Stone</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.Bulk</value>
+    </filters>
+    <label>Bulk Deal - GP Stone</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

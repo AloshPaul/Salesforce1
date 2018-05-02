@@ -1,0 +1,2462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Pipeline_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Pipeline_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Pipeline_Compact_Layout</fullName>
+        <fields>Complete_Address__c</fields>
+        <fields>Accepted_Contract_Date__c</fields>
+        <fields>Accepted_Contract_Price__c</fields>
+        <fields>Director_IMG__c</fields>
+        <fields>Purchasing_Entity__c</fields>
+        <fields>Pipeline_Status__c</fields>
+        <label>Pipeline Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accepted_Contract_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Accepted_Contract_Date__c</formula>
+        <label>Accepted Contract Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Accepted_Contract_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Accepted_Contract_Price_Revised__c</formula>
+        <label>Accepted Contract Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Acq_Budget_Walk_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Acq Budget Walk Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Acq_Costs_Paid_at_Closing__c</fullName>
+        <externalId>false</externalId>
+        <formula>Closing_Statement_Title_Policy_Expense__c + Closing_Statement_Other_Closing_Expenses__c + Closing_Statement_Lien_Payoff__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Acq Costs Paid at Closing</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Address__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipName>Pipeline</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Analyst_IMG__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Analyst IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Pipeline2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Insurance_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Annual_Insurance_Est_UW__c</formula>
+        <label>Annual Insurance Est @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Offer_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Approved_Offer_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approved Offer Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Rejected_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved/Rejected Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_HAP_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease HAP Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_Review_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease Review Required</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_Tenant_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Tenant Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assumed_Lease_Tenant_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Tenant Rent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Baths__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Opportunity__r.Baths__c)</formula>
+        <label>Baths</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bedrooms__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Opportunity__r.Bedrooms__c)</formula>
+        <label>Bedrooms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bid_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text( Prospect_Record__r.Bid_Type__c )</formula>
+        <label>Bid Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Broker_Contract_Comments__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Broker_Contract_Comments__c</formula>
+        <label>Broker Contract Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Broker_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Broker__r.Full_Name__c</formula>
+        <label>Broker Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Broker_Offer_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Opportunity__r.Broker_Offer_Status__c)</formula>
+        <label>Broker Offer Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Broker_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Opportunity__r.status__c)</formula>
+        <label>Broker Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COE_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>COE Funds Due to Title Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>COE_Requested_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>COE Requested Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>COE_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>COE Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COE_Wiring_Complete_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>COE Wiring Complete Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>COE_Wiring_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>COE Wiring Complete</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cancelled_COE_Received_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancelled COE Received Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cancelled_Dead__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cancelled / Dead</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cancelled_EMD_Received_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancelled EMD Received Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cap_Rate_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Pro_forma_NOI_UW__c / Cost_Basis_Est__c</formula>
+        <label>Cap Rate @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Capitilized_Acq_Costs_Estimate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Capitalized_Acq_Costs_Estimate__c</formula>
+        <label>Capitilized Acq Costs Estimate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Company_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Company Contact Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closing_Company_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Company Contact Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closing_Company_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Closing_Company__r.Phone</formula>
+        <label>Closing Company Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closing_Company_Same_as_Escrow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Closing Company Same as Escrow</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Closing Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Pipeline (Closing Company)</relationshipLabel>
+        <relationshipName>Pipeline2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Docs_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Docs Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Docs_Received_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Docs Received Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Docs_Requested_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Docs Requested Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Docs_Signed_Date__c</fullName>
+        <defaultValue>today()</defaultValue>
+        <externalId>false</externalId>
+        <label>Closing Docs Signed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Rent_Prepays__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Rent Prepays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Contract_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Contract Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Deposit__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Deposit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Funds_Due_from_Buyer__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing COE Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_HOA_Prepays__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing HOA Prepays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_HOA_Prorates__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing HOA Prorates</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Lien_Payoff__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Lien Payoff</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Other_Closing_Expenses__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Other Closing Expenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Property_Tax_Prepays__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Property Tax Prepays</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Property_Tax_Prorates__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Property Tax Prorates</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Settlement_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Settlement Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Statement_Title_Policy_Expense__c</fullName>
+        <externalId>false</externalId>
+        <label>Closing Title Policy Expense</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Closing_Title_Acq_Costs__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Acq_Costs_Paid_at_Closing__c =0,Prospect_Record__r.Closing_Title_Acq_Cost_Est__c ,Acq_Costs_Paid_at_Closing__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Closing/Title/Acq Costs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Complete_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Street__c &amp;&apos;, &apos;&amp; Address__r.City__c &amp;&apos;, &apos;&amp; IF(Address__r.State__r.Name = &apos;&apos;, &apos;&apos;, Address__r.State__r.Name &amp;&apos;, &apos;) &amp; Address__r.Zip__c</formula>
+        <label>Complete Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Disclosures_Special_Addendums__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Disclosures/Special Addendums</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Price_After_Reduction__c</fullName>
+        <externalId>false</externalId>
+        <formula>Accepted_Contract_Price__c - Reduction_Amount_Received__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Price After Reduction</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Reviewed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Reviewed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Controllable_Expenses_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*(Total_Revenue_UW__c * Market__r.Control_Pool_Exp__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Controllable Expenses @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Converted_to_Portfolio__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Converted to Portfolio</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cost_Basis_Est__c</fullName>
+        <externalId>false</externalId>
+        <formula>Purchase_Price__c + Rehab_Budget_Est__c + Closing_Title_Acq_Costs__c + Prospect_Record__r.Capitalized_Acq_Costs_Estimate__c</formula>
+        <label>Cost Basis Est @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cost_Basis_as_of_MV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Cost_Basis_as_of_MV__c</formula>
+        <label>Cost Basis as % of MV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>County__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.County__c</formula>
+        <label>County</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Occupancy_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Opportunity__r.Current_Occupancy_Status__c)</formula>
+        <label>Current Occupancy Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dir_IMG_Closing_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Dir IMG Closing Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Dir_IMG_DD_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Dir IMG DD Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Direct_Shared_Services_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*Market__r.Direct_SSA_Per_Home__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Direct Shared Services @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Director_IMG__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Director IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Pipeline1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Cancelled_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Cancelled Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EMD Requested</fullName>
+                    <default>false</default>
+                    <label>EMD Requested</label>
+                </value>
+                <value>
+                    <fullName>EMD Received</fullName>
+                    <default>false</default>
+                    <label>EMD Received</label>
+                </value>
+                <value>
+                    <fullName>EMD Forfeited</fullName>
+                    <default>false</default>
+                    <label>EMD Forfeited</label>
+                </value>
+                <value>
+                    <fullName>No EMD</fullName>
+                    <default>false</default>
+                    <label>No EMD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EMD_Due_to_Title_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Due to Title Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>EMD_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>EMD Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Effective_Gross_Income_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Revenue_UW__c + Fixed_Exp_Inc_Pool_UW__c</formula>
+        <label>Effective Gross Income @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Entera_Generated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Entera Generated</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Entera_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>Entera ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Escrow_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Escrow_Amount__c</formula>
+        <label>Escrow Amount (From Broker)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Cancelled_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Cancelled Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Cancelled_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Cancelled Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High Rehab Budget</fullName>
+                    <default>false</default>
+                    <label>High Rehab Budget</label>
+                </value>
+                <value>
+                    <fullName>HOA Issues</fullName>
+                    <default>false</default>
+                    <label>HOA Issues</label>
+                </value>
+                <value>
+                    <fullName>Title Issues</fullName>
+                    <default>false</default>
+                    <label>Title Issues</label>
+                </value>
+                <value>
+                    <fullName>Seller Cancels</fullName>
+                    <default>false</default>
+                    <label>Seller Cancels</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Escrow_Company_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Escrow Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Pipeline (Escrow Company)</relationshipLabel>
+        <relationshipName>Pipeline3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Open Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Wiring_Complete_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Escrow Wiring Complete Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Escrow_Wiring_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Escrow Wiring Complete</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Escrow_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Escrow Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Gross_Annual_Rent_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Expected_Gross_Monthly_Rent_UW__c *12</formula>
+        <label>Expected Gross Annual Rent @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Gross_Monthly_Rent_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Expected_Gross_Monthly_Rent_UW__c</formula>
+        <label>Expected Gross Monthly Rent @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Final_Rehab_Budget_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Rehab Budget Est @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Fixed_Exp_Inc_Pool_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*(Prospect_Record__r.Property_Tax_Est_UW__c + (Prospect_Record__r.Monthly_HOA_UW__c *12) + Prospect_Record__r.Annual_Insurance_Est_UW__c+ IF(Prospect_Record__r.Pool__c=TRUE, Market__r.Pool_Exp_Per_Home__c , 0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fixed Exp (Inc Pool) @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Funds_Due_From_Buyer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Closing_Statement_Contract_Price__c - Closing_Statement_Deposit__c - ( Acq_Costs_Paid_at_Closing__c + Other_Costs_Paid_at_Closing__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>COE Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Funds_Due_from_Buyer_Match__c</fullName>
+        <externalId>false</externalId>
+        <formula>Funds_Due_From_Buyer__c = Closing_Statement_Funds_Due_from_Buyer__c</formula>
+        <label>Funds Due from Buyer Match</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HOA_CC_R_Reviewed_and_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA CC&amp;R Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HOA_Date_Prepaid__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Date Prepaid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HOA_Estoppel_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Estoppel Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HOA_Estoppel_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Estoppel Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HOA_Name_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.HOA_Name__c</formula>
+        <label>HOA Name @ UW</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HOA_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>HOA_Restrictions__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Restrictions</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HOA_Y_N__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA (Y/N)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IH_Reporting_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>IH Reporting Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>IH_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>IH Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pipeline</fullName>
+                    <default>false</default>
+                    <label>Pipeline</label>
+                </value>
+                <value>
+                    <fullName>Portfolio</fullName>
+                    <default>false</default>
+                    <label>Portfolio</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Initial_Rehab_Budget_Estimate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Initial_Rehab_Budget_Estimate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Initial Rehab Budget Estimate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Inspection_Period_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Inspection Period End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Rent_Prorate__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Rent Prorate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Total_Rent_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Assumed_Lease_Tenant_Rent__c + Assumed_Lease_HAP_Rent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lease Total Rent Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Location_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Location Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Market2__c</formula>
+        <label>Market 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_Value_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Market_Value_UW__c</formula>
+        <label>Market Value @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <referenceTo>Region__c</referenceTo>
+        <relationshipName>Pipeline1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_HOA_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Monthly_HOA_UW__c</formula>
+        <label>Monthly HOA @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NOI_Margin_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Pro_forma_NOI_UW__c / Total_Revenue_UW__c</formula>
+        <label>NOI Margin @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Occupied_Status_Acquisition__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(  Prospect_Record__r.Occupied_Status_Acquisition__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Occupied Status @ Acquisition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupied_Status_Diligence__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Prospect_Record__r.Occupied_Status_Diligence__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Occupied Status @ Diligence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Acq_Opportunity__c</referenceTo>
+        <relationshipName>Pipeline</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Costs_Paid_at_Closing__c</fullName>
+        <externalId>false</externalId>
+        <formula>Closing_Statement_HOA_Prorates__c + Closing_Statement_Property_Tax_Prorates__c + Closing_Statement_HOA_Prepays__c +  Closing_Statement_Property_Tax_Prepays__c+ Security_Deposit__c + Closing_Rent_Prepays__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Other Costs Paid at Closing</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Other_Inc_Conc_Bad_Debt_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rental_Income_UW__c * Market__r.OI_Conc_BD_as_of_RI__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Other Inc/Conc/Bad Debt @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Overall_Asset_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>( Property_Score__c +  Location_Score__c ) / 2</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Overall Asset Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PipeToPortFolio_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>PipeToPortFolio Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Pipeline_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Pipeline Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contract Reviewed</fullName>
+                    <default>false</default>
+                    <label>Contract Reviewed</label>
+                </value>
+                <value>
+                    <fullName>Review Complete</fullName>
+                    <default>false</default>
+                    <label>Review Complete</label>
+                </value>
+                <value>
+                    <fullName>Due Diligence Approved</fullName>
+                    <default>false</default>
+                    <label>Due Diligence Approved</label>
+                </value>
+                <value>
+                    <fullName>Closing Approved</fullName>
+                    <default>false</default>
+                    <label>Closing Approved</label>
+                </value>
+                <value>
+                    <fullName>Moved to Queue</fullName>
+                    <default>false</default>
+                    <label>Moved to Queue</label>
+                </value>
+                <value>
+                    <fullName>Portfolio Created</fullName>
+                    <default>false</default>
+                    <label>Portfolio Created</label>
+                </value>
+                <value>
+                    <fullName>Cancelled/Dead</fullName>
+                    <default>false</default>
+                    <label>Cancelled/Dead</label>
+                </value>
+                <value>
+                    <fullName>Closed/Dead</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Closed/Dead</label>
+                </value>
+                <value>
+                    <fullName>Order COE</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Order COE</label>
+                </value>
+                <value>
+                    <fullName>Rehab approved</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Rehab approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Prelim_Title_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Prelim Title Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Prelim_Title_Review_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Prelim Title Review Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prelim_Title_Reviewed_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Prelim Title Reviewed &amp; Approved</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pro_forma_NOI_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Effective_Gross_Income_UW__c + Controllable_Expenses_UW__c + Direct_Shared_Services_UW__c</formula>
+        <label>Pro-forma NOI @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.City__c</formula>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.State__r.Name</formula>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street_Address_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Street Address Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Street__c</formula>
+        <label>Property Street Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Tax_Date_Prepaid__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Tax Date Prepaid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Property_Tax_Est_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Prospect_Record__r.Property_Tax_Est_UW__c</formula>
+        <label>Property Tax Est. @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Property_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Single Family Home</fullName>
+                    <default>false</default>
+                    <label>Single Family Home</label>
+                </value>
+                <value>
+                    <fullName>Townhome</fullName>
+                    <default>false</default>
+                    <label>Townhome</label>
+                </value>
+                <value>
+                    <fullName>Condo</fullName>
+                    <default>false</default>
+                    <label>Condo</label>
+                </value>
+                <value>
+                    <fullName>Duplex</fullName>
+                    <default>false</default>
+                    <label>Duplex</label>
+                </value>
+                <value>
+                    <fullName>Triplex</fullName>
+                    <default>false</default>
+                    <label>Triplex</label>
+                </value>
+                <value>
+                    <fullName>Quad</fullName>
+                    <default>false</default>
+                    <label>Quad</label>
+                </value>
+                <value>
+                    <fullName>Vacant Land</fullName>
+                    <default>false</default>
+                    <label>Vacant Land</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Zip__c</formula>
+        <label>Property Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_Record__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Prospect Record</label>
+        <referenceTo>Acq_Prospect__c</referenceTo>
+        <relationshipName>Pipeline</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Contract_Price_After_Reduction__c=0,Accepted_Contract_Price__c,IF(Accepted_Contract_Price__c=0,Approved_Offer_Price__c ,Contract_Price_After_Reduction__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Purchasing_Entity__c</fullName>
+        <externalId>false</externalId>
+        <formula>Market__r.Purchasing_Entity__c</formula>
+        <label>Purchasing Entity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reduction_Amount_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Reduction Amount Received</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reduction_Amount_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Reduction Amount Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reduction_Requested__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Reduction Requested</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Rehab_Budget_Est__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+				OR(
+							ISNULL(Final_Rehab_Budget_Est_UW__c),Final_Rehab_Budget_Est_UW__c=0,ISBLANK(Final_Rehab_Budget_Est_UW__c)
+				  ),
+			    	Initial_Rehab_Budget_Estimate__c,Final_Rehab_Budget_Est_UW__c
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rehab Budget Est</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rent_Date_Prepaid__c</fullName>
+        <externalId>false</externalId>
+        <label>Rent Date Prepaid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rental_Income_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Expected_Gross_Annual_Rent_UW__c + Stabilized_Vacany_Loss_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rental Income @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reopen_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Reopen Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Reopen_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Reopen Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVP_IMG__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SVP IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Pipeline3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Security_Deposit__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Deposit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Short_Sale_Lender_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Short Sale Lender Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Square_Feet__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Square_Feet__c</formula>
+        <label>Square Feet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stabilized_Vacany_Loss_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1*( Expected_Gross_Annual_Rent_UW__c *(1- Prospect_Record__r.Market__r.Occupancy__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stabilized Vacany Loss @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Subdivision__c</fullName>
+        <externalId>false</externalId>
+        <label>Subdivision</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submarket__c</fullName>
+        <externalId>false</externalId>
+        <label>Submarket</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitted_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitted Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Title_Company_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Company Contact Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title_Company_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Title Company Contact Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title_Company_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Title_Company__r.Phone</formula>
+        <label>Title Company Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title_Company_Same_as_Escrow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Title Company Same as Escrow</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Title_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Title Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Pipeline1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Total_Revenue_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rental_Income_UW__c + Other_Inc_Conc_Bad_Debt_UW__c</formula>
+        <label>Total Revenue @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Closer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Closer IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Pipeline5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Closing Manager IMG</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Pipeline4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>Address__r.Unit__c</formula>
+        <label>Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Verified_HOA_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Verified HOA Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Pipeline (Verified HOA Name)</relationshipLabel>
+        <relationshipName>Pipeline4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Year_Built__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Year_Built__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year Built</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>doDirectorClosingApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doDirectorClosingApproval</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doDirectorDueDiligenceApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doDirectorDueDiligenceApproval</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doInitiate_Due_Diligence__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doInitiate Due Diligence</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doOrderBudgetWalk__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doOrderBudgetWalk</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doOrderCOEFunds__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doOrderCOEFunds</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doOrderEscrow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doOrderEscrow</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doOrder_COE__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doOrder COE</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doRehabApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doRehabApproval</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doReopen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doReopen</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>doReview_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>doReview Complete</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Pipeline</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Complete_Address__c</columns>
+        <columns>Pipeline_Status__c</columns>
+        <columns>Market__c</columns>
+        <columns>Expected_Escrow_Close_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Assigned_to_Me</fullName>
+        <columns>NAME</columns>
+        <columns>Complete_Address__c</columns>
+        <columns>Accepted_Contract_Price__c</columns>
+        <columns>Director_IMG__c</columns>
+        <columns>Pipeline_Status__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>Assigned to Me</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PIPE-{00000}</displayFormat>
+        <label>Pipeline ID</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Pipeline</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchResultsAdditionalFields>Pipeline_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Complete_Address__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Accepted_Contract_Price__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Accepted_Contract_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Director_IMG__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Prospect_Record__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Closing_Contract_Price</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+				NOT(ISBLANK(Dir_IMG_Closing_Approval_Date__c )),
+				ISCHANGED( Closing_Statement_Contract_Price__c )
+				)</errorConditionFormula>
+        <errorMessage>Closing Contract Price cannot be changed after closing approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Closing_Contract_Price_Cannot_be_0</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+					ISPICKVAL(Pipeline_Status__c, &apos;Contract Reviewed&apos;),
+	    Closing_Statement_Contract_Price__c &lt;=0
+					)</errorConditionFormula>
+        <errorMessage>Closing Contract Price should be greater than 0</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Closing_Without_Approval</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+				doDirectorClosingApproval__c =true,
+   	ISPICKVAL( Pipeline_Status__c ,&apos;Review Complete&apos;)
+				)</errorConditionFormula>
+        <errorMessage>Cannot proceed to Closing Approval if due diligence approval is pending or not done</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contract_price_should_match_closing</fullName>
+        <active>false</active>
+        <description>Closing_Statement_Contract_Price__c should be equal to Contract_Price_After_Reduction__c</description>
+        <errorConditionFormula>And(
+				doDirectorClosingApproval__c = true,
+				Closing_Statement_Contract_Price__c != Contract_Price_After_Reduction__c
+)</errorConditionFormula>
+        <errorMessage>Closing Contract Price should equal to Contract Price after reduction</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Due_Diligence_Approval</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL(Pipeline_Status__c , &apos;Due Diligence Approved&apos;), 
+
+OR( 
+ISCHANGED( Final_Rehab_Budget_Est_UW__c), 
+
+ISCHANGED( Prelim_Title_Reviewed_Approved__c), 
+
+
+ISCHANGED( HOA_Estoppel_Approval_Date__c), 
+ISCHANGED( Prelim_Title_Approval_Date__c), 
+ISCHANGED( HOA_CC_R_Reviewed_and_Approved__c) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Due Diligence Approval is already done, cannot edit the existing values.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EMD</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+				
+    OR( 
+								doOrderEscrow__c =True,
+        doDirectorClosingApproval__c =true, 
+        doReview_Complete__c = True,				
+							 doDirectorDueDiligenceApproval__c =true
+				), 
+				
+ ISBLANK(Contract_Notes__c) 
+
+)</errorConditionFormula>
+        <errorMessage>Please review the contract</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Final_Budget_Missing</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+					doDirectorDueDiligenceApproval__c = True,
+					ISNULL(Final_Rehab_Budget_Est_UW__c )
+					)</errorConditionFormula>
+        <errorMessage>Final Rehab Budget Estimate cannot be empty. Please complete the budget approval and reduction process first.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Funds_Due_from_Buyer_Match</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+				doDirectorClosingApproval__c =true, 
+				Funds_Due_From_Buyer__c  &lt;&gt; Closing_Statement_Funds_Due_from_Buyer__c
+			)</errorConditionFormula>
+        <errorMessage>Closing COE Amount should be equal to the COE Amount</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HOA</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+				doReview_Complete__c = True,
+				ISPICKVAL( HOA_Y_N__c , &apos;Yes&apos;),
+				ISBLANK( Verified_HOA_Name__c )
+				)</errorConditionFormula>
+        <errorMessage>Since HOA is present, please fill in the Verified HOA Name.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lease</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+doReview_Complete__c =True, 
+Occupied_Status_Acquisition__c =&apos;Purchase Rented&apos;, 
+Assumed_Lease_End_Date__c &lt;= Assumed_Lease_Start_Date__c)</errorConditionFormula>
+        <errorMessage>The Lease End Date cannot be a date before the Lease Start Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Move_to_Queue</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    ISPICKVAL( Pipeline_Status__c ,&apos;Moved to Queue&apos;),
+    ISBLANK(Dir_IMG_Closing_Approval_Date__c)	
+				)</errorConditionFormula>
+        <errorMessage>Cannot Move to Queue unless Closing Approval is complete</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Occupancy_Status</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+					
+				doReview_Complete__c = True,
+				Occupied_Status_Acquisition__c =&apos;Purchase Rented&apos;,
+				OR(
+								ISNULL(Assumed_Lease_HAP_Rent__c), 
+        ISNULL(Assumed_Lease_Tenant_Rent__c),
+							 Assumed_Lease_Review_Required__c = False,
+								ISBLANK(Assumed_Lease_End_Date__c), 
+        ISBLANK(Assumed_Lease_Start_Date__c) 
+						)
+			)</errorConditionFormula>
+        <errorMessage>Since Occupancy Status at Acquisition is Purchase Rented, please fill in all the required Lease details and also check the Lease Review Required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_Budget_Walk</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+    OR( 
+        doDirectorClosingApproval__c =true, 
+        doReview_Complete__c = True,								
+        doDirectorDueDiligenceApproval__c =true
+				), 
+				
+   
+					
+				doOrderBudgetWalk__c = False
+)</errorConditionFormula>
+        <errorMessage>Budget Walk Record not found, please order a Budget Walk to proceed forward</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Review_Complete</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+				OR(
+         doDirectorClosingApproval__c =true, 
+								 doOrderEscrow__c = false,
+				     doDirectorDueDiligenceApproval__c =true),
+				OR(
+								
+								ISPICKVAL( Pipeline_Status__c ,&apos;Escrow Ordered&apos;), 
+								ISPICKVAL( Pipeline_Status__c ,&apos;Order Budget Walk&apos;))
+								
+)</errorConditionFormula>
+        <errorMessage>Please Order an EMD and enter &quot;Review Complete&quot;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

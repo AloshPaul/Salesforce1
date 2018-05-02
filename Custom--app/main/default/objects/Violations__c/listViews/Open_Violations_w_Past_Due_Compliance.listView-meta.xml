@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Violations_w_Past_Due_Compliance</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Source__c</columns>
+    <columns>Type__c</columns>
+    <columns>Date_of_Required_Compliance__c</columns>
+    <columns>of_Days_Open__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Date_of_Required_Compliance__c</field>
+        <operation>lessThan</operation>
+        <value>TOMORROW</value>
+    </filters>
+    <label>Open Violations w/ Past Due Compliance</label>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Evict_Statutory_Notice_Required__c</fullName>
+    <description>Enter the statutory notice period required for evictions for your region and/or for the particular circumstances related to this property. This field will allow us to auto-calculate the date when the notice period is over.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the statutory notice period required for evictions for your region and/or for the particular circumstances related to this property. This field will allow us to auto-calculate the date when the notice period is over.</inlineHelpText>
+    <label>Evict Notice Required (Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

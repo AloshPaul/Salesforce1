@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Underwriting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+        ISBLANK(  Broker_Offer_Price__c  ),
+        ISPICKVAL(status__c, 'Submit For Underwriting')
+)</errorConditionFormula>
+    <errorDisplayField>Broker_Offer_Price__c</errorDisplayField>
+    <errorMessage>Broker requested offer amount should be entered.</errorMessage>
+</ValidationRule>

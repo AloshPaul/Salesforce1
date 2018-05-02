@@ -1,0 +1,45 @@
+<apex:page standardController="Concierge__c" showHeader="false" sidebar="false" id="dmsg">
+    
+    <script src="../../soap/ajax/33.0/connection.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">     
+            
+        window.onload = setupPage;
+        
+        function setupPage() {
+            showMessage();
+        }
+        
+        function showMessage(){
+            var recordRead = '{!Concierge__c.Is_Viewed__c}';
+            
+            if(recordRead == 'false'){
+                if('{!Concierge__c.Request_Type__c}' === 'Error message'){
+                    document.getElementById("dmsg:frm:msg").innerHTML = "Please attach screenshot for this ticket below in the Notes & Attachments section, if not already included in the Detailed Description";
+                }
+                else if(('{!Concierge__c.Request_Type__c}' == 'Other Technical issue')||('{!Concierge__c.Request_Type__c}' == 'System performance')) {
+                    document.getElementById("dmsg:frm:msg").innerHTML = "Please attach screenshot for this ticket below in the Notes & Attachments section, if not already included in the Detailed Description";
+                }
+                else{
+                    document.getElementById("dmsg:frm:msg").innerHTML = "";
+                }
+                
+                // identify the record
+                var ticket = new sforce.SObject("Concierge__c");
+                ticket.id = "{!Concierge__c.Id}";
+                
+                // make the field change
+                ticket.Is_Viewed__c = true;
+                
+                // save the change
+                sforce.connection.update([ticket]);
+                
+            }
+            
+        }
+    </script>
+    <apex:form id="frm">
+        <apex:inputHidden value="{!Concierge__c.Id}" id="hid"/>
+        <apex:outputLabel id="msg" style="color:red; font-size:14px;padding-left:10%;" value="" rendered="{!IF(((Concierge__c.Request_Type__c == 'Other Technical issue')||(Concierge__c.Request_Type__c == 'System performance') ||(Concierge__c.Request_Type__c == 'Error message')), true, false)}"></apex:outputLabel>
+    </apex:form>
+</apex:page>

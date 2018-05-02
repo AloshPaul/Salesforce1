@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Needs_Driver</fullName>
+    <columns>NAME</columns>
+    <columns>TIP_Status__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Occupancy_Status_Acquisition__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>DK_Assigned_Date__c</columns>
+    <columns>DK_Driver_Assigned__c</columns>
+    <columns>Initial_Contact_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TIP_Status__c</field>
+        <operation>equals</operation>
+        <value>TIP - New (Needs Driver)</value>
+    </filters>
+    <label>***TIP Status = New (Needs Driver)</label>
+</ListView>

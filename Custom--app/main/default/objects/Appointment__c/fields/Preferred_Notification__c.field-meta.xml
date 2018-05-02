@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Notification__c</fullName>
+    <externalId>false</externalId>
+    <label>Preferred Notification</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Day Prior</fullName>
+                <default>true</default>
+                <label>1 Day Prior</label>
+            </value>
+            <value>
+                <fullName>1 Hour Prior</fullName>
+                <default>false</default>
+                <label>1 Hour Prior</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

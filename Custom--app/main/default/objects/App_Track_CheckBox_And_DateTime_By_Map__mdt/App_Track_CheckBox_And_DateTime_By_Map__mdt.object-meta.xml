@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is holding Application Tracking Checkbox with LA User Updated and DateTime When Checked Fields</description>
+    <label>App Track CheckBox And DateTime By Map</label>
+    <pluralLabel>App Track CheckBox And DateTime By Maps</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

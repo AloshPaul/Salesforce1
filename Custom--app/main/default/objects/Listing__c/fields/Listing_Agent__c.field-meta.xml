@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listing_Agent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>There is a Trigger that creates a Sharing Rule for the Listing Agent that appears on IH Leads.  See D-00005027.  There is a Trigger that creates a Listing Agent Sharing Rule for related Application Tracking records.  See D-00006205.  There is a Trigger that creates a Listing Agent Sharing Rule for related IH Leads.  See D-00006256.  There is a Trigger that creates a similar Sharing Rule for related Showings.  See D-00008669.</description>
+    <externalId>false</externalId>
+    <label>Listing Agent (Internal)</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Listings</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

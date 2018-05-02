@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>New logo as of 7/29/2013.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>IH Logo New</name>
+    <public>true</public>
+</Document>

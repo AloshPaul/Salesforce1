@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Include_in_Yardi_Batch__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if you would like this invoice included in the next batch upload</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if you would like this invoice included in the next batch upload</inlineHelpText>
+    <label>Include in Yardi Batch</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

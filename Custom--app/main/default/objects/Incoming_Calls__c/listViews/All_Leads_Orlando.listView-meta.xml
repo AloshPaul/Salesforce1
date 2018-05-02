@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Leads_Orlando</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Time__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Date_Time_Agent_Notified__c</columns>
+    <columns>Assigned_Agent__c</columns>
+    <columns>Agent_Assigned_to_Lead__c</columns>
+    <columns>Lead_Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Lead_Channel__c</columns>
+    <columns>Region__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Message__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Orlando</value>
+    </filters>
+    <label>All Leads - Orlando</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Orlando</role>
+    </sharedTo>
+</ListView>

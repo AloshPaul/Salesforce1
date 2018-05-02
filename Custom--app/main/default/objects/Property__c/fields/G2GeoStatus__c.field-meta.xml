@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>G2GeoStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>G2GeoStatus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New address</fullName>
+                <default>false</default>
+                <label>New address</label>
+            </value>
+            <value>
+                <fullName>No close match</fullName>
+                <default>false</default>
+                <label>No close match</label>
+            </value>
+            <value>
+                <fullName>Confirmed address</fullName>
+                <default>false</default>
+                <label>Confirmed address</label>
+            </value>
+            <value>
+                <fullName>Custom location</fullName>
+                <default>false</default>
+                <label>Custom location</label>
+            </value>
+            <value>
+                <fullName>Automatic match</fullName>
+                <default>false</default>
+                <label>Automatic match</label>
+            </value>
+            <value>
+                <fullName>Approximate match</fullName>
+                <default>false</default>
+                <label>Approximate match</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

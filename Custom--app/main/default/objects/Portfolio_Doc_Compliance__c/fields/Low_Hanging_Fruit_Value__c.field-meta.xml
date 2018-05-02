@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Low_Hanging_Fruit_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>Have_Required_Deed_Value__c  +  Have_Required_Lease_Value__c  +  Have_Required_Proof_of_Acquisition_Value__c  +  Have_Required_Rehab_Budget_Value__c  +  Have_Required_Title_Value__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Yes = 1, No = 2, N/A = 3.  "N/A" only appears in the "Have Required Lease" and "Have Required Rehab Budget" fields and should be disregarded.</inlineHelpText>
+    <label>Low Hanging Fruit Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

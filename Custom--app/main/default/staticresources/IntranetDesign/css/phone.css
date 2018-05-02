@@ -1,0 +1,616 @@
+/* css for phone */
+.wrapper {
+	width: 320px;
+	overflow: hidden;
+	margin:0px;
+}
+
+	/* header */
+	.header {
+		height: 130px;
+		border-bottom: 1px solid #cfcfcf;
+	}
+	.header .logoWrapper {
+		position: static;
+		display: block;
+		width: 100%;
+		height: 59px;
+		border-bottom: 1px solid #cfcfcf;
+	}
+		.header .logoWrapper a {
+			position: absolute;
+			top: 15px;
+			left: 12px;
+			width: 150px;
+			height: 30px;
+		}
+		.header .logoWrapper img {
+			width: 50px;
+		}
+	.header .searchSite {
+		position: absolute;
+		right: 13px;
+		top: -9px;
+		width: 130px;
+	}
+	.header .searchSite input.text {
+        width: 120px;
+    }
+    .header .userBlock {
+    	float: left;
+    	padding-left: 25px; 
+    	margin: 9px 0 0 0;
+    	width: auto;
+    }
+    	.header .userBlock .msgBox {
+    		margin-right: 24px;
+			margin-left: 0px;
+    	}
+
+    /* content */
+    .content {
+    	width: 300px !important;
+    	margin: 10px auto 0 auto;
+    	padding-bottom: 20px;
+    }
+    	.content .menuWrapper {
+    		width: 300px;
+    		background: none;
+    		padding: 0;
+    		height: auto;
+    	}
+    	.menuWrapper .phoneFirstMenu {
+    		display: block !important;
+    		text-align: center;
+    		width: 298px;
+    		border: 1px solid #b7b7b7;
+    		border-bottom: 1px solid #767676;
+			background: url(/resource/1357647861000/IntranetDesign/i/dropdownMenuBg.png) 0 -39px repeat-x;
+    	}
+    		.menuWrapper .phoneFirstMenu span {
+    			display: block;
+				line-height: 37px;
+				height: 37px;
+				border: 1px solid #d3d3d3;
+				font-size: 14px;
+				font-weight: bold;
+				color: #000;
+				background: url(/resource/1357647861000/IntranetDesign/i/addIcon.png) 273px 11px no-repeat;
+    		}
+    		.menuWrapper .phoneFirstMenu.expanded span {
+    			background: url(/resource/1357647861000/IntranetDesign/i/minusIcon.png) 273px 15px no-repeat;
+    		}
+    	.menu {
+    		height: auto;
+    		display: none;
+    	}
+    	.menu li.lv1 {
+    		float: none;
+    		width: 298px;
+    		border: 1px solid #a9a9a9;
+    		border-top: none;
+    		background: url(/resource/1357647861000/IntranetDesign/i/menuBg2.png) 0 0 repeat-x;
+    		height: 39px;
+    		line-height: 39px;
+    	}
+    		.menu li.lv1 > a {
+    			padding-left: 15px;
+    			padding-right: 0;
+    		}
+    			.menu li.lv1:not(.active):hover > a {
+    				color: #000 !important;
+    				background: url(/resource/1357647861000/IntranetDesign/i/menuBg2.png) 0 0 repeat-x !important;
+    			}
+    			.menu li.lv1.withSub > a > .arrow {
+    				float: right;
+					width: 20px;
+					height: 20px;
+					margin: 12px 3px 0 0;
+					background: url(/resource/1357647861000/IntranetDesign/i/menuArrow3.png) 0 0 no-repeat;
+    			}
+    			.menu li.lv1.withSub:hover > a > .arrow {
+					background: url(/resource/1357647861000/IntranetDesign/i/menuArrow3.png) 0 0 no-repeat !important;
+    			}
+    			.menu li.lv1.withSub.active > a > .arrow {
+    				background: url(/resource/1357647861000/IntranetDesign/i/menuArrow2.png) right center no-repeat !important;
+    			    margin-right: 17px;
+				}
+    		.menuWrapper .subMenu {
+    			display: none !important;
+    		}
+    		.menuWrapper li.lv2 {
+    			height: 32px;
+    			background:  #002c7f;
+    			padding-right: 10px;
+    		}
+    			.menuWrapper li.lv2 a {
+    				display: block;
+    				color: #fff;
+					font-size: 13px;
+					padding-left: 15px;
+    				line-height: 32px;
+    			}
+    			.menuWrapper li.lv2.back a {
+    				padding-left: 30px;
+    				background: url(/resource/1357647861000/IntranetDesign/i/menuBackArrow.png) 15px 10px no-repeat;
+    			}
+    			.menuWrapper li.lv2.withSub a {
+    				background: url(/resource/1357647861000/IntranetDesign/i/menuArrow2.png) right center no-repeat;
+    			}
+
+		.quickLinks {
+			padding-top: 10px; 
+			height: 164px;
+			background-position: 0 -87px;
+			margin-top: 25px;
+			padding-bottom: 10px; 
+			
+		}
+	    	.quickLinks li {
+	    		width: 99px;
+	    	}
+
+	    .card {
+	    	width: 300px;
+	    }
+		.cardPhone{
+			height: auto !important;
+		}
+	    .card.last {
+	    	height:495px;
+	    }
+	    	.card .chat .input input.text {
+	    		width: 185px;
+	    	}
+	    	.card .feedWrapper .feed .msg {
+	    		width: 198px;
+	    	}
+	    	.card .carousel {
+	    		width: 298px;
+	    		height: 195px;
+	    	}
+	    		.card .carousel img {
+	    			width: 290px !important;
+	    			height: 195px;
+	    		}
+	    	.card .cardContent {
+	    		height: auto !important;
+	    	}
+	    	.card .buttons {
+	    		height: 40px;
+	    		clear: both;
+	    	}
+
+	    		.card h2 .small {
+	    			padding-left: 25px;
+	    		}
+	    		.card .dateTabs a span span {
+	    			width: 86px;
+	    		}
+	    		.card .dateTabs .arrow {
+	    			left: 50px;
+	    		}
+	    		.card .performanceList {
+	    			padding-top: 20px;
+	    		}
+	            .card .performanceList img {
+	                float: left;
+	                width: 49px;
+	                height: 42px;
+	            }
+	            .card .performanceList .list {
+	                float: left;
+	                width: 212px;
+	                padding: 0 0 0 60px;
+	                position: relative;
+	                margin-top: -10px;
+	            }
+	                .card .performanceList .list h3 {
+	                    position: absolute;
+	                    top: -30px;
+						left: 60px;
+	                }
+	                .card .performanceList .list dt {
+	                    float: left;
+	                    width: 165px;
+	                    color: #333;
+	                    font-size: 13px;
+	                    height: 25px;
+	                    line-height: 25px;
+	                }
+	                .card .performanceList .list dd {
+	                    float: right;
+	                    width: auto;
+	                    font-size: 15px;
+	                    color: #c00;
+	                    font-weight: bold;
+	                    height: 25px;
+	                    line-height: 25px;
+	                }
+
+	/* side */
+	.sideWrapper {
+		width: 300px;
+		margin: 0;
+	}
+		.side .dropdownMenu.expanded > a span {
+			background-position: 260px 19px; 
+		}
+		.side .dropdownMenu.collapsed > a span {
+			background-position: 260px 15px; 
+		}
+		.sideWrapper .side .withImage img {
+       	width: 287px;
+        height: 164px;
+	}
+    .side{
+    	width:300px !important;
+		margin-top:10px;
+    }
+
+	/* main */
+	.main {
+		width: 300px;
+	}
+			.mainContent {
+	    	width: 300px;
+	    }
+	    .mainContent p {
+	    	margin: 0 10px;
+	    	line-height: 20px;
+	    	font-weight: bold;
+	    }
+	    .mainContent .multimedia {
+	    	width: 280px;
+	    	margin-left: 10px;
+	    }
+	    	.mainContent .multimedia img {
+	    		float: none;
+				width: 96% !important;
+	    	}
+  			.mainContent .multimedia img.big {
+				width: 280px !important;
+  				margin-bottom: 5px;
+  			}
+    		.mainContent .multimedia img.small {
+    			margin: 0 5px 0 0;
+    		}
+    		.mainContent .multimedia img.rightmost {
+    			margin: 0;
+    		}
+			.mainContent div.text {
+				margin: 5px 0 0 10px; 
+				width: 280px;
+			}
+    	.main .carousel, .main .carousel img {
+    		width: 300px;
+    		height: 98px;
+    	}
+		.main .quickLinks {
+			padding-top: 10px; 
+			height: 174px;
+	                background-position: 0 -87px;
+			padding-bottom: 10px;
+                        
+		}
+	    	.main .quickLinks li {
+	    		width: 99px;
+	    	}
+			
+		
+	    .liveChatter .input input.text {
+	    	width: 240px;
+	    }
+	    .liveChatter a.shareBtn {
+	    	margin-right: 25px;
+	    }
+	    .liveChatter .feed .msg {
+	    	width: 210px;
+	    }
+		.contentCard .shortContent{
+			height:430px;
+		}
+	    .contentCard .shortContent img {
+    		width: 298px;
+    		height: 195px;
+	    }
+	    .contentCard .shortContent .text {
+	    	width: 278px;
+	    }
+	    	.contentCard .shortContent .buttons {
+	    		height: 40px;
+	    		clear: both;
+	    	}
+	   .flex-direction-nav a {
+	   		margin : -20px 0 0 !important;
+	   	}
+	   	
+	   	/* result block */
+	.resultBlock .form label {
+		width: 271px;
+		padding: 0 0 0 5px;
+		text-align: left;
+	}
+	.resultBlock .form input.text {
+		width: 255px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.resultBlock .form .inputWrapper {
+		float: left;
+		width: 278px;
+	}
+		.resultBlock .form input.short {
+			width: 67px;
+		}
+		.resultBlock .form input.medium {
+			width: 81px;
+		}
+
+		.resultBlock .form .buttons {
+			padding: 5px 0 0 0;
+		}
+
+	/* search */
+	.searchAgain {
+		float: none;
+		display: block;
+		height: 40px;
+		margin: 0;
+	}
+		.searchAgain input.text {
+			width: 169px;
+		}
+
+	/* footer */
+	.footer {
+		width: 320px;
+	}
+		.footer .inner {
+			width: 300px;
+			text-align: center;
+			font-size: 14px;
+		}
+		.footer .copyright {
+			float: none;
+		}	
+		.footer .connect {
+			float: none;
+			padding: 15px 0 0 0;
+			height: 20px;
+		}
+			.footer .connect span {
+				padding-right: 10px;
+			}
+			
+	/*Banner Classes*/
+	
+	/**
+	 * Banner Classes for home Page
+	**/
+	#bannerHeader {
+		padding-top: 5px;
+		font-size: 15px;
+		padding-right: 10px;
+	}
+	
+	#bannerSummary{
+		padding-top: 5px;
+		font-size: 11px;
+		padding-right: 10px;
+	}
+	
+	#bannerLabel{
+		font-size:10px;
+		font-weight:bold;
+		padding:0px 5px;
+		margin-left: 10px;
+		margin-top: 3px;
+	}
+	
+	#bannerHeaderCenter {
+		padding-top: 15px;
+		font-size: 14px;
+		padding-right: 10px;
+	}
+	
+	#bannerSummaryCenter {
+		padding-top: 5px;
+		font-size: 9px;
+		padding-right: 10px;
+	}
+	
+	#bannerHeaderLeft {
+		padding-top: 5px;
+		font-size: 13px;
+		line-height: 1em;
+	}
+	
+	#bannerSummaryLeft{
+		padding-top: 5px;
+		font-size: 10px;
+		line-height: 0.8em;
+	}
+	
+	#bannerLabelLeft{
+		font-size:10px;
+		font-weight:bold;
+		padding:0px 5px;
+		margin-left: 30%;
+		margin-top: 1px;
+	}
+	
+	#bannerHeaderRight {
+		padding-left: 0px;
+		padding-top: 5px;
+		font-size: 13px;
+	}
+	
+	#bannerSummaryRight{
+		padding-left: 0px;
+		padding-top: 5px;
+		font-size: 10px;
+		line-height: 0.8em;
+	}
+	
+	#bannerLabelRight{
+		font-size:10px;
+		font-weight:bold;
+		padding:0px 5px;
+		margin-top: 1px;
+	}	
+		
+	/*end of banner class */
+	
+	/*chatter*/
+	.liveChatter {
+		width:300px;
+	}
+	
+	.contentCard{
+		margin-bottom:15px;
+	}
+	
+	.text{
+		width:273px;
+	}
+  .carousel, .carousel img {
+  	width: 300px;
+	height:100px;
+  }
+  .contentTitle{
+   	font-size: 20px;
+   }
+  .list{
+	  width: 97%;
+	  margin: 5px;
+	  font-size:12px;
+	}
+	.listTable {
+		margin-top: 0px;
+	}
+	.modal{
+		width: 270px;
+		height: 270px;
+		border: 7px solid gray;
+	}
+	#modalImage{
+		height: 225px;
+	}
+	.newsDescription a{
+		word-break: break-all;
+	}
+	.contentDescription a{
+		word-break: break-all;
+	}
+	.searchResultList{
+		margin-top:45px !important;
+	}
+	.contentCard .shortContent .text .grayBtn{
+		float:right !important;
+	}
+	.errorMsg{
+      	width: 205px;
+      	margin-left: 0%;
+    }
+	.cke_skin_sfdc .cke_contents iframe{
+		width:85% !important;
+	}
+	html .cke_skin_sfdc{
+		width:95%
+	}
+	.formList{
+		margin-left:9%;
+	}
+	.formValue{
+   	 float:left;
+   	 width:100%;
+	 margin-left:2%; 				
+    }  
+    body .pbBody table.list tr.dataRow th, body .pbBody table.list tr.dataRow td{
+	 font-size:0.7em;
+    }
+    body .pbBody table.list tr.headerRow td, body .pbBody table.list tr.headerRow th{
+	 font-size:0.7em !important;
+    }
+	th{
+	 white-space: normal !important;
+	}
+	.list .headerRow th{
+	 white-space: normal !important;
+	}
+	 .approvalModal {
+		width: 255px;
+		border: 7px solid gray;
+	}
+	.commentText{
+		width: 245px;
+	}
+	.newformBtn{
+		margin:4px 113px;
+	}
+	.listformfrm{
+	    margin-top:38px;
+	}
+	._io {
+		width:300px;
+	}
+	._cs { 
+		width:300px;
+	}
+	._142 { 
+		width: 300px;
+	}
+	._b_ {
+		width: 300px;
+	}
+	._b_ ul { 
+		width:300px;
+	}
+	._b_ li {
+		width:300px;
+	}
+	.searchLocationField{
+		width:60%;
+	}
+	.map{
+		float:none;
+		width:100%
+	}
+	.mapAddress{
+		margin-bottom: 5%;
+	}
+	#MyMap{
+		width:100%;
+	}
+	.requiredField{
+		height: 32px;
+	}
+	select{
+		height:32px;
+	}
+	/*IntranetSpotlight css*/
+        .IntranetSpotlight{
+          width: 44%;
+        }
+         
+        .event{
+          margin-left: 0px;
+        }
+      
+        .eventLabel{
+          width: 120px !important;
+        }
+        .eventWrapPara{
+          width: 200px !important;
+        }
+        .footer .connect a {
+          margin-left: 15px; 
+        }
+        .defaultBannerImage{
+         height:100px !important;
+        }
+        .bioCss{
+          margin-left: 0px !important;
+          padding-top: 22px;
+        }

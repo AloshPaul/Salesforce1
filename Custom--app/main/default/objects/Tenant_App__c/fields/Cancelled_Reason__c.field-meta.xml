@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Cancelled Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Application_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Applied Sight Unseen - Unhappy w/ Home</fullName>
+                <default>false</default>
+                <label>Applied Sight Unseen - Unhappy w/ Home</label>
+            </value>
+            <value>
+                <fullName>By IH - Applicant Unresponsive/Cancelled</fullName>
+                <default>false</default>
+                <label>By IH - Applicant Unresponsive/Cancelled</label>
+            </value>
+            <value>
+                <fullName>By IH - Application Docs Not Submitted</fullName>
+                <default>false</default>
+                <label>By IH - Application Docs Not Submitted</label>
+            </value>
+            <value>
+                <fullName>By IH - Deposit Not Paid</fullName>
+                <default>false</default>
+                <label>By IH - Deposit Not Paid</label>
+            </value>
+            <value>
+                <fullName>By IH - Lease Not Signed</fullName>
+                <default>false</default>
+                <label>By IH - Lease Not Signed</label>
+            </value>
+            <value>
+                <fullName>By IH - Section 8 (Doesn’t Qualify)</fullName>
+                <default>false</default>
+                <label>By IH - Section 8 (Doesn’t Qualify)</label>
+            </value>
+            <value>
+                <fullName>Can’t Accommodate Move-in Date</fullName>
+                <default>false</default>
+                <label>Can’t Accommodate Move-in Date</label>
+            </value>
+            <value>
+                <fullName>Deposit Too High</fullName>
+                <default>false</default>
+                <label>Deposit Too High</label>
+            </value>
+            <value>
+                <fullName>Different IH Home (Transferred)</fullName>
+                <default>false</default>
+                <label>Different IH Home (Transferred)</label>
+            </value>
+            <value>
+                <fullName>Home Not Available</fullName>
+                <default>false</default>
+                <label>Home Not Available</label>
+            </value>
+            <value>
+                <fullName>Job Relocation</fullName>
+                <default>false</default>
+                <label>Job Relocation</label>
+            </value>
+            <value>
+                <fullName>Leased Elsewhere</fullName>
+                <default>false</default>
+                <label>Leased Elsewhere</label>
+            </value>
+            <value>
+                <fullName>Lease Terms/Conditions</fullName>
+                <default>false</default>
+                <label>Lease Terms/Conditions</label>
+            </value>
+            <value>
+                <fullName>Length of Application Process</fullName>
+                <default>false</default>
+                <label>Length of Application Process</label>
+            </value>
+            <value>
+                <fullName>Length of Screening Approval</fullName>
+                <default>false</default>
+                <label>Length of Screening Approval</label>
+            </value>
+            <value>
+                <fullName>QC Issues (Rehab Extended)</fullName>
+                <default>false</default>
+                <label>QC Issues (Rehab Extended)</label>
+            </value>
+            <value>
+                <fullName>Unhappy With Agent</fullName>
+                <default>false</default>
+                <label>Unhappy With Agent</label>
+            </value>
+            <value>
+                <fullName>By IH - Agent Verification Incomplete</fullName>
+                <default>false</default>
+                <label>By IH - Agent Verification Incomplete</label>
+            </value>
+            <value>
+                <fullName>By IH - Hold Form Not Signed</fullName>
+                <default>false</default>
+                <label>By IH - Hold Form Not Signed</label>
+            </value>
+            <value>
+                <fullName>By IH - Application Docs Not Sufficient</fullName>
+                <default>false</default>
+                <label>By IH - Application Docs Not Sufficient</label>
+            </value>
+            <value>
+                <fullName>Financial Hardship</fullName>
+                <default>false</default>
+                <label>Financial Hardship</label>
+            </value>
+            <value>
+                <fullName>Declined HOA</fullName>
+                <default>false</default>
+                <label>Declined HOA</label>
+            </value>
+            <value>
+                <fullName>Declined - Awaiting Client Dispute</fullName>
+                <default>false</default>
+                <label>Declined - Awaiting Client Dispute</label>
+            </value>
+            <value>
+                <fullName>By IH - Agent/Market Unresponsive</fullName>
+                <default>false</default>
+                <label>By IH - Agent/Market Unresponsive</label>
+            </value>
+            <value>
+                <fullName>By IH - Insufficient Docs</fullName>
+                <default>false</default>
+                <label>By IH - Insufficient Docs</label>
+            </value>
+            <value>
+                <fullName>By IH - Declined by Housing Authority (Doesn’t Qualify)</fullName>
+                <default>false</default>
+                <label>By IH - Declined by Housing Authority (Doesn’t Qualify)</label>
+            </value>
+            <value>
+                <fullName>By IH - Incomplete Application (Unable to process)</fullName>
+                <default>false</default>
+                <label>By IH - Incomplete Application (Unable to process)</label>
+            </value>
+            <value>
+                <fullName>Personal/Familial</fullName>
+                <default>false</default>
+                <label>Personal/Familial</label>
+            </value>
+            <value>
+                <fullName>Unable to Accommodate Move-In Date</fullName>
+                <default>false</default>
+                <label>Unable to Accommodate Move-In Date</label>
+            </value>
+            <value>
+                <fullName>Higher Deposit Required</fullName>
+                <default>false</default>
+                <label>Higher Deposit Required</label>
+            </value>
+            <value>
+                <fullName>By IH - Hold Fee Not Paid</fullName>
+                <default>false</default>
+                <label>By IH - Hold Fee Not Paid</label>
+            </value>
+            <value>
+                <fullName>Fraudulent Application</fullName>
+                <default>false</default>
+                <label>Fraudulent Application</label>
+            </value>
+            <value>
+                <fullName>By IH - Applicant Unresponsive</fullName>
+                <default>false</default>
+                <label>By IH - Applicant Unresponsive</label>
+            </value>
+            <value>
+                <fullName>SWAY Transfer</fullName>
+                <default>false</default>
+                <label>SWAY Transfer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Applied Sight Unseen - Unhappy w/ Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Deposit Not Paid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Lease Not Signed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Agent Verification Incomplete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Hold Form Not Signed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Application Docs Not Sufficient</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Financial Hardship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Agent/Market Unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Insufficient Docs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Incomplete Application (Unable to process)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Personal/Familial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Hold Fee Not Paid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Fraudulent Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <valueName>By IH - Applicant Unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Cancellation</controllingFieldValue>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>SWAY Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Applicant Unresponsive/Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Different IH Home (Transferred)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Home Not Available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Job Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Leased Elsewhere</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Lease Terms/Conditions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Length of Application Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Length of Screening Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>QC Issues (Rehab Extended)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Declined HOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Declined - Awaiting Client Dispute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>By IH - Declined by Housing Authority (Doesn’t Qualify)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Unable to Accommodate Move-In Date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Higher Deposit Required</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

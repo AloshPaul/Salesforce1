@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IH Regional Call Center</fullName>
+                <default>true</default>
+                <label>IH Regional Call Center</label>
+            </value>
+            <value>
+                <fullName>IH Website</fullName>
+                <default>false</default>
+                <label>IH Website</label>
+            </value>
+            <value>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+                <label>Walk-in</label>
+            </value>
+            <value>
+                <fullName>Yardi Call Center</fullName>
+                <default>false</default>
+                <label>Yardi Call Center</label>
+            </value>
+            <value>
+                <fullName>Listing Agent</fullName>
+                <default>false</default>
+                <label>Listing Agent</label>
+            </value>
+            <value>
+                <fullName>Internet/Email Submission</fullName>
+                <default>false</default>
+                <label>Internet/Email Submission</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

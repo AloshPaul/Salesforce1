@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Open_Flash_Projects</fullName>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Business_Problem__c</columns>
+    <columns>Type__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Deadline__c</columns>
+    <columns>Level_of_Effort__c</columns>
+    <columns>Level_of_Technical_Complexity__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Project_Lead_s__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Type__c</field>
+        <operation>contains</operation>
+        <value>Flash</value>
+    </filters>
+    <label>All Open - Flash Projects</label>
+</ListView>

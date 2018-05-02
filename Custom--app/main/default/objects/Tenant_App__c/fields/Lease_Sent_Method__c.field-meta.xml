@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Sent_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Lease Sent Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DocuSign</fullName>
+                <default>true</default>
+                <label>DocuSign</label>
+            </value>
+            <value>
+                <fullName>Email to Resident</fullName>
+                <default>false</default>
+                <label>Email to Resident</label>
+            </value>
+            <value>
+                <fullName>FedEx to Resident</fullName>
+                <default>false</default>
+                <label>FedEx to Resident</label>
+            </value>
+            <value>
+                <fullName>Provided to Listing Agent</fullName>
+                <default>false</default>
+                <label>Provided to Listing Agent</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

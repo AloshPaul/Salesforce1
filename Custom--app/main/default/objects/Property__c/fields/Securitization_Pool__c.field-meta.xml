@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Securitization_Pool__c</fullName>
+    <description>Effective Dates: Pool 1 was 11/19/2013. Pool 2 was 5/30/2014. Pool 3 was 8/14/2014.</description>
+    <externalId>false</externalId>
+    <label>Securitization Pool</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01</fullName>
+                <default>false</default>
+                <label>01</label>
+            </value>
+            <value>
+                <fullName>02</fullName>
+                <default>false</default>
+                <label>02</label>
+            </value>
+            <value>
+                <fullName>03</fullName>
+                <default>false</default>
+                <label>03</label>
+            </value>
+            <value>
+                <fullName>04</fullName>
+                <default>false</default>
+                <label>04</label>
+            </value>
+            <value>
+                <fullName>05</fullName>
+                <default>false</default>
+                <label>05</label>
+            </value>
+            <value>
+                <fullName>06</fullName>
+                <default>false</default>
+                <label>06</label>
+            </value>
+            <value>
+                <fullName>TRS</fullName>
+                <default>false</default>
+                <label>TRS</label>
+            </value>
+            <value>
+                <fullName>07</fullName>
+                <default>false</default>
+                <label>07</label>
+            </value>
+            <value>
+                <fullName>08 Pending</fullName>
+                <default>false</default>
+                <label>08 Pending</label>
+            </value>
+            <value>
+                <fullName>09</fullName>
+                <default>false</default>
+                <label>09</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

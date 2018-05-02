@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Submitted_to_Accounting_Required</fullName>
+    <active>true</active>
+    <description>Date Submitted to Accounting is required on Violations with a fine amount before it is closed.</description>
+    <errorConditionFormula>AND( 
+$RecordType.Name  &lt;>  "IH Delinquency", 
+OR( 
+NOT(ISBLANK( Fine_Amount__c )), 
+NOT(ISBLANK( Second_Fine_Amount__c ))), 
+ISPICKVAL( Status__c , 'Closed - Paid'), 
+ISBLANK(  Date_Submitted_to_Accounting__c  ))</errorConditionFormula>
+    <errorDisplayField>Date_Submitted_to_Accounting__c</errorDisplayField>
+    <errorMessage>Date Submitted to Accounting is required on Violations with a fine amount before it is closed.</errorMessage>
+</ValidationRule>

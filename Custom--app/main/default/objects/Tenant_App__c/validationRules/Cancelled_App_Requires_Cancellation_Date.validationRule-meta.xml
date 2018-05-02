@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_App_Requires_Cancellation_Date</fullName>
+    <active>true</active>
+    <description>Cancelled applications require a cancellation date.</description>
+    <errorConditionFormula>DATEVALUE(App_Received__c) > DATE(2013,11,15) &amp;&amp; 
+(ISPICKVAL( Application_Status__c , "Cancelled") || ISPICKVAL( Application_Status__c ,"Pending Cancellation")) &amp;&amp; 
+ISBLANK( Cancellation_Date__c ) &amp;&amp; 
+$Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Cancellation_Date__c</errorDisplayField>
+    <errorMessage>Cancelled Or Pending Cancellation applications require a cancellation date.</errorMessage>
+</ValidationRule>

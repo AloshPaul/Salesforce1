@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deadline_Details__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide information regarding this deadline.  Who set it?  Why is it important?</inlineHelpText>
+    <label>Deadline Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Pricing_Rent_Driver__c</fullName>
+    <externalId>false</externalId>
+    <label>Bulk Pricing Rent Driver</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RENT GROWTH</fullName>
+                <default>false</default>
+                <label>RENT GROWTH</label>
+            </value>
+            <value>
+                <fullName>CMA RENT</fullName>
+                <default>false</default>
+                <label>CMA RENT</label>
+            </value>
+            <value>
+                <fullName>EXCEPTION</fullName>
+                <default>false</default>
+                <label>EXCEPTION</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

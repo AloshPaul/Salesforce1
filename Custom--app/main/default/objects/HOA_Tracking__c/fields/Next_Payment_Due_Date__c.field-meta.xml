@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Payment_Due_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will be auto-populated based on the month(s) selected above and the day of the month selected.  (NOTE to Beta Group:  This is the one remaining to-do so this will have to be manually populated during this trial period.)</inlineHelpText>
+    <label>Next Payment Due Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

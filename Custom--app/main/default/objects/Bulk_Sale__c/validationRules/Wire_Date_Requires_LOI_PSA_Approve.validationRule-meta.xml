@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wire_Date_Requires_LOI_PSA_Approve</fullName>
+    <active>false</active>
+    <description>In order for a Closing Wire Date to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</description>
+    <errorConditionFormula>AND
+( NOT( ISBLANK( Closing_Wire_Date__c )),
+OR(ISBLANK( LOI_Approved_by_Acquisitions__c ),
+ISBLANK(  LOI_Approved_by_Legal__c  ),
+ISBLANK(  PSA_Approved_by_Acquisitions__c  ),
+ISBLANK(  PSA_Approved_by_Legal__c )))</errorConditionFormula>
+    <errorDisplayField>Closing_Wire_Date__c</errorDisplayField>
+    <errorMessage>In order for a Closing Wire Date to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupied_Status_Current__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	OR(
+		Leased_Unit__c =1,
+		NOT(ISBLANK(LeaseSign_Date_First_Tenant__c)),
+                ISPICKVAL( Proxy_TIP_Lease_Signed__c , "1")
+	),
+	  $Setup.Status_Tags__c.OS_C_Occupied_Leased__c,
+	IF(
+		OR(
+			NOT(ISBLANK(CFK_Actual_Move_Out_Date__c)),
+			ISPICKVAL( Proxy_CFK_Complete__c , "1"),
+                        NOT(ISBLANK(Eviction_Complete_Date__c)),
+                        ISPICKVAL(  Proxy_Eviction_Complete__c , "1"),
+			TEXT(Post_Acq_Occupancy_Assessment__c) =$Setup.Status_Tags__c.OSAQ_Vacant__c
+
+		) ,
+		$Setup.Status_Tags__c.OSAQ_Vacant__c,
+		IF(
+			OR(
+				TEXT(Post_Acq_Occupancy_Assessment__c) = $Setup.Status_Tags__c.OSAQ_Occupied__c,
+				TEXT(Occupied_Status_Acquisition__c) = $Setup.Status_Tags__c.OSAQ_Occupied__c
+			),
+			$Setup.Status_Tags__c.OS_C_Occupied_TIP__c,
+			IF(
+				TEXT(Occupied_Status_Acquisition__c) = $Setup.Status_Tags__c.OSAQ_Purchased_Rented__c,
+				 $Setup.Status_Tags__c.OSAQ_Purchased_Rented__c ,
+				IF(
+					TEXT(Occupied_Status_Acquisition__c) = $Setup.Status_Tags__c.OSAQ_Unknown__c,
+					$Setup.Status_Tags__c.OSAQ_Unknown__c,
+					""
+				)
+			)
+		)
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Occupied Status @ Current</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

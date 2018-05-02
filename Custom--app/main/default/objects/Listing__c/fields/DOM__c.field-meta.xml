@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOM__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(
+ISPICKVAL(Status__c , "Leased"),
+NOT(ISBLANK( Lease_Executed_Date__c ))
+),
+ Lease_Executed_Date__c - Rent_Ready_Date__c,
+IF(
+AND(
+ISPICKVAL(Status__c , "Leased"),
+ISBLANK( Lease_Executed_Date__c )
+),
+Date_Leased__c - Rent_Ready_Date__c,
+TODAY()-Rent_Ready_Date__c
+))</formula>
+    <inlineHelpText>Lease Executed Date minus Rent Ready Date.</inlineHelpText>
+    <label>DOM</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

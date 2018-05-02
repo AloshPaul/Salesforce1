@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MTM_Extension_Reason_Required</fullName>
+    <active>true</active>
+    <description>MTM Extension Reason required when Renewal Status equals Month-to-Month.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Renewal_Status__c , "Month-to-Month"),
+ISBLANK(TEXT( MTM_Extension_Reason__c )
+))</errorConditionFormula>
+    <errorMessage>MTM Extension Reason required when Renewal Status equals Month-to-Month.</errorMessage>
+</ValidationRule>

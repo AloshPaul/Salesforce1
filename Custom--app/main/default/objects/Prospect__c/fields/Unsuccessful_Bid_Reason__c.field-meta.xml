@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unsuccessful_Bid_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Unsuccessful Bid Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IH Offer Withdrawn/Decline</fullName>
+                <default>false</default>
+                <label>IH Offer Withdrawn/Decline</label>
+            </value>
+            <value>
+                <fullName>Other buyer  chosen for non-economic reasons</fullName>
+                <default>false</default>
+                <label>Other buyer  chosen for non-economic reasons</label>
+            </value>
+            <value>
+                <fullName>Outbid</fullName>
+                <default>false</default>
+                <label>Outbid</label>
+            </value>
+            <value>
+                <fullName>Sale Postponed/Cancelled</fullName>
+                <default>false</default>
+                <label>Sale Postponed/Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

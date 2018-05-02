@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_O_S_Since_Fund_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND(  EM_COE_Tracker__r.Refund_Due_Old__c   > 0, NOT( ISBLANK(  EM_COE_Tracker__r.Refund_Due_Old__c  ) ) ) ,  TODAY()  -     Fund_Date__c   , null)</formula>
+    <inlineHelpText>This field populates only if (1) there is an amount greater than $0 in Refund Due on the related Escrow Tracker record, and (2) the Actual Funded Date field has a date.</inlineHelpText>
+    <label>Days O/S Since Fund Date</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Submitted__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used only to track the Created Date for legacy Yardi System Enhancements.</inlineHelpText>
+    <label>Date Submitted</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

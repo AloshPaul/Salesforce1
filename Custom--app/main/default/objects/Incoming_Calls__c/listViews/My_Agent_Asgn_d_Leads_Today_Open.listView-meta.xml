@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Agent_Asgn_d_Leads_Today_Open</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Time__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Phone__c</columns>
+    <columns>Email__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Preferred_Method_of_Communication__c</columns>
+    <columns>Message__c</columns>
+    <columns>Agent_Lead_Status__c</columns>
+    <columns>Agent_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Time__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>My_Lead__c</field>
+        <operation>equals</operation>
+        <value>YES</value>
+    </filters>
+    <filters>
+        <field>Agent_Lead_Status__c</field>
+        <operation>equals</operation>
+        <value>Open,LVM #1,LVM #2,LVM #3,Sent E-mail</value>
+    </filters>
+    <label>*My (Agent Asgn'd) Leads - Today/Open</label>
+</ListView>

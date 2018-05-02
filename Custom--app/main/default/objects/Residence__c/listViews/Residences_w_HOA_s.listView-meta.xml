@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residences_w_HOA_s</fullName>
+    <booleanFilter>1 or 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Region__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>HOA_Primary__c</columns>
+    <columns>HOA_Parent__c</columns>
+    <columns>HOA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>HOA_Options__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>HOA_Primary__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Residences w/ HOA(s)</label>
+</ListView>

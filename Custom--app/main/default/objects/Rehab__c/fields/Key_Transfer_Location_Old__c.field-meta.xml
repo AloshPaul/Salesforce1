@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key_Transfer_Location_Old__c</fullName>
+    <description>This field was recreated on Renewal as an editable field, and it was recreated on Rehab as a formula reflecting the Renewal field's value.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field was recreated on Renewal as an editable field, and it was recreated on Rehab as a formula reflecting the Renewal field's value.</inlineHelpText>
+    <label>Key Transfer Location Old</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Office</fullName>
+                <default>false</default>
+                <label>Office</label>
+            </value>
+            <value>
+                <fullName>Property</fullName>
+                <default>false</default>
+                <label>Property</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

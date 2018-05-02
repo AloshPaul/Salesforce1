@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Ticket__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is only usable by these profiles:  System Administrator, IH - IT Concierge Support, IH - IT External Support, SFDC Business Partner, IH - Director of Acquisitions, IH - Director of Acquisitions(App Track 2.0).</description>
+    <externalId>false</externalId>
+    <label>Parent Ticket</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <errorMessage>You do not have access to add a parent Record.</errorMessage>
+        <filterItems>
+            <field>$User.ProfileId</field>
+            <operation>equals</operation>
+            <value>00eE0000000o2J8,00eE0000000NYLQ,00eE0000000NYDv,00eE0000000NYMi</value>
+        </filterItems>
+        <filterItems>
+            <field>$User.ProfileId</field>
+            <operation>equals</operation>
+            <value>00eE0000000NsHd,00e0L000000G2Yw,00eE0000000N8TT,00e0L000000G2SF</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Concierge__c</referenceTo>
+    <relationshipLabel>Child Tickets</relationshipLabel>
+    <relationshipName>Concierges_Child</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

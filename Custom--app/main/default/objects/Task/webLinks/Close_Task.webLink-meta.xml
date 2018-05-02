@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Task</fullName>
+    <availability>online</availability>
+    <description>Mark all selected task records as completed (closed).</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Close Tasks</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!requireScript("/soap/ajax/10.0/connection.js")};
+sforce.connection.session = "{!$Api.Session_ID}";
+//sforce.debug.trace = true;
+
+/**
+ * Multi-record update of task.status field.
+ * @param newStatus - a string, must be valid status, 
+ * e.g. "Completed", "Deferred", etc.
+ * @author Chris Wolf cw10025 AT gmail.com
+ */
+function taskStatusUpdateAll(newStatus) {
+  try { 
+    var taskUpdates = new Array();
+
+    var taskIds = {!GETRECORDIDS($ObjectType.Task)}; // returns Tasks AND Events (unfortunately)
+    if (taskIds == null || taskIds.length == 0) {
+      alert("Please select the tasks you wish to mark as complete.");
+      return;
+    }
+   
+    // Must retrieve by ids to filter for Tasks and ignore Events
+    var result = sforce.connection.retrieve("Id", "Task", taskIds);
+    if (result.length != taskIds.length) {
+      throw("Task ids list length, " + taskIds + " not equal to number retrieved: " + result.length);
+     }
+
+    for (var i = 0; i &lt; result.length; i++) {
+      if (result[i] == null) {
+        continue;
+      }
+      result[i].Status = newStatus;
+      taskUpdates.push(result[i]);
+    } 
+
+    var result = sforce.connection.update(taskUpdates);
+
+    var hasErrors = false;
+    var errorReport = "The following tasks could not be updated:\n";
+    for (var i = 0; i &lt; result.length; i++) {
+      if (!result[i].getBoolean("success")) {
+        hasErrors = true;
+        errorReport += ("TaskId: " + taskUpdates[i].Id + ", error: " + result[i].errors.message + "\n");
+        if (i == 20 &amp;&amp; i &lt; result.length) {
+          errorReport += ("...more errors - showing first 20 out of " + "result.length\n");
+          break;
+        }
+      }
+    }
+    if (hasErrors) {
+      alert(errorReport);
+    }
+    //window.location.reload(); &lt;== causes re-post warning alert in some cases
+    window.location = window.location.href;
+  } catch(e) {
+    alert(e); // catch-all for any unspecified errors...
+  }
+}
+
+taskStatusUpdateAll("Completed");</url>
+</WebLink>

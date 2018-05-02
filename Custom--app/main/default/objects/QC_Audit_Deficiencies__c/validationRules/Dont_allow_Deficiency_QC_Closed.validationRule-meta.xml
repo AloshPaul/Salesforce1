@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dont_allow_Deficiency_QC_Closed</fullName>
+    <active>true</active>
+    <description>Restrict the user from adding a deficiency when the QC is closed</description>
+    <errorConditionFormula>ISPICKVAL(QC_Audit__r.Status__c, "QC Closed")</errorConditionFormula>
+    <errorMessage>A New Deficiency can not be created since the audit has been closed</errorMessage>
+</ValidationRule>

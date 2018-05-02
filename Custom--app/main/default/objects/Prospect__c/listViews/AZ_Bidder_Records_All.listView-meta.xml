@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZ_Bidder_Records_All</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>AZB_Trustee_Sale_Date__c</columns>
+    <columns>AZB_Bid_Status__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.AZ_Bidder</value>
+    </filters>
+    <label>AZ Bidder Records - All</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

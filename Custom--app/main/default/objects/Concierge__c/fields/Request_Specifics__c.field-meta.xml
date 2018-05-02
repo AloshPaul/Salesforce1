@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Specifics__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Specifics</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Request_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AcctTree Edit/Add</fullName>
+                <default>false</default>
+                <label>AcctTree Edit/Add</label>
+            </value>
+            <value>
+                <fullName>ACH Related</fullName>
+                <default>false</default>
+                <label>ACH Related</label>
+            </value>
+            <value>
+                <fullName>Acquisition Status</fullName>
+                <default>false</default>
+                <label>Acquisition Status</label>
+            </value>
+            <value>
+                <fullName>Active Directory</fullName>
+                <default>false</default>
+                <label>Active Directory</label>
+            </value>
+            <value>
+                <fullName>Adding New User</fullName>
+                <default>false</default>
+                <label>Adding New User</label>
+            </value>
+            <value>
+                <fullName>Additional Access/Permissions</fullName>
+                <default>false</default>
+                <label>Additional Access/Permissions</label>
+            </value>
+            <value>
+                <fullName>Address Related</fullName>
+                <default>false</default>
+                <label>Address Related</label>
+            </value>
+            <value>
+                <fullName>Adobe Acrobat</fullName>
+                <default>false</default>
+                <label>Adobe Acrobat</label>
+            </value>
+            <value>
+                <fullName>Adobe Standard</fullName>
+                <default>false</default>
+                <label>Adobe Standard</label>
+            </value>
+            <value>
+                <fullName>ADP</fullName>
+                <default>false</default>
+                <label>ADP</label>
+            </value>
+            <value>
+                <fullName>AM Model</fullName>
+                <default>false</default>
+                <label>AM Model</label>
+            </value>
+            <value>
+                <fullName>AP Batch Locked</fullName>
+                <default>false</default>
+                <label>AP Batch Locked</label>
+            </value>
+            <value>
+                <fullName>Application/Move-In Charges</fullName>
+                <default>false</default>
+                <label>Application/Move-In Charges</label>
+            </value>
+            <value>
+                <fullName>Application Related</fullName>
+                <default>false</default>
+                <label>Application Related</label>
+            </value>
+            <value>
+                <fullName>AppTrack / Showing / IH Lead</fullName>
+                <default>false</default>
+                <label>AppTrack / Showing / IH Lead</label>
+            </value>
+            <value>
+                <fullName>Architecture Change</fullName>
+                <default>false</default>
+                <label>Architecture Change</label>
+            </value>
+            <value>
+                <fullName>AR Related Issue</fullName>
+                <default>false</default>
+                <label>AR Related Issue</label>
+            </value>
+            <value>
+                <fullName>Automation of Tasks</fullName>
+                <default>false</default>
+                <label>Automation of Tasks</label>
+            </value>
+            <value>
+                <fullName>Box</fullName>
+                <default>false</default>
+                <label>Box</label>
+            </value>
+            <value>
+                <fullName>Brokersite</fullName>
+                <default>false</default>
+                <label>Brokersite</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Cancel Application</fullName>
+                <default>false</default>
+                <label>Cancel Application</label>
+            </value>
+            <value>
+                <fullName>Changes In Role</fullName>
+                <default>false</default>
+                <label>Changes In Role</label>
+            </value>
+            <value>
+                <fullName>Charges and Payments</fullName>
+                <default>false</default>
+                <label>Charges and Payments</label>
+            </value>
+            <value>
+                <fullName>Check Payment Batch Reset</fullName>
+                <default>false</default>
+                <label>Check Payment Batch Reset</label>
+            </value>
+            <value>
+                <fullName>Check Scanner</fullName>
+                <default>false</default>
+                <label>Check Scanner</label>
+            </value>
+            <value>
+                <fullName>Concur</fullName>
+                <default>false</default>
+                <label>Concur</label>
+            </value>
+            <value>
+                <fullName>Credit Card Related</fullName>
+                <default>false</default>
+                <label>Credit Card Related</label>
+            </value>
+            <value>
+                <fullName>Credit Card Related Issue</fullName>
+                <default>false</default>
+                <label>Credit Card Related Issue</label>
+            </value>
+            <value>
+                <fullName>Credit Check Button Missing</fullName>
+                <default>false</default>
+                <label>Credit Check Button Missing</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Dashboard Alerts</fullName>
+                <default>false</default>
+                <label>Dashboard Alerts</label>
+            </value>
+            <value>
+                <fullName>Deactivate Prospect</fullName>
+                <default>false</default>
+                <label>Deactivate Prospect</label>
+            </value>
+            <value>
+                <fullName>Delete Account</fullName>
+                <default>false</default>
+                <label>Delete Account</label>
+            </value>
+            <value>
+                <fullName>Delete Record</fullName>
+                <default>false</default>
+                <label>Delete Record</label>
+            </value>
+            <value>
+                <fullName>Deleting/Inactivate User</fullName>
+                <default>false</default>
+                <label>Deleting/Inactivate User</label>
+            </value>
+            <value>
+                <fullName>Deposit Accounting</fullName>
+                <default>false</default>
+                <label>Deposit Accounting</label>
+            </value>
+            <value>
+                <fullName>Desk Phone</fullName>
+                <default>false</default>
+                <label>Desk Phone</label>
+            </value>
+            <value>
+                <fullName>Disposition</fullName>
+                <default>false</default>
+                <label>Disposition</label>
+            </value>
+            <value>
+                <fullName>Docusign</fullName>
+                <default>false</default>
+                <label>Docusign</label>
+            </value>
+            <value>
+                <fullName>Duplicated Check Voids</fullName>
+                <default>false</default>
+                <label>Duplicated Check Voids</label>
+            </value>
+            <value>
+                <fullName>eFax</fullName>
+                <default>false</default>
+                <label>eFax</label>
+            </value>
+            <value>
+                <fullName>EFT Cleanup</fullName>
+                <default>false</default>
+                <label>EFT Cleanup</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Entire Office</fullName>
+                <default>false</default>
+                <label>Entire Office</label>
+            </value>
+            <value>
+                <fullName>Extension</fullName>
+                <default>false</default>
+                <label>Extension</label>
+            </value>
+            <value>
+                <fullName>File Storage (S3)</fullName>
+                <default>false</default>
+                <label>File Storage (S3)</label>
+            </value>
+            <value>
+                <fullName>Go To Meeting</fullName>
+                <default>false</default>
+                <label>Go To Meeting</label>
+            </value>
+            <value>
+                <fullName>Great Plains</fullName>
+                <default>false</default>
+                <label>Great Plains</label>
+            </value>
+            <value>
+                <fullName>Guest Card Edits</fullName>
+                <default>false</default>
+                <label>Guest Card Edits</label>
+            </value>
+            <value>
+                <fullName>HD Budget Walk / Nitro</fullName>
+                <default>false</default>
+                <label>HD Budget Walk / Nitro</label>
+            </value>
+            <value>
+                <fullName>HOA Company</fullName>
+                <default>false</default>
+                <label>HOA Company</label>
+            </value>
+            <value>
+                <fullName>HOA Dues Payment</fullName>
+                <default>false</default>
+                <label>HOA Dues Payment</label>
+            </value>
+            <value>
+                <fullName>HOA Tracking</fullName>
+                <default>false</default>
+                <label>HOA Tracking</label>
+            </value>
+            <value>
+                <fullName>IH Lead</fullName>
+                <default>false</default>
+                <label>IH Lead</label>
+            </value>
+            <value>
+                <fullName>ILS Feed</fullName>
+                <default>false</default>
+                <label>ILS Feed</label>
+            </value>
+            <value>
+                <fullName>Internal Network</fullName>
+                <default>false</default>
+                <label>Internal Network</label>
+            </value>
+            <value>
+                <fullName>Internet Browser</fullName>
+                <default>false</default>
+                <label>Internet Browser</label>
+            </value>
+            <value>
+                <fullName>Invalid Cash Account</fullName>
+                <default>false</default>
+                <label>Invalid Cash Account</label>
+            </value>
+            <value>
+                <fullName>iPad Related</fullName>
+                <default>false</default>
+                <label>iPad Related</label>
+            </value>
+            <value>
+                <fullName>iPhone</fullName>
+                <default>false</default>
+                <label>iPhone</label>
+            </value>
+            <value>
+                <fullName>Journal Entry Related</fullName>
+                <default>false</default>
+                <label>Journal Entry Related</label>
+            </value>
+            <value>
+                <fullName>Keyboard / Mouse</fullName>
+                <default>false</default>
+                <label>Keyboard / Mouse</label>
+            </value>
+            <value>
+                <fullName>Launch Excel Not Working</fullName>
+                <default>false</default>
+                <label>Launch Excel Not Working</label>
+            </value>
+            <value>
+                <fullName>Lease / Renewal</fullName>
+                <default>false</default>
+                <label>Lease / Renewal</label>
+            </value>
+            <value>
+                <fullName>Lease Related</fullName>
+                <default>false</default>
+                <label>Lease Related</label>
+            </value>
+            <value>
+                <fullName>Ledger Corrections</fullName>
+                <default>false</default>
+                <label>Ledger Corrections</label>
+            </value>
+            <value>
+                <fullName>Legacy Systems</fullName>
+                <default>false</default>
+                <label>Legacy Systems</label>
+            </value>
+            <value>
+                <fullName>Listing</fullName>
+                <default>false</default>
+                <label>Listing</label>
+            </value>
+            <value>
+                <fullName>Manage Content Admins</fullName>
+                <default>false</default>
+                <label>Manage Content Admins</label>
+            </value>
+            <value>
+                <fullName>Mass Data Load</fullName>
+                <default>false</default>
+                <label>Mass Data Load</label>
+            </value>
+            <value>
+                <fullName>Modify Existing Report</fullName>
+                <default>false</default>
+                <label>Modify Existing Report</label>
+            </value>
+            <value>
+                <fullName>Monitor</fullName>
+                <default>false</default>
+                <label>Monitor</label>
+            </value>
+            <value>
+                <fullName>Move-Ins</fullName>
+                <default>false</default>
+                <label>Move-Ins</label>
+            </value>
+            <value>
+                <fullName>Move-Outs</fullName>
+                <default>false</default>
+                <label>Move-Outs</label>
+            </value>
+            <value>
+                <fullName>MS Office</fullName>
+                <default>false</default>
+                <label>MS Office</label>
+            </value>
+            <value>
+                <fullName>MS Project</fullName>
+                <default>false</default>
+                <label>MS Project</label>
+            </value>
+            <value>
+                <fullName>MS Visio</fullName>
+                <default>false</default>
+                <label>MS Visio</label>
+            </value>
+            <value>
+                <fullName>Name Change</fullName>
+                <default>false</default>
+                <label>Name Change</label>
+            </value>
+            <value>
+                <fullName>New Entity Set Up</fullName>
+                <default>false</default>
+                <label>New Entity Set Up</label>
+            </value>
+            <value>
+                <fullName>New GL Acct</fullName>
+                <default>false</default>
+                <label>New GL Acct</label>
+            </value>
+            <value>
+                <fullName>New Report</fullName>
+                <default>false</default>
+                <label>New Report</label>
+            </value>
+            <value>
+                <fullName>New Report Request</fullName>
+                <default>false</default>
+                <label>New Report Request</label>
+            </value>
+            <value>
+                <fullName>New User Setup</fullName>
+                <default>false</default>
+                <label>New User Setup</label>
+            </value>
+            <value>
+                <fullName>Office 365</fullName>
+                <default>false</default>
+                <label>Office 365</label>
+            </value>
+            <value>
+                <fullName>One Time Data Extract</fullName>
+                <default>false</default>
+                <label>One Time Data Extract</label>
+            </value>
+            <value>
+                <fullName>OpenVoice</fullName>
+                <default>false</default>
+                <label>OpenVoice</label>
+            </value>
+            <value>
+                <fullName>Operating System</fullName>
+                <default>false</default>
+                <label>Operating System</label>
+            </value>
+            <value>
+                <fullName>Outage</fullName>
+                <default>false</default>
+                <label>Outage</label>
+            </value>
+            <value>
+                <fullName>Outlook</fullName>
+                <default>false</default>
+                <label>Outlook</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>Payment Batch Not Processed</fullName>
+                <default>false</default>
+                <label>Payment Batch Not Processed</label>
+            </value>
+            <value>
+                <fullName>Payment Research Needed</fullName>
+                <default>false</default>
+                <label>Payment Research Needed</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+                <label>Pipeline</label>
+            </value>
+            <value>
+                <fullName>PM Attributes</fullName>
+                <default>false</default>
+                <label>PM Attributes</label>
+            </value>
+            <value>
+                <fullName>Pocket Change</fullName>
+                <default>false</default>
+                <label>Pocket Change</label>
+            </value>
+            <value>
+                <fullName>Portfolio</fullName>
+                <default>false</default>
+                <label>Portfolio</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Property Attribute</fullName>
+                <default>false</default>
+                <label>Property Attribute</label>
+            </value>
+            <value>
+                <fullName>Property Code</fullName>
+                <default>false</default>
+                <label>Property Code</label>
+            </value>
+            <value>
+                <fullName>Property Missing from RentCafé</fullName>
+                <default>false</default>
+                <label>Property Missing from RentCafé</label>
+            </value>
+            <value>
+                <fullName>Property Related</fullName>
+                <default>false</default>
+                <label>Property Related</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Prospect Info Changes</fullName>
+                <default>false</default>
+                <label>Prospect Info Changes</label>
+            </value>
+            <value>
+                <fullName>QC Audit / Deficiencies</fullName>
+                <default>false</default>
+                <label>QC Audit / Deficiencies</label>
+            </value>
+            <value>
+                <fullName>QlkView</fullName>
+                <default>false</default>
+                <label>QlkView</label>
+            </value>
+            <value>
+                <fullName>RDS</fullName>
+                <default>false</default>
+                <label>RDS</label>
+            </value>
+            <value>
+                <fullName>Rehab / Projected Spend / Vendor</fullName>
+                <default>false</default>
+                <label>Rehab / Projected Spend / Vendor</label>
+            </value>
+            <value>
+                <fullName>Renewals</fullName>
+                <default>false</default>
+                <label>Renewals</label>
+            </value>
+            <value>
+                <fullName>Rent Cafe Change</fullName>
+                <default>false</default>
+                <label>Rent Cafe Change</label>
+            </value>
+            <value>
+                <fullName>Rent Cafe Related</fullName>
+                <default>false</default>
+                <label>Rent Cafe Related</label>
+            </value>
+            <value>
+                <fullName>Reporting Frequency</fullName>
+                <default>false</default>
+                <label>Reporting Frequency</label>
+            </value>
+            <value>
+                <fullName>Report Request</fullName>
+                <default>false</default>
+                <label>Report Request</label>
+            </value>
+            <value>
+                <fullName>Report Schedule Request</fullName>
+                <default>false</default>
+                <label>Report Schedule Request</label>
+            </value>
+            <value>
+                <fullName>Reset Password/Locked Out</fullName>
+                <default>false</default>
+                <label>Reset Password/Locked Out</label>
+            </value>
+            <value>
+                <fullName>Residential Correspondence</fullName>
+                <default>false</default>
+                <label>Residential Correspondence</label>
+            </value>
+            <value>
+                <fullName>Salesforce.com</fullName>
+                <default>false</default>
+                <label>Salesforce.com</label>
+            </value>
+            <value>
+                <fullName>Scanner</fullName>
+                <default>false</default>
+                <label>Scanner</label>
+            </value>
+            <value>
+                <fullName>Scheduled Maintenance</fullName>
+                <default>false</default>
+                <label>Scheduled Maintenance</label>
+            </value>
+            <value>
+                <fullName>Scheduling Related</fullName>
+                <default>false</default>
+                <label>Scheduling Related</label>
+            </value>
+            <value>
+                <fullName>Schema Updates</fullName>
+                <default>false</default>
+                <label>Schema Updates</label>
+            </value>
+            <value>
+                <fullName>Server Move</fullName>
+                <default>false</default>
+                <label>Server Move</label>
+            </value>
+            <value>
+                <fullName>Skype</fullName>
+                <default>false</default>
+                <label>Skype</label>
+            </value>
+            <value>
+                <fullName>Taxes</fullName>
+                <default>false</default>
+                <label>Taxes</label>
+            </value>
+            <value>
+                <fullName>Tenant Upload</fullName>
+                <default>false</default>
+                <label>Tenant Upload</label>
+            </value>
+            <value>
+                <fullName>Third Party Integration</fullName>
+                <default>false</default>
+                <label>Third Party Integration</label>
+            </value>
+            <value>
+                <fullName>Training Request</fullName>
+                <default>false</default>
+                <label>Training Request</label>
+            </value>
+            <value>
+                <fullName>Transfers</fullName>
+                <default>false</default>
+                <label>Transfers</label>
+            </value>
+            <value>
+                <fullName>Unable to Access WO Reports</fullName>
+                <default>false</default>
+                <label>Unable to Access WO Reports</label>
+            </value>
+            <value>
+                <fullName>Unable to Locate Work Order</fullName>
+                <default>false</default>
+                <label>Unable to Locate Work Order</label>
+            </value>
+            <value>
+                <fullName>Unable to Print Work Order</fullName>
+                <default>false</default>
+                <label>Unable to Print Work Order</label>
+            </value>
+            <value>
+                <fullName>Unable to Run Reports</fullName>
+                <default>false</default>
+                <label>Unable to Run Reports</label>
+            </value>
+            <value>
+                <fullName>Unable to Submit Application</fullName>
+                <default>false</default>
+                <label>Unable to Submit Application</label>
+            </value>
+            <value>
+                <fullName>Unable to Submit Payment</fullName>
+                <default>false</default>
+                <label>Unable to Submit Payment</label>
+            </value>
+            <value>
+                <fullName>Unable to Upload Batch</fullName>
+                <default>false</default>
+                <label>Unable to Upload Batch</label>
+            </value>
+            <value>
+                <fullName>Unit Type Changes</fullName>
+                <default>false</default>
+                <label>Unit Type Changes</label>
+            </value>
+            <value>
+                <fullName>Upgrades</fullName>
+                <default>false</default>
+                <label>Upgrades</label>
+            </value>
+            <value>
+                <fullName>User Unlock</fullName>
+                <default>false</default>
+                <label>User Unlock</label>
+            </value>
+            <value>
+                <fullName>Vendor Load Needed</fullName>
+                <default>false</default>
+                <label>Vendor Load Needed</label>
+            </value>
+            <value>
+                <fullName>Violation</fullName>
+                <default>false</default>
+                <label>Violation</label>
+            </value>
+            <value>
+                <fullName>Visibility</fullName>
+                <default>false</default>
+                <label>Visibility</label>
+            </value>
+            <value>
+                <fullName>VoiceMail</fullName>
+                <default>false</default>
+                <label>VoiceMail</label>
+            </value>
+            <value>
+                <fullName>Website Issue</fullName>
+                <default>false</default>
+                <label>Website Issue</label>
+            </value>
+            <value>
+                <fullName>Wrong Address in Yardi</fullName>
+                <default>false</default>
+                <label>Wrong Address in Yardi</label>
+            </value>
+            <value>
+                <fullName>Wrong Fund</fullName>
+                <default>false</default>
+                <label>Wrong Fund</label>
+            </value>
+            <value>
+                <fullName>Yardi</fullName>
+                <default>false</default>
+                <label>Yardi</label>
+            </value>
+            <value>
+                <fullName>Yardi Performance Issue</fullName>
+                <default>false</default>
+                <label>Yardi Performance Issue</label>
+            </value>
+            <value>
+                <fullName>Misc</fullName>
+                <default>false</default>
+                <label>Misc</label>
+            </value>
+            <value>
+                <fullName>WebEx</fullName>
+                <default>false</default>
+                <label>WebEx</label>
+            </value>
+            <value>
+                <fullName>HAP</fullName>
+                <default>false</default>
+                <label>HAP</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Attribute Changes</fullName>
+                <default>false</default>
+                <label>Other Attribute Changes</label>
+            </value>
+            <value>
+                <fullName>Other Attributes</fullName>
+                <default>false</default>
+                <label>Other Attributes</label>
+            </value>
+            <value>
+                <fullName>Other WO Related Issues</fullName>
+                <default>false</default>
+                <label>Other WO Related Issues</label>
+            </value>
+            <value>
+                <fullName>Resident - Unlock Account</fullName>
+                <default>false</default>
+                <label>Resident - Unlock Account</label>
+            </value>
+            <value>
+                <fullName>Resident - Cannot Register</fullName>
+                <default>false</default>
+                <label>Resident - Cannot Register</label>
+            </value>
+            <value>
+                <fullName>Resident - Delete Account</fullName>
+                <default>false</default>
+                <label>Resident - Delete Account</label>
+            </value>
+            <value>
+                <fullName>Resident – Rent Issue (Credit Card)</fullName>
+                <default>false</default>
+                <label>Resident – Rent Issue (Credit Card)</label>
+            </value>
+            <value>
+                <fullName>Resident – Rent Issue (ACH)</fullName>
+                <default>false</default>
+                <label>Resident – Rent Issue (ACH)</label>
+            </value>
+            <value>
+                <fullName>Applicant - Application Payment Issue</fullName>
+                <default>false</default>
+                <label>Applicant - Application Payment Issue</label>
+            </value>
+            <value>
+                <fullName>Applicant - Application Error (Non Payment Issues)</fullName>
+                <default>false</default>
+                <label>Applicant - Application Error (Non Payment Issues)</label>
+            </value>
+            <value>
+                <fullName>Site Manager - Property Missing</fullName>
+                <default>false</default>
+                <label>Site Manager - Property Missing</label>
+            </value>
+            <value>
+                <fullName>Site Manager - Data Changes</fullName>
+                <default>false</default>
+                <label>Site Manager - Data Changes</label>
+            </value>
+            <value>
+                <fullName>Site Manager - User Access Issue</fullName>
+                <default>false</default>
+                <label>Site Manager - User Access Issue</label>
+            </value>
+            <value>
+                <fullName>WebSite Issue - Property Not Published</fullName>
+                <default>false</default>
+                <label>WebSite Issue - Property Not Published</label>
+            </value>
+            <value>
+                <fullName>Website Issue - Property not clickable</fullName>
+                <default>false</default>
+                <label>Website Issue - Property not clickable</label>
+            </value>
+            <value>
+                <fullName>Automated Lease</fullName>
+                <default>false</default>
+                <label>Automated Lease</label>
+            </value>
+            <value>
+                <fullName>Manual Lease</fullName>
+                <default>false</default>
+                <label>Manual Lease</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Resident Services</controllingFieldValue>
+            <valueName>iPad Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident Services</controllingFieldValue>
+            <valueName>Scheduling Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident Services</controllingFieldValue>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <controllingFieldValue>Install / Remove / Repair</controllingFieldValue>
+            <controllingFieldValue>Multiple Phones</controllingFieldValue>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <controllingFieldValue>System Enhancements</controllingFieldValue>
+            <controllingFieldValue>Payables Related</controllingFieldValue>
+            <controllingFieldValue>Peripheral</controllingFieldValue>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <controllingFieldValue>Single Phone</controllingFieldValue>
+            <controllingFieldValue>Leasing Process</controllingFieldValue>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <controllingFieldValue>Reporting Enhancements</controllingFieldValue>
+            <controllingFieldValue>Workflow Enhancements</controllingFieldValue>
+            <controllingFieldValue>RENTCafe Enhancements</controllingFieldValue>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <controllingFieldValue>Architecture</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IH.com</controllingFieldValue>
+            <valueName>Architecture Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IH.com</controllingFieldValue>
+            <valueName>Pocket Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IH.com</controllingFieldValue>
+            <valueName>Rent Cafe Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IH.com</controllingFieldValue>
+            <valueName>Report Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IH.com</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Acquisitions / Asset Mgmt.</controllingFieldValue>
+            <controllingFieldValue>Intranet</controllingFieldValue>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Misc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>HOA</controllingFieldValue>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Delete Record</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Dashboard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Modify Existing Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>New Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>One Time Data Extract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Report Schedule Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>ADP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>AM Model</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Box</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Concur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Docusign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>eFax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Go To Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Great Plains</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>OpenVoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>QlkView</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>RDS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>Skype</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application Access</controllingFieldValue>
+            <valueName>WebEx</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training Requests</controllingFieldValue>
+            <valueName>Training Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Mass Data Load</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Peripheral</controllingFieldValue>
+            <valueName>Monitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Peripheral</controllingFieldValue>
+            <valueName>Printer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Peripheral</controllingFieldValue>
+            <valueName>Scanner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Install / Remove / Repair</controllingFieldValue>
+            <valueName>Adobe Acrobat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Install / Remove / Repair</controllingFieldValue>
+            <valueName>Internet Browser</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Install / Remove / Repair</controllingFieldValue>
+            <valueName>MS Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Install / Remove / Repair</controllingFieldValue>
+            <valueName>MS Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Install / Remove / Repair</controllingFieldValue>
+            <valueName>MS Visio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Multiple Phones</controllingFieldValue>
+            <valueName>Call Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Multiple Phones</controllingFieldValue>
+            <valueName>Entire Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Receivables Related</controllingFieldValue>
+            <valueName>EFT Cleanup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Receivables Related</controllingFieldValue>
+            <valueName>Invalid Cash Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Receivables Related</controllingFieldValue>
+            <valueName>Payment Batch Not Processed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Receivables Related</controllingFieldValue>
+            <valueName>Payment Research Needed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Receivables Related</controllingFieldValue>
+            <controllingFieldValue>Property Attribute Change</controllingFieldValue>
+            <valueName>Other Attributes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>AcctTree Edit/Add</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Acquisition Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Address Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Credit Check Button Missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>IH Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Lease Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Legacy Systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>New GL Acct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Pipeline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>PM Attributes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Portfolio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Property Attribute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Property Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Unit Type Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <controllingFieldValue>Property Attribute Change</controllingFieldValue>
+            <valueName>Wrong Fund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Changes</controllingFieldValue>
+            <valueName>Other Attribute Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Security</controllingFieldValue>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <valueName>Additional Access/Permissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Security</controllingFieldValue>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <valueName>Changes In Role</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Security</controllingFieldValue>
+            <valueName>New User Setup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Security</controllingFieldValue>
+            <valueName>Reset Password/Locked Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancements</controllingFieldValue>
+            <controllingFieldValue>Database Changes</controllingFieldValue>
+            <valueName>New Entity Set Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancements</controllingFieldValue>
+            <controllingFieldValue>Database Changes</controllingFieldValue>
+            <valueName>Schema Updates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancements</controllingFieldValue>
+            <controllingFieldValue>Database Changes</controllingFieldValue>
+            <valueName>Third Party Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancements</controllingFieldValue>
+            <controllingFieldValue>Database Changes</controllingFieldValue>
+            <valueName>Upgrades</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System Enhancements</controllingFieldValue>
+            <valueName>Yardi Performance Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payables Related</controllingFieldValue>
+            <valueName>Taxes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payables Related</controllingFieldValue>
+            <valueName>Vendor Load Needed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Attribute Change</controllingFieldValue>
+            <valueName>Tenant Upload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property Attribute Change</controllingFieldValue>
+            <valueName>Wrong Address in Yardi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Peripheral</controllingFieldValue>
+            <valueName>Check Scanner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Peripheral</controllingFieldValue>
+            <valueName>Keyboard / Mouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Printer / Copier / Scanner</controllingFieldValue>
+            <valueName>Outage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <valueName>Adding New User</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <valueName>Deleting/Inactivate User</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <valueName>Password Reset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Phone</controllingFieldValue>
+            <valueName>Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Phone</controllingFieldValue>
+            <valueName>Name Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Single Phone</controllingFieldValue>
+            <valueName>VoiceMail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing Process</controllingFieldValue>
+            <valueName>Application/Move-In Charges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing Process</controllingFieldValue>
+            <valueName>Cancel Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing Process</controllingFieldValue>
+            <valueName>Deactivate Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing Process</controllingFieldValue>
+            <valueName>Guest Card Edits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing Process</controllingFieldValue>
+            <valueName>Prospect Info Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Charges and Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Deposit Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Ledger Corrections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Move-Ins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Move-Outs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Renewals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resident</controllingFieldValue>
+            <valueName>Transfers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>AP Batch Locked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>AR Related Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>Check Payment Batch Reset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>Credit Card Related Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>Duplicated Check Voids</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>Unable to Run Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>Unable to Upload Batch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Mgmt. &amp; Pmt. Process</controllingFieldValue>
+            <valueName>HAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Resident - Unlock Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Resident - Cannot Register</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Resident - Delete Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Resident – Rent Issue (Credit Card)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Resident – Rent Issue (ACH)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Applicant - Application Payment Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Applicant - Application Error (Non Payment Issues)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Site Manager - Property Missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Site Manager - Data Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Site Manager - User Access Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>WebSite Issue - Property Not Published</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe</controllingFieldValue>
+            <valueName>Website Issue - Property not clickable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Unable to Access WO Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Unable to Locate Work Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Unable to Print Work Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Other WO Related Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions / Asset Mgmt.</controllingFieldValue>
+            <valueName>Brokersite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions / Asset Mgmt.</controllingFieldValue>
+            <valueName>Disposition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions / Asset Mgmt.</controllingFieldValue>
+            <valueName>File Storage (S3)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wifi</controllingFieldValue>
+            <valueName>Performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA</controllingFieldValue>
+            <valueName>HOA Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA</controllingFieldValue>
+            <valueName>HOA Dues Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA</controllingFieldValue>
+            <valueName>HOA Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA</controllingFieldValue>
+            <valueName>Violation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intranet</controllingFieldValue>
+            <valueName>Manage Content Admins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>AppTrack / Showing / IH Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Lease / Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing</controllingFieldValue>
+            <valueName>Listing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>HD Budget Walk / Nitro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>QC Audit / Deficiencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Rehab / Projected Spend / Vendor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting Enhancements</controllingFieldValue>
+            <valueName>Automation of Tasks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting Enhancements</controllingFieldValue>
+            <valueName>New Report Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting Enhancements</controllingFieldValue>
+            <valueName>Reporting Frequency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Workflow Enhancements</controllingFieldValue>
+            <valueName>Dashboard Alerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe Enhancements</controllingFieldValue>
+            <valueName>Application Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe Enhancements</controllingFieldValue>
+            <valueName>ILS Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe Enhancements</controllingFieldValue>
+            <valueName>Property Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RENTCafe Enhancements</controllingFieldValue>
+            <valueName>Residential Correspondence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Lease</controllingFieldValue>
+            <valueName>Automated Lease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National Lease</controllingFieldValue>
+            <valueName>Manual Lease</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management Related</controllingFieldValue>
+            <valueName>ACH Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management Related</controllingFieldValue>
+            <valueName>Credit Card Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Journal Entry Related</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

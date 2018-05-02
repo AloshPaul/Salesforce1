@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brock_Atlanta_221_5</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Bulk_Deal__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Property_Type__c</columns>
+    <columns>Acquisitions_Analyst__c</columns>
+    <columns>Title_Company__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>Baths__c</columns>
+    <columns>Bedrooms__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>Brock Atlanta 221 #5</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.Bulk</value>
+    </filters>
+    <label>Brock Atlanta 221 #5</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

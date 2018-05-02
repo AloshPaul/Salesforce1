@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x2014_Sep_14_Rollout</fullName>
+    <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+    <columns>System_Issue_Report__c</columns>
+    <columns>Type_Of_Modification__c</columns>
+    <columns>Component_Type__c</columns>
+    <columns>Object_Name__c</columns>
+    <columns>Component_Name__c</columns>
+    <columns>Manual_Step__c</columns>
+    <columns>SIR_Rollout__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SIR_Status__c</field>
+        <operation>equals</operation>
+        <value>Ready to Deploy in PROD</value>
+    </filters>
+    <filters>
+        <field>Manual_Step__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Component_Name__c</field>
+        <operation>equals</operation>
+        <value>Custom Setting Script</value>
+    </filters>
+    <filters>
+        <field>Component_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Sharing Setting</value>
+    </filters>
+    <label>2013 Sep 14 Rollout</label>
+</ListView>

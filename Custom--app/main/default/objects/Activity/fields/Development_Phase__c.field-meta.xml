@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Phase__c</fullName>
+    <externalId>false</externalId>
+    <label>Development Phase</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beta Development</fullName>
+                <default>false</default>
+                <label>Beta Development</label>
+            </value>
+            <value>
+                <fullName>Phase I</fullName>
+                <default>false</default>
+                <label>Phase I</label>
+            </value>
+            <value>
+                <fullName>Phase II</fullName>
+                <default>false</default>
+                <label>Phase II</label>
+            </value>
+            <value>
+                <fullName>Phase III</fullName>
+                <default>false</default>
+                <label>Phase III</label>
+            </value>
+            <value>
+                <fullName>Phase IV</fullName>
+                <default>false</default>
+                <label>Phase IV</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

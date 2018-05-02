@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Region_s_Regional_Queue_Member__c</fullName>
+    <description>This field is used in the RFC Support Request process, specifically on the User record and in List Views.   This field is needed for them to see tickets only for their own region.  Refer to FAQ-00269 for more information.</description>
+    <externalId>false</externalId>
+    <formula>IF(  $Profile.Name   = 'System Administrator', True,
+IF( $UserRole.Name  = 'Executive-Corporate', True, 
+IF( (   $User.Full_Name__c = 'Lorrie Sobzak'  ||  $User.Full_Name__c = 'Ali Estremadoyro' )  &amp;&amp;
+ (OR( ISPICKVAL( Region__c , 'Orlando') , ISPICKVAL(Region__c , 'Tampa') ))  , True, 
+IF( (   $User.Full_Name__c = 'Eric Bryant' )  &amp;&amp;
+ (OR( ISPICKVAL( Region__c , 'Chicago') , ISPICKVAL(Region__c , 'Charlotte'),ISPICKVAL(Region__c , 'Minneapolis' )))  , True, 
+IF( TEXT( $User.Region__c ) =  TEXT( Region__c )   &amp;&amp;  $User.Is_Regional_Queue_Member__c  = True  , True, False)))))</formula>
+    <label>My Region's Regional Queue Member</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

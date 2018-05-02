@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_ShortCut</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>800</height>
+    <isResizable>true</isResizable>
+    <linkType>page</linkType>
+    <masterLabel>* Field ShortCut</masterLabel>
+    <openType>newWindow</openType>
+    <page>CompletePipelineRequiredFields</page>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <width>700</width>
+</WebLink>

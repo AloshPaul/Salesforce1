@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Historical - Not currently in use.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Acquisition_Basis_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Acquisition Basis PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Acquisition_Basis__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Acquisition Basis</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Admin_Fee_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Admin Fee $ @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_In_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Actual All-In Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_In_Cost_as_a_of_Replacement__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual All-In Cost as a % of Replacement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_In_Net_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual All-In Net @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_In_PSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual All-In PSF</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_In_as_a_of_Market_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual All-In as a % of Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_In_as_a_of_Peak__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual All-In as a % of Peak</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_All_in_Pre_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual All-in Pre-Rehab</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Annual_Expenses_Post_Reserves_Y__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Annual Expenses Post Reserves - Y</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Annual_Net_Revenue_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Annual Net Revenue @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Application_Fees_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Application Fees @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Asset_Management_Expense_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Asset Management Expense @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Assoc_Dues_Postage_Etc_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Assoc Dues/Postage/Etc @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Cleaning_Pet_Fees_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Cleaning/Pet Fees @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Contingency_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Contingency @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Down_Time_days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Down Time (days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Expense_Margin_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Expense Margin @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Expense_Post_Reserves_Margin__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Expense Post Reserves Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Gross_Annual_Rent_Year1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Gross Annual Rent @ Year1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Trustee</fullName>
+                    <default>false</default>
+                    <label>Trustee</label>
+                </value>
+                <value>
+                    <fullName>REO</fullName>
+                    <default>false</default>
+                    <label>REO</label>
+                </value>
+                <value>
+                    <fullName>Bulk Sale</fullName>
+                    <default>false</default>
+                    <label>Bulk Sale</label>
+                </value>
+                <value>
+                    <fullName>Short Sale</fullName>
+                    <default>false</default>
+                    <label>Short Sale</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Actual_Gross_Yield__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Gross Yield</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Insurance_Expense_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Insurance Expense @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Lease_Turnover_Expense_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Lease Turnover Expense @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Leasing_Commsions_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Leasing Commsions @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Legal_Professional_Expense_Ye__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Legal &amp; Professional Expense @ Ye</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Misc_Expenses_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Misc. Expenses @ Year 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_NOI_Margin_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual NOI Margin @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_NOI_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual NOI @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Net_Income_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Net Income @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Net_Margin_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Net Margin @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Other_Income__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Other Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Property_Management_Expense_Yea__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Property Management Expense @ Yea</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Property_Marketing_and_Advertisin__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Property Marketing and Advertisin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Property_Net_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Null</formula>
+        <label>Actual Property Net @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Property_Tax_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Property Tax @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Repairs_Maintenance_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Repairs &amp; Maintenance @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Special_Assessment_Expense__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Special Assessment Expense</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Vacancy_Bad_Debt_Year_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Vacancy / Bad Debt $ @ Year 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Property__c</fullName>
+        <externalId>false</externalId>
+        <label>Property</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>Actual Results</relationshipLabel>
+        <relationshipName>Actual_Results</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Actual Results</label>
+    <nameField>
+        <displayFormat>AR-{0000000}</displayFormat>
+        <label>Actual Results Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Actual Results</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

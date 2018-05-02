@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Complete_All</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Market__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Submitted_By__c</columns>
+    <columns>Approved_from_Acquisition_Team_Manager__c</columns>
+    <columns>Approved_from_Asset_Management_Team__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IsConverted__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Visible__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </filters>
+    <label>Reporting Complete/Portfolio - All</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

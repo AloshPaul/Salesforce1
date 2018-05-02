@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COE_Address_Layout</fullName>
+    <fields>Complete_Address__c</fields>
+    <fields>Bid_Type__c</fields>
+    <fields>COE_Amount__c</fields>
+    <label>COE Address Layout</label>
+</CompactLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Corp_Project__c</columns>
+    <columns>NAME</columns>
+    <columns>Expense_Amount__c</columns>
+    <columns>Expense_Date__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Budget Line Items</label>
+</ListView>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>API_Key__c</fullName>
+        <defaultValue>&apos;haxkxreiq4cm12iy8ulr5dd6028y2hlj&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>API Key</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auth_Token__c</fullName>
+        <defaultValue>&apos;v52mh50ez7ti0hbt2f4fs0thkml9qafu&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Auth Token</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cloudbees_End_Point_Url__c</fullName>
+        <externalId>false</externalId>
+        <label>Cloudbees End Point Url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Cloudbees_Service_Secret__c</fullName>
+        <externalId>false</externalId>
+        <label>Cloudbees Service Secret</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pipeline_Files_Root_Folder__c</fullName>
+        <externalId>false</externalId>
+        <label>Pipeline Files Root Folder</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Files_Root_Folder__c</fullName>
+        <defaultValue>&apos;352380973&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Property Files Root Folder</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_Files_Root_Folder__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Files Root Folder</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>System_Issue_Files_Root_Folder__c</fullName>
+        <defaultValue>&apos;358878939&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>System Issue Files Root Folder</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ticket__c</fullName>
+        <defaultValue>&apos;xkxndbhyaxhqn3amx9udmsc9zliz4k1g&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>Ticket</label>
+        <length>80</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Box Configuration</label>
+    <visibility>Public</visibility>
+</CustomObject>

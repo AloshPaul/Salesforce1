@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Renewal_Correspondence8</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>Lease_End_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Phone_Primary__c</columns>
+    <columns>Resident_Phone_Secondary__c</columns>
+    <columns>Total_Rent__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Resident_Intent__c</columns>
+    <columns>Renewal_Status_Comments__c</columns>
+    <columns>First_Contact_Notice_Sent__c</columns>
+    <columns>Third_Contact_Notice_Sent__c</columns>
+    <columns>Fourth_Contact_Notice_Sent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:75</value>
+    </filters>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>TIP_Formula__c</field>
+        <operation>equals</operation>
+        <value>IH Lease</value>
+    </filters>
+    <filters>
+        <field>Bad_Data__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <label>ATL- Renewal Correspondence</label>
+    <sharedTo>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a joiner object between the Rehab object and the company/contact object to relate all they key properties (other than locksmith and GC who are on the record) with the rehab project.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Alert_Vendor_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This will auto-populate with the date/time that the vendor alert was triggered.</inlineHelpText>
+        <label>Alert Vendor Date/Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Alert_Vendor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Checking this box will send an auto-alert to the vendor to provide an initial notification about the job included property #, address and the notes in the comment field.  This requires a primary contact with a valid email address.  You will be cc&apos;d.</inlineHelpText>
+        <label>Alert Vendor</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Comments</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Company__r.Phone</formula>
+        <label>Company Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Rehabs: Direct Vendor Projects</relationshipLabel>
+        <relationshipName>Rehab_Vendors</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Job Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.MobilePhone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Mobile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>The contact you entered doesn&apos;t match the company you entered.</errorMessage>
+            <filterItems>
+                <field>Contact.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.Company__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Rehab Vendors</relationshipLabel>
+        <relationshipName>Rehab_Vendors</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Flooring_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Flooring Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipName>Rehab_Vendors</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Appliances</fullName>
+                    <default>false</default>
+                    <label>Appliances</label>
+                </value>
+                <value>
+                    <fullName>Blinds</fullName>
+                    <default>false</default>
+                    <label>Blinds</label>
+                </value>
+                <value>
+                    <fullName>Cabinets</fullName>
+                    <default>false</default>
+                    <label>Cabinets</label>
+                </value>
+                <value>
+                    <fullName>Countertops</fullName>
+                    <default>false</default>
+                    <label>Countertops</label>
+                </value>
+                <value>
+                    <fullName>Final Clean</fullName>
+                    <default>false</default>
+                    <label>Final Clean</label>
+                </value>
+                <value>
+                    <fullName>Fireplace Inspection</fullName>
+                    <default>false</default>
+                    <label>Fireplace Inspection</label>
+                </value>
+                <value>
+                    <fullName>Flooring</fullName>
+                    <default>false</default>
+                    <label>Flooring</label>
+                </value>
+                <value>
+                    <fullName>Garage Doors</fullName>
+                    <default>false</default>
+                    <label>Garage Doors</label>
+                </value>
+                <value>
+                    <fullName>Gas Inspection</fullName>
+                    <default>false</default>
+                    <label>Gas Inspection</label>
+                </value>
+                <value>
+                    <fullName>Glass</fullName>
+                    <default>false</default>
+                    <label>Glass</label>
+                </value>
+                <value>
+                    <fullName>HVAC</fullName>
+                    <default>false</default>
+                    <label>HVAC</label>
+                </value>
+                <value>
+                    <fullName>Irrigation</fullName>
+                    <default>false</default>
+                    <label>Irrigation</label>
+                </value>
+                <value>
+                    <fullName>Landscaping</fullName>
+                    <default>false</default>
+                    <label>Landscaping</label>
+                </value>
+                <value>
+                    <fullName>Lawn Service</fullName>
+                    <default>false</default>
+                    <label>Lawn Service</label>
+                </value>
+                <value>
+                    <fullName>Pest Control</fullName>
+                    <default>false</default>
+                    <label>Pest Control</label>
+                </value>
+                <value>
+                    <fullName>Pool</fullName>
+                    <default>false</default>
+                    <label>Pool</label>
+                </value>
+                <value>
+                    <fullName>Refinish Sink/Shower/Tub</fullName>
+                    <default>false</default>
+                    <label>Refinish Sink/Shower/Tub</label>
+                </value>
+                <value>
+                    <fullName>Rolloff Dumpsters</fullName>
+                    <default>false</default>
+                    <label>Rolloff Dumpsters</label>
+                </value>
+                <value>
+                    <fullName>Roofing</fullName>
+                    <default>false</default>
+                    <label>Roofing</label>
+                </value>
+                <value>
+                    <fullName>Steam Clean</fullName>
+                    <default>false</default>
+                    <label>Steam Clean</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sq_Ft_Laminate__c</fullName>
+        <externalId>false</externalId>
+        <label>Sq Ft -  Laminate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sq_Ft_Tile_13_x_13__c</fullName>
+        <externalId>false</externalId>
+        <label>Sq Ft -  Tile 13 x 13</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sq_Ft_Tile_20_x_20__c</fullName>
+        <externalId>false</externalId>
+        <label>Sq Ft  - Tile 20 x 20</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sq_Ft_Vinyl__c</fullName>
+        <externalId>false</externalId>
+        <label>Sq Ft  - Vinyl</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sq_Ft_Wood__c</fullName>
+        <externalId>false</externalId>
+        <label>Sq Ft  - Wood</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sq_Yd_Carpet__c</fullName>
+        <externalId>false</externalId>
+        <label>Sq Ft - Carpet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Performance__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field should be used to add any comments re: the vendor performance on this job.</inlineHelpText>
+        <label>Vendor Performance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Rehab Vendors</label>
+    <nameField>
+        <displayFormat>RehabVendor-{0000}</displayFormat>
+        <label>Record Link</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Rehab Vendors</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Contact_Email_Required_to_Alert_Vendor</fullName>
+        <active>true</active>
+        <description>there needs to be a value in “contact email” in order to check “Alert Vendor”  box</description>
+        <errorConditionFormula>AND( Alert_Vendor__c  = true, ISBLANK( Contact_Email__c ))</errorConditionFormula>
+        <errorDisplayField>Alert_Vendor__c</errorDisplayField>
+        <errorMessage>There needs to be a value in Contact Email in order to Alert Vendor</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Alert_Vendors</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Alert Vendors</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/apex.js&quot;)}
+
+//Variable to hold rehab vendors record ids 
+var records = {!GETRECORDIDS($ObjectType.Rehab_Vendors__c)}; 
+
+//Initialize the variable 
+var recordId = &apos;&apos;; 
+
+//Check for null value 
+if(records.length&lt;1) { 
+
+alert(&quot;Please select one or more records.&quot;); 
+} 
+else { 
+
+//Loop through rehab vendors records 
+for (var i=0;i&lt;records.length;i++) 
+{ 
+
+//Populate the string 
+recordId += records[i] + &quot;,&quot;; 
+} 
+
+if (recordId != true) { 
+
+//Method Call 
+sforce.apex.execute(&quot;UpdateRehabVendorsList&quot;,&quot;updateVendorList1&quot;,{sId:recordId}); 
+
+//load the browser window 
+location.href = &apos;/&apos; + &apos;{!Rehab__c.Id}&apos;; 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mark_Completed</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mark Completed</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/16.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+//Variable to hold rehab vendors record ids 
+var records = {!GETRECORDIDS($ObjectType.Rehab_Vendors__c)}; 
+
+//Initialize the variable 
+var recordId = &apos;&apos;; 
+
+//Check for null value 
+if(records.length&lt;1) { 
+
+alert(&quot;Please select one or more records.&quot;); 
+} 
+else { 
+
+//Loop through rehab vendors records 
+for (var i=0;i&lt;records.length;i++) 
+{ 
+
+//Populate the string 
+recordId += records[i] + &quot;,&quot;; 
+} 
+
+if (recordId !== null) { 
+
+//Method Call 
+sforce.apex.execute(&quot;UpdateRehabVendorsList&quot;,&quot;updateVendorList&quot;,{sId:recordId}); 
+
+//load the browser window 
+location.href = &apos;/&apos; + &apos;{!Rehab__c.Id}&apos;; 
+} 
+}</url>
+    </webLinks>
+</CustomObject>

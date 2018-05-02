@@ -1,0 +1,24 @@
+<apex:page standardController="Property_Issues__c" extensions="S3PropertyIssueImagesController">
+<br/>
+    <apex:outputPanel id="otherPhotosPanel">
+        <table width="100%">
+            <apex:repeat value="{!lstPIImages}" var="lst" >
+                <td>
+                    <apex:repeat value="{!lst}" var="item">
+                        <td width="25%">
+                            <apex:outputPanel rendered="{!item.S3_Image_URL__c != null}">
+                                <center>
+                                    <apex:outputLink value="{!item.name}" target="_blank">
+                                       <apex:image id="theImage" dir="LTR"  title="{!item.S3_Image_URL__c}" value="{!item.S3_Image_URL__c}" width="320" height="120"/>
+                                    </apex:outputLink>
+                                    <br/><br/>
+                                    <apex:actionStatus startText="saving..." id="savingStatusOther" />
+                                </center>
+                            </apex:outputPanel>
+                        </td>
+                    </apex:repeat>
+                </td>
+            </apex:repeat>
+        </table>
+    </apex:outputPanel>
+</apex:page>

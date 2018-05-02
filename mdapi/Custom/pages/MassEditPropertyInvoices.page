@@ -1,0 +1,77 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Randy Kish    
+  *
+  *    Created Date   :    11-20-2013
+  *
+  *    Revision Log   :    V1.0   
+  *                         
+**/
+-->
+<apex:page standardController="Property_Invoice__c" recordSetVar="unused" sidebar="false">
+    
+        <!--page Form-->
+        <apex:form >
+        
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+
+       <!--page block-->
+       <apex:pageBlock >
+           
+           <!--page Message-->
+           <apex:pagemessages ></apex:pagemessages>
+           
+               <!--page buttons--> 
+               <apex:pageBlockButtons >
+                   <apex:commandButton value="Save" action="{!save}"/>
+                   <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+               </apex:pageBlockButtons>
+               
+               <!--Fields for Mass Edit Operation-->
+               <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                
+                <apex:column headerValue="Yardi Code">
+                    <apex:outputField value="{!a.Yardi_Code__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Vendor">
+                    <apex:outputField value="{!a.Vendor__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="Invoice #">
+                    <apex:outputField value="{!a.Invoice_Number__c}"/>
+                </apex:column> 
+                
+                <apex:column headerValue="Resubmit">
+                    <apex:inputField value="{!a.Resubmit__c}"/>
+                </apex:column>               
+                
+                <apex:column headerValue="Confirmed Payment to Vendor">
+                    <apex:inputField value="{!a.Confirmed_Payment_To_Vendor__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="Status">
+                    <apex:inputField value="{!a.Status__c}"/>
+                </apex:column>
+                <!--
+                <apex:column headerValue="GL Code">
+                    <apex:inputField value="{!a.GL_Code__c}"/>
+                </apex:column>
+                 -->
+               <apex:column headerValue="Invoice Amount">
+                    <apex:inputField value="{!a.Invoice_Amount__c}"/>
+                </apex:column>
+                        
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

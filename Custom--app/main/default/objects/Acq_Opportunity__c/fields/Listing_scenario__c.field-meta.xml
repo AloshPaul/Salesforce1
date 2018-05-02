@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listing_scenario__c</fullName>
+    <externalId>false</externalId>
+    <label>Listing Activity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Listing</fullName>
+                <default>true</default>
+                <label>New Listing</label>
+            </value>
+            <value>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+                <label>Price Change</label>
+            </value>
+            <value>
+                <fullName>Back to Market</fullName>
+                <default>false</default>
+                <label>Back to Market</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

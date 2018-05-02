@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YRR_Move_Out_Date__c</fullName>
+    <description>This field is used to populate the move out date from rehab record on listing record. See D-00013667</description>
+    <externalId>false</externalId>
+    <label>YRR Move-Out Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

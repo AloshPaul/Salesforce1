@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Name_is_required</fullName>
+    <active>true</active>
+    <description>User Name is required for certain values</description>
+    <errorConditionFormula>if(
+AND(
+ISBLANK( User_Name__c ),
+TEXT(Request_Area__c) = 'ePM -Technical'
+), true, false
+)</errorConditionFormula>
+    <errorDisplayField>User_Name__c</errorDisplayField>
+    <errorMessage>User Name is required</errorMessage>
+</ValidationRule>

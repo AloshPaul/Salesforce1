@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promised_Time_Slot__c</fullName>
+    <externalId>false</externalId>
+    <label>Promised Time Slot</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>8-10</fullName>
+                <default>false</default>
+                <label>8-10</label>
+            </value>
+            <value>
+                <fullName>10-12</fullName>
+                <default>false</default>
+                <label>10-12</label>
+            </value>
+            <value>
+                <fullName>13-15</fullName>
+                <default>false</default>
+                <label>13-15</label>
+            </value>
+            <value>
+                <fullName>15-17</fullName>
+                <default>false</default>
+                <label>15-17</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp_Batch_Run__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field can be deleted after batch run</description>
+    <externalId>false</externalId>
+    <label>Temp Batch Run</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Printable_View__c</fullName>
+    <defaultValue>"Click the Printable View link in the right hand corner of this Training Record to see how you can print the page."</defaultValue>
+    <externalId>false</externalId>
+    <label>Printable View</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

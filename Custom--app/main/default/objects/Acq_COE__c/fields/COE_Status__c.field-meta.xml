@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COE_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>COE Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Receipt Details</fullName>
+                <default>false</default>
+                <label>Receipt Details</label>
+            </value>
+            <value>
+                <fullName>COE Cancelled Pending</fullName>
+                <default>false</default>
+                <label>COE Cancelled Pending</label>
+            </value>
+            <value>
+                <fullName>COE Cancelled Received</fullName>
+                <default>false</default>
+                <label>COE Cancelled Received</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

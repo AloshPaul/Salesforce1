@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resource_Manager__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case (Region__c, 
+
+"Atlanta","Benjamin Mervine", 
+"Charlotte","Michael Robelotto", 
+"Chicago","Ryan Card", 
+"Inland Empire","Tom Jones", 
+"Jacksonville","Saul Altamirano", 
+"Las Vegas","Keith Calvert", 
+"Los Angeles","Richard Brenes", 
+"Miami","Alex Alfonso", 
+"Minneapolis", "Travis Schultz",
+"Orlando","Kent Makin", 
+"Phoenix","Steve Letcher", 
+"Sacramento","Daniel Ferris", 
+"Seattle","Richard Berndt", 
+"Tampa","Tuan Le",
+Null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Resource Manager</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

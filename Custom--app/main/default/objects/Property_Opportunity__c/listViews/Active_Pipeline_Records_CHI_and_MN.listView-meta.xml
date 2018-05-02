@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Pipeline_Records_CHI_and_MN</fullName>
+    <booleanFilter>1 or 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Fund__c</columns>
+    <columns>IsConverted__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Prospect__c</columns>
+    <columns>Residence__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Property_State__c</field>
+        <operation>equals</operation>
+        <value>MN</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Minneapolis,Chicago</value>
+    </filters>
+    <label>*Active Pipeline Records - CHI and MN</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

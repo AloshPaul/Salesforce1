@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_Support_Rehab_Tickets</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Request_Area__c</columns>
+    <columns>Requestor_Name__c</columns>
+    <columns>Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Related_SIR__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Request_Type__c</field>
+        <operation>equals</operation>
+        <value>Rehab</value>
+    </filters>
+    <filters>
+        <field>Request_Area__c</field>
+        <operation>equals</operation>
+        <value>System Enhancement or Change Request,Support Issue</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Closed,Deferred</value>
+    </filters>
+    <label>SF Support - Rehab Tickets</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Miami_Down_PreMarket_Rent_Adjustment</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>RevEx_Status__c</columns>
+    <columns>Down_Pre_Marketing_Status_Date__c</columns>
+    <columns>YRR_Move_Out_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Leasing_Mgr_Visit_Comments__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>DOM__c</columns>
+    <columns>Previous_Lease_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Agent_Rent_Opinion__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>X13_24_Month_Rent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Miami</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Down - Pre-Marketing</value>
+    </filters>
+    <filters>
+        <field>Days_since_Last_Rent_Adjustment__c</field>
+        <operation>greaterThan</operation>
+        <value>11</value>
+    </filters>
+    <filters>
+        <field>RevEx_Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Miami Down-PreMarket Rent Adjustment</label>
+</ListView>

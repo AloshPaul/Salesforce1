@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YRR_Market_Rent_Prev_Total_Rent__c</fullName>
+    <externalId>false</externalId>
+    <formula>YRR_Market_Rent__c &lt; Previous_Total_Rent__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>YRR Market Rent &lt; Prev. Total Rent</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alert_Vendor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this box will send an auto-alert to the vendor to provide an initial notification about the job included property #, address and the notes in the comment field.  This requires a primary contact with a valid email address.  You will be cc'd.</inlineHelpText>
+    <label>Alert Vendor</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

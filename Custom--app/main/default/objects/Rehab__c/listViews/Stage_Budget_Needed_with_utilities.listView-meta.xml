@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Budget_Needed_with_utilities</fullName>
+    <booleanFilter>(1 AND 2) or 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Home__c</columns>
+    <columns>Type__c</columns>
+    <columns>Re_Key_Date__c</columns>
+    <columns>Electricity_Provider__c</columns>
+    <columns>Electric_Status__c</columns>
+    <columns>Electric_Notes__c</columns>
+    <columns>Gas_Status__c</columns>
+    <columns>Gas_Notes__c</columns>
+    <columns>Water_Status__c</columns>
+    <columns>Water_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Front_End_Budget__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Budget_Revised__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Needs Final Budget</value>
+    </filters>
+    <label>Utilities:3-Budget Needed</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

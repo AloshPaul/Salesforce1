@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Correct_Region</fullName>
+    <active>true</active>
+    <description>It will validate the Region field data with correct name of region provided in Region object for those lead created by end user manually</description>
+    <errorConditionFormula>AND( 
+OR( AND(ISNEW(), !Email_Service_Insert__c ), ISCHANGED( Region__c )), 
+!ISNULL(Region__c) , 
+IF( UPPER(VLOOKUP( $ObjectType.Region__c.Fields.Name , $ObjectType.Region__c.Fields.Name , Region__c)) == UPPER(Region__c) , false, true) )</errorConditionFormula>
+    <errorDisplayField>Region__c</errorDisplayField>
+    <errorMessage>Please enter valid region</errorMessage>
+</ValidationRule>

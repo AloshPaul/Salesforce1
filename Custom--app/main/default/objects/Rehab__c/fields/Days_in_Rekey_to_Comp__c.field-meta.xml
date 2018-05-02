@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_in_Rekey_to_Comp__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.Name = 'Turn',
+Office_Signoff_Date__c  -    Access_Date__c ,
+Office_Signoff_Date__c  -   Re_Key_Date__c)</formula>
+    <label># Days Rekey to Complete</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

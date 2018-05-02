@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Strategy__c</fullName>
+    <externalId>false</externalId>
+    <label>Lease Strategy</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rent to New Tenant</fullName>
+                <default>false</default>
+                <label>Rent to New Tenant</label>
+            </value>
+            <value>
+                <fullName>Rent to Current Tenant</fullName>
+                <default>false</default>
+                <label>Rent to Current Tenant</label>
+            </value>
+            <value>
+                <fullName>Purchased Rented</fullName>
+                <default>false</default>
+                <label>Purchased Rented</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

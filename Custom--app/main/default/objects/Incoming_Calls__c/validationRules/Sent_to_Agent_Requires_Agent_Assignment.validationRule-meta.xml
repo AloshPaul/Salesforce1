@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_to_Agent_Requires_Agent_Assignment</fullName>
+    <active>true</active>
+    <description>In order to close a lead to the status of "Closed - Sent to Agent." there must be a value in the "Agent Assigned to Lead" field.</description>
+    <errorConditionFormula>Send_Lead_to_Agent__c  = TRUE &amp;&amp; ISBLANK( Notification_Agent__c )&amp;&amp; ISBLANK( X3rd_Party_Broker__c)
+&amp;&amp; $Profile.Name != 'System Administrator' &amp;&amp; Property_Not_Specified__c = FALSE</errorConditionFormula>
+    <errorDisplayField>Send_Lead_to_Agent__c</errorDisplayField>
+    <errorMessage>You can only have this Sent to Agent if there is an agent in either the IH Agent or 3rd Party/External Agent field.</errorMessage>
+</ValidationRule>

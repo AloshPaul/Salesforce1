@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RS_Rehab_in_Process__c</fullName>
+    <defaultValue>"Rehab in Process"</defaultValue>
+    <externalId>false</externalId>
+    <label>RS Rehab in Process</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

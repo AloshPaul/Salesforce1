@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region_Null_Value_Check</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL(Region__c, '')</errorConditionFormula>
+    <errorDisplayField>Region__c</errorDisplayField>
+    <errorMessage>Please enter a value.</errorMessage>
+</ValidationRule>

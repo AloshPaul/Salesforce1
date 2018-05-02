@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vacancy_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is required when the status is Closed - Vacant.</inlineHelpText>
+    <label>Vacancy Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>TIP_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Vacant on Arrival</fullName>
+                <default>false</default>
+                <label>Vacant on Arrival</label>
+            </value>
+            <value>
+                <fullName>Move-Out</fullName>
+                <default>false</default>
+                <label>Move-Out</label>
+            </value>
+            <value>
+                <fullName>CFK</fullName>
+                <default>false</default>
+                <label>CFK</label>
+            </value>
+            <value>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+                <label>Eviction</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+            <valueName>Vacant on Arrival</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+            <valueName>Move-Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+            <valueName>CFK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+            <valueName>Eviction</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

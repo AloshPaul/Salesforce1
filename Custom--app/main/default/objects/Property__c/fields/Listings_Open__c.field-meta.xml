@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Listings_Open__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Status not equal to Leased or Cancelled</inlineHelpText>
+    <label># Listings - Open</label>
+    <summaryFilterItems>
+        <field>Listing__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Down (In Rehab), OTM - Ready to List, OTM - Active Listing, HOLD - Currently Not Leasable</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Listing__c.Portfolio__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

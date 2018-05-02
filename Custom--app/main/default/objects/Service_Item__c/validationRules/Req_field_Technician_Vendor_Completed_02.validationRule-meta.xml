@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Req_field_Technician_Vendor_Completed_02</fullName>
+    <active>true</active>
+    <description>When the Checkbox ‘Technician/Vendor Completed’ is checked, make Technician Time Spent (hours) required</description>
+    <errorConditionFormula>Technician_Vendor_Completed__c == TRUE
+&amp;&amp; 
+ISBLANK( Time_Spent_on_Service_Item__c )</errorConditionFormula>
+    <errorDisplayField>Time_Spent_on_Service_Item__c</errorDisplayField>
+    <errorMessage>Please type the time spent</errorMessage>
+</ValidationRule>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Cancellation Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Non Issue</fullName>
+                <default>false</default>
+                <label>Non Issue</label>
+            </value>
+            <value>
+                <fullName>Resident Non Responsive</fullName>
+                <default>false</default>
+                <label>Resident Non Responsive</label>
+            </value>
+            <value>
+                <fullName>Resident Repaired</fullName>
+                <default>false</default>
+                <label>Resident Repaired</label>
+            </value>
+            <value>
+                <fullName>Resident Request</fullName>
+                <default>false</default>
+                <label>Resident Request</label>
+            </value>
+            <value>
+                <fullName>Resident Responsibility</fullName>
+                <default>false</default>
+                <label>Resident Responsibility</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

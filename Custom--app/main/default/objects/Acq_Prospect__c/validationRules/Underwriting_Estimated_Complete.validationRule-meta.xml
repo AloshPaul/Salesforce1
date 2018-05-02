@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Underwriting_Estimated_Complete</fullName>
+    <active>true</active>
+    <description>Underwriting Estimates complete</description>
+    <errorConditionFormula>AND(
+    OR(
+    				ISPICKVAL(Status__c, 'Underwriting Complete'),
+								ISPICKVAL(Status__c, 'Offer Approved')
+				),
+    OR(
+        ISNULL(Market_Value_UW__c),
+								ISNULL(Initial_Rehab_Budget_Estimate__c),
+								ISNULL(Expected_Gross_Monthly_Rent_UW__c),
+								ISNULL(Property_Tax_Est_UW__c),
+								ISNULL(Capitalized_Acq_Costs_Estimate__c)
+								
+	    ) 
+				     
+)</errorConditionFormula>
+    <errorMessage>Underwriting estimate should be complete</errorMessage>
+</ValidationRule>

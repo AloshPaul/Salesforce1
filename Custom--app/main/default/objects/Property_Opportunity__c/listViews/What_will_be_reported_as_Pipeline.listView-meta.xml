@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_will_be_reported_as_Pipeline</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Escrow_Amount__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>startsWith</operation>
+        <value>Active - In Escrow</value>
+    </filters>
+    <label>**What will be reported as Pipeline?</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Property_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Current Property Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prehab - TIP</fullName>
+                <default>false</default>
+                <label>Prehab - TIP</label>
+            </value>
+            <value>
+                <fullName>Prehab  - Hold for Deed</fullName>
+                <default>false</default>
+                <label>Prehab  - Hold for Deed</label>
+            </value>
+            <value>
+                <fullName>Prehab - Hold for BK</fullName>
+                <default>false</default>
+                <label>Prehab - Hold for BK</label>
+            </value>
+            <value>
+                <fullName>Rehab - Post Acq</fullName>
+                <default>false</default>
+                <label>Rehab - Post Acq</label>
+            </value>
+            <value>
+                <fullName>Rehab - Turn</fullName>
+                <default>false</default>
+                <label>Rehab - Turn</label>
+            </value>
+            <value>
+                <fullName>Listed on Market</fullName>
+                <default>false</default>
+                <label>Listed on Market</label>
+            </value>
+            <value>
+                <fullName>Leased</fullName>
+                <default>false</default>
+                <label>Leased</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

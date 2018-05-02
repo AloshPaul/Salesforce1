@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manage_File_Access</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Manage File Access</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/FileStoragePermissionsManager?fileTypeId={!CASESAFEID(File_Storage_Type__c.Id)}</url>
+</WebLink>

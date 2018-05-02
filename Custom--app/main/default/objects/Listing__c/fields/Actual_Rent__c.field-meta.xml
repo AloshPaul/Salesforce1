@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Rent__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Resulting_Lease__c), IF(NOT(ISBLANK(Actual_AppTrack__c)), Market_Rent__c,  Actual_Rent_Historical__c ), Resulting_Lease_Total_Rent__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual Rent</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

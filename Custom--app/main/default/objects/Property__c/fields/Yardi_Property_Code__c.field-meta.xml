@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yardi_Property_Code__c</fullName>
+    <description>The Securitized Yardi Code field must be populated and Securitized Asset much be checked in order for this field to reflect the data-loaded Securitized Yardi Codes.</description>
+    <externalId>false</externalId>
+    <formula>IF( NOT( ISBLANK(Securitized_Yardi_Code__c) ) , 
+Securitized_Yardi_Code__c,
+ 
+IF (AND( NOT(ISBLANK (Securitized_Yardi_Code__c)) ,  Securitization_Candidate__c = True), Securitized_Yardi_Code__c,
+
+
+Yardi_Code_Prefix__c + IF( VALUE(Fund__c) >= 5, Yardi_Property_Code_Number_Part__c,  RIGHT(Property_Code__c,4)))
+)</formula>
+    <inlineHelpText>If this references the wrong Fund, change the value in the "Fund" field (01, 02, 03, 04, 05).  Upon saving the record, this field will update to reflect the correct Fund.</inlineHelpText>
+    <label>Yardi Property Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

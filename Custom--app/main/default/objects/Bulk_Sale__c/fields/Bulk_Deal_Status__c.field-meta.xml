@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_Deal_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Bulk Deal Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Negotiating / Underwriting</fullName>
+                <default>false</default>
+                <label>Negotiating / Underwriting</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>LOI Pending</fullName>
+                <default>false</default>
+                <label>LOI Pending</label>
+            </value>
+            <value>
+                <fullName>Awaiting Signed LOI</fullName>
+                <default>false</default>
+                <label>Awaiting Signed LOI</label>
+            </value>
+            <value>
+                <fullName>LOI Signed</fullName>
+                <default>false</default>
+                <label>LOI Signed</label>
+            </value>
+            <value>
+                <fullName>LOI Approvals Pending</fullName>
+                <default>false</default>
+                <label>LOI Approvals Pending</label>
+            </value>
+            <value>
+                <fullName>LOI Approved</fullName>
+                <default>false</default>
+                <label>LOI Approved</label>
+            </value>
+            <value>
+                <fullName>Earnest Money Sent</fullName>
+                <default>false</default>
+                <label>Earnest Money Sent</label>
+            </value>
+            <value>
+                <fullName>Reviewing PSA</fullName>
+                <default>false</default>
+                <label>Reviewing PSA</label>
+            </value>
+            <value>
+                <fullName>PSA Approvals Pending</fullName>
+                <default>false</default>
+                <label>PSA Approvals Pending</label>
+            </value>
+            <value>
+                <fullName>PSA Approved</fullName>
+                <default>false</default>
+                <label>PSA Approved</label>
+            </value>
+            <value>
+                <fullName>Under Contract</fullName>
+                <default>false</default>
+                <label>Under Contract</label>
+            </value>
+            <value>
+                <fullName>Due Diligence</fullName>
+                <default>false</default>
+                <label>Due Diligence</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>IH Deal Not Accepted</fullName>
+                <default>false</default>
+                <label>IH Deal Not Accepted</label>
+            </value>
+            <value>
+                <fullName>IH Declined</fullName>
+                <default>false</default>
+                <label>IH Declined</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Dead</fullName>
+                <default>false</default>
+                <label>Dead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

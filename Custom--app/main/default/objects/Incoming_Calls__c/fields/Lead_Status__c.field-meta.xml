@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open - New</fullName>
+                <default>true</default>
+                <label>Open - New</label>
+            </value>
+            <value>
+                <fullName>Open - In Progress</fullName>
+                <default>false</default>
+                <label>Open - In Progress</label>
+            </value>
+            <value>
+                <fullName>Closed - Sent to Agent</fullName>
+                <default>false</default>
+                <label>Closed - Sent to Agent</label>
+            </value>
+            <value>
+                <fullName>Closed - Not a Lead</fullName>
+                <default>false</default>
+                <label>Closed - Not a Lead</label>
+            </value>
+            <value>
+                <fullName>Closed - Prospect Unqualified</fullName>
+                <default>false</default>
+                <label>Closed - Prospect Unqualified</label>
+            </value>
+            <value>
+                <fullName>Closed - No Follow-up Needed</fullName>
+                <default>false</default>
+                <label>Closed - No Follow-up Needed</label>
+            </value>
+            <value>
+                <fullName>Closed - Realtor/Lock Box Request</fullName>
+                <default>false</default>
+                <label>Closed - Realtor/Lock Box Request</label>
+            </value>
+            <value>
+                <fullName>Closed - Duplicate Lead</fullName>
+                <default>false</default>
+                <label>Closed - Duplicate Lead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

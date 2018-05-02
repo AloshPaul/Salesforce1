@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GL_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>GL Code</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1260100 - Rehab Other</fullName>
+                <default>false</default>
+                <label>1260100 - Rehab Other</label>
+            </value>
+            <value>
+                <fullName>1260125 - Rehab Demo/Waste</fullName>
+                <default>false</default>
+                <label>1260125 - Rehab Demo/Waste</label>
+            </value>
+            <value>
+                <fullName>1260140 - Rehab Pests/Termites</fullName>
+                <default>false</default>
+                <label>1260140 - Rehab Pests/Termites</label>
+            </value>
+            <value>
+                <fullName>1260150 - Rehab Cleaning</fullName>
+                <default>false</default>
+                <label>1260150 - Rehab Cleaning</label>
+            </value>
+            <value>
+                <fullName>1260175 - Rehab Initial Re-Key</fullName>
+                <default>false</default>
+                <label>1260175 - Rehab Initial Re-Key</label>
+            </value>
+            <value>
+                <fullName>1260200 - Rehab General Contractor</fullName>
+                <default>false</default>
+                <label>1260200 - Rehab General Contractor</label>
+            </value>
+            <value>
+                <fullName>1260210 - Rehab GC Change Order</fullName>
+                <default>false</default>
+                <label>1260210 - Rehab GC Change Order</label>
+            </value>
+            <value>
+                <fullName>1260300 - Rehab Roofs</fullName>
+                <default>false</default>
+                <label>1260300 - Rehab Roofs</label>
+            </value>
+            <value>
+                <fullName>1260325 - Rehab Garage and Garage Doors</fullName>
+                <default>false</default>
+                <label>1260325 - Rehab Garage and Garage Doors</label>
+            </value>
+            <value>
+                <fullName>1260350 - Rehab Exterior Surfaces</fullName>
+                <default>false</default>
+                <label>1260350 - Rehab Exterior Surfaces</label>
+            </value>
+            <value>
+                <fullName>1260375 - Rehab Sidewalks/Driveways</fullName>
+                <default>false</default>
+                <label>1260375 - Rehab Sidewalks/Driveways</label>
+            </value>
+            <value>
+                <fullName>1260400 - Rehab Cabinets</fullName>
+                <default>false</default>
+                <label>1260400 - Rehab Cabinets</label>
+            </value>
+            <value>
+                <fullName>1260425 - Rehab Interior Painting</fullName>
+                <default>false</default>
+                <label>1260425 - Rehab Interior Painting</label>
+            </value>
+            <value>
+                <fullName>1260450 - Rehab Flooring</fullName>
+                <default>false</default>
+                <label>1260450 - Rehab Flooring</label>
+            </value>
+            <value>
+                <fullName>1260475 - Rehab Door/Window Costs</fullName>
+                <default>false</default>
+                <label>1260475 - Rehab Door/Window Costs</label>
+            </value>
+            <value>
+                <fullName>1260480 - Rehab Blinds</fullName>
+                <default>false</default>
+                <label>1260480 - Rehab Blinds</label>
+            </value>
+            <value>
+                <fullName>1260500 - Rehab Countertops</fullName>
+                <default>false</default>
+                <label>1260500 - Rehab Countertops</label>
+            </value>
+            <value>
+                <fullName>1260600 - Rehab Landscape</fullName>
+                <default>false</default>
+                <label>1260600 - Rehab Landscape</label>
+            </value>
+            <value>
+                <fullName>1260700 - Rehab Pool Service Fees</fullName>
+                <default>false</default>
+                <label>1260700 - Rehab Pool Service Fees</label>
+            </value>
+            <value>
+                <fullName>1260710 - Rehab Pool Maintenance Costs</fullName>
+                <default>false</default>
+                <label>1260710 - Rehab Pool Maintenance Costs</label>
+            </value>
+            <value>
+                <fullName>1260800 - Rehab Appliances</fullName>
+                <default>false</default>
+                <label>1260800 - Rehab Appliances</label>
+            </value>
+            <value>
+                <fullName>1260825 - Rehab Specialty Electric</fullName>
+                <default>false</default>
+                <label>1260825 - Rehab Specialty Electric</label>
+            </value>
+            <value>
+                <fullName>1260850 - Rehab Specialty Plumbing</fullName>
+                <default>false</default>
+                <label>1260850 - Rehab Specialty Plumbing</label>
+            </value>
+            <value>
+                <fullName>1260900 - Rehab HVAC</fullName>
+                <default>false</default>
+                <label>1260900 - Rehab HVAC</label>
+            </value>
+            <value>
+                <fullName>1260910 - Rehab Utilities</fullName>
+                <default>false</default>
+                <label>1260910 - Rehab Utilities</label>
+            </value>
+            <value>
+                <fullName>1260915 - Rehab Utilities Prior Ownership</fullName>
+                <default>false</default>
+                <label>1260915 - Rehab Utilities Prior Ownership</label>
+            </value>
+            <value>
+                <fullName>1261000 - Rehab Capitalized Insurance</fullName>
+                <default>false</default>
+                <label>1261000 - Rehab Capitalized Insurance</label>
+            </value>
+            <value>
+                <fullName>1261100 - Rehab Capitalized Tax</fullName>
+                <default>false</default>
+                <label>1261100 - Rehab Capitalized Tax</label>
+            </value>
+            <value>
+                <fullName>1261200 - Rehab Capitalized Interest</fullName>
+                <default>false</default>
+                <label>1261200 - Rehab Capitalized Interest</label>
+            </value>
+            <value>
+                <fullName>1261300 - Rehab Capitalized HOA</fullName>
+                <default>false</default>
+                <label>1261300 - Rehab Capitalized HOA</label>
+            </value>
+            <value>
+                <fullName>1261400 - Rehab Capitalized Accrued Costs</fullName>
+                <default>false</default>
+                <label>1261400 - Rehab Capitalized Accrued Costs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

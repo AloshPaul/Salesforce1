@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Securitized_S1_Properties</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Property_Street1__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Reporting_Date__c</columns>
+    <columns>Acquisition_Status__c</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Yardi_Code_Historical__c</columns>
+    <columns>Owner_Entity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Securitization_Pool__c</field>
+        <operation>equals</operation>
+        <value>01</value>
+    </filters>
+    <label>Securitized (S1) Properties</label>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_Only_Record_Type</fullName>
+    <active>true</active>
+    <description>Validation execute when status is closed and record is Read-Only.</description>
+    <errorConditionFormula>AND(
+     OR(
+       RecordType.DeveloperName = "Read_Only_IH_Delinquency",
+       RecordType.DeveloperName = "Read_Only_IH_Violation",
+       RecordType.DeveloperName = "Read_Only_Occupant_Violation"
+     ),
+     ISCHANGED(Source__c),
+     $Profile.Name &lt;> 'System Administrator' 
+)</errorConditionFormula>
+    <errorMessage>A violation that is in closed should not be reopened. Please create a new Violation. If this is closed by mistake, please open an concierge ticket with relevant reasoning to reopen this record.</errorMessage>
+</ValidationRule>

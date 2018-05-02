@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Agent</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Email Agent</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/14.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/14.0/apex.js")} 
+var calltoUpdate = new sforce.SObject('Listing__c'); 
+calltoUpdate.Id = '{!Listing__c.Id}'; 
+var today = new Date(); 
+calltoUpdate.Date_Time_Notified__c = sforce.internal.dateTimeToString(today); 
+
+var result = sforce.connection.update([calltoUpdate]); 
+location.replace('_ui/core/email/author/EmailAuthor?p2_lkid={!Listing__c.Listing_Agent__c}&amp;rtype=003&amp;p3_lkid={!Listing__c.Id}&amp;rtype=003&amp;p24={!Listing__c.Listing_Agent_Email__c}&amp;retURL=/{!Listing__c.Id}&amp;template_id=00Xc0000000M6FC&amp;p5=')</url>
+</WebLink>

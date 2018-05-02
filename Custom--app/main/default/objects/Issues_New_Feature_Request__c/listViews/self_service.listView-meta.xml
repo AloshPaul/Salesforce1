@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>self_service</fullName>
+    <columns>NAME</columns>
+    <columns>Task_Name__c</columns>
+    <columns>Short_Description__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Reviewer__c</columns>
+    <columns>Severity__c</columns>
+    <columns>Status__c</columns>
+    <columns>System_Category__c</columns>
+    <columns>Date_Submitted_for_Review__c</columns>
+    <columns>Required_Completion_Date__c</columns>
+    <columns>Date_Completed__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Self-Service</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>self service</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

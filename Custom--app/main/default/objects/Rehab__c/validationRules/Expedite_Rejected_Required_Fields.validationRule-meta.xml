@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expedite_Rejected_Required_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>IsPickVal(Expedite_Status__c , "Rejected" )
+         &amp;&amp; 
+         (
+             isBlank( Earliest_Move_In_Date__c )  ||
+             (
+                Expedite_Notes__c  =null ||                      Len( Expedite_Notes__c )=0))</errorConditionFormula>
+    <errorMessage>An Earliest Move-in Date and Expedite Notes are required when a request is rejected.</errorMessage>
+</ValidationRule>

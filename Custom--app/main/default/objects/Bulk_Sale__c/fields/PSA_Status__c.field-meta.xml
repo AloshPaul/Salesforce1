@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PSA_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>PSA Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sent to Buyer</fullName>
+                <default>false</default>
+                <label>Sent to Buyer</label>
+            </value>
+            <value>
+                <fullName>Awaiting from Seller</fullName>
+                <default>false</default>
+                <label>Awaiting from Seller</label>
+            </value>
+            <value>
+                <fullName>Executed</fullName>
+                <default>false</default>
+                <label>Executed</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

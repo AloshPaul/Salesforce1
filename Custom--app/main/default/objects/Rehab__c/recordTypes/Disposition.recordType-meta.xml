@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition</fullName>
+    <active>true</active>
+    <description>Used for Rehab Disposition</description>
+    <label>Disposition</label>
+    <picklistValues>
+        <picklist>Complete__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expedite_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Final_Inspection_Status__c</picklist>
+        <values>
+            <fullName>Fail - Final Inspection %23 2 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fail - Final Inspection %23 3 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fail - Final Inspection %23 4 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fail - Final Inspection %23 5 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fail - Final Inspection %23 6 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Inspection %23 1 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pass</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GC_Score__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Key_Transfer_Location_Old__c</picklist>
+        <values>
+            <fullName>Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Milestones__c</picklist>
+        <values>
+            <fullName>5-day Inspection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appliances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Before Photos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blinds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budget Revised</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cabinets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carpet Cleaning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concrete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Countertops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Garage door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glass%2FWindow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HVAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landscape</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Sign-off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pest Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plumbing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power on</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Pass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Key</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roofing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supervisor Sign-off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tile %2F Wood Ordered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trash Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tub%2FSurround Refinishers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water on</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Obsolete_Electricity_Status__c</picklist>
+        <values>
+            <fullName>Confirmed On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Action Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Obsolete_Gas_Status__c</picklist>
+        <values>
+            <fullName>Confirmed On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Action Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Obsolete_Water_Status__c</picklist>
+        <values>
+            <fullName>Confirmed On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Action Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pool_Buried__c</picklist>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rental_Inspection_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rental_Inspection_Status__c</picklist>
+        <values>
+            <fullName>Pass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Inspection %231 Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Inspection %232 Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Inspection %232 Scheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sewer_Septic__c</picklist>
+        <values>
+            <fullName>Septic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sewer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>2 Day Walk Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budget%2FDepo Finalized%2FNeeds Vendors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - No Rehab Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Inspection Pass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Five Day Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Front-End Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC Awarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - BK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Deed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Notification Revoked%2FCancel Utility Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Occupied%2FTIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Pending Budget Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Permits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Personal Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Sell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOLD - Utilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move Out Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move Out Complete%2FNeeds Final Budget</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Move Out Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Final Budget</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs GC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Vendors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notification Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-key Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-key Ready</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Ready to Schedule MOI%2FUtility Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Locksmith</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Green</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yellow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Turn_Type__c</picklist>
+        <values>
+            <fullName>Early Termination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eviction%2FSkip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remediation Turn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Turn</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Disposition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post Acquisition %E2%80%93 Purchased Rented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-Acquisition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remediation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turn</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Finalized_requires_GC_Contact</fullName>
+    <active>true</active>
+    <description>PTL Finalized requires GC Contact</description>
+    <errorConditionFormula>Send_PTL_to_GC__c  = TRUE
+&amp;&amp;
+Contact__c  =null &amp;&amp; 
+$Profile.Name &lt;> "System Administrator"</errorConditionFormula>
+    <errorMessage>PTL Finalized requires GC Contact.</errorMessage>
+</ValidationRule>

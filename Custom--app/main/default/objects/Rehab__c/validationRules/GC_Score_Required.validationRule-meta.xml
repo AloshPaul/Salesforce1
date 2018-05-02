@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC_Score_Required</fullName>
+    <active>false</active>
+    <description>Deactivated 10/29/2013 per Adam Love and Aaron Stone.
+Required when there is an office sign off date past 4/15/13</description>
+    <errorConditionFormula>QC_Pass_Date__c >= DATE(2013,04,15) &amp;&amp; ISPICKVAL( GC_Score__c , "")</errorConditionFormula>
+    <errorDisplayField>GC_Score__c</errorDisplayField>
+    <errorMessage>Required when there is an office sign off date past 4/15/13</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Start_Date_App_Tracker__c</fullName>
+    <description>Lease Start Date from  Application tracking of Listing</description>
+    <externalId>false</externalId>
+    <label>Lease Start Date(App Tracker)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

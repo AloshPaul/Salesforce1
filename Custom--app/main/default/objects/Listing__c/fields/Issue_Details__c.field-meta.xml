@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Details__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field to describe any outstanding Rehab or Service items that need to be addressed or that are wish list items.  This information will be sent to Portfolio Manager to determine appropriate action items.</inlineHelpText>
+    <label>Issue Details</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Spend_Total__c</fullName>
+        <description>This field will populate from the Property Invoice Object by GL Code</description>
+        <externalId>false</externalId>
+        <label>Actual Spend Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Base_Budget_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Base Budget Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Base_Budget_Reported_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Budget Reported Timestamp</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Changes_To_Budget__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Changes To Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Original__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>GL Code</label>
+        <referenceTo>GL_Code__c</referenceTo>
+        <relationshipLabel>Rehab Projected Spends</relationshipLabel>
+        <relationshipName>Rehab_Projected_Spends</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Type_Adjusted__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ISNULL(Rehab__c)) , 
+      IF( ISPICKVAL( Rehab__r.Type__c, &apos;Post-Acquisition&apos; ), 
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Acquisition__c ) 
+                      , GL_Code_Original__r.Name, 
+                      GL_Code_Original__r.GL_Code_Acquisition__r.Name 
+          ),
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Turn__c ) , 
+                      GL_Code_Original__r.Name,  
+                      GL_Code_Original__r.GL_Code_Turn__r.Name ) 
+        ),
+      IF( OR( ISPICKVAL( HD_Budget_Walk__r.Type__c, &apos;Pre-Acquisitions&apos; ),
+              ISPICKVAL( HD_Budget_Walk__r.Type__c, &apos;Post-Acquisitions&apos; ) ),   
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Acquisition__c ) 
+                      , GL_Code_Original__r.Name, 
+                      GL_Code_Original__r.GL_Code_Acquisition__r.Name 
+          ),
+          IF( ISBLANK( GL_Code_Original__r.GL_Code_Turn__c ) , 
+                      GL_Code_Original__r.Name,  
+                      GL_Code_Original__r.GL_Code_Turn__r.Name )
+        )
+    )</formula>
+        <label>GL Code Type Adjusted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Obsolete GL Code</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HD_Budget_Walk__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>HD Budget Walk</label>
+        <referenceTo>HD_Budget_Walk__c</referenceTo>
+        <relationshipLabel>Rehab Projected Spends</relationshipLabel>
+        <relationshipName>Rehab_Projected_Spends</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Vs_Total_Revised_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rehab__r.Budget_Revised__c -  Running_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Line Item Vs Total Revised Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>RPS_Form__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/apex/RehabProjectedSpend?id=&apos;+Rehab__c , &apos;View/Edit&apos;)</formula>
+        <label>RPS Form</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RehabPlusGL__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rehab__r.Name + &apos; &apos; + GL_Code__c</formula>
+        <label>RehabPlusGL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipLabel>Rehab Projected Spends</relationshipLabel>
+        <relationshipName>Rehab_Projected_Spends</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Revised_Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Revised Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Running_Total__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Running Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Seasonal_Item__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Seasonal Item</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selected_Bid_Total__c</fullName>
+        <description>From the Change Order - this will pull in based on the &quot;Selected Bid&quot; checkbox and the amount</description>
+        <externalId>false</externalId>
+        <label>Selected Bid Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Variance_Actual_Spend_to_Base_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_Spend_Total__c -  Base_Budget_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>V Actual to Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Variance_Actual_Spend_to_Running_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_Spend_Total__c -  Running_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>V Actual to Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Variance_Actual_Spend_to_Selected_Bid__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_Spend_Total__c -  Selected_Bid_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>V Actual to Bid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Variance_Selected_Bid_to_Base_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>Selected_Bid_Total__c -  Base_Budget_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>V Bid to Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Rehab Projected Spend</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Rehab__c</columns>
+        <columns>HD_Budget_Walk__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Rehab_Association</fullName>
+        <columns>NAME</columns>
+        <columns>Rehab__c</columns>
+        <columns>HD_Budget_Walk__c</columns>
+        <columns>GL_Code_Original__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Base_Budget_Amount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>HD_Budget_Walk__c</field>
+            <operation>equals</operation>
+            <value>BW-053379</value>
+        </filters>
+        <label>Rehab Association</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>RPS-{00000000}</displayFormat>
+        <label>RPS Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Rehab Projected Spends</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>VR_Validate_Created_After_8_21</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( 
+	$Profile.Name != &apos;API User&apos;, 
+	ISNEW(), 
+	TODAY()
+	&gt; 
+	DATE(
+		VALUE($Label.Do_Not_Change_RTM_Sprint3_Year), 
+		VALUE($Label.Do_Not_Change_RTM_Sprint3_Month), 
+		VALUE($Label.Do_Not_Change_RTM_Sprint3_Day) 
+	),
+	OR(
+		ISBLANK(Rehab__c),
+		NOT(CONTAINS(Rehab__r.Rehab_Status__c, &apos;In Process&apos;)),
+		ISBLANK(Rehab__r.HD_Budget_Walk__c),
+		ISNULL(Rehab__r.HD_Budget_Walk__r.Submit_Date__c),
+		DATEVALUE(Rehab__r.HD_Budget_Walk__r.Submit_Date__c)
+		&gt; 
+		DATE(
+			VALUE($Label.Do_Not_Change_RTM_Sprint3_Year), 
+			VALUE($Label.Do_Not_Change_RTM_Sprint3_Month), 
+			VALUE($Label.Do_Not_Change_RTM_Sprint3_Day) 
+		)
+	)
+)</errorConditionFormula>
+        <errorMessage>Insufficient privileges to create the rehab projected spend.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VR_Validate_Created_Update</fullName>
+        <active>true</active>
+        <description>Validation rule for D-00014800 to stop any new Rehab Projected Spend to be created or existing Rehab Projected Spend to be updated.</description>
+        <errorConditionFormula>True</errorConditionFormula>
+        <errorMessage>Insufficient privileges to create or update the rehab projected spend.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Rehab_Projected_Spend_Form</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Rehab Projected Spend Form</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/RehabProjectedSpend?id={!Rehab_Projected_Spend__c.RehabId__c}</url>
+    </webLinks>
+</CustomObject>

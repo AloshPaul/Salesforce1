@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_price_should_match_closing</fullName>
+    <active>false</active>
+    <description>Closing_Statement_Contract_Price__c should be equal to Contract_Price_After_Reduction__c</description>
+    <errorConditionFormula>And(
+				doDirectorClosingApproval__c = true,
+				Closing_Statement_Contract_Price__c != Contract_Price_After_Reduction__c
+)</errorConditionFormula>
+    <errorMessage>Closing Contract Price should equal to Contract Price after reduction</errorMessage>
+</ValidationRule>

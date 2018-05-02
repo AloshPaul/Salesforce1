@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Term_Lease_Expiration_Reason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The "Lease Terminated (Eviction/Skip)" Status should only be selected in circumstances where the property was vacated prior to lease expiration and consequently did not have an opportunity to renew.  If you select this,  you must indicate the reason why.</inlineHelpText>
+    <label>Early Termination Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Renewal_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Early Lease Termination / Buy-Out</fullName>
+                <default>false</default>
+                <label>Early Lease Termination / Buy-Out</label>
+            </value>
+            <value>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+                <label>Eviction</label>
+            </value>
+            <value>
+                <fullName>Management Decision</fullName>
+                <default>false</default>
+                <label>Management Decision</label>
+            </value>
+            <value>
+                <fullName>Military Deployment</fullName>
+                <default>false</default>
+                <label>Military Deployment</label>
+            </value>
+            <value>
+                <fullName>Skip</fullName>
+                <default>false</default>
+                <label>Skip</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Lease Terminated (Eviction/Skip/Etc.)</controllingFieldValue>
+            <valueName>Early Lease Termination / Buy-Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lease Terminated (Eviction/Skip/Etc.)</controllingFieldValue>
+            <valueName>Eviction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lease Terminated (Eviction/Skip/Etc.)</controllingFieldValue>
+            <valueName>Management Decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lease Terminated (Eviction/Skip/Etc.)</controllingFieldValue>
+            <valueName>Military Deployment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lease Terminated (Eviction/Skip/Etc.)</controllingFieldValue>
+            <valueName>Skip</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lease Terminated (Eviction/Skip/Etc.)</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

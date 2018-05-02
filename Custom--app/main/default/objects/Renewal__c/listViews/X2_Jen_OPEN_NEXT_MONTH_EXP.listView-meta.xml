@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2_Jen_OPEN_NEXT_MONTH_EXP</fullName>
+    <booleanFilter>1 AND 2 and 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>Housing_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Variance_Current_to_New_Rent__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Resident_Intent__c</columns>
+    <columns>Renewal_Status_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>equals</operation>
+        <value>NEXT_MONTH</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>equals</operation>
+        <value>Liz Fossati</value>
+    </filters>
+    <filters>
+        <field>Renewal_Close_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>North Region - 2 - OPEN NEXT MONTH EXP</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Bug_Resolution_Required</fullName>
+    <active>true</active>
+    <description>Forces the resolution to be populated before moving it to "Fixed"</description>
+    <errorConditionFormula>OR(ISPICKVAL(Status__c, 'Fixed'), ISPICKVAL(Status__c,"4. Ready for QA")) &amp;&amp; ISBLANK(Resolution__c)</errorConditionFormula>
+    <errorMessage>Please enter a Resolution when marking as "Fixed" or "4. Ready for QA"</errorMessage>
+</ValidationRule>

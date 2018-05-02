@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_3_Result__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact 3 Result</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+                <label>Confirmed Vacant</label>
+            </value>
+            <value>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+                <label>Contacted Occupant</label>
+            </value>
+            <value>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+                <label>Posted Notice</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

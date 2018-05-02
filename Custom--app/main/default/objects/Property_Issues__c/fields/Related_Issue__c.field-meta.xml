@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Issue__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>For use only with Escalated Resident Issues (BH/IH).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If there is another Property Issue that is related to this one, associate it here.</inlineHelpText>
+    <label>Related Issue</label>
+    <referenceTo>Property_Issues__c</referenceTo>
+    <relationshipLabel>Property Issues</relationshipLabel>
+    <relationshipName>Property_Issues</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

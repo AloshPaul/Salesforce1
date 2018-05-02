@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GP_Square_Feet__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Square_Feet__c > 0 ,
+(IF(
+ Square_Feet__c  >= 1000000,
+TEXT(FLOOR(Square_Feet__c / 1000000)) &amp; ",",
+"") &amp;
+IF(Square_Feet__c >= 1000,
+RIGHT(TEXT(FLOOR(Square_Feet__c / 1000)), 3) &amp; ",",
+"") &amp;
+RIGHT(TEXT(FLOOR(Square_Feet__c)), 3)
+),'')</formula>
+    <label>Square Feet</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

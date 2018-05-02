@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DK_Complete_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Drivers should use this field to indicate when they have completed their work related to particular property, including entering all relevant information.</inlineHelpText>
+    <label>DK Complete Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

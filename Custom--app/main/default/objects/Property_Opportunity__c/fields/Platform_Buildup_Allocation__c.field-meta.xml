@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platform_Buildup_Allocation__c</fullName>
+    <description>Effective July 2014, Asset Mgmt. began rolling Acquisition Overhead, Initial Lease-Up Costs, and Rehab Overhead into Platform Build-Up Costs (or Allocation).  Refer to D-00013010 and its attached spreadsheet.</description>
+    <externalId>false</externalId>
+    <formula>If(NOT(ISNULL(Acquisition_Basis_Est_UW__c)) &amp;&amp; DATEVALUE(Prospect__r.CreatedDate) &lt; DATE(2017,2,1) &amp;&amp; IsConverted__c &amp;&amp; DATEVALUE(Acquisition_Reporting__r.CreatedDate) &lt; Date(2017,2,23),
+(Acquisition_Basis_Est_UW__c + Title_Policy_Cost_Est_UW__c + Other_Closing_Costs_Est_UW__c + Initial_Lease_up_Cost_Est_UW__c + CFK_Est_UW__c)
+*(CASE (Fund__c, '01', 0.0528,'02', 0.0485, '03', 0.0488, '04', 0.0461, '05', 0.0316, '06' , 0.0316 , 0.0316)), null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Platform Buildup Allocation</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

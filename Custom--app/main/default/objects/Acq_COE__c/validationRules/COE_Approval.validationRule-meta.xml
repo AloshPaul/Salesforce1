@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COE_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+								NOT(ISBLANK(Dir_IMG_COE_Approval_Date__c)),
+        ISCHANGED(COE_Amount__c)
+								)</errorConditionFormula>
+    <errorMessage>COE Amount cannot be changed after approval</errorMessage>
+</ValidationRule>

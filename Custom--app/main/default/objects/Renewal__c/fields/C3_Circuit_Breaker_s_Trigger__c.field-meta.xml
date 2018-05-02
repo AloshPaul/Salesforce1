@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C3_Circuit_Breaker_s_Trigger__c</fullName>
+    <externalId>false</externalId>
+    <label>C3 Circuit Breaker(s) Trigger</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SQFT</fullName>
+                <default>false</default>
+                <label>SQFT</label>
+            </value>
+            <value>
+                <fullName>BATH</fullName>
+                <default>false</default>
+                <label>BATH</label>
+            </value>
+            <value>
+                <fullName>BEDROOMS</fullName>
+                <default>false</default>
+                <label>BEDROOMS</label>
+            </value>
+            <value>
+                <fullName>RADIUS</fullName>
+                <default>false</default>
+                <label>RADIUS</label>
+            </value>
+            <value>
+                <fullName>LIST DATE</fullName>
+                <default>false</default>
+                <label>LIST DATE</label>
+            </value>
+            <value>
+                <fullName>DOM</fullName>
+                <default>false</default>
+                <label>DOM</label>
+            </value>
+            <value>
+                <fullName>BR</fullName>
+                <default>false</default>
+                <label>BR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

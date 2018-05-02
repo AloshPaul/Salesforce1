@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rent_Exception</fullName>
+    <active>true</active>
+    <description>Use when the initial asking rent is outside the standard guidelines and requires exception approval</description>
+    <label>Asking Rent Exception</label>
+    <picklistValues>
+        <picklist>Offer_Status__c</picklist>
+        <values>
+            <fullName>Accept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Counter Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Offer_Type__c</picklist>
+        <values>
+            <fullName>Rehab Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Adjustment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RP_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

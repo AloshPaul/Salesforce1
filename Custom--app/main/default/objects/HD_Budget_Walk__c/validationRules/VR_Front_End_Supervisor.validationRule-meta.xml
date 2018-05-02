@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Front_End_Supervisor</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(  Send_to_Nitro__c , OR(ISNULL(Walk_Supervisor__c), ISBLANK(Walk_Supervisor__c) ) )</errorConditionFormula>
+    <errorDisplayField>Walk_Supervisor__c</errorDisplayField>
+    <errorMessage>Budget Walk Front End Supervisor is required to Send to Nitro.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>requiredField_Picklist</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Broker_Offer_Status__c, 'Accepted'), 
+OR( 
+    ISNULL(Accepted_Contract_Price__c), 
+    ISNULL(Accepted_Contract_Date__c), 
+    ISBLANK(Broker_Contract_Comments__c),
+    ISNULL(Escrow_Amount__c)
+
+) 
+)</errorConditionFormula>
+    <errorMessage>Please fill in the IH Offer approval details</errorMessage>
+</ValidationRule>

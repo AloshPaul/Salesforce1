@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>Assigned to 3rd Party Vendor</fullName>
+                <default>false</default>
+                <label>Assigned to 3rd Party Vendor</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+                <label>Follow Up</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Pending Client</fullName>
+                <default>false</default>
+                <label>Pending Client</label>
+            </value>
+            <value>
+                <fullName>Pending IT Fix</fullName>
+                <default>false</default>
+                <label>Pending IT Fix</label>
+            </value>
+            <value>
+                <fullName>Pending 3rd Party Vendor</fullName>
+                <default>false</default>
+                <label>Pending 3rd Party Vendor</label>
+            </value>
+            <value>
+                <fullName>Pending Deployment</fullName>
+                <default>false</default>
+                <label>Pending Deployment</label>
+            </value>
+            <value>
+                <fullName>Pending Licenses</fullName>
+                <default>false</default>
+                <label>Pending Licenses</label>
+            </value>
+            <value>
+                <fullName>Pending Equipment</fullName>
+                <default>false</default>
+                <label>Pending Equipment</label>
+            </value>
+            <value>
+                <fullName>Under Review</fullName>
+                <default>false</default>
+                <label>Under Review</label>
+            </value>
+            <value>
+                <fullName>Hold</fullName>
+                <default>false</default>
+                <label>Hold</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Closed - No Response</fullName>
+                <default>false</default>
+                <label>Closed - No Response</label>
+            </value>
+            <value>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <label>Deferred</label>
+            </value>
+            <value>
+                <fullName>Completed Accounting Incident</fullName>
+                <default>false</default>
+                <label>Completed Accounting Incident</label>
+            </value>
+            <value>
+                <fullName>Completed Successfully</fullName>
+                <default>false</default>
+                <label>Completed Successfully</label>
+            </value>
+            <value>
+                <fullName>Completed Late Request</fullName>
+                <default>false</default>
+                <label>Completed Late Request</label>
+            </value>
+            <value>
+                <fullName>Rejected - Inadequate Approval</fullName>
+                <default>false</default>
+                <label>Rejected - Inadequate Approval</label>
+            </value>
+            <value>
+                <fullName>Rejected - Incomplete Info</fullName>
+                <default>false</default>
+                <label>Rejected - Incomplete Info</label>
+            </value>
+            <value>
+                <fullName>Rejected - Incorrectly Filled Out</fullName>
+                <default>false</default>
+                <label>Rejected - Incorrectly Filled Out</label>
+            </value>
+            <value>
+                <fullName>Rejected - Missing Appropriate Signature</fullName>
+                <default>false</default>
+                <label>Rejected - Missing Appropriate Signature</label>
+            </value>
+            <value>
+                <fullName>Review Needed</fullName>
+                <default>false</default>
+                <label>Review Needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

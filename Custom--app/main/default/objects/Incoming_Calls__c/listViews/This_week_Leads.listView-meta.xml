@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>This_week_Leads</fullName>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Region__c</columns>
+    <columns>NAME</columns>
+    <columns>Date_Time__c</columns>
+    <columns>Lead_Channel__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Message__c</columns>
+    <columns>Lead_Status__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Agent_Lead_Status__c</columns>
+    <columns>Assigned_Agent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date_Time__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Los Angeles,Inland Empire</value>
+    </filters>
+    <label>*This Week's Leads LA</label>
+</ListView>

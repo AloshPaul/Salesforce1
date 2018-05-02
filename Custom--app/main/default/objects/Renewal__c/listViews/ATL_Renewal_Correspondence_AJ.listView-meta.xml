@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Renewal_Correspondence_AJ</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 and 7 and 8 and 9</booleanFilter>
+    <columns>Lease_End_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Phone_Primary__c</columns>
+    <columns>Resident_Phone_Secondary__c</columns>
+    <columns>Comments_for_Coordinator__c</columns>
+    <columns>Alert_Coordinator__c</columns>
+    <columns>Total_Rent__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Resident_Intent__c</columns>
+    <columns>Renewal_Status_Comments__c</columns>
+    <columns>First_Contact_Notice_Sent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>9/30/2017</value>
+    </filters>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>TIP_Formula__c</field>
+        <operation>equals</operation>
+        <value>IH Lease</value>
+    </filters>
+    <filters>
+        <field>Bad_Data__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>contains</operation>
+        <value>Ashlee Johnson</value>
+    </filters>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>8/31/2017</value>
+    </filters>
+    <filters>
+        <field>Alert_Coordinator__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OBJECT_ID</field>
+        <operation>equals</operation>
+    </filters>
+    <label>ATL- Renewal Correspondence- AJ</label>
+    <sharedTo>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

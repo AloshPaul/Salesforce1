@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Residences_w_HOA_s_but_marked_no</fullName>
+    <columns>NAME</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Region__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>HOA_Primary__c</columns>
+    <columns>HOA_Parent__c</columns>
+    <columns>HOA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>HOA_Options__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>HOA_Primary__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Inland Empire</value>
+    </filters>
+    <label>Residences Needing HOA Info</label>
+    <sharedTo>
+        <role>Team_Member_Inland_Empire</role>
+    </sharedTo>
+</ListView>

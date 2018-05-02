@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Complaint Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Complaint - Section 8</fullName>
+                <default>false</default>
+                <label>Complaint - Section 8</label>
+            </value>
+            <value>
+                <fullName>Complaint - BBB</fullName>
+                <default>false</default>
+                <label>Complaint - BBB</label>
+            </value>
+            <value>
+                <fullName>Question or Inquiry</fullName>
+                <default>false</default>
+                <label>Question or Inquiry</label>
+            </value>
+            <value>
+                <fullName>Compliment</fullName>
+                <default>false</default>
+                <label>Compliment</label>
+            </value>
+            <value>
+                <fullName>Survey</fullName>
+                <default>false</default>
+                <label>Survey</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

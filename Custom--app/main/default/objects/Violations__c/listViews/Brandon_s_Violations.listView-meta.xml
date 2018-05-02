@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brandon_s_Violations</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>NAME</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Source__c</columns>
+    <columns>Type__c</columns>
+    <columns>Violation_Description__c</columns>
+    <columns>Date_of_Required_Compliance__c</columns>
+    <columns>of_Days_Open__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Assigned_IH_Associate__c</field>
+        <operation>equals</operation>
+        <value>Brandon Wooliver</value>
+    </filters>
+    <label>* Brandon's Violations</label>
+    <sharedTo>
+        <role>Team_Member_Inland_Empire</role>
+    </sharedTo>
+</ListView>

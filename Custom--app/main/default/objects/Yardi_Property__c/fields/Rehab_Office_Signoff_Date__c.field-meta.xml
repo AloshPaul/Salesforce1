@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Office_Signoff_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(  Property__r.Residence__r.Most_Recent_Post_Acq_Rehab__r.Stage__c, 'Closed - Cancelled'), null, Property__r.Residence__r.Most_Recent_Post_Acq_Rehab__r.Office_Signoff_Date__c)</formula>
+    <label>Rehab Office Signoff Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

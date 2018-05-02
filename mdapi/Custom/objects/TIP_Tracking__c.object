@@ -1,0 +1,3817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is the primary object in the TIP deployment.  Tracks status and workflow for all TIP properties.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Aband_Property_Notice_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Abandoned_Prop_Notice_Date__c  +  Aband_Property_Statutory_Notice_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field will be auto-calculated based on the notice date and the days entered into the statutory notice box.</inlineHelpText>
+        <label>Aband. Prop Notice End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Aband_Property_Statutory_Notice_Days__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the statutory notice period required for abandoned property for your region and/or for the particular circumstances related to this property.  This field will allow us to auto-calculate the date when the notice period is over.</inlineHelpText>
+        <label>Aband. Prop Notice Required (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Abandoned_Prop_Notice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Aband. Prop Notice Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Abandoned_Property__c</fullName>
+        <externalId>false</externalId>
+        <label>Abandoned Property</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Removed</fullName>
+                    <default>false</default>
+                    <label>Removed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Acq_Reporting_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Reporting_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Acq. Reporting Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Acquisition_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Acquisition Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Acquisition_Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Acquisition Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active_Military_Status_Verified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Military Status Verified</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>App_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>App Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Application_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Received</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BK_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.BK_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BK Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Backyard__c</fullName>
+        <externalId>false</externalId>
+        <label>Backyard</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Locked</fullName>
+                    <default>false</default>
+                    <label>Locked</label>
+                </value>
+                <value>
+                    <fullName>Nothing Visible</fullName>
+                    <default>false</default>
+                    <label>Nothing Visible</label>
+                </value>
+                <value>
+                    <fullName>Furniture Visibile</fullName>
+                    <default>false</default>
+                    <label>Furniture Visibile</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bid_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Bid_Type__c)</formula>
+        <label>Bid Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Budgeted_CFK__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Actual_Amount_Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Check Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Actual_Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Actual Move Out Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Agreed_Move_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Agreed Move Out Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Approved_Offer_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Approved Offer Amount ($)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Cashiers_Check_Rcvd_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Cashiers Check Rcvd Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Cashiers_Check_Rqst_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Cashiers Check Rqst Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Date_File_Handed_to_Driver__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Date File Handed to Driver</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Deal_Acceptance_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Deal Acceptance Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Details</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Driver_ReceivingCHeck__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Driver Receiving Check</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Indication_of_Interest_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Indication of Interest Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CFK_Offered_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Offered Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Paid_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Paid Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CFK_Payee_Occupant_W9__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Payee/Occupant (W9)</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Need Values</fullName>
+                    <default>false</default>
+                    <label>Need Values</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CFK_Unsuccessful_Negotiations__c</fullName>
+        <externalId>false</externalId>
+        <label>CFK Unsuccessful Negotiations</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact_2_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact 2 Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contact_2_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact 2 Result</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Confirmed Vacant</fullName>
+                    <default>false</default>
+                    <label>Confirmed Vacant</label>
+                </value>
+                <value>
+                    <fullName>Contacted Occupant</fullName>
+                    <default>false</default>
+                    <label>Contacted Occupant</label>
+                </value>
+                <value>
+                    <fullName>Posted Notice</fullName>
+                    <default>false</default>
+                    <label>Posted Notice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_3_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact 3 Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Contact_3_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact 3 Result</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Confirmed Vacant</fullName>
+                    <default>false</default>
+                    <label>Confirmed Vacant</label>
+                </value>
+                <value>
+                    <fullName>Contacted Occupant</fullName>
+                    <default>false</default>
+                    <label>Contacted Occupant</label>
+                </value>
+                <value>
+                    <fullName>Posted Notice</fullName>
+                    <default>false</default>
+                    <label>Posted Notice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_Attempt_2_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Attempt 2 Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Attempt_2_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Attempt 2 Time</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Attempt_3_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Attempt 3 Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Attempt_3_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Attempt 3 Time</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Lease_Amt__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Lease Amt</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Lease__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Lease</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DK_Assigned_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>DK Assigned Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DK_Complete_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Drivers should use this field to indicate when they have completed their work related to particular property, including entering all relevant information.</inlineHelpText>
+        <label>DK Complete Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DK_Driver_Assigned__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>DK Driver Assigned</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TIPs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Data_Load_App_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a checkbox that we were not planning on having on the page but we have this data in the tracker so we are going to capture the data point.</inlineHelpText>
+        <label>Data Load - App Received</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Days_Initial_Knock_to_CFK_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <formula>CFK_Deal_Acceptance_Date__c - Initial_Contact_Date__c</formula>
+        <label># Days Initial Knock to CFK Agreement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Initial_Knock_to_CFK_Paid__c</fullName>
+        <externalId>false</externalId>
+        <formula>CFK_Paid_Date__c - Initial_Contact_Date__c</formula>
+        <label># Days Initial Knock to CFK Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deed_Received_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Deed_Received_Date__c</formula>
+        <inlineHelpText>This is the Unrecorded Deed Received Date from the affiliated Portfolio record.</inlineHelpText>
+        <label>Deed Received Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deed_Status_Notes__c</fullName>
+        <description>The field reflects the value in the Deed Status Notes field on Portfolio.</description>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Deed_Status_Notes__c</formula>
+        <inlineHelpText>The field reflects the value in the Deed Status Notes field on Portfolio, which has a 255 character limit that cannot be increased.</inlineHelpText>
+        <label>Deed Status Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deed_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Portfolio__r.Current_Deed_Status__c )</formula>
+        <label>Deed Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Driver_Assigned_to_Me__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( $User.Id =  DK_Driver_Assigned__r.Id , &apos;Yes&apos;, &apos;No&apos;)</formula>
+        <label>Driver Assigned to Me</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Driver_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Driver Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Electrical__c</fullName>
+        <externalId>false</externalId>
+        <label>Electric</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>On</fullName>
+                    <default>false</default>
+                    <label>On</label>
+                </value>
+                <value>
+                    <fullName>Off</fullName>
+                    <default>false</default>
+                    <label>Off</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Evict_Statutory_Notice_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Initial_Notice_Date__c + Evict_Statutory_Notice_Required__c</formula>
+        <inlineHelpText>This field will be auto-calculated based on the notice date and the days entered into the statutory notice box.</inlineHelpText>
+        <label>Evict Notice End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Evict_Statutory_Notice_Required__c</fullName>
+        <description>Enter the statutory notice period required for evictions for your region and/or for the particular circumstances related to this property. This field will allow us to auto-calculate the date when the notice period is over.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the statutory notice period required for evictions for your region and/or for the particular circumstances related to this property. This field will allow us to auto-calculate the date when the notice period is over.</inlineHelpText>
+        <label>Evict Notice Required (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Close Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Contact_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Contact Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Contact_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Contact Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Contact_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Contact Result</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Confirmed Vacant</fullName>
+                    <default>false</default>
+                    <label>Confirmed Vacant</label>
+                </value>
+                <value>
+                    <fullName>Contacted Occupant</fullName>
+                    <default>false</default>
+                    <label>Contacted Occupant</label>
+                </value>
+                <value>
+                    <fullName>Posted Notice</fullName>
+                    <default>false</default>
+                    <label>Posted Notice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Initial_Contact_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Contact Time</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Notice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Notice Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Paperwork__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Paperwork</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Strategy</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Rent to New Tenant</fullName>
+                    <default>false</default>
+                    <label>Rent to New Tenant</label>
+                </value>
+                <value>
+                    <fullName>Rent to Current Tenant</fullName>
+                    <default>false</default>
+                    <label>Rent to Current Tenant</label>
+                </value>
+                <value>
+                    <fullName>Purchased Rented</fullName>
+                    <default>false</default>
+                    <label>Purchased Rented</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lease_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Assumed</fullName>
+                    <default>false</default>
+                    <label>Assumed</label>
+                </value>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LegacyID__c</fullName>
+        <externalId>false</externalId>
+        <label>LegacyID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Market__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Military_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Military Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Veteran</fullName>
+                    <default>false</default>
+                    <label>Veteran</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Monthly_Rent_UW__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Exp_Gross_Monthly_Rent_UW__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monthly Rent @ UW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Actual__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This should be used for occupants that move out on their own accord without CFK or eviction process.</inlineHelpText>
+        <label>Move-Out Actual</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Move_Out_Verbal_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If the occupant indicates they will be vacating the property, what is the expected move out date?</inlineHelpText>
+        <label>Move-Out Verbal Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Neighbors__c</fullName>
+        <externalId>false</externalId>
+        <label>Neighbors</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Contact</fullName>
+                    <default>false</default>
+                    <label>No Contact</label>
+                </value>
+                <value>
+                    <fullName>Said Vacant</fullName>
+                    <default>false</default>
+                    <label>Said Vacant</label>
+                </value>
+                <value>
+                    <fullName>Said Occupied</fullName>
+                    <default>false</default>
+                    <label>Said Occupied</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>New_Lease_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Occupancy_Status_Acquisition__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Occupied_Status_Acquisition__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Occupancy Status @ Acquisition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupant_Intentions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This should reflect the driver&apos;s assessment based on contact with occupant.</inlineHelpText>
+        <label>Occupant Intentions</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cash for Keys</fullName>
+                    <default>false</default>
+                    <label>Cash for Keys</label>
+                </value>
+                <value>
+                    <fullName>Move Out</fullName>
+                    <default>false</default>
+                    <label>Move Out</label>
+                </value>
+                <value>
+                    <fullName>Stay</fullName>
+                    <default>false</default>
+                    <label>Stay</label>
+                </value>
+                <value>
+                    <fullName>Unsure</fullName>
+                    <default>false</default>
+                    <label>Unsure</label>
+                </value>
+                <value>
+                    <fullName>Evict</fullName>
+                    <default>false</default>
+                    <label>Evict</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Occupant_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupant Type</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Previous Home Owner (PHO)</fullName>
+                    <default>false</default>
+                    <label>Previous Home Owner (PHO)</label>
+                </value>
+                <value>
+                    <fullName>Tenant (TNT)</fullName>
+                    <default>false</default>
+                    <label>Tenant (TNT)</label>
+                </value>
+                <value>
+                    <fullName>Squatter</fullName>
+                    <default>false</default>
+                    <label>Squatter</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>true</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PM_Portfolio_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Owner:User.Full_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PM (Portfolio Manager)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Manager_Old__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please include first and last name.  When we deploy sf.com to the rest of the company, this field will change into a look-up and will support auto-alerts.</inlineHelpText>
+        <label>Portfolio Manager Old</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Owner:User.Full_Name__c</formula>
+        <inlineHelpText>This field auto-populates from the Owner field on the related Portfolio record.  If this field is blank, it is because the Owner is the Queue for the region.  Once the record is assigned to a person, this field will reflect that person&apos;s name.</inlineHelpText>
+        <label>Portfolio Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Portfolio__c</fullName>
+        <externalId>false</externalId>
+        <label>Portfolio</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipLabel>TIPs</relationshipLabel>
+        <relationshipName>TIPs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Code_Text__c</fullName>
+        <description>This field will be populated with the Property Code (Asset Number) via a workflow to ensure that this code can be accessed via search results.</description>
+        <externalId>true</externalId>
+        <label>Property Code (Text)</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Condition__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Condition</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Poor</fullName>
+                    <default>false</default>
+                    <label>Poor</label>
+                </value>
+                <value>
+                    <fullName>Fair</fullName>
+                    <default>false</default>
+                    <label>Fair</label>
+                </value>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Great</fullName>
+                    <default>false</default>
+                    <label>Great</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_County__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_County__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property County</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Cross_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Cross_Streets__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Cross Streets</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Street__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Property_Zip_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Rented_Confirmation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Purchase Rented Details</label>
+        <referenceTo>Purchase_Rented__c</referenceTo>
+        <relationshipLabel>TIPs</relationshipLabel>
+        <relationshipName>TIPs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recommend_Referral_to_Eviction_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Recommend Referral to Eviction Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Recommend_Referral_to_Eviction__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recommend Referral to Eviction</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Portfolio__r.Region__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Once you send click the &quot;Ready to Rekey&quot; button,  a rehab record will be created and will be linked here.  Conversely, if this property was originally sent to rehab and they sent it back to TIP, the original rehab record will be linked here.</inlineHelpText>
+        <label>Rehab Record</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipLabel>TIPs</relationshipLabel>
+        <relationshipName>Rehub_Relationship</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Residence__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Residence</label>
+        <referenceTo>Residence__c</referenceTo>
+        <relationshipLabel>TIPs</relationshipLabel>
+        <relationshipName>TIPs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Section_8_Lease__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Section 8 Lease</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Sent to Rehab Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Aging_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please update weekly with the latest status for aged TIPs.  Include the date and your name behind each new entry.</inlineHelpText>
+        <label>TIP Aging Comments</label>
+        <length>3000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TIP_Aging_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL( TIP_Type__c, &quot;Post-Acquisition&quot;), Acquisition_Date__c, DATEVALUE(CreatedDate))</formula>
+        <label>TIP Aging Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Aging_Test__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+OR( 
+BEGINS(TEXT(TIP_Status__c), &apos;TIP&apos;), 
+BEGINS(TEXT(TIP_Status__c), &apos;HOLD&apos;) 
+), 
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 14, &apos;1-14 Days (1-2 Weeks)&apos;, 
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 28, &apos;15-28 Days (3-4 Weeks)&apos;, 
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 42, &apos;29-42 Days (5-6 Weeks)&apos;, 
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 56, &apos;43-56 Days (7-8 Weeks)&apos;, 
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 70, &apos;57-70 Days (9-10 Weeks)&apos;, 
+IF(TODAY() - TIP_Aging_Start_Date__c &gt;= 71, &apos;71+ Days (11-12+ Weeks)&apos;, 
+NULL)))))), 
+
+IF(BEGINS(TEXT(TIP_Status__c), &apos;Closed&apos;), 
+IF(TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 14, &apos;1-14 Days (1-2 Weeks)&apos;, 
+IF(TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 28, &apos;15-28 Days (3-4 Weeks)&apos;, 
+IF(TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 42, &apos;29-42 Days (5-6 Weeks)&apos;, 
+IF(TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 56, &apos;43-56 Days (7-8 Weeks)&apos;, 
+IF(TIP_Closed_Date__c - DATEVALUE(CreatedDate) &lt;= 70, &apos;57-70 Days (9-10 Weeks)&apos;, 
+IF(TIP_Closed_Date__c - DATEVALUE(CreatedDate) &gt;= 71, &apos;71+ Days (11-12+ Weeks)&apos;, 
+NULL)))))), Null 
+) 
+
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>TIP Aging Test</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP_Aging__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR( 
+BEGINS(TEXT(TIP_Status__c), &apos;TIP&apos;), 
+BEGINS(TEXT(TIP_Status__c), &apos;HOLD&apos;) 
+),
+IF(TODAY() - TIP_Aging_Start_Date__c  &lt;= 14, &apos;1-14 Days (1-2 Weeks)&apos;,
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 28, &apos;15-28 Days (3-4 Weeks)&apos;,
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 42, &apos;29-42 Days (5-6 Weeks)&apos;,
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 56, &apos;43-56 Days (7-8 Weeks)&apos;,
+IF(TODAY() - TIP_Aging_Start_Date__c &lt;= 70, &apos;57-70 Days (9-10 Weeks)&apos;,
+IF(TODAY() - TIP_Aging_Start_Date__c &gt;= 71, &apos;71+ Days (11-12+ Weeks)&apos;,
+NULL)))))),
+
+IF(BEGINS(TEXT(TIP_Status__c), &apos;Closed&apos;), 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 14, &apos;1-14 Days (1-2 Weeks)&apos;, 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 28, &apos;15-28 Days (3-4 Weeks)&apos;, 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 42, &apos;29-42 Days (5-6 Weeks)&apos;, 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 56, &apos;43-56 Days (7-8 Weeks)&apos;, 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &lt;= 70, &apos;57-70 Days (9-10 Weeks)&apos;, 
+IF(TIP_Closed_Date__c  -  TIP_Aging_Start_Date__c &gt;= 71, &apos;71+ Days (11-12+ Weeks)&apos;, 
+NULL)))))), Null
+)
+
+)</formula>
+        <label>TIP Aging</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP_Closed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>TIP Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Comments_for_Rehab__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>These comments will be sent over to the Rehab record when you hit the &quot;Ready to Rekey button.&quot;</inlineHelpText>
+        <label>TIP Comments for Rehab</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Coordinator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TIP Coordinator</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TIPs1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Expected_New_Lease_Signing_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected New Lease Signing Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Leasing_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>TIP Leasing Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TIP_New_Lease_Negotation_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Negotation Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_New_Lease_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Signed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_New_Lease_Submitted_for_UW__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Submitted for UW</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_New_Lease_UW_Approved_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease UW Approved Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_New_Lease_UW_Rejected_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>TIP New Lease UW Rejected Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Notes_from_data_migration__c</fullName>
+        <externalId>false</externalId>
+        <label>TIP Notes from data migration</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TIP_Occupant_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupant Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP_Occupant_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupant Name(s)</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP_Occupant_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupant Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>TIP_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>TIP Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TIP - New (Needs Driver)</fullName>
+                    <default>true</default>
+                    <label>TIP - New (Needs Driver)</label>
+                </value>
+                <value>
+                    <fullName>TIP - Driver Assigned</fullName>
+                    <default>false</default>
+                    <label>TIP - Driver Assigned</label>
+                </value>
+                <value>
+                    <fullName>TIP - DK Initial Contact</fullName>
+                    <default>false</default>
+                    <label>TIP - DK Initial Contact</label>
+                </value>
+                <value>
+                    <fullName>TIP - Voluntary Move-Out</fullName>
+                    <default>false</default>
+                    <label>TIP - Voluntary Move-Out</label>
+                </value>
+                <value>
+                    <fullName>TIP - CFK Negotiations</fullName>
+                    <default>false</default>
+                    <label>TIP - CFK Negotiations</label>
+                </value>
+                <value>
+                    <fullName>TIP - Lease Negotiations</fullName>
+                    <default>false</default>
+                    <label>TIP - Lease Negotiations</label>
+                </value>
+                <value>
+                    <fullName>TIP - Eviction</fullName>
+                    <default>false</default>
+                    <label>TIP - Eviction</label>
+                </value>
+                <value>
+                    <fullName>Closed - Leased (Assumed)</fullName>
+                    <default>false</default>
+                    <label>Closed - Leased (Assumed)</label>
+                </value>
+                <value>
+                    <fullName>Closed - Leased (New)</fullName>
+                    <default>false</default>
+                    <label>Closed - Leased (New)</label>
+                </value>
+                <value>
+                    <fullName>Closed - Vacant</fullName>
+                    <default>false</default>
+                    <label>Closed - Vacant</label>
+                </value>
+                <value>
+                    <fullName>Closed  - Purchased Rented</fullName>
+                    <default>false</default>
+                    <label>Closed  - Purchased Rented</label>
+                </value>
+                <value>
+                    <fullName>Closed - Acq Cancelled</fullName>
+                    <default>false</default>
+                    <label>Closed - Acq Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Closed - For Sale/Disposition</fullName>
+                    <default>false</default>
+                    <label>Closed - For Sale/Disposition</label>
+                </value>
+                <value>
+                    <fullName>HOLD - Abd. Property Notice</fullName>
+                    <default>false</default>
+                    <label>HOLD - Abd. Property Notice</label>
+                </value>
+                <value>
+                    <fullName>HOLD - BK</fullName>
+                    <default>false</default>
+                    <label>HOLD - BK</label>
+                </value>
+                <value>
+                    <fullName>HOLD - Deed</fullName>
+                    <default>false</default>
+                    <label>HOLD - Deed</label>
+                </value>
+                <value>
+                    <fullName>HOLD - Limbo</fullName>
+                    <default>false</default>
+                    <label>HOLD - Limbo</label>
+                </value>
+                <value>
+                    <fullName>HOLD - Do Not Contact</fullName>
+                    <default>false</default>
+                    <label>HOLD - Do Not Contact</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TIP_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Remediation should only be used if a TIP was closed vacant, then a diff occupant, such as a squatter, moved into the property). Turn TIP should be selected if property has had a lease in place, then has a squatter occupy the property after the lease turn.</inlineHelpText>
+        <label>TIP Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Post-Acquisition</fullName>
+                    <default>true</default>
+                    <label>Post-Acquisition</label>
+                </value>
+                <value>
+                    <fullName>Remediation</fullName>
+                    <default>false</default>
+                    <label>Remediation</label>
+                </value>
+                <value>
+                    <fullName>Turn TIP</fullName>
+                    <default>false</default>
+                    <label>Turn TIP</label>
+                </value>
+                <value>
+                    <fullName>Disposition</fullName>
+                    <default>false</default>
+                    <label>Disposition</label>
+                </value>
+                <value>
+                    <fullName>Post Acquisition – Purchased Rented</fullName>
+                    <default>false</default>
+                    <label>Post Acquisition – Purchased Rented</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tip_Record_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Acquisition_Date__c =  TODAY() , 1, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tip Record Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trash_Cans__c</fullName>
+        <externalId>false</externalId>
+        <label>Trash Cans</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Empty</fullName>
+                    <default>false</default>
+                    <label>Empty</label>
+                </value>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>false</default>
+                    <label>Full</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unsuccessful_Neg_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Unsuccessful Lease Neg End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vacancy_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is required when the status is Closed - Vacant.</inlineHelpText>
+        <label>Vacancy Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>TIP_Status__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Vacant on Arrival</fullName>
+                    <default>false</default>
+                    <label>Vacant on Arrival</label>
+                </value>
+                <value>
+                    <fullName>Move-Out</fullName>
+                    <default>false</default>
+                    <label>Move-Out</label>
+                </value>
+                <value>
+                    <fullName>CFK</fullName>
+                    <default>false</default>
+                    <label>CFK</label>
+                </value>
+                <value>
+                    <fullName>Eviction</fullName>
+                    <default>false</default>
+                    <label>Eviction</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+                <valueName>Vacant on Arrival</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+                <valueName>Move-Out</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+                <valueName>CFK</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed - Vacant</controllingFieldValue>
+                <valueName>Eviction</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Water__c</fullName>
+        <externalId>false</externalId>
+        <label>Water</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>On</fullName>
+                    <default>false</default>
+                    <label>On</label>
+                </value>
+                <value>
+                    <fullName>Off</fullName>
+                    <default>false</default>
+                    <label>Off</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Welcome_Pack_Delivery_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Welcome Pack Delivery Method</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hand Delivered</fullName>
+                    <default>false</default>
+                    <label>Hand Delivered</label>
+                </value>
+                <value>
+                    <fullName>Left on Door</fullName>
+                    <default>false</default>
+                    <label>Left on Door</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Welcome_Packet_Delivered__c</fullName>
+        <externalId>false</externalId>
+        <label>Welcome Packet Delivered</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Windows__c</fullName>
+        <externalId>false</externalId>
+        <label>Windows</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Nothing Visible</fullName>
+                    <default>false</default>
+                    <label>Nothing Visible</label>
+                </value>
+                <value>
+                    <fullName>Furniture Visibile</fullName>
+                    <default>false</default>
+                    <label>Furniture Visibile</label>
+                </value>
+                <value>
+                    <fullName>Furniture Visible</fullName>
+                    <default>false</default>
+                    <label>Furniture Visible</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code_Historical__c</fullName>
+        <description>Supports the ability for the field to search on historical Yardi codes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This was the Yardi code associated with this asset prior to securitization.</inlineHelpText>
+        <label>Yardi Code - Historical</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code_Text__c</fullName>
+        <description>This field will be populated with the Yardi code via a workflow to ensure that the Yardi code can be accessed via search results.</description>
+        <externalId>true</externalId>
+        <label>Yardi Code (Text)</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Portfolio__r.Yardi_Property_Code__c</formula>
+        <label>Yardi Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>dataload_driver__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a temporary field that will be used to map the text field from the tracker.  Going forward, all drivers should be associated via the look-up field below.</inlineHelpText>
+        <label>Driver (text field from tracker)</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Days_in_TIP__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( TIP_Status__c , &quot;TIP - New (Needs Driver)&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;TIP - Driver Assigned&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;TIP - DK Initial Contact&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;TIP - Voluntary Move-Out&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;TIP - CFK Negotiations&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;TIP - Lease Negotiations&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;TIP - Eviction&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;Closed - Leased (Assumed)&quot;) ,   TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;Closed - Leased (New)&quot;) ,  TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;Closed - Vacant&quot;) , TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;Closed  - Purchase Rented&quot;) ,  TIP_Closed_Date__c-  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;Closed - Acq Cancelled&quot;) ,  TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;Closed - For Sale/Disposition&quot;) ,  TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;HOLD - Abd. Property Notice&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;HOLD - BK&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;HOLD - Deed&quot;) ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , &quot;HOLD - Limbo&quot;) ,  TODAY() -  Acquisition_Date__c , 
+null)))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Days in TIP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>TIP</label>
+    <listViews>
+        <fullName>All_Open_TIPs</fullName>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Property_City__c</columns>
+        <columns>Yardi_Code_Text__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>PM_Portfolio_Manager__c</columns>
+        <columns>TIP_Coordinator__c</columns>
+        <columns>Expected_Close_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Driver_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>TIP</value>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Open TIP: All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_TIPs</fullName>
+        <columns>NAME</columns>
+        <columns>TIP_Coordinator__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Code_Text__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>CFK_Status__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All TIPs</label>
+    </listViews>
+    <listViews>
+        <fullName>Drives_Assigned_to_Me_Active</fullName>
+        <columns>NAME</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Driver_Assigned_to_Me__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </filters>
+        <filters>
+            <field>DK_Complete_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>TIP</value>
+        </filters>
+        <label>Drives Assigned to Me (Active)</label>
+    </listViews>
+    <listViews>
+        <fullName>Drives_Assigned_to_Me_All</fullName>
+        <columns>NAME</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Driver_Assigned_to_Me__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </filters>
+        <label>Drives Assigned to Me (All)</label>
+    </listViews>
+    <listViews>
+        <fullName>Drives_Assigned_to_Me_Today</fullName>
+        <columns>NAME</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Driver_Assigned_to_Me__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </filters>
+        <filters>
+            <field>DK_Driver_Assigned__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Drives Assigned to Me Today</label>
+    </listViews>
+    <listViews>
+        <fullName>HOLDBK</fullName>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Acq_Reporting_Date__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>BK_Status__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>HOLD - BK</value>
+        </filters>
+        <label>TIP Status: HOLD - BK</label>
+    </listViews>
+    <listViews>
+        <fullName>HOLD_Aband_Prop</fullName>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Abandoned_Property__c</columns>
+        <columns>Abandoned_Prop_Notice_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>HOLD - Abd. Property Notice</value>
+        </filters>
+        <label>TIP Status: HOLD - Aband. Prop</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Needs_Driver</fullName>
+        <columns>NAME</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - New (Needs Driver)</value>
+        </filters>
+        <label>***TIP Status = New (Needs Driver)</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Needs_Expected_Close</fullName>
+        <booleanFilter>(1 or 2 )AND 3 AND 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>Expected_Close_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Voluntary Move-Out,TIP - CFK Negotiations,TIP - Lease Negotiations</value>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Eviction</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TIP_Tracking__c.Standard_TIP</value>
+        </filters>
+        <filters>
+            <field>Expected_Close_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Open TIP: Needs Expected Close Date</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_DK_Initial_Contact</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Initial_Contact_Result__c</columns>
+        <columns>Initial_Contact_Comments__c</columns>
+        <columns>Evict_Statutory_Notice_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - DK Initial Contact</value>
+        </filters>
+        <label>Open TIP: DK Initial Contact</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Driver_Assigned</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Initial_Contact_Result__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Driver Assigned</value>
+        </filters>
+        <label>Open TIP: Driver Assigned</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Eviction_Notice_Expired</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Initial_Notice_Date__c</columns>
+        <columns>Evict_Statutory_Notice_Required__c</columns>
+        <columns>Evict_Statutory_Notice_End_Date__c</columns>
+        <columns>Recommend_Referral_to_Eviction__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Evict_Statutory_Notice_End_Date__c</field>
+            <operation>lessOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>HOLD,TIP</value>
+        </filters>
+        <label>Open TIP: Eviction Notice Expired</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Eviction_in_Process</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Initial_Notice_Date__c</columns>
+        <columns>Evict_Statutory_Notice_Required__c</columns>
+        <columns>Evict_Statutory_Notice_End_Date__c</columns>
+        <columns>Recommend_Referral_to_Eviction__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Eviction</value>
+        </filters>
+        <label>Open TIP: Eviction</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Expected_Close_Date_Past_Due</fullName>
+        <booleanFilter>(1 or 2 )AND 3 AND 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>Expected_Close_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Voluntary Move-Out,TIP - CFK Negotiations,TIP - Lease Negotiations</value>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Eviction</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TIP_Tracking__c.Standard_TIP</value>
+        </filters>
+        <filters>
+            <field>Expected_Close_Date__c</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Open TIP: Expected Close Date Past Due</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Initial_Contact_Today</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Comments__c</columns>
+        <columns>Initial_Contact_Result__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initial_Contact_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Open TIP: Initial Contact = Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Jen_Joseph</fullName>
+        <booleanFilter>1 and (2 or 3)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Property_City__c</columns>
+        <columns>Yardi_Code_Text__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>TIP_Coordinator__c</columns>
+        <columns>Expected_Close_Date__c</columns>
+        <columns>Driver_Notes__c</columns>
+        <columns>TIP_Occupant_Name__c</columns>
+        <columns>TIP_Occupant_Phone__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>TIP</value>
+        </filters>
+        <filters>
+            <field>PM_Portfolio_Manager__c</field>
+            <operation>equals</operation>
+            <value>Floryn Edwards</value>
+        </filters>
+        <filters>
+            <field>DK_Driver_Assigned__c</field>
+            <operation>equals</operation>
+            <value>Floryn Edwards</value>
+        </filters>
+        <label>Open TIP: Floryn Edwards</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Lease_Negotiations</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>TIP_New_Lease_Negotation_Start_Date__c</columns>
+        <columns>Lease_Type__c</columns>
+        <columns>Lease_Paperwork__c</columns>
+        <columns>TIP_New_Lease_Signed_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Lease Negotiations</value>
+        </filters>
+        <label>Open TIP: Lease Negotiations</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_TIP_Voluntary_Move_Out</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Move_Out_Verbal_Date__c</columns>
+        <columns>Move_Out_Actual__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - Voluntary Move-Out</value>
+        </filters>
+        <label>Open TIP: Voluntary Move-Out</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Tip_CFK_Negotiations</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>CFK_Indication_of_Interest_Date__c</columns>
+        <columns>CFK_Offered_Amount__c</columns>
+        <columns>CFK_Agreed_Move_Out_Date__c</columns>
+        <columns>CFK_Cashiers_Check_Rqst_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>TIP - CFK Negotiations</value>
+        </filters>
+        <label>Open Tip: CFK Negotiations</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Tip_Purchased_Rented</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Welcome_Pack_Delivery_Method__c</columns>
+        <columns>Welcome_Packet_Delivered__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Occupancy_Status_Acquisition__c</field>
+            <operation>equals</operation>
+            <value>Purchased Rented</value>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed  - Purchase Rented</value>
+        </filters>
+        <label>Open Tip: Purchased Rented</label>
+    </listViews>
+    <listViews>
+        <fullName>Standard_Tips_with_Initial_Notice_Date</fullName>
+        <columns>NAME</columns>
+        <columns>TIP_Coordinator__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Code_Text__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>CFK_Status__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Initial_Notice_Date__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TIP_Tracking__c.Standard_TIP</value>
+        </filters>
+        <label>Standard Tips with Initial Notice Date</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TIPS_Acq_Yesterday</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Property_Street__c</columns>
+        <columns>Occupancy_Status_Acquisition__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>DK_Assigned_Date__c</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Region__c</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Acq_Reporting_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Acq_Reporting_Date__c</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>TIPs Acq Yesterday</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_Closed_Acq_Cancelled</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>TIP_Closed_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Acquisition_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed - Acq Cancelled</value>
+        </filters>
+        <label>TIP Status: Closed - Acq. Cancelled</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_Closed_Lease_Assumed</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>TIP_Closed_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed - Leased (Assumed)</value>
+        </filters>
+        <label>TIP Status: Closed - Lease (Assumed)</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_Closed_Lease_New</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>TIP_Closed_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed - Leased (New)</value>
+        </filters>
+        <label>TIP Status: Closed - Lease (New)</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_Closed_Purchased_Rented</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>TIP_Closed_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed  - Purchase Rented</value>
+        </filters>
+        <label>TIP Status: Closed - Purchased Rented</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_Closed_Vacant</fullName>
+        <columns>NAME</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>TIP_Closed_Date__c</columns>
+        <columns>Vacancy_Reason__c</columns>
+        <columns>TIP_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed - Vacant</value>
+        </filters>
+        <label>TIP Status: Closed - Vacant</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_HOLD_all</fullName>
+        <columns>NAME</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Evict_Statutory_Notice_End_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Acquisition_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>HOLD</value>
+        </filters>
+        <label>TIP Status: HOLD (all)</label>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Status_Open_Hold_on_Cancelled_Sold</fullName>
+        <booleanFilter>(1 or 2 )AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Acquisition_Date__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>Portfolio__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>DK_Driver_Assigned__c</columns>
+        <columns>Initial_Contact_Date__c</columns>
+        <columns>Evict_Statutory_Notice_End_Date__c</columns>
+        <columns>TIP_Status__c</columns>
+        <columns>Acquisition_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>HOLD</value>
+        </filters>
+        <filters>
+            <field>TIP_Status__c</field>
+            <operation>startsWith</operation>
+            <value>TIP</value>
+        </filters>
+        <filters>
+            <field>Acquisition_Status__c</field>
+            <operation>contains</operation>
+            <value>Cancelled,SOLD</value>
+        </filters>
+        <label>TIP Status: Open/Hold on Cancelled/Sold</label>
+    </listViews>
+    <nameField>
+        <displayFormat>TIP-{0000}</displayFormat>
+        <label>TIP Tracking Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>TIPs</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Purchased_Rented</fullName>
+        <active>true</active>
+        <label>Purchased Rented</label>
+        <picklistValues>
+            <picklist>Abandoned_Property__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Removed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>App_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Backyard__c</picklist>
+            <values>
+                <fullName>Furniture Visibile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Locked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nothing Visible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CFK_Status__c</picklist>
+            <values>
+                <fullName>Need Values</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_2_Result__c</picklist>
+            <values>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_3_Result__c</picklist>
+            <values>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Lease__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Electrical__c</picklist>
+            <values>
+                <fullName>Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Initial_Contact_Result__c</picklist>
+            <values>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lease_Strategy__c</picklist>
+            <values>
+                <fullName>Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent to Current Tenant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent to New Tenant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lease_Type__c</picklist>
+            <values>
+                <fullName>Assumed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Neighbors__c</picklist>
+            <values>
+                <fullName>No Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Said Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Said Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupant_Intentions__c</picklist>
+            <values>
+                <fullName>Evict</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupant_Type__c</picklist>
+            <values>
+                <fullName>Previous Home Owner %28PHO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant %28TNT%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Condition__c</picklist>
+            <values>
+                <fullName>Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Great</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TIP_Status__c</picklist>
+            <values>
+                <fullName>Closed  - Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Acq Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Leased %28Assumed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Leased %28New%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - Abd%2E Property Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - BK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - Do Not Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - Driver Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - New %28Needs Driver%29</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TIP_Type__c</picklist>
+            <values>
+                <fullName>Disposition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Acquisition %E2%80%93 Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post-Acquisition</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Remediation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turn TIP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Trash_Cans__c</picklist>
+            <values>
+                <fullName>Empty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vacancy_Reason__c</picklist>
+            <values>
+                <fullName>CFK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move-Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant on Arrival</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Water__c</picklist>
+            <values>
+                <fullName>Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Welcome_Pack_Delivery_Method__c</picklist>
+            <values>
+                <fullName>Hand Delivered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left on Door</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Windows__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furniture Visibile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nothing Visible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_TIP</fullName>
+        <active>true</active>
+        <label>Standard TIP</label>
+        <picklistValues>
+            <picklist>Abandoned_Property__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Removed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>App_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Backyard__c</picklist>
+            <values>
+                <fullName>Furniture Visibile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Locked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nothing Visible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CFK_Status__c</picklist>
+            <values>
+                <fullName>Need Values</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_2_Result__c</picklist>
+            <values>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_3_Result__c</picklist>
+            <values>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Current_Lease__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Electrical__c</picklist>
+            <values>
+                <fullName>Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Initial_Contact_Result__c</picklist>
+            <values>
+                <fullName>Confirmed Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contacted Occupant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Posted Notice</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lease_Strategy__c</picklist>
+            <values>
+                <fullName>Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent to Current Tenant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent to New Tenant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lease_Type__c</picklist>
+            <values>
+                <fullName>Assumed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Neighbors__c</picklist>
+            <values>
+                <fullName>No Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Said Occupied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Said Vacant</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupant_Intentions__c</picklist>
+            <values>
+                <fullName>Cash for Keys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evict</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Occupant_Type__c</picklist>
+            <values>
+                <fullName>Previous Home Owner %28PHO%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Squatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant %28TNT%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Condition__c</picklist>
+            <values>
+                <fullName>Fair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Great</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TIP_Status__c</picklist>
+            <values>
+                <fullName>Closed - Acq Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - For Sale%2FDisposition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Leased %28Assumed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Leased %28New%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed - Vacant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - Abd%2E Property Notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - BK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - Deed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - Do Not Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HOLD - Limbo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - CFK Negotiations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - DK Initial Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - Driver Assigned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - Eviction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - Lease Negotiations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP - New %28Needs Driver%29</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TIP - Voluntary Move-Out</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TIP_Type__c</picklist>
+            <values>
+                <fullName>Disposition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post Acquisition %E2%80%93 Purchased Rented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post-Acquisition</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Remediation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Turn TIP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Trash_Cans__c</picklist>
+            <values>
+                <fullName>Empty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Vacancy_Reason__c</picklist>
+            <values>
+                <fullName>CFK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move-Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vacant on Arrival</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Water__c</picklist>
+            <values>
+                <fullName>Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Welcome_Pack_Delivery_Method__c</picklist>
+            <values>
+                <fullName>Hand Delivered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left on Door</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Windows__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furniture Visibile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nothing Visible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Region__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Portfolio__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Yardi_Property_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DK_Assigned_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DK_Driver_Assigned__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Acquisition_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Occupancy_Status_Acquisition__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>TIP_Status__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Portfolio__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Acquisition_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Occupancy_Status_Acquisition__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TIP_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CFK_Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TIP_Coordinator__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DK_Driver_Assigned__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Portfolio__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Yardi_Property_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Acquisition_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Occupancy_Status_Acquisition__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DK_Assigned_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TIP_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Aband_Property_Notice_Days_Required</fullName>
+        <active>true</active>
+        <description>If Abandoned Property notice date is entered, require a value in “Aband. Property Statutory Notice Days”</description>
+        <errorConditionFormula>ISBLANK( Abandoned_Prop_Notice_Date__c) = FALSE 
+&amp;&amp;
+ISBLANK( Aband_Property_Statutory_Notice_Days__c )</errorConditionFormula>
+        <errorDisplayField>Aband_Property_Statutory_Notice_Days__c</errorDisplayField>
+        <errorMessage>Aband. Property Notice Required (Days) is required when Abandoned Property is “Yes”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CFK_Offered_and_Agreed_Move_Out_Date_Req</fullName>
+        <active>true</active>
+        <description>CFK Offered Amount and CFK Agreed Move Out Date are required when TIP Status equals TIP - CFK Negotiations.</description>
+        <errorConditionFormula>AND(
+TEXT( TIP_Status__c ) = &apos;TIP - CFK Negotiations&apos;,
+DATEVALUE(CreatedDate) &gt;= DATE(2014,3,13),
+OR(
+ISBLANK( CFK_Offered_Amount__c ),
+ISBLANK( CFK_Agreed_Move_Out_Date__c )
+)
+)</errorConditionFormula>
+        <errorDisplayField>CFK_Offered_Amount__c</errorDisplayField>
+        <errorMessage>CFK Offered Amount and CFK Agreed Move Out Date are required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contact_Attempt_2_Date</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecordTypeId = &apos;012E00000005gTA&apos; &amp;&amp; Contact_Attempt_2_Date__c  &gt; DATE(2013,08,29) &amp;&amp; 
+ISBLANK(Contact_Attempt_2_Time__c) &amp;&amp;
+ISBLANK(Contact_2_Comments__c) &amp;&amp;
+ISPICKVAL(Contact_2_Result__c,&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>Contact_Attempt_2_Time__c</errorDisplayField>
+        <errorMessage>If Contact Attempt 2 Date is entered, Contact Attempt 2 Time, and Contact 2 Result should be entered also.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contact_Attempt_3_Date</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecordTypeId = &apos;012E00000005gTA&apos; &amp;&amp; Contact_Attempt_3_Date__c &gt; DATE(2013,08,29) &amp;&amp; 
+ISBLANK(Contact_Attempt_3_Time__c) &amp;&amp;
+ISBLANK(Contact_3_Comments__c) &amp;&amp; 
+ISPICKVAL(Contact_3_Result__c,&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>Contact_Attempt_3_Time__c</errorDisplayField>
+        <errorMessage>If Contact Attempt 3 Date is entered, Contact Attempt 3 Time, and Contact 3 Result should be entered also.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>DK_Complete_Date_Required</fullName>
+        <active>true</active>
+        <description>DK Complete Date is required when DK Driver Assigned is populated, DK Assigned Date is populated, and the TIP status is Closed.</description>
+        <errorConditionFormula>AND(
+OR(TEXT(TIP_Status__c) = &apos;Closed - Leased (Assumed)&apos;, TEXT(TIP_Status__c) = &apos;Closed - Leased (New)&apos;, TEXT(TIP_Status__c) = &apos;Closed - Vacant&apos;),
+DATEVALUE(CreatedDate)  &gt;= DATE(2014,3,13),
+NOT(ISBLANK( DK_Driver_Assigned__c )), 
+NOT(ISBLANK(  DK_Assigned_Date__c )),
+ISBLANK(  DK_Complete_Date__c  ),
+RecordType.DeveloperName != &apos;Purchased_Rented&apos; 
+)</errorConditionFormula>
+        <errorDisplayField>DK_Complete_Date__c</errorDisplayField>
+        <errorMessage>DK Complete Date is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Evict_Statutory_Notice_Required</fullName>
+        <active>true</active>
+        <description>If Initial_Notice_Date__cis Entered, require a value in Evict_Statutory_Notice_Required__c</description>
+        <errorConditionFormula>!(ISBLANK(Initial_Notice_Date__c ))
+&amp;&amp;
+ISBLANK(Evict_Statutory_Notice_Required__c)</errorConditionFormula>
+        <errorDisplayField>Evict_Statutory_Notice_Required__c</errorDisplayField>
+        <errorMessage>Evict Notice Required(Days) is required if Initial Notice Date is filled in.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Expected_Closed_Date_Required</fullName>
+        <active>true</active>
+        <description>The Expected Close Date Field is required at this stage.</description>
+        <errorConditionFormula>ISBLANK(Expected_Close_Date__c)&amp;&amp; RecordTypeId = &apos;012E00000005gTA&apos;&amp;&amp; (ISPICKVAL(TIP_Status__c , &quot;TIP - Eviction&quot;) || ISPICKVAL(TIP_Status__c ,&quot;TIP - Lease Negotiations&quot;) || ISPICKVAL(TIP_Status__c ,&quot;TIP - CFK Negotiations&quot;)  ||  ISPICKVAL(TIP_Status__c ,&quot;TIP - Voluntary Move-Out&quot;))</errorConditionFormula>
+        <errorDisplayField>Expected_Close_Date__c</errorDisplayField>
+        <errorMessage>Please provide an expected close date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Initial_Contact_Date</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordTypeId = &apos;012E00000005gTA&apos; &amp;&amp; Initial_Contact_Date__c &gt; DATE(2013,04,30) &amp;&amp;  
+ISPICKVAL(Initial_Contact_Result__c,&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>Initial_Contact_Time__c</errorDisplayField>
+        <errorMessage>If Initial Contact Date is entered, Initial Contact Time, and Initial Contact Result should be entered also.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reparent_TIP</fullName>
+        <active>true</active>
+        <description>Only allows System Administrators and Invitation Asset Management profiles to edit the Portfolio field on the TIP after the initial creation.</description>
+        <errorConditionFormula>AND(
+ISCHANGED( Portfolio__c ),
+NOT ($Profile.Name = &quot;System Administrator&quot; || $Profile.Name = &quot;Invitation Asset Management&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>Portfolio__c</errorDisplayField>
+        <errorMessage>The relationship to the Portfolio cannot be edited.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Tip_Coordinator_must_be_Populated</fullName>
+        <active>true</active>
+        <description>If the Initial Notice Date is populated - a Tip Coordinator must also be populated</description>
+        <errorConditionFormula>NOT( ISBLANK(Initial_Notice_Date__c) ) 
+&amp;&amp; 
+ISBLANK( TIP_Coordinator__c )</errorConditionFormula>
+        <errorMessage>If an Eviction Initial Notice Date is listed - you must also populate the TIP Coordinator so the TIP Coordinator can be notified prior to the Evict Notice End Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Vacancy_Reason_Required</fullName>
+        <active>true</active>
+        <description>When status is changed to Closed-Vacant a racnecy reason must be entered.</description>
+        <errorConditionFormula>ISBLANK(text(Vacancy_Reason__c )) &amp;&amp; (ispickval(TIP_Status__c,&apos;Closed - Vacant&apos;)) &amp;&amp; 
+RecordType.DeveloperName != &apos;Purchased_Rented&apos;</errorConditionFormula>
+        <errorMessage>Vacancy Reason must be entered when Status is Closed Vacant</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Ready_to_Re_key</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Ready to Re-key</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var tipStatus = &apos;{!TIP_Tracking__c.TIP_Status__c}&apos;; 
+var tipRehab = &apos;{!TIP_Tracking__c.RehabId__c}&apos;; 
+var abandenedPro = &apos;{!TIP_Tracking__c.Abandoned_Property__c}&apos;; 
+var APNoticeEnddate = &apos;{!TIP_Tracking__c.Aband_Property_Notice_End_Date__c}&apos;; 
+var updateRecords = []; //array for holding records that this code will ultimately update 
+
+var rehabIsHOLD_Occupied_TIP = false;
+
+//Check for Rehab and Absence is there
+if(tipRehab != &apos;&apos;) {
+
+        //Query Rehab data 
+	var queryResult = sforce.connection.query(&quot;SELECT Id, Stage__c FROM Rehab__c where Id = &apos;&quot; + tipRehab + &quot;&apos;&quot;); 
+        
+	//get rehab data 
+	var rehabRecords = queryResult.getArray(&apos;records&apos;) 
+        
+        //Process only if data exist 
+	if(rehabRecords.length &gt; 0) { 
+
+		//Get Current Stage 
+		var currentStatus = rehabRecords[0].get(&apos;Stage__c&apos;); 
+                if( currentStatus == &apos;HOLD - Occupied/TIP&apos; ) {
+                     rehabIsHOLD_Occupied_TIP = true;
+                }
+        }
+	   
+}
+
+//Check for Rehab and Absence is there
+if(tipRehab == &apos;&apos; || rehabIsHOLD_Occupied_TIP ) {
+
+	//Check for TIP Status
+	if (tipStatus != &apos;Closed - Vacant&apos;) {
+		alert(&quot;You can click on this button only when TIP Status is Closed Vacant.&quot;); 
+	}
+	else if (abandenedPro == &apos;Yes&apos; &amp;&amp; ( new Date(&apos;{!TODAY()}&apos;) &lt; new Date(APNoticeEnddate) ) ) {
+		alert(&quot;Still in Aband. Prop Notice period. If property has been removed, please indicate on the Abandoned Property field.&quot;); 
+	}
+	else { 
+		try { 
+			var hId=&apos;{!TIP_Tracking__c.ResidenceId__c}&apos; ;
+			var pId=&apos;{!TIP_Tracking__c.PortfolioId__c}&apos;;
+			var tId=&apos;{!TIP_Tracking__c.Id}&apos;;
+			var tComments=&apos;{!JSENCODE(TIP_Tracking__c.TIP_Comments_for_Rehab__c)}&apos;;
+			var result = sforce.apex.execute(&quot;CreateRehabAndListingForTIP&quot;, &quot;createRehabAndListingRecord&quot;,{portfolioId : pId, homeId:hId, tipId:tId, tipComments:tComments}); 
+			alert(result);
+			window.location.href = tId;
+		} 
+		
+		catch(err) { alert( err );
+		}		 
+	}
+
+} else {
+
+	//Query Rehab data 
+	var queryResult = sforce.connection.query(&quot;SELECT Id, Stage__c FROM Rehab__c where Id = &apos;&quot; + tipRehab + &quot;&apos;&quot;); 
+        
+	//get rehab data 
+	var rehabRecords = queryResult.getArray(&apos;records&apos;) 
+
+	//Process only if data exist 
+	if(rehabRecords.length &gt; 0) { 
+
+		//Get Current Stage 
+		var currentStatus = rehabRecords[0].get(&apos;Stage__c&apos;); 
+        	
+                //Variable to hole the results 
+		var result = []; 
+
+		//Check for TIP Status
+		if (tipStatus != &apos;Closed - Vacant&apos;) {
+			alert(&quot;You can click on this button only when TIP Status is Closed Vacant.&quot;); 
+		}
+		else if (abandenedPro == &apos;Yes&apos; &amp;&amp; ( new Date(&apos;{!TODAY()}&apos;) &lt; new Date(APNoticeEnddate) ) ) {
+			alert(&quot;Still in Aband. Prop Notice period. If property has been removed, please indicate on the Abandoned Property field.&quot;); 
+		}
+		
+		else {
+
+			//Check for the currentStatus 
+			if(currentStatus == &apos;Re-key Ready&apos;) { 
+
+				alert(&apos;Rehab is already associated with this TIP&apos;); 
+			
+			} else if(currentStatus == &apos;HOLD - Occupied/TIP&apos;) { 
+
+				//Set Stage to Re-Key Ready, if it is HOLD - Occupied/TIP 
+				//Update rehab record 
+				var update_Rehab = new sforce.SObject(&quot;Rehab__c&quot;); 
+				update_Rehab.Id = rehabRecords[0].get(&apos;Id&apos;); 
+				update_Rehab.Stage__c = &apos;Re-key Ready&apos;; 
+				update_Rehab.Re_Key_Ready_Date__c = new Date(); 
+				updateRecords.push(update_Rehab); 
+				result = sforce.connection.update(updateRecords); 
+				
+			} else { 
+
+				var confirmationMessage = &apos;A Rehab record already exists with the stage of &apos; + currentStatus + &apos;. Are you sure?&apos;; 
+				if(confirm(confirmationMessage)) { 
+
+					//Update rehab record 
+					var update_Rehab = new sforce.SObject(&quot;Rehab__c&quot;); 
+					update_Rehab.Id = rehabRecords[0].get(&apos;Id&apos;); 
+					update_Rehab.Stage__c = &apos;Re-key Ready&apos;; 
+					update_Rehab.Re_Key_Ready_Date__c = new Date(); 
+					updateRecords.push(update_Rehab); 
+					result = sforce.connection.update(updateRecords); 
+				} 
+			} 
+
+			//Display error message to user if occurs 
+			if(result != null &amp;&amp; result.length &gt; 0) { 
+				if(result[0].get(&apos;errors&apos;) != null &amp;&amp; result[0].get(&apos;errors&apos;).get(&apos;message&apos;) != null &amp;&amp; result[0].get(&apos;errors&apos;).get(&apos;message&apos;) != &apos;&apos;) { 
+					alert(result[0].get(&apos;errors&apos;).get(&apos;message&apos;)); 
+				} else { 
+					alert(&apos;Rehab has been updated successfully.&apos;) 
+				} 
+			} 
+		}
+	} 
+}</url>
+    </webLinks>
+</CustomObject>

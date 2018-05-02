@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Unit_Requires_Parent_Residence</fullName>
+    <active>true</active>
+    <description>If Child Unit is true, parent residence cannot be null</description>
+    <errorConditionFormula>Child_Unit__c &amp;&amp; ISBLANK( Parent_Residence__c )</errorConditionFormula>
+    <errorDisplayField>Parent_Residence__c</errorDisplayField>
+    <errorMessage>Parent Residence is required for a Residence to be Child Unit.</errorMessage>
+</ValidationRule>

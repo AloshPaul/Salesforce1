@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZ_Bidder_Acquired_Properties_TODAY</fullName>
+    <columns>NAME</columns>
+    <columns>APN__c</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Address_City__c</columns>
+    <columns>Subdivision__c</columns>
+    <columns>Lot_Sq_Ft__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>Bedrooms__c</columns>
+    <columns>Baths__c</columns>
+    <columns>Square_Feet__c</columns>
+    <columns>AC_or_Evap__c</columns>
+    <columns>Roof_Type__c</columns>
+    <columns>Parking__c</columns>
+    <columns>Year_Built__c</columns>
+    <columns>Pool__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Atlanta_Auction__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Win_Date__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>AZ Bidder Acquired Properties TODAY</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

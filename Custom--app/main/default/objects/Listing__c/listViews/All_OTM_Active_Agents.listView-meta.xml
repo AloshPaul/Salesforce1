@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_OTM_Active_Agents</fullName>
+    <columns>NAME</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Status__c</columns>
+    <columns>Address__c</columns>
+    <columns>City__c</columns>
+    <columns>Zip_Code__c</columns>
+    <columns>BR_BA__c</columns>
+    <columns>Rent_Ready_Date__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>DOM__c</columns>
+    <columns>Total_Apps__c</columns>
+    <columns>Total_Showings_C__c</columns>
+    <columns>Total_Incoming_Calls__c</columns>
+    <columns>Rent_Cafe_Listing__c</columns>
+    <columns>PM__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <label>All OTM/Active (Agents)</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>X3rd_Party_Atlanta</role>
+        <role>X3rd_Party_Charlotte</role>
+        <role>X3rd_Party_Chicago</role>
+        <role>X3rd_Party_Corporate</role>
+        <role>X3rd_Party_Inland_Empire</role>
+        <role>X3rd_Party_Jacksonville</role>
+        <role>X3rd_Party_LA_County</role>
+        <role>X3rd_Party_Las_Vegas</role>
+        <role>X3rd_Party_Miami</role>
+        <role>X3rd_Party_Orlando</role>
+        <role>X3rd_Party_Phoenix</role>
+        <role>X3rd_Party_Sacramento</role>
+        <role>X3rd_Party_Seattle</role>
+        <role>X3rd_Party_Southern_California</role>
+        <role>X3rd_Party_Tampa</role>
+    </sharedTo>
+</ListView>

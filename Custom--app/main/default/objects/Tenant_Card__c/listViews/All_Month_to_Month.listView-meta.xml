@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Month_to_Month</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Lease_From_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Lease_Term__c</columns>
+    <columns>Month_to_Month__c</columns>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>MTM_Fee_Amount_Yardi__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>Lease_Status__c</columns>
+    <columns>tCode_LastName__c</columns>
+    <columns>Tenant_Current_Rent__c</columns>
+    <columns>Tenant_Status_As_of_Import_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Month_to_Month__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Yardi_Active_Lease__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Month to Month (Active)</label>
+</ListView>

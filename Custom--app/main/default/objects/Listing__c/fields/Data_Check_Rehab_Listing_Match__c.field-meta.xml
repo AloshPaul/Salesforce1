@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Check_Rehab_Listing_Match__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (ISBLANK(Data_Check_Rehab_s_Listing__c) = TRUE, "Blank",
+ IF (Id = Data_Check_Rehab_s_Listing__c , "True", 
+IF (Id  &lt;>  Data_Check_Rehab_s_Listing__c ,"False",NULL)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Data Check - Rehab Listing Match</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

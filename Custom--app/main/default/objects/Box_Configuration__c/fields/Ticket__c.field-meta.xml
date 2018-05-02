@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket__c</fullName>
+    <defaultValue>'xkxndbhyaxhqn3amx9udmsc9zliz4k1g'</defaultValue>
+    <externalId>false</externalId>
+    <label>Ticket</label>
+    <length>80</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

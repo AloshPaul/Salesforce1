@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Escrow_Cancel_and_Acq_Close_Date</fullName>
+    <active>true</active>
+    <description>If a property has an Escrow Cancel date it cannot also have a Closing/Acquisition Date</description>
+    <errorConditionFormula>NOT(ISBLANK(Escrow_Cancelled_Date__c)) &amp;&amp; 
+NOT(ISBLANK(Acquisition_Date__c))</errorConditionFormula>
+    <errorDisplayField>Escrow_Cancelled_Date__c</errorDisplayField>
+    <errorMessage>You cannot have an Escrow Cancelled Date if you also have a Closing/Acquisition Date</errorMessage>
+</ValidationRule>

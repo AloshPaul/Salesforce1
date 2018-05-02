@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sig_Lease_Rec_vd_Dt_to_Lease_Uploaded__c</fullName>
+    <description>Signed Lease Rec'vd Date to Lease Uploaded Date</description>
+    <externalId>false</externalId>
+    <formula>(Lease_Uploaded_Date__c - Signed_Lease_Rec_vd_Date__c )</formula>
+    <inlineHelpText>Signed Lease Rec'vd Date to Lease Uploaded Date</inlineHelpText>
+    <label>Signed Lease Rec'vd Dt to Lease Up(Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

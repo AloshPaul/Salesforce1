@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Not_Lead_Details</fullName>
+    <active>true</active>
+    <description>A value is required in the Not Lead Details field if Lead Status is "Closed - Not a Lead".</description>
+    <errorConditionFormula>DATEVALUE( Date_Time__c ) >= DATE(2013,11,1) &amp;&amp; 
+ISPICKVAL(Lead_Status__c, "Closed - Not a Lead") &amp;&amp;
+ISPICKVAL( Not_Lead_Details__c, "")
+&amp;&amp; $Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Not_Lead_Details__c</errorDisplayField>
+    <errorMessage>A value is required in the Not Lead Details field if Lead Status is "Closed - Not a Lead".</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>THR_Support_Email__c</fullName>
+    <defaultValue>'THRSupport@invitationhomes.com'</defaultValue>
+    <description>This field is used in Residence and Portfolio Email Alerts for changes to fields as requested in Support Requests (Regional Controller Queues).</description>
+    <externalId>false</externalId>
+    <label>THR Support Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

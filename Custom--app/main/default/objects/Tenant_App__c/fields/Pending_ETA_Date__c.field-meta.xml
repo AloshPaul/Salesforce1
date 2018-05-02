@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_ETA_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If this app is pending, please enter the date that you expect the information to be available.</inlineHelpText>
+    <label>Pending ETA Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

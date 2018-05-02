@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payable_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Payable Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>certified funds</fullName>
+                <default>false</default>
+                <label>certified funds</label>
+            </value>
+            <value>
+                <fullName>check</fullName>
+                <default>false</default>
+                <label>check</label>
+            </value>
+            <value>
+                <fullName>cashiers check</fullName>
+                <default>false</default>
+                <label>cashiers check</label>
+            </value>
+            <value>
+                <fullName>money order</fullName>
+                <default>false</default>
+                <label>money order</label>
+            </value>
+            <value>
+                <fullName>online</fullName>
+                <default>false</default>
+                <label>online</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

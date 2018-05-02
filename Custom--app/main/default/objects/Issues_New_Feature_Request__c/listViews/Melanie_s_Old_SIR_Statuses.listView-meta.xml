@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Melanie_s_Old_SIR_Statuses</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 4)  and 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Development_Owner__c</columns>
+    <columns>Task_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Submit for Approval,Approved,Investigating,Ready for Assignment</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>In Process,Assigned,Complete in Dev,Ready for QA Review,Ready for UAT Review</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Needs Smoketest in UAT,Ready to Deploy in UAT,Ready to Deploy in PROD</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Ready for PROD Review</value>
+    </filters>
+    <filters>
+        <field>Project_Owner__c</field>
+        <operation>equals</operation>
+        <value>Melanie Matney</value>
+    </filters>
+    <label>Melanie's - Old SIR Statuses</label>
+</ListView>

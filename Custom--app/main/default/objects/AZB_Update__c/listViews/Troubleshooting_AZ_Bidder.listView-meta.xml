@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Troubleshooting_AZ_Bidder</fullName>
+    <columns>AZB_ID__c</columns>
+    <columns>NAME</columns>
+    <columns>AZB_Bid_Status__c</columns>
+    <columns>IH_Last_Result_Message__c</columns>
+    <columns>AZB_User_ID__c</columns>
+    <columns>AZB_Trustee_Sale_Date__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>IH_Prospect__c</columns>
+    <columns>IH_Pipeline__c</columns>
+    <columns>IH_Last_Result_Success__c</columns>
+    <columns>AZB_IH_Original_Bid_Max__c</columns>
+    <columns>Address_Validated_Successfully__c</columns>
+    <columns>Address_Validated_City__c</columns>
+    <columns>Address_Validated_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>atlanta</value>
+    </filters>
+    <filters>
+        <field>AZB_IH_Original_Bid_Max__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>AZB_IH_Win_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Troubleshooting - AZ Bidder</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

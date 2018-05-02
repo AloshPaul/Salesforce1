@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Status</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Lease__c</columns>
+    <columns>Days_to_Lease_End__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>PM__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Notes__c</columns>
+    <columns>Resident_Intent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <label>Open Status</label>
+</ListView>

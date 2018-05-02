@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SellerCounterOffer</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+  ISPICKVAL(Broker_Offer_Status__c, 'Counteroffer'), 
+  OR( 
+  ISNULL(Seller_Counteroffer_Price__c) 
+  ) 
+)</errorConditionFormula>
+    <errorMessage>Please fill the Seller Counteroffer Price</errorMessage>
+</ValidationRule>

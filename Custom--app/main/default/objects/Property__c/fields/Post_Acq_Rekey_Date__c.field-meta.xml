@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Acq_Rekey_Date__c</fullName>
+    <externalId>false</externalId>
+    <label>Post Acq Rekey Date</label>
+    <summarizedField>Rehab__c.Re_Key_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>Rehab__c.Stage__c</field>
+        <operation>notContain</operation>
+        <value>Closed - Cancelled</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Rehab__c.Type__c</field>
+        <operation>equals</operation>
+        <value>Post-Acquisition, Post Acquisition – Purchased Rented</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Rehab__c.Portfolio__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

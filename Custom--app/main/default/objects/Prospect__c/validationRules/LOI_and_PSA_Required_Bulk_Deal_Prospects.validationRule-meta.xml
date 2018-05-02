@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOI_and_PSA_Required_Bulk_Deal_Prospects</fullName>
+    <active>false</active>
+    <description>Prospects that are part of a Bulk Deal must have an approved LOI and PSA before the Prospect can be converted to Pipeline.</description>
+    <errorConditionFormula>AND(NOT($Profile.Name = 'System Administrator'),
+AND(
+  OR(
+     (ISBLANK(PSA_Approved_by_Acquisitions__c )),
+     (ISBLANK( PSA_Approved_by_Legal__c ))
+    ) &amp;&amp;
+       NOT(ISBLANK( Bulk_Deal__r.Name ))
+       &amp;&amp;
+       ISPICKVAL(Prospect_Status__c, 'Converted to Pipeline'))
+)</errorConditionFormula>
+    <errorMessage>Prospects that are part of a Bulk Deal must have an approved PSA and LOI (if applicable) before the Prospect can be converted to Pipeline.  Refer to the Bulk Deal Details section.</errorMessage>
+</ValidationRule>

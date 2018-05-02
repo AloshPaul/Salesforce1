@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administrative Action or Litigation Against HOA / HOA Ombudsman / Mediation</fullName>
+                <default>false</default>
+                <label>Administrative Action or Litigation Against HOA / HOA Ombudsman / Mediation</label>
+            </value>
+            <value>
+                <fullName>Architectural Review / Design</fullName>
+                <default>false</default>
+                <label>Architectural Review / Design</label>
+            </value>
+            <value>
+                <fullName>Code / Building Violations</fullName>
+                <default>false</default>
+                <label>Code / Building Violations</label>
+            </value>
+            <value>
+                <fullName>Deed Fixes</fullName>
+                <default>false</default>
+                <label>Deed Fixes</label>
+            </value>
+            <value>
+                <fullName>Dues Disputes</fullName>
+                <default>false</default>
+                <label>Dues Disputes</label>
+            </value>
+            <value>
+                <fullName>Fire</fullName>
+                <default>false</default>
+                <label>Fire</label>
+            </value>
+            <value>
+                <fullName>General Violations</fullName>
+                <default>false</default>
+                <label>General Violations</label>
+            </value>
+            <value>
+                <fullName>HOA W9 Disputes</fullName>
+                <default>false</default>
+                <label>HOA W9 Disputes</label>
+            </value>
+            <value>
+                <fullName>Licensure</fullName>
+                <default>false</default>
+                <label>Licensure</label>
+            </value>
+            <value>
+                <fullName>Lien Payoff / Improper HOA Demand for Prior Owner's Fines</fullName>
+                <default>false</default>
+                <label>Lien Payoff / Improper HOA Demand for Prior Owner's Fines</label>
+            </value>
+            <value>
+                <fullName>Liens</fullName>
+                <default>false</default>
+                <label>Liens</label>
+            </value>
+            <value>
+                <fullName>Lis Pendens</fullName>
+                <default>false</default>
+                <label>Lis Pendens</label>
+            </value>
+            <value>
+                <fullName>Misc.</fullName>
+                <default>false</default>
+                <label>Misc.</label>
+            </value>
+            <value>
+                <fullName>Permitting / Variance</fullName>
+                <default>false</default>
+                <label>Permitting / Variance</label>
+            </value>
+            <value>
+                <fullName>Rental Cap</fullName>
+                <default>false</default>
+                <label>Rental Cap</label>
+            </value>
+            <value>
+                <fullName>Rental Prohibition</fullName>
+                <default>false</default>
+                <label>Rental Prohibition</label>
+            </value>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Water / Flooding</fullName>
+                <default>false</default>
+                <label>Water / Flooding</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Title Curative</controllingFieldValue>
+            <controllingFieldValue>Compliance / Governmental / Regulatory Agency</controllingFieldValue>
+            <valueName>Code / Building Violations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Title Curative</controllingFieldValue>
+            <valueName>Deed Fixes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Title Curative</controllingFieldValue>
+            <valueName>Liens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Title Curative</controllingFieldValue>
+            <valueName>Lis Pendens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Acquisitions)</controllingFieldValue>
+            <controllingFieldValue>HOA (Property Mgmt.)</controllingFieldValue>
+            <valueName>Architectural Review / Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Acquisitions)</controllingFieldValue>
+            <valueName>Lien Payoff / Improper HOA Demand for Prior Owner's Fines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Acquisitions)</controllingFieldValue>
+            <controllingFieldValue>HOA (Property Mgmt.)</controllingFieldValue>
+            <controllingFieldValue>Insurance (Alliant)</controllingFieldValue>
+            <valueName>Misc.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Acquisitions)</controllingFieldValue>
+            <valueName>Rental Cap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Acquisitions)</controllingFieldValue>
+            <valueName>Rental Prohibition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Property Mgmt.)</controllingFieldValue>
+            <valueName>Administrative Action or Litigation Against HOA / HOA Ombudsman / Mediation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Property Mgmt.)</controllingFieldValue>
+            <valueName>Dues Disputes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Property Mgmt.)</controllingFieldValue>
+            <valueName>General Violations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HOA (Property Mgmt.)</controllingFieldValue>
+            <valueName>HOA W9 Disputes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance (Alliant)</controllingFieldValue>
+            <valueName>Fire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance (Alliant)</controllingFieldValue>
+            <valueName>Theft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance (Alliant)</controllingFieldValue>
+            <valueName>Water / Flooding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance / Governmental / Regulatory Agency</controllingFieldValue>
+            <valueName>Licensure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance / Governmental / Regulatory Agency</controllingFieldValue>
+            <valueName>Permitting / Variance</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

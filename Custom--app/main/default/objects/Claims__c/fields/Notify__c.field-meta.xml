@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If you want to notify Brian or Todd about a new Claim, make the appropriate selection.  An email alert will be sent to them.  No email alert is sent when Corporate Legal is selected.</inlineHelpText>
+    <label>Notify</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brian Neighbarger</fullName>
+                <default>false</default>
+                <label>Brian Neighbarger</label>
+            </value>
+            <value>
+                <fullName>Corporate Legal</fullName>
+                <default>false</default>
+                <label>Corporate Legal</label>
+            </value>
+            <value>
+                <fullName>Todd Farnsworth</fullName>
+                <default>false</default>
+                <label>Todd Farnsworth</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Validate_Created_After_8_21</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND( 
+	$Profile.Name != 'API User', 
+	ISNEW(), 
+	TODAY()
+	> 
+	DATE(
+		VALUE($Label.Do_Not_Change_RTM_Sprint3_Year), 
+		VALUE($Label.Do_Not_Change_RTM_Sprint3_Month), 
+		VALUE($Label.Do_Not_Change_RTM_Sprint3_Day) 
+	),
+	OR(
+		ISBLANK(Rehab__c),
+		NOT(CONTAINS(Rehab__r.Rehab_Status__c, 'In Process')),
+		ISBLANK(Rehab__r.HD_Budget_Walk__c),
+		ISNULL(Rehab__r.HD_Budget_Walk__r.Submit_Date__c),
+		DATEVALUE(Rehab__r.HD_Budget_Walk__r.Submit_Date__c)
+		> 
+		DATE(
+			VALUE($Label.Do_Not_Change_RTM_Sprint3_Year), 
+			VALUE($Label.Do_Not_Change_RTM_Sprint3_Month), 
+			VALUE($Label.Do_Not_Change_RTM_Sprint3_Day) 
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>Insufficient privileges to create the rehab projected spend.</errorMessage>
+</ValidationRule>

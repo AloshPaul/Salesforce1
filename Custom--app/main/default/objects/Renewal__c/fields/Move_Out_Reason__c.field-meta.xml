@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_Out_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Move-Out Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquired Pet</fullName>
+                <default>false</default>
+                <label>Acquired Pet</label>
+            </value>
+            <value>
+                <fullName>Another Community</fullName>
+                <default>false</default>
+                <label>Another Community</label>
+            </value>
+            <value>
+                <fullName>Bought Home/Condo/TH</fullName>
+                <default>false</default>
+                <label>Bought Home/Condo/TH</label>
+            </value>
+            <value>
+                <fullName>Change in Family Status</fullName>
+                <default>false</default>
+                <label>Change in Family Status</label>
+            </value>
+            <value>
+                <fullName>Closer to Work</fullName>
+                <default>false</default>
+                <label>Closer to Work</label>
+            </value>
+            <value>
+                <fullName>Community Policies</fullName>
+                <default>false</default>
+                <label>Community Policies</label>
+            </value>
+            <value>
+                <fullName>Construction Noise/Delays</fullName>
+                <default>false</default>
+                <label>Construction Noise/Delays</label>
+            </value>
+            <value>
+                <fullName>Corporate Lease</fullName>
+                <default>false</default>
+                <label>Corporate Lease</label>
+            </value>
+            <value>
+                <fullName>Death or Illness</fullName>
+                <default>false</default>
+                <label>Death or Illness</label>
+            </value>
+            <value>
+                <fullName>Employment/Job Transfer</fullName>
+                <default>false</default>
+                <label>Employment/Job Transfer</label>
+            </value>
+            <value>
+                <fullName>Financial/Lost Job</fullName>
+                <default>false</default>
+                <label>Financial/Lost Job</label>
+            </value>
+            <value>
+                <fullName>Military</fullName>
+                <default>false</default>
+                <label>Military</label>
+            </value>
+            <value>
+                <fullName>Neighbor Issues</fullName>
+                <default>false</default>
+                <label>Neighbor Issues</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Personal</fullName>
+                <default>false</default>
+                <label>Personal</label>
+            </value>
+            <value>
+                <fullName>Rented Condo/Home</fullName>
+                <default>false</default>
+                <label>Rented Condo/Home</label>
+            </value>
+            <value>
+                <fullName>Roommate</fullName>
+                <default>false</default>
+                <label>Roommate</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

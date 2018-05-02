@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resident_Evictions_In_Process</fullName>
+    <columns>NAME</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Eviction_Type__c</columns>
+    <columns>Initial_Notice_Date__c</columns>
+    <columns>Refer_to_Attorney_Date__c</columns>
+    <columns>Eviction_Attorney_Ref_ID__c</columns>
+    <columns>Lease__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>PM__c</columns>
+    <columns>Constable_Lock_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Eviction_Status__c</field>
+        <operation>equals</operation>
+        <value>In Process</value>
+    </filters>
+    <label>IE Evictions In Process</label>
+    <sharedTo>
+        <role>Team_Member_Inland_Empire</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IH_Agent_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is the Contact lookup for the Broker who created this record using the Brokersite.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the Contact lookup for the Broker who created this record using the Brokersite.</inlineHelpText>
+    <label>Broker Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Prospect</relationshipLabel>
+    <relationshipName>BrokerProspects</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

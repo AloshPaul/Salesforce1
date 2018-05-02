@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AppTrack_Created_On_or_After_8132014__c</fullName>
+    <description>For use with the "Min. Monthly Income Required" formula and related analysis.</description>
+    <externalId>false</externalId>
+    <formula>IF( DATEVALUE( CreatedDate )  >=  DATE(2014,8,13)  , 'Yes', 'No')</formula>
+    <label>AppTrack Created On or After 8-13-2014</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

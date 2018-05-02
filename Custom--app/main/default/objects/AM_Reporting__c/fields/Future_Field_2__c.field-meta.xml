@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_Field_2__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Portfolio__r.Acquisition_Status__c, "For Sale"),"For Sale", 
+IF(AND(ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c,"Closed - Leased (Assumed"),ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Closed - Cancelled")), "Rehab",
+ IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= "Residential",Yardi_Rent_Roll__r.Current_Tenant_Status__c= "Applicant" ), "Leased",
+ IF(AND(Yardi_Rent_Roll__r.Unit_Rental_Type__c= "Residential",Yardi_Rent_Roll__r.Current_Tenant_Status__c= "Future" ), "Leased",
+ IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c) , "TIP"),"TIP", 
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,"HOLD - Abd. Property Notice"),"TIP",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,"HOLD - BK"),"TIP",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,"HOLD - Deed"),"TIP",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,"HOLD - Limbo"),"TIP",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Tip__r.TIP_Status__c ,"HOLD - Do Not Contact"),"TIP",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Re-key Ready"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Sent to Locksmith"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Re-key Complete"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Front-End Assigned"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Needs Final Budget"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Needs Vendors"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Needs GC"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"GC Awarded"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Five Day Complete"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"Final Inspection Pass"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"HOLD - BK"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"HOLD - Other"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"HOLD - Utilities"), "Rehab",
+ IF( ISPICKVAL( Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c,"HOLD - Occupied/TIP"), "TIP",
+ IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = "Current", "Leased", 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = "Eviction", "Leased", 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = "Notice", "Leased", 
+IF( Yardi_Rent_Roll__r.Current_Tenant_Status__c = "VACANT", "OTM", 
+
+"Not Segmented"))))))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Future Field 2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

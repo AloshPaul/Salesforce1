@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Item_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Item Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Sent to Dispatch</fullName>
+                <default>false</default>
+                <label>Sent to Dispatch</label>
+            </value>
+            <value>
+                <fullName>Waiting Vendor Assignment</fullName>
+                <default>false</default>
+                <label>Waiting Vendor Assignment</label>
+            </value>
+            <value>
+                <fullName>In Progress - Technician</fullName>
+                <default>false</default>
+                <label>In Progress - Technician</label>
+            </value>
+            <value>
+                <fullName>In Progress - Vendor Mgmt</fullName>
+                <default>false</default>
+                <label>In Progress - Vendor Mgmt</label>
+            </value>
+            <value>
+                <fullName>Closed - Canceled</fullName>
+                <default>false</default>
+                <label>Closed - Canceled</label>
+            </value>
+            <value>
+                <fullName>Closed - Not Completed</fullName>
+                <default>false</default>
+                <label>Closed - Not Completed</label>
+            </value>
+            <value>
+                <fullName>Closed - Completed</fullName>
+                <default>false</default>
+                <label>Closed - Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

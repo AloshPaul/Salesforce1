@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Resident_Issue_Require_Portfolio</fullName>
+    <active>true</active>
+    <description>Current resident issues require a Portfolio.</description>
+    <errorConditionFormula>ISPICKVAL(Current_Resident__c, 'Yes') &amp;&amp;
+ISBLANK(Portfolio__c)&amp;&amp; 
+$Profile.Name != 'System Administrator' &amp;&amp;
+$Profile.Name != 'API User'</errorConditionFormula>
+    <errorDisplayField>Portfolio__c</errorDisplayField>
+    <errorMessage>Current resident issues require a Portfolio.</errorMessage>
+</ValidationRule>

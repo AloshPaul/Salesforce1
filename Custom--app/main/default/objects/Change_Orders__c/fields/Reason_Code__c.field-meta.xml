@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason Code</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Change_Order_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Theft/Vandalism</fullName>
+                <default>false</default>
+                <label>Theft/Vandalism</label>
+            </value>
+            <value>
+                <fullName>Replacing vs. Repairing</fullName>
+                <default>false</default>
+                <label>Replacing vs. Repairing</label>
+            </value>
+            <value>
+                <fullName>Environmental Remediation</fullName>
+                <default>false</default>
+                <label>Environmental Remediation</label>
+            </value>
+            <value>
+                <fullName>Removal</fullName>
+                <default>false</default>
+                <label>Removal</label>
+            </value>
+            <value>
+                <fullName>Vendor Default</fullName>
+                <default>false</default>
+                <label>Vendor Default</label>
+            </value>
+            <value>
+                <fullName>Natural Disaster</fullName>
+                <default>false</default>
+                <label>Natural Disaster</label>
+            </value>
+            <value>
+                <fullName>Repairing vs. Replacing</fullName>
+                <default>false</default>
+                <label>Repairing vs. Replacing</label>
+            </value>
+            <value>
+                <fullName>Received lower bid</fullName>
+                <default>false</default>
+                <label>Received lower bid</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Bid</fullName>
+                <default>false</default>
+                <label>Bid</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <valueName>Theft/Vandalism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <valueName>Replacing vs. Repairing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <valueName>Environmental Remediation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <valueName>Removal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <valueName>Vendor Default</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <valueName>Natural Disaster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Increase</controllingFieldValue>
+            <controllingFieldValue>Reduction</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reduction</controllingFieldValue>
+            <valueName>Repairing vs. Replacing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reduction</controllingFieldValue>
+            <valueName>Received lower bid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bid</controllingFieldValue>
+            <valueName>Bid</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

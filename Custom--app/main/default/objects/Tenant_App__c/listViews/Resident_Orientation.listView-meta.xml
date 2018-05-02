@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resident_Orientation</fullName>
+    <columns>NAME</columns>
+    <columns>Listing__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>App_Received__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>Orientation_Date_Time__c</columns>
+    <columns>Orientation_Comments__c</columns>
+    <columns>Orientation_Complete__c</columns>
+    <columns>Orientation_Specialist__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Declined,Cancelled</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant,Tenant_App__c.TIP_Primary_Applicant</value>
+    </filters>
+    <label>Resident Orientation</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Chicago</role>
+        <role>Team_Member_Chicago</role>
+    </sharedTo>
+</ListView>

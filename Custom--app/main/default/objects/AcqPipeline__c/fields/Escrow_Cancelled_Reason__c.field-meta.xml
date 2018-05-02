@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escrow_Cancelled_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Escrow Cancelled Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High Rehab Budget</fullName>
+                <default>false</default>
+                <label>High Rehab Budget</label>
+            </value>
+            <value>
+                <fullName>HOA Issues</fullName>
+                <default>false</default>
+                <label>HOA Issues</label>
+            </value>
+            <value>
+                <fullName>Title Issues</fullName>
+                <default>false</default>
+                <label>Title Issues</label>
+            </value>
+            <value>
+                <fullName>Seller Cancels</fullName>
+                <default>false</default>
+                <label>Seller Cancels</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Issues</fullName>
+    <columns>NAME</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Status__c</columns>
+    <columns>Severity__c</columns>
+    <columns>Rollout__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Reviewer__c</columns>
+    <columns>Task_Name__c</columns>
+    <columns>Parent_SIR__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Hold,Cancelled,Declined,Duplicate</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed - Nothing to Deploy,Deployed in PROD,Complete in Dev</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>11/1/2012 12:00 AM</value>
+    </filters>
+    <label>_Open Issues</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

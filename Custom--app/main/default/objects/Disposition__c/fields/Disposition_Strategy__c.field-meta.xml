@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Strategy__c</fullName>
+    <externalId>false</externalId>
+    <label>Disposition Strategy</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auction</fullName>
+                <default>false</default>
+                <label>Auction</label>
+            </value>
+            <value>
+                <fullName>Realtor</fullName>
+                <default>false</default>
+                <label>Realtor</label>
+            </value>
+            <value>
+                <fullName>Auction/Realtor</fullName>
+                <default>false</default>
+                <label>Auction/Realtor</label>
+            </value>
+            <value>
+                <fullName>Tenant Offer</fullName>
+                <default>false</default>
+                <label>Tenant Offer</label>
+            </value>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <label>Bulk</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>RFL</fullName>
+                <default>false</default>
+                <label>RFL</label>
+            </value>
+            <value>
+                <fullName>DTM - Network</fullName>
+                <default>false</default>
+                <label>DTM - Network</label>
+            </value>
+            <value>
+                <fullName>Broker/MLS</fullName>
+                <default>false</default>
+                <label>Broker/MLS</label>
+            </value>
+            <value>
+                <fullName>DTM - Online</fullName>
+                <default>false</default>
+                <label>DTM - Online</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

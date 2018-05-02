@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Total_Deficiences__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Roll Up Summary of the Total Number of Deficiencies for this rehab.</inlineHelpText>
+    <label># of Total Deficiences</label>
+    <summarizedField>QC_Audit__c.of_Deficiencies_Total__c</summarizedField>
+    <summaryFilterItems>
+        <field>QC_Audit__c.RecordTypeId</field>
+        <operation>notEqual</operation>
+        <value>2 - Post Rehab QC Audit</value>
+    </summaryFilterItems>
+    <summaryForeignKey>QC_Audit__c.Rehab__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Bulk_Deal__c</columns>
+    <columns>NAME</columns>
+    <columns>Properties__c</columns>
+    <columns>Region__c</columns>
+    <columns>Region_Value__c</columns>
+    <columns>UW_Deadline__c</columns>
+    <columns>Submit_to_Region__c</columns>
+    <columns>Date_Time_to_Region__c</columns>
+    <columns>Underwriting_Complete__c</columns>
+    <columns>Date_Time_Underwriting_Complete__c</columns>
+    <columns>Property_Count_of_Bulk_Total__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

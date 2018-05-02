@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Placement__c</fullName>
+    <externalId>false</externalId>
+    <label>Sign Placement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Window</fullName>
+                <default>false</default>
+                <label>Window</label>
+            </value>
+            <value>
+                <fullName>Yard</fullName>
+                <default>false</default>
+                <label>Yard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

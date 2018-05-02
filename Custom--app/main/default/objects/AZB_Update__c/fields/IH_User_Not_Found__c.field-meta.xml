@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IH_User_Not_Found__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is to enable workflow processing for the difficult-to-handle User not found error.
+If this is marked true, then up to 1 email may be sent to this user's email address if this user's id was not found in his User record.</description>
+    <externalId>false</externalId>
+    <label>IH User Not Found</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Generation_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Lease Generation Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blank Lease</fullName>
+                <default>false</default>
+                <label>Blank Lease</label>
+            </value>
+            <value>
+                <fullName>Pre-Filled Lease</fullName>
+                <default>false</default>
+                <label>Pre-Filled Lease</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

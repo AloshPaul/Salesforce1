@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZB_Success</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Street__c</columns>
+    <columns>IH_Last_Result_Message__c</columns>
+    <columns>IH_Needs_Processing__c</columns>
+    <columns>IH_Pipeline__c</columns>
+    <columns>IH_Prospect__c</columns>
+    <columns>IH_User_Id__c</columns>
+    <columns>IH_Trustee_Company__c</columns>
+    <columns>Trustee_Company__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IH_Last_Result_Success__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>AZB Success</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

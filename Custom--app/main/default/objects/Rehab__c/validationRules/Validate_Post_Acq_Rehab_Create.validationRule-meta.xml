@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Post_Acq_Rehab_Create</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISNEW(), RecordType.DeveloperName = 'Post_Acquisition', Portfolio__r.Count_Active_Post_Acquisition_Rehabs__c > 0)</errorConditionFormula>
+    <errorMessage>You cannot create a Post-Acquisition Rehab when an active Post-Acquisition Rehab already exists.</errorMessage>
+</ValidationRule>

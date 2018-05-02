@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Access_Key_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Access_Key_ID</shortDescription>
+        <value>AKIAID4WZF77SHYHK75A</value>
+    </labels>
+    <labels>
+        <fullName>AppTrackClosedStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AppTrackClosedStatus</shortDescription>
+        <value>Approved - Deposit Received/Leased,Declined,Cancelled</value>
+    </labels>
+    <labels>
+        <fullName>ByPassDisposition</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ByPassDisposition</shortDescription>
+        <value>False</value>
+    </labels>
+    <labels>
+        <fullName>Claim_Market2_AS_SOURCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Claim_Market2_AS_SOURCE</shortDescription>
+        <value>Region_New__c</value>
+    </labels>
+    <labels>
+        <fullName>Concierge_Record_Type_Datamatics_Request</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Concierge_Record_Type_Datamatics_Request</shortDescription>
+        <value>Datamatics_Request</value>
+    </labels>
+    <labels>
+        <fullName>Concierge_Record_Type_Treasury_Request</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Concierge_Record_Type_Treasury_Request</shortDescription>
+        <value>Treasury_Request</value>
+    </labels>
+    <labels>
+        <fullName>DUPLICATE_RULE_LAST_CREATED_HOURS</fullName>
+        <categories>Duplicate IH Rules</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUPLICATE_RULE_LAST_CREATED_HOURS</shortDescription>
+        <value>48</value>
+    </labels>
+    <labels>
+        <fullName>Disposition_Date_Need_to_Populate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Disposition Date Need to Populate</shortDescription>
+        <value>Disposition date on Disposition  must be populated before changing the Acquisition Status to Sold</value>
+    </labels>
+    <labels>
+        <fullName>Disposition_Rehab_Not_Allowed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Disposition Rehab Not Allowed</shortDescription>
+        <value>This portfolio does not have a disposition associated with it; or, disposition does not have necessary approvals to create a Disposition Rehab Record.</value>
+    </labels>
+    <labels>
+        <fullName>Do_Not_Change_RTM_Sprint3_Day</fullName>
+        <categories>RPS Suspension</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Do Not Change RTM Sprint3 Day</shortDescription>
+        <value>24</value>
+    </labels>
+    <labels>
+        <fullName>Do_Not_Change_RTM_Sprint3_Month</fullName>
+        <categories>RPS Suspension</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Do Not Change RTM Sprint3 Month</shortDescription>
+        <value>02</value>
+    </labels>
+    <labels>
+        <fullName>Do_Not_Change_RTM_Sprint3_Year</fullName>
+        <categories>RPS Suspension</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Do Not Change RTM Sprint3 Year</shortDescription>
+        <value>2016</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_ADDRESS_NOT_FOUND</fullName>
+        <categories>Invitation Homes</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_ADDRESS_NOT_FOUND</shortDescription>
+        <value>Address not found</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_APN_VALIDATION_INVALID_RESIDENCE</fullName>
+        <categories>Residence</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_APN_VALIDATION_INVALID_RESIDENCE</shortDescription>
+        <value>This APN is associated with a non validated residence record. Please contact your System Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_MUST_BE_POST_ACQ_TIP_RECORD_TYPE</fullName>
+        <categories>Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_MUST_BE_POST_ACQ_TIP_RECORD_TYPE</shortDescription>
+        <value>This is the first rehab for Portfolio. It must be of type "Post-Acquisition TIP".</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_MUST_NOT_BE_POST_ACQ_RECORD_TYPES</fullName>
+        <categories>Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_MUST_NOT_BE_POST_ACQ_RECORD_TYPES</shortDescription>
+        <value>This is not the first rehab for Portfolio. It can not be of type "Post-Acquisition TIP" or "Post-Acquisition".</value>
+    </labels>
+    <labels>
+        <fullName>ERROR_PROPERTY_APPROVAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR_PROPERTY_APPROVAL</shortDescription>
+        <value>All the properties for this date have been already processed for Yardi. Please change the reporting date to next business day first and then approve this property.</value>
+    </labels>
+    <labels>
+        <fullName>Lawn_Maintenance_Message1</fullName>
+        <categories>Lawn Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lawn Maintenance Message1</shortDescription>
+        <value>Lawn maintinance team does not have a end service contact.</value>
+    </labels>
+    <labels>
+        <fullName>Lawn_Maintenance_Message2</fullName>
+        <categories>Lawn Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lawn Maintenance Message2</shortDescription>
+        <value>Lawn maintinance team end service contact does not have correct role.</value>
+    </labels>
+    <labels>
+        <fullName>Lawn_Maintenance_Message3</fullName>
+        <categories>Lawn Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lawn Maintenance Message3</shortDescription>
+        <value>Lawn maintinance team end service contact does not have email.</value>
+    </labels>
+    <labels>
+        <fullName>Lawn_Maintenance_Message4</fullName>
+        <categories>Lawn Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lawn Maintenance Message4</shortDescription>
+        <value>Lawn maintinance team end service contact no longer belongs to company.</value>
+    </labels>
+    <labels>
+        <fullName>Market2_AS_SOURCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Market2_AS_SOURCE</shortDescription>
+        <value>Region__c</value>
+    </labels>
+    <labels>
+        <fullName>Market_AS_TARGET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Market_AS_TARGET</shortDescription>
+        <value>Market__c</value>
+    </labels>
+    <labels>
+        <fullName>NEW_PROSPECT_ADDRESS_ERROR</fullName>
+        <categories>Prospect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NEW_PROSPECT_ADDRESS_ERROR</shortDescription>
+        <value>Please Insert a valid address.</value>
+    </labels>
+    <labels>
+        <fullName>PROFILE_ID_NOT_TO_INCLUDE_IN_PM_UPDATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PROFILE ID NOT TO INCLUDE IN PM UPDATE</shortDescription>
+        <value>00eE0000000NWvIIAW, 00eE0000000NXu7IAG</value>
+    </labels>
+    <labels>
+        <fullName>PROSPECT_CITY_REQUIRED</fullName>
+        <categories>Prospect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PROSPECT CITY REQUIRED</shortDescription>
+        <value>You must have value for city.</value>
+    </labels>
+    <labels>
+        <fullName>PROSPECT_STREET_REQUIRED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PROSPECT STREET REQUIRED</shortDescription>
+        <value>You must have value for street.</value>
+    </labels>
+    <labels>
+        <fullName>PROSPECT_ZIP_REQUIRED</fullName>
+        <categories>Prospect</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PROSPECT ZIP REQUIRED</shortDescription>
+        <value>You must have a value for zip.</value>
+    </labels>
+    <labels>
+        <fullName>Pool_Maintenance_Message1</fullName>
+        <categories>Pool Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pool Maintenance Message1</shortDescription>
+        <value>Pool maintinance team does not have a end service contact.</value>
+    </labels>
+    <labels>
+        <fullName>Pool_Maintenance_Message2</fullName>
+        <categories>Pool Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pool Maintenance Message2</shortDescription>
+        <value>Pool maintinance team end service contact does not have correct role.</value>
+    </labels>
+    <labels>
+        <fullName>Pool_Maintenance_Message4</fullName>
+        <categories>Pool Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pool Maintenance Message4</shortDescription>
+        <value>Pool maintinance team end service contact no longer belongs to company.</value>
+    </labels>
+    <labels>
+        <fullName>Pool_maintenance_Message3</fullName>
+        <categories>Pool Maintenance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pool maintenance Message3</shortDescription>
+        <value>Pool maintinance team end service contact does not have email.</value>
+    </labels>
+    <labels>
+        <fullName>REHAB_TYPE_SELECTION</fullName>
+        <categories>Rehab</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REHAB_TYPE_SELECTION</shortDescription>
+        <value>Please select a Rehab Type.</value>
+    </labels>
+    <labels>
+        <fullName>RESIDENCE_WITH_NON_VALIDATED_ADDRESS</fullName>
+        <categories>Residence</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RESIDENCE_WITH_NON_VALIDATED_ADDRESS</shortDescription>
+        <value>The address you've entered is not currently recognized by the US Postal Service.</value>
+    </labels>
+    <labels>
+        <fullName>RESIDENCE_WITH_SAME_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RESIDENCE_WITH_SAME_ADDRESS</shortDescription>
+        <value>The address entered is already associated with a property that is Active in our system.</value>
+    </labels>
+    <labels>
+        <fullName>Rehab_Crew_Message1</fullName>
+        <categories>Rehab Crew</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rehab Crew Message1</shortDescription>
+        <value>Rehab crew team does not have intake contact.</value>
+    </labels>
+    <labels>
+        <fullName>Rehab_Crew_Message2</fullName>
+        <categories>Rehab Crew</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rehab Crew Message2</shortDescription>
+        <value>Rehab crew team intake contact does not have correct role.</value>
+    </labels>
+    <labels>
+        <fullName>Rehab_Crew_Message3</fullName>
+        <categories>Rehab Crew</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rehab Crew Message3</shortDescription>
+        <value>Rehab crew team intake contact does not have email.</value>
+    </labels>
+    <labels>
+        <fullName>Rehab_Crew_Message4</fullName>
+        <categories>Rehab Crew</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rehab Crew Message4</shortDescription>
+        <value>Rehab crew team intake contact no longer belongs to company.</value>
+    </labels>
+    <labels>
+        <fullName>Residence_Update_Not_Allowed_Error_Message</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Residence Update Not Allowed Error Message</shortDescription>
+        <value>Residence is associated with a Portfolio. You cannot update it. Please contact your Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>SERVER_URL</fullName>
+        <categories>System</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SERVER_URL</shortDescription>
+        <value>https://cs64.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>STATE_NOT_FOUND</fullName>
+        <categories>State</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>STATE_NOT_FOUND</shortDescription>
+        <value>Currently no record for state is there with specified name. Please add state new record if state name is correct and realistic.</value>
+    </labels>
+    <labels>
+        <fullName>SWAY_REGION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SWAY_REGION</shortDescription>
+        <value>Dallas,Denver,Houston,Nashville</value>
+    </labels>
+    <labels>
+        <fullName>UNASSIGNED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UNASSIGNED</shortDescription>
+        <value>unassigned</value>
+    </labels>
+    <labels>
+        <fullName>UNMATCHED_ADDRESS</fullName>
+        <categories>Rehab</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UNMATCHED_ADDRESS</shortDescription>
+        <value>Please select an existing record using search box.</value>
+    </labels>
+    <labels>
+        <fullName>USER_DEACTIVATION_OBJECT</fullName>
+        <categories>User Deactivation</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>USER_DEACTIVATION_OBJECT</shortDescription>
+        <value>Prospect__c,Property_Opportunity__c,Property__c,Region__c,Rehab__c,TIP_Tracking__c,Account, Contact,Tenant_App__c,Bidding_Statistics__c,Bulk_Sale__c,Claims__c,EMD_COE_Request__c, Eviction__c,HD_Budget_Walk__c,Incoming_Calls__c,Permit__c, Property_Issues__c,Property_Walk__c,Purchase_Rented__c,Residence__c,Issues_New_Feature_Request__c,Data_Change_Request__c</value>
+    </labels>
+    <labels>
+        <fullName>Username_For_Formstack_ApiUser</fullName>
+        <categories>Property Issues</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Username For Formstack ApiUser</shortDescription>
+        <value>formstack@invitationhomes.com</value>
+    </labels>
+    <labels>
+        <fullName>Validation_Notes_Promote_Roommate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validation_Notes_Promote_Roommate</shortDescription>
+        <value>Promote Roommate</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,27 @@
+<apex:page standardController="HOA_Tracking__c" extensions="createHOAPaymentsExtension" recordSetVar="hoaTrackings" 
+			title="Create HOA Payments" action="{!createPaymentRecords}" tabStyle="HOA_Tracking__c" >
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="Back" action="{!cancel}" />
+			</apex:pageBlockButtons>
+			<apex:outputPanel rendered="{!pageHasError}">
+				<apex:pageMessage summary="{!errorMessage}" severity="error" />
+			</apex:outputPanel>
+			<apex:outputPanel rendered="{!NOT(PageHasError)}">
+				HOA Payment records were created successfully. Following are the details.
+				<apex:pageBlockTable value="{!toInsertHoaPayments}" var="hoaPayment">
+					<apex:column headerValue="HOA Payment" >
+						<apex:outputLink value="/{!hoaPayment.Id}" target="_blank">
+	                    	{!hoaPayment.Name}
+	                    </apex:outputLink>
+					</apex:column>
+					<apex:column value="{!hoaPayment.HOA_Tracker__c}" />
+					<apex:column value="{!hoaPayment.Monthly_Amount__c}" />
+					<apex:column value="{!hoaPayment.Due_Date__c}" />
+					<apex:column value="{!hoaPayment.Status__c}" />
+				</apex:pageBlockTable>
+			</apex:outputPanel>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

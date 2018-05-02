@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Rent_Adjustment_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This date is automatically populated with the date the Market (Asking) Rent was last changed.</inlineHelpText>
+    <label>Last Rent Adjustment Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

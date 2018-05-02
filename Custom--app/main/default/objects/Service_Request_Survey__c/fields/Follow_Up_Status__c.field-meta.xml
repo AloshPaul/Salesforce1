@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Follow Up Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Follow Up Necessary</fullName>
+                <default>false</default>
+                <label>No Follow Up Necessary</label>
+            </value>
+            <value>
+                <fullName>Needs Follow Up</fullName>
+                <default>false</default>
+                <label>Needs Follow Up</label>
+            </value>
+            <value>
+                <fullName>Follow Up in Progress</fullName>
+                <default>false</default>
+                <label>Follow Up in Progress</label>
+            </value>
+            <value>
+                <fullName>Follow Up Completed</fullName>
+                <default>false</default>
+                <label>Follow Up Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

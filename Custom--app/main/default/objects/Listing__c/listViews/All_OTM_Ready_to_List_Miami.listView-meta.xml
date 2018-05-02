@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_OTM_Ready_to_List_Miami</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>City__c</columns>
+    <columns>County__c</columns>
+    <columns>NAME</columns>
+    <columns>YRR_Market_Rent__c</columns>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Previous_Lease_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>CMA_Received_Date__c</columns>
+    <columns>DOM_Rehab_Complete_to_Lease_Start__c</columns>
+    <columns>Marketing_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Ready to List</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Miami</value>
+    </filters>
+    <filters>
+        <field>Marketing_Notes__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Agent_Assigned__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CMA_Received_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All OTM-Ready to List Miami</label>
+</ListView>

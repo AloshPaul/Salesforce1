@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Folder_Access__c</fullName>
+    <description>When the folder is created on S3, this flag determines if it will be Public (Read Only) or Private to Invitation Homes thru Salesforce only.  Note that all internal users that have access to the record will have write access whether or not it is set at Public/Private.  This is only so external folks may view files in that folder.</description>
+    <externalId>false</externalId>
+    <label>Folder Access</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Private</fullName>
+                <default>true</default>
+                <label>Private</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+            <value>
+                <fullName>Custom?</fullName>
+                <default>false</default>
+                <label>Custom?</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

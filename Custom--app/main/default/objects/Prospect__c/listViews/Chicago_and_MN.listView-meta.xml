@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chicago_and_MN</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Region__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Chicago,Minneapolis</value>
+    </filters>
+    <label>Chicago and MN</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

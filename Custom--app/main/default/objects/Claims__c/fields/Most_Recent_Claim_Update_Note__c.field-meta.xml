@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Recent_Claim_Update_Note__c</fullName>
+    <description>The field is populated via a Trigger.  See D-00011450.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field auto-populates with the Note field contents on the most recently updated Claim Update.</inlineHelpText>
+    <label>Most Recent Claim Update Note</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

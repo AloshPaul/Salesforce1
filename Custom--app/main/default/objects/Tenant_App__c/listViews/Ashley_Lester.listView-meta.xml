@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ashley_Lester</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Signed_Lease_Rec_vd_Date__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Orientation_Coordinator__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>App_Received__c</columns>
+    <columns>Scheduled_Move_In__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Lease_Start_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant</value>
+    </filters>
+    <filters>
+        <field>Orientation_Coordinator__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Orientation Coordinator Assignment</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Executive_Atlanta</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Team_Member_Atlanta</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

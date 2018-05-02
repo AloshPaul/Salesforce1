@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acquisition_StatusValidationForSOLDAsset</fullName>
+    <active>true</active>
+    <description>If Portfolio :Acquisition Status = SOLD, it will never go back to For Sale.</description>
+    <errorConditionFormula>AND(  For_Sale__c , ISCHANGED(Acquisition_Status__c) ,  ISPICKVAL(PRIORVALUE(Acquisition_Status__c), 'Sold')  , $Profile.Name != 'System Administrator' )</errorConditionFormula>
+    <errorMessage>Acquisition Status can't be updated for "Sold" properties</errorMessage>
+</ValidationRule>

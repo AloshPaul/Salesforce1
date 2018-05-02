@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YRR_Market_Rent__c</fullName>
+    <externalId>false</externalId>
+    <formula>Residence__r.Most_Recent_Yardi_Rent_Roll__r.Market_Rent__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the market rent shown on the Most Recent Yardi Rent Roll (YRR) record on Residence.  This record is updated once per day, so changes made today will not be reflected until tomorrow morning.</inlineHelpText>
+    <label>YRR Market Rent</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

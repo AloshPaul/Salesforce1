@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Days_in_Rehab__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Stage__c ,"Re-key Ready") , TODAY() - IF(ISBLANK(Rehab_Aging_Start_Date__c), DATEVALUE( CreatedDate ) , Rehab_Aging_Start_Date__c) , 
+IF( ISPICKVAL( Stage__c ,"Sent to Locksmith") , TODAY() - IF(ISBLANK(Rehab_Aging_Start_Date__c), DATEVALUE( CreatedDate ) , Rehab_Aging_Start_Date__c), 
+IF( ISPICKVAL( Stage__c, "Final Inspection Pass / QC Ready") , TODAY() - Re_Key_Date__c , 
+IF( ISPICKVAL( Stage__c , "Closed - Cancelled") , Office_Signoff_Date__c - Re_Key_Date__c , 
+IF( ISPICKVAL( Stage__c , "Closed - Completed") , Office_Signoff_Date__c - Re_Key_Date__c , 
+IF( ISPICKVAL( Stage__c, "Closed - No Rehab Needed") , Office_Signoff_Date__c - Re_Key_Date__c , 
+TODAY() - Rehab_Aging_Start_Date__c))))))</formula>
+    <label># of Days in Rehab</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

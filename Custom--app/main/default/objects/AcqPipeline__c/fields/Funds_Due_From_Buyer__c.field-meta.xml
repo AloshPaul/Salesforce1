@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Funds_Due_From_Buyer__c</fullName>
+    <externalId>false</externalId>
+    <formula>Closing_Statement_Contract_Price__c - Closing_Statement_Deposit__c - ( Acq_Costs_Paid_at_Closing__c + Other_Costs_Paid_at_Closing__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>COE Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

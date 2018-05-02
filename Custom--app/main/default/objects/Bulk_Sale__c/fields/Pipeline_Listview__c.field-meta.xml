@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Listview__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Property_ListView_Id__c), '', HYPERLINK('/a0m?div_filter=&amp;fcf=' + LEFT(Pipeline_ListView_Id__c, 15), 'Click here', '_blank'))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Pipeline Listview</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

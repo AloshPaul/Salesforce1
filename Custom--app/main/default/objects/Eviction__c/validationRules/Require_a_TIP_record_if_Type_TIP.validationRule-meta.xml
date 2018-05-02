@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_a_TIP_record_if_Type_TIP</fullName>
+    <active>false</active>
+    <description>Require a TIP record if Type value= TIP</description>
+    <errorConditionFormula>TEXT(Eviction_Type__c) = "TIP"
+&amp;&amp; ISBLANK( TIP_Record__c)</errorConditionFormula>
+    <errorMessage>Please create a TIP record before choosing TIP as the type of Eviction.</errorMessage>
+</ValidationRule>

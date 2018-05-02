@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ordered</fullName>
+                <default>true</default>
+                <label>Ordered</label>
+            </value>
+            <value>
+                <fullName>Walk Scheduled</fullName>
+                <default>false</default>
+                <label>Walk Scheduled</label>
+            </value>
+            <value>
+                <fullName>Walk Complete</fullName>
+                <default>false</default>
+                <label>Walk Complete</label>
+            </value>
+            <value>
+                <fullName>Budget Submitted</fullName>
+                <default>false</default>
+                <label>Budget Submitted</label>
+            </value>
+            <value>
+                <fullName>Budget Approved</fullName>
+                <default>false</default>
+                <label>Budget Approved</label>
+            </value>
+            <value>
+                <fullName>Reduction Requested</fullName>
+                <default>false</default>
+                <label>Reduction Requested</label>
+            </value>
+            <value>
+                <fullName>Hold</fullName>
+                <default>false</default>
+                <label>Hold</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Trackers_for_IE</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>HOA__c</columns>
+    <columns>HOA_Type__c</columns>
+    <columns>Property_Mgmt_Co__c</columns>
+    <columns>Acquired_Date__c</columns>
+    <columns>HOA_Account_Number__c</columns>
+    <columns>Payment_Frequency__c</columns>
+    <columns>Payment_Months__c</columns>
+    <columns>Dues__c</columns>
+    <columns>Special_Assessment__c</columns>
+    <columns>Payment_Amount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Inland Empire</value>
+    </filters>
+    <label>HOA Trackers for IE</label>
+</ListView>

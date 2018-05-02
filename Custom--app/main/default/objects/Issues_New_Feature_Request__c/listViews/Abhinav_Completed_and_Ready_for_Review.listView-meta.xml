@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Abhinav_Completed_and_Ready_for_Review</fullName>
+    <booleanFilter>1  OR 2 OR 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Task_Name__c</columns>
+    <columns>Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project_Owner__c</field>
+        <operation>equals</operation>
+        <value>Abhinav Sharma</value>
+    </filters>
+    <filters>
+        <field>Task_Owner__c</field>
+        <operation>equals</operation>
+        <value>Abhinav Sharma</value>
+    </filters>
+    <filters>
+        <field>Reviewer__c</field>
+        <operation>equals</operation>
+        <value>Abhinav Sharma</value>
+    </filters>
+    <label>Abhinav Completed and Ready for Review</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deploy_To_TDEV4</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Manual_Step__c</columns>
+    <columns>Type_Of_Modification__c</columns>
+    <columns>Component_Type__c</columns>
+    <columns>Object_Name__c</columns>
+    <columns>Component_Name__c</columns>
+    <columns>System_Issue_Report__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SIR_Targeted_Rollout__c</field>
+        <operation>equals</operation>
+        <value>2013 Jul 22</value>
+    </filters>
+    <filters>
+        <field>SIR_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Ready for QA Review</value>
+    </filters>
+    <label>Deploy to TDEV4 for Customer Portal</label>
+</ListView>

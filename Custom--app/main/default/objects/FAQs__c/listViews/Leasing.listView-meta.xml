@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leasing</fullName>
+    <columns>NAME</columns>
+    <columns>Question__c</columns>
+    <columns>Topic__c</columns>
+    <columns>Subtopic__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Topic__c</field>
+        <operation>equals</operation>
+        <value>Listing,Rehab &amp; Listing,Lease &amp; Renewal,Lease &amp; Renewal &amp; Rehab</value>
+    </filters>
+    <label>Leasing</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

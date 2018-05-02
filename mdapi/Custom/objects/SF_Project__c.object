@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to track  high-level information for SF Team projects.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual End Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_Complexity_Severity__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Complexity / Severity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Business_Problem__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Problem</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Critical_Dependencies__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please note if this project has specific technical dependencies (such as another project that needs to get completed before it can get started) or other dependencies such as business process definition, etc. that could impact the start or finish date.</inlineHelpText>
+        <label>Critical Dependencies</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Days_Diff_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_End_Date__c - Planned_End_Date__c</formula>
+        <label># Days Diff. End Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Diff_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_Start_Date__c - Planned_Start_Date__c</formula>
+        <label># Days Diff. Start Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deadline_Details__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please provide information regarding this deadline.  Who set it?  Why is it important?</inlineHelpText>
+        <label>Deadline Details</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Deadline</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description_of_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Description of Resolution</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_to_QA__c</fullName>
+        <externalId>false</externalId>
+        <label>Due to QA</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Execution_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to define our approach to this project, including what resources will be on point for delivery.  (In-house, regional team, contractors, SF.com Strategic Services, etc.)</inlineHelpText>
+        <label>Execution Strategy</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>In_Scope__c</fullName>
+        <externalId>false</externalId>
+        <label>In Scope</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Level_of_Effort__c</fullName>
+        <externalId>false</externalId>
+        <label>Level of Effort</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Level_of_Technical_Complexity__c</fullName>
+        <externalId>false</externalId>
+        <label>Level of Technical Complexity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None - All Config / Operations</fullName>
+                    <default>false</default>
+                    <label>None - All Config / Operations</label>
+                </value>
+                <value>
+                    <fullName>Minimal - Light Dev Required</fullName>
+                    <default>false</default>
+                    <label>Minimal - Light Dev Required</label>
+                </value>
+                <value>
+                    <fullName>Some -  Some Dev Required</fullName>
+                    <default>false</default>
+                    <label>Some -  Some Dev Required</label>
+                </value>
+                <value>
+                    <fullName>Significant Dev Required</fullName>
+                    <default>false</default>
+                    <label>Significant Dev Required</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Ongoing_Impact_to_sf_com_Team__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to indicate what, if any, ongoing impact the completion of this project will have on the sf.com team in terms of resources or effort to support.</inlineHelpText>
+        <label>Ongoing Impact to sf.com Team</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Out_of_Scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Out of Scope</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Parent_SIR__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent SIR</label>
+        <referenceTo>Issues_New_Feature_Request__c</referenceTo>
+        <relationshipLabel>SF Projects</relationshipLabel>
+        <relationshipName>SF_Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Planned_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned End Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Stakeholder_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Stakeholder(s)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Lead_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Lead(s)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Brad Greiwe</fullName>
+                    <default>false</default>
+                    <label>Brad Greiwe</label>
+                </value>
+                <value>
+                    <fullName>Brant Hanna</fullName>
+                    <default>false</default>
+                    <label>Brant Hanna</label>
+                </value>
+                <value>
+                    <fullName>Brittany Bond</fullName>
+                    <default>false</default>
+                    <label>Brittany Bond</label>
+                </value>
+                <value>
+                    <fullName>Dave Seligson</fullName>
+                    <default>false</default>
+                    <label>Dave Seligson</label>
+                </value>
+                <value>
+                    <fullName>Jodi Hrbek</fullName>
+                    <default>false</default>
+                    <label>Jodi Hrbek</label>
+                </value>
+                <value>
+                    <fullName>Jonathan Major</fullName>
+                    <default>false</default>
+                    <label>Jonathan Major</label>
+                </value>
+                <value>
+                    <fullName>Kevin Tran</fullName>
+                    <default>false</default>
+                    <label>Kevin Tran</label>
+                </value>
+                <value>
+                    <fullName>Mara Pederson</fullName>
+                    <default>false</default>
+                    <label>Mara Pederson</label>
+                </value>
+                <value>
+                    <fullName>Matt Lent</fullName>
+                    <default>false</default>
+                    <label>Matt Lent</label>
+                </value>
+                <value>
+                    <fullName>Melanie Matney</fullName>
+                    <default>false</default>
+                    <label>Melanie Matney</label>
+                </value>
+                <value>
+                    <fullName>Naveen Skaria</fullName>
+                    <default>false</default>
+                    <label>Naveen Skaria</label>
+                </value>
+                <value>
+                    <fullName>Randy Kish</fullName>
+                    <default>false</default>
+                    <label>Randy Kish</label>
+                </value>
+                <value>
+                    <fullName>Terraell Hazlett</fullName>
+                    <default>false</default>
+                    <label>Terraell Hazlett</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Plan_Link__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Password:  IH</inlineHelpText>
+        <label>Project Plan Link</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Status_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Proposed - Informal</fullName>
+                    <default>false</default>
+                    <label>Proposed - Informal</label>
+                </value>
+                <value>
+                    <fullName>Proposed - Formal Request</fullName>
+                    <default>false</default>
+                    <label>Proposed - Formal Request</label>
+                </value>
+                <value>
+                    <fullName>Approved / Planning</fullName>
+                    <default>false</default>
+                    <label>Approved / Planning</label>
+                </value>
+                <value>
+                    <fullName>In Process</fullName>
+                    <default>false</default>
+                    <label>In Process</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>HOLD</fullName>
+                    <default>false</default>
+                    <label>HOLD</label>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <default>false</default>
+                    <label>Deferred</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Target_Deploy__c</fullName>
+        <externalId>false</externalId>
+        <label>Target Deploy</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Technical_Complexity_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Technical Complexity Comments</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enhancement</fullName>
+                    <default>false</default>
+                    <label>Enhancement</label>
+                </value>
+                <value>
+                    <fullName>System Maintenance  &amp; Support</fullName>
+                    <default>false</default>
+                    <label>System Maintenance  &amp; Support</label>
+                </value>
+                <value>
+                    <fullName>System/Process Documentation</fullName>
+                    <default>false</default>
+                    <label>System/Process Documentation</label>
+                </value>
+                <value>
+                    <fullName>&quot;Flash&quot; Project</fullName>
+                    <default>false</default>
+                    <label>&quot;Flash&quot; Project</label>
+                </value>
+                <value>
+                    <fullName>Formal (PMO) Project</fullName>
+                    <default>false</default>
+                    <label>Formal (PMO) Project</label>
+                </value>
+                <value>
+                    <fullName>Training / Communication</fullName>
+                    <default>false</default>
+                    <label>Training / Communication</label>
+                </value>
+                <value>
+                    <fullName>Data Remediation</fullName>
+                    <default>false</default>
+                    <label>Data Remediation</label>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <default>false</default>
+                    <label>Deferred</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>SF Project</label>
+    <listViews>
+        <fullName>All_Open_Enhancements</fullName>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Level_of_Effort__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Comments__c</columns>
+        <columns>Deadline__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Enhancement</value>
+        </filters>
+        <label>All Open - Enhancements</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Flash_Projects</fullName>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status_Comments__c</columns>
+        <columns>Deadline__c</columns>
+        <columns>Level_of_Effort__c</columns>
+        <columns>Level_of_Technical_Complexity__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>contains</operation>
+            <value>Flash</value>
+        </filters>
+        <label>All Open - Flash Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_PMO_Projects</fullName>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Comments__c</columns>
+        <columns>Deadline__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Formal (PMO) Project</value>
+        </filters>
+        <label>All Open - PMO Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_System_Maintenance</fullName>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Comments__c</columns>
+        <columns>Deadline__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>System Maintenance  &amp; Support</value>
+        </filters>
+        <label>All Open - System Maintenance</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_System_Process_Documentation</fullName>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Comments__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <columns>Deadline__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>System/Process Documentation</value>
+        </filters>
+        <label>All Open - System/Process Documentation</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_not_System_Maintenance</fullName>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>NAME</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Comments__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <columns>Planned_Start_Date__c</columns>
+        <columns>Planned_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>HOLD,Completed,Cancelled</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>notEqual</operation>
+            <value>System Maintenance  &amp; Support</value>
+        </filters>
+        <label>All Open - Not Incl. System Maintenance</label>
+    </listViews>
+    <listViews>
+        <fullName>All_SF_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Business_Problem__c</columns>
+        <columns>Project_Lead_s__c</columns>
+        <columns>Status__c</columns>
+        <columns>Level_of_Effort__c</columns>
+        <columns>Level_of_Technical_Complexity__c</columns>
+        <columns>Technical_Complexity_Comments__c</columns>
+        <columns>Description_of_Resolution__c</columns>
+        <columns>Execution_Strategy__c</columns>
+        <columns>In_Scope__c</columns>
+        <columns>Out_of_Scope__c</columns>
+        <columns>Planned_Start_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Projects</label>
+    </listViews>
+    <nameField>
+        <label>SF Project Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>SF Projects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Business_Problem__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Lead_s__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>In_Scope__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Out_of_Scope__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Planned_Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actual_Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Planned_End_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actual_End_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Parent_SIR__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Project_Lead_s__c</searchFilterFields>
+        <searchFilterFields>Planned_Start_Date__c</searchFilterFields>
+        <searchFilterFields>Actual_Start_Date__c</searchFilterFields>
+        <searchFilterFields>Planned_End_Date__c</searchFilterFields>
+        <searchFilterFields>Actual_End_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>Business_Problem__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Lead_s__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Planned_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Actual_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Planned_End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Actual_End_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>All_Open_Support_Change_Requests</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>All Open Support/Change Requests</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000002M5c9</url>
+    </webLinks>
+    <webLinks>
+        <fullName>All_Related_Support_Change_Requests</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>All Related Support/Change Requests</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00OE0000002M5b6?pv0={!SF_Project__c.Id}</url>
+    </webLinks>
+</CustomObject>

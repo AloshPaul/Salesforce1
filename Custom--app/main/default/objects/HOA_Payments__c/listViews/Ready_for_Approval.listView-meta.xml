@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_for_Approval</fullName>
+    <columns>Status__c</columns>
+    <columns>Monthly_Amount__c</columns>
+    <columns>Additional_Payment__c</columns>
+    <columns>Total_to_Pay__c</columns>
+    <columns>Addt_l_Payment_Comments__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>HOA_Tracker__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Needs Approval</value>
+    </filters>
+    <label>Ready for Approval</label>
+</ListView>

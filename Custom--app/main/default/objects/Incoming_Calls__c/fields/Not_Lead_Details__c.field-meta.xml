@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Lead_Details__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If you have closed out the record indicated that the caller was not actually a lead, please use this field to provide additional information about the nature of the call.</inlineHelpText>
+    <label>Not Lead Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lead_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts Payable Request</fullName>
+                <default>false</default>
+                <label>Accounts Payable Request</label>
+            </value>
+            <value>
+                <fullName>Call for IH Associate</fullName>
+                <default>false</default>
+                <label>Call for IH Associate</label>
+            </value>
+            <value>
+                <fullName>HOA Rep</fullName>
+                <default>false</default>
+                <label>HOA Rep</label>
+            </value>
+            <value>
+                <fullName>Homeowner interested in selling us home(s)</fullName>
+                <default>false</default>
+                <label>Homeowner interested in selling us home(s)</label>
+            </value>
+            <value>
+                <fullName>Job Seeker</fullName>
+                <default>false</default>
+                <label>Job Seeker</label>
+            </value>
+            <value>
+                <fullName>Landlord interested in hiring us to manage home(s)</fullName>
+                <default>false</default>
+                <label>Landlord interested in hiring us to manage home(s)</label>
+            </value>
+            <value>
+                <fullName>Neighbor - Complaint</fullName>
+                <default>false</default>
+                <label>Neighbor - Complaint</label>
+            </value>
+            <value>
+                <fullName>Neighbor - Reporting Issue w/ Home</fullName>
+                <default>false</default>
+                <label>Neighbor - Reporting Issue w/ Home</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Press/Media Inquiry</fullName>
+                <default>false</default>
+                <label>Press/Media Inquiry</label>
+            </value>
+            <value>
+                <fullName>Prospect - Different Region</fullName>
+                <default>false</default>
+                <label>Prospect - Different Region</label>
+            </value>
+            <value>
+                <fullName>Realtor - Needs Lockbox/Showing Info</fullName>
+                <default>false</default>
+                <label>Realtor - Needs Lockbox/Showing Info</label>
+            </value>
+            <value>
+                <fullName>Resident - Complaint</fullName>
+                <default>false</default>
+                <label>Resident - Complaint</label>
+            </value>
+            <value>
+                <fullName>Resident - Maintenance Request</fullName>
+                <default>false</default>
+                <label>Resident - Maintenance Request</label>
+            </value>
+            <value>
+                <fullName>Section 8</fullName>
+                <default>false</default>
+                <label>Section 8</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>Vendor/Contractor Seeking Business</fullName>
+                <default>false</default>
+                <label>Vendor/Contractor Seeking Business</label>
+            </value>
+            <value>
+                <fullName>Website Technical Support</fullName>
+                <default>false</default>
+                <label>Website Technical Support</label>
+            </value>
+            <value>
+                <fullName>Wrong #</fullName>
+                <default>false</default>
+                <label>Wrong #</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Accounts Payable Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Call for IH Associate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>HOA Rep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Homeowner interested in selling us home(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Job Seeker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Landlord interested in hiring us to manage home(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Neighbor - Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Neighbor - Reporting Issue w/ Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Press/Media Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Prospect - Different Region</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Realtor - Needs Lockbox/Showing Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Resident - Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Resident - Maintenance Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Spam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Vendor/Contractor Seeking Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Website Technical Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed - Not a Lead</controllingFieldValue>
+            <valueName>Wrong #</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

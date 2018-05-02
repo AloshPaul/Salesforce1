@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Variance_Analysis</fullName>
+    <columns>NAME</columns>
+    <columns>Renewed_Lease_Rent_Yardi__c</columns>
+    <columns>Renewed_Lease_Housing_Rent_Yardi__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>Housing_Rent__c</columns>
+    <columns>Variance_Current_to_New_Yardi__c</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>New_Renewed_Lease__c</columns>
+    <columns>Bad_Data__c</columns>
+    <columns>IH_Leases__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Variance Analysis</label>
+    <sharedTo>
+        <group>Asset_Mgmt_Reporting</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

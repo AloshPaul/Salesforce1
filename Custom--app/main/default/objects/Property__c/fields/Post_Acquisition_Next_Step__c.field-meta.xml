@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Acquisition_Next_Step__c</fullName>
+    <externalId>false</externalId>
+    <label>Post Acquisition Next Step</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BK</fullName>
+                <default>false</default>
+                <label>BK</label>
+            </value>
+            <value>
+                <fullName>Purchased Rented</fullName>
+                <default>false</default>
+                <label>Purchased Rented</label>
+            </value>
+            <value>
+                <fullName>Refer to Rehab</fullName>
+                <default>false</default>
+                <label>Refer to Rehab</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

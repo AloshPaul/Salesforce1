@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fund__c</fullName>
+    <externalId>false</externalId>
+    <formula>Pipeline__r.Fund__c</formula>
+    <inlineHelpText>This field automatically reflects the value in the Fund field on the related Pipeline record.  It may or may not be the same as the value in the Tracker Entity field.</inlineHelpText>
+    <label>Fund</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

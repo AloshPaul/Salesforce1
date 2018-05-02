@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Make_OTM_Application</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4) AND 5 AND 6 AND 7 and 8</booleanFilter>
+    <columns>Region__c</columns>
+    <columns>PM__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Status__c</columns>
+    <columns>Personal_Property_Hold__c</columns>
+    <columns>Initial_Market_Asking_Rent_Date__c</columns>
+    <columns>Rehab_Complete_Date__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Rent_Ready_Date__c</columns>
+    <columns>Rent_Ready__c</columns>
+    <columns>Actual_AppTrack__c</columns>
+    <columns>NAME</columns>
+    <columns>YRR_Current_Tenant_Status__c</columns>
+    <columns>HOA_Primary__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Down - Preleased</value>
+    </filters>
+    <filters>
+        <field>Rehab_Complete_Date__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Personal_Property_Hold__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Personal_Property_Hold__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Market_Rent__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Acquistion_Status__c</field>
+        <operation>notEqual</operation>
+        <value>sold,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Rent_Ready_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Personal_Property_Hold__c</field>
+        <operation>notEqual</operation>
+        <value>11/17/2016</value>
+    </filters>
+    <label>^Marketing: Make OTM (Preleased)</label>
+    <sharedTo>
+        <group>Lease_Administrator</group>
+    </sharedTo>
+</ListView>

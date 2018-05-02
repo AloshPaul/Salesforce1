@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Income_Documents_Needed</fullName>
+    <active>true</active>
+    <description>Additional Income Documents Needed  before checking Notification to Agent Add'l Income Docs Needed</description>
+    <errorConditionFormula>Notification_to_Agent_Add_l_Income_Docs__c == true &amp;&amp;    (ISBLANK(Additional_Income_Documents_Needed__c) || ISNULL(Additional_Income_Documents_Needed__c))</errorConditionFormula>
+    <errorDisplayField>Additional_Income_Documents_Needed__c</errorDisplayField>
+    <errorMessage>Please Enter Additional Income Documents</errorMessage>
+</ValidationRule>

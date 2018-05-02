@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtopic__c</fullName>
+    <externalId>false</externalId>
+    <label>Subtopic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Topic__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AppTrack</fullName>
+                <default>false</default>
+                <label>AppTrack</label>
+            </value>
+            <value>
+                <fullName>Atlanta Auction</fullName>
+                <default>false</default>
+                <label>Atlanta Auction</label>
+            </value>
+            <value>
+                <fullName>AZBidder</fullName>
+                <default>false</default>
+                <label>AZBidder</label>
+            </value>
+            <value>
+                <fullName>Bulk Deal</fullName>
+                <default>false</default>
+                <label>Bulk Deal</label>
+            </value>
+            <value>
+                <fullName>Change Order</fullName>
+                <default>false</default>
+                <label>Change Order</label>
+            </value>
+            <value>
+                <fullName>Driver</fullName>
+                <default>false</default>
+                <label>Driver</label>
+            </value>
+            <value>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+                <label>Eviction</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Lease &amp; Renewal</fullName>
+                <default>false</default>
+                <label>Lease &amp; Renewal</label>
+            </value>
+            <value>
+                <fullName>Nitro/iPad/HD App/HD Budget Walk</fullName>
+                <default>false</default>
+                <label>Nitro/iPad/HD App/HD Budget Walk</label>
+            </value>
+            <value>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+                <label>Pipeline</label>
+            </value>
+            <value>
+                <fullName>Portfolio</fullName>
+                <default>false</default>
+                <label>Portfolio</label>
+            </value>
+            <value>
+                <fullName>Property Issue</fullName>
+                <default>false</default>
+                <label>Property Issue</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>PTL</fullName>
+                <default>false</default>
+                <label>PTL</label>
+            </value>
+            <value>
+                <fullName>QC Audit</fullName>
+                <default>false</default>
+                <label>QC Audit</label>
+            </value>
+            <value>
+                <fullName>Rehab Projected Spend</fullName>
+                <default>false</default>
+                <label>Rehab Projected Spend</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Residence</fullName>
+                <default>false</default>
+                <label>Residence</label>
+            </value>
+            <value>
+                <fullName>Salesforce1</fullName>
+                <default>false</default>
+                <label>Salesforce1</label>
+            </value>
+            <value>
+                <fullName>Scripts</fullName>
+                <default>false</default>
+                <label>Scripts</label>
+            </value>
+            <value>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+                <label>Vendor</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Atlanta Auction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>AZBidder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Bulk Deal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Pipeline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Portfolio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Property Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Reporting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Acquisitions</controllingFieldValue>
+            <valueName>Residence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Salesforce1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>Scripts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Listing</controllingFieldValue>
+            <valueName>AppTrack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Listing</controllingFieldValue>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>Eviction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Change Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Lease &amp; Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Nitro/iPad/HD App/HD Budget Walk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>PTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>QC Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Rehab Projected Spend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rehab</controllingFieldValue>
+            <valueName>Vendor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TIP</controllingFieldValue>
+            <valueName>Driver</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_a_Call</fullName>
+    <availability>online</availability>
+    <description>Same functionality as Log a Call button in Activity History Section</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Log a Call</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/00T/e?title=Call&amp;what_id={!Concierge__c.Id}&amp;followup=1&amp;tsk5=Call&amp;retURL=%2F{!Concierge__c.Id}</url>
+</WebLink>

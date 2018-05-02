@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expenses_Paid_to_Date__c</fullName>
+    <description>These are the expenses paid to date</description>
+    <externalId>false</externalId>
+    <label>Expenses Paid to Date</label>
+    <summarizedField>Budget_Line_Item__c.Paid_to_Date__c</summarizedField>
+    <summaryForeignKey>Budget_Line_Item__c.Corp_Project__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

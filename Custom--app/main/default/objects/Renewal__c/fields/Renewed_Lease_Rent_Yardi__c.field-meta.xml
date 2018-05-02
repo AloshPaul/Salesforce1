@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewed_Lease_Rent_Yardi__c</fullName>
+    <externalId>false</externalId>
+    <formula>New_Renewed_Lease__r.Lease_Rent__c</formula>
+    <label>Renewed Lease Rent (Yardi)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

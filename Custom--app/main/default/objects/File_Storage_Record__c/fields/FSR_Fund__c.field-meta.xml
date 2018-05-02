@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSR_Fund__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+NOT(ISBLANK(Property__c)), 
+Property__r.Fund__c, 
+IF( 
+AND( 
+NOT(ISBLANK(Rehab__c)), 
+NOT(ISBLANK(Rehab__r.Portfolio__c )) 
+), 
+Rehab__r.Portfolio__r.Fund__c, 
+IF( 
+AND( 
+NOT(ISBLANK(HD_Budget_Walk__c)), 
+NOT(ISBLANK(HD_Budget_Walk__r.Rehab__c )), 
+NOT(ISBLANK(HD_Budget_Walk__r.Rehab__r.Portfolio__c )) 
+), 
+HD_Budget_Walk__r.Rehab__r.Portfolio__r.Fund__c, 
+'' 
+) 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>FSR Fund</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

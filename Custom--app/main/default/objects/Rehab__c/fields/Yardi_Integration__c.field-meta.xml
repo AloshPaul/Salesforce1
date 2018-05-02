@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yardi_Integration__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Whenever either Re Key Date  or Sign off date changes, this field will be set to true. Batch is using this field to searching what Rehab need to be included in report.</description>
+    <externalId>false</externalId>
+    <label>Yardi Integration</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

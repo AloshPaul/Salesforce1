@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ATL_Open_Renewals_No_Proposed_Rent</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 and 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Renewal_Status__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_End_Date__c</columns>
+    <columns>Total_Rent__c</columns>
+    <columns>Lease_Rent__c</columns>
+    <columns>New_Rent__c</columns>
+    <columns>Days_to_Lease_End__c</columns>
+    <columns>Move_Out_Date_from_Yardi__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>New_Rent__c</field>
+        <operation>equals</operation>
+        <value>,0</value>
+    </filters>
+    <filters>
+        <field>Lease_End_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH,NEXT_N_MONTHS:3</value>
+    </filters>
+    <filters>
+        <field>Lease_Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Renewal_Status__c</field>
+        <operation>equals</operation>
+        <value>Open,Lease Renewed,Month-to-Month,Eviction in Process,>120 Days Out</value>
+    </filters>
+    <filters>
+        <field>PM__c</field>
+        <operation>equals</operation>
+        <value>Allison Timms</value>
+    </filters>
+    <label>ATL- Open Renewals No Proposed Rent</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Team_Member_Atlanta</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

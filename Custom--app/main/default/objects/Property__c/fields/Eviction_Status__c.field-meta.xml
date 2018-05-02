@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eviction_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Eviction Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Awaiting Constable Lock</fullName>
+                <default>false</default>
+                <label>Awaiting Constable Lock</label>
+            </value>
+            <value>
+                <fullName>Awaiting Eviction Court Date</fullName>
+                <default>false</default>
+                <label>Awaiting Eviction Court Date</label>
+            </value>
+            <value>
+                <fullName>Awaiting Eviction Writ</fullName>
+                <default>false</default>
+                <label>Awaiting Eviction Writ</label>
+            </value>
+            <value>
+                <fullName>Constable Lock Complete</fullName>
+                <default>false</default>
+                <label>Constable Lock Complete</label>
+            </value>
+            <value>
+                <fullName>Eviction Aborted</fullName>
+                <default>false</default>
+                <label>Eviction Aborted</label>
+            </value>
+            <value>
+                <fullName>Eviction Complete</fullName>
+                <default>false</default>
+                <label>Eviction Complete</label>
+            </value>
+            <value>
+                <fullName>Eviction Letter Sent</fullName>
+                <default>false</default>
+                <label>Eviction Letter Sent</label>
+            </value>
+            <value>
+                <fullName>Initial Eviction Notice Sent</fullName>
+                <default>false</default>
+                <label>Initial Eviction Notice Sent</label>
+            </value>
+            <value>
+                <fullName>Recommended for Eviction</fullName>
+                <default>false</default>
+                <label>Recommended for Eviction</label>
+            </value>
+            <value>
+                <fullName>Referred to Eviction Attorney</fullName>
+                <default>false</default>
+                <label>Referred to Eviction Attorney</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

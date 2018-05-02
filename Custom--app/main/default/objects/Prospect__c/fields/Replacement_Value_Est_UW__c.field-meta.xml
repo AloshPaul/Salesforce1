@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Replacement_Value_Est_UW__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	AND(
+		ISNULL(Replacement_Cost_Structure_UW__c ), 
+		ISNULL(Replacement_Land_Value_UW__c)
+	),
+	null,
+	(
+		IF(Replacement_Cost_Structure_UW__c  > 0, Replacement_Cost_Structure_UW__c , 0)
+		+
+		IF(Replacement_Land_Value_UW__c > 0, Replacement_Land_Value_UW__c, 0)
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Replacement Value Est UW</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

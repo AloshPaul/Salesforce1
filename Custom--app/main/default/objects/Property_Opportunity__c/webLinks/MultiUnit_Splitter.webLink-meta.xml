@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MultiUnit_Splitter</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>MultiUnit Splitter</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if({!ISBLANK(Property_Opportunity__c.ResidenceId__c)}){
+      alert('The Pipeline needs to be associated with a Residence to allow splitting.');
+}
+else {
+
+     if({!ISBLANK(Property_Opportunity__c.Residence_APN__c)}) {
+         alert('You cannot split a Pipeline where the Residence APN is blank.');
+     }
+    else {
+          var resId = '{!Property_Opportunity__c.ResidenceId__c}';
+          var redirectURL = '/apex/Multiunit_Residence_Splitter?pipelineId=' + '{!Property_Opportunity__c.Id}';
+          window.location.href = redirectURL;
+    }
+}</url>
+</WebLink>

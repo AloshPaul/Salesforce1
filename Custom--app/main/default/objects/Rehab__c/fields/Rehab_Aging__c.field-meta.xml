@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Aging__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(
+BEGINS(TEXT(Stage__c), 'Closed') ,
+BEGINS(TEXT(Stage__c), 'HOLD') ,
+BEGINS(TEXT(Stage__c), 'Complete') 
+),
+
+IF(Office_Signoff_Date__c - Rehab_Aging_Start_Date__c &lt;= 14,'1-14 Days (1-2 Weeks)',
+IF(Office_Signoff_Date__c - Rehab_Aging_Start_Date__c &lt;= 28,'15-28 Days(3-4 Weeks)', 
+IF(Office_Signoff_Date__c - Rehab_Aging_Start_Date__c &lt;= 42,'29-42 Days (5-6 Weeks)',
+IF(Office_Signoff_Date__c - Rehab_Aging_Start_Date__c &lt;= 56,'43-56 Days (7-8 Weeks)', 
+IF(Office_Signoff_Date__c - Rehab_Aging_Start_Date__c &lt;= 70,'57-70 Days (9-10 Weeks)', 
+IF(Office_Signoff_Date__c - Rehab_Aging_Start_Date__c >= 71,'71+ Days (11-12+ Weeks)',
+Null)))))) 
+,
+IF(TODAY() - Rehab_Aging_Start_Date__c &lt;= 14, '1-14 Days (1-2 Weeks)', 
+IF(TODAY() - Rehab_Aging_Start_Date__c &lt;= 28, '15-28 Days(3-4 Weeks)', 
+IF(TODAY() - Rehab_Aging_Start_Date__c &lt;= 42, '29-42 Days (5-6 Weeks)', 
+IF(TODAY() - Rehab_Aging_Start_Date__c &lt;= 56, '43-56 Days (7-8 Weeks)', 
+IF(TODAY() - Rehab_Aging_Start_Date__c &lt;= 70, '57-70 Days (9-10 Weeks)', 
+IF(TODAY() - Rehab_Aging_Start_Date__c >= 71, '71+ Days (11-12+ Weeks)', 
+Null))))))
+)</formula>
+    <label>Rehab Aging from Re-Key</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

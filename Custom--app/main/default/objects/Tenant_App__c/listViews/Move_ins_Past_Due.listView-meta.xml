@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_ins_Past_Due</fullName>
+    <columns>NAME</columns>
+    <columns>Listing__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Resident_Name__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Portfolio_Manager__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>App_Received__c</columns>
+    <columns>Scheduled_Move_In__c</columns>
+    <columns>Actual_Move_in_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>startsWith</operation>
+        <value>Approved</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Actual_Move_in_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Scheduled_Move_In__c</field>
+        <operation>lessOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.Listing_Primary_Applicant</value>
+    </filters>
+    <label>Move-Ins Past Due</label>
+</ListView>

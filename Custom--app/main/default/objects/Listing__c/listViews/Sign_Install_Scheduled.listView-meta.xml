@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Install_Scheduled</fullName>
+    <columns>NAME</columns>
+    <columns>County__c</columns>
+    <columns>Sign_Scheduled__c</columns>
+    <columns>Sign_Removal_Scheduled__c</columns>
+    <columns>Sign_Comments__c</columns>
+    <columns>Status__c</columns>
+    <columns>Scheduled_Move_In_Date__c</columns>
+    <columns>Actual_Move_in_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sign_Scheduled__c</field>
+        <operation>greaterThan</operation>
+        <value>4/1/2014</value>
+    </filters>
+    <filters>
+        <field>Sign_Removal_Scheduled__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Sign_Comments__c</field>
+        <operation>notEqual</operation>
+        <value>HOA-NO SIGNS ALLOWED</value>
+    </filters>
+    <filters>
+        <field>Sign_Comments__c</field>
+        <operation>notContain</operation>
+        <value>GATED</value>
+    </filters>
+    <label>Sign Install Scheduled-Removals</label>
+    <sharedTo>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Orlando</role>
+    </sharedTo>
+</ListView>

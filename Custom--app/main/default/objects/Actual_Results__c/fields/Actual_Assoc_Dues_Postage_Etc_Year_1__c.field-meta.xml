@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Assoc_Dues_Postage_Etc_Year_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Actual Assoc Dues/Postage/Etc @ Year 1</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,66 @@
+<apex:page showHeader="false"  sidebar="false" title="Slide Show" standardStylesheets="false" applyHtmlTag="true" applyBodyTag="true"  docType="xhtml-1.0-transitional" controller="PhotoSlideshowViewerController">
+<head>
+    <title>Photo slide Show Viewer</title>
+
+    <apex:includeScript value="{!$Resource.PhotoslideShow}/PhotoslideShow/jquery.js"/>
+    <apex:stylesheet value="{!URLFOR($Resource.PhotoslideShow, 'PhotoslideShow/PhotoslideShow.css')}"/>
+    <apex:includeScript value="{!$Resource.PhotoslideShow}/PhotoslideShow/PhotoslideShow.js"/>
+    <style>
+
+    #street a{
+    display: inline;
+    color: white; width: 375px;
+    }
+    #street a:hover{
+    color:#D5D5D4;
+    background-color : #292928;
+    text-decoration : underline;
+    }
+    .fotorama__caption_overlay, .fotorama_fullscreen .fotorama__caption{
+    position: relative;
+    opacity:0.50;
+    padding:15px 5px;
+    filter: alpha(opacity=50);     // second!
+
+    }
+    .fotorama__caption_overlay, .fotorama_fullscreen .fotorama__caption p{
+    float:left;
+    width:100%;
+    }
+    </style>
+    <script type="text/javascript">
+        fotoramaDefaults = {
+            transition: 'slide', // or 'fade'
+            click: true,
+            loop: false, // or true
+            autoplay: false,
+            stopAutoplayOnAction: true,
+            transitionDuration: 333,
+            width: '100%',
+            height: 'auto',
+            aspectRatio: 700/467,
+            minHeight: 400,
+            fitToWindowHeight: true,
+            fitToWindowHeightMargin: 0,
+            margin: 0,
+            preload: 5,
+            fullscreenIcon: true,
+            thumbsCentered: true,
+            shadows: true,
+            cropToFit: true,
+            caption: 'overlay'
+          }
+        </script>
+</head>
+<body>
+
+<div class="fotorama" id="my-fotorama" data-width="800" data-height="333">
+    <apex:repeat value="{!listOfGenericImages}" var="fieldKey">
+        <a href="{!fieldKey.s3getFileUrl}" >
+         <img src="{!fieldKey.s3getThumbnailUrl}" height="160" width="200" alt="{!fieldKey.FileName}<div id='street' style='float: right; display: inline; position: relative; top: -30%;padding-right:42px;'><a href='{!Url}'>{!fsAlias}</a></div>"/>
+        </a>
+     </apex:repeat>
+  </div>
+
+</body>
+</apex:page>

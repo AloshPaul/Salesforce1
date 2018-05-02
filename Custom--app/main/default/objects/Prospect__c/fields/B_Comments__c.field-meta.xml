@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B_Comments__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Comments entered here will be sent to the Agent working on this property.  Enter your comments at the bottom.  Before entering your comments, enter the date, time and your name in the following format:
+
+[YYYY/MM/DD, HH:MM - YOUR NAME]</inlineHelpText>
+    <label>B Comments</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

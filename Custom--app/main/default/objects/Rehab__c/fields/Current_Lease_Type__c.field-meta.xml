@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Lease_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Renewal__r.Lease__r.Lease_Status__c,
+"IH Initial Lease", "IH Initial Lease",
+"IH Initial Lease Renewal", "IH Initial Lease Renewal",
+"IH New Lease", "IH New Lease",
+"IH New Lease Renewal", "IH New Lease Renewal",
+"IH Renewal", "IH Renewal",
+"TIP Cash for Keys", "TIP Cash for Keys",
+"TIP Eviction", "TIP Eviction",
+"TIP New Lease", "TIP New Lease",
+"TIP Prior Owner Lease Honored", "TIP Prior Owner Lease Honored",
+"TIP Renewal", "TIP Renewal",
+Null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current Lease Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

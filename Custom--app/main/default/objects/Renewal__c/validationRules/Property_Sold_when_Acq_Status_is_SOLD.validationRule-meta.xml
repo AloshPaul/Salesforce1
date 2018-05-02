@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Sold_when_Acq_Status_is_SOLD</fullName>
+    <active>true</active>
+    <description>Renewal Status can be 'Property Sold' , Only when Related Portfolio :Acquisition Status is Sold</description>
+    <errorConditionFormula>AND(ISCHANGED(Renewal_Status__c), !ISPICKVAL(Portfolio__r.Acquisition_Status__c, 'Sold')  , ISPICKVAL( Renewal_Status__c , 'Property - Sold') )</errorConditionFormula>
+    <errorDisplayField>Renewal_Status__c</errorDisplayField>
+    <errorMessage>Renewal Status should   'Property Sold' , when Related Portfolio :Acquisition Status is Sold</errorMessage>
+</ValidationRule>

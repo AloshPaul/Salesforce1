@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_TIP_or_Listing</fullName>
+    <active>true</active>
+    <description>Each application tracking record must be connected to a TIP record or a Listing record.</description>
+    <errorConditionFormula>ISBLANK( Listing__c) &amp;&amp; ISBLANK ( TIP_Record__c)</errorConditionFormula>
+    <errorDisplayField>Days_Pro_Rated__c</errorDisplayField>
+    <errorMessage>All Application Tracking records must have a linkage to a TIP record or a Listing record.</errorMessage>
+</ValidationRule>

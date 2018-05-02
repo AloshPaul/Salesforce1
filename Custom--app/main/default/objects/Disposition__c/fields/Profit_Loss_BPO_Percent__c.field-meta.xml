@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profit_Loss_BPO_Percent__c</fullName>
+    <description>Net_Proceeds_BPO__c  -  (  Accounting_Basis_Actual__c  /  Accounting_Basis_Actual__c  - 1 )</description>
+    <externalId>false</externalId>
+    <formula>Net_Proceeds_BPO__c  /  Accounting_Basis_Actual__c  - 1</formula>
+    <label>Profit / Loss % (BPO)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

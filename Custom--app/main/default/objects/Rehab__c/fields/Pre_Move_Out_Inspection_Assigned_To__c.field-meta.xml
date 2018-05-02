@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Move_Out_Inspection_Assigned_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field replaces the old Text field called, "Pre Move Out Inspection Completed By Old".</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field replaces the old Text field called, "Pre Move Out Inspection Completed By Old".</inlineHelpText>
+    <label>Pre Move Out Inspection Assigned To</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Rehabs5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

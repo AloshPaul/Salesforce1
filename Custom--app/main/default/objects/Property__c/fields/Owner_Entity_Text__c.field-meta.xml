@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Entity_Text__c</fullName>
+    <description>this field is to used by system admin users to update Custom Owner Entity value .
+D-00016210</description>
+    <externalId>false</externalId>
+    <label>Owner Entity Text</label>
+    <length>150</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Sign_Off_Date_Needs_Key_Transfer</fullName>
+    <active>false</active>
+    <description>Entry of an Office Sign-Off Date requires Key Transfer Date and Key Transfer Location to be populated.</description>
+    <errorConditionFormula>(  $Profile.Name  &lt;> 'System Administrator'
+ &amp;&amp; 
+ $Profile.Name  &lt;> 'SFDC Business Partner'
+ &amp;&amp; 
+RecordType.Name  = 'Turn'
+ &amp;&amp; 
+NOT( ISBLANK( Office_Signoff_Date__c ) ) 
+ &amp;&amp; 
+ (  ISBLANK( Key_Transfer_Date__c ) 
+ || 
+  ISPICKVAL( Key_Transfer_Location_Old__c , '')   ) )</errorConditionFormula>
+    <errorMessage>Entry of an Office Sign-Off Date requires these fields to be populated:  Key Transfer Date, Key Transfer Location.</errorMessage>
+</ValidationRule>

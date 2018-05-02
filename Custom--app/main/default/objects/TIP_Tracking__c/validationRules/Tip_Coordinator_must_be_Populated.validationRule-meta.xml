@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tip_Coordinator_must_be_Populated</fullName>
+    <active>true</active>
+    <description>If the Initial Notice Date is populated - a Tip Coordinator must also be populated</description>
+    <errorConditionFormula>NOT( ISBLANK(Initial_Notice_Date__c) ) 
+&amp;&amp; 
+ISBLANK( TIP_Coordinator__c )</errorConditionFormula>
+    <errorMessage>If an Eviction Initial Notice Date is listed - you must also populate the TIP Coordinator so the TIP Coordinator can be notified prior to the Evict Notice End Date</errorMessage>
+</ValidationRule>

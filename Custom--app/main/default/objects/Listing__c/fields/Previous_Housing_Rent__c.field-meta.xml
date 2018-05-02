@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_Housing_Rent__c</fullName>
+    <description>This field is populated via Trigger_Listing, which finds the Residence and then populates this value from the same Lease that appears in the Most Recent Lease field.  This happens on insert of a Listing.  This value is not overwritten if later a different Most Recent Lease is entered on Residence.  See D-00012773.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This value is pulled from the Most Recent Lease that was populated on Residence at the time the Listing was created.  This value is not ever overwritten.</inlineHelpText>
+    <label>Previous Housing Rent</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

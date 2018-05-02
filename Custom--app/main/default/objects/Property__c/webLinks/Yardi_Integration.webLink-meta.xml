@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yardi_Integration</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Yardi Integration</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>//Include the required js files
+{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/23.0/apex.js")}
+
+try {
+      var runBatchStatus = sforce.apex.execute("Utility","runYardiIntigrationBatch", {});
+      alert(runBatchStatus);
+}
+catch(e) {
+      alert(e);
+}</url>
+</WebLink>

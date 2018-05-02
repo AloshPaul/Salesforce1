@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receipt_Details</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+     ISBLANK(Dir_IMG_EMD_Approval_Date__c),			
+	    EMD_Receipt_Received__c = True
+					)</errorConditionFormula>
+    <errorMessage>Cannot order Receipt details unless the approval is complete</errorMessage>
+</ValidationRule>

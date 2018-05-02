@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Agent__c</fullName>
+    <description>Pulls the Listing Agent from the Linked Listing.  Don't think this is the way we will assign Listing Agent moving forward.</description>
+    <externalId>false</externalId>
+    <formula>IF (ISBLANK ( Listing__c ) = False,Listing__r.Agent_Assigned__c, NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field tells you which Listing Agent is assigned to the Listing.  The Assignment for this Lead is NOT done automatically.  To assign this Lead to an Agent manually, update the "Listing Agent Assigned to Lead" below in the "Agent Assignment" Section.</inlineHelpText>
+    <label>Agent Assigned to Listing</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Triad_49</fullName>
+    <columns>NAME</columns>
+    <columns>Property_Street__c</columns>
+    <columns>APN__c</columns>
+    <columns>Bulk_Deal__c</columns>
+    <columns>Property_Code_PreAcquisition_F__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>Parking__c</columns>
+    <columns>Lot_Sq_Ft__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>Triad 49</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.Bulk</value>
+    </filters>
+    <label>Triad 49</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Charlotte</role>
+        <role>Team_Member_Charlotte</role>
+    </sharedTo>
+</ListView>

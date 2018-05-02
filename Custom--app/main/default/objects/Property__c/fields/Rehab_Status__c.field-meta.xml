@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Rehab Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Rehab Completed</fullName>
+                <default>false</default>
+                <label>No Rehab Completed</label>
+            </value>
+            <value>
+                <fullName>Ready for Rehab</fullName>
+                <default>false</default>
+                <label>Ready for Rehab</label>
+            </value>
+            <value>
+                <fullName>Rehab Complete</fullName>
+                <default>false</default>
+                <label>Rehab Complete</label>
+            </value>
+            <value>
+                <fullName>Rehab in Process</fullName>
+                <default>false</default>
+                <label>Rehab in Process</label>
+            </value>
+            <value>
+                <fullName>Rehab Prework in Process</fullName>
+                <default>false</default>
+                <label>Rehab Prework in Process</label>
+            </value>
+            <value>
+                <fullName>Rekey Complete</fullName>
+                <default>false</default>
+                <label>Rekey Complete</label>
+            </value>
+            <value>
+                <fullName>Waiting for Deed</fullName>
+                <default>false</default>
+                <label>Waiting for Deed</label>
+            </value>
+            <value>
+                <fullName>Waiting for Rekey</fullName>
+                <default>false</default>
+                <label>Waiting for Rekey</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

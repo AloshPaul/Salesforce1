@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pilot_Program__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used for the PM Pilot program 5.20.2013 with Sacramento, Inland Empire and Phoenix Markets.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box only is this portfolio is part of the pilot program</inlineHelpText>
+    <label>Pilot Program</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

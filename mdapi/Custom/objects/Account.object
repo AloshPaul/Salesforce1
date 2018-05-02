@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Amenities_Included__c</fullName>
+        <externalId>false</externalId>
+        <label>Amenities Included?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Amenities__c</fullName>
+        <externalId>false</externalId>
+        <label>Amenities</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Basketball Court</fullName>
+                    <default>false</default>
+                    <label>Basketball Court</label>
+                </value>
+                <value>
+                    <fullName>Beach Access</fullName>
+                    <default>false</default>
+                    <label>Beach Access</label>
+                </value>
+                <value>
+                    <fullName>Boat Ramp</fullName>
+                    <default>false</default>
+                    <label>Boat Ramp</label>
+                </value>
+                <value>
+                    <fullName>Boat Slip</fullName>
+                    <default>false</default>
+                    <label>Boat Slip</label>
+                </value>
+                <value>
+                    <fullName>Cable</fullName>
+                    <default>false</default>
+                    <label>Cable</label>
+                </value>
+                <value>
+                    <fullName>Clubhouse</fullName>
+                    <default>false</default>
+                    <label>Clubhouse</label>
+                </value>
+                <value>
+                    <fullName>Dog Park</fullName>
+                    <default>false</default>
+                    <label>Dog Park</label>
+                </value>
+                <value>
+                    <fullName>Dry Storage</fullName>
+                    <default>false</default>
+                    <label>Dry Storage</label>
+                </value>
+                <value>
+                    <fullName>Golf Course</fullName>
+                    <default>false</default>
+                    <label>Golf Course</label>
+                </value>
+                <value>
+                    <fullName>Gym</fullName>
+                    <default>false</default>
+                    <label>Gym</label>
+                </value>
+                <value>
+                    <fullName>Jacuzzi</fullName>
+                    <default>false</default>
+                    <label>Jacuzzi</label>
+                </value>
+                <value>
+                    <fullName>Lake</fullName>
+                    <default>false</default>
+                    <label>Lake</label>
+                </value>
+                <value>
+                    <fullName>Park</fullName>
+                    <default>false</default>
+                    <label>Park</label>
+                </value>
+                <value>
+                    <fullName>Pool</fullName>
+                    <default>false</default>
+                    <label>Pool</label>
+                </value>
+                <value>
+                    <fullName>Racquetball Court</fullName>
+                    <default>false</default>
+                    <label>Racquetball Court</label>
+                </value>
+                <value>
+                    <fullName>Tennis Court</fullName>
+                    <default>false</default>
+                    <label>Tennis Court</label>
+                </value>
+                <value>
+                    <fullName>Tot Lot</fullName>
+                    <default>false</default>
+                    <label>Tot Lot</label>
+                </value>
+                <value>
+                    <fullName>Volleyball Court</fullName>
+                    <default>false</default>
+                    <label>Volleyball Court</label>
+                </value>
+                <value>
+                    <fullName>Walking Trails</fullName>
+                    <default>false</default>
+                    <label>Walking Trails</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Amenity_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Amenity Details</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_ABA__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficiary ABA</label>
+        <length>9</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficiary Account Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_Account_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficiary Account No.</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Beneficiary_Bank__c</fullName>
+        <externalId>false</externalId>
+        <label>Beneficiary Bank</label>
+        <length>75</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Company Email address</inlineHelpText>
+        <label>Company Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>24</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Hours</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gate_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Gate Code</label>
+        <length>155</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Gated__c</fullName>
+        <externalId>false</externalId>
+        <label>Gated</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HOA_Application_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Application Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lawn_Maintenance_End_Service_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lawn Maintenance End Service Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Role__c</field>
+                <operation>contains</operation>
+                <value>Lawn Maintenance End Service Contact</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Accounts (Lawn Maintenance End Service Contact)</relationshipLabel>
+        <relationshipName>LawnMaintenanceEndServiceAccounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Restrictions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If there are any unique requirements or restrictions that need to be called out, please list here.</inlineHelpText>
+        <label>Other Restrictions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Pool_Maintenance_End_Service_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Pool Maintenance End Service Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Role__c</field>
+                <operation>contains</operation>
+                <value>Pool Maintenance End Service Contact</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Accounts (Pool Maintenance End Service Contact)</relationshipLabel>
+        <relationshipName>PoolMaintenanceEndServiceAccounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prohibits_Renters__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please indicate if this community/HOA has strict by-laws that prohibit leasing or other restrictions that could impact our ability to lease this property.</inlineHelpText>
+        <label>Prohibits Leasing</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Grandfathered Restrictions</fullName>
+                    <default>false</default>
+                    <label>Grandfathered Restrictions</label>
+                </value>
+                <value>
+                    <fullName>Some Restrictions</fullName>
+                    <default>false</default>
+                    <label>Some Restrictions</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Mgmt_Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Please indicate if the HOA contracts with a property management company.</inlineHelpText>
+        <label>Property Mgmt Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>HOAs under Mgmt</relationshipLabel>
+        <relationshipName>HOAs_under_Mgmt</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rehab_Crew_Intake_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rehab Crew Intake Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.Role__c</field>
+                <operation>contains</operation>
+                <value>Rehab Crew Intake Contact</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Accounts (Rehab Crew Intake Contact)</relationshipLabel>
+        <relationshipName>RehabCrewIntakeAccounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Security_Deposit_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Deposit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Security_Deposit_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Deposit Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Refundable</fullName>
+                    <default>false</default>
+                    <label>Refundable</label>
+                </value>
+                <value>
+                    <fullName>Non-Refundable</fullName>
+                    <default>false</default>
+                    <label>Non-Refundable</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sign_Policy__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign Policy</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Tenant_Aplication_Required__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenant Application Required</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tenant_Application_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenant Application Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>W9_on_file__c</fullName>
+        <externalId>false</externalId>
+        <label>W9 on file</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Yardi_vendor_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Vendor Code</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

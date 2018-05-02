@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Near_Amenities__c</fullName>
+    <externalId>false</externalId>
+    <label>Near Amenities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Within 1 Mile</fullName>
+                <default>false</default>
+                <label>Within 1 Mile</label>
+            </value>
+            <value>
+                <fullName>Within 5 Miles</fullName>
+                <default>false</default>
+                <label>Within 5 Miles</label>
+            </value>
+            <value>
+                <fullName>Within 10 Miles</fullName>
+                <default>false</default>
+                <label>Within 10 Miles</label>
+            </value>
+            <value>
+                <fullName>Within 20 Miles</fullName>
+                <default>false</default>
+                <label>Within 20 Miles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

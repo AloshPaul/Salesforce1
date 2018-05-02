@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Issue__c</fullName>
+    <externalId>false</externalId>
+    <label>Property Issue</label>
+    <referenceTo>Property_Issues__c</referenceTo>
+    <relationshipLabel>Property Issue Photos</relationshipLabel>
+    <relationshipName>Property_Issue_Photos</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

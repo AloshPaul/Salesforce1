@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milestones__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Milestone Tasks will only be created if Back-End Supervisor has a value.</inlineHelpText>
+    <label>Milestones</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Re-Key</fullName>
+                <default>false</default>
+                <label>Re-Key</label>
+            </value>
+            <value>
+                <fullName>Landscape</fullName>
+                <default>false</default>
+                <label>Landscape</label>
+            </value>
+            <value>
+                <fullName>Tile / Wood Ordered</fullName>
+                <default>false</default>
+                <label>Tile / Wood Ordered</label>
+            </value>
+            <value>
+                <fullName>Trash Out</fullName>
+                <default>false</default>
+                <label>Trash Out</label>
+            </value>
+            <value>
+                <fullName>QC Pass</fullName>
+                <default>false</default>
+                <label>QC Pass</label>
+            </value>
+            <value>
+                <fullName>Supervisor Sign-off</fullName>
+                <default>false</default>
+                <label>Supervisor Sign-off</label>
+            </value>
+            <value>
+                <fullName>Office Sign-off</fullName>
+                <default>false</default>
+                <label>Office Sign-off</label>
+            </value>
+            <value>
+                <fullName>Before Photos</fullName>
+                <default>false</default>
+                <label>Before Photos</label>
+            </value>
+            <value>
+                <fullName>Budget Revised</fullName>
+                <default>false</default>
+                <label>Budget Revised</label>
+            </value>
+            <value>
+                <fullName>Water on</fullName>
+                <default>false</default>
+                <label>Water on</label>
+            </value>
+            <value>
+                <fullName>Power on</fullName>
+                <default>false</default>
+                <label>Power on</label>
+            </value>
+            <value>
+                <fullName>Carpet</fullName>
+                <default>false</default>
+                <label>Carpet</label>
+            </value>
+            <value>
+                <fullName>Carpet Cleaning</fullName>
+                <default>false</default>
+                <label>Carpet Cleaning</label>
+            </value>
+            <value>
+                <fullName>Appliances</fullName>
+                <default>false</default>
+                <label>Appliances</label>
+            </value>
+            <value>
+                <fullName>Electrical</fullName>
+                <default>false</default>
+                <label>Electrical</label>
+            </value>
+            <value>
+                <fullName>Plumbing</fullName>
+                <default>false</default>
+                <label>Plumbing</label>
+            </value>
+            <value>
+                <fullName>HVAC</fullName>
+                <default>false</default>
+                <label>HVAC</label>
+            </value>
+            <value>
+                <fullName>Pool</fullName>
+                <default>false</default>
+                <label>Pool</label>
+            </value>
+            <value>
+                <fullName>Tub/Surround Refinishers</fullName>
+                <default>false</default>
+                <label>Tub/Surround Refinishers</label>
+            </value>
+            <value>
+                <fullName>Blinds</fullName>
+                <default>false</default>
+                <label>Blinds</label>
+            </value>
+            <value>
+                <fullName>Glass/Window</fullName>
+                <default>false</default>
+                <label>Glass/Window</label>
+            </value>
+            <value>
+                <fullName>Garage door</fullName>
+                <default>false</default>
+                <label>Garage door</label>
+            </value>
+            <value>
+                <fullName>Pest Control</fullName>
+                <default>false</default>
+                <label>Pest Control</label>
+            </value>
+            <value>
+                <fullName>Cabinets</fullName>
+                <default>false</default>
+                <label>Cabinets</label>
+            </value>
+            <value>
+                <fullName>Countertops</fullName>
+                <default>false</default>
+                <label>Countertops</label>
+            </value>
+            <value>
+                <fullName>Roofing</fullName>
+                <default>false</default>
+                <label>Roofing</label>
+            </value>
+            <value>
+                <fullName>Concrete</fullName>
+                <default>false</default>
+                <label>Concrete</label>
+            </value>
+            <value>
+                <fullName>5-day Inspection</fullName>
+                <default>false</default>
+                <label>5-day Inspection</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

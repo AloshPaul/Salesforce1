@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_App_Requires_Cancelled_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISPICKVAL( Application_Status__c , "Cancelled") || ISPICKVAL( Application_Status__c ,"Pending Cancellation") ) &amp;&amp;
+ISPICKVAL(Cancelled_Reason__c , "")  &amp;&amp;
+RecordType.DeveloperName = 'AppTrack_2_0'</errorConditionFormula>
+    <errorDisplayField>Cancelled_Reason__c</errorDisplayField>
+    <errorMessage>Cancelled Or Pending Cancellation applications require a cancellation Reason.</errorMessage>
+</ValidationRule>

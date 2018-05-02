@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escrow_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+								NOT(ISBLANK(Dir_IMG_EMD_Approval_Date__c)),
+        ISCHANGED(EMD_Amount__c)
+								)</errorConditionFormula>
+    <errorMessage>Cannot  change EMD Amount after approval</errorMessage>
+</ValidationRule>

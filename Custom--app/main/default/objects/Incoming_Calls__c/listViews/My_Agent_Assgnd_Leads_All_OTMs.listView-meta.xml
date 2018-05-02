@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Agent_Assgnd_Leads_All_OTMs</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Time__c</columns>
+    <columns>Lead_Channel__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Listing__c</columns>
+    <columns>Message__c</columns>
+    <columns>Lead_Status__c</columns>
+    <columns>Listing_Status__c</columns>
+    <columns>Agent_Lead_Status__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Listing_Status__c</field>
+        <operation>startsWith</operation>
+        <value>OTM</value>
+    </filters>
+    <filters>
+        <field>My_Lead__c</field>
+        <operation>equals</operation>
+        <value>YES</value>
+    </filters>
+    <label>*My (Agent Assgn'd) Leads - All OTMs</label>
+</ListView>

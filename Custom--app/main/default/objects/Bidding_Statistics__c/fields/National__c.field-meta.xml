@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Regional Daily Bidding Stats records will be automatically linked with a corresponding National record each day.</inlineHelpText>
+    <label>National</label>
+    <referenceTo>Bidding_Statistics__c</referenceTo>
+    <relationshipLabel>Bidding Statistics List</relationshipLabel>
+    <relationshipName>National_Bidding_Statistics</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

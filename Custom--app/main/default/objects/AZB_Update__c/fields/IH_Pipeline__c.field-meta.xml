@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IH_Pipeline__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is the pipeline record created for the AZB record upsert.</description>
+    <externalId>false</externalId>
+    <label>IH Pipeline</label>
+    <referenceTo>Property_Opportunity__c</referenceTo>
+    <relationshipLabel>AZB Updates</relationshipLabel>
+    <relationshipName>AZB_Updates</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

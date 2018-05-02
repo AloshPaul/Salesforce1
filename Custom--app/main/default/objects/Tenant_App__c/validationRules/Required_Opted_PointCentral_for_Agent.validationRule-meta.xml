@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Opted_PointCentral_for_Agent</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ NOT(Opted_in_for_PointCentral_Smart_Home__c ),
+$Profile.Name = 'IH - Leasing Agents (Internal Contractors 2.0)'
+)</errorConditionFormula>
+    <errorMessage>Opted in for PointCentral Smart Home field is mandatory.</errorMessage>
+</ValidationRule>

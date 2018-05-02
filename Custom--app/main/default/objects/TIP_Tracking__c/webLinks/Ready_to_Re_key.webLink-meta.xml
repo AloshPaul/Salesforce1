@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_to_Re_key</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Ready to Re-key</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/14.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/14.0/apex.js")} 
+
+var tipStatus = '{!TIP_Tracking__c.TIP_Status__c}'; 
+var tipRehab = '{!TIP_Tracking__c.RehabId__c}'; 
+var abandenedPro = '{!TIP_Tracking__c.Abandoned_Property__c}'; 
+var APNoticeEnddate = '{!TIP_Tracking__c.Aband_Property_Notice_End_Date__c}'; 
+var updateRecords = []; //array for holding records that this code will ultimately update 
+
+var rehabIsHOLD_Occupied_TIP = false;
+
+//Check for Rehab and Absence is there
+if(tipRehab != '') {
+
+        //Query Rehab data 
+	var queryResult = sforce.connection.query("SELECT Id, Stage__c FROM Rehab__c where Id = '" + tipRehab + "'"); 
+        
+	//get rehab data 
+	var rehabRecords = queryResult.getArray('records') 
+        
+        //Process only if data exist 
+	if(rehabRecords.length > 0) { 
+
+		//Get Current Stage 
+		var currentStatus = rehabRecords[0].get('Stage__c'); 
+                if( currentStatus == 'HOLD - Occupied/TIP' ) {
+                     rehabIsHOLD_Occupied_TIP = true;
+                }
+        }
+	   
+}
+
+//Check for Rehab and Absence is there
+if(tipRehab == '' || rehabIsHOLD_Occupied_TIP ) {
+
+	//Check for TIP Status
+	if (tipStatus != 'Closed - Vacant') {
+		alert("You can click on this button only when TIP Status is Closed Vacant."); 
+	}
+	else if (abandenedPro == 'Yes' &amp;&amp; ( new Date('{!TODAY()}') &lt; new Date(APNoticeEnddate) ) ) {
+		alert("Still in Aband. Prop Notice period. If property has been removed, please indicate on the Abandoned Property field."); 
+	}
+	else { 
+		try { 
+			var hId='{!TIP_Tracking__c.ResidenceId__c}' ;
+			var pId='{!TIP_Tracking__c.PortfolioId__c}';
+			var tId='{!TIP_Tracking__c.Id}';
+			var tComments='{!JSENCODE(TIP_Tracking__c.TIP_Comments_for_Rehab__c)}';
+			var result = sforce.apex.execute("CreateRehabAndListingForTIP", "createRehabAndListingRecord",{portfolioId : pId, homeId:hId, tipId:tId, tipComments:tComments}); 
+			alert(result);
+			window.location.href = tId;
+		} 
+		
+		catch(err) { alert( err );
+		}		 
+	}
+
+} else {
+
+	//Query Rehab data 
+	var queryResult = sforce.connection.query("SELECT Id, Stage__c FROM Rehab__c where Id = '" + tipRehab + "'"); 
+        
+	//get rehab data 
+	var rehabRecords = queryResult.getArray('records') 
+
+	//Process only if data exist 
+	if(rehabRecords.length > 0) { 
+
+		//Get Current Stage 
+		var currentStatus = rehabRecords[0].get('Stage__c'); 
+        	
+                //Variable to hole the results 
+		var result = []; 
+
+		//Check for TIP Status
+		if (tipStatus != 'Closed - Vacant') {
+			alert("You can click on this button only when TIP Status is Closed Vacant."); 
+		}
+		else if (abandenedPro == 'Yes' &amp;&amp; ( new Date('{!TODAY()}') &lt; new Date(APNoticeEnddate) ) ) {
+			alert("Still in Aband. Prop Notice period. If property has been removed, please indicate on the Abandoned Property field."); 
+		}
+		
+		else {
+
+			//Check for the currentStatus 
+			if(currentStatus == 'Re-key Ready') { 
+
+				alert('Rehab is already associated with this TIP'); 
+			
+			} else if(currentStatus == 'HOLD - Occupied/TIP') { 
+
+				//Set Stage to Re-Key Ready, if it is HOLD - Occupied/TIP 
+				//Update rehab record 
+				var update_Rehab = new sforce.SObject("Rehab__c"); 
+				update_Rehab.Id = rehabRecords[0].get('Id'); 
+				update_Rehab.Stage__c = 'Re-key Ready'; 
+				update_Rehab.Re_Key_Ready_Date__c = new Date(); 
+				updateRecords.push(update_Rehab); 
+				result = sforce.connection.update(updateRecords); 
+				
+			} else { 
+
+				var confirmationMessage = 'A Rehab record already exists with the stage of ' + currentStatus + '. Are you sure?'; 
+				if(confirm(confirmationMessage)) { 
+
+					//Update rehab record 
+					var update_Rehab = new sforce.SObject("Rehab__c"); 
+					update_Rehab.Id = rehabRecords[0].get('Id'); 
+					update_Rehab.Stage__c = 'Re-key Ready'; 
+					update_Rehab.Re_Key_Ready_Date__c = new Date(); 
+					updateRecords.push(update_Rehab); 
+					result = sforce.connection.update(updateRecords); 
+				} 
+			} 
+
+			//Display error message to user if occurs 
+			if(result != null &amp;&amp; result.length > 0) { 
+				if(result[0].get('errors') != null &amp;&amp; result[0].get('errors').get('message') != null &amp;&amp; result[0].get('errors').get('message') != '') { 
+					alert(result[0].get('errors').get('message')); 
+				} else { 
+					alert('Rehab has been updated successfully.') 
+				} 
+			} 
+		}
+	} 
+}</url>
+</WebLink>

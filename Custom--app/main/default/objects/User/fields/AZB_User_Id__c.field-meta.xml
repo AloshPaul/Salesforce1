@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZB_User_Id__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This field links an Invitation Homes salesforce user with their AZ Bidder account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please insert your AZ Bidder Id exactly as you log in with it to the AZ Bidder site.</inlineHelpText>
+    <label>AZ Bidder User Id</label>
+    <length>128</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atlanta_2yr_Rate_Adjustment</fullName>
+    <columns>PM__c</columns>
+    <columns>City__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>X13_24_Month_Rent__c</columns>
+    <columns>X13_Month_Rent_Escalation__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Down - Pre-Marketing,Leased,HOLD - Currently Not Leasable,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Acquistion_Status__c</field>
+        <operation>contains</operation>
+        <value>Acquired,Limbo</value>
+    </filters>
+    <filters>
+        <field>X13_Month_Rent_Escalation__c</field>
+        <operation>greaterThan</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Atlanta- 2yr Rate Adjustment</label>
+</ListView>

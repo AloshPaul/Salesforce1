@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>This custom setting is to hold the  status test tags</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Attempting_Contact__c</fullName>
+        <defaultValue>&quot;Attempting Contact&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Attempting Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Awaiting_Constable_Lock__c</fullName>
+        <defaultValue>&quot;Awaiting Constable Lock&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Awaiting Constable Lock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Awaiting_Eviction_Court_Date__c</fullName>
+        <defaultValue>&quot;Awaiting Eviction Court Date&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Awaiting Eviction Court Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Awaiting_Eviction_Writ__c</fullName>
+        <defaultValue>&quot;Awaiting Eviction Writ&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Awaiting Eviction Writ</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BKS_PostAcq_BK_Resolved__c</fullName>
+        <defaultValue>&quot;PostAcq BK Resolved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>BKS PostAcq BK Resolved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BKS_PostAcq_BK_Unresolved__c</fullName>
+        <defaultValue>&quot;PostAcq BK Unresolved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>BKS PostAcq BK Unresolved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BKS_PreAcq_BK__c</fullName>
+        <defaultValue>&quot;PreAcq BK&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>BKS PreAcq BK</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BK__c</fullName>
+        <defaultValue>&quot;BK&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>BK</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Agreed_with_Occupant__c</fullName>
+        <defaultValue>&quot;CFK Agreed with Occupant&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Agreed with Occupant</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Check_Received_from_Finance__c</fullName>
+        <defaultValue>&quot;CFK Check Received from Finance&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Check Received from Finance</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Check_Requested_from_Finance__c</fullName>
+        <defaultValue>&quot;CFK Check Requested from Finance&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Check Requested from Finance</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Check_given_to_Driver__c</fullName>
+        <defaultValue>&quot;CFK Check given to Driver&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Check given to Driver</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Deal_Aborted__c</fullName>
+        <defaultValue>&quot;CFK Negotiations Cancelled&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Deal Aborted</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_In_Process__c</fullName>
+        <defaultValue>&quot;CFK In Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK In Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Moved_Out__c</fullName>
+        <defaultValue>&quot;Moved Out&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Moved Out</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Negotiation_in_Process__c</fullName>
+        <defaultValue>&quot;CFK Negotiation in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Negotiation in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CFK_Unsuccessful_Negotiation__c</fullName>
+        <defaultValue>&quot;CFK Unsuccessful Negotiation&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CFK Unsuccessful Negotiation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contacted_In_Process__c</fullName>
+        <defaultValue>&quot;Contacted - In Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Contacted - In Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DS_Deed_Not_Yet_Received__c</fullName>
+        <defaultValue>&quot;Deed Not Yet Received&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>DS Deed Not Yet Received</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DS_Deed_Received__c</fullName>
+        <defaultValue>&quot;Deed Received&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>DS Deed Received</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DS_Deed_Recorded__c</fullName>
+        <defaultValue>&quot;Deed Recorded&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>DS Deed Recorded</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DS_TBD__c</fullName>
+        <defaultValue>&quot;TBD&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>DS TBD</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DS_Waiting_for_Deed__c</fullName>
+        <defaultValue>&quot;Waiting for Deed&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>DS Waiting for Deed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deed_Not_Yet_Received__c</fullName>
+        <defaultValue>&quot;Deed Not Yet Received&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deed Not Yet Received</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deed_Received__c</fullName>
+        <defaultValue>&quot;Deed Received&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deed Received</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deed_Recorded__c</fullName>
+        <defaultValue>&quot;Deed Recorded&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Deed Recorded</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Driver_Assigned__c</fullName>
+        <defaultValue>&quot;Driver Assigned&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Driver Assigned</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Awaiting_Constable_Lock__c</fullName>
+        <defaultValue>&quot;Awaiting Constable Lock&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Awaiting Constable Lock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Awaiting_Eviction_Court_Date__c</fullName>
+        <defaultValue>&quot;Awaiting Eviction Court Date&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Awaiting Eviction Court Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Awaiting_Eviction_Writ__c</fullName>
+        <defaultValue>&quot;Awaiting Eviction Writ&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Awaiting Eviction Writ</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Constable_Lock_Complete__c</fullName>
+        <defaultValue>&quot;Constable Lock Complete&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Constable Lock Complete</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Eviction_Aborted__c</fullName>
+        <defaultValue>&quot;Eviction Cancelled&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Eviction Aborted</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Eviction_Complete__c</fullName>
+        <defaultValue>&quot;Eviction Complete&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Eviction Complete</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Eviction_In_Process__c</fullName>
+        <defaultValue>&quot;Eviction in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Eviction In Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Eviction_Letter_Sent__c</fullName>
+        <defaultValue>&quot;Eviction Letter Sent&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Eviction Letter Sent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Initial_Eviction_Notice_Sent__c</fullName>
+        <defaultValue>&quot;Initial Eviction Notice Sent&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Initial Eviction Notice Sent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Recommended_for_Eviction__c</fullName>
+        <defaultValue>&quot;Recommended for Eviction&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Recommended for Eviction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ES_Referred_to_Eviction_Attorney__c</fullName>
+        <defaultValue>&quot;Referred to Eviction Attorney&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ES Referred to Eviction Attorney</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eviction_Complete__c</fullName>
+        <defaultValue>&quot;Eviction Complete&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Eviction Complete</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eviction_In_Process__c</fullName>
+        <defaultValue>&quot;Eviction in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Eviction In Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eviction_Letter_Sent__c</fullName>
+        <defaultValue>&quot;Eviction Letter Sent&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Eviction Letter Sent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FurtherContactAborted_ReferredToEviction__c</fullName>
+        <defaultValue>&quot;Further Contact Aborted - Referred to Eviction&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>FurtherContactAborted-ReferredToEviction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_1st_Notice_Left__c</fullName>
+        <defaultValue>&quot;1st Notice Left&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS 1st Notice Left</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_2nd_Notice_Left__c</fullName>
+        <defaultValue>&quot;2nd Notice Left&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS 2nd Notice Left</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_3rd_Notice_Left__c</fullName>
+        <defaultValue>&quot;3rd Notice Left&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS 3rd Notice Left</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_ContactAborted_ReferredToEviction__c</fullName>
+        <defaultValue>&quot;Contact Aborted - Referred to Eviction&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS ContactAborted-ReferredToEviction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_Contact_On_Hold__c</fullName>
+        <defaultValue>&apos;Contact On Hold&apos;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS Contact On Hold</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_Driver_Assigned__c</fullName>
+        <defaultValue>&quot;Driver Assigned&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS Driver Assigned</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_InitialContactNegotiation_in_Process__c</fullName>
+        <defaultValue>&quot;Initial Contact - Negotiation in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS InitialContactNegotiation in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICS_Referred_for_3rd_Party_Door_Knock__c</fullName>
+        <defaultValue>&quot;Referred for 3rd Party Door Knock&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>ICS Referred for 3rd Party Door Knock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>In_Contact__c</fullName>
+        <defaultValue>&quot;In Contact&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>In Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>In_Process__c</fullName>
+        <defaultValue>&quot;In Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>In Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Contact_Negotiation_in_Process__c</fullName>
+        <defaultValue>&quot;Initial Contact - Negotiation in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Initial Contact - Negotiation in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Eviction_Notice_Sent__c</fullName>
+        <defaultValue>&quot;Initial Eviction Notice Sent&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Initial Eviction Notice Sent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Lease_Marketing_in_Process__c</fullName>
+        <defaultValue>&quot;Lease Marketing in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Lease Marketing in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Lease_Negotiations_in_Process__c</fullName>
+        <defaultValue>&quot;Lease Negotiations in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Lease Negotiations in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Lease_Submitted_for_Underwriting__c</fullName>
+        <defaultValue>&quot;Lease Submitted for Underwriting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Lease Submitted for Underwriting</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Lease_Under_Review__c</fullName>
+        <defaultValue>&quot;Lease Under Review&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Lease Under Review</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Lease_Underwriting_Rejected__c</fullName>
+        <defaultValue>&quot;Lease Underwriting Rejected&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Lease Underwriting Rejected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Leased__c</fullName>
+        <defaultValue>&quot;Leased&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Leased</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Leasing_In_Process__c</fullName>
+        <defaultValue>&quot;Leasing in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Leasing in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Rent_Ready__c</fullName>
+        <defaultValue>&quot;Rent Ready&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Rent Ready</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LS_Underwriting_Approved__c</fullName>
+        <defaultValue>&quot;Underwriting Approved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>LS Underwriting Approved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Marketing_in_Process__c</fullName>
+        <defaultValue>&quot;Lease Marketing in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease Marketing in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Negotiations_in_Process__c</fullName>
+        <defaultValue>&quot;Lease Negotiations in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease Negotiations in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Submitted_for_Underwriting__c</fullName>
+        <defaultValue>&quot;Lease Submitted for Underwriting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease Submitted for Underwriting</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Under_Review__c</fullName>
+        <defaultValue>&quot;Lease Under Review&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease Under Review</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Underwriting_Rejected__c</fullName>
+        <defaultValue>&quot;Lease Underwriting Rejected&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Lease Underwriting Rejected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leased__c</fullName>
+        <defaultValue>&quot;Leased&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Leased</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Moved_Out_Rehab_Ready__c</fullName>
+        <defaultValue>&quot;Moved Out - Rehab Ready&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Moved Out - Rehab Ready</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Moved_Out__c</fullName>
+        <defaultValue>&quot;Moved Out&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Moved Out</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NewLeaseNegotiationsEndedUnsuccessfully__c</fullName>
+        <defaultValue>&quot;New Lease Negotiations Ended Unsuccessfully&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>NewLeaseNegotiationsEndedUnsuccessfully</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Lease_Negotiations_Underway__c</fullName>
+        <defaultValue>&quot;New Lease Negotiations Underway&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>New Lease Negotiations Underway</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Lease_Signed__c</fullName>
+        <defaultValue>&quot;New Lease Signed&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>New Lease Signed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Lease_Submitted_for_Underwriting__c</fullName>
+        <defaultValue>&quot;New Lease Submitted for Underwriting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>New Lease Submitted for Underwriting</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Lease_Underwriting_Approved__c</fullName>
+        <defaultValue>&quot;New Lease - Underwriting Approved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>New Lease - Underwriting Approved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Lease_Underwriting_Rejected__c</fullName>
+        <defaultValue>&quot;New Lease - Underwriting Rejected&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>New Lease - Underwriting Rejected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Contact__c</fullName>
+        <defaultValue>&quot;No Contact&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>No Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSAQ_Occupied__c</fullName>
+        <defaultValue>&quot;Occupied&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>OSAQ Occupied</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSAQ_Purchased_Rented__c</fullName>
+        <defaultValue>&quot;Purchased Rented&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>OSAQ Purchased Rented</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSAQ_Unknown__c</fullName>
+        <defaultValue>&quot;Unknown&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>OSAQ Unknown</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSAQ_Vacant__c</fullName>
+        <defaultValue>&quot;Vacant&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>OSAQ Vacant</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_C_Occupied_Leased__c</fullName>
+        <defaultValue>&quot;Occupied - Leased&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>OS-C Occupied - Leased</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_C_Occupied_TIP__c</fullName>
+        <defaultValue>&quot;Occupied - TIP&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>OS-C Occupied - TIP</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupied_TIP__c</fullName>
+        <defaultValue>&quot;Occupied - TIP&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Occupied - TIP</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupied__c</fullName>
+        <defaultValue>&quot;Occupied&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Occupied</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PANS_BK__c</fullName>
+        <defaultValue>&quot;BK&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PANS BK</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PANS_Refer_to_Rehab__c</fullName>
+        <defaultValue>&quot;Refer to Rehab&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PANS Refer to Rehab</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PANS_TIP__c</fullName>
+        <defaultValue>&quot;TIP&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PANS TIP</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_Newly_Acquired__c</fullName>
+        <defaultValue>&quot;Newly Acquired&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PS Newly Acquired</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PostAcq_BK_Resolved__c</fullName>
+        <defaultValue>&quot;PostAcq BK Resolved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PostAcq BK Resolved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PostAcq_BK_Unresolved__c</fullName>
+        <defaultValue>&quot;PostAcq BK Unresolved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PostAcq BK Unresolved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PreAcq_BK__c</fullName>
+        <defaultValue>&quot;PreAcq BK&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>PreAcq BK</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prior_Lease_Accepted__c</fullName>
+        <defaultValue>&quot;Prior Lease Accepted&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Prior Lease Accepted</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prior_Lease_Rejected__c</fullName>
+        <defaultValue>&quot;Prior Lease Rejected&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Prior Lease Rejected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prior_Lease_Submitted_for_Underwriting__c</fullName>
+        <defaultValue>&quot;Prior Lease Submitted for Underwriting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Prior Lease Submitted for Underwriting</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchased_Rented__c</fullName>
+        <defaultValue>&quot;Purchased Rented&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Purchased Rented</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_No_Rehab_Completed__c</fullName>
+        <defaultValue>&quot;No Rehab Completed&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS No Rehab Completed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_Ready_for_Rehab__c</fullName>
+        <defaultValue>&quot;Ready for Rehab&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS Ready for Rehab</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_Rehab_Complete__c</fullName>
+        <defaultValue>&quot;Rehab Complete&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS Rehab Complete</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_Rehab_Pre_work_in_Process__c</fullName>
+        <defaultValue>&quot;Rehab Prework in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS Rehab Pre-work in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_Rehab_in_Process__c</fullName>
+        <defaultValue>&quot;Rehab in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS Rehab in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_Rekey_Complete__c</fullName>
+        <defaultValue>&quot;Rekey Complete&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS Rekey Complete</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RS_Waiting_for_Rekey__c</fullName>
+        <defaultValue>&quot;Waiting for Rekey&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>RS Waiting for Rekey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ready_for_Rehab__c</fullName>
+        <defaultValue>&quot;Ready for Rehab&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Ready for Rehab</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recommended_for_Eviction__c</fullName>
+        <defaultValue>&quot;Recommended for Eviction&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Recommended for Eviction</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Refer_to_Rehab__c</fullName>
+        <defaultValue>&quot;Refer to Rehab&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Refer to Rehab</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referred_for_3rd_Party_Door_Knock__c</fullName>
+        <defaultValue>&quot;Referred for 3rd Party Door Knock&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Referred for 3rd Party Door Knock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Referred_to_Eviction_Attorney__c</fullName>
+        <defaultValue>&quot;Referred to Eviction Attorney&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Referred to Eviction Attorney</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab_Complete__c</fullName>
+        <defaultValue>&quot;Rehab Complete&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Rehab Complete</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab_in_Process__c</fullName>
+        <defaultValue>&quot;Rehab in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Rehab in Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rent_Ready__c</fullName>
+        <defaultValue>&quot;Rent Ready&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Rent Ready</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TBD__c</fullName>
+        <defaultValue>&quot;TBD&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TBD</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIPS_Attempting_Contact__c</fullName>
+        <defaultValue>&quot;Attempting Contact&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TIPS Attempting Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIPS_Contacted_In_Process__c</fullName>
+        <defaultValue>&quot;Contacted - In Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TIPS Contacted - In Process</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIPS_NoContactInternalAssignmentInProces__c</fullName>
+        <defaultValue>&quot;No Contact - Internal Assignment in Process&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TIPS NoContactInternalAssignmentinProces</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIPS_No_Action_Taken__c</fullName>
+        <defaultValue>&quot;No Action Taken&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TIPS No Action Taken</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIPS_Non_TIP_Property__c</fullName>
+        <defaultValue>&quot;Non TIP Property&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TIPS Non TIP Property</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TIP__c</fullName>
+        <defaultValue>&quot;TIP&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TIP</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_NewLeaseNegotiationsEndedUnsuccessfu__c</fullName>
+        <defaultValue>&quot;New Lease Negotiations Ended Unsuccessfully&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS NewLeaseNegotiationsEndedUnsuccessfu</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_New_Lease_Negotiations_Underway__c</fullName>
+        <defaultValue>&quot;New Lease Negotiations Underway&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS New Lease Negotiations Underway</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_New_Lease_Signed__c</fullName>
+        <defaultValue>&quot;New Lease Signed&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS New Lease Signed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_New_Lease_Submitted_for_Underwriting__c</fullName>
+        <defaultValue>&quot;New Lease Submitted for Underwriting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS New Lease Submitted for Underwriting</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_New_Lease_Underwriting_Approved__c</fullName>
+        <defaultValue>&quot;New Lease - Underwriting Approved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS New Lease - Underwriting Approved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_New_Lease_Underwriting_Rejected__c</fullName>
+        <defaultValue>&quot;New Lease - Underwriting Rejected&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS New Lease - Underwriting Rejected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_Prior_Lease_Accepted__c</fullName>
+        <defaultValue>&quot;Prior Lease Accepted&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS Prior Lease Accepted</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_Prior_Lease_Rejected__c</fullName>
+        <defaultValue>&quot;Prior Lease Rejected&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS Prior Lease Rejected</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_Prior_Lease_Submitted_for_Underwriti__c</fullName>
+        <defaultValue>&quot;Prior Lease Submitted for Underwriting&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS Prior Lease Submitted for Underwriti</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_TIP_Lease_Negotiations_Aborted__c</fullName>
+        <defaultValue>&quot;TIP Leasing Negotiations Aborted&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS TIP Lease Negotiations Aborted</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TLS_TIP_Lease_Signed__c</fullName>
+        <defaultValue>&quot;TIP Lease Signed&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>TLS TIP Lease Signed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Underwriting_Approved__c</fullName>
+        <defaultValue>&quot;Underwriting Approved&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Underwriting Approved</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vacant__c</fullName>
+        <defaultValue>&quot;Vacant&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Vacant</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Waiting_for_Deed__c</fullName>
+        <defaultValue>&quot;Waiting for Deed&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Waiting for Deed</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X1st_Notice_Left__c</fullName>
+        <defaultValue>&quot;1st Notice Left&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>1st Notice Left</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X2nd_Notice_Left__c</fullName>
+        <defaultValue>&quot;2nd Notice Left&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>2nd Notice Left</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X3rd_Notice_Left__c</fullName>
+        <defaultValue>&quot;3rd Notice Left&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>3rd Notice Left</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Status Tags</label>
+    <visibility>Public</visibility>
+</CustomObject>

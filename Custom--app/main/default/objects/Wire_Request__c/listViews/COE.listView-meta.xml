@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COE</fullName>
+    <columns>NAME</columns>
+    <columns>EM_COE_Tracker__c</columns>
+    <columns>Region_Sharing__c</columns>
+    <columns>Pipeline__c</columns>
+    <columns>COE_File_No__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Type__c</columns>
+    <columns>Tracker_Entity__c</columns>
+    <columns>Wire_Entity__c</columns>
+    <columns>Amount_Funded__c</columns>
+    <columns>Fund_Date__c</columns>
+    <columns>Bookkeeper_Approved__c</columns>
+    <columns>Director_Approved__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>COE</value>
+    </filters>
+    <label>COE</label>
+</ListView>

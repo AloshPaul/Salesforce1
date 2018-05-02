@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yardi_Invoice_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>Vendor__r.Yardi_vendor_code__c &amp; "-" &amp; Invoice_Number__c &amp; "-" &amp;  
+ CASE(GL_Code__c,
+"1260100 Rehab","1260100",
+"1260200 Rehab General Contractor","1260200",
+"1260210 Rehab GC Change Order","1260210",
+"1260300 Rehab Roofs","1260300",
+"1260400 Rehab Cabinets","1260400",
+"1260500 Rehab Countertops","1260500",
+"1260600 Rehab Landscape","1260600",
+"GL TBD Blinds","GL TBD Blinds",
+"GL TBD Cleaning","GL TBD Cleaning",
+"GL TBD Electrical","GL TBD Electrical",
+"GL TBD Flooring","GL TBD Flooring",
+"GL TBD Locks &amp; Keys","GL TBD Locks &amp; Keys",
+"GL TBD Pest Control","GL TBD Pest Control",
+"GL TBD Plumbing","GL TBD Plumbing",
+"GL TBD Waste Removal","GL TBD Waste Removal",
+"1260700 Rehab Pools","1260700",
+"1260800 Rehab Appliances","1260800",
+"1260900 Rehab HVAC","1260900",
+"1260910 Rehab Utilities","1260910",
+"1260915 Rehab Utilities Prior Ownership","1260915",
+"GL CODE DOES NOT MATCH")</formula>
+    <label>Yardi Invoice Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

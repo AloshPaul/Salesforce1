@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tenant_Current_Rent__c</fullName>
+    <description>Most current rent paid by the Resident (as of last month)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Most current rent paid by the Resident (as of last month)</inlineHelpText>
+    <label>Tenant Current Rent</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

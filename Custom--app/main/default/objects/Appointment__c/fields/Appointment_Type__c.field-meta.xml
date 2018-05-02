@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Appointment_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Appointment_Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Merchandising</fullName>
+                <default>false</default>
+                <label>Merchandising</label>
+            </value>
+            <value>
+                <fullName>Mystery Visits</fullName>
+                <default>false</default>
+                <label>Mystery Visits</label>
+            </value>
+            <value>
+                <fullName>Outsourced Sales</fullName>
+                <default>false</default>
+                <label>Outsourced Sales</label>
+            </value>
+            <value>
+                <fullName>Rackjobbing</fullName>
+                <default>false</default>
+                <label>Rackjobbing</label>
+            </value>
+            <value>
+                <fullName>Sales Demonstrations</fullName>
+                <default>false</default>
+                <label>Sales Demonstrations</label>
+            </value>
+            <value>
+                <fullName>Training Stores</fullName>
+                <default>false</default>
+                <label>Training Stores</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

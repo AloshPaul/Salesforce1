@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yardi_Code_Prefix__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( Fund__c = '01', 
+CASE (Property_State__c, 'SC', 'SC2C', 'WI', 'WICH', 'MN', 'MNCH', 'MI', 'MICH', 'IN', 'INCH', 'CO', 'COCH', 
+LEFT (Property_Code__c, 4)), 
+
+RIGHT (Fund__c,1) &amp; 
+
+CASE( Region__c, 
+'Inland Empire', 'CAI', 
+'Los Angeles', 'CAL', 
+'Minneapolis', 'MNC',
+'Sacramento', 'CAS', 
+'Seattle', 'WAS', 
+'Las Vegas', 'NVL', 
+'Charlotte', IF (Property_State__c == 'SC', 'SCC', 'NCC'), 
+'Chicago', CASE (Property_State__c, 'WI', 'WIC', 'MI', 'MIC', 'IN', 'INC', 'CO', 'COC', 'ILC'), 
+LEFT (Property_Code__c, 3)))</formula>
+    <label>Yardi Code Prefix</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIRs_Deployed_Yesterday</fullName>
+    <columns>Actual_Rollout__c</columns>
+    <columns>NAME</columns>
+    <columns>Task_Name__c</columns>
+    <columns>Status__c</columns>
+    <columns>Project_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release_Date_from_Actual_Rollout__c</field>
+        <operation>equals</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Deployed in PROD</value>
+    </filters>
+    <label>*SIRs Deployed Yesterday</label>
+</ListView>

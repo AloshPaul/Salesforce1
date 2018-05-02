@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Tickets_LA_IE</fullName>
+    <columns>NAME</columns>
+    <columns>Requestor_Name__c</columns>
+    <columns>Request_Area__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Request_Specifics__c</columns>
+    <columns>Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Time_Open__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Closed,Closed - No Response,Completed Accounting Incident</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Inland Empire,Los Angeles</value>
+    </filters>
+    <label>Open Tickets(LA &amp; IE)</label>
+    <sharedTo>
+        <group>LA_and_IE_Portfolio_Access</group>
+    </sharedTo>
+</ListView>

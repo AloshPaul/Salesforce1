@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_ATL</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Portfolio_Manager__c</columns>
+    <columns>Current_Tenant_Status__c</columns>
+    <columns>Lease_TIP_Status__c</columns>
+    <columns>Unit_Rental_Type__c</columns>
+    <columns>Unit_Status__c</columns>
+    <columns>Actual_Lease_Amt__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <label>All- ATL</label>
+</ListView>

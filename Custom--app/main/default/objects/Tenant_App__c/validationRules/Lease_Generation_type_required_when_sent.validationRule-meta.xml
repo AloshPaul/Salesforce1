@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Generation_type_required_when_sent</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(TRIM(TEXT(Lease_Generation_Type__c)) == '',
+    Lease_Prepared_Sent__c ,
+    $Profile.Name != 'System Administrator',
+    OR( ISCHANGED(Lease_Generation_Type__c),
+        ISCHANGED(Lease_Prepared_Sent__c),
+        ISNEW())
+    )</errorConditionFormula>
+    <errorDisplayField>Lease_Generation_Type__c</errorDisplayField>
+    <errorMessage>'Lease Generation Type' is a Required Field if 'Lease Prepared/Sent' box is checked</errorMessage>
+</ValidationRule>

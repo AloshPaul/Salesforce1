@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aging_Leased__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Post_Acq_Status__c = "Leased", 
+
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 14, '1-2 Weeks', 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 28, '3-4 Weeks', 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 42, '5-6 Weeks', 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 56, '7-8 Weeks', 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c &lt;= 70, '9-10 Weeks', 
+IF(Yardi_Rent_Roll__r.Lease_Period_Start_Current_Tenant__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c >= 71, '11-12+ Weeks', 
+"Instatus Transition")))))) ,
+
+IF( Post_Acq_Status__c = " ", "Instatus Transition", "Instatus Transition"))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Aging - Leased</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

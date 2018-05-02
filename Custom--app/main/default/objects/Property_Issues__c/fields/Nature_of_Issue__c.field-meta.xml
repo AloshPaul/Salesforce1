@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_Issue__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Typically Leasing, Maintenance, Resident Payment, Rent/Deposits, Neighbor Complaint, Web Site, Utilities, HOA, or Other.</inlineHelpText>
+    <label>Nature of Issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Fees</fullName>
+                <default>false</default>
+                <label>Additional Fees</label>
+            </value>
+            <value>
+                <fullName>Application</fullName>
+                <default>false</default>
+                <label>Application</label>
+            </value>
+            <value>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+                <label>Eviction</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>Late Notice</fullName>
+                <default>false</default>
+                <label>Late Notice</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Neighbor - Complaint</fullName>
+                <default>false</default>
+                <label>Neighbor - Complaint</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Rent</fullName>
+                <default>false</default>
+                <label>Rent</label>
+            </value>
+            <value>
+                <fullName>Rent Portal/ACH</fullName>
+                <default>false</default>
+                <label>Rent Portal/ACH</label>
+            </value>
+            <value>
+                <fullName>Deposit</fullName>
+                <default>false</default>
+                <label>Deposit</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

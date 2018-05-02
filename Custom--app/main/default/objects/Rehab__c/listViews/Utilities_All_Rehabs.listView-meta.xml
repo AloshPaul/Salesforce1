@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Utilities_All_Rehabs</fullName>
+    <columns>Yardi_Code__c</columns>
+    <columns>NAME</columns>
+    <columns>Home__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Electricity_Provider__c</columns>
+    <columns>Electric_Status__c</columns>
+    <columns>Electric_Notes__c</columns>
+    <columns>Gas_Status__c</columns>
+    <columns>Gas_Notes__c</columns>
+    <columns>Water_Status__c</columns>
+    <columns>Water_Notes__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Utilities: All Rehabs</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parking_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				OR(Parking__c='1 Car Driveway',Parking__c='2 Car Driveway',Parking__c='No Parking',Parking__c='Slab'),
+				1,
+				IF(
+								Parking__c='1 Car Carport',
+								1.5,
+								IF(
+												OR(Parking__c='2 Car Carport',Parking__c='3 Car Carport'),
+												2,
+												IF(
+																Parking__c='1 Car Garage',
+																2.5,
+																IF(
+																				OR(Parking__c='2 Car Garage',Parking__c=''),
+																				3,
+																				IF(
+																								Parking__c='3 Car Garage',
+																								4,
+																								IF(
+																												Parking__c='4+ Car Garage',5,5)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Parking Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

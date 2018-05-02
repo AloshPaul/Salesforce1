@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Detail</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Disposition Detail</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/24.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/24.0/apex.js")} 
+
+var result = sforce.connection.query("SELECT Portfolio__r.Residence__c FROM Renewal__c WHERE Id = '{!Renewal__c.Id}' and Portfolio__c != null "); 
+
+if(result.size > 0){ 
+var records = result.getArray("records"); 
+
+var resId = records[0].Portfolio__r.Residence__c; 
+
+window.open('/apex/PopulateDispositionInfo?renewalId={!Renewal__c.Id}&amp;ResidenceId='+resId,'_blank'); 
+}</url>
+</WebLink>

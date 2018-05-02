@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Count_Active_Post_Acquisition_Rehabs__c</fullName>
+    <description>Number of Active Post-Acquisition Rehab . "Active" means a Rehab in any Stage except "Closed - Cancelled".</description>
+    <externalId>false</externalId>
+    <label># Active Post Acquisition Rehabs</label>
+    <summaryFilterItems>
+        <field>Rehab__c.Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed - Cancelled</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Rehab__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Post-Acquisition</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Rehab__c.Portfolio__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

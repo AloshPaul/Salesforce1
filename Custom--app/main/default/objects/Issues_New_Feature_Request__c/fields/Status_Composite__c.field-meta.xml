@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Composite__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND 
+(ISPICKVAL(Status__c, "In Development"), 
+NOT(ISBLANK((TEXT(Development_Status__c))))), 
+"In Development" + " " + "-" + " " + TEXT(Development_Status__c), 
+
+IF(AND 
+(ISPICKVAL(Status__c, "In Development"), 
+ISBLANK((TEXT(Development_Status__c)))), 
+"In Development", 
+
+IF(AND 
+(ISPICKVAL(Status__c, "In Testing"), 
+ISBLANK((TEXT(QA_Review_Status__c)))), 
+"In Testing" + " " + "-" + " " + "QA", 
+
+IF(AND 
+(ISPICKVAL(Status__c, "In Testing"), 
+ISPICKVAL(QA_Review_Status__c, "Ready for UAT Review"),
+NOT(ISBLANK(TEXT(UAT_Review_Status__c)))),
+"In Testing" + " " + "-" + " " + "UAT" + " " + TEXT( UAT_Review_Status__c),
+
+IF(AND 
+(ISPICKVAL(Status__c, "In Testing"), 
+ISPICKVAL(QA_Review_Status__c, "Ready for UAT Review"),
+ISBLANK(TEXT(UAT_Review_Status__c)),
+ISBLANK( Reviewer__c )),
+"In Testing" + " " + "-" + " " + "Ready for UAT Review", 
+
+IF(AND 
+(ISPICKVAL(Status__c, "In Testing"), 
+ISPICKVAL(QA_Review_Status__c, "Ready for UAT Review"),
+ISBLANK(TEXT(UAT_Review_Status__c)),
+NOT(ISBLANK( Reviewer__c ))),
+"In Testing" + " " + "-" + " " + "UAT",
+
+IF(AND 
+(ISPICKVAL(Status__c, "In Testing"), 
+(TEXT(QA_Review_Status__c)  &lt;> "Ready for UAT Review")), 
+"In Testing" + " " + "-" + " " + "QA" + " " + TEXT(QA_Review_Status__c), 
+
+IF(AND 
+(ISPICKVAL(Status__c, "Accepted"), 
+ISBLANK(Actual_Rollout__c)), 
+"Accepted" + " " + "-" + " " + "Ready for PROD Deploy", 
+
+IF(AND 
+(ISPICKVAL(Status__c, "Accepted"), 
+NOT(ISBLANK(Actual_Rollout__c))), 
+"Accepted" + " " + "-" + " " + "Ready for PROD Review", 
+
+
+TEXT(Status__c))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Composite</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

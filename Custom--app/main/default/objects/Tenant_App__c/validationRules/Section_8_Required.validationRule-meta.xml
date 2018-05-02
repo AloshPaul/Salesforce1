@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_8_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>DATEVALUE(App_Received__c) > DATE(2013,08,29) &amp;&amp;
+ISPICKVAL( Section_8__c ,"") &amp;&amp; 
+$Profile.Name != 'System Administrator' &amp;&amp;
+ RecordType.DeveloperName != 'AppTrack_2_0'</errorConditionFormula>
+    <errorDisplayField>Section_8__c</errorDisplayField>
+    <errorMessage>You must enter a value.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trash_Service_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Home__r.Trash_Service_Status__c)</formula>
+    <label>Trash Service Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

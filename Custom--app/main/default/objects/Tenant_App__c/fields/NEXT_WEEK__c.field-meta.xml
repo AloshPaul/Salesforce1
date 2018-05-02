@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NEXT_WEEK__c</fullName>
+    <description>Scheduled Move in Date (Next Week)</description>
+    <externalId>false</externalId>
+    <formula>IF( FLOOR((TODAY() - DATE(1900,1,7))/7)+1 == FLOOR((Lease_Start_Date_Agent_Verified__c - DATE(1900,1,7))/7) , 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NEXT WEEK</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

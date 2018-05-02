@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommendations_Selected__c</fullName>
+    <externalId>false</externalId>
+    <label>Recommendations Selected</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Poor Turn Quality</fullName>
+                <default>false</default>
+                <label>Poor Turn Quality</label>
+            </value>
+            <value>
+                <fullName>Home Not Priced Competitively</fullName>
+                <default>false</default>
+                <label>Home Not Priced Competitively</label>
+            </value>
+            <value>
+                <fullName>Location Factors</fullName>
+                <default>false</default>
+                <label>Location Factors</label>
+            </value>
+            <value>
+                <fullName>Regional Ops Issue</fullName>
+                <default>false</default>
+                <label>Regional Ops Issue</label>
+            </value>
+            <value>
+                <fullName>Adverse Market Conditions</fullName>
+                <default>false</default>
+                <label>Adverse Market Conditions</label>
+            </value>
+            <value>
+                <fullName>Seasonality Impact</fullName>
+                <default>false</default>
+                <label>Seasonality Impact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

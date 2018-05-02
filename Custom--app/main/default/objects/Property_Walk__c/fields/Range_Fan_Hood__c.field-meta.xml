@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Range_Fan_Hood__c</fullName>
+    <externalId>false</externalId>
+    <label>Range/Fan/Hood</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Change</fullName>
+                <default>true</default>
+                <label>No Change</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Satisfactory</fullName>
+                <default>false</default>
+                <label>Satisfactory</label>
+            </value>
+            <value>
+                <fullName>Repair Needed</fullName>
+                <default>false</default>
+                <label>Repair Needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

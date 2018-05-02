@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Resolution_Details</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( 
+AND( 
+ $Profile.Name  &lt;> 'System Administrator',
+RecordType.Name  &lt;> 'SF Request',
+ISPICKVAL( Status__c , "Closed"),  
+LEN(Resolution_Details__c) = 0), True, False)</errorConditionFormula>
+    <errorDisplayField>Resolution_Details__c</errorDisplayField>
+    <errorMessage>Resolution Details is required upon closing the ticket.</errorMessage>
+</ValidationRule>

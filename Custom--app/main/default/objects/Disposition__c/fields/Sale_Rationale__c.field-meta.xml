@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sale_Rationale__c</fullName>
+    <externalId>false</externalId>
+    <label>Sale Rationale</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>HOA Restrictions</fullName>
+                <default>false</default>
+                <label>HOA Restrictions</label>
+            </value>
+            <value>
+                <fullName>Leasing Challenge</fullName>
+                <default>false</default>
+                <label>Leasing Challenge</label>
+            </value>
+            <value>
+                <fullName>Unexpected Rehab</fullName>
+                <default>false</default>
+                <label>Unexpected Rehab</label>
+            </value>
+            <value>
+                <fullName>Gross Yield</fullName>
+                <default>false</default>
+                <label>Gross Yield</label>
+            </value>
+            <value>
+                <fullName>Suboptimal Rents</fullName>
+                <default>false</default>
+                <label>Suboptimal Rents</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Casualty Loss</fullName>
+                <default>false</default>
+                <label>Casualty Loss</label>
+            </value>
+            <value>
+                <fullName>Outlier Location</fullName>
+                <default>false</default>
+                <label>Outlier Location</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+                <label>Rehab</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prohibits_Leasing__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(HOA_Primary__r.Prohibits_Renters__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If this property is in an HOA that we have on file this will reflect if the HOA has strict bylaws that prohibit leasing. If you have this data point, click on the HOA company record and update the field accordingly.</inlineHelpText>
+    <label>HOA Prohibits Leasing?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

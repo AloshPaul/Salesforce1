@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technician__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of the group member working on the service order. This does not imply that this member has the ownership of service order record</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of the group member working on the service order. This does not imply that this member has the ownership of service order record</inlineHelpText>
+    <label>Technician</label>
+    <referenceTo>Work_Order__c</referenceTo>
+    <relationshipName>Work_Orders_Tech</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

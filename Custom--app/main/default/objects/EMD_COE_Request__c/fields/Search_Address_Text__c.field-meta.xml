@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Search_Address_Text__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used for global searching, but it's also visible for cases in which a Tracker record was initially loaded and it did not have an association to a Prospect or Pipeline record.  In those cases, this field is used in list views and reports.</inlineHelpText>
+    <label>Search Address Text</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

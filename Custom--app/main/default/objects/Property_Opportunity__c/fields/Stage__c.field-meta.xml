@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>*Pipeline Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquired</fullName>
+                <default>false</default>
+                <label>Acquired</label>
+            </value>
+            <value>
+                <fullName>Active - Bid Placed</fullName>
+                <default>false</default>
+                <label>Active - Bid Placed</label>
+            </value>
+            <value>
+                <fullName>Active - In Escrow</fullName>
+                <default>false</default>
+                <label>Active - In Escrow</label>
+            </value>
+            <value>
+                <fullName>Dead - Bid Lost</fullName>
+                <default>false</default>
+                <label>Dead - Bid Lost</label>
+            </value>
+            <value>
+                <fullName>Dead - Cancelled</fullName>
+                <default>false</default>
+                <label>Dead - Cancelled</label>
+            </value>
+            <value>
+                <fullName>Dead  - Duplicate</fullName>
+                <default>false</default>
+                <label>Dead  - Duplicate</label>
+            </value>
+            <value>
+                <fullName>Closed - Bid Lost</fullName>
+                <default>false</default>
+                <label>Closed - Bid Lost</label>
+            </value>
+            <value>
+                <fullName>Closed - Cancelled</fullName>
+                <default>false</default>
+                <label>Closed - Cancelled</label>
+            </value>
+            <value>
+                <fullName>Closed  - Duplicate</fullName>
+                <default>false</default>
+                <label>Closed  - Duplicate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

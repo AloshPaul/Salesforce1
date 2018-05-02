@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IMG_Director__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Default to market based assignment but can be changed if needed</description>
+    <externalId>false</externalId>
+    <label>Director IMG</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Acq_Prospects1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

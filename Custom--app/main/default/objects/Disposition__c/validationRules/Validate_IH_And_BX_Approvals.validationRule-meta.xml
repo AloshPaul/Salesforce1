@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_IH_And_BX_Approvals</fullName>
+    <active>true</active>
+    <description>Once approval fields set to yes, no one should  be able to change it expect System Administrator</description>
+    <errorConditionFormula>OR(AND(TEXT(PRIORVALUE(IH_Approval_of_Sale__c)) =='Yes',TEXT( IH_Approval_of_Sale__c)!='Yes' ,$Profile.Name != 'System Administrator'),AND(TEXT(PRIORVALUE(BX_Approval_of_Sale__c)) =='Yes',TEXT( BX_Approval_of_Sale__c)!='Yes',$Profile.Name != 'System Administrator'))</errorConditionFormula>
+    <errorMessage>Disposition has already been approved. Please contact your System Administrator</errorMessage>
+</ValidationRule>

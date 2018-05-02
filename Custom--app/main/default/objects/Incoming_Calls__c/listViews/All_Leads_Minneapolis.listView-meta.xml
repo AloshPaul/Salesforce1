@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Leads_Minneapolis</fullName>
+    <columns>NAME</columns>
+    <columns>Date_Time__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Lead_Channel__c</columns>
+    <columns>Source_New__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Lead_Status__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Region__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Message__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Minneapolis</value>
+    </filters>
+    <filters>
+        <field>Lead_Channel__c</field>
+        <operation>equals</operation>
+        <value>Internet/Email Submission</value>
+    </filters>
+    <label>All Leads - Minneapolis</label>
+    <sharedTo>
+        <role>Executive_Minneapolis</role>
+        <role>Team_Member_Minneapolis</role>
+    </sharedTo>
+</ListView>

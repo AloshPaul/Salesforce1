@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_ValidateRegionField</fullName>
+    <active>true</active>
+    <description>Do not allow user to update the region field once the prospect has been converted.</description>
+    <errorConditionFormula>AND(
+	IsConverted__c,
+	ISCHANGED( Region__c ),
+        $Profile.Name != 'System Administrator'
+)</errorConditionFormula>
+    <errorDisplayField>Back_Taxes_Est_UW__c</errorDisplayField>
+    <errorMessage>This prospect has been converted. You cannot update the region.</errorMessage>
+</ValidationRule>

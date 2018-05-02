@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Damage_Condition__c</fullName>
+    <description>NO DAMAGE
+MINOR DAMAGE - minor water staining, no drywall/base removal required, minor touch up paint required, minor landscape damage
+MODERATE DAMAGE - 1 room of carpet/pad/base, less than 100sf of drywall, moderate paint damage, minor damage to roof, siding/stucco and/or windows, moderate landscape damage
+MAJOR DAMAGE - multiple rooms of carpet/pad/base, more than 100sf of drywall, structural, HVAC, electrical &amp; plumbing damage, major damage to roof, home exterior and windows</description>
+    <externalId>false</externalId>
+    <label>Damage Condition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NO DAMAGE</fullName>
+                <default>false</default>
+                <label>NO DAMAGE</label>
+            </value>
+            <value>
+                <fullName>MINOR DAMAGE</fullName>
+                <default>false</default>
+                <label>MINOR DAMAGE</label>
+            </value>
+            <value>
+                <fullName>MODERATE DAMAGE</fullName>
+                <default>false</default>
+                <label>MODERATE DAMAGE</label>
+            </value>
+            <value>
+                <fullName>MAJOR DAMAGE</fullName>
+                <default>false</default>
+                <label>MAJOR DAMAGE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

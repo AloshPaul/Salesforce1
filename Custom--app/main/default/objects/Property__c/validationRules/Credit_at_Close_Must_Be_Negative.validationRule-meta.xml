@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_at_Close_Must_Be_Negative</fullName>
+    <active>false</active>
+    <description>Credits at Close must be ($500) or less (i.e., enter a negative number with a value of 500 or more).</description>
+    <errorConditionFormula>Credits_at_Close__c   >= -499
+ || 
+ Credits_at_Close__c  &lt;> 0
+||
+DATEVALUE( CreatedDate )  >=  DATE(2013,06,11)</errorConditionFormula>
+    <errorDisplayField>Credits_at_Close__c</errorDisplayField>
+    <errorMessage>Credits at Close must be ($500) or less (i.e., enter a negative number with a value of 500 or more or 0).  Please note:  these are credits at close in lieu of a contract price reduction only.</errorMessage>
+</ValidationRule>

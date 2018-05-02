@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Finalized_requires_Revised_Budget</fullName>
+    <active>true</active>
+    <description>PTL Finalized requires Revised Budget</description>
+    <errorConditionFormula>Send_PTL_to_GC__c  = TRUE
+&amp;&amp;
+ ISBLANK(Budget_Revised__c)</errorConditionFormula>
+    <errorMessage>PTL Finalized requires Revised Budget</errorMessage>
+</ValidationRule>

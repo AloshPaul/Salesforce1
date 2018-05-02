@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Deployed Via Permission Set.This is a holding place to support a future state w/ rehab actuals/invoices.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Approved_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case (Rehab__r.Region__c ,
+
+&quot;Atlanta&quot;,&quot;James Turner&quot;, 
+&quot;Charlotte&quot;,&quot;Doug Mann&quot;, 
+&quot;Chicago&quot;,IF( Rehab__r.Property_State__c = &quot;MN&quot;, &quot;Greg Halleland&quot;, &quot;Bryan Henson&quot;), 
+&quot;Inland Empire&quot;,&quot;Jay Skjevren&quot;, 
+&quot;Jacksonville&quot;,&quot;Ken Mitchell&quot;, 
+&quot;Las Vegas&quot;,&quot;Michael Murphy&quot;, 
+&quot;Los Angeles&quot;,&quot;George Bishop&quot;, 
+&quot;Miami&quot;,&quot;Doug Wilson&quot;, 
+&quot;Orlando&quot;,&quot;William Redding&quot;, 
+&quot;Phoenix&quot;,&quot;Steve Letcher&quot;, 
+&quot;Sacramento&quot;,&quot;Scotte Henderson&quot;, 
+&quot;Seattle&quot;,&quot;Jeff Taylor&quot;, 
+&quot;Tampa&quot;,&quot;Alexis Antoni&quot;,Null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approved By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cash_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case( Rehab__r.Region__c ,
+&quot;Atlanta&quot;, &quot;1003100&quot;,
+&quot;XXXX&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cash Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Change_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Change Order</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Confirmed_Payment_To_Vendor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Confirmed Payment To Vendor</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Confirmed_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Confirmed Payment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Paid</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Submitted_to_Yardi__c</fullName>
+        <description>Date this was sent in a batch to Yardi</description>
+        <externalId>false</externalId>
+        <label>Date Submitted to Yardi</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Exception__c</fullName>
+        <externalId>false</externalId>
+        <label>Exception</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                    <label>Duplicate</label>
+                </value>
+                <value>
+                    <fullName>Wrong GL Code</fullName>
+                    <default>false</default>
+                    <label>Wrong GL Code</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>File_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Original__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>GL Code</label>
+        <referenceTo>GL_Code__c</referenceTo>
+        <relationshipLabel>Property Invoices</relationshipLabel>
+        <relationshipName>Property_Invoices</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Type_Adjusted__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Rehab__r.Type__c, &apos;Post-Acquisition&apos; ), 
+IF( ISBLANK( GL_Code_Original__r.GL_Code_Acquisition__c ) 
+, GL_Code_Original__r.Name, 
+GL_Code_Original__r.GL_Code_Acquisition__r.Name 
+), 
+IF( ISBLANK( GL_Code_Original__r.GL_Code_Turn__c ) , 
+GL_Code_Original__r.Name, 
+GL_Code_Original__r.GL_Code_Turn__r.Name 
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL Code Type Adjusted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_Code__c</fullName>
+        <description>IF NEW GL CODES ARE ADDED - THEY ALSO NEED TO BE ADDED TO THE CHANGE ORDER AND THE YARDI INVOICE FORMULA NEEDS TO BE UPDATED</description>
+        <externalId>false</externalId>
+        <label>GL Code</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1260100 - Rehab Other</fullName>
+                    <default>false</default>
+                    <label>1260100 - Rehab Other</label>
+                </value>
+                <value>
+                    <fullName>1260125 - Rehab Demo/Waste</fullName>
+                    <default>false</default>
+                    <label>1260125 - Rehab Demo/Waste</label>
+                </value>
+                <value>
+                    <fullName>1260140 - Rehab Pests/Termites</fullName>
+                    <default>false</default>
+                    <label>1260140 - Rehab Pests/Termites</label>
+                </value>
+                <value>
+                    <fullName>1260150 - Rehab Cleaning</fullName>
+                    <default>false</default>
+                    <label>1260150 - Rehab Cleaning</label>
+                </value>
+                <value>
+                    <fullName>1260175 - Rehab Initial Re-Key</fullName>
+                    <default>false</default>
+                    <label>1260175 - Rehab Initial Re-Key</label>
+                </value>
+                <value>
+                    <fullName>1260200 - Rehab General Contractor</fullName>
+                    <default>false</default>
+                    <label>1260200 - Rehab General Contractor</label>
+                </value>
+                <value>
+                    <fullName>1260210 - Rehab GC Change Order</fullName>
+                    <default>false</default>
+                    <label>1260210 - Rehab GC Change Order</label>
+                </value>
+                <value>
+                    <fullName>1260300 - Rehab Roofs</fullName>
+                    <default>false</default>
+                    <label>1260300 - Rehab Roofs</label>
+                </value>
+                <value>
+                    <fullName>1260325 - Rehab Garage and Garage Doors</fullName>
+                    <default>false</default>
+                    <label>1260325 - Rehab Garage and Garage Doors</label>
+                </value>
+                <value>
+                    <fullName>1260350 - Rehab Exterior Surfaces</fullName>
+                    <default>false</default>
+                    <label>1260350 - Rehab Exterior Surfaces</label>
+                </value>
+                <value>
+                    <fullName>1260375 - Rehab Sidewalks/Driveways</fullName>
+                    <default>false</default>
+                    <label>1260375 - Rehab Sidewalks/Driveways</label>
+                </value>
+                <value>
+                    <fullName>1260400 - Rehab Cabinets</fullName>
+                    <default>false</default>
+                    <label>1260400 - Rehab Cabinets</label>
+                </value>
+                <value>
+                    <fullName>1260425 - Rehab Interior Painting</fullName>
+                    <default>false</default>
+                    <label>1260425 - Rehab Interior Painting</label>
+                </value>
+                <value>
+                    <fullName>1260450 - Rehab Flooring</fullName>
+                    <default>false</default>
+                    <label>1260450 - Rehab Flooring</label>
+                </value>
+                <value>
+                    <fullName>1260475 - Rehab Door/Window Costs</fullName>
+                    <default>false</default>
+                    <label>1260475 - Rehab Door/Window Costs</label>
+                </value>
+                <value>
+                    <fullName>1260480 - Rehab Blinds</fullName>
+                    <default>false</default>
+                    <label>1260480 - Rehab Blinds</label>
+                </value>
+                <value>
+                    <fullName>1260500 - Rehab Countertops</fullName>
+                    <default>false</default>
+                    <label>1260500 - Rehab Countertops</label>
+                </value>
+                <value>
+                    <fullName>1260600 - Rehab Landscape</fullName>
+                    <default>false</default>
+                    <label>1260600 - Rehab Landscape</label>
+                </value>
+                <value>
+                    <fullName>1260700 - Rehab Pool Service Fees</fullName>
+                    <default>false</default>
+                    <label>1260700 - Rehab Pool Service Fees</label>
+                </value>
+                <value>
+                    <fullName>1260710 - Rehab Pool Maintenance Costs</fullName>
+                    <default>false</default>
+                    <label>1260710 - Rehab Pool Maintenance Costs</label>
+                </value>
+                <value>
+                    <fullName>1260800 - Rehab Appliances</fullName>
+                    <default>false</default>
+                    <label>1260800 - Rehab Appliances</label>
+                </value>
+                <value>
+                    <fullName>1260825 - Rehab Specialty Electric</fullName>
+                    <default>false</default>
+                    <label>1260825 - Rehab Specialty Electric</label>
+                </value>
+                <value>
+                    <fullName>1260850 - Rehab Specialty Plumbing</fullName>
+                    <default>false</default>
+                    <label>1260850 - Rehab Specialty Plumbing</label>
+                </value>
+                <value>
+                    <fullName>1260900 - Rehab HVAC</fullName>
+                    <default>false</default>
+                    <label>1260900 - Rehab HVAC</label>
+                </value>
+                <value>
+                    <fullName>1260910 - Rehab Utilities</fullName>
+                    <default>false</default>
+                    <label>1260910 - Rehab Utilities</label>
+                </value>
+                <value>
+                    <fullName>1260915 - Rehab Utilities Prior Ownership</fullName>
+                    <default>false</default>
+                    <label>1260915 - Rehab Utilities Prior Ownership</label>
+                </value>
+                <value>
+                    <fullName>1261000 - Rehab Capitalized Insurance</fullName>
+                    <default>false</default>
+                    <label>1261000 - Rehab Capitalized Insurance</label>
+                </value>
+                <value>
+                    <fullName>1261100 - Rehab Capitalized Tax</fullName>
+                    <default>false</default>
+                    <label>1261100 - Rehab Capitalized Tax</label>
+                </value>
+                <value>
+                    <fullName>1261200 - Rehab Capitalized Interest</fullName>
+                    <default>false</default>
+                    <label>1261200 - Rehab Capitalized Interest</label>
+                </value>
+                <value>
+                    <fullName>1261300 - Rehab Capitalized HOA</fullName>
+                    <default>false</default>
+                    <label>1261300 - Rehab Capitalized HOA</label>
+                </value>
+                <value>
+                    <fullName>1261400 - Rehab Capitalized Accrued Costs</fullName>
+                    <default>false</default>
+                    <label>1261400 - Rehab Capitalized Accrued Costs</label>
+                </value>
+                <value>
+                    <fullName>5002504 - Turn Cleaning</fullName>
+                    <default>false</default>
+                    <label>5002504 - Turn Cleaning</label>
+                </value>
+                <value>
+                    <fullName>5002506 - Turn Interior Painting</fullName>
+                    <default>false</default>
+                    <label>5002506 - Turn Interior Painting</label>
+                </value>
+                <value>
+                    <fullName>5002508 - Turn Locks and Keys</fullName>
+                    <default>false</default>
+                    <label>5002508 - Turn Locks and Keys</label>
+                </value>
+                <value>
+                    <fullName>5002510 - Turn Pest/Termites</fullName>
+                    <default>false</default>
+                    <label>5002510 - Turn Pest/Termites</label>
+                </value>
+                <value>
+                    <fullName>5002511 - Turn Landscape</fullName>
+                    <default>false</default>
+                    <label>5002511 - Turn Landscape</label>
+                </value>
+                <value>
+                    <fullName>5002512 - Turn Flooring</fullName>
+                    <default>false</default>
+                    <label>5002512 - Turn Flooring</label>
+                </value>
+                <value>
+                    <fullName>5002513 - Turn Roofs</fullName>
+                    <default>false</default>
+                    <label>5002513 - Turn Roofs</label>
+                </value>
+                <value>
+                    <fullName>5002514 - Turn Appliances</fullName>
+                    <default>false</default>
+                    <label>5002514 - Turn Appliances</label>
+                </value>
+                <value>
+                    <fullName>5002515 - Turn HVAC</fullName>
+                    <default>false</default>
+                    <label>5002515 - Turn HVAC</label>
+                </value>
+                <value>
+                    <fullName>5002516 - Turn Other</fullName>
+                    <default>false</default>
+                    <label>5002516 - Turn Other</label>
+                </value>
+                <value>
+                    <fullName>5002517 - Turn Demo/Waste</fullName>
+                    <default>false</default>
+                    <label>5002517 - Turn Demo/Waste</label>
+                </value>
+                <value>
+                    <fullName>5002520 - Turn General Contractor</fullName>
+                    <default>false</default>
+                    <label>5002520 - Turn General Contractor</label>
+                </value>
+                <value>
+                    <fullName>5002523 - Turn GC Change Order</fullName>
+                    <default>false</default>
+                    <label>5002523 - Turn GC Change Order</label>
+                </value>
+                <value>
+                    <fullName>5002525 - Turn Garage and Garage Doors</fullName>
+                    <default>false</default>
+                    <label>5002525 - Turn Garage and Garage Doors</label>
+                </value>
+                <value>
+                    <fullName>5002527 - Turn Exterior Surfaces</fullName>
+                    <default>false</default>
+                    <label>5002527 - Turn Exterior Surfaces</label>
+                </value>
+                <value>
+                    <fullName>5002530 - Turn Cabinets</fullName>
+                    <default>false</default>
+                    <label>5002530 - Turn Cabinets</label>
+                </value>
+                <value>
+                    <fullName>5002532 - Turn Door/Window Costs</fullName>
+                    <default>false</default>
+                    <label>5002532 - Turn Door/Window Costs</label>
+                </value>
+                <value>
+                    <fullName>5002535 - Turn Blinds</fullName>
+                    <default>false</default>
+                    <label>5002535 - Turn Blinds</label>
+                </value>
+                <value>
+                    <fullName>5002537 - Turn Countertops</fullName>
+                    <default>false</default>
+                    <label>5002537 - Turn Countertops</label>
+                </value>
+                <value>
+                    <fullName>5002544 - Turn Pool Maintenance</fullName>
+                    <default>false</default>
+                    <label>5002544 - Turn Pool Maintenance</label>
+                </value>
+                <value>
+                    <fullName>5002545 - Turn Specialty Electric</fullName>
+                    <default>false</default>
+                    <label>5002545 - Turn Specialty Electric</label>
+                </value>
+                <value>
+                    <fullName>5002547 - Turn Specialty Plumbing</fullName>
+                    <default>false</default>
+                    <label>5002547 - Turn Specialty Plumbing</label>
+                </value>
+                <value>
+                    <fullName>5002548 - Turn Sidewalks/Driveways</fullName>
+                    <default>false</default>
+                    <label>5002548 - Turn Sidewalks/Driveways</label>
+                </value>
+                <value>
+                    <fullName>1277010 - Turn CapEx Flooring</fullName>
+                    <default>false</default>
+                    <label>1277010 - Turn CapEx Flooring</label>
+                </value>
+                <value>
+                    <fullName>1277012 - Turn CapEx Roofs</fullName>
+                    <default>false</default>
+                    <label>1277012 - Turn CapEx Roofs</label>
+                </value>
+                <value>
+                    <fullName>1277015 - Turn CapEx Interior Painting</fullName>
+                    <default>false</default>
+                    <label>1277015 - Turn CapEx Interior Painting</label>
+                </value>
+                <value>
+                    <fullName>1277018 - Turn CapEx Appliances</fullName>
+                    <default>false</default>
+                    <label>1277018 - Turn CapEx Appliances</label>
+                </value>
+                <value>
+                    <fullName>1277020 - Turn CapEx HVAC</fullName>
+                    <default>false</default>
+                    <label>1277020 - Turn CapEx HVAC</label>
+                </value>
+                <value>
+                    <fullName>1277022 - Turn CapEx Other</fullName>
+                    <default>false</default>
+                    <label>1277022 - Turn CapEx Other</label>
+                </value>
+                <value>
+                    <fullName>1277023 - Turn CapEx Demo/Waste</fullName>
+                    <default>false</default>
+                    <label>1277023 - Turn CapEx Demo/Waste</label>
+                </value>
+                <value>
+                    <fullName>1277025 - Turn CapEx General Contractor</fullName>
+                    <default>false</default>
+                    <label>1277025 - Turn CapEx General Contractor</label>
+                </value>
+                <value>
+                    <fullName>1277028 - Turn CapEx GC Change Order</fullName>
+                    <default>false</default>
+                    <label>1277028 - Turn CapEx GC Change Order</label>
+                </value>
+                <value>
+                    <fullName>1277030 - Turn CapEx Garage and Garage Doors</fullName>
+                    <default>false</default>
+                    <label>1277030 - Turn CapEx Garage and Garage Doors</label>
+                </value>
+                <value>
+                    <fullName>1277032 - Turn CapEx Exterior Surfaces</fullName>
+                    <default>false</default>
+                    <label>1277032 - Turn CapEx Exterior Surfaces</label>
+                </value>
+                <value>
+                    <fullName>1277035 - Turn CapEx Cabinets</fullName>
+                    <default>false</default>
+                    <label>1277035 - Turn CapEx Cabinets</label>
+                </value>
+                <value>
+                    <fullName>1277037 - Turn CapEx Blinds</fullName>
+                    <default>false</default>
+                    <label>1277037 - Turn CapEx Blinds</label>
+                </value>
+                <value>
+                    <fullName>1277040 - Turn CapEx Countertops</fullName>
+                    <default>false</default>
+                    <label>1277040 - Turn CapEx Countertops</label>
+                </value>
+                <value>
+                    <fullName>1277043 - Turn CapEx Landscape</fullName>
+                    <default>false</default>
+                    <label>1277043 - Turn CapEx Landscape</label>
+                </value>
+                <value>
+                    <fullName>1277045 - Turn CapEx Pool Maintenance</fullName>
+                    <default>false</default>
+                    <label>1277045 - Turn CapEx Pool Maintenance</label>
+                </value>
+                <value>
+                    <fullName>1277047 - Turn CapEx Specialty Electric</fullName>
+                    <default>false</default>
+                    <label>1277047 - Turn CapEx Specialty Electric</label>
+                </value>
+                <value>
+                    <fullName>1277050 - Turn CapEx Specialty Plumbing</fullName>
+                    <default>false</default>
+                    <label>1277050 - Turn CapEx Specialty Plumbing</label>
+                </value>
+                <value>
+                    <fullName>1277100 - Turn CapEx Accrued Costs</fullName>
+                    <default>false</default>
+                    <label>1277100 - Turn CapEx Accrued Costs</label>
+                </value>
+                <value>
+                    <fullName>1277150 - Turn CapEx Sidewalks/Driveways</fullName>
+                    <default>false</default>
+                    <label>1277150 - Turn CapEx Sidewalks/Driveways</label>
+                </value>
+                <value>
+                    <fullName>1277175 - Turn CapEx Casualty Losses</fullName>
+                    <default>false</default>
+                    <label>1277175 - Turn CapEx Casualty Losses</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Include_in_Yardi_Batch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this box if you would like this invoice included in the next batch upload</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if you would like this invoice included in the next batch upload</inlineHelpText>
+        <label>Include in Yardi Batch</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Amount</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes_Print_on_Check_Stub__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes (Print on Check Stub)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Post_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Month( Date_Paid__c))&amp;&quot;-&quot;&amp; TEXT(YEAR(Date_Paid__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Post Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rehab_Projected_Spend__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rehab Projected Spend</label>
+        <referenceTo>Rehab_Projected_Spend__c</referenceTo>
+        <relationshipLabel>Property Invoices</relationshipLabel>
+        <relationshipName>Property_Invoices</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rehab__c</fullName>
+        <externalId>false</externalId>
+        <label>Rehab</label>
+        <referenceTo>Rehab__c</referenceTo>
+        <relationshipLabel>Property Invoices</relationshipLabel>
+        <relationshipName>Property_Invoices</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Remarks_Appears_on_GL__c</fullName>
+        <externalId>false</externalId>
+        <formula>Notes_Print_on_Check_Stub__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remarks (Appears on GL)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resubmit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this box if we need to resubmit</inlineHelpText>
+        <label>Resubmit</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Return_Check_to__c</fullName>
+        <externalId>false</externalId>
+        <label>Return Check to</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Region Office</fullName>
+                    <default>true</default>
+                    <label>Region Office</label>
+                </value>
+                <value>
+                    <fullName>Send to Vendor</fullName>
+                    <default>false</default>
+                    <label>Send to Vendor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Paid</fullName>
+                    <default>false</default>
+                    <label>Paid</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Terms</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Due on Receipt</fullName>
+                    <default>false</default>
+                    <label>Due on Receipt</label>
+                </value>
+                <value>
+                    <fullName>Net 15</fullName>
+                    <default>false</default>
+                    <label>Net 15</label>
+                </value>
+                <value>
+                    <fullName>Net 30</fullName>
+                    <default>false</default>
+                    <label>Net 30</label>
+                </value>
+                <value>
+                    <fullName>Net 60</fullName>
+                    <default>false</default>
+                    <label>Net 60</label>
+                </value>
+                <value>
+                    <fullName>Net 90</fullName>
+                    <default>false</default>
+                    <label>Net 90</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tran__c</fullName>
+        <displayFormat>{0}</displayFormat>
+        <externalId>false</externalId>
+        <label>Tran #</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;I&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UNIQUE_Invoice_for_dedupe__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used as the Unique Identifier for Invoices.</description>
+        <externalId>false</externalId>
+        <label>UNIQUE Invoice # for dedupe</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Vendor__r.Yardi_vendor_code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vendor Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Salesforce_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Vendor__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Vendor Salesforce Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vendor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Property Invoices</relationshipLabel>
+        <relationshipName>Property_Invoices</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Rehab__r.Yardi_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Yardi Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Invoice_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Vendor__r.Yardi_vendor_code__c &amp; &quot;-&quot; &amp; Invoice_Number__c &amp; &quot;-&quot; &amp;  
+ CASE(GL_Code__c,
+&quot;1260100 Rehab&quot;,&quot;1260100&quot;,
+&quot;1260200 Rehab General Contractor&quot;,&quot;1260200&quot;,
+&quot;1260210 Rehab GC Change Order&quot;,&quot;1260210&quot;,
+&quot;1260300 Rehab Roofs&quot;,&quot;1260300&quot;,
+&quot;1260400 Rehab Cabinets&quot;,&quot;1260400&quot;,
+&quot;1260500 Rehab Countertops&quot;,&quot;1260500&quot;,
+&quot;1260600 Rehab Landscape&quot;,&quot;1260600&quot;,
+&quot;GL TBD Blinds&quot;,&quot;GL TBD Blinds&quot;,
+&quot;GL TBD Cleaning&quot;,&quot;GL TBD Cleaning&quot;,
+&quot;GL TBD Electrical&quot;,&quot;GL TBD Electrical&quot;,
+&quot;GL TBD Flooring&quot;,&quot;GL TBD Flooring&quot;,
+&quot;GL TBD Locks &amp; Keys&quot;,&quot;GL TBD Locks &amp; Keys&quot;,
+&quot;GL TBD Pest Control&quot;,&quot;GL TBD Pest Control&quot;,
+&quot;GL TBD Plumbing&quot;,&quot;GL TBD Plumbing&quot;,
+&quot;GL TBD Waste Removal&quot;,&quot;GL TBD Waste Removal&quot;,
+&quot;1260700 Rehab Pools&quot;,&quot;1260700&quot;,
+&quot;1260800 Rehab Appliances&quot;,&quot;1260800&quot;,
+&quot;1260900 Rehab HVAC&quot;,&quot;1260900&quot;,
+&quot;1260910 Rehab Utilities&quot;,&quot;1260910&quot;,
+&quot;1260915 Rehab Utilities Prior Ownership&quot;,&quot;1260915&quot;,
+&quot;GL CODE DOES NOT MATCH&quot;)</formula>
+        <label>Yardi Invoice Formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Property Invoice</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Tran__c</columns>
+        <columns>Vendor_Code__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Invoice_Date__c</columns>
+        <columns>Post_Month__c</columns>
+        <columns>Invoice_Number__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Yardi_Code__c</columns>
+        <columns>Invoice_Amount__c</columns>
+        <columns>GL_Code__c</columns>
+        <columns>Remarks_Appears_on_GL__c</columns>
+        <columns>Return_Check_to__c</columns>
+        <columns>Approved_By__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Invoices_Entered_but_not_Flagged</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Tran__c</columns>
+        <columns>Vendor_Code__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Invoice_Date__c</columns>
+        <columns>Post_Month__c</columns>
+        <columns>Invoice_Number__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Yardi_Code__c</columns>
+        <columns>Invoice_Amount__c</columns>
+        <columns>GL_Code__c</columns>
+        <columns>Remarks_Appears_on_GL__c</columns>
+        <columns>Return_Check_to__c</columns>
+        <columns>Approved_By__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Include_in_Yardi_Batch__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Submitted</value>
+        </filters>
+        <filters>
+            <field>Date_Submitted_to_Yardi__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Invoices Entered but not Flagged</label>
+    </listViews>
+    <listViews>
+        <fullName>Invoices_that_need_submission</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Tran__c</columns>
+        <columns>Vendor_Code__c</columns>
+        <columns>Vendor__c</columns>
+        <columns>Invoice_Date__c</columns>
+        <columns>Post_Month__c</columns>
+        <columns>Invoice_Number__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Yardi_Code__c</columns>
+        <columns>Invoice_Amount__c</columns>
+        <columns>GL_Code__c</columns>
+        <columns>Remarks_Appears_on_GL__c</columns>
+        <columns>Return_Check_to__c</columns>
+        <columns>Approved_By__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Include_in_Yardi_Batch__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Submitted</value>
+        </filters>
+        <filters>
+            <field>Date_Submitted_to_Yardi__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Invoices that need submission</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PropInvoice-{0000}</displayFormat>
+        <label>Property Invoice Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Property Invoices</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>GL_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Rehab__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Vendor__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Invoice_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Invoice_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Invoice_Amount__c</customTabListAdditionalFields>
+        <listViewButtons>Mass_Edit_Invoices</listViewButtons>
+        <listViewButtons>Mass_Update_Invoices</listViewButtons>
+        <listViewButtons>Send_Excel_with_All_Invoices_To_Me</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Create_Multiple_Property_Invoices</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Multiple Property Invoices</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/PropertyInvoiceEntry?id={!Rehab__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Edit_Invoices</fullName>
+        <availability>online</availability>
+        <description>Used to Mass Edit Invoices</description>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Mass Edit Invoices</masterLabel>
+        <openType>replace</openType>
+        <page>MassEditPropertyInvoices</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Update_Invoices</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Mass Update Invoices</masterLabel>
+        <openType>replace</openType>
+        <page>MassUpdatePropertyInvoices</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Excel_with_All_Invoices_To_Me</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Send Excel with All Invoices To Me</masterLabel>
+        <openType>replace</openType>
+        <page>EmailPropertyInvoicesCSV</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atlanta</fullName>
+    <columns>NAME</columns>
+    <columns>Region_Sharing__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Pipeline__c</columns>
+    <columns>Converted_to_Portfolio__c</columns>
+    <columns>Fund__c</columns>
+    <columns>Tracker_Entity__c</columns>
+    <columns>Pipeline_Status__c</columns>
+    <columns>Escrow_Cancelled_Date__c</columns>
+    <columns>Total_Funds_Wired__c</columns>
+    <columns>Final_HUD__c</columns>
+    <columns>Refund_Received__c</columns>
+    <columns>Pending_HUD__c</columns>
+    <columns>Other_Cost_Credits__c</columns>
+    <columns>Refund_Due__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region_Sharing__c</field>
+        <operation>equals</operation>
+        <value>Atlanta</value>
+    </filters>
+    <label>Atlanta</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Atlanta</role>
+        <role>Team_Member_Atlanta</role>
+    </sharedTo>
+</ListView>

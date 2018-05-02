@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Service_Request_Surveys</fullName>
+    <columns>NAME</columns>
+    <columns>Service_Request__c</columns>
+    <columns>Overall_Problem_Resolve_Process__c</columns>
+    <columns>Overall_QoS__c</columns>
+    <columns>Overall_Scheduling_Process__c</columns>
+    <columns>Rate_your_Technician_Vendor__c</columns>
+    <columns>Recommend_Friends_and_Family__c</columns>
+    <columns>Does_Mgmt_need_to_contact_you__c</columns>
+    <columns>Follow_Up_Status__c</columns>
+    <columns>Additional_Comments__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Resident_First_Name__c</columns>
+    <columns>Resident_Last_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Service Request Surveys</label>
+</ListView>

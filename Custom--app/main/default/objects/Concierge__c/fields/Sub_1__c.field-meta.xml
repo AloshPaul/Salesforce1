@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_1__c</fullName>
+    <description>This field is used only for the Treasury Record Type.</description>
+    <externalId>false</externalId>
+    <label>Sub 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A/R</fullName>
+                <default>false</default>
+                <label>A/R</label>
+            </value>
+            <value>
+                <fullName>Bank Account Inquiry</fullName>
+                <default>false</default>
+                <label>Bank Account Inquiry</label>
+            </value>
+            <value>
+                <fullName>Bank Acct Administration</fullName>
+                <default>false</default>
+                <label>Bank Acct Administration</label>
+            </value>
+            <value>
+                <fullName>Cashier's Check</fullName>
+                <default>false</default>
+                <label>Cashier's Check</label>
+            </value>
+            <value>
+                <fullName>Deposited Check Copy Request</fullName>
+                <default>false</default>
+                <label>Deposited Check Copy Request</label>
+            </value>
+            <value>
+                <fullName>Electronic Funds Transfer</fullName>
+                <default>false</default>
+                <label>Electronic Funds Transfer</label>
+            </value>
+            <value>
+                <fullName>Stop Pay</fullName>
+                <default>false</default>
+                <label>Stop Pay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

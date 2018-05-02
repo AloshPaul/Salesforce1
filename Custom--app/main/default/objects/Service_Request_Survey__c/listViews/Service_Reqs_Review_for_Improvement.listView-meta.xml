@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Reqs_Review_for_Improvement</fullName>
+    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Service_Request__c</columns>
+    <columns>Overall_Problem_Resolve_Process__c</columns>
+    <columns>Overall_QoS__c</columns>
+    <columns>Overall_Scheduling_Process__c</columns>
+    <columns>Rate_your_Technician_Vendor__c</columns>
+    <columns>Recommend_Friends_and_Family__c</columns>
+    <columns>Additional_Comments__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Resident_Email__c</columns>
+    <columns>Resident_First_Name__c</columns>
+    <columns>Resident_Last_Name__c</columns>
+    <columns>Does_Mgmt_need_to_contact_you__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Overall_Problem_Resolve_Process__c</field>
+        <operation>equals</operation>
+        <value>Poor,Fair</value>
+    </filters>
+    <filters>
+        <field>Overall_QoS__c</field>
+        <operation>equals</operation>
+        <value>Poor,Fair</value>
+    </filters>
+    <filters>
+        <field>Overall_Scheduling_Process__c</field>
+        <operation>equals</operation>
+        <value>Poor,Fair</value>
+    </filters>
+    <filters>
+        <field>Rate_your_Technician_Vendor__c</field>
+        <operation>equals</operation>
+        <value>Poor,Fair</value>
+    </filters>
+    <filters>
+        <field>Recommend_Friends_and_Family__c</field>
+        <operation>equals</operation>
+        <value>Not Likely,Not Decided</value>
+    </filters>
+    <label>Service Reqs: Review for Improvement</label>
+</ListView>

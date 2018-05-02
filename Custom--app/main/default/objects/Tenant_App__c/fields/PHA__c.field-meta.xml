@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PHA__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is a look-up field that will link to a company record representing your local Public Housing Authority.  If you are not finding the PHA in the look-up, you can go to the Companies tab and a new record.</inlineHelpText>
+    <label>Public Housing Authority (PHA)</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Application Tracking</relationshipLabel>
+    <relationshipName>Application_Tracking</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

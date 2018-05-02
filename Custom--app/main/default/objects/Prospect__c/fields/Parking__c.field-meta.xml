@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parking__c</fullName>
+    <externalId>false</externalId>
+    <label>Parking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Car Garage</fullName>
+                <default>false</default>
+                <label>1 Car Garage</label>
+            </value>
+            <value>
+                <fullName>2 Car Garage</fullName>
+                <default>false</default>
+                <label>2 Car Garage</label>
+            </value>
+            <value>
+                <fullName>3 Car Garage</fullName>
+                <default>false</default>
+                <label>3 Car Garage</label>
+            </value>
+            <value>
+                <fullName>4 Car Garage</fullName>
+                <default>false</default>
+                <label>4 Car Garage</label>
+            </value>
+            <value>
+                <fullName>4+ Car Garage</fullName>
+                <default>false</default>
+                <label>4+ Car Garage</label>
+            </value>
+            <value>
+                <fullName>1 Car Carport</fullName>
+                <default>false</default>
+                <label>1 Car Carport</label>
+            </value>
+            <value>
+                <fullName>2 Car Carport</fullName>
+                <default>false</default>
+                <label>2 Car Carport</label>
+            </value>
+            <value>
+                <fullName>3 Car Carport</fullName>
+                <default>false</default>
+                <label>3 Car Carport</label>
+            </value>
+            <value>
+                <fullName>No Parking</fullName>
+                <default>false</default>
+                <label>No Parking</label>
+            </value>
+            <value>
+                <fullName>Slab</fullName>
+                <default>false</default>
+                <label>Slab</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

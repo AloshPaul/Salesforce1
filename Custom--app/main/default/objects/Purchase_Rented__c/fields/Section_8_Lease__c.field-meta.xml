@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_8_Lease__c</fullName>
+    <externalId>false</externalId>
+    <label>Section 8 Lease</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes - Per Tenant</fullName>
+                <default>false</default>
+                <label>Yes - Per Tenant</label>
+            </value>
+            <value>
+                <fullName>Yes - Verified</fullName>
+                <default>false</default>
+                <label>Yes - Verified</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

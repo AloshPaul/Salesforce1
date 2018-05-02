@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupant_Intentions__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This should reflect the driver's assessment based on contact with occupant.</inlineHelpText>
+    <label>Occupant Intentions</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cash for Keys</fullName>
+                <default>false</default>
+                <label>Cash for Keys</label>
+            </value>
+            <value>
+                <fullName>Move Out</fullName>
+                <default>false</default>
+                <label>Move Out</label>
+            </value>
+            <value>
+                <fullName>Stay</fullName>
+                <default>false</default>
+                <label>Stay</label>
+            </value>
+            <value>
+                <fullName>Unsure</fullName>
+                <default>false</default>
+                <label>Unsure</label>
+            </value>
+            <value>
+                <fullName>Evict</fullName>
+                <default>false</default>
+                <label>Evict</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

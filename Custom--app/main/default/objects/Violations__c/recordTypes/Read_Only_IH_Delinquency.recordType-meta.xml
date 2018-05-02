@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_Only_IH_Delinquency</fullName>
+    <active>true</active>
+    <label>Read Only IH Delinquency</label>
+    <picklistValues>
+        <picklist>First_Notice_Type__c</picklist>
+        <values>
+            <fullName>Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Occupied__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Second_Notice_Type__c</picklist>
+        <values>
+            <fullName>Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed - Fine Waived</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - No Fine Assessed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed - Pending Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dismissed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Third_Notice_Type__c</picklist>
+        <values>
+            <fullName>Certified Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Animals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architectural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basketball Hoops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exterior Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lawn %26 Weeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuisance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rental Inspections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Signs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Snow%2FIce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tenant Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trash Cans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicles</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Notice__c</picklist>
+        <values>
+            <fullName>Collection Notice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delinquency Notice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Lien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securitized Transfer Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

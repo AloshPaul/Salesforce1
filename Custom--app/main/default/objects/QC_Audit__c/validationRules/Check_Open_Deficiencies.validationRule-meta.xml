@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Open_Deficiencies</fullName>
+    <active>true</active>
+    <description>Prevent user from selecting the "QC Closed" status if the open deficiencies > 0.</description>
+    <errorConditionFormula>Deficiencies_Open__c  >=  1 &amp;&amp;  (ISPICKVAL( Status__c , "QC Closed") || NOT( ISBLANK( Audit_Resolution_Date__c ) ))</errorConditionFormula>
+    <errorMessage>You are unable to close this Audit until you mark all deficiencies as completed</errorMessage>
+</ValidationRule>

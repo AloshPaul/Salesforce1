@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Troubleshooting</fullName>
+    <columns>NAME</columns>
+    <columns>Rehab__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Property_State__c</columns>
+    <columns>Property_Zip__c</columns>
+    <columns>Status__c</columns>
+    <columns>Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>Property_State__c</field>
+        <operation>equals</operation>
+        <value>az</value>
+    </filters>
+    <label>PTL - Troubleshooting</label>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Budget_Walk</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+    OR( 
+        doDirectorClosingApproval__c =true, 
+        doReview_Complete__c = True,								
+        doDirectorDueDiligenceApproval__c =true
+				), 
+				
+   
+					
+				doOrderBudgetWalk__c = False
+)</errorConditionFormula>
+    <errorMessage>Budget Walk Record not found, please order a Budget Walk to proceed forward</errorMessage>
+</ValidationRule>

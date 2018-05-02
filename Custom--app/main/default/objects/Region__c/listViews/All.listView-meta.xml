@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Is_Entera_market__c</columns>
+    <columns>Property_Code_Base__c</columns>
+    <columns>SqFt_Median__c</columns>
+    <columns>SqFt_Standard_deviation__c</columns>
+    <columns>Claim_Expiration_Threshold__c</columns>
+    <columns>Active_Claims_per_Broker__c</columns>
+    <columns>Occupancy__c</columns>
+    <columns>IMG_Analyst__c</columns>
+    <columns>Closer_IMG__c</columns>
+    <columns>Closing_Manager_IMG__c</columns>
+    <columns>IMG_Director__c</columns>
+    <columns>SVP_IMG__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

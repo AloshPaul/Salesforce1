@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BX_All_In_Cost_Est_Disc_to_Market_UW__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Market_Value_UW__c > 0, 
+1 - All_In_Cost_Est_UW__c / Market_Value_UW__c, 
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BX All-In Cost Est. Disc. to Market @ UW</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

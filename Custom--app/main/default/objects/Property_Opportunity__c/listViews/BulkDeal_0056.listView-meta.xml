@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BulkDeal_0056</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Market_Value_UW__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Title_Policy_Cost_Est_UW__c</columns>
+    <columns>Title_Company__c</columns>
+    <columns>Exp_Gross_Monthly_Rent_UW__c</columns>
+    <columns>Previous_High_Value__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bulk_Deal__c</field>
+        <operation>equals</operation>
+        <value>Seattle Mark Lawson 19 property Bulk</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.Bulk</value>
+    </filters>
+    <label>Bulk Deal - Seattle Mark Lawson 19 prope</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

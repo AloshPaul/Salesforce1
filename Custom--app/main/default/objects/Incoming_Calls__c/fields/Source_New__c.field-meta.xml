@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_New__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This new field replaced the "Source (Historical)" field effective 11/21/2014.</inlineHelpText>
+    <label>Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Zillow.com</fullName>
+                <default>false</default>
+                <label>Zillow.com</label>
+            </value>
+            <value>
+                <fullName>Trulia.com</fullName>
+                <default>false</default>
+                <label>Trulia.com</label>
+            </value>
+            <value>
+                <fullName>Hotpads.com</fullName>
+                <default>false</default>
+                <label>Hotpads.com</label>
+            </value>
+            <value>
+                <fullName>IH Property Website</fullName>
+                <default>false</default>
+                <label>IH Property Website</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>RENTCafe</fullName>
+                <default>false</default>
+                <label>RENTCafe</label>
+            </value>
+            <value>
+                <fullName>Realtor.com</fullName>
+                <default>false</default>
+                <label>Realtor.com</label>
+            </value>
+            <value>
+                <fullName>Apartments.com</fullName>
+                <default>false</default>
+                <label>Apartments.com</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Signs - DriveBy - Curb Appeal</fullName>
+                <default>false</default>
+                <label>Signs - DriveBy - Curb Appeal</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Rently</fullName>
+                <default>false</default>
+                <label>Rently</label>
+            </value>
+            <value>
+                <fullName>Pandora</fullName>
+                <default>false</default>
+                <label>Pandora</label>
+            </value>
+            <value>
+                <fullName>Advertising</fullName>
+                <default>false</default>
+                <label>Advertising</label>
+            </value>
+            <value>
+                <fullName>MLS</fullName>
+                <default>false</default>
+                <label>MLS</label>
+            </value>
+            <value>
+                <fullName>Military Sites</fullName>
+                <default>false</default>
+                <label>Military Sites</label>
+            </value>
+            <value>
+                <fullName>Zumper</fullName>
+                <default>false</default>
+                <label>Zumper</label>
+            </value>
+            <value>
+                <fullName>Rentals.com</fullName>
+                <default>false</default>
+                <label>Rentals.com</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

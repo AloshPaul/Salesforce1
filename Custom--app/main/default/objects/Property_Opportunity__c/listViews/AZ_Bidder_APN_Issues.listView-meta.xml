@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AZ_Bidder_APN_Issues</fullName>
+    <booleanFilter>1 AND 2 AND (3 or 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Residence__c</columns>
+    <columns>Prospect__c</columns>
+    <columns>APN__c</columns>
+    <columns>AZB_IH_Win_Date__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>AZB_Bid_Status__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>AZB_Winning_Bid_Amount__c</columns>
+    <columns>Region__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Property_Opportunity__c.AZ_Bidder</value>
+    </filters>
+    <filters>
+        <field>AZB_IH_Win_Date__c</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>APN__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>APN__c</field>
+        <operation>contains</operation>
+        <value>E+,check,dup,dupe,not found</value>
+    </filters>
+    <label>AZBIDDER APN Issues</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

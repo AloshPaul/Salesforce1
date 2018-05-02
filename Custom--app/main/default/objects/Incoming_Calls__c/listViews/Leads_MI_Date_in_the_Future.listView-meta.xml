@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads_MI_Date_in_the_Future</fullName>
+    <columns>NAME</columns>
+    <columns>Agent_Assigned_to_Lead__c</columns>
+    <columns>First_Name__c</columns>
+    <columns>Last_Name__c</columns>
+    <columns>Phone__c</columns>
+    <columns>Email__c</columns>
+    <columns>Target_City__c</columns>
+    <columns>Agent_Comments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>My_Lead__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>Agent_Lead_Status__c</field>
+        <operation>equals</operation>
+        <value>MI Date Outside of IH Requirements</value>
+    </filters>
+    <label>^^Leads- MI Date in the Future</label>
+    <sharedTo>
+        <group>Region_Orlando</group>
+        <role>X3rd_Party_Jacksonville</role>
+        <role>X3rd_Party_Orlando</role>
+    </sharedTo>
+</ListView>

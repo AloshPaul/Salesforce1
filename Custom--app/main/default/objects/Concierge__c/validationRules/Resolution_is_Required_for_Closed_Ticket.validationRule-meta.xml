@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_is_Required_for_Closed_Ticket</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( 
+   AND(
+       (ISPICKVAL(Status__c, 'Closed')),
+       (LEN( Resolution_Details__c ) == 0)  
+   )
+   , true, false
+)</errorConditionFormula>
+    <errorDisplayField>Resolution_Details__c</errorDisplayField>
+    <errorMessage>Resolution details are required.</errorMessage>
+</ValidationRule>

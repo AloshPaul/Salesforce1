@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOM_30_to_59_SEA_View</fullName>
+    <columns>NAME</columns>
+    <columns>DOM__c</columns>
+    <columns>Agent_Assigned__c</columns>
+    <columns>Status__c</columns>
+    <columns>Address__c</columns>
+    <columns>City__c</columns>
+    <columns>Zip_Code__c</columns>
+    <columns>BR_BA__c</columns>
+    <columns>Rent_UW__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>MLS_Listing__c</columns>
+    <columns>Agent_Inventory_Comments__c</columns>
+    <columns>Leasing_Mgr_Visit_Comments__c</columns>
+    <columns>Promotion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DOM__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>30</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>startsWith</operation>
+        <value>OTM</value>
+    </filters>
+    <filters>
+        <field>DOM__c</field>
+        <operation>lessOrEqual</operation>
+        <value>59</value>
+    </filters>
+    <label>DOM  = 30 to 59  SEA View</label>
+    <sharedTo>
+        <role>Executive_Seattle</role>
+        <role>Team_Member_Seattle</role>
+    </sharedTo>
+</ListView>

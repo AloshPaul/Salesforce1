@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sale_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+$RecordType.Name = 'Bulk Acquisition',
+$RecordType.Name = 'Standard/REO Acquisition'
+),
+(
+DATE(
+YEAR(Escrow_Expected_Close_Date__c) + (MONTH(Escrow_Expected_Close_Date__c) + Exit_Month__c)/12,
+MOD((MONTH(Escrow_Expected_Close_Date__c) + Exit_Month__c + 1), 12),
+1
+)-1
+),
+(
+DATE(
+YEAR(DATEVALUE(CreatedDate)) + (MONTH(DATEVALUE(CreatedDate)) + Exit_Month__c)/12,
+MOD((MONTH(DATEVALUE(CreatedDate)) + Exit_Month__c + 1), 12),
+1
+)
+)-1
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sale Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

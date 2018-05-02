@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Sending_Revised_Lease__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Sending Revised Lease</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rehab Date Change</fullName>
+                <default>false</default>
+                <label>Rehab Date Change</label>
+            </value>
+            <value>
+                <fullName>Resident Date Change</fullName>
+                <default>false</default>
+                <label>Resident Date Change</label>
+            </value>
+            <value>
+                <fullName>Document Expired - Resident</fullName>
+                <default>false</default>
+                <label>Document Expired - Resident</label>
+            </value>
+            <value>
+                <fullName>Addition/Removal of Pet</fullName>
+                <default>false</default>
+                <label>Addition/Removal of Pet</label>
+            </value>
+            <value>
+                <fullName>Addition/Removal of Applicant or Occupant</fullName>
+                <default>false</default>
+                <label>Addition/Removal of Applicant or Occupant</label>
+            </value>
+            <value>
+                <fullName>Lease Error – Market</fullName>
+                <default>false</default>
+                <label>Lease Error – Market</label>
+            </value>
+            <value>
+                <fullName>Market Date Change</fullName>
+                <default>false</default>
+                <label>Market Date Change</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>Housing</fullName>
+                <default>false</default>
+                <label>Housing</label>
+            </value>
+            <value>
+                <fullName>Lease Error – Lease Admin</fullName>
+                <default>false</default>
+                <label>Lease Error – Lease Admin</label>
+            </value>
+            <value>
+                <fullName>Voided - Market</fullName>
+                <default>false</default>
+                <label>Voided - Market</label>
+            </value>
+            <value>
+                <fullName>Voided - Resident</fullName>
+                <default>false</default>
+                <label>Voided - Resident</label>
+            </value>
+            <value>
+                <fullName>Document Expired - Market</fullName>
+                <default>false</default>
+                <label>Document Expired - Market</label>
+            </value>
+            <value>
+                <fullName>Document Expired</fullName>
+                <default>false</default>
+                <label>Document Expired</label>
+            </value>
+            <value>
+                <fullName>Lease Error</fullName>
+                <default>false</default>
+                <label>Lease Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

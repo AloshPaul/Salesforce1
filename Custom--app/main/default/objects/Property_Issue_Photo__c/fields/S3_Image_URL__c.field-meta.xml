@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>S3_Image_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>'https://'+ S3_Bucket__c + '.s3.amazonaws.com/'+ S3_Path__c +'?AWSAccessKeyId='+$Label.Access_Key_ID</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>S3 Image URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

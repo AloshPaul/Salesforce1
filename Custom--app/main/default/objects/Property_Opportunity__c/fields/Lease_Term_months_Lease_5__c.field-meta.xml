@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_Term_months_Lease_5__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ AND(
+ ISNULL(Exit_Month__c ), 
+ISNULL(Downtime_Assumption_months_Lease_1__c ), 
+ISNULL(Downtime_Assumption_months_Lease_2__c ), 
+ISNULL(Downtime_Assumption_months_Lease_3__c ), 
+ISNULL(Downtime_Assumption_months_Lease_4__c ), 
+ISNULL(Downtime_Assumption_months_Lease_5__c ), 
+ISNULL(Lease_Term_months_Lease_1__c ), 
+ISNULL(Lease_Term_months_Lease_2__c),
+ ISNULL(Lease_Term_months_Lease_3__c ),
+ ISNULL(Lease_Term_months_Lease_4__c )
+ ),
+ null,
+ (
+ IF(Exit_Month__c > 0, Exit_Month__c, 0)
+-
+(
+IF(Downtime_Assumption_months_Lease_1__c > 0, Downtime_Assumption_months_Lease_1__c, 0)
+ +
+ IF(Downtime_Assumption_months_Lease_2__c > 0, Downtime_Assumption_months_Lease_2__c, 0)
+ +
+ IF(Downtime_Assumption_months_Lease_3__c > 0, Downtime_Assumption_months_Lease_3__c, 0)
+ +
+ IF(Downtime_Assumption_months_Lease_4__c > 0, Downtime_Assumption_months_Lease_4__c, 0)
+ +
+ IF(Downtime_Assumption_months_Lease_5__c > 0, Downtime_Assumption_months_Lease_5__c, 0)
+ )
+-
+(
+IF(Lease_Term_months_Lease_1__c > 0, Lease_Term_months_Lease_1__c, 0)
+ +
+ IF(Lease_Term_months_Lease_2__c > 0, Lease_Term_months_Lease_2__c, 0)
+ +
+ IF(Lease_Term_months_Lease_3__c > 0, Lease_Term_months_Lease_3__c, 0)
+ +
+ IF(Lease_Term_months_Lease_4__c > 0, Lease_Term_months_Lease_4__c, 0)
+ )
+ )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lease Term (months) - Lease 5</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

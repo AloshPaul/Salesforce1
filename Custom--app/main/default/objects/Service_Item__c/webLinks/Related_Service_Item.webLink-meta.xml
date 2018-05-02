@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Service_Item</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Related Service Item</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a2k/e?CF00NE0000004c5as={!Work_Order__c.Name}&amp;CF00NE0000004c5as_lkid={!Work_Order__c.Id}&amp;CF00NE0000004c5bP={!Work_Order__c.PortfolioProperty__c}&amp;CF00NE0000004c5bP_lkid={!Work_Order__c.PortfolioPropertyId__c}&amp;CF00NE0000004c5bY={!Service_Item__c.Name}&amp;CF00NE0000004c5bY_lkid={!Service_Item__c.Id}&amp;RecordType=012E00000005n3T&amp;ent=01IE00000011ZBz&amp;retURL=%2F{!Work_Order__c.Id}&amp;cancelURL=%2F{!Service_Item__c.Id}&amp;00NE0000004c5b3={!Service_Item__c.Category__c}&amp;00NE0000004c5br={!Service_Item__c.Sub_Category__c}&amp;00NE0000004c5bR={!Service_Item__c.Priority__c}&amp;00NE0000004c5bp={!Service_Item__c.Service_Source__c}&amp;00NE0000004c5ax={!Service_Item__c.CCA_Notes__c}&amp;00NE0000004c5aw={!Service_Item__c.Brief_Description__c}&amp;00NE0000004c5au={!Service_Item__c.After_Hours_Service_Item__c}</url>
+</WebLink>

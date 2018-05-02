@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lease_or_TIP_Required_if_Occupied</fullName>
+    <active>true</active>
+    <description>If Occupied value is Yes, a Lease or TIP is required.</description>
+    <errorConditionFormula>RecordType.Name = "IH Violation" &amp;&amp; 
+ISPICKVAL(Occupied__c, "Yes")&amp;&amp; 
+AND(ISBLANK( Lease__c ), ISBLANK( TIP__c ))&amp;&amp; 
+$Profile.Name != 'System Administrator'</errorConditionFormula>
+    <errorDisplayField>Occupied__c</errorDisplayField>
+    <errorMessage>If property is occupied, a Lease or TIP is required.</errorMessage>
+</ValidationRule>

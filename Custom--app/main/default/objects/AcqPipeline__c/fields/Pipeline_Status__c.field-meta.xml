@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Pipeline Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contract Reviewed</fullName>
+                <default>false</default>
+                <label>Contract Reviewed</label>
+            </value>
+            <value>
+                <fullName>Review Complete</fullName>
+                <default>false</default>
+                <label>Review Complete</label>
+            </value>
+            <value>
+                <fullName>Due Diligence Approved</fullName>
+                <default>false</default>
+                <label>Due Diligence Approved</label>
+            </value>
+            <value>
+                <fullName>Closing Approved</fullName>
+                <default>false</default>
+                <label>Closing Approved</label>
+            </value>
+            <value>
+                <fullName>Moved to Queue</fullName>
+                <default>false</default>
+                <label>Moved to Queue</label>
+            </value>
+            <value>
+                <fullName>Portfolio Created</fullName>
+                <default>false</default>
+                <label>Portfolio Created</label>
+            </value>
+            <value>
+                <fullName>Cancelled/Dead</fullName>
+                <default>false</default>
+                <label>Cancelled/Dead</label>
+            </value>
+            <value>
+                <fullName>Closed/Dead</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closed/Dead</label>
+            </value>
+            <value>
+                <fullName>Order COE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order COE</label>
+            </value>
+            <value>
+                <fullName>Rehab approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehab approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

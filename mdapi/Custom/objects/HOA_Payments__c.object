@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is part of the HOA application and can be used to generate the spreadsheet to request HOA payments from corporate accounting.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Additional_Payment__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Additional Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Addt_l_Payment_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Addt&apos;l Payment Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  CONTAINS(Payment_Freqency_retired__c, &quot;Month&quot;), &quot;5020200&quot;, &quot;1243300&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HOA_Tracker__c</fullName>
+        <externalId>false</externalId>
+        <label>HOA Tracker</label>
+        <referenceTo>HOA_Tracking__c</referenceTo>
+        <relationshipName>HOA_Payments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Invoice_Number__c</fullName>
+        <description>HOA_Tracker__r.Yardi_Property_Code__c &amp;   &quot;.&quot; &amp; TEXT(MONTH(DATEVALUE(CreatedDate))) &amp; &quot;.&quot; &amp; TEXT(DAY(DATEVALUE(CreatedDate)))&amp;  &quot;.&quot; &amp; TEXT(YEAR(DATEVALUE(CreatedDate)))</description>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.Yardi_Property_Code__c &amp; &quot;.&quot; &amp; 
+
+CASE(MONTH( DATEVALUE(CreatedDate)), 
+1, &quot;02.01.&quot;, 
+2, &quot;03.01.&quot;, 
+3, &quot;04.01.&quot;, 
+4, &quot;05.01.&quot;, 
+5, &quot;06.01.&quot;, 
+6, &quot;07.01.&quot;, 
+7, &quot;08.01.&quot;, 
+8, &quot;09.01.&quot;, 
+9, &quot;10.01.&quot;, 
+10, &quot;11.01.&quot;, 
+11, &quot;12.01.&quot;, 
+12, &quot;01.01.&quot;, 
+&quot;xxx999xxx&quot;) 
+
+&amp; TEXT(YEAR( Due_Date__c ))</formula>
+        <label>Invoice #</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Payment_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.Last_HOA_Payment_Date__c</formula>
+        <label>Last Payment Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.Market__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Recurring Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <description>This is a formula field has been requested by corporate accounting.</description>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.HOA_Account_Number__c &amp; &quot;-&quot;&amp; &quot;Assessment&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is a formula field has been requested by corporate accounting.</inlineHelpText>
+        <label>Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Freqency_retired__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(HOA_Tracker__r.Payment_Frequency__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Freqency_retired</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Frequency_new__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Frequency</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.Property__r.Property_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.Region__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remarks__c</fullName>
+        <description>This is a formula field has been requested by corporate accounting.
+
+HOA_Tracker__r.HOA_Account_Number__c &amp; &quot;-&quot; &amp; &quot;Assessment&quot;</description>
+        <externalId>false</externalId>
+        <formula>HOA_Tracker__r.HOA_Account_Number__c &amp; &quot; &quot; &amp; 
+
+CASE(MONTH( DATEVALUE(CreatedDate)), 
+1, &quot;2&quot;, 
+2, &quot;3&quot;, 
+3, &quot;4&quot;, 
+4, &quot;5&quot;, 
+5, &quot;6&quot;, 
+6, &quot;7&quot;, 
+7, &quot;8&quot;, 
+8, &quot;9&quot;, 
+9, &quot;10&quot;, 
+10, &quot;11&quot;, 
+11, &quot;12&quot;, 
+12, &quot;01&quot;, 
+&quot;xxx999xxx&quot;) 
+
+&amp; &quot;/&quot; &amp; TEXT(YEAR(Due_Date__c )) 
+
+&amp; &quot; &quot; &amp; Payment_Frequency_new__c 
+
+&amp; &quot; &quot; &amp; &quot;Assessment&quot;</formula>
+        <inlineHelpText>This is a formula field has been requested by corporate accounting.</inlineHelpText>
+        <label>Remarks</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Securitization_Pool__c</fullName>
+        <description>This field is a formula that pulls the value from the related HOA Tracking &gt; Portfolio record.</description>
+        <externalId>false</externalId>
+        <formula>TEXT( HOA_Tracker__r.Property__r.Securitization_Pool__c )</formula>
+        <inlineHelpText>This field is a formula that pulls the value from the related HOA Tracking &gt; Portfolio record.</inlineHelpText>
+        <label>Securitization Pool</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Needs Approval</fullName>
+                    <default>false</default>
+                    <label>Needs Approval</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Paid</fullName>
+                    <default>false</default>
+                    <label>Paid</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_to_Pay__c</fullName>
+        <externalId>false</externalId>
+        <formula>Monthly_Amount__c + Additional_Payment__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total to Pay</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>HOA Dues Payment</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>HOADues_Las_Vegas</fullName>
+        <columns>NAME</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Region__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Las Vegas</value>
+        </filters>
+        <label>HOADues Las Vegas</label>
+    </listViews>
+    <listViews>
+        <fullName>Ready_for_Approval</fullName>
+        <columns>Status__c</columns>
+        <columns>Monthly_Amount__c</columns>
+        <columns>Additional_Payment__c</columns>
+        <columns>Total_to_Pay__c</columns>
+        <columns>Addt_l_Payment_Comments__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>NAME</columns>
+        <columns>HOA_Tracker__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Needs Approval</value>
+        </filters>
+        <label>Ready for Approval</label>
+    </listViews>
+    <nameField>
+        <displayFormat>HOADuesPayment-{0000}</displayFormat>
+        <label>HOA Dues Payment Record</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>HOA Dues Payments</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>HOA_Tracker__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Due_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monthly_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Additional_Payment__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_to_Pay__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Addt_l_Payment_Comments__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

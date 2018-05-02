@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Spent_on_Service_Item__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Maximum is 9.75 hours on a job.
+.25 = 15 minutes
+.50 = 30 minutes
+.75 = 45 minutes
+1    = 1 hour
+1.25 = 1 hour 15 minutes
+etc.</inlineHelpText>
+    <label>Technician Time Spent (hours)</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

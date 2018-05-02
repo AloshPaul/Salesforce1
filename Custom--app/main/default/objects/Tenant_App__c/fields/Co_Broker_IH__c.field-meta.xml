@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Co_Broker_IH__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field if the co-broker is one of our IH listing agents. If not, use the field below to indicate the co-broker's name and brokerage.</inlineHelpText>
+    <label>Leasing Agent (Co-broker ) - IH</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Application_Tracking</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

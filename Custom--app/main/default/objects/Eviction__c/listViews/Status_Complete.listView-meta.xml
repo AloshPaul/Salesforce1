@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Complete</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Street_Address__c</columns>
+    <columns>TIP_Record__c</columns>
+    <columns>Eviction_Status__c</columns>
+    <columns>Eviction_Writ_Sign_Date__c</columns>
+    <columns>Constable_Lock_Date__c</columns>
+    <columns>Eviction_Complete_Date__c</columns>
+    <columns>No_Outside_Counsel__c</columns>
+    <columns>Eviction_Attorney_Law_Firm__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Eviction_Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </filters>
+    <label>Status: Complete</label>
+</ListView>

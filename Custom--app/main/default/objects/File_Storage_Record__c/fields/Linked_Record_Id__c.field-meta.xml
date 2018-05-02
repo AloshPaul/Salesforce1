@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linked_Record_Id__c</fullName>
+    <description>Modify this formula every time a new relationship with an object is created.</description>
+    <externalId>false</externalId>
+    <formula>HD_Budget_Walk__c +  Property__c + Rehab__c + Residence__c + Disposition__c</formula>
+    <label>Linked Record Id</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

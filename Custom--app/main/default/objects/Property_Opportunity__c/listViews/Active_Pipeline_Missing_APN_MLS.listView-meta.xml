@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Pipeline_Missing_APN_MLS</fullName>
+    <booleanFilter>1 AND (2 AND 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Property_MLS_Number__c</columns>
+    <columns>APN__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>startsWith</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Property_MLS_Number__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>APN__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Active Pipeline Missing APN &amp; MLS</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Smoke_Test_Required_for_Testing</fullName>
+    <active>true</active>
+    <description>A Smoke Test is required when sending to Code for review.</description>
+    <errorConditionFormula>AND( 
+OR(ISPICKVAL(Development_Status__c,'Ready for Code Review'), ISPICKVAL(Development_Status__c,'Ready for QA Review')), 
+OR ( 
+LEN(Smoke_Test__c) = 0, 
+ISPICKVAL(Pushed_to_Github__c, 'No') 
+) 
+)</errorConditionFormula>
+    <errorMessage>A Smoke Test is required/Pushed to Github should have "Yes" as value, when sending for Code/QA review.</errorMessage>
+</ValidationRule>

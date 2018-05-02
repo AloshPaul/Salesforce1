@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X10_Project</fullName>
+    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5</booleanFilter>
+    <columns>Project__c</columns>
+    <columns>NAME</columns>
+    <columns>Task_Name__c</columns>
+    <columns>System_Category__c</columns>
+    <columns>Severity__c</columns>
+    <columns>Status__c</columns>
+    <columns>Required_Completion_Date__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Task_Owner__c</columns>
+    <columns>Next_Action__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>P0005-Rehab Improvements</value>
+    </filters>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>P0006-TIP Enhancements</value>
+    </filters>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>P0001-Transcation Coordinator Enhancements</value>
+    </filters>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>P0003-3rd Party DK Enhancement</value>
+    </filters>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>P0002-3rd Party Sites Development</value>
+    </filters>
+    <label>10-Project</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

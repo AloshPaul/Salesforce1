@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Team_Acquisitions_this_Month</fullName>
+    <columns>NAME</columns>
+    <columns>Property_City__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Acquisition_Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>Property_Code__c</columns>
+    <columns>HOA_Options__c</columns>
+    <columns>HOA_Phone__c</columns>
+    <columns>HOA__c</columns>
+    <columns>HOA_Set_Up__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Acquisition_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>HOA Team - Acquisitions this Month</label>
+</ListView>

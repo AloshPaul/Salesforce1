@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IT_Request</fullName>
+    <active>true</active>
+    <description>Use for IT-related matters such as computers, phones, network, software, and new user setup</description>
+    <label>IT Request</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalation Request Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impact__c</picklist>
+        <values>
+            <fullName>Entire Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Users</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single User</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Need_to_Escalate__c</picklist>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charlotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dallas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inland Empire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacksonville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Los Angeles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orlando</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sacramento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tampa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Area__c</picklist>
+        <values>
+            <fullName>Computer %2F iPad %2F iPhone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network %2F File Server %2F Network Printer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Enhancement or Change Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Access</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Specifics__c</picklist>
+        <values>
+            <fullName>ADP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AM Model</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adobe Acrobat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Box</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check Scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docusign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entire Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Go To Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great Plains</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Browser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keyboard %2F Mouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MS Visio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OpenVoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QlkView</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Server Move</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skype</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VoiceMail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WebEx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eFax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPhone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Airwatch Install</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BI Enhancements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Server</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fix %2F Replace</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Install %2F Remove %2F Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Phones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Hire%2FContractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password Reset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peripheral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printer %2F Copier %2F Scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set Up for New User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shared Drive Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virus %2F Malware Removal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wifi</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed - No Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending 3rd Party Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

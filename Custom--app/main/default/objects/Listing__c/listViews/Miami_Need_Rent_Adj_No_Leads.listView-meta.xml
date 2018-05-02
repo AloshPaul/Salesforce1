@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Miami_Need_Rent_Adj_No_Leads</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+    <columns>Last_Rent_Adjustment_Date__c</columns>
+    <columns>NAME</columns>
+    <columns>DOM_Rehab_Complete_to_Lease_Start__c</columns>
+    <columns>DOM__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>CMA_Rent__c</columns>
+    <columns>Agent_Rent_Opinion__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Address__c</columns>
+    <columns>City__c</columns>
+    <columns>Zip_Code__c</columns>
+    <columns>Leasing_Mgr_Visit_Comments__c</columns>
+    <columns>Leasing_Mgr_Visit_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>OTM - Active Listing</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Miami</value>
+    </filters>
+    <filters>
+        <field>Last_Rent_Adjustment_Date__c</field>
+        <operation>lessThan</operation>
+        <value>9/20/2014</value>
+    </filters>
+    <filters>
+        <field>Acquistion_Status__c</field>
+        <operation>equals</operation>
+        <value>acquired</value>
+    </filters>
+    <filters>
+        <field>DOM__c</field>
+        <operation>lessOrEqual</operation>
+        <value>30</value>
+    </filters>
+    <filters>
+        <field>DOM__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>7</value>
+    </filters>
+    <filters>
+        <field>Total_Incoming_Calls__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Miami Need Rent Adj. (No Leads)</label>
+</ListView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expedite_Request</fullName>
+    <availability>online</availability>
+    <description>used to notify Rehab that there is a request to expedite</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Expedite Request</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/14.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/14.0/apex.js")} 
+var expediteRequest='{!Listing__c.Expdited_Request_Submitted__c}'
+var listing = new sforce.SObject("Listing__c");
+listing.id = "{!Listing__c.Id}";
+listing.Expdited_Request_Submitted__c = "True";
+
+if (expediteRequest == "False") { //if the button was clicked but there was no record selected
+	alert("You have already submitted this request to be expedited"); //alert the user they have already done this
+} else { 
+   try{ 
+        var rehabID='{!Listing__c.RehabId__c}' ;
+       var moveinDate = prompt("What is the move-in date?(YYYY-MM-DD)", "");
+       var RequestedBy = '{!$User.Id}';
+
+      var result = sforce.apex.execute("ExpediteListing", "ExpediteListing",{rehabID : rehabID, moveinDate : moveinDate, Requestedby : RequestedBy}); 
+
+        sforce.connection.update([listing]);
+        window.location.reload();
+
+        alert("Your expedite request has been submitted."); //alert the user their record has been submitted.
+
+        } 
+          catch(err) { 
+                txt="There was an error on this page.\n\n"; 
+                txt+="Error description: " + err.description + "\n\n"; 
+                txt+="Click OK to continue.\n\n"; 
+                alert(txt); 
+         }
+}</url>
+</WebLink>

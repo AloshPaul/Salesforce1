@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Acq_Occupancy_Assessment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The following Status fields are dependent on this field:
+Deed Status
+TIP Status
+Occupied Status @ Current</inlineHelpText>
+    <label>Post Acq Occupancy Assessment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Occupied</fullName>
+                <default>false</default>
+                <label>Occupied</label>
+            </value>
+            <value>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+                <label>Vacant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

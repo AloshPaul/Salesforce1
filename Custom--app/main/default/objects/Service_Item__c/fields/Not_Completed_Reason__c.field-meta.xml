@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Completed_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Not Completed Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Technician_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Escalate to Vendor - Scope</fullName>
+                <default>false</default>
+                <label>Escalate to Vendor - Scope</label>
+            </value>
+            <value>
+                <fullName>Escalate to Vendor - Skill</fullName>
+                <default>false</default>
+                <label>Escalate to Vendor - Skill</label>
+            </value>
+            <value>
+                <fullName>No Adult Present</fullName>
+                <default>false</default>
+                <label>No Adult Present</label>
+            </value>
+            <value>
+                <fullName>Resident Emergency</fullName>
+                <default>false</default>
+                <label>Resident Emergency</label>
+            </value>
+            <value>
+                <fullName>Resident Not Home</fullName>
+                <default>false</default>
+                <label>Resident Not Home</label>
+            </value>
+            <value>
+                <fullName>Resident Request</fullName>
+                <default>false</default>
+                <label>Resident Request</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>Escalate to Vendor - Scope</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>Escalate to Vendor - Skill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>No Adult Present</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>Resident Emergency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>Resident Not Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>Resident Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Completed</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

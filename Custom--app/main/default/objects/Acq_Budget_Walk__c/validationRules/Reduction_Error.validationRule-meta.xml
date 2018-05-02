@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reduction_Error</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+								Reduction_Requested__c = true,
+				OR(
+								Reduction_Amount_Requested__c&lt;=0,
+			    	ISNULL(Reduction_Amount_Requested__c)
+								)
+								)</errorConditionFormula>
+    <errorMessage>Since a reduction is requested please fill in the Reduction Amount Requested</errorMessage>
+</ValidationRule>

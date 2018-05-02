@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC_Completion_DateEstimated_Update</fullName>
+    <active>true</active>
+    <description>Once the rehab GC Completion date estimated is entered , it cannot be unchecked - unless by administrator</description>
+    <errorConditionFormula>NOT( ISBLANK(GC_Completion_Date_Est__c))
+&amp;&amp;
+NOT(ISBLANK(PRIORVALUE(GC_Completion_Date_Est__c ) )) 
+&amp;&amp; 
+$Profile.Name &lt;> "System Administrator"
+ &amp;&amp;  
+ ISCHANGED(GC_Completion_Date_Est__c)</errorConditionFormula>
+    <errorDisplayField>GC_Completion_Date_Est__c</errorDisplayField>
+    <errorMessage>Once the GC-Completion-Date-Estimated is entered, it cannot be Updated</errorMessage>
+</ValidationRule>

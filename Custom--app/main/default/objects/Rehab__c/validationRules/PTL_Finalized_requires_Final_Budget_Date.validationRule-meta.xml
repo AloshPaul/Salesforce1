@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PTL_Finalized_requires_Final_Budget_Date</fullName>
+    <active>true</active>
+    <description>PTL Finalized requires Final Budget Date</description>
+    <errorConditionFormula>Send_PTL_to_GC__c  = TRUE
+&amp;&amp;
+ISBLANK(Final_Budget_Date__c)</errorConditionFormula>
+    <errorDisplayField>Days_in_HOLD_BK__c</errorDisplayField>
+    <errorMessage>PTL Finalized requires Budget Revised Date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Look-up field that links the portfolio record to the related prospect.</description>
+    <externalId>false</externalId>
+    <label>Prospect</label>
+    <referenceTo>Prospect__c</referenceTo>
+    <relationshipLabel>Portfolio Record with Post-Acquisition Details</relationshipLabel>
+    <relationshipName>Portfolio</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

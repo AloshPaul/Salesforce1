@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Have_Required_Title__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (ISPICKVAL( Clean_Title_Policy__c , "Yes"), "Yes",
+
+IF(AND (Portfolio__r.Acquisition_Date__c + 90 > TODAY(),
+
+      OR( ISPICKVAL( Preliminary_Title_Report__c  , "Yes"),
+          ISPICKVAL( MU_Preliminary_Title_Report__c  , "Yes"))),
+
+         "Yes", 
+
+
+"No"))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Have Required Title?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

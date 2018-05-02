@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Integrity_Missing_Recorded_Deed</fullName>
+    <columns>NAME</columns>
+    <columns>Property_City__c</columns>
+    <columns>Region__c</columns>
+    <columns>Recorded_Deed_Date__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Acquisition_Status__c</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Pool__c</columns>
+    <columns>Bid_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Recorded_Deed_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Acquisition_Status__c</field>
+        <operation>equals</operation>
+        <value>Acquired,Limbo,For Sale</value>
+    </filters>
+    <filters>
+        <field>Region_Lookup__c</field>
+        <operation>equals</operation>
+        <value>Miami</value>
+    </filters>
+    <filters>
+        <field>Open_TIP__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>Data Integrity - Missing Recorded Deed</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bhavi_s_2012_Nov_Acquisition_Rollout</fullName>
+    <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Task_Name__c</columns>
+    <columns>Project__c</columns>
+    <columns>Status__c</columns>
+    <columns>Severity__c</columns>
+    <columns>Hours_to_Complete_Estimated__c</columns>
+    <columns>Project_Owner__c</columns>
+    <columns>Reviewer__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project_Owner__c</field>
+        <operation>equals</operation>
+        <value>Bhavi Sharma</value>
+    </filters>
+    <filters>
+        <field>Task_Name__c</field>
+        <operation>equals</operation>
+        <value>Bhavi Sharma</value>
+    </filters>
+    <filters>
+        <field>Reviewer__c</field>
+        <operation>equals</operation>
+        <value>Bhavi Sharma</value>
+    </filters>
+    <filters>
+        <field>Rollout__c</field>
+        <operation>equals</operation>
+        <value>2012 Nov Acquisition Rollout</value>
+    </filters>
+    <label>Bhavi's 2012 Nov Acquisition Rollout</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commit_URL__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the github commit URL. Ex: https://github.com/InvitationHomes/ihd/commit/d7fc708c0ab0bc48210a8538c2c75ce8070cb745</inlineHelpText>
+    <label>Commit URL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

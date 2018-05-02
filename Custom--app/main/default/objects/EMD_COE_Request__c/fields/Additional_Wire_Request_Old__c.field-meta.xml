@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Wire_Request_Old__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>If additional COE funds are needed for the final reconciliation, link the request record here.</inlineHelpText>
+    <label>Additional Wire Request Old</label>
+    <referenceTo>EMD_COE_Request__c</referenceTo>
+    <relationshipLabel>EM/COE Trackers</relationshipLabel>
+    <relationshipName>EMD_COE_Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

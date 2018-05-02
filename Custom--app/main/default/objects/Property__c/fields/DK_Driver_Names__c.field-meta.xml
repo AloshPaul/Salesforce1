@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DK_Driver_Names__c</fullName>
+    <externalId>false</externalId>
+    <formula>DK_Driver_Assigned__r.FirstName + ' ' + DK_Driver_Assigned__r.LastName  + '^' +  Assigned_DK_Driver__r.FirstName + ' ' + Assigned_DK_Driver__r.LastName   +'^' +  TIP_Team_Manager__r.FirstName + ' ' + TIP_Team_Manager__r.LastName   +'^'+ TIP_Coordinator__r.FirstName + ' ' + TIP_Coordinator__r.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DK Driver Names</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

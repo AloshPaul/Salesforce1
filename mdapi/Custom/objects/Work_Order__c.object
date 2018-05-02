@@ -1,0 +1,3068 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Resident Services Project:  This object is used for the grouping of Service Items.  It has a few triggers and many rollup summary fields and formula fields tied to it.  It is used to document the property and Resident.  It also has a related Service Request Wizard Visualforce page.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableDivisions>false</enableDivisions>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Resolution</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Appointment_Completion__c</fullName>
+        <externalId>false</externalId>
+        <formula>If ( And ( Closed_Appointments__c &gt; 0, Total_Appointments__c &gt; 0 ), Closed_Appointments__c / Total_Appointments__c , 0 )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Appointment % Completion</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Best_PA_Survey__c</fullName>
+        <externalId>false</externalId>
+        <label>Best PA Survey</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Billable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Billable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Call_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Date &amp; Time the caller called in on this request</inlineHelpText>
+        <label>Call Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Case_Created__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Created</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Appliance</fullName>
+                    <default>false</default>
+                    <label>Appliance</label>
+                </value>
+                <value>
+                    <fullName>Cabinets</fullName>
+                    <default>false</default>
+                    <label>Cabinets</label>
+                </value>
+                <value>
+                    <fullName>Call Back</fullName>
+                    <default>false</default>
+                    <label>Call Back</label>
+                </value>
+                <value>
+                    <fullName>Clog</fullName>
+                    <default>false</default>
+                    <label>Clog</label>
+                </value>
+                <value>
+                    <fullName>Drywall</fullName>
+                    <default>false</default>
+                    <label>Drywall</label>
+                </value>
+                <value>
+                    <fullName>Electrical</fullName>
+                    <default>false</default>
+                    <label>Electrical</label>
+                </value>
+                <value>
+                    <fullName>Fence</fullName>
+                    <default>false</default>
+                    <label>Fence</label>
+                </value>
+                <value>
+                    <fullName>Flooring</fullName>
+                    <default>false</default>
+                    <label>Flooring</label>
+                </value>
+                <value>
+                    <fullName>Garage</fullName>
+                    <default>false</default>
+                    <label>Garage</label>
+                </value>
+                <value>
+                    <fullName>Hardware</fullName>
+                    <default>false</default>
+                    <label>Hardware</label>
+                </value>
+                <value>
+                    <fullName>HVAC</fullName>
+                    <default>false</default>
+                    <label>HVAC</label>
+                </value>
+                <value>
+                    <fullName>Landscaping</fullName>
+                    <default>false</default>
+                    <label>Landscaping</label>
+                </value>
+                <value>
+                    <fullName>Paint</fullName>
+                    <default>false</default>
+                    <label>Paint</label>
+                </value>
+                <value>
+                    <fullName>Pest</fullName>
+                    <default>false</default>
+                    <label>Pest</label>
+                </value>
+                <value>
+                    <fullName>Plumbing</fullName>
+                    <default>false</default>
+                    <label>Plumbing</label>
+                </value>
+                <value>
+                    <fullName>Pool</fullName>
+                    <default>false</default>
+                    <label>Pool</label>
+                </value>
+                <value>
+                    <fullName>Roof</fullName>
+                    <default>false</default>
+                    <label>Roof</label>
+                </value>
+                <value>
+                    <fullName>Security</fullName>
+                    <default>false</default>
+                    <label>Security</label>
+                </value>
+                <value>
+                    <fullName>Turnover</fullName>
+                    <default>false</default>
+                    <label>Turnover</label>
+                </value>
+                <value>
+                    <fullName>Water Heater</fullName>
+                    <default>false</default>
+                    <label>Water Heater</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>“City” part of the work order location.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>“City” part of the work order location.</inlineHelpText>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Remarks__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Remarks</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select date at which this Work Order has been closed / Turnover periode date</inlineHelpText>
+        <label>Turnover period date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closed_Appointments__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed Appointments</label>
+        <summaryFilterItems>
+            <field>Appointment__c.Field_Status__c</field>
+            <operation>equals</operation>
+            <value>completed, not-done, extended</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Appointment__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Completed_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Completed Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the Work Order</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When does this workorder has to be finished by ?</inlineHelpText>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ETA__c</fullName>
+        <externalId>false</externalId>
+        <label>ETA</label>
+        <summarizedField>Appointment__c.ETA__c</summarizedField>
+        <summaryForeignKey>Appointment__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Entitlement__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Escalated_Appointment__c , IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Escalated&quot;, 16, 16), 
+&quot;&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Entitlement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Escalated_Appointment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Escalated Appointment</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Escalated__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Escalated_Appointment__c , IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Escalated&quot;, 16, 16), 
+&quot;&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Escalated?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>scheduled</fullName>
+                    <default>true</default>
+                    <label>scheduled</label>
+                </value>
+                <value>
+                    <fullName>assigned</fullName>
+                    <default>false</default>
+                    <label>assigned</label>
+                </value>
+                <value>
+                    <fullName>pending</fullName>
+                    <default>false</default>
+                    <label>pending</label>
+                </value>
+                <value>
+                    <fullName>started</fullName>
+                    <default>false</default>
+                    <label>started</label>
+                </value>
+                <value>
+                    <fullName>completed</fullName>
+                    <default>false</default>
+                    <label>completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>First_Call_Length_Hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+	ISPICKVAL (Service_Request_Status__c, &quot;Closed&quot;), 0,
+ 	IF(OR(
+		NOT(ISNULL( SReq_First_Call_Date_Time__c )),
+		NOT(ISBLANK( SReq_First_Call_Date_Time__c ))
+	)
+	,
+	(SReq_First_Call_Date_Time__c - CreatedDate)*24,
+	(Now() - CreatedDate)*24
+	)
+
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>First Call Length (Hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Guaranteed_Resolution_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case_Created__c + ( 24.0 / Account__r.Contract_Hours__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Guaranteed Resolution By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Hour_Rate__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate / hour of work</inlineHelpText>
+        <label>Hour Rate</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Remarks_WO__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this field to post your feedback with the owner</inlineHelpText>
+        <label>Internal Remarks (WO)</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Internal_Work_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Internal Work Order</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Invoiced__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Invoiced</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Locked__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When locked, no more editing possible. Enabled by TB workflow</description>
+        <externalId>false</externalId>
+        <label>Locked</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (PortfolioProperty__r.Market__c)</formula>
+        <label>Market</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Closed_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Closed Items</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_High_items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of High items</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Low_items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Low items</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Medium_items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Medium items</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Open_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Open Items</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Urgent_items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Urgent items</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Occupied_Status_SReq__c</fullName>
+        <externalId>false</externalId>
+        <label>Occupied Status @ SReq</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Vacant</fullName>
+                    <default>false</default>
+                    <label>Vacant</label>
+                </value>
+                <value>
+                    <fullName>Occupied</fullName>
+                    <default>true</default>
+                    <label>Occupied</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>On_Time_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>On Time Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good</fullName>
+                    <default>false</default>
+                    <label>Good</label>
+                </value>
+                <value>
+                    <fullName>Jeopardy</fullName>
+                    <default>false</default>
+                    <label>Jeopardy</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>On_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT ( On_Time_Status__c ) = &quot;Good&quot;, IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Yes&quot;, 16, 16), 
+IF ( TEXT ( On_Time_Status__c ) = &quot;Jeopardy&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Yes&quot;, 16, 16), 
+&quot;&quot; ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>On Time?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Call_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATEVALUE(Call_Date_Time__c)</formula>
+        <label>Order Call Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_Status__c</fullName>
+        <description>Current status of the service order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current status of the service order</inlineHelpText>
+        <label>Order Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Canceled</fullName>
+                    <default>false</default>
+                    <label>Canceled</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>Planner Accepted</fullName>
+                    <default>false</default>
+                    <label>Planner Accepted</label>
+                </value>
+                <value>
+                    <fullName>Technician Onsite</fullName>
+                    <default>false</default>
+                    <label>Technician Onsite</label>
+                </value>
+                <value>
+                    <fullName>Restored</fullName>
+                    <default>false</default>
+                    <label>Restored</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Order_Type__c</fullName>
+        <description>Type of service order: Field Service, Depot repair etc.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of service order: Field Service, Depot repair etc.</inlineHelpText>
+        <label>Order Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Installation</fullName>
+                    <default>false</default>
+                    <label>Installation</label>
+                </value>
+                <value>
+                    <fullName>Corrective</fullName>
+                    <default>false</default>
+                    <label>Corrective</label>
+                </value>
+                <value>
+                    <fullName>Pickup</fullName>
+                    <default>false</default>
+                    <label>Pickup</label>
+                </value>
+                <value>
+                    <fullName>Preventive</fullName>
+                    <default>false</default>
+                    <label>Preventive</label>
+                </value>
+                <value>
+                    <fullName>Delivery</fullName>
+                    <default>false</default>
+                    <label>Delivery</label>
+                </value>
+                <value>
+                    <fullName>Revisit</fullName>
+                    <default>false</default>
+                    <label>Revisit</label>
+                </value>
+                <value>
+                    <fullName>Combination</fullName>
+                    <default>false</default>
+                    <label>Combination</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Overall_Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Overall Priority</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Urgent</fullName>
+                    <default>false</default>
+                    <label>Urgent</label>
+                </value>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Picklist</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Sub_Category__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Vendor</fullName>
+                    <default>true</default>
+                    <label>Vendor</label>
+                </value>
+                <value>
+                    <fullName>Technician</fullName>
+                    <default>false</default>
+                    <label>Technician</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Planned_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PortfolioProperty__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Portfolio/Property</label>
+        <referenceTo>Property__c</referenceTo>
+        <relationshipName>Service_Requests</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Same Day</fullName>
+                    <default>false</default>
+                    <label>Same Day</label>
+                </value>
+                <value>
+                    <fullName>Next Day</fullName>
+                    <default>false</default>
+                    <label>Next Day</label>
+                </value>
+                <value>
+                    <fullName>48 hours</fullName>
+                    <default>false</default>
+                    <label>48 hours</label>
+                </value>
+                <value>
+                    <fullName>Specific</fullName>
+                    <default>false</default>
+                    <label>Specific</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Problem_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Problem Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>PortfolioProperty__r.Property_City__c</formula>
+        <label>Property City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>PortfolioProperty__r.Property_State__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Property State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>PortfolioProperty__r.Property_Street__c</formula>
+        <label>Property Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Zip_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>PortfolioProperty__r.Property_Zip_Code__c</formula>
+        <label>Property Zip Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT (PortfolioProperty__r.Region__c)</formula>
+        <label>Market2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Residence__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Residence</label>
+        <referenceTo>Residence__c</referenceTo>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resident_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident Email</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident First Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Resident_First_Name__c + &apos; &apos; +  Resident_Last_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Resident Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_Home_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident Home Phone</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Resident_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resident_Mobile_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident Mobile Phone</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Resident_Preferred_Communication__c</fullName>
+        <externalId>false</externalId>
+        <label>Resident Preferred Communication</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>false</default>
+                    <label>Text</label>
+                </value>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Escalate - Supervisor</fullName>
+                    <default>false</default>
+                    <label>Escalate - Supervisor</label>
+                </value>
+                <value>
+                    <fullName>Reschedule</fullName>
+                    <default>false</default>
+                    <label>Reschedule</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>Complete Verified</fullName>
+                    <default>false</default>
+                    <label>Complete Verified</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SLA_Expiration__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA Expiration</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SLA__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Gold</fullName>
+                    <default>false</default>
+                    <label>Gold</label>
+                </value>
+                <value>
+                    <fullName>Silver</fullName>
+                    <default>false</default>
+                    <label>Silver</label>
+                </value>
+                <value>
+                    <fullName>Platinum</fullName>
+                    <default>false</default>
+                    <label>Platinum</label>
+                </value>
+                <value>
+                    <fullName>Bronze</fullName>
+                    <default>false</default>
+                    <label>Bronze</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SR_key__c</fullName>
+        <externalId>false</externalId>
+        <label>SR_key</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SReq_Completed_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>SReq Completed Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SReq_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SReq Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SReq_Created_On__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( SReq_Yardi_Created_On__c  == null || ISBLANK(SReq_Yardi_Created_On__c), DATEVALUE(CreatedDate), SReq_Yardi_Created_On__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SReq Created On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SReq_First_Call_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>SReq First Call Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SReq_Open_Duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+	OR(
+		NOT(ISNULL( SReq_Completed_Date_Time__c )),
+		NOT(ISBLANK( SReq_Completed_Date_Time__c ))
+	)
+	,
+	(SReq_Completed_Date_Time__c - CreatedDate)*24,
+	(Now() - CreatedDate)*24
+)</formula>
+        <label>SReq Open Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SReq_Yardi_Created_On__c</fullName>
+        <externalId>false</externalId>
+        <label>SReq Yardi Created On:</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Service_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Call Center</fullName>
+                    <default>false</default>
+                    <label>Call Center</label>
+                </value>
+                <value>
+                    <fullName>Portfolio Manager</fullName>
+                    <default>false</default>
+                    <label>Portfolio Manager</label>
+                </value>
+                <value>
+                    <fullName>Leasing</fullName>
+                    <default>false</default>
+                    <label>Leasing</label>
+                </value>
+                <value>
+                    <fullName>Rehab</fullName>
+                    <default>false</default>
+                    <label>Rehab</label>
+                </value>
+                <value>
+                    <fullName>TIP</fullName>
+                    <default>false</default>
+                    <label>TIP</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Req_Tech_Avg_Hourly_Rate_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Service_Request_Tech_Avg_Hourly_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Request Tech Avg Hourly Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Labor_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Service_Request_Total_Hours_Logged__c  *  Service_Request_Tech_Avg_Hourly_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Request Labor Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Request Notes include Access / Entry notes and any other relevant details associated with connecting with or accessing the residence.</inlineHelpText>
+        <label>Service Request Notes</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Rollup from Service Item Status&apos;s</inlineHelpText>
+        <label>Service Request Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Tech_Avg_Hourly_Rate__c</fullName>
+        <defaultValue>25</defaultValue>
+        <externalId>false</externalId>
+        <label>Service Request Tech Avg Hourly Rate</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Total_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Service_Request_Labor_Cost__c  +  Service_Request_Total_Material_Cost__c + Service_Request_Total_Vendor_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Request Total Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Total_Hours_Logged__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Request Total Tech. Labor</label>
+        <summarizedField>Service_Item__c.Time_Spent_on_Service_Item__c</summarizedField>
+        <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Total_Material_Cost__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Includes all related Service Items</inlineHelpText>
+        <label>Service Request Total Material Cost</label>
+        <summarizedField>Service_Item__c.Material_Cost__c</summarizedField>
+        <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Total_Vendor_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Request Total Vendor Cost</label>
+        <summarizedField>Service_Item__c.Vendor_Invoice_Amount__c</summarizedField>
+        <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Service_Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Proactive = called in by Resident, neighbor, etc.
+Reactive = Assigned by IH (ie. Preventative, etc.)</inlineHelpText>
+        <label>Service Request Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Proactive</fullName>
+                    <default>false</default>
+                    <label>Proactive</label>
+                </value>
+                <value>
+                    <fullName>Reactive</fullName>
+                    <default>true</default>
+                    <label>Reactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service Request</label>
+        <referenceTo>Service_Request__c</referenceTo>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Source</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Resident Call In</fullName>
+                    <default>true</default>
+                    <label>Resident Call In</label>
+                </value>
+                <value>
+                    <fullName>Yardi Email Services</fullName>
+                    <default>false</default>
+                    <label>Yardi Email Services</label>
+                </value>
+                <value>
+                    <fullName>Dispatcher</fullName>
+                    <default>false</default>
+                    <label>Dispatcher</label>
+                </value>
+                <value>
+                    <fullName>Vendor Supervisor</fullName>
+                    <default>false</default>
+                    <label>Vendor Supervisor</label>
+                </value>
+                <value>
+                    <fullName>Technician</fullName>
+                    <default>false</default>
+                    <label>Technician</label>
+                </value>
+                <value>
+                    <fullName>Technician Supervisor</fullName>
+                    <default>false</default>
+                    <label>Technician Supervisor</label>
+                </value>
+                <value>
+                    <fullName>Portfolio Manager</fullName>
+                    <default>false</default>
+                    <label>Portfolio Manager</label>
+                </value>
+                <value>
+                    <fullName>Recurring</fullName>
+                    <default>false</default>
+                    <label>Recurring</label>
+                </value>
+                <value>
+                    <fullName>Leasing</fullName>
+                    <default>false</default>
+                    <label>Leasing</label>
+                </value>
+                <value>
+                    <fullName>Rehab</fullName>
+                    <default>false</default>
+                    <label>Rehab</label>
+                </value>
+                <value>
+                    <fullName>TIP</fullName>
+                    <default>false</default>
+                    <label>TIP</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Ready</fullName>
+                    <default>false</default>
+                    <label>Ready</label>
+                </value>
+                <value>
+                    <fullName>Ready awaiting PO</fullName>
+                    <default>false</default>
+                    <label>Ready awaiting PO</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Closed for invoicing</fullName>
+                    <default>false</default>
+                    <label>Closed for invoicing</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <description>“Street” part of the work order location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>“Street” part of the work order location</inlineHelpText>
+        <label>Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Category__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dishwasher</fullName>
+                    <default>false</default>
+                    <label>Dishwasher</label>
+                </value>
+                <value>
+                    <fullName>Dryer</fullName>
+                    <default>false</default>
+                    <label>Dryer</label>
+                </value>
+                <value>
+                    <fullName>Elect. Stove</fullName>
+                    <default>false</default>
+                    <label>Elect. Stove</label>
+                </value>
+                <value>
+                    <fullName>Fridge</fullName>
+                    <default>false</default>
+                    <label>Fridge</label>
+                </value>
+                <value>
+                    <fullName>Gas Stove</fullName>
+                    <default>false</default>
+                    <label>Gas Stove</label>
+                </value>
+                <value>
+                    <fullName>Microwave</fullName>
+                    <default>false</default>
+                    <label>Microwave</label>
+                </value>
+                <value>
+                    <fullName>Vent Hood</fullName>
+                    <default>false</default>
+                    <label>Vent Hood</label>
+                </value>
+                <value>
+                    <fullName>Washing</fullName>
+                    <default>false</default>
+                    <label>Washing</label>
+                </value>
+                <value>
+                    <fullName>Elect. Oven</fullName>
+                    <default>false</default>
+                    <label>Elect. Oven</label>
+                </value>
+                <value>
+                    <fullName>Gas Oven</fullName>
+                    <default>false</default>
+                    <label>Gas Oven</label>
+                </value>
+                <value>
+                    <fullName>Cabinets Repair</fullName>
+                    <default>false</default>
+                    <label>Cabinets Repair</label>
+                </value>
+                <value>
+                    <fullName>Microbial Growth</fullName>
+                    <default>false</default>
+                    <label>Microbial Growth</label>
+                </value>
+                <value>
+                    <fullName>Shelves</fullName>
+                    <default>false</default>
+                    <label>Shelves</label>
+                </value>
+                <value>
+                    <fullName>Vanity</fullName>
+                    <default>false</default>
+                    <label>Vanity</label>
+                </value>
+                <value>
+                    <fullName>Cabinet Doors</fullName>
+                    <default>false</default>
+                    <label>Cabinet Doors</label>
+                </value>
+                <value>
+                    <fullName>Cabinet Drawers</fullName>
+                    <default>false</default>
+                    <label>Cabinet Drawers</label>
+                </value>
+                <value>
+                    <fullName>Hinges</fullName>
+                    <default>false</default>
+                    <label>Hinges</label>
+                </value>
+                <value>
+                    <fullName>Cleanouts</fullName>
+                    <default>false</default>
+                    <label>Cleanouts</label>
+                </value>
+                <value>
+                    <fullName>Laundry Clogged</fullName>
+                    <default>false</default>
+                    <label>Laundry Clogged</label>
+                </value>
+                <value>
+                    <fullName>Main Line Clogged</fullName>
+                    <default>false</default>
+                    <label>Main Line Clogged</label>
+                </value>
+                <value>
+                    <fullName>Multiple Showers Clogged</fullName>
+                    <default>false</default>
+                    <label>Multiple Showers Clogged</label>
+                </value>
+                <value>
+                    <fullName>Sink Clogged</fullName>
+                    <default>false</default>
+                    <label>Sink Clogged</label>
+                </value>
+                <value>
+                    <fullName>Toilet &amp; Tub Clogged</fullName>
+                    <default>false</default>
+                    <label>Toilet &amp; Tub Clogged</label>
+                </value>
+                <value>
+                    <fullName>Sink Clogged by Garbage Disposal</fullName>
+                    <default>false</default>
+                    <label>Sink Clogged by Garbage Disposal</label>
+                </value>
+                <value>
+                    <fullName>Water Heater</fullName>
+                    <default>false</default>
+                    <label>Water Heater</label>
+                </value>
+                <value>
+                    <fullName>Inadequate Venting</fullName>
+                    <default>false</default>
+                    <label>Inadequate Venting</label>
+                </value>
+                <value>
+                    <fullName>Leaking</fullName>
+                    <default>false</default>
+                    <label>Leaking</label>
+                </value>
+                <value>
+                    <fullName>Not Heating</fullName>
+                    <default>false</default>
+                    <label>Not Heating</label>
+                </value>
+                <value>
+                    <fullName>Shut-off Valve</fullName>
+                    <default>false</default>
+                    <label>Shut-off Valve</label>
+                </value>
+                <value>
+                    <fullName>Supply Lines</fullName>
+                    <default>false</default>
+                    <label>Supply Lines</label>
+                </value>
+                <value>
+                    <fullName>Air Freshner</fullName>
+                    <default>false</default>
+                    <label>Air Freshner</label>
+                </value>
+                <value>
+                    <fullName>Appliances</fullName>
+                    <default>false</default>
+                    <label>Appliances</label>
+                </value>
+                <value>
+                    <fullName>Approval Received</fullName>
+                    <default>false</default>
+                    <label>Approval Received</label>
+                </value>
+                <value>
+                    <fullName>Bid reviewed and submitted</fullName>
+                    <default>false</default>
+                    <label>Bid reviewed and submitted</label>
+                </value>
+                <value>
+                    <fullName>carpet clean</fullName>
+                    <default>false</default>
+                    <label>carpet clean</label>
+                </value>
+                <value>
+                    <fullName>final inspection</fullName>
+                    <default>false</default>
+                    <label>final inspection</label>
+                </value>
+                <value>
+                    <fullName>janitorial clean</fullName>
+                    <default>false</default>
+                    <label>janitorial clean</label>
+                </value>
+                <value>
+                    <fullName>move out inspection</fullName>
+                    <default>false</default>
+                    <label>move out inspection</label>
+                </value>
+                <value>
+                    <fullName>repairs completed</fullName>
+                    <default>false</default>
+                    <label>repairs completed</label>
+                </value>
+                <value>
+                    <fullName>repairs scheduled</fullName>
+                    <default>false</default>
+                    <label>repairs scheduled</label>
+                </value>
+                <value>
+                    <fullName>touch-up</fullName>
+                    <default>false</default>
+                    <label>touch-up</label>
+                </value>
+                <value>
+                    <fullName>Pre-Lease Walk</fullName>
+                    <default>false</default>
+                    <label>Pre-Lease Walk</label>
+                </value>
+                <value>
+                    <fullName>Alarm System</fullName>
+                    <default>false</default>
+                    <label>Alarm System</label>
+                </value>
+                <value>
+                    <fullName>Exterior Door Broken</fullName>
+                    <default>false</default>
+                    <label>Exterior Door Broken</label>
+                </value>
+                <value>
+                    <fullName>Interior Door Broken</fullName>
+                    <default>false</default>
+                    <label>Interior Door Broken</label>
+                </value>
+                <value>
+                    <fullName>Door Jam</fullName>
+                    <default>false</default>
+                    <label>Door Jam</label>
+                </value>
+                <value>
+                    <fullName>Door Locks - Adjust</fullName>
+                    <default>false</default>
+                    <label>Door Locks - Adjust</label>
+                </value>
+                <value>
+                    <fullName>Door Locks - MOI Rekey</fullName>
+                    <default>false</default>
+                    <label>Door Locks - MOI Rekey</label>
+                </value>
+                <value>
+                    <fullName>Door Locks - MII Rekey</fullName>
+                    <default>false</default>
+                    <label>Door Locks - MII Rekey</label>
+                </value>
+                <value>
+                    <fullName>garage broken</fullName>
+                    <default>false</default>
+                    <label>garage broken</label>
+                </value>
+                <value>
+                    <fullName>security Screens</fullName>
+                    <default>false</default>
+                    <label>security Screens</label>
+                </value>
+                <value>
+                    <fullName>wall broken</fullName>
+                    <default>false</default>
+                    <label>wall broken</label>
+                </value>
+                <value>
+                    <fullName>window and door</fullName>
+                    <default>false</default>
+                    <label>window and door</label>
+                </value>
+                <value>
+                    <fullName>Window Broken</fullName>
+                    <default>false</default>
+                    <label>Window Broken</label>
+                </value>
+                <value>
+                    <fullName>Window Latch</fullName>
+                    <default>false</default>
+                    <label>Window Latch</label>
+                </value>
+                <value>
+                    <fullName>Window Seal/ Weatherstripping</fullName>
+                    <default>false</default>
+                    <label>Window Seal/ Weatherstripping</label>
+                </value>
+                <value>
+                    <fullName>flat roof pooling</fullName>
+                    <default>false</default>
+                    <label>flat roof pooling</label>
+                </value>
+                <value>
+                    <fullName>hole</fullName>
+                    <default>false</default>
+                    <label>hole</label>
+                </value>
+                <value>
+                    <fullName>Leak</fullName>
+                    <default>false</default>
+                    <label>Leak</label>
+                </value>
+                <value>
+                    <fullName>post/ rafters</fullName>
+                    <default>false</default>
+                    <label>post/ rafters</label>
+                </value>
+                <value>
+                    <fullName>shingle/ Tile missing</fullName>
+                    <default>false</default>
+                    <label>shingle/ Tile missing</label>
+                </value>
+                <value>
+                    <fullName>Gutter</fullName>
+                    <default>false</default>
+                    <label>Gutter</label>
+                </value>
+                <value>
+                    <fullName>worn needs rebuild</fullName>
+                    <default>false</default>
+                    <label>worn needs rebuild</label>
+                </value>
+                <value>
+                    <fullName>green clean</fullName>
+                    <default>false</default>
+                    <label>green clean</label>
+                </value>
+                <value>
+                    <fullName>Pool electrical</fullName>
+                    <default>false</default>
+                    <label>Pool electrical</label>
+                </value>
+                <value>
+                    <fullName>pool filler</fullName>
+                    <default>false</default>
+                    <label>pool filler</label>
+                </value>
+                <value>
+                    <fullName>pool filter</fullName>
+                    <default>false</default>
+                    <label>pool filter</label>
+                </value>
+                <value>
+                    <fullName>Pool light</fullName>
+                    <default>false</default>
+                    <label>Pool light</label>
+                </value>
+                <value>
+                    <fullName>pool plaster</fullName>
+                    <default>false</default>
+                    <label>pool plaster</label>
+                </value>
+                <value>
+                    <fullName>Pool Plumbing/Valves</fullName>
+                    <default>false</default>
+                    <label>Pool Plumbing/Valves</label>
+                </value>
+                <value>
+                    <fullName>pool pump</fullName>
+                    <default>false</default>
+                    <label>pool pump</label>
+                </value>
+                <value>
+                    <fullName>pool surface</fullName>
+                    <default>false</default>
+                    <label>pool surface</label>
+                </value>
+                <value>
+                    <fullName>Interior Wall</fullName>
+                    <default>false</default>
+                    <label>Interior Wall</label>
+                </value>
+                <value>
+                    <fullName>Exterior Wall</fullName>
+                    <default>false</default>
+                    <label>Exterior Wall</label>
+                </value>
+                <value>
+                    <fullName>Exterior Trim</fullName>
+                    <default>false</default>
+                    <label>Exterior Trim</label>
+                </value>
+                <value>
+                    <fullName>Paint Fencing</fullName>
+                    <default>false</default>
+                    <label>Paint Fencing</label>
+                </value>
+                <value>
+                    <fullName>Kitchen Sink</fullName>
+                    <default>false</default>
+                    <label>Kitchen Sink</label>
+                </value>
+                <value>
+                    <fullName>Kitchen Sink Drain</fullName>
+                    <default>false</default>
+                    <label>Kitchen Sink Drain</label>
+                </value>
+                <value>
+                    <fullName>Laundry Hook-ups</fullName>
+                    <default>false</default>
+                    <label>Laundry Hook-ups</label>
+                </value>
+                <value>
+                    <fullName>Leak from Wall/Celing</fullName>
+                    <default>false</default>
+                    <label>Leak from Wall/Celing</label>
+                </value>
+                <value>
+                    <fullName>roof plumbing</fullName>
+                    <default>false</default>
+                    <label>roof plumbing</label>
+                </value>
+                <value>
+                    <fullName>Shower Valve(s)</fullName>
+                    <default>false</default>
+                    <label>Shower Valve(s)</label>
+                </value>
+                <value>
+                    <fullName>Toilet</fullName>
+                    <default>false</default>
+                    <label>Toilet</label>
+                </value>
+                <value>
+                    <fullName>tub/shower Surround</fullName>
+                    <default>false</default>
+                    <label>tub/shower Surround</label>
+                </value>
+                <value>
+                    <fullName>Water Pressure Low</fullName>
+                    <default>false</default>
+                    <label>Water Pressure Low</label>
+                </value>
+                <value>
+                    <fullName>Fire Sprinkler</fullName>
+                    <default>false</default>
+                    <label>Fire Sprinkler</label>
+                </value>
+                <value>
+                    <fullName>Bathroom Sink Leak</fullName>
+                    <default>false</default>
+                    <label>Bathroom Sink Leak</label>
+                </value>
+                <value>
+                    <fullName>Bathroom Sink Drain</fullName>
+                    <default>false</default>
+                    <label>Bathroom Sink Drain</label>
+                </value>
+                <value>
+                    <fullName>Bathroom sink Faucet</fullName>
+                    <default>false</default>
+                    <label>Bathroom sink Faucet</label>
+                </value>
+                <value>
+                    <fullName>Ants</fullName>
+                    <default>false</default>
+                    <label>Ants</label>
+                </value>
+                <value>
+                    <fullName>Bedbugs</fullName>
+                    <default>false</default>
+                    <label>Bedbugs</label>
+                </value>
+                <value>
+                    <fullName>Bees</fullName>
+                    <default>false</default>
+                    <label>Bees</label>
+                </value>
+                <value>
+                    <fullName>Cockroaches</fullName>
+                    <default>false</default>
+                    <label>Cockroaches</label>
+                </value>
+                <value>
+                    <fullName>Fleas</fullName>
+                    <default>false</default>
+                    <label>Fleas</label>
+                </value>
+                <value>
+                    <fullName>Rodents</fullName>
+                    <default>false</default>
+                    <label>Rodents</label>
+                </value>
+                <value>
+                    <fullName>Scorpions</fullName>
+                    <default>false</default>
+                    <label>Scorpions</label>
+                </value>
+                <value>
+                    <fullName>Spiders</fullName>
+                    <default>false</default>
+                    <label>Spiders</label>
+                </value>
+                <value>
+                    <fullName>Termites</fullName>
+                    <default>false</default>
+                    <label>Termites</label>
+                </value>
+                <value>
+                    <fullName>Ticks</fullName>
+                    <default>false</default>
+                    <label>Ticks</label>
+                </value>
+                <value>
+                    <fullName>Pigeon /Bird</fullName>
+                    <default>false</default>
+                    <label>Pigeon /Bird</label>
+                </value>
+                <value>
+                    <fullName>Baseboards</fullName>
+                    <default>false</default>
+                    <label>Baseboards</label>
+                </value>
+                <value>
+                    <fullName>Blinds</fullName>
+                    <default>false</default>
+                    <label>Blinds</label>
+                </value>
+                <value>
+                    <fullName>Closet Door</fullName>
+                    <default>false</default>
+                    <label>Closet Door</label>
+                </value>
+                <value>
+                    <fullName>Closet Rod</fullName>
+                    <default>false</default>
+                    <label>Closet Rod</label>
+                </value>
+                <value>
+                    <fullName>Door Stop</fullName>
+                    <default>false</default>
+                    <label>Door Stop</label>
+                </value>
+                <value>
+                    <fullName>Mirror</fullName>
+                    <default>false</default>
+                    <label>Mirror</label>
+                </value>
+                <value>
+                    <fullName>Toilet Paper Holder</fullName>
+                    <default>false</default>
+                    <label>Toilet Paper Holder</label>
+                </value>
+                <value>
+                    <fullName>Towel Rod</fullName>
+                    <default>false</default>
+                    <label>Towel Rod</label>
+                </value>
+                <value>
+                    <fullName>Weather Stripping</fullName>
+                    <default>false</default>
+                    <label>Weather Stripping</label>
+                </value>
+                <value>
+                    <fullName>Shower Door(s)</fullName>
+                    <default>false</default>
+                    <label>Shower Door(s)</label>
+                </value>
+                <value>
+                    <fullName>Railing</fullName>
+                    <default>false</default>
+                    <label>Railing</label>
+                </value>
+                <value>
+                    <fullName>Mailbox</fullName>
+                    <default>false</default>
+                    <label>Mailbox</label>
+                </value>
+                <value>
+                    <fullName>Basic Ground Cover Maintenance</fullName>
+                    <default>false</default>
+                    <label>Basic Ground Cover Maintenance</label>
+                </value>
+                <value>
+                    <fullName>Cement/ slab</fullName>
+                    <default>false</default>
+                    <label>Cement/ slab</label>
+                </value>
+                <value>
+                    <fullName>Main water line</fullName>
+                    <default>false</default>
+                    <label>Main water line</label>
+                </value>
+                <value>
+                    <fullName>Tree trimming</fullName>
+                    <default>false</default>
+                    <label>Tree trimming</label>
+                </value>
+                <value>
+                    <fullName>Sprinkler Controls</fullName>
+                    <default>false</default>
+                    <label>Sprinkler Controls</label>
+                </value>
+                <value>
+                    <fullName>Sprinkler Parts</fullName>
+                    <default>false</default>
+                    <label>Sprinkler Parts</label>
+                </value>
+                <value>
+                    <fullName>Trash/Debris Removal</fullName>
+                    <default>false</default>
+                    <label>Trash/Debris Removal</label>
+                </value>
+                <value>
+                    <fullName>Tree removal</fullName>
+                    <default>false</default>
+                    <label>Tree removal</label>
+                </value>
+                <value>
+                    <fullName>A/C blowing Hot</fullName>
+                    <default>false</default>
+                    <label>A/C blowing Hot</label>
+                </value>
+                <value>
+                    <fullName>Damage Unit</fullName>
+                    <default>false</default>
+                    <label>Damage Unit</label>
+                </value>
+                <value>
+                    <fullName>Duct</fullName>
+                    <default>false</default>
+                    <label>Duct</label>
+                </value>
+                <value>
+                    <fullName>Filter</fullName>
+                    <default>false</default>
+                    <label>Filter</label>
+                </value>
+                <value>
+                    <fullName>Heat Not Working</fullName>
+                    <default>false</default>
+                    <label>Heat Not Working</label>
+                </value>
+                <value>
+                    <fullName>Leak water/condensation</fullName>
+                    <default>false</default>
+                    <label>Leak water/condensation</label>
+                </value>
+                <value>
+                    <fullName>Loud Noise</fullName>
+                    <default>false</default>
+                    <label>Loud Noise</label>
+                </value>
+                <value>
+                    <fullName>Not Cooling</fullName>
+                    <default>false</default>
+                    <label>Not Cooling</label>
+                </value>
+                <value>
+                    <fullName>Not Turning On</fullName>
+                    <default>false</default>
+                    <label>Not Turning On</label>
+                </value>
+                <value>
+                    <fullName>Thermostat</fullName>
+                    <default>false</default>
+                    <label>Thermostat</label>
+                </value>
+                <value>
+                    <fullName>Vents</fullName>
+                    <default>false</default>
+                    <label>Vents</label>
+                </value>
+                <value>
+                    <fullName>Chimney/Fireplace</fullName>
+                    <default>false</default>
+                    <label>Chimney/Fireplace</label>
+                </value>
+                <value>
+                    <fullName>New Unit Install</fullName>
+                    <default>false</default>
+                    <label>New Unit Install</label>
+                </value>
+                <value>
+                    <fullName>Door</fullName>
+                    <default>false</default>
+                    <label>Door</label>
+                </value>
+                <value>
+                    <fullName>Door Opener</fullName>
+                    <default>false</default>
+                    <label>Door Opener</label>
+                </value>
+                <value>
+                    <fullName>latch/lock</fullName>
+                    <default>false</default>
+                    <label>latch/lock</label>
+                </value>
+                <value>
+                    <fullName>Man Door</fullName>
+                    <default>false</default>
+                    <label>Man Door</label>
+                </value>
+                <value>
+                    <fullName>Rails</fullName>
+                    <default>false</default>
+                    <label>Rails</label>
+                </value>
+                <value>
+                    <fullName>Springs</fullName>
+                    <default>false</default>
+                    <label>Springs</label>
+                </value>
+                <value>
+                    <fullName>Carpeting repair</fullName>
+                    <default>false</default>
+                    <label>Carpeting repair</label>
+                </value>
+                <value>
+                    <fullName>cement repair</fullName>
+                    <default>false</default>
+                    <label>cement repair</label>
+                </value>
+                <value>
+                    <fullName>damage inspection</fullName>
+                    <default>false</default>
+                    <label>damage inspection</label>
+                </value>
+                <value>
+                    <fullName>laminate</fullName>
+                    <default>false</default>
+                    <label>laminate</label>
+                </value>
+                <value>
+                    <fullName>Tile repair</fullName>
+                    <default>false</default>
+                    <label>Tile repair</label>
+                </value>
+                <value>
+                    <fullName>Vinyl repair</fullName>
+                    <default>false</default>
+                    <label>Vinyl repair</label>
+                </value>
+                <value>
+                    <fullName>Stairs</fullName>
+                    <default>false</default>
+                    <label>Stairs</label>
+                </value>
+                <value>
+                    <fullName>block cracked</fullName>
+                    <default>false</default>
+                    <label>block cracked</label>
+                </value>
+                <value>
+                    <fullName>block wall hit/ fell over</fullName>
+                    <default>false</default>
+                    <label>block wall hit/ fell over</label>
+                </value>
+                <value>
+                    <fullName>Block wall leaning</fullName>
+                    <default>false</default>
+                    <label>Block wall leaning</label>
+                </value>
+                <value>
+                    <fullName>gate not latching</fullName>
+                    <default>false</default>
+                    <label>gate not latching</label>
+                </value>
+                <value>
+                    <fullName>iron bent</fullName>
+                    <default>false</default>
+                    <label>iron bent</label>
+                </value>
+                <value>
+                    <fullName>iron rusted through</fullName>
+                    <default>false</default>
+                    <label>iron rusted through</label>
+                </value>
+                <value>
+                    <fullName>iron unsecured</fullName>
+                    <default>false</default>
+                    <label>iron unsecured</label>
+                </value>
+                <value>
+                    <fullName>no lock on gate</fullName>
+                    <default>false</default>
+                    <label>no lock on gate</label>
+                </value>
+                <value>
+                    <fullName>wood collapsing</fullName>
+                    <default>false</default>
+                    <label>wood collapsing</label>
+                </value>
+                <value>
+                    <fullName>wood falling over</fullName>
+                    <default>false</default>
+                    <label>wood falling over</label>
+                </value>
+                <value>
+                    <fullName>Ceiling fan</fullName>
+                    <default>false</default>
+                    <label>Ceiling fan</label>
+                </value>
+                <value>
+                    <fullName>CO2 Detector</fullName>
+                    <default>false</default>
+                    <label>CO2 Detector</label>
+                </value>
+                <value>
+                    <fullName>Door Bell</fullName>
+                    <default>false</default>
+                    <label>Door Bell</label>
+                </value>
+                <value>
+                    <fullName>Electrical Panel</fullName>
+                    <default>false</default>
+                    <label>Electrical Panel</label>
+                </value>
+                <value>
+                    <fullName>Exhaust Fan</fullName>
+                    <default>false</default>
+                    <label>Exhaust Fan</label>
+                </value>
+                <value>
+                    <fullName>Exposed Wiring</fullName>
+                    <default>false</default>
+                    <label>Exposed Wiring</label>
+                </value>
+                <value>
+                    <fullName>exterior electric</fullName>
+                    <default>false</default>
+                    <label>exterior electric</label>
+                </value>
+                <value>
+                    <fullName>GFCI</fullName>
+                    <default>false</default>
+                    <label>GFCI</label>
+                </value>
+                <value>
+                    <fullName>kitchen or bathroom electric</fullName>
+                    <default>false</default>
+                    <label>kitchen or bathroom electric</label>
+                </value>
+                <value>
+                    <fullName>Lights not working</fullName>
+                    <default>false</default>
+                    <label>Lights not working</label>
+                </value>
+                <value>
+                    <fullName>outlets not working</fullName>
+                    <default>false</default>
+                    <label>outlets not working</label>
+                </value>
+                <value>
+                    <fullName>Smoke Detectors</fullName>
+                    <default>false</default>
+                    <label>Smoke Detectors</label>
+                </value>
+                <value>
+                    <fullName>Telephone Jack</fullName>
+                    <default>false</default>
+                    <label>Telephone Jack</label>
+                </value>
+                <value>
+                    <fullName>Vendor</fullName>
+                    <default>false</default>
+                    <label>Vendor</label>
+                </value>
+                <value>
+                    <fullName>Technician</fullName>
+                    <default>false</default>
+                    <label>Technician</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>Ceiling Hole</fullName>
+                    <default>false</default>
+                    <label>Ceiling Hole</label>
+                </value>
+                <value>
+                    <fullName>Cracks</fullName>
+                    <default>false</default>
+                    <label>Cracks</label>
+                </value>
+                <value>
+                    <fullName>Patch Electrical Access Hole</fullName>
+                    <default>false</default>
+                    <label>Patch Electrical Access Hole</label>
+                </value>
+                <value>
+                    <fullName>Patch Plumbing Access Hole</fullName>
+                    <default>false</default>
+                    <label>Patch Plumbing Access Hole</label>
+                </value>
+                <value>
+                    <fullName>Wall Hole</fullName>
+                    <default>false</default>
+                    <label>Wall Hole</label>
+                </value>
+                <value>
+                    <fullName>Water Damage</fullName>
+                    <default>false</default>
+                    <label>Water Damage</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Dishwasher</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Dryer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Elect. Stove</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Fridge</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Gas Stove</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Microwave</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Vent Hood</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Washing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Elect. Oven</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Appliance</controllingFieldValue>
+                <valueName>Gas Oven</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Cabinets Repair</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Microbial Growth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Shelves</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Vanity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Cabinet Doors</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Cabinet Drawers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cabinets</controllingFieldValue>
+                <valueName>Hinges</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Cleanouts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Laundry Clogged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Main Line Clogged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Multiple Showers Clogged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Sink Clogged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Toilet &amp; Tub Clogged</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clog</controllingFieldValue>
+                <valueName>Sink Clogged by Garbage Disposal</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Survey_Taken__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Survey Taken</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Survey_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>hyperlink(&quot;http://invitationhomes.toa1.cs7.force.com/surveys/ServiceRequestSurvey?requestid=&quot;&amp; Id, &quot;Click here for details&quot;)</formula>
+        <label>Survey URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT ( Worst_PA_Survey__c ) = &quot;5&quot;, IMAGE(&quot;/img/samples/rating1.gif&quot;, &quot;Yes&quot;, 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = &quot;4&quot;, IMAGE(&quot;/img/samples/rating2.gif&quot;, &quot;Yes&quot;, 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = &quot;3&quot;, IMAGE(&quot;/img/samples/rating3.gif&quot;, &quot;Yes&quot;, 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = &quot;2&quot;, IMAGE(&quot;/img/samples/rating4.gif&quot;, &quot;Yes&quot;, 12, 12), 
+IF ( TEXT ( Worst_PA_Survey__c ) = &quot;1&quot;, IMAGE(&quot;/img/samples/rating5.gif&quot;, &quot;Yes&quot;, 12, 12), 
+&quot;&quot; ) ) ) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Survey</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technician_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Technician Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Technician__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Name of the group member working on the service order. This does not imply that this member has the ownership of service order record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the group member working on the service order. This does not imply that this member has the ownership of service order record</inlineHelpText>
+        <label>Technician</label>
+        <referenceTo>Work_Order__c</referenceTo>
+        <relationshipName>Work_Orders_Tech</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Tenant_Caused__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenant Caused</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Appointments__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Appointments</label>
+        <summaryForeignKey>Appointment__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_No_of_Service_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Total # of Service Items</label>
+        <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_No_of_Vendor_Service_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Total # of Vendor Service Items</label>
+        <summaryFilterItems>
+            <field>Service_Item__c.Assignment__c</field>
+            <operation>equals</operation>
+            <value>Vendor</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_of_Open_Service_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Total # of Open Service Items</label>
+        <summaryFilterItems>
+            <field>Service_Item__c.Service_Item_Status__c</field>
+            <operation>equals</operation>
+            <value>New, On Hold, Sent to Dispatch, Waiting Vendor Assignment, Sent to ETAdirect, In Progress, In Vendor Management</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vendor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Work_Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Work_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Work_Order_ID__c</fullName>
+        <displayFormat>VGWO-{000000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Work Order ID</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Order Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <default>true</default>
+                    <label>Fixed</label>
+                </value>
+                <value>
+                    <fullName>Time and Material</fullName>
+                    <default>false</default>
+                    <label>Time and Material</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Worst_PA_Survey__c</fullName>
+        <externalId>false</externalId>
+        <label>Worst PA Survey</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Yardi_Property_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>PortfolioProperty__r.Yardi_Property_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Yardi Property Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Service Request</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>PortfolioProperty__c</columns>
+        <columns>Yardi_Property_Code__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <columns>Overall_Priority__c</columns>
+        <columns>Service_Request_Status__c</columns>
+        <columns>Total_No_of_Service_Items__c</columns>
+        <columns>Total_of_Open_Service_Items__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>PHX_Service_Req_LAST_7DAYS</fullName>
+        <columns>NAME</columns>
+        <columns>PortfolioProperty__c</columns>
+        <columns>Service_Request_Status__c</columns>
+        <columns>Total_No_of_Service_Items__c</columns>
+        <columns>Total_of_Open_Service_Items__c</columns>
+        <columns>Total_No_of_Vendor_Service_Items__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>SReq_Open_Duration__c</columns>
+        <columns>Completed_Date_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Phoenix</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:7</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>notEqual</operation>
+            <value>Jonathan Major</value>
+        </filters>
+        <label>PHX Service Req. - LAST 7 DAYS</label>
+    </listViews>
+    <listViews>
+        <fullName>PHX_Service_Req_Yesterday_and_Today</fullName>
+        <columns>NAME</columns>
+        <columns>PortfolioProperty__c</columns>
+        <columns>Service_Request_Status__c</columns>
+        <columns>Total_No_of_Service_Items__c</columns>
+        <columns>Total_of_Open_Service_Items__c</columns>
+        <columns>Total_No_of_Vendor_Service_Items__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>SReq_Open_Duration__c</columns>
+        <columns>Completed_Date_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Phoenix</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY,TODAY</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>notEqual</operation>
+            <value>Jonathan Major</value>
+        </filters>
+        <label>PHX Service Req. - Yesterday and Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Phoenix_Service_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>PortfolioProperty__c</columns>
+        <columns>Service_Request_Status__c</columns>
+        <columns>Total_No_of_Service_Items__c</columns>
+        <columns>Total_of_Open_Service_Items__c</columns>
+        <columns>Total_No_of_Vendor_Service_Items__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>SReq_Open_Duration__c</columns>
+        <columns>Completed_Date_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Phoenix</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New,Accepted,In Progress,On Hold,Ready,Ready awaiting PO</value>
+        </filters>
+        <label>Phoenix Service Requests</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SR-{0000000}</displayFormat>
+        <label>Service Request No.</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Requests</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>PortfolioProperty__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Yardi_Property_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Resident_First_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Resident_Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_No_of_Service_Items__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_of_Open_Service_Items__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SReq_Completed_Date_Time__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Service_Request_Wizard_in_Related_List</listViewButtons>
+        <lookupDialogsAdditionalFields>PortfolioProperty__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Yardi_Property_Code__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Resident_First_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Resident_Last_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_No_of_Service_Items__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_of_Open_Service_Items__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SReq_Completed_Date_Time__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PortfolioProperty__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Yardi_Property_Code__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Resident_First_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Resident_Last_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Total_No_of_Service_Items__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Total_of_Open_Service_Items__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SReq_Completed_Date_Time__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>PortfolioProperty__c</searchFilterFields>
+        <searchFilterFields>Yardi_Property_Code__c</searchFilterFields>
+        <searchFilterFields>Resident_First_Name__c</searchFilterFields>
+        <searchFilterFields>Resident_Last_Name__c</searchFilterFields>
+        <searchFilterFields>Resident_Email__c</searchFilterFields>
+        <searchFilterFields>Resident_Home_Phone__c</searchFilterFields>
+        <searchFilterFields>Resident_Mobile_Phone__c</searchFilterFields>
+        <searchFilterFields>Property_Street__c</searchFilterFields>
+        <searchFilterFields>Property_City__c</searchFilterFields>
+        <searchResultsAdditionalFields>PortfolioProperty__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Yardi_Property_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Resident_First_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Resident_Last_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_No_of_Service_Items__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_of_Open_Service_Items__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SReq_Completed_Date_Time__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>New_Service_Request</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Service Request</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a2H/e?CF00NE0000004c5cL={!Property__c.Name}&amp;CF00NE0000004c5cL_lkid={!Property__c.Id}&amp;CF00NE0000004b97h={!Property__c.Residence__c}&amp;CF00NE0000004b97h_lkid={!Property__c.ResidenceId__c}&amp;retURL=%2F{!Work_Order__c.Id}&amp;cancelURL=%2F{!Property__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Work_Order</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Work Order</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/NewWorkOrder?caseId={!Work_Order__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Service_Request_Wizard_Detail</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Service Request Wizard</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/ServiceRequest?id={!Work_Order__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Service_Request_Wizard_in_Related_List</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Service Request Wizard</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/ServiceRequest?relatedPId={!Property__c.Id}</url>
+    </webLinks>
+</CustomObject>

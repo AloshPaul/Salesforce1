@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommended_for_Dispo_by__c</fullName>
+    <externalId>false</externalId>
+    <label>Recommended for Dispo by</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>HOA</fullName>
+                <default>false</default>
+                <label>HOA</label>
+            </value>
+            <value>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+                <label>Rehab</label>
+            </value>
+            <value>
+                <fullName>Acquisitions</fullName>
+                <default>false</default>
+                <label>Acquisitions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

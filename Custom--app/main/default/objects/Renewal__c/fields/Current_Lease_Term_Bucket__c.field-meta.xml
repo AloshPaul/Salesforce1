@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Lease_Term_Bucket__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Current_Lease_Term_Months__c &lt; 12, "&lt; 12 Months",
+ IF (Current_Lease_Term_Months__c = 12, " 1 Yr Lease",
+ IF (Current_Lease_Term_Months__c > 12 &amp;&amp; Current_Lease_Term_Months__c &lt; 24, "1 Yr Plus",
+ IF (Current_Lease_Term_Months__c = 24, "2 Yr Lease", 
+ IF (Current_Lease_Term_Months__c > 24, "2 Yr Plus", NULL)))))</formula>
+    <label>Current Lease Term Bucket</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

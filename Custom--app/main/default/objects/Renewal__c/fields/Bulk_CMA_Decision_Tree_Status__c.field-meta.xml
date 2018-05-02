@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bulk_CMA_Decision_Tree_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Bulk CMA Decision Tree Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(10%)  AVM vs CMA</fullName>
+                <default>false</default>
+                <label>(10%)  AVM vs CMA</label>
+            </value>
+            <value>
+                <fullName>(10%) AVM vs PL</fullName>
+                <default>false</default>
+                <label>(10%) AVM vs PL</label>
+            </value>
+            <value>
+                <fullName>(10%) CMA vs AVM</fullName>
+                <default>false</default>
+                <label>(10%) CMA vs AVM</label>
+            </value>
+            <value>
+                <fullName>(10%) CMA vs PL</fullName>
+                <default>false</default>
+                <label>(10%) CMA vs PL</label>
+            </value>
+            <value>
+                <fullName>(5%) AVM vs CMA</fullName>
+                <default>false</default>
+                <label>(5%) AVM vs CMA</label>
+            </value>
+            <value>
+                <fullName>(5%) AVM vs PL</fullName>
+                <default>false</default>
+                <label>(5%) AVM vs PL</label>
+            </value>
+            <value>
+                <fullName>(5%) CMA vs AVM</fullName>
+                <default>false</default>
+                <label>(5%) CMA vs AVM</label>
+            </value>
+            <value>
+                <fullName>(5%) CMA vs PL</fullName>
+                <default>false</default>
+                <label>(5%) CMA vs PL</label>
+            </value>
+            <value>
+                <fullName>EXCEPTION</fullName>
+                <default>false</default>
+                <label>EXCEPTION</label>
+            </value>
+            <value>
+                <fullName>10% - AVM vs CMA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10% - AVM vs CMA</label>
+            </value>
+            <value>
+                <fullName>10% - AVM vs PL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10% - AVM vs PL</label>
+            </value>
+            <value>
+                <fullName>10% - CMA vs PL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10% - CMA vs PL</label>
+            </value>
+            <value>
+                <fullName>5% - CMA vs PL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5% - CMA vs PL</label>
+            </value>
+            <value>
+                <fullName>5% AVM vs CMA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5% AVM vs CMA</label>
+            </value>
+            <value>
+                <fullName>5% AVM vs PL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5% AVM vs PL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

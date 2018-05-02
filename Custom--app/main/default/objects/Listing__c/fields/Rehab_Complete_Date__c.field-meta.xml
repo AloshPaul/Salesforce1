@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Complete_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( ISBLANK(Rehab_Remediation_Record__c) = True,  Rehab__r.Office_Signoff_Date__c,  Rehab_Remediation_Record__r.Office_Signoff_Date__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This date will show the Office Sign-Off Date from the Rehab record or the Rehab Remediation record, if applicable.</inlineHelpText>
+    <label>Rehab Complete Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

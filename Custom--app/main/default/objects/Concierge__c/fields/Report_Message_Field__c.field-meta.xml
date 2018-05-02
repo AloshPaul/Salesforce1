@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_Message_Field__c</fullName>
+    <defaultValue>"If you are requesting a report, please make sure you have provided the following details in the description"&amp;  BR() &amp;
+"1. Name of Report" &amp; BR() &amp;
+"2. Report Specification" &amp; BR() &amp;
+"3. Mock Up (As attachment)"&amp;  BR() &amp;
+"4. Business Justification"</defaultValue>
+    <externalId>false</externalId>
+    <label>Report Message Field</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

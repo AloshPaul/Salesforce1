@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market_Lead_Submission_City__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(UPPER(Region__c) = 'ATLANTA',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Atlanta%2C+GA&amp;txtDistance=50",
+ IF(UPPER(Region__c)= 'CHARLOTTE',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Charlotte%2C+NC&amp;txtDistance=50",
+ IF(UPPER(Region__c)= 'CHICAGO',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Chicago%2C+IL&amp;txtDistance=50",
+ IF(UPPER(Region__c)= 'INLAND EMPIRE',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Inland+Empire%2C+CA&amp;txtDistance=50", 
+ IF(UPPER(Region__c) = 'JACKSONVILLE',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Jacksonville%2C+FL&amp;txtDistance=50",
+ IF(UPPER(Region__c) = 'LAS VEGAS', 
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Las+Vegas%2C+NV&amp;txtDistance=50", 
+ IF(UPPER(Region__c) = 'LOS ANGELES',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Los+Angeles+County%2C+CA&amp;txtDistance=50",
+ IF(UPPER(Region__c) = 'MIAMI',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Miami%2C+FL&amp;txtDistance=50",
+ IF(UPPER(Region__c) = 'MINNEAPOLIS', 
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Minneapolis%2C+MN&amp;txtDistance=50",
+ IF(UPPER(Region__c) = 'ORLANDO', 
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Orlando%2C+FL&amp;txtDistance=50", 
+ IF(UPPER(Region__c) = 'PHOENIX', 
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Phoenix%2C+AZ&amp;txtDistance=50", 
+ IF(UPPER(Region__c) = 'SACRAMENTO', 
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Northern+California&amp;txtDistance=50", 
+ IF(UPPER(Region__c) = 'SEATTLE', 
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Seattle%2C+WA&amp;txtDistance=50", 
+ IF(UPPER(Region__c) = 'TAMPA',
+ "http://www.invitationhomesforrent.com/searchlisting.aspx?txtCity=Tampa%2C+FL&amp;txtDistance=50", 
+ null))))))))))))))</formula>
+    <label>Market Lead Submission City</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

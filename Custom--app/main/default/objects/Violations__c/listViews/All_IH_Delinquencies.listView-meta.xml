@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_IH_Delinquencies</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Source__c</columns>
+    <columns>HOA_Tracking__c</columns>
+    <columns>Type_of_Notice__c</columns>
+    <columns>Coordinator__c</columns>
+    <columns>Date_of_Notice_Recv_d__c</columns>
+    <columns>Date_of_Required_Compliance__c</columns>
+    <columns>Date_Deliquency_Paid__c</columns>
+    <columns>Delinquency_Amount__c</columns>
+    <columns>Status__c</columns>
+    <columns>of_Days_Open__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Violations__c.IH_Delinquency</value>
+    </filters>
+    <label>All IH Delinquencies</label>
+</ListView>

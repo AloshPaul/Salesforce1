@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Cell_Carrier__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select the contact&apos;s mobile phone carrier.</inlineHelpText>
+        <label>Cell Carrier</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alltel</fullName>
+                    <default>false</default>
+                    <label>Alltel</label>
+                </value>
+                <value>
+                    <fullName>AT&amp;T</fullName>
+                    <default>false</default>
+                    <label>AT&amp;T</label>
+                </value>
+                <value>
+                    <fullName>Boost</fullName>
+                    <default>false</default>
+                    <label>Boost</label>
+                </value>
+                <value>
+                    <fullName>Metro PCS</fullName>
+                    <default>false</default>
+                    <label>Metro PCS</label>
+                </value>
+                <value>
+                    <fullName>Nextel</fullName>
+                    <default>false</default>
+                    <label>Nextel</label>
+                </value>
+                <value>
+                    <fullName>Sprint PCS</fullName>
+                    <default>false</default>
+                    <label>Sprint PCS</label>
+                </value>
+                <value>
+                    <fullName>T-Mobile</fullName>
+                    <default>false</default>
+                    <label>T-Mobile</label>
+                </value>
+                <value>
+                    <fullName>US Cellular</fullName>
+                    <default>false</default>
+                    <label>US Cellular</label>
+                </value>
+                <value>
+                    <fullName>Verizon</fullName>
+                    <default>false</default>
+                    <label>Verizon</label>
+                </value>
+                <value>
+                    <fullName>Virgin Mobile</fullName>
+                    <default>false</default>
+                    <label>Virgin Mobile</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>FirstName + &apos; &apos; + LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Longer_With_Company__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>No Longer With Company</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BK Intake Contact</fullName>
+                    <default>false</default>
+                    <label>BK Intake Contact</label>
+                </value>
+                <value>
+                    <fullName>Eviction Contact</fullName>
+                    <default>false</default>
+                    <label>Eviction Contact</label>
+                </value>
+                <value>
+                    <fullName>Rehab Crew Intake Contact</fullName>
+                    <default>false</default>
+                    <label>Rehab Crew Intake Contact</label>
+                </value>
+                <value>
+                    <fullName>Lawn Maintenance Intake Contact</fullName>
+                    <default>false</default>
+                    <label>Lawn Maintenance Intake Contact</label>
+                </value>
+                <value>
+                    <fullName>Pool Maintenance Intake Contact</fullName>
+                    <default>false</default>
+                    <label>Pool Maintenance Intake Contact</label>
+                </value>
+                <value>
+                    <fullName>Lawn Maintenance End Service Contact</fullName>
+                    <default>false</default>
+                    <label>Lawn Maintenance End Service Contact</label>
+                </value>
+                <value>
+                    <fullName>Pool Maintenance End Service Contact</fullName>
+                    <default>false</default>
+                    <label>Pool Maintenance End Service Contact</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+</CustomObject>

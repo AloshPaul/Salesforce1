@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rehab_Open_Budget_Walk_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Rehab__c</columns>
+    <columns>Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Budget_Status__c</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Address_City__c</columns>
+    <columns>Address_County__c</columns>
+    <columns>Walk_Supervisor__c</columns>
+    <columns>Approval_Supervisor__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Post-Acquisitions</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>Rehab - Open Budget Walk Requests</label>
+</ListView>

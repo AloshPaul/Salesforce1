@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Broker_Cost_Basis__c</fullName>
+    <externalId>false</externalId>
+    <formula>Broker_Offer_Price__c +  Broker_Rehab__c + Broker_Closing_Title_Fees_Est__c + Market__r.Capitalized_Acq_Costs__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Broker Cost Basis</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

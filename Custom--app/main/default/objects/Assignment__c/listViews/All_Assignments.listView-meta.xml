@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Assignments</fullName>
+    <columns>Corp_Project__c</columns>
+    <columns>NAME</columns>
+    <columns>Assigned_to_Member__c</columns>
+    <columns>Deadline__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Status_Flag__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Assignments</label>
+</ListView>

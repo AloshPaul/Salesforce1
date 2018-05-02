@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Selected_Bid_true_Type_Reason_Bid</fullName>
+    <active>false</active>
+    <description>If Selected and Approved bid is true - then Change Order Type and Reason Code must also be Bid
+00eE0000000o2J8</description>
+    <errorConditionFormula>Selected_Approved_Bid__c = True &amp;&amp;
+ NOT( ISPICKVAL(Change_Order_Type__c, "Bid")   ) &amp;&amp;
+ NOT( ISPICKVAL(Reason_Code__c, "Bid") )</errorConditionFormula>
+    <errorMessage>If Selected and Approved bid is true - then Change Order Type and Reason Code must also be Bid</errorMessage>
+</ValidationRule>

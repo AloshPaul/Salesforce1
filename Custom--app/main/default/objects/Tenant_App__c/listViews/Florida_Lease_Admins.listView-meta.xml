@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Florida_Lease_Admins</fullName>
+    <columns>NAME</columns>
+    <columns>Application_Status__c</columns>
+    <columns>App_Received__c</columns>
+    <columns>Lease_Start_Date__c</columns>
+    <columns>Lease_Start_Date_Agent_Verified__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Credit_Check_Complete__c</columns>
+    <columns>VOI_Completed__c</columns>
+    <columns>Approval_Letter_to_Agent_Date__c</columns>
+    <columns>Deposit_Due_Date__c</columns>
+    <columns>Holding_Fee_Paid_date__c</columns>
+    <columns>Deposit_Recv_d_Date__c</columns>
+    <columns>Lease_Prepared_Sent_Date__c</columns>
+    <columns>Signed_Lease_Rec_vd_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Tenant_App__c.AppTrack_2_0</value>
+    </filters>
+    <filters>
+        <field>File_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>orlando,tampa,jacksonville,miami</value>
+    </filters>
+    <label>^^ Lease Admin - Florida View</label>
+</ListView>

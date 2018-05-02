@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_not_require_Technician</fullName>
+    <active>true</active>
+    <description>When Assignment values is not "Technician", then the Techcnician field should not be set.</description>
+    <errorConditionFormula>NOT(ISPICKVAL(Assignment__c, "Technician")) &amp;&amp; NOT(ISNULL(Technician__c) || ISBLANK(Technician__c)) &amp;&amp; NOT(OR(ISPICKVAL(Not_Completed_Reason__c, "Escalate to Vendor - Scope"), ISPICKVAL(Not_Completed_Reason__c, "Escalate to Vendor - Skill")))</errorConditionFormula>
+    <errorDisplayField>Technician__c</errorDisplayField>
+    <errorMessage>Please remove this value. The assignment is not for a Technician or it is not being escalated by a Technician</errorMessage>
+</ValidationRule>

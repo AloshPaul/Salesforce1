@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAT_LONG</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Residence_Latitude__c</columns>
+    <columns>Residence_Longitude__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Property_Code__c</field>
+        <operation>equals</operation>
+        <value>AZPH2468</value>
+    </filters>
+    <filters>
+        <field>Property_Code__c</field>
+        <operation>equals</operation>
+        <value>AZPH2206</value>
+    </filters>
+    <label>LAT/LONG</label>
+    <sharedTo>
+        <group>SF_Team</group>
+    </sharedTo>
+</ListView>

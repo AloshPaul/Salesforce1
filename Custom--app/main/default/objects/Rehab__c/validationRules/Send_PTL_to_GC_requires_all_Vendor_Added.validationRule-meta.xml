@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_PTL_to_GC_requires_all_Vendor_Added</fullName>
+    <active>true</active>
+    <description>Send PTL to GC requires All Vendors Added value checked</description>
+    <errorConditionFormula>AND( Send_PTL_to_GC__c, NOT( All_Vendors_Added__c )  )</errorConditionFormula>
+    <errorMessage>Send PTL to GC requires All Vendors Added value checked</errorMessage>
+</ValidationRule>

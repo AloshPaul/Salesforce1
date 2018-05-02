@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jaki_s_IT_Requests_ALL</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Time_Open__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Status__c</columns>
+    <columns>Requester_Name__c</columns>
+    <columns>Requestor_Name__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Concierge__c.IT_Request</value>
+    </filters>
+    <filters>
+        <field>OWNER.ALIAS</field>
+        <operation>equals</operation>
+        <value>jingr</value>
+    </filters>
+    <label>Jaki's IT Requests - ALL</label>
+    <sharedTo>
+        <group>Jaki_Ingram_s_Queue</group>
+    </sharedTo>
+</ListView>

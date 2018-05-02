@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoices_Entered_but_not_Flagged</fullName>
+    <columns>NAME</columns>
+    <columns>Type__c</columns>
+    <columns>Tran__c</columns>
+    <columns>Vendor_Code__c</columns>
+    <columns>Vendor__c</columns>
+    <columns>Invoice_Date__c</columns>
+    <columns>Post_Month__c</columns>
+    <columns>Invoice_Number__c</columns>
+    <columns>Comments__c</columns>
+    <columns>Yardi_Code__c</columns>
+    <columns>Invoice_Amount__c</columns>
+    <columns>GL_Code__c</columns>
+    <columns>Remarks_Appears_on_GL__c</columns>
+    <columns>Return_Check_to__c</columns>
+    <columns>Approved_By__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Include_in_Yardi_Batch__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted</value>
+    </filters>
+    <filters>
+        <field>Date_Submitted_to_Yardi__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Invoices Entered but not Flagged</label>
+</ListView>

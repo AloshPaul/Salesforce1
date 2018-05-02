@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Entity__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(!ISBLANK(Owner_Entity_Text__c) ,Owner_Entity_Text__c, Owner_Entity1__c)</formula>
+    <label>Owner Entity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

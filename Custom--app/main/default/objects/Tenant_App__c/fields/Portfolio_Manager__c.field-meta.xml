@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portfolio_Manager__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (ISBLANK(Listing__c) = FALSE,  Listing__r.Portfolio__r.Owner:User.Full_Name__c, 
+IF (ISBLANK(TIP_Record__c) = FALSE, TIP_Record__r.Portfolio__r.Owner:User.Full_Name__c , NULL))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>POD</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

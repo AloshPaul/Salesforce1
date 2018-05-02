@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aging_Rehab_of_Days_from_Re_key__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), 'Closed') , Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), 'HOLD') , Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c,
+IF(BEGINS(TEXT(Portfolio__r.Residence__r.Most_Recent_Rehab__r.Stage__c), 'Complete'), Portfolio__r.Residence__r.Most_Recent_Rehab__r.Office_Signoff_Date__c - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c,
+ 
+ 
+TODAY() - Portfolio__r.Residence__r.Most_Recent_Rehab__r.Rehab_Aging_Start_Date__c)))</formula>
+    <label>Aging - Rehab # of Days from Re-key</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

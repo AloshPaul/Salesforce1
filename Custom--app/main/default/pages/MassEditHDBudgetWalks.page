@@ -1,0 +1,95 @@
+<!--
+/**    Description    :    This Page is used on "Mass Edit" button to Update more then one HD Budget Walk record at a time.
+  *
+  *    Created By     :    Bhavi Sharma   
+  *
+  *    Created Date   :    03-13-2014
+  *
+  *    Revision Log   :    V1.0 - Created
+  *
+**/
+-->
+<apex:page standardController="HD_Budget_Walk__c" recordSetVar="unused" sidebar="false">
+    
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'css/jquery-ui.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'css/jquery.multiselect.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'assets/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryMultiselect, 'assets/prettify.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jqueryTableSorter, 'themes/blue/style.css')}" />
+    
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery-ui.min.js')}"/>       
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'js/jquery.multiselect.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryMultiselect, 'assets/prettify.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jqueryTableSorter, 'jquery.tablesorter.js')}" />
+    
+    <style>
+        .tablesorter {
+            font-size : 9pt !important;
+        }
+    </style>
+        
+    <script>
+        
+        $(function(){
+            applyTableSorting();
+        });
+        
+        function applyTableSorting() {
+            $("#budgetwalks").tablesorter();
+        }
+    
+        function confirmCancel() {
+            var isCancel = confirm("Are you sure you wish to cancel?");
+            if (isCancel) 
+                return true;
+            return false;
+        }
+   </script>
+   
+   <!-- Form -->
+   <apex:form >
+
+        <!--page block-->
+        <apex:pageBlock >
+            
+        <!--page Message-->
+        <apex:pagemessages />
+        
+            <!--page buttons--> 
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            
+            <table class="list tablesorter" border="0" cellpadding="0" cellspacing="0" id="budgetwalks">
+                <thead class="rich-table-thead">
+                    <tr >
+                        <th class="headerRow  " scope="col" colspan="1" style="white-space:nowrap">
+                            <div >HD Budget Walk</div>
+                        </th>
+                        <apex:repeat value="{!$ObjectType.HD_Budget_Walk__c.FieldSets.Utility_Fieldset}" var="f">
+                            <td class="headerRow  " scope="col" colspan="1" style="background:#ececec;font-weight:bold;font-size:11px;">
+                                <div >{!f.Label}</div>
+                            </td>
+                        </apex:repeat>
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!selected}" var="item">
+                    <tr class="dataRow even  first" onmouseover="if (window.hiOn){hiOn(this);} " onmouseout="if (window.hiOff){hiOff(this);} " onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}">
+                        <td class="dataCell  " colspan="1"  style="white-space:nowrap">
+                            <apex:outputLink value="/{!item.Id}" target="_blank">{!item.Name}</apex:outputLink>
+                        </td>                 
+                        <apex:repeat value="{!$ObjectType.HD_Budget_Walk__c.FieldSets.Utility_Fieldset}" var="f">
+                        <td class="headerRow  " scope="col" colspan="1" >
+                            <apex:inputField value="{!item[f]}" />
+                        </td>
+                        </apex:repeat>    
+                    </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_SF_Projects</fullName>
+    <columns>NAME</columns>
+    <columns>Type__c</columns>
+    <columns>Business_Problem__c</columns>
+    <columns>Project_Lead_s__c</columns>
+    <columns>Status__c</columns>
+    <columns>Level_of_Effort__c</columns>
+    <columns>Level_of_Technical_Complexity__c</columns>
+    <columns>Technical_Complexity_Comments__c</columns>
+    <columns>Description_of_Resolution__c</columns>
+    <columns>Execution_Strategy__c</columns>
+    <columns>In_Scope__c</columns>
+    <columns>Out_of_Scope__c</columns>
+    <columns>Planned_Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Projects</label>
+</ListView>

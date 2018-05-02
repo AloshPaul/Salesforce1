@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(LEN( Listing__r.Address__c )>0, Listing__r.Address__c&amp; " " , "" ) &amp; BR() &amp; 
+IF(LEN( Listing__r.City__c )>0, Listing__r.City__c&amp; ", " , "" )&amp; 
+IF(LEN( Listing__r.State__c )>0, Listing__r.State__c&amp; " " , "" )&amp; 
+IF(LEN( Listing__r.Zip_Code__c )>0, Listing__r.Zip_Code__c,"")</formula>
+    <label>Property Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

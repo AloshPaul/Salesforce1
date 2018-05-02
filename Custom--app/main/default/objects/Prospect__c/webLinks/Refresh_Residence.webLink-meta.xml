@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refresh_Residence</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Refresh Residence</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>//Include the required js files 
+{!REQUIRESCRIPT("/soap/ajax/23.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/23.0/apex.js")} 
+
+try { 
+
+var prospectId = '{!Prospect__c.Id}'; 
+
+var responseMessage = sforce.apex.execute("ResidenceService","refreshResidenceFromProspect", 
+{prospectId:prospectId}); 
+
+ 
+alert(responseMessage); 
+} 
+catch(e) { 
+alert(e); 
+}</url>
+</WebLink>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Days_in_TIP__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( TIP_Status__c , "TIP - New (Needs Driver)") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "TIP - Driver Assigned") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "TIP - DK Initial Contact") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "TIP - Voluntary Move-Out") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "TIP - CFK Negotiations") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "TIP - Lease Negotiations") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "TIP - Eviction") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "Closed - Leased (Assumed)") ,   TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "Closed - Leased (New)") ,  TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "Closed - Vacant") , TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "Closed  - Purchase Rented") ,  TIP_Closed_Date__c-  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "Closed - Acq Cancelled") ,  TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "Closed - For Sale/Disposition") ,  TIP_Closed_Date__c -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "HOLD - Abd. Property Notice") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "HOLD - BK") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "HOLD - Deed") ,  TODAY() -  Acquisition_Date__c , 
+IF( ISPICKVAL( TIP_Status__c , "HOLD - Limbo") ,  TODAY() -  Acquisition_Date__c , 
+null)))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label># of Days in TIP</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

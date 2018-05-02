@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Monthly_Due__c</fullName>
+    <externalId>false</externalId>
+    <formula>Market_Rent__c + Admin_Fee_if_applicable__c +Sewer_or_Trash_Oai__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>For regions where there is an admin fee and/or a pass through cost for sewer and water, this field shows the total amount that is actual due each month in addition to the asking rent amount.</inlineHelpText>
+    <label>Total Monthly Due</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

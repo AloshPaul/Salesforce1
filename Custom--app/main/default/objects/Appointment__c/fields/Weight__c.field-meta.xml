@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weight__c</fullName>
+    <externalId>false</externalId>
+    <formula>If ( ISBLANK ( Contact__c ), 0, 100 ) +
+If ( OR ( TEXT ( Status__c ) = "Started", TEXT ( Status__c ) = "Complete" ), 10, 
+If ( OR ( TEXT ( Status__c ) = "Cancelled", TEXT ( Status__c ) = "Suspended", TEXT ( Status__c ) = "Pending", TEXT ( Status__c ) = "Not Done", TEXT ( Status__c ) = "Prework" ), 5, 0 ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Weight</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

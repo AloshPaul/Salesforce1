@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIP_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Remediation should only be used if a TIP was closed vacant, then a diff occupant, such as a squatter, moved into the property). Turn TIP should be selected if property has had a lease in place, then has a squatter occupy the property after the lease turn.</inlineHelpText>
+    <label>TIP Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Post-Acquisition</fullName>
+                <default>true</default>
+                <label>Post-Acquisition</label>
+            </value>
+            <value>
+                <fullName>Remediation</fullName>
+                <default>false</default>
+                <label>Remediation</label>
+            </value>
+            <value>
+                <fullName>Turn TIP</fullName>
+                <default>false</default>
+                <label>Turn TIP</label>
+            </value>
+            <value>
+                <fullName>Disposition</fullName>
+                <default>false</default>
+                <label>Disposition</label>
+            </value>
+            <value>
+                <fullName>Post Acquisition – Purchased Rented</fullName>
+                <default>false</default>
+                <label>Post Acquisition – Purchased Rented</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

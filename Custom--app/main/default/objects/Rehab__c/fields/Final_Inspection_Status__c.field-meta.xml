@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Inspection_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Final Inspection Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Final Inspection # 1 Pending</fullName>
+                <default>false</default>
+                <label>Final Inspection # 1 Pending</label>
+            </value>
+            <value>
+                <fullName>Fail - Final Inspection # 2 Pending</fullName>
+                <default>false</default>
+                <label>Fail - Final Inspection # 2 Pending</label>
+            </value>
+            <value>
+                <fullName>Fail - Final Inspection # 3 Pending</fullName>
+                <default>false</default>
+                <label>Fail - Final Inspection # 3 Pending</label>
+            </value>
+            <value>
+                <fullName>Fail - Final Inspection # 4 Pending</fullName>
+                <default>false</default>
+                <label>Fail - Final Inspection # 4 Pending</label>
+            </value>
+            <value>
+                <fullName>Fail - Final Inspection # 5 Pending</fullName>
+                <default>false</default>
+                <label>Fail - Final Inspection # 5 Pending</label>
+            </value>
+            <value>
+                <fullName>Fail - Final Inspection # 6 Pending</fullName>
+                <default>false</default>
+                <label>Fail - Final Inspection # 6 Pending</label>
+            </value>
+            <value>
+                <fullName>Pass</fullName>
+                <default>false</default>
+                <label>Pass</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

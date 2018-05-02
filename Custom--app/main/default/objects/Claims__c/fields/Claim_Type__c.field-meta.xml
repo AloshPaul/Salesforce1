@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Claim Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquisitions</fullName>
+                <default>false</default>
+                <label>Acquisitions</label>
+            </value>
+            <value>
+                <fullName>AMG</fullName>
+                <default>false</default>
+                <label>AMG</label>
+            </value>
+            <value>
+                <fullName>General Liability</fullName>
+                <default>false</default>
+                <label>General Liability</label>
+            </value>
+            <value>
+                <fullName>Habitability</fullName>
+                <default>false</default>
+                <label>Habitability</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Property Claims</fullName>
+                <default>false</default>
+                <label>Property Claims</label>
+            </value>
+            <value>
+                <fullName>Property Management / Resident Services</fullName>
+                <default>false</default>
+                <label>Property Management / Resident Services</label>
+            </value>
+            <value>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+                <label>Regulatory</label>
+            </value>
+            <value>
+                <fullName>Rehab</fullName>
+                <default>false</default>
+                <label>Rehab</label>
+            </value>
+            <value>
+                <fullName>TIP</fullName>
+                <default>false</default>
+                <label>TIP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

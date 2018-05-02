@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Yesterdays_REO_Pipeline_Adds</fullName>
+    <columns>NAME</columns>
+    <columns>Prospect__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Contract_Price__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Escrow_Expected_Close_Date__c</columns>
+    <columns>Pipeline_Add_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Pipeline_Add_Date__c</field>
+        <operation>equals</operation>
+        <value>YESTERDAY</value>
+    </filters>
+    <filters>
+        <field>Bid_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Trustee</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Acquired</value>
+    </filters>
+    <label>*Yesterday's REO Pipeline Additions</label>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

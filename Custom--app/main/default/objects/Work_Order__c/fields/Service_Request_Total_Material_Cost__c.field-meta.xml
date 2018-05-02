@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Request_Total_Material_Cost__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Includes all related Service Items</inlineHelpText>
+    <label>Service Request Total Material Cost</label>
+    <summarizedField>Service_Item__c.Material_Cost__c</summarizedField>
+    <summaryForeignKey>Service_Item__c.Service_Request__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

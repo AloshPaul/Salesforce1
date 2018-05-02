@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scripts</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Question__c</columns>
+    <columns>Topic__c</columns>
+    <columns>Subtopic__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Subtopic__c</field>
+        <operation>equals</operation>
+        <value>Scripts</value>
+    </filters>
+    <label>Scripts</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

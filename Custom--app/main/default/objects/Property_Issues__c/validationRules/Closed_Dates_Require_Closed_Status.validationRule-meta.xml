@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Dates_Require_Closed_Status</fullName>
+    <active>true</active>
+    <description>If a Closed Date is entered, the Status must be a "Closed" value.</description>
+    <errorConditionFormula>$Profile.Name != 'System Administrator'
+&amp;&amp;
+NOT(ISBLANK( Closed_Date__c )) 
+ &amp;&amp; 
+ NOT(
+	OR(
+		ISPICKVAL( Status__c , 'Closed (Never Connected)'),
+		ISPICKVAL(Status__c , 'Closed (Resolved)'),
+		ISPICKVAL(Status__c , 'Closed (Cancelled)'),
+                ISPICKVAL( Status__c , 'Closed') 
+	)
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>If a Closed Date is entered, the Status must be a "Closed" value.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_QC_Audits</fullName>
+    <columns>Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Property_Code__c</columns>
+    <columns>Yardi__c</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>QC_Auditor__c</columns>
+    <columns>Deficiencies_Judgement__c</columns>
+    <columns>Deficiencies_PTL__c</columns>
+    <columns>PunchList_Deficiencies__c</columns>
+    <columns>Rehab__c</columns>
+    <columns>Property_Address__c</columns>
+    <columns>Property_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All QC Audits</label>
+</ListView>

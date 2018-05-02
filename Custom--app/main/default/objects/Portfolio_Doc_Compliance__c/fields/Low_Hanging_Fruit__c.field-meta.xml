@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Low_Hanging_Fruit__c</fullName>
+    <description>Yes = 1, No = 2, N/A = 3.  N/A only appears in the "Have Required Lease" and "Have Required Rehab Budget" fields and should be disregarded.</description>
+    <externalId>false</externalId>
+    <formula>IF ((Count_Proof_of_Deed_No__c + Count_Required_Lease_No__c + Count_Proof_of_ACQ_No__c + Count_Required_Rehab_Budget_No__c + Count_Required_Title_No__c) == 1, True, False)</formula>
+    <inlineHelpText>What constitutes "Low Hanging Fruit" is when there is a single "No" value in the "Document Compliance" section.  "N/A" values are disregarded. They only appear in the "Have Required Lease" or "Have Required Rehab Budget" field. Yes = 1, No = 2, N/A = 3.</inlineHelpText>
+    <label>Low Hanging Fruit</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

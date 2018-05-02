@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Lease_Negotiations_Underway__c</fullName>
+    <defaultValue>"New Lease Negotiations Underway"</defaultValue>
+    <externalId>false</externalId>
+    <label>New Lease Negotiations Underway</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

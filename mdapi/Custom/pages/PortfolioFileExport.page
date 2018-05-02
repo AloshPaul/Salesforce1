@@ -1,0 +1,74 @@
+<apex:page controller="PortfolioFileExportController" title="Portfolio File Export Upload Queue" id="pageId" sidebar="false" showHeader="false">
+	<title>Portfolio File Export Upload Queue</title>
+	<apex:form >
+		<apex:pageMessages />
+		<apex:pageBlock title="Portfolio File Export Assistant" id="pageBlockId" mode="edit">
+			<apex:pageBlockSection columns="1" >
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Select Fund" />
+					<apex:outputPanel styleClass="requiredInput" layout="block">
+      					<apex:outputPanel styleClass="requiredBlock" layout="block"/>
+						<apex:selectList value="{!fund}" size="1" multiselect="false">
+							<apex:selectOption itemValue="" itemLabel="Select" />
+							<apex:selectOption itemValue="01" itemLabel="01" />
+							<apex:selectOption itemValue="02" itemLabel="02" />
+							<apex:selectOption itemValue="03" itemLabel="03" />
+							<apex:selectOption itemValue="04" itemLabel="04" />
+						</apex:selectList>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Select Region" />
+					<apex:selectList value="{!region}" size="1" multiselect="false">
+						<apex:selectOptions value="{!regionOptions}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Select File Type" />
+					<apex:selectList value="{!fileStrType}" size="1" multiselect="false">
+						<apex:selectOptions value="{!fileStrTypeOptions}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="Search" action="{!searchRecords}"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+
+		<apex:pageBlock title="Upload Queue">
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="Mark Delivered" action="{!markDelievered}" rendered="{!FileStrRecordsSize > 0}" onclick="if(!markDeliverConfirmation()) return false;"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection columns="1">
+
+				<apex:outputPanel rendered="{!FileStrRecordsSize > 0}">
+					Showing {!FileStrRecordsSize} of {!totalSize}.
+				</apex:outputPanel>
+				<apex:pageBlockTable value="{!fileStrRecordList}" var="fileStrRecWrap" rendered="{!FileStrRecordsSize > 0}">
+					<apex:column headerValue="Error Uploading?" style="width:5% !important">
+						<apex:inputCheckbox value="{!fileStrRecWrap.errOnUpload}" />
+					</apex:column>
+					<apex:column value="{!fileStrRecWrap.fileStrRec.Property__r.Fund__c}" headerValue="Fund" />
+					<apex:column value="{!fileStrRecWrap.fileStrRec.Property__r.Region__c}" headerValue="Region" />
+					<apex:column value="{!fileStrRecWrap.fileStrRec.File_Type__c}" headerValue="File Type" />
+					<apex:column headerValue="File Name" >
+						<a href="{!fileStrRecWrap.s3Url}">{!fileStrRecWrap.fileStrRec.File_Name__c}</a>
+					</apex:column>
+				</apex:pageBlockTable>
+				<apex:outputPanel rendered="{!FileStrRecordsSize == 0}">
+					No records returned.
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+
+		<script>
+			function markDeliverConfirmation() {
+				return confirm('Are you sure?');
+			}
+		</script>
+	</apex:form>
+</apex:page>

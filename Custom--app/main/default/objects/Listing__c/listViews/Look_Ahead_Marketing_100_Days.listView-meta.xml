@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Look_Ahead_Marketing_100_Days</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>BR_BA__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Listing_Agent__c</columns>
+    <columns>Rent_Cafe_Photos_Date__c</columns>
+    <columns>Rent_Cafe_Amenities__c</columns>
+    <columns>Romance_Paragraph_Complete_Date__c</columns>
+    <columns>Sign_Comments__c</columns>
+    <columns>Sign_Scheduled__c</columns>
+    <columns>Craig_List_Post__c</columns>
+    <columns>Rehab__c</columns>
+    <columns>Status__c</columns>
+    <columns>Rehab_Type__c</columns>
+    <columns>Rehab_Stage__c</columns>
+    <columns>Est_Rehab_Complete_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Days_to_Rent_Ready_Est__c</field>
+        <operation>lessOrEqual</operation>
+        <value>100</value>
+    </filters>
+    <filters>
+        <field>Days_to_Rent_Ready_Est__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>-100</value>
+    </filters>
+    <filters>
+        <field>Rehab_Stage__c</field>
+        <operation>notContain</operation>
+        <value>CANCELLED,HOLD</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>,Leased,HOLD - Currently Not Leasable</value>
+    </filters>
+    <label>Look-Ahead Marketing - 100 Days</label>
+    <sharedTo>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Orlando</role>
+    </sharedTo>
+</ListView>

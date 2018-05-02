@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_if_IRN_Number_is_Alphanumeric</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT( ISBLANK(IRN_number__c) ),
+IF( 
+REGEX( IRN_number__c , "^(?=.*\\d)(?=.*[A-Za-z])[A-Za-z0-9]{10,10}+")
+ , false, true
+))</errorConditionFormula>
+    <errorDisplayField>IRN_number__c</errorDisplayField>
+    <errorMessage>Please enter correct IRN Number</errorMessage>
+</ValidationRule>

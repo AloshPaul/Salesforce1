@@ -1,0 +1,433 @@
+<!--
+    Description :   Page for overriding standard New button for Prospect.
+
+    Created By  :   Abhinav Sharma
+
+    Revision Logs:  V1.0 - Created
+ -->
+<apex:page standardController="Prospect__c" extensions="ProspectAPNValidator" id="page">
+
+    <!-- Section Header and Description -->
+    <apex:sectionHeader title="New Prospect" subtitle="Select Prospect Record Type" help="https://help.salesforce.com/htviewhelpdoc?id=account_recordtype.htm&siteLang=en_US"/>
+    <div class="bDescription">Select a record type for the new prospect. Enter the APN number to check whether the property is currently eligible for new prospects.</div>
+
+    <apex:form id="form">
+        <apex:pageMessages id="validationMsg"/>
+        <apex:pageblock id="pb" mode="Edit">
+
+            <!-- Main Title of APN validation Page -->
+            <div class="pbHeader" id="select">
+                <table border="0" cellpadding="0" cellspacing="0" id="typeTable">
+                    <tr>
+                        <td class="pbTitle">
+                            <h2 class="mainTitle">Select Prospect Record Type</h2>
+                        </td>
+                    </tr>
+                </table>
+           </div>
+
+           <!-- Body of the Pages -->
+           <div class="pbBody" id="body">
+                <div class="pbSubsection" id="pbSection">
+
+                    <table border="0" cellpadding="0" cellspacing="0" class="detailList" width="100%" id="recordTable">
+
+                        <!-- Record Type -->
+                        <tr>
+                            <td>
+                            <apex:pageBlockSection columns="1" id="pbsRecordType">
+                                <apex:pageBlockSectionItem id="pbsRecordTypeitem">
+                                    <apex:outputlabel value="Record Type of new record"/>
+                                    <apex:inputField value="{!Prospect__c.RecordTypeId}" id="item" required="true"/>
+                                </apex:pageBlockSectionItem>
+                            </apex:pageBlockSection>
+                            </td>
+                        </tr>
+                    </table>
+
+                   <apex:outputPanel rendered="{!IF(isProspectEligible == false, true, false)}" layout="Block">
+                        <table border="0" cellpadding="0" cellspacing="0" class="detailList" width="100%">
+                            <!-- APN -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="apnPBS">
+                                        <apex:pageBlockSectionItem id="apnTypeItem">
+                                            <apex:outputlabel value="APN"/>
+                                            <apex:outputPanel >
+                                                <apex:inputField value="{!Prospect__c.APN__c}" id="apn1" rendered="{!hideListAndButtons}" required="true"/>
+                                                <apex:inputField value="{!Prospect__c.APN__c}" id="apn" rendered="{!IF(hideListAndButtons == false, true, false)}"/>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!isProspectEligible}" layout="Block">
+                        <table border="0" cellpadding="0" cellspacing="0" class="detailList" width="100%">
+
+                            <!-- Region -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="regionPBS">
+                                        <apex:pageBlockSectionItem id="regionPBSItem">
+                                            <apex:outputlabel value="Region"/>
+                                            <apex:inputField value="{!Prospect__c.Region__c}" id="region" required="true"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!-- Bid Type -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="bidPBS">
+                                        <apex:pageBlockSectionItem id="bidItem">
+                                            <apex:outputlabel value="Bid Type"/>
+                                            <apex:inputField value="{!Prospect__c.Bid_Type__c}" id="bidType" required="true"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!IF(isProspectEligible == true && showInReadOnlyMode == false, true, false)}" layout="Block">
+                        <table border="0" cellpadding="0" cellspacing="0" class="detailList" width="100%" id="table1">
+
+                            <tr>
+                                <td class="pbTitle">
+                                    <h3 class="mainTitle">Prospect Basics</h3>
+                                </td>
+                            </tr>
+
+                            <!-- APN -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="apnPBS1">
+                                        <apex:pageBlockSectionItem id="apnTypeItem1">
+                                            <apex:outputlabel value="APN"/>
+                                            <apex:outputField value="{!Prospect__c.APN__c}" id="apn1"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                          	<!--Address 1 (Property Street)-->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="streetPBS">
+                                        <apex:pageBlockSectionItem id="streetItem">
+                                            <apex:outputlabel value="Street"/>
+                                            <apex:outputPanel >
+                                                <div class="requiredInput">
+                                                    <div class="requiredBlock"></div>
+                                                    <apex:inputText value="{!street}" id="street" style="width:400px"/>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!--  Address Unit -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" >
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputlabel value="Unit"/>
+                                            <apex:outputPanel >
+                                                <apex:inputText value="{!addressUnit}"/>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!-- Property City -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="cityPBS">
+                                        <apex:pageBlockSectionItem id="cityPBSItem">
+                                            <apex:outputLabel value="City"/>
+                                            <apex:outputPanel >
+                                                <div class="requiredInput">
+                                                    <div class="requiredBlock"></div>
+                                                    <apex:inputText value="{!city}" id="city"/>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!-- Property State -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="statePBS">
+                                        <apex:pageBlockSectionItem id="statePBSItem">
+                                            <apex:outputlabel value="State"/>
+                                            <apex:outputPanel layout="block" styleclass="requiredInput">
+                                            <div class="requiredBlock"></div>
+                                            <apex:inputText style="display:none" id="state_lkid" value="{!stateId}"/>
+                                            <input type="hidden" name="page:form:pb:statePBS:statePBSItem:state_lkold" id="page:form:pb:statePBS:statePBSItem:state_lkold" value="null" />
+                                            <input type="hidden" name="page:form:pb:statePBS:statePBSItem:state_lktp" id="page:form:pb:statePBS:statePBSItem:state_lktp" value="a0A" />
+                                            <input type="hidden" name="page:form:pb:statePBS:statePBSItem:state_lspf" id="page:form:pb:statePBS:statePBSItem:state_lspf" value="0" />
+                                            <input type="hidden" name="page:form:pb:statePBS:statePBSItem:state_lspfsub" id="page:form:pb:statePBS:statePBSItem:state_lspfsub" value="0" />
+                                            <input type="hidden" name="page:form:pb:statePBS:statePBSItem:state_mod" id="page:form:pb:statePBS:statePBSItem:state_mod" value="0" />
+
+                                            <span class="lookupInput">
+                                                <apex:inputText id="state" value="{!stateText}" maxlength="2"/>
+                                                <script>new ForeignKeyInputElement("page:form:pb:statePBS:statePBSItem:state","/_ui/common/data/LookupValidationServlet","/_ui/common/data/MRUAutoCompleteServlet",true,{"acEntity":"01IE0000000AKk9","lknm":"page:form:pb:statePBS:statePBSItem:state","acent":"a0A","lkfm":"page:form"});</script>
+                                                <a href="javascript:%20openLookup%28%27{!IF(OR(ISNULL(TRIM($Site.Name)), ISBLANK(TRIM($Site.Name))), '', '%2Fbrokersite')}%2F_ui%2Fcommon%2Fdata%2FLookupPage%3Flkfm%3Dpage%253Aform%26lknm%3Dpage%253Aform%253Apb%253AstatePBS%253AstatePBSItem%253Astate%26lktp%3D%27%20%2B%20getElementByIdCS%28%27page%3Aform%3Apb%3AstatePBS%3AstatePBSItem%3Astate_lktp%27%29.value%2C670%2C%271%27%2C%27%26lksrch%3D%27%20%2B%20escapeUTF%28getElementByIdCS%28%27page%3Aform%3Apb%3AstatePBS%3AstatePBSItem%3Astate%27%29.value.substring%280%2C%2080%29%29%29" id="page:form:pb:statePBS:statePBSItem:state_lkwgt" onclick="setLastMousePosition(event)" title="Property State Lookup (New Window)"><img src="/s.gif" alt="Property State Lookup (New Window)" class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Property State Lookup (New Window)" />
+                                                </a>
+                                            </span>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!--Property Zip Code -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="zipPBS">
+                                        <apex:pageBlockSectionItem id="zipPBSItem">
+                                            <apex:outputlabel value="Zip"/>
+                                            <apex:outputPanel >
+                                                <div class="requiredInput">
+                                                    <div class="requiredBlock"></div>
+                                                    <apex:inputText value="{!zip}" id="zipCode" maxlength="10"/>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!IF(isProspectEligible == true && showInReadOnlyMode == true, true, false)}" layout="Block">
+                        <table border="0" cellpadding="0" cellspacing="0" class="detailList" width="100%">
+
+                            <tr>
+                                <td class="pbTitle">
+                                    <h3 class="mainTitle">Prospect Basics</h3>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table border="0" cellpadding="0" cellspacing="0" class="detailList" width="100%">
+
+                            <!-- APN -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" id="apnPBS2">
+                                        <apex:pageBlockSectionItem id="apnItem2">
+                                            <apex:outputlabel value="APN"/>
+                                            <apex:OutputField value="{!Prospect__c.APN__c}" id="apn2"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!--Address 1 (Property Street)-->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1">
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputlabel value="Street"/>
+                                            <apex:outputText value="{!street}" id="streetOutput"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!--  Address Unit -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1" >
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputlabel value="Unit"/>
+                                            <apex:outputPanel >
+                                                <apex:outputText value="{!addressUnit}"/>
+                                            </apex:outputPanel>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!-- Property City -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1">
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputlabel value="City"/>
+                                            <apex:outputText value="{!city}" id="cityOutput"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!-- Property State -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1">
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputlabel value="State"/>
+                                            <apex:outputfield value="{!Prospect__c.Property_State__c}" id="stateOutput"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <!--Property Zip Code -->
+                            <tr>
+                                <td>
+                                    <apex:pageBlockSection columns="1">
+                                        <apex:pageBlockSectionItem >
+                                            <apex:outputlabel value="Zip"/>
+                                            <apex:outputText value="{!zip}" id="zipCodeOutput"/>
+                                        </apex:pageBlockSectionItem>
+                                    </apex:pageBlockSection>
+                                </td>
+                            </tr>
+
+                            <BR></BR>
+
+                            <!--Residence Lookup -->
+                            <apex:outputPanel >
+                            	<apex:outputPanel rendered="{!IF(hideListAndButtons == false, true, false)}">
+		                            <tr>
+		                                <td>
+		                                    <apex:pageBlockSection columns="1">
+		                                        <apex:pageBlockSectionItem >
+		                                            <apex:outputlabel value="Residence Lookup"/>
+		                                            <apex:repeat value="{!residences}" var="res">
+		                                                <apex:outputLink value="/{!res.Id}">{!res.name}</apex:outputLink>
+		                                            </apex:repeat>
+		                                        </apex:pageBlockSectionItem>
+		                                    </apex:pageBlockSection>
+		                                </td>
+		                            </tr>
+	                            </apex:outputPanel>
+                            </apex:outputPanel>
+                        </table>
+                    </apex:outputPanel>
+
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="pbButtonb" id="bottomButtonRow">
+                                <apex:pageBlockButtons location="bottom">
+                                    <apex:commandButton action="{!continueCheck}" value="Check APN" rendered="{!IF(isProspectEligible == false, true, false)}" />
+                                    <apex:commandButton action="{!continueCheckForAddress}" value="Continue" rendered="{!IF(isProspectEligible == true && enableAllowAddressDuplicate == false, true, false)}"/>
+                                    <apex:commandButton action="{!cancel}" value="Cancel" />
+                                    <apex:commandButton action="{!allowDuplicates}" value="Allow Duplicate" rendered="{!IF(enableAllowDuplicateOnSameAPN == true && hideListAndButtons == false, true, false)}"/>
+                                    <apex:commandButton action="{!allowDuplicateWithSameAddress}" value="Allow Duplicate Address" rendered="{!enableAllowAddressDuplicate}"/>
+                                	<apex:commandButton action="{!overrideAddress}" value="Override" rendered="{!AND(showOverrideButton, OR($Profile.Name == 'System Administrator', $Profile.Name == 'Invitation Asset Management', $Profile.Name == 'Invitation Acquisition Analysis', $Profile.Name == 'Invitation Acquisition Analysis Manager'))}"/>
+                                </apex:pageBlockButtons>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <apex:outputPanel rendered="{!IF(showRelatedRecords == true && hideListAndButtons == false, true, false)}" style="float:Right; width:100%;" layout="Block">
+                <table  class="recordTypeInfo infoTable" border="0" cellpadding="0" cellspacing="0" width = "100%">
+                    <tr class="headerRow">
+                        <TH class="recordTypeName" scope="col">Stage</TH>
+                        <TH class="recordTypeName" scope="col">Name</TH>
+                        <TH class="recordTypeDescription" scope="col">Property Street</TH>
+                        <TH class="recordTypeDescription" scope="col">Property City</TH>
+                        <TH class="recordTypeDescription" scope="col">Property State</TH>
+                        <TH class="recordTypeDescription" scope="col">Status</TH>
+                        <TH class="recordTypeDescription" scope="col">Bid Type</TH>
+                        <TH class="recordTypeDescription" scope="col">Created Date</TH>
+                        <TH class="recordTypeDescription" scope="col">Last Modified By</TH>
+                    </tr>
+                    <apex:repeat value="{!prospects}" var="item">
+                        <tr>
+                            <td class="recordTypeName" scope="row">Prospect</td>
+                            <td class="recordTypeName" scope="row"><apex:outputLink value="/{!item.Id}">{!item.name}</apex:outputLink></td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_Street__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_City__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_State_Text__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Prospect_Status__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Bid_Type__c}</td>
+                            <td class="recordTypeDescription">&nbsp;
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                    <apex:param value="{!item.CreatedDate}" />
+                                </apex:outputText>
+                            </td>
+                            <td class="recordTypeDescription">&nbsp;<apex:outputLink value="/{!item.LastModifiedBy.Id}">{!item.LastModifiedBy.Name}</apex:outputLink>
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">&nbsp;
+                                    <apex:param value="{!item.LastModifiedDate}"/>
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+
+                    <apex:repeat value="{!pipelines}" var="item">
+                        <tr>
+                            <td class="recordTypeName" scope="row">Pipeline</td>
+                            <td class="recordTypeName" scope="row"><apex:outputLink value="/{!item.Id}">{!item.name}</apex:outputLink></td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_Street__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_City__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_State__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Stage__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Bid_Type__c}</td>
+                            <td class="recordTypeDescription">&nbsp;
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                    <apex:param value="{!item.CreatedDate}" />
+                                </apex:outputText>
+                            </td>
+                            <td class="recordTypeDescription">&nbsp;<apex:outputLink value="/{!item.LastModifiedBy.Id}">{!item.LastModifiedBy.Name}</apex:outputLink>
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">&nbsp;
+                                    <apex:param value="{!item.LastModifiedDate}"/>
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+
+                    <apex:repeat value="{!properties}" var="item">
+                        <tr>
+                            <td class="recordTypeName" scope="row">Portfolio</td>
+                            <td class="recordTypeName" scope="row"><apex:outputLink value="/{!item.Id}">{!item.name}</apex:outputLink></td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_Street__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_City__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_State__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Property_Status__c}</td>
+                            <td class="recordTypeDescription">&nbsp;{!item.Bid_Type__c}</td>
+                            <td class="recordTypeDescription">&nbsp;
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                    <apex:param value="{!item.CreatedDate}" />
+                                </apex:outputText>
+                            </td>
+                            <td class="recordTypeDescription">&nbsp;<apex:outputLink value="/{!item.LastModifiedBy.Id}">{!item.LastModifiedBy.Name}</apex:outputLink>
+                                <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">&nbsp;
+                                    <apex:param value="{!item.LastModifiedDate}"/>
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>
+            </apex:outputPanel>
+        </apex:pageblock>
+
+        <!-- Record Type Description (Will display on at APN Validation Page) -->
+        <h3 class="recordTypesHeading">Available Prospect Record Types</h3>
+        <div style="float:left; width:50%;">
+            <table  class="recordTypeInfo infoTable" border="0" cellpadding="0" cellspacing="0">
+                <tr class="headerRow">
+                    <TH class="recordTypeName" scope="col">Record Type Name</TH>
+                    <TH class="recordTypeDescription" scope="col">Description</TH>
+                </tr>
+                <apex:repeat value="{!recordTypes}" var="recT">
+                    <tr><TH class="recordTypeName" scope="row">{!recT.RecordTypeName}</TH><td class="recordTypeDescription">&nbsp;{!recT.RecordTypeDescription}</td></tr>
+                </apex:repeat>
+            </table>
+        </div>
+
+    </apex:form>
+</apex:page>

@@ -1,0 +1,99 @@
+<!--
+/**    Description    :    "Mass Edit" button to Update more then one record at a time.
+  *
+  *    Created By     :    Abhinav Sharma    
+  *
+  *    Created Date   :    05-01-2013
+  *
+  *    Revision Log   :    V1.0    
+**/
+-->
+<apex:page standardController="Property_Opportunity__c" recordSetVar="unused" sidebar="false">
+    
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+        
+        <!--page Form-->
+        <apex:form >
+            
+            <!--page block-->
+            <apex:pageBlock >
+                
+                <!--page Message-->
+                <apex:pagemessages ></apex:pagemessages>
+                
+                    <!--page buttons--> 
+                    <apex:pageBlockButtons >
+                        <apex:commandButton value="Save" action="{!save}"/>
+                        <apex:commandButton value="Cancel" action="{!cancel}" onclick="return confirmCancel();"/>
+                    </apex:pageBlockButtons>
+                    
+                    <!--Fields for Mass Edit Operation-->
+                    <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                        
+                        <!--Residence -->
+                        <apex:column headerValue="Residence">
+                            <apex:outputField value="{!a.Residence__c}"/>
+                        </apex:column>
+                        
+                        <!-- Property Code Preacquisition -->
+                        <apex:column headerValue="Property Code PreAcquisition">
+                            <apex:outputField value="{!a.Property_Code_Preacquisition__c}"/>
+                        </apex:column>
+                        
+                        <!--APN -->
+                        <apex:column headerValue="APN">
+                            <apex:outputField value="{!a.APN__c}"/>
+                        </apex:column>
+                        
+                        <!--Property Street -->
+                        <apex:column headerValue="Property Street">
+                            <apex:outputField value="{!a.Property_Street__c}"/>
+                        </apex:column>
+                        
+                        <!--Region -->
+                        <apex:column headerValue="Region">
+                            <apex:outputField value="{!a.Region__c }"/>
+                        </apex:column>
+                        
+                        <!--*Broker Expense Est. @ UW --> 
+                        <apex:column headerValue="*Broker Expense Est. @ UW">
+                            <apex:inputField value="{!a.Broker_Expense_Est_UW__c }"/>
+                        </apex:column>
+                        
+                        <!--Escrow Expected Close Date --> 
+                        <apex:column headerValue="Escrow Exp. Close Date">
+                            <apex:inputField value="{!a.Escrow_Expected_Close_Date__c}"/>
+                        </apex:column>
+                        
+                        <!-- *Closing/Acquisition Date -->
+                        <apex:column headerValue="*Closing/Acquisition Date">
+                            <apex:inputField value="{!a.Acquisition_Date__c }"/>
+                        </apex:column>
+                        
+                        <!--*Expected Gross Monthly Rent @ UW-->
+                        <apex:column headerValue="*Expected Gross Monthly Rent @ UW">
+                            <apex:inputField value="{!a.Exp_Gross_Monthly_Rent_UW__c}"/>
+                        </apex:column>
+                        
+                        <!--*Occupied Status @ Acquisition -->
+                        <apex:column headerValue="**Occupied Status @ Acquisition">
+                            <apex:inputField value="{!a.Occupied_Status_Acquisition__c }"/>
+                        </apex:column>
+                        
+                        <!--*Title Company -->
+                        <apex:column headerValue="*Title Company">
+                            <apex:inputField value="{!a.Title_Company__c}"/>
+                        </apex:column>
+                         
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

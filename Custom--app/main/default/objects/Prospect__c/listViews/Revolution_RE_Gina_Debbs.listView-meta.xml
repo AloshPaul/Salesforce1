@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revolution_RE_Gina_Debbs</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Brokerage__c</columns>
+    <columns>IH_Agent_Contact__c</columns>
+    <columns>Property_Street__c</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>B_Status__c</columns>
+    <columns>IH_Underwriting_Status_to_Agent__c</columns>
+    <columns>Escrow_Opened_Date__c</columns>
+    <columns>Contract_Date__c</columns>
+    <columns>Property_Code_PreAcquisition__c</columns>
+    <columns>Prospect_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prospect__c.BrokerSite</value>
+    </filters>
+    <filters>
+        <field>Brokerage__c</field>
+        <operation>equals</operation>
+        <value>Revolution RE - Gina</value>
+    </filters>
+    <label>Revolution RE - Gina Debbs</label>
+    <sharedTo>
+        <portalRoleAndSubordinates>RevolutionREGinaCustomerExecutive</portalRoleAndSubordinates>
+        <portalRoleAndSubordinates>RevolutionREGinaCustomerManager</portalRoleAndSubordinates>
+        <portalRoleAndSubordinates>RevolutionREGinaCustomerUser</portalRoleAndSubordinates>
+    </sharedTo>
+</ListView>

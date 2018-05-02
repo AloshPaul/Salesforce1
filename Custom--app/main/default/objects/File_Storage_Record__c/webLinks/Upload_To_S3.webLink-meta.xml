@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upload_To_S3</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Upload To S3</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>var page_url = parent.document.URL.split('/');
+
+var sObjectId = page_url[page_url.length-1];
+sObjectId = sObjectId.split('#')[0];
+sObjectId = sObjectId.split('?')[0];
+sObjectId = sObjectId.substring(0, 15);
+
+popupWindow = window.open('/apex/FileUploadWidget?id='+sObjectId,'FileUpload','width=900,height=560,status=yes,scrollbars=yes,resizable=yes');</url>
+</WebLink>

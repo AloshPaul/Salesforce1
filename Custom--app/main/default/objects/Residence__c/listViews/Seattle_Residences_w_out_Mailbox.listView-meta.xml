@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Seattle_Residences_w_out_Mailbox</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Mailbox_No__c</columns>
+    <columns>Address_City__c</columns>
+    <columns>Pool__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Seattle</value>
+    </filters>
+    <filters>
+        <field>Mailbox_No__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Yardi_Property_Code__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Seattle Residences w/ out Mailbox</label>
+    <sharedTo>
+        <group>Region_Seattle</group>
+    </sharedTo>
+</ListView>

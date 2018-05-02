@@ -1,0 +1,73 @@
+<!--
+/**    Description    :    "Mass Edit QC Audits" button to Update more then one record at a time.
+  *
+  *    Created By     :    Randy Kish    
+  *
+  *    Created Date   :    08-02-2013
+  *
+  *    Revision Log   :    V1.0   
+  *                         
+**/
+-->
+<apex:page standardController="QC_Audit__c" recordSetVar="unused" sidebar="false">
+    
+        <!--page Form-->
+        <apex:form >
+        
+        <script>
+           function confirmCancel() {
+           var isCancel = confirm("Are you sure you wish to cancel?");
+           if (isCancel) 
+           return true;
+        
+           return false;
+           }
+       </script>
+
+       <!--page block-->
+       <apex:pageBlock >
+           
+           <!--page Message-->
+           <apex:pagemessages ></apex:pagemessages>
+           
+               <!--page buttons--> 
+               <apex:pageBlockButtons >
+                   <apex:commandButton value="Save" action="{!save}"/>
+                   <apex:commandButton value="Cancel" onclick="return confirmCancel();" action="{!cancel}"/>
+               </apex:pageBlockButtons>
+               
+               <!--Fields for Mass Edit Operation-->
+               <apex:pageBlockTable value="{!selected}" var="a" id="table">
+                
+                <apex:column headerValue="QC Audit Name">
+                    <apex:outputField value="{!a.Name}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Yardi Property Code">
+                    <apex:outputField value="{!a.Yardi__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Street Address">
+                    <apex:outputField value="{!a.Property_Address__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="QC Audit Status">
+                    <apex:outputField value="{!a.Status__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Estimated Completion Date">
+                    <apex:inputField value="{!a.Estimated_completion_date__c}"/>
+                </apex:column>
+
+                <apex:column headerValue="QC Auditor">
+                    <apex:inputField value="{!a.QC_Auditor__c}"/>
+                </apex:column>
+                                
+                <apex:column headerValue="Record Type of QC">
+                    <apex:inputField value="{!a.Type_of_QC_Audit__c}"/>
+                </apex:column>
+                                   
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_ValidatePipelineLocking</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+	AND(
+		IsPadlocked__c,
+		PRIORVALUE(IsPadlocked__c),
+		OR(
+			AND(
+				ISNULL(PRIORVALUE(Approved_from_Acquisition_Team_Manager__c)),
+				$Profile.Name != 'IH - Regional VP and Presidents',
+				$Profile.Name != 'IH - Regional VP and Presidents(App Track 2.0)',
+				$Profile.Name != 'Invitation Acquisition Analysis Manager',
+				$Profile.Name != 'Invitation Acquisition Analysis Manager(AppTrack 2.0)',
+				$Profile.Name != 'Invitation Asset Management',
+				$Profile.Name != 'System Administrator',
+                $Profile.Name != 'API User',
+				$Profile.Name != 'IH - Director of Acquisitions',
+				$Profile.Name != 'IH - Director of Acquisitions(App Track 2.0)'
+			),
+			AND(
+				NOT(ISNULL(PRIORVALUE(Approved_from_Acquisition_Team_Manager__c))),
+				NOT(ISNULL(Approved_from_Acquisition_Team_Manager__c)),
+				$Profile.Name != 'Invitation Asset Management',
+				$Profile.Name != 'System Administrator', 
+				$Profile.Name != 'Invitation Acquisition Analysis Manager',
+				$Profile.Name != 'Invitation Acquisition Analysis Manager(AppTrack 2.0)',
+				$Profile.Name != 'IH - Regional VP and Presidents',
+				$Profile.Name != 'IH - Regional VP and Presidents(App Track 2.0)',
+				$Profile.Name != 'API User',
+				$Profile.Name != 'IH - Director of Acquisitions',
+				$Profile.Name != 'IH - Director of Acquisitions(App Track 2.0)'
+			)
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>The record you are trying to edit has been locked for Acquisition Approval. Please submit an SF Request if changes are necessary.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Total_Hours__c</fullName>
+    <externalId>false</externalId>
+    <formula>Actual_Design_Hours__c +  Actual_Config_Hours__c +  Actual_Coding_Hours__c +  Actual_QA_Hours__c +  Actual_Data_Import_Hours__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Actual: Total Hours</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

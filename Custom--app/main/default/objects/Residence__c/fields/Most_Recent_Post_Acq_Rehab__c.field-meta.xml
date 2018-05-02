@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Recent_Post_Acq_Rehab__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field will have most recent active post acquisition rehab record Id. Here active means Stage in not equals to "Closed - Cancelled". Only time it could have in active is when old active record stage changed to "Closed- Cancelled" and there is no active post acquisition rehab record available.</description>
+    <externalId>false</externalId>
+    <label>Most Recent Post Acq. Rehab</label>
+    <referenceTo>Rehab__c</referenceTo>
+    <relationshipLabel>Residences (Most Recent Active Post Acq. Rehab)</relationshipLabel>
+    <relationshipName>Residences1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

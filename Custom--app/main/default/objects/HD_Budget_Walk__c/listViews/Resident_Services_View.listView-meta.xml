@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resident_Services_View</fullName>
+    <columns>NAME</columns>
+    <columns>Rehab__c</columns>
+    <columns>Region__c</columns>
+    <columns>Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Budget_Status__c</columns>
+    <columns>Address_Street__c</columns>
+    <columns>Address_City__c</columns>
+    <columns>Address_County__c</columns>
+    <columns>Walk_Supervisor__c</columns>
+    <columns>Approval_Supervisor__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Phoenix,sacramento,los angeles</value>
+    </filters>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Turn</value>
+    </filters>
+    <label>Resident Services View</label>
+</ListView>

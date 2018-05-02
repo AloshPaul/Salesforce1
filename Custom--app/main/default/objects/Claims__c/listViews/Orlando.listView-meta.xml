@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Orlando</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Region_New__c</columns>
+    <columns>Claim_Updates__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Claim_Type__c</columns>
+    <columns>Category__c</columns>
+    <columns>Sub_Category__c</columns>
+    <columns>Reason_of_Objection__c</columns>
+    <columns>Most_Recent_Claim_Update_Note__c</columns>
+    <columns>Date_of_Most_Recent_Claim_Update__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region_New__c</field>
+        <operation>equals</operation>
+        <value>Orlando</value>
+    </filters>
+    <label>Orlando</label>
+    <sharedTo>
+        <group>Florida_Financial_Execs</group>
+        <role>Executive</role>
+        <role>Executive_Orlando</role>
+        <role>Team_Member_Orlando</role>
+    </sharedTo>
+</ListView>

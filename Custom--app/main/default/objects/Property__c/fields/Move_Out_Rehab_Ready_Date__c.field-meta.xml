@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Move_Out_Rehab_Ready_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+	AND(
+		TEXT(Post_Acquisition_Next_Step__c) =  $Setup.Status_Tags__c.PANS_Refer_to_Rehab__c,
+		NOT(ISBLANK(Deed_Received_Date__c))
+	),
+	Deed_Received_Date__c,
+
+IF(TEXT(Post_Acquisition_Next_Step__c) =  $Setup.Status_Tags__c.PANS_BK__c , null,
+	IF(
+		NOT(ISBLANK( CFK_Actual_Move_Out_Date__c )),
+		CFK_Actual_Move_Out_Date__c,
+		IF(
+			NOT(ISBLANK( Eviction_Complete_Date__c )),
+			Eviction_Complete_Date__c,
+
+IF(OR(ISPICKVAL( Proxy_CFK_Complete__c , "1"), ISPICKVAL( Proxy_Eviction_Complete__c, "1")), null,
+
+			IF(
+				TEXT( Post_Acq_Occupancy_Assessment__c) =  $Setup.Status_Tags__c.OSAQ_Vacant__c ,
+				Acquisition_Date__c,
+				null
+			)
+		)
+	)
+)))</formula>
+    <inlineHelpText>The following Status fields are dependent on this field:
+Rehab Status</inlineHelpText>
+    <label>Move Out - Rehab Ready Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

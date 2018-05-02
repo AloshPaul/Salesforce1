@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dispatcher_Not_Completed_View</fullName>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Property_City__c</columns>
+    <columns>Service_Request__c</columns>
+    <columns>NAME</columns>
+    <columns>Related_Service_Item_Created__c</columns>
+    <columns>Service_Item_Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Brief_Description__c</columns>
+    <columns>Assignment__c</columns>
+    <columns>Technician__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>SItem_Closed_Date_Time__c</columns>
+    <columns>SItem_Actual_Closed_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Service_Item_Status__c</field>
+        <operation>equals</operation>
+        <value>Closed - Not Completed</value>
+    </filters>
+    <filters>
+        <field>My_Region__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </filters>
+    <filters>
+        <field>Assignment__c</field>
+        <operation>equals</operation>
+        <value>Technician</value>
+    </filters>
+    <label>Dispatcher 'Not Completed' View</label>
+</ListView>

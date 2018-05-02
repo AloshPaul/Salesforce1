@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Update Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Communication with Outside Counsel</fullName>
+                <default>false</default>
+                <label>Communication with Outside Counsel</label>
+            </value>
+            <value>
+                <fullName>Correspondence with Opposing Party</fullName>
+                <default>false</default>
+                <label>Correspondence with Opposing Party</label>
+            </value>
+            <value>
+                <fullName>Counsel Engaged</fullName>
+                <default>false</default>
+                <label>Counsel Engaged</label>
+            </value>
+            <value>
+                <fullName>Hearing Result</fullName>
+                <default>false</default>
+                <label>Hearing Result</label>
+            </value>
+            <value>
+                <fullName>In-House Counsel Note</fullName>
+                <default>false</default>
+                <label>In-House Counsel Note</label>
+            </value>
+            <value>
+                <fullName>Monthly Status Update Within 4 Days of EOM</fullName>
+                <default>false</default>
+                <label>Monthly Status Update Within 4 Days of EOM</label>
+            </value>
+            <value>
+                <fullName>Motion/Answer Filed</fullName>
+                <default>false</default>
+                <label>Motion/Answer Filed</label>
+            </value>
+            <value>
+                <fullName>Update from Region Head</fullName>
+                <default>false</default>
+                <label>Update from Region Head</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

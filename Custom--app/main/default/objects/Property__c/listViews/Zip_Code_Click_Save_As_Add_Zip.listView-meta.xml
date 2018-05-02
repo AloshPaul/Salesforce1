@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zip_Code_Click_Save_As_Add_Zip</fullName>
+    <columns>NAME</columns>
+    <columns>Property_City__c</columns>
+    <columns>Acquisition_Date__c</columns>
+    <columns>Acquisition_Status__c</columns>
+    <columns>Region__c</columns>
+    <columns>Property_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Property_Zip_Code__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Clone Template: Zip Code</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AppTrack_Created_to_VOI_Completed_Hours__c</fullName>
+    <externalId>false</externalId>
+    <formula>(VOI_Completed__c - App_Received__c )</formula>
+    <label>App Rec'd Date to VOI Completed (Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

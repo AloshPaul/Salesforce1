@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TIP_Status_Closed_Vacant</fullName>
+    <columns>NAME</columns>
+    <columns>Yardi_Property_Code__c</columns>
+    <columns>Portfolio__c</columns>
+    <columns>Initial_Contact_Date__c</columns>
+    <columns>TIP_Closed_Date__c</columns>
+    <columns>Vacancy_Reason__c</columns>
+    <columns>TIP_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TIP_Status__c</field>
+        <operation>equals</operation>
+        <value>Closed - Vacant</value>
+    </filters>
+    <label>TIP Status: Closed - Vacant</label>
+</ListView>

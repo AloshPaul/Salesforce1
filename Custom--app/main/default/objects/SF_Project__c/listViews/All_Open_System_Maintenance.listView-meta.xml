@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Open_System_Maintenance</fullName>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>NAME</columns>
+    <columns>Business_Problem__c</columns>
+    <columns>Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Status_Comments__c</columns>
+    <columns>Deadline__c</columns>
+    <columns>Project_Lead_s__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>System Maintenance  &amp; Support</value>
+    </filters>
+    <label>All Open - System Maintenance</label>
+</ListView>

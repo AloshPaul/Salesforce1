@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Sign_Off_Date_and_Send_PTL_to_PM</fullName>
+    <active>false</active>
+    <description>Office Sign-Off Date cannot be entered unless Send PTL to PM is checked.</description>
+    <errorConditionFormula>$Profile.Name  &lt;> 'System Administrator'
+ &amp;&amp; 
+ $Profile.Name  &lt;> 'SFDC Business Partner'
+ &amp;&amp; 
+RecordType.Name  = 'Turn'
+ &amp;&amp; 
+ NOT( ISBLANK( Office_Signoff_Date__c ) ) 
+ &amp;&amp; 
+ Send_PTL_to_PM__c  = False</errorConditionFormula>
+    <errorDisplayField>Send_PTL_to_PM__c</errorDisplayField>
+    <errorMessage>Office Sign-Off Date cannot be entered unless Send PTL to PM is checked.</errorMessage>
+</ValidationRule>

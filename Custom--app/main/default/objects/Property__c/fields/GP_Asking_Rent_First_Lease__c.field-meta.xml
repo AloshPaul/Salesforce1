@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GP_Asking_Rent_First_Lease__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+Asking_Rent_First_Lease__c > 0,
+('$' +
+IF(
+ Asking_Rent_First_Lease__c  >= 1000000,
+TEXT(FLOOR(Asking_Rent_First_Lease__c / 1000000)) &amp; ",",
+"") &amp;
+IF(
+Asking_Rent_First_Lease__c >= 1000,
+RIGHT(TEXT(FLOOR(Asking_Rent_First_Lease__c / 1000)), 3) &amp; ",",
+"") &amp;
+RIGHT(TEXT(FLOOR(Asking_Rent_First_Lease__c)), 3)
+) ,'')</formula>
+    <label>Asking Rent (Market)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Application_Tracking_IH_Leads</fullName>
+    <availability>online</availability>
+    <description>IH Leads</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Application Tracking</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a1k/e?CF00NE0000004c5TS={!Incoming_Calls__c.Name} 
+&amp;CF00NE0000004c5TS_lkid={!Incoming_Calls__c.Id} 
+&amp;CF00NE0000004Zd1h={!Incoming_Calls__c.Listing__c} 
+&amp;CF00NE0000004Zd1h_lkid={!Incoming_Calls__c.ListingId__c} 
+&amp;00NE0000004c3fo={!Incoming_Calls__c.Region__c} 
+&amp;CF00NE0000004b96S={!Incoming_Calls__c.Listing_Agent__c} 
+&amp;CF00NE0000004b96S_lkid={!Incoming_Calls__c.Listing_AgentId__c} 
+&amp;00NE0000004b96q={!Incoming_Calls__c.First_Name__c} {!Incoming_Calls__c.Last_Name__c} 
+&amp;00NE0000004bm1u={!Incoming_Calls__c.Phone__c} 
+&amp;00NE0000004bm1z={!Incoming_Calls__c.Email__c} 
+&amp;RecordType=012E0000000fOSS
+&amp;retURL=%2F{!Incoming_Calls__c.Id}</url>
+</WebLink>

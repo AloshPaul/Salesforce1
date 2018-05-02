@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_check_the_All_Vendors_Added_box</fullName>
+    <active>false</active>
+    <description>Cannot check the “All Vendors Added” box unless the # Direct vendors field is greater or = 1</description>
+    <errorConditionFormula>Direct_Vendors__c &lt; 1
+&amp;&amp;
+ All_Vendors_Added__c = TRUE &amp;&amp; 
+$Profile.Name &lt;> "System Administrator"</errorConditionFormula>
+    <errorMessage>Cannot check the “All Vendors Added” box unless the # Direct vendors field is greater or = 1</errorMessage>
+</ValidationRule>

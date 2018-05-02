@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Standard_Value_for_US</fullName>
+    <active>true</active>
+    <description>Only allow the specific State abbreviations if country = US, USA or is "blank". Must also be in Capital Letters.
+There are 59 accepted values, which include US Commonwealths (e.g. Guam, Puerto Rico, etc.).</description>
+    <errorConditionFormula>/*
+
+If State is Not in the List or Not in all Capital Letters, then post an Error
+
+*/
+
+
+
+AND (
+
+Property_State__c &lt;> UPPER ( Property_State__c) , /* Require all Caps */
+
+NOT (
+
+CONTAINS (
+
+"AL:AK:AZ:AR:CA:CO:CT:DE:DC:FL:GA:HI:ID:" &amp;
+
+"IL:IN:IA:KS:KY:LA:ME:MD:MA:MI:MN:MS:MO:" &amp;
+
+"MT:NE:NV:NH:NJ:NM:NY:NC:ND:OH:OK:OR:" &amp;
+
+"PA:PR:RI:SC:SD:TN:TX:UT:VI:VT:VA:WA:WV:WI:" &amp;
+
+"WY:AS:DC:FM:GU:MH:MP:PW:PR:VI",
+
+Property_State__c
+
+)
+
+)
+
+)</errorConditionFormula>
+    <errorDisplayField>Property_State__c</errorDisplayField>
+    <errorMessage>State must be in the 2 Character Capital Letter format (e.g. TX not Texas or Tx) - Including US Commonwealths. For a full list, go to http://www.50states.com/abbreviations.htm</errorMessage>
+</ValidationRule>

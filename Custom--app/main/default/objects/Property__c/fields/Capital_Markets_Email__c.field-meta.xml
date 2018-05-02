@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capital_Markets_Email__c</fullName>
+    <defaultValue>'capitalmarketsalerts@invitationhomes.com'</defaultValue>
+    <description>This field is used in Residence and Portfolio Email Alerts pertaining to changes to fields as requested in Support Requests (Regional Controller Queues).</description>
+    <externalId>false</externalId>
+    <label>Capital Markets Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

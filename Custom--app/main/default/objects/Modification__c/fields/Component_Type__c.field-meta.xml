@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Component_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Component Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Analytic Snapshot</fullName>
+                <default>false</default>
+                <label>Analytic Snapshot</label>
+            </value>
+            <value>
+                <fullName>Anonymous Apex Script</fullName>
+                <default>false</default>
+                <label>Anonymous Apex Script</label>
+            </value>
+            <value>
+                <fullName>Apex Class</fullName>
+                <default>false</default>
+                <label>Apex Class</label>
+            </value>
+            <value>
+                <fullName>Apex Trigger</fullName>
+                <default>false</default>
+                <label>Apex Trigger</label>
+            </value>
+            <value>
+                <fullName>Assignment Rule</fullName>
+                <default>false</default>
+                <label>Assignment Rule</label>
+            </value>
+            <value>
+                <fullName>Auth. Provider</fullName>
+                <default>false</default>
+                <label>Auth. Provider</label>
+            </value>
+            <value>
+                <fullName>Auto Response Rule</fullName>
+                <default>false</default>
+                <label>Auto Response Rule</label>
+            </value>
+            <value>
+                <fullName>CLI Script</fullName>
+                <default>false</default>
+                <label>CLI Script</label>
+            </value>
+            <value>
+                <fullName>Custom Application</fullName>
+                <default>false</default>
+                <label>Custom Application</label>
+            </value>
+            <value>
+                <fullName>Custom Label</fullName>
+                <default>false</default>
+                <label>Custom Label</label>
+            </value>
+            <value>
+                <fullName>Custom Setting</fullName>
+                <default>false</default>
+                <label>Custom Setting</label>
+            </value>
+            <value>
+                <fullName>Custom Tab</fullName>
+                <default>false</default>
+                <label>Custom Tab</label>
+            </value>
+            <value>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+                <label>Data Load</label>
+            </value>
+            <value>
+                <fullName>Escalation Rule</fullName>
+                <default>false</default>
+                <label>Escalation Rule</label>
+            </value>
+            <value>
+                <fullName>Folder</fullName>
+                <default>false</default>
+                <label>Folder</label>
+            </value>
+            <value>
+                <fullName>Folder Item: Dashboard</fullName>
+                <default>false</default>
+                <label>Folder Item: Dashboard</label>
+            </value>
+            <value>
+                <fullName>Folder Item: Document</fullName>
+                <default>false</default>
+                <label>Folder Item: Document</label>
+            </value>
+            <value>
+                <fullName>Folder Item: Email Template</fullName>
+                <default>false</default>
+                <label>Folder Item: Email Template</label>
+            </value>
+            <value>
+                <fullName>Folder Item: Report</fullName>
+                <default>false</default>
+                <label>Folder Item: Report</label>
+            </value>
+            <value>
+                <fullName>Home Page Component</fullName>
+                <default>false</default>
+                <label>Home Page Component</label>
+            </value>
+            <value>
+                <fullName>Home Page Layout</fullName>
+                <default>false</default>
+                <label>Home Page Layout</label>
+            </value>
+            <value>
+                <fullName>Home Page Web Links</fullName>
+                <default>false</default>
+                <label>Home Page Web Links</label>
+            </value>
+            <value>
+                <fullName>Intranet Content</fullName>
+                <default>false</default>
+                <label>Intranet Content</label>
+            </value>
+            <value>
+                <fullName>Object: Action Override</fullName>
+                <default>false</default>
+                <label>Object: Action Override</label>
+            </value>
+            <value>
+                <fullName>Object: Approval Process</fullName>
+                <default>false</default>
+                <label>Object: Approval Process</label>
+            </value>
+            <value>
+                <fullName>Object: Business Process</fullName>
+                <default>false</default>
+                <label>Object: Business Process</label>
+            </value>
+            <value>
+                <fullName>Object: Buttons/Links</fullName>
+                <default>false</default>
+                <label>Object: Buttons/Links</label>
+            </value>
+            <value>
+                <fullName>Object: Entire Object</fullName>
+                <default>false</default>
+                <label>Object: Entire Object</label>
+            </value>
+            <value>
+                <fullName>Object: Field</fullName>
+                <default>false</default>
+                <label>Object: Field</label>
+            </value>
+            <value>
+                <fullName>Object: Field Set</fullName>
+                <default>false</default>
+                <label>Object: Field Set</label>
+            </value>
+            <value>
+                <fullName>Object: List View</fullName>
+                <default>false</default>
+                <label>Object: List View</label>
+            </value>
+            <value>
+                <fullName>Object: Named Filter</fullName>
+                <default>false</default>
+                <label>Object: Named Filter</label>
+            </value>
+            <value>
+                <fullName>Object: Record</fullName>
+                <default>false</default>
+                <label>Object: Record</label>
+            </value>
+            <value>
+                <fullName>Object: Record Type</fullName>
+                <default>false</default>
+                <label>Object: Record Type</label>
+            </value>
+            <value>
+                <fullName>Object: Search Layout</fullName>
+                <default>false</default>
+                <label>Object: Search Layout</label>
+            </value>
+            <value>
+                <fullName>Object: Validation Rule</fullName>
+                <default>false</default>
+                <label>Object: Validation Rule</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Owner Sharing Setting</fullName>
+                <default>false</default>
+                <label>Owner Sharing Setting</label>
+            </value>
+            <value>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+                <label>Page Layout</label>
+            </value>
+            <value>
+                <fullName>Permission Sets</fullName>
+                <default>false</default>
+                <label>Permission Sets</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Public Groups</fullName>
+                <default>false</default>
+                <label>Public Groups</label>
+            </value>
+            <value>
+                <fullName>Queue</fullName>
+                <default>false</default>
+                <label>Queue</label>
+            </value>
+            <value>
+                <fullName>Record: File Type</fullName>
+                <default>false</default>
+                <label>Record: File Type</label>
+            </value>
+            <value>
+                <fullName>Record: Intranet</fullName>
+                <default>false</default>
+                <label>Record: Intranet</label>
+            </value>
+            <value>
+                <fullName>Remote Site Setting</fullName>
+                <default>false</default>
+                <label>Remote Site Setting</label>
+            </value>
+            <value>
+                <fullName>Report Type</fullName>
+                <default>false</default>
+                <label>Report Type</label>
+            </value>
+            <value>
+                <fullName>Role Hierarchy</fullName>
+                <default>false</default>
+                <label>Role Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Sharing Setting</fullName>
+                <default>false</default>
+                <label>Sharing Setting</label>
+            </value>
+            <value>
+                <fullName>Static Resource</fullName>
+                <default>false</default>
+                <label>Static Resource</label>
+            </value>
+            <value>
+                <fullName>Teams/Roles</fullName>
+                <default>false</default>
+                <label>Teams/Roles</label>
+            </value>
+            <value>
+                <fullName>Translations</fullName>
+                <default>false</default>
+                <label>Translations</label>
+            </value>
+            <value>
+                <fullName>User Record</fullName>
+                <default>false</default>
+                <label>User Record</label>
+            </value>
+            <value>
+                <fullName>Visualforce Component</fullName>
+                <default>false</default>
+                <label>Visualforce Component</label>
+            </value>
+            <value>
+                <fullName>Visualforce Page</fullName>
+                <default>false</default>
+                <label>Visualforce Page</label>
+            </value>
+            <value>
+                <fullName>Workflow: Email Alert</fullName>
+                <default>false</default>
+                <label>Workflow: Email Alert</label>
+            </value>
+            <value>
+                <fullName>Workflow: Entire Workflow</fullName>
+                <default>false</default>
+                <label>Workflow: Entire Workflow</label>
+            </value>
+            <value>
+                <fullName>Workflow: Field Update</fullName>
+                <default>false</default>
+                <label>Workflow: Field Update</label>
+            </value>
+            <value>
+                <fullName>Workflow: Outbound Message</fullName>
+                <default>false</default>
+                <label>Workflow: Outbound Message</label>
+            </value>
+            <value>
+                <fullName>Workflow: Rule</fullName>
+                <default>false</default>
+                <label>Workflow: Rule</label>
+            </value>
+            <value>
+                <fullName>Workflow: Task</fullName>
+                <default>false</default>
+                <label>Workflow: Task</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

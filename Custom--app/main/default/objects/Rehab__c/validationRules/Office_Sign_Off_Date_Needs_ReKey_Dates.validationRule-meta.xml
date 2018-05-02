@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Office_Sign_Off_Date_Needs_ReKey_Dates</fullName>
+    <active>false</active>
+    <description>In order to enter an Office Sign-Off Date, these fields should be populated:  Re-Key Ready Date, Re-Key Date.</description>
+    <errorConditionFormula>(  $Profile.Name  &lt;> 'System Administrator'
+ &amp;&amp; 
+ $Profile.Name  &lt;> 'SFDC Business Partner'
+ &amp;&amp; 
+RecordType.Name  = 'Post-Acquisition'
+ &amp;&amp; 
+ NOT( ISBLANK( Office_Signoff_Date__c ) ) 
+ &amp;&amp; 
+ (  ISBLANK( Re_Key_Ready_Date__c ) 
+  || 
+ ISBLANK( Re_Key_Date__c ) )  )</errorConditionFormula>
+    <errorMessage>In order to enter an Office Sign-Off Date, these fields should be populated:  Re-Key Ready Date, Re-Key Date.</errorMessage>
+</ValidationRule>

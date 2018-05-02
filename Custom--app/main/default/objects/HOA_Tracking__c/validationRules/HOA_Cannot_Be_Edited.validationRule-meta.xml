@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Cannot_Be_Edited</fullName>
+    <active>false</active>
+    <description>HOA cannot be edited after save.</description>
+    <errorConditionFormula>AND( 
+NOT( ISNEW() ), 
+ISCHANGED( HOA__c ), 
+NOT($Profile.Name = "System Administrator"))</errorConditionFormula>
+    <errorDisplayField>HOA__c</errorDisplayField>
+    <errorMessage>HOA cannot be edited after save.</errorMessage>
+</ValidationRule>

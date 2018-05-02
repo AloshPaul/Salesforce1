@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Listing_Agents_Charlotte</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Full_Name__c</columns>
+    <columns>Type__c</columns>
+    <columns>Mobile_Phone__c</columns>
+    <columns>Agent_Carrier__c</columns>
+    <columns>Email__c</columns>
+    <columns>User_Record__c</columns>
+    <columns>Contact_Record__c</columns>
+    <columns>License__c</columns>
+    <columns>License_Exp_Date__c</columns>
+    <columns>Active__c</columns>
+    <columns>Frozen__c</columns>
+    <columns>sf_com_activation_date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Charlotte</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Contact_Record__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Active Listing Agents - Charlotte</label>
+    <sharedTo>
+        <role>Executive</role>
+        <role>Executive_Charlotte</role>
+        <role>Team_Member_Charlotte</role>
+        <role>X3rd_Party_Charlotte</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposit_Amount_Requires_LOI_PSA_Approve</fullName>
+    <active>false</active>
+    <description>In order for a Deposit Amount to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</description>
+    <errorConditionFormula>AND
+( NOT( ISBLANK( Deposit_Amount__c )),
+OR(ISBLANK( LOI_Approved_by_Acquisitions__c ),
+ISBLANK(  LOI_Approved_by_Legal__c  ),
+ISBLANK(  PSA_Approved_by_Acquisitions__c  ),
+ISBLANK(  PSA_Approved_by_Legal__c )))</errorConditionFormula>
+    <errorDisplayField>Deposit_Amount__c</errorDisplayField>
+    <errorMessage>In order for a Deposit Amount to be entered, the PSA and LOI (if applicable) must be approved by Legal and Acquisitions.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Notes_When_Item_Is_Escalated</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(ISPICKVAL( Not_Completed_Reason__c , "Escalate to Vendor - Scope"), ISPICKVAL( Not_Completed_Reason__c , "Escalate to Vendor - Skill"))
+&amp;&amp; 
+ISBLANK( Not_Completed_Notes__c )</errorConditionFormula>
+    <errorDisplayField>Not_Completed_Notes__c</errorDisplayField>
+    <errorMessage>Please type your notes</errorMessage>
+</ValidationRule>

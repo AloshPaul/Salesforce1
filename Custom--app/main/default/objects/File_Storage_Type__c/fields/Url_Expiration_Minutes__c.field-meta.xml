@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Url_Expiration_Minutes__c</fullName>
+    <defaultValue>60</defaultValue>
+    <description>The number of minutes that URLs related to this filetype are active.  If the value is zero or blank, then the URL never expires.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of minutes that URLs related to this filetype are active.  If the value is zero or blank, then the URL never expires.</inlineHelpText>
+    <label>Url Expiration Minutes</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

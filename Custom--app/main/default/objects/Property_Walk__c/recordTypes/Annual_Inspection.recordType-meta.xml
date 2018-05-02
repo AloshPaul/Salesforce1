@@ -1,0 +1,3190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Inspection</fullName>
+    <active>true</active>
+    <label>Annual Inspection</label>
+    <picklistValues>
+        <picklist>Air_Conditioning__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR1_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Door_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR2_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR3_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Door_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR4_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Door_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BR5_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Cabinets_Counters__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Exhaust_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Plumbing_Drains__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Shower_Door_Rod__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Sinks_Faucets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Toilet_Paper_Holder__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Toilet__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Towel_Rack_s__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Tub_Shower__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT1_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Cabinets_Counter__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Door_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Exhaust_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Plumbing_Drains__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Shower_Door_Rod__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Sink_Faucets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Toilet_Paper_Holder__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Toilet__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Towel_Rack_s__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Tub_Shower__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT2_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Cabinets_Counter__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Door_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Exhaust_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Plumbing_Drains__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Shower_Door_Rod__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Sink_Faucets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Toilet_Paper_Holder__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Toilet__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Towel_Rack_s__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Tub_Shower__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BT3_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BY_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Back_Side_Yard__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Building_Exterior__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Neede</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cabinets_Counter__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cabinets_Counters__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Walls_Ceiling__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DR_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Dishwasher__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Driveway_Floor__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Electrical_Exposed_Wiring__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entry_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entry_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entry_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entry_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entry_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Faucets_Valves__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Faucets_s_Plumbing__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fences_Gates__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Furnace_Thermostat__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Garage_Cabinets_Counters__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Garage_Door__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Garage_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hall_Closets_Cabinets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hall_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hall_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hall_Railings_Banister__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hall_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hall_Walls_Ceiling__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kitchen_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kitchen_Light_Fixtures__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kitchen_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kitchen_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kitchen_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Fireplace_Equipment__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LR_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Landscaping__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mailbox__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Closets_Doors_Tracks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Doors_Knobs_Locks__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Doors__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Flooring_Baseboards__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Light_Fixtures_Fans__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Storage_Shelving__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Window_Coverings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Other_Windows_Locks_Screens__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Oven_s_Microwave__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Plumbing_Drains__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Porches_Stairs__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Range_Fan_Hood__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Refrigerator__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Security_Screen_Doors__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Security_Window_Bars__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Security__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sink_Disposal__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Smoke_Co_Detectors__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sprin__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resident Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Switches_Outlets__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Walks_Driveway__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Walls_Ceilings__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Water_Heater__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Water_Softener__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Windows__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Change</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Repair Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satisfactory</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
